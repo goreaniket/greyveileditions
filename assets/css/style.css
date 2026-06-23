@@ -449,7 +449,7 @@ h3 {
 }
 
 .logo-archive .book-cover-image {
-  padding: 20px;
+  padding: 6px;
   object-fit: contain;
 }
 
@@ -478,10 +478,19 @@ h3 {
   box-shadow: 0 24px 70px rgba(42, 52, 64, .14);
 }
 
-/* When the premium frame is wrapping a logo (not a photo), drop the
-   tinted gradient, border and shadow so the logo's own transparency shows. */
+/* Posters (The Human Mind / The Human Paradox) are 1024x1536 = 2:3,
+   not the 4:5 default tuned for photos — match it so there's no gap
+   left for any background color to peek through. */
+.premium-media-frame.series-art-frame {
+  aspect-ratio: 2 / 3;
+}
+
+/* When the premium frame is wrapping a logo or poster art (not a photo),
+   drop the tinted gradient, border and shadow so the artwork's own
+   background shows cleanly with no card mat behind it. */
 .premium-media-frame.greyveil-logo-panel,
-.premium-media-frame.logo-archive {
+.premium-media-frame.logo-archive,
+.premium-media-frame.series-art-frame {
   background: transparent;
   border: none;
   box-shadow: none;
@@ -498,9 +507,10 @@ h3 {
   pointer-events: none;
 }
 
-/* No shine sweep over logos either — it reads as a glare across the mark */
+/* No shine sweep over logos or poster art either — it reads as a glare */
 .premium-media-frame.greyveil-logo-panel::after,
-.premium-media-frame.logo-archive::after {
+.premium-media-frame.logo-archive::after,
+.premium-media-frame.series-art-frame::after {
   display: none;
 }
 
@@ -514,7 +524,7 @@ h3 {
 
 .premium-media-frame.greyveil-logo-panel .author-image,
 .series-art-frame .author-image {
-  padding: clamp(24px, 4vw, 56px);
+  padding: 6px;
   object-fit: contain;
 }
 
