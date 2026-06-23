@@ -419,8 +419,7 @@ h3 {
     radial-gradient(circle at 30% 10%, rgba(140, 106, 74, .6), transparent 30%);
   color: var(--cream);
   box-shadow: var(--shadow);
-  animation: bookFloat 8s ease-in-out infinite;
-  transform: rotateY(-8deg) rotateX(4deg);
+  animation: logoFloat 8s ease-in-out infinite;
 }
 
 .archive-object span {
@@ -737,6 +736,23 @@ h3 {
   gap: 16px;
 }
 
+/* Full-bleed tinted band so the "Human Mind Preview" section reads as
+   its own moment, separate from the project grid right above it,
+   without changing the page's structure or color palette. */
+.preview-band {
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 0 0 100vmax rgba(140, 106, 74, .05);
+  background: rgba(140, 106, 74, .05);
+}
+
+.preview-band .section-intro {
+  max-width: 620px;
+  margin: -14px 0 0;
+  color: rgba(58, 58, 58, .68);
+  font-size: 1rem;
+}
+
 .book-card {
   position: relative;
   display: flex;
@@ -794,12 +810,22 @@ h3 {
 }
 
 .book-card h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  min-height: 2.4em;
   margin: 8px 0;
   font-size: 1.6rem;
   line-height: 1.2;
 }
 
 .book-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  min-height: 2.85em;
   margin: 0 0 24px;
   font-size: .92rem;
   line-height: 1.5;
@@ -1055,9 +1081,9 @@ blockquote {
   to { transform: translate3d(4vw, -3vh, 0) scale(1.08); }
 }
 
-@keyframes bookFloat {
-  0%, 100% { transform: rotateY(-8deg) rotateX(4deg) translateY(0); }
-  50% { transform: rotateY(-2deg) rotateX(2deg) translateY(-18px); }
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
 }
 
 @keyframes luxuryShine {
