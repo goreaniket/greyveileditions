@@ -563,7 +563,7 @@ h3 {
   width: min(100%, 430px);
   min-height: 0;
   max-height: 560px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 2 / 3;
   padding: 0;
 }
 
@@ -660,11 +660,9 @@ h3 {
 .rich-project-card .project-image-wrap {
   position: relative;
   width: 100%;
-  /* Portrait, not landscape — these are book-cover/poster style art
-     (roughly 2:3), so a 16/11 landscape box was leaving big empty
-     bars on either side. 3/4 hugs the artwork closely without
-     cropping it. */
-  aspect-ratio: 3 / 4;
+  /* Matches the real poster files (1024x1536 = 2:3) almost exactly,
+     so object-fit: contain has no leftover gap to letterbox. */
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   margin-bottom: 8px;
   border: 1px solid rgba(140, 106, 74, .18);
@@ -676,7 +674,7 @@ h3 {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 4px;
   object-fit: contain;
   transition: transform .55s ease;
 }
@@ -760,7 +758,7 @@ h3 {
 
 .cover-slot {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 2 / 3;
   flex: 0 0 auto;
   display: grid;
   place-items: center;
