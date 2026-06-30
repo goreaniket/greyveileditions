@@ -1,3 +1,4 @@
+import { supabase } from "./supabase.js";
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
@@ -58,3 +59,76 @@ document.querySelectorAll(".tilt-card").forEach((card) => {
     card.style.transform = "";
   });
 });
+
+const feedbackForm = document.querySelector("[data-feedback-form]");
+
+if (feedbackForm) {
+  const params = new URLSearchParams(window.location.search);
+  const context = {
+    collection: params.get("collection") || "The Human Paradox Collection",
+    series: params.get("series") || "",
+    book: params.get("book") || "",
+    chapter: params.get("chapter") || "",
+  };
+  const target = context.chapter || context.book || context.series || context.collection;
+  const title = document.querySelector("[data-feedback-title]");
+  const contextLine = document.querySelector("[data-feedback-context]");
+  const status = document.querySelector("[data-feedback-status]");
+
+  Object.entries(context).forEach(([key, value]) => {
+    const input = feedbackForm.elements[key];
+    if (input) input.value = value;
+  });
+
+  if (title) title.textContent = `Feedback for ${target}`;
+  if (contextLine) {
+    const parts = [context.collection, context.series, context.book, context.chapter].filter(Boolean);
+    contextLine.textContent = parts.join(" / ");
+  }
+
+  feedbackForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const submitButton = feedbackForm.querySelector("button[type='submit']");
+    const data = new FormData(feedbackForm);
+    const name = data.get("name")?.toString().trim();
+    const email = data.get("email")?.toString().trim();
+    const message = data.get("message")?.toString().trim();
+    const payload = {
+      collection: context.collection,
+      series: context.series,
+      book: context.book,
+      chapter: context.chapter,
+      feedback_type: context.chapter ? "chapter" : context.book ? "book" : context.series ? "series" : "collection",
+      reader_name: name,
+      reader_email: email,
+      message,
+      page_url: window.location.href,
+    };
+
+    if (!name || !message) return;
+    if (status) status.textContent = "Sending feedback...";
+    if (submitButton) submitButton.disabled = true;
+
+    const attempts = [
+      payload,
+      { collection: payload.collection, series: payload.series, book: payload.book, chapter: payload.chapter, name, email, message },
+      { name, email, message: `${contextLine?.textContent || target}\n\n${message}` },
+    ];
+
+    let lastError;
+    for (const attempt of attempts) {
+      const { error } = await supabase.from("reader_feedback").insert([attempt]);
+      if (!error) {
+        feedbackForm.reset();
+        if (status) status.textContent = "Thank you. Your feedback has been sent.";
+        if (submitButton) submitButton.disabled = false;
+        return;
+      }
+      lastError = error;
+    }
+
+    console.error("Feedback submission failed:", lastError);
+    if (status) status.textContent = "Feedback could not be sent right now. Please try again later.";
+    if (submitButton) submitButton.disabled = false;
+  });
+}

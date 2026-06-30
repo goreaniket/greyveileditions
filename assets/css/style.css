@@ -504,7 +504,7 @@ h3 {
 }
 
 .greyveil-logo-panel .author-image {
-  padding: clamp(28px, 5vw, 64px);
+  padding: clamp(10px, 2vw, 24px);
   object-fit: contain;
 }
 
@@ -852,6 +852,11 @@ h3 {
   border-radius: inherit;
 }
 
+.series-book-cover {
+  padding: 4px;
+  object-fit: contain;
+}
+
 .cover-placeholder .book-cover-image {
   min-height: 620px;
 }
@@ -955,6 +960,50 @@ blockquote {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 22px;
+}
+
+.feedback-layout {
+  display: grid;
+  place-items: center;
+}
+
+.feedback-form {
+  width: min(100%, 720px);
+}
+
+.feedback-form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: var(--slate);
+  font-weight: 700;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  border: 1px solid rgba(42, 52, 64, .16);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, .72);
+  color: var(--charcoal);
+  font: inherit;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+.feedback-form button:disabled {
+  cursor: wait;
+  opacity: .72;
+}
+
+.form-status {
+  min-height: 1.7em;
+  margin: 16px 0 0;
+  color: var(--steel);
+  font-weight: 700;
 }
 
 .instagram-icon {

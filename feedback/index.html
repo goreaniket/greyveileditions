@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback | Greyveil Editions</title>
+  <meta name="description" content="Share feedback on The Human Paradox Collection, a series, a book, or a chapter from Greyveil Editions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
+  <header class="site-header" data-header>
+    <a class="brand" href="../index.html">Greyveil Editions</a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>Menu</button>
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../about/index.html">About</a>
+      <div class="dropdown">
+        <button class="dropdown-trigger" type="button" aria-haspopup="true">Projects</button>
+        <div class="dropdown-menu">
+          <a href="../projects/index.html">The Human Paradox Collection</a>
+          <a href="../projects/human-mind/index.html">The Human Mind</a>
+          <a href="../projects/human-paradox/index.html">The Human Paradox</a>
+          <a href="../projects/human-fiction/index.html">The Human Fiction</a>
+        </div>
+      </div>
+      <a href="../credits/index.html">Credits</a>
+      <a href="../contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="project-hero page-shell">
+      <div class="reveal">
+        <p class="eyebrow">Reader Feedback</p>
+        <h1 data-feedback-title>Share your reflection.</h1>
+        <p class="hero-text" data-feedback-context>The form will detect the collection, series, book, or chapter from the link you used.</p>
+      </div>
+    </section>
+
+    <section class="section page-shell feedback-layout">
+      <form class="contact-card feedback-form reveal" data-feedback-form>
+        <input type="hidden" name="collection" />
+        <input type="hidden" name="series" />
+        <input type="hidden" name="book" />
+        <input type="hidden" name="chapter" />
+        <label><span>Name</span><input name="name" type="text" autocomplete="name" required /></label>
+        <label><span>Email</span><input name="email" type="email" autocomplete="email" /></label>
+        <label><span>Your feedback</span><textarea name="message" rows="7" required></textarea></label>
+        <button class="button primary" type="submit">Send Feedback</button>
+        <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Greyveil Editions - Feedback - <span id="year"></span></p>
+    <div><a href="mailto:greyveileditions@gmail.com">Email</a><a href="tel:+917874560944">Phone</a><a href="https://wa.me/917874560944">WhatsApp</a><a href="https://www.instagram.com/greyveil_editions?utm_source=qr&igsh=bXZqcTJ6NmppYWJp">Instagram</a></div>
+  </footer>
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>
