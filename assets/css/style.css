@@ -713,6 +713,93 @@ h3 {
   padding: 18px;
 }
 
+.project-hierarchy,
+.journey-path {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 6px;
+  color: rgba(42, 52, 64, .68);
+  font-size: .84rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.project-hierarchy span,
+.journey-path span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.project-hierarchy span + span::before,
+.journey-path span + span::before {
+  content: "→";
+  flex: 0 0 auto;
+  color: color-mix(in srgb, var(--accent, var(--bronze)) 58%, rgba(42, 52, 64, .32));
+  font-weight: 700;
+}
+
+.project-hierarchy span:nth-child(2),
+.journey-path span:nth-child(2) {
+  color: var(--slate);
+}
+
+.journey-path {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(42, 52, 64, .1);
+}
+
+.journey-path.compact {
+  margin-top: 16px;
+}
+
+.journey-status,
+.book-position-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.journey-status p,
+.book-position-grid p {
+  display: grid;
+  grid-template-columns: minmax(108px, .72fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid rgba(42, 52, 64, .08);
+}
+
+.journey-status span,
+.book-position-grid span {
+  color: var(--steel);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.journey-status strong,
+.book-position-grid strong {
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+.book-nav-card .button-row {
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.book-nav-card .button {
+  flex: 1 1 148px;
+}
+
 .rich-project-card .project-image-wrap {
   position: relative;
   width: 100%;
@@ -978,6 +1065,7 @@ h3 {
 .human-mind-book .button.primary {
   border-color: color-mix(in srgb, var(--accent) 46%, rgba(42, 52, 64, .12));
   background: color-mix(in srgb, var(--accent) 18%, rgba(255, 255, 255, .56));
+  color: var(--slate);
 }
 
 .human-mind-book .detail-body {
@@ -994,6 +1082,41 @@ h3 {
 
 .human-mind-book blockquote {
   color: color-mix(in srgb, var(--accent) 72%, var(--bronze));
+}
+
+.human-mind-book .reflection-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(26px, 4vw, 40px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .68), rgba(255, 255, 255, .34)),
+    radial-gradient(circle at 100% 0, var(--book-atmosphere), transparent 52%);
+}
+
+.human-mind-book .reflection-card::before {
+  content: "";
+  position: absolute;
+  inset: 18px auto 18px 0;
+  width: 1px;
+  background: color-mix(in srgb, var(--accent) 36%, rgba(42, 52, 64, .1));
+}
+
+.human-mind-book .reflection-card h2 {
+  max-width: 12ch;
+  margin-bottom: 24px;
+}
+
+.human-mind-book .reflection-prompts {
+  display: grid;
+  gap: 18px;
+}
+
+.human-mind-book .contact-card .reflection-prompts p {
+  margin: 0;
+  color: rgba(42, 52, 64, .76);
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1.28;
 }
 
 .quote-section {
@@ -1514,6 +1637,37 @@ blockquote {
   .site-footer {
     display: block;
   }
+
+  .human-mind-series-book .book-detail {
+    padding-block: calc(var(--header-offset) + 18px) 64px;
+  }
+
+  .human-mind-series-book .book-hero {
+    min-height: 0;
+    gap: 34px;
+    padding-block: 0 42px;
+  }
+
+  .human-mind-series-book .cover-placeholder {
+    justify-self: center;
+    width: min(100%, 430px);
+    min-height: 0;
+    aspect-ratio: 2 / 3;
+  }
+
+  .human-mind-series-book .cover-placeholder .book-cover-image {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .human-mind-series-book .detail-body {
+    gap: 28px;
+    padding-block: 54px;
+  }
+
+  .human-mind-series-book .contact-panel {
+    gap: 18px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1567,6 +1721,80 @@ blockquote {
   .project-card strong,
   .contact-link {
     width: 100%;
+  }
+
+  .human-mind-series-book .book-detail {
+    padding-block: calc(var(--header-offset) + 8px) 44px;
+  }
+
+  .human-mind-series-book .book-hero {
+    gap: 26px;
+    padding-bottom: 30px;
+    text-align: left;
+  }
+
+  .human-mind-series-book .cover-placeholder {
+    width: min(100%, 340px);
+    min-height: 0;
+    max-height: 510px;
+    margin-inline: auto;
+  }
+
+  .human-mind-series-book h1 {
+    font-size: clamp(2.35rem, 13vw, 3.2rem);
+    line-height: 1.02;
+  }
+
+  .human-mind-series-book h2 {
+    font-size: clamp(2rem, 10vw, 2.55rem);
+    line-height: 1.04;
+  }
+
+  .human-mind-series-book .hero-text,
+  .human-mind-series-book .copy p:not(.eyebrow),
+  .human-mind-series-book details p,
+  .human-mind-series-book .contact-card p {
+    font-size: 1rem;
+    line-height: 1.68;
+  }
+
+  .human-mind-series-book .button-row {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .human-mind-series-book .button {
+    min-height: 48px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+
+  .human-mind-series-book .detail-body {
+    gap: 22px;
+    padding-block: 40px;
+  }
+
+  .human-mind-series-book details {
+    padding: 16px 0;
+  }
+
+  .human-mind-series-book summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .human-mind-series-book blockquote {
+    font-size: clamp(1.8rem, 11vw, 2.75rem);
+    line-height: 1.04;
+  }
+
+  .human-mind-series-book .section {
+    padding-block: 42px;
+  }
+
+  .human-mind-series-book .contact-card {
+    padding: 22px;
   }
 
   .cursor-glow {
