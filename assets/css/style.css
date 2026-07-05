@@ -913,6 +913,89 @@ h3 {
 .accent-emerald { --accent: #2f8a68; }
 .accent-gold { --accent: #d7c682; }
 
+.human-mind-book {
+  --book-atmosphere: rgba(144, 175, 197, .18);
+  --book-atmosphere-strong: rgba(140, 106, 74, .14);
+  --book-ink: var(--indigo);
+  background:
+    radial-gradient(circle at 18% 18%, var(--book-atmosphere-strong), transparent 31%),
+    radial-gradient(circle at 86% 12%, var(--book-atmosphere), transparent 28%),
+    linear-gradient(145deg, #f8f7f4, #dfe8e9);
+}
+
+.hm-book-01 {
+  --book-atmosphere: rgba(193, 138, 61, .18);
+  --book-atmosphere-strong: rgba(140, 106, 74, .18);
+}
+
+.hm-book-02 {
+  --book-atmosphere: rgba(53, 127, 197, .18);
+  --book-atmosphere-strong: rgba(51, 78, 104, .16);
+}
+
+.hm-book-03 {
+  --book-atmosphere: rgba(165, 156, 182, .2);
+  --book-atmosphere-strong: rgba(144, 175, 197, .15);
+}
+
+.hm-book-04 {
+  --book-atmosphere: rgba(47, 138, 104, .18);
+  --book-atmosphere-strong: rgba(108, 154, 139, .18);
+}
+
+.hm-book-05 {
+  --book-atmosphere: rgba(215, 198, 130, .22);
+  --book-atmosphere-strong: rgba(193, 138, 61, .14);
+}
+
+.human-mind-book .book-hero {
+  gap: clamp(38px, 6vw, 84px);
+}
+
+.human-mind-book .cover-placeholder {
+  border-color: color-mix(in srgb, var(--accent) 32%, rgba(42, 52, 64, .12));
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, .38), rgba(255, 255, 255, .08)),
+    radial-gradient(circle at 50% 10%, var(--book-atmosphere), transparent 54%);
+  box-shadow: 0 28px 78px rgba(42, 52, 64, .16);
+}
+
+.human-mind-book .eyebrow {
+  color: var(--accent);
+}
+
+.human-mind-book h1 {
+  color: var(--book-ink);
+  text-shadow: 0 10px 30px rgba(42, 52, 64, .08);
+}
+
+.human-mind-book .hero-text {
+  max-width: 620px;
+  color: rgba(42, 52, 64, .78);
+  font-weight: 500;
+}
+
+.human-mind-book .button.primary {
+  border-color: color-mix(in srgb, var(--accent) 46%, rgba(42, 52, 64, .12));
+  background: color-mix(in srgb, var(--accent) 18%, rgba(255, 255, 255, .56));
+}
+
+.human-mind-book .detail-body {
+  gap: clamp(42px, 6vw, 78px);
+}
+
+.human-mind-book details {
+  border-top-color: color-mix(in srgb, var(--accent) 24%, rgba(42, 52, 64, .14));
+}
+
+.human-mind-book summary {
+  color: color-mix(in srgb, var(--accent) 36%, var(--slate));
+}
+
+.human-mind-book blockquote {
+  color: color-mix(in srgb, var(--accent) 72%, var(--bronze));
+}
+
 .quote-section {
   display: grid;
   min-height: 48vh;
