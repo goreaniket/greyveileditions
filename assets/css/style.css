@@ -563,11 +563,17 @@ h3 {
 .logo-archive {
   overflow: hidden;
   padding: 0;
-  background: transparent;
+  border: 0;
+  background: none;
+  box-shadow: none;
 }
 
 .logo-archive .book-cover-image {
-  padding: 6px;
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  mix-blend-mode: multiply;
   object-fit: contain;
 }
 

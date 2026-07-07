@@ -1,4 +1,3 @@
-import { supabase } from "./supabase.js";
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
@@ -22,12 +21,7 @@ document.addEventListener("pointermove", (event) => {
   cursorGlow.style.top = `${event.clientY}px`;
 });
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add("visible");
-  });
-}, { threshold: .16 });
-document.querySelectorAll(".reveal").forEach((node) => revealObserver.observe(node));
+document.querySelectorAll(".reveal").forEach((node) => node.classList.add("visible"));
 
 document.querySelectorAll("[data-words]").forEach((line) => {
   const words = line.textContent.trim().split(/\s+/);
@@ -91,28 +85,10 @@ if (feedbackForm) {
     const submitButton = feedbackForm.querySelector("button[type='submit']");
     const data = new FormData(feedbackForm);
     const name = data.get("name")?.toString().trim();
-    const email = data.get("email")?.toString().trim();
     const message = data.get("message")?.toString().trim();
-   const payload = {
-  collection: context.collection,
-  series: context.series,
-  book: context.book,
-  chapter: context.chapter,
-  reader_name: name,
-  email: email,
-  reflection: message,
-  status: "Pending"
-};;
 
     if (!name || !message) return;
-    if (status) status.textContent = "Sending feedback...";
-    if (submitButton) submitButton.disabled = true;
-
-   
-
-    
-    console.error("Feedback submission failed:", lastError);
-    if (status) status.textContent = "Feedback could not be sent right now. Please try again later.";
+    if (status) status.textContent = "Feedback delivery is being updated. Please use the direct contact links for now.";
     if (submitButton) submitButton.disabled = false;
   });
 }
