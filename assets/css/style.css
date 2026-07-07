@@ -273,8 +273,80 @@ button:focus-visible,
 }
 
 .project-hero {
+  position: relative;
   place-items: center;
+  overflow: hidden;
+  isolation: isolate;
   text-align: center;
+}
+
+.project-hero > .reveal {
+  position: relative;
+  z-index: 1;
+}
+
+.collection-book-stack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: min(1040px, 94vw);
+  height: clamp(340px, 54vh, 560px);
+  opacity: .13;
+  pointer-events: none;
+  transform: translate(-50%, -48%) perspective(1200px) rotateX(58deg) rotateZ(-8deg);
+  transform-style: preserve-3d;
+  filter: blur(1.3px);
+  animation: collectionStackFloat 20s ease-in-out infinite;
+}
+
+.collection-book-stack::after {
+  content: "";
+  position: absolute;
+  inset: 24% 12% 12%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(42, 52, 64, .34), transparent 68%);
+  filter: blur(30px);
+  transform: translateZ(-120px);
+}
+
+.stack-cover {
+  position: absolute;
+  width: clamp(150px, 17vw, 270px);
+  aspect-ratio: 2 / 3;
+  border-radius: 7px;
+  object-fit: cover;
+  box-shadow: 0 36px 82px rgba(42, 52, 64, .4);
+}
+
+.stack-cover-01 {
+  left: 18%;
+  top: 24%;
+  transform: translateZ(84px) rotateZ(-16deg);
+}
+
+.stack-cover-02 {
+  left: 32%;
+  top: 18%;
+  transform: translateZ(122px) rotateZ(-7deg);
+}
+
+.stack-cover-03 {
+  left: 46%;
+  top: 20%;
+  transform: translateZ(164px) rotateZ(2deg);
+}
+
+.stack-cover-04 {
+  left: 58%;
+  top: 27%;
+  transform: translateZ(116px) rotateZ(10deg);
+}
+
+.stack-cover-05 {
+  left: 68%;
+  top: 34%;
+  transform: translateZ(70px) rotateZ(17deg);
 }
 
 .book-hero {
@@ -1521,6 +1593,15 @@ blockquote {
   50% { transform: translateY(-14px); }
 }
 
+@keyframes collectionStackFloat {
+  0%, 100% {
+    transform: translate(-50%, -48%) perspective(1200px) rotateX(58deg) rotateZ(-8deg);
+  }
+  50% {
+    transform: translate(-50%, -51%) perspective(1200px) rotateX(58deg) rotateZ(-6deg);
+  }
+}
+
 @keyframes luxuryShine {
   0%, 58% { transform: translateX(-130%); }
   78%, 100% { transform: translateX(130%); }
@@ -1627,6 +1708,17 @@ blockquote {
     justify-content: center;
   }
 
+  .collection-book-stack {
+    width: min(760px, 96vw);
+    height: 360px;
+    opacity: .1;
+    filter: blur(1.8px);
+  }
+
+  .stack-cover {
+    width: clamp(118px, 20vw, 190px);
+  }
+
   .project-grid,
   .book-grid,
   .book-grid.compact {
@@ -1721,6 +1813,10 @@ blockquote {
   .project-card strong,
   .contact-link {
     width: 100%;
+  }
+
+  .collection-book-stack {
+    display: none;
   }
 
   .human-mind-series-book .book-detail {
