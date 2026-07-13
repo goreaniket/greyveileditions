@@ -1379,6 +1379,60 @@ blockquote {
   margin-top: 22px;
 }
 
+main > .home-hero + .quote-section {
+  min-height: clamp(260px, 32vh, 380px);
+  padding-block: clamp(48px, 6vw, 74px);
+  overflow-x: clip;
+}
+
+main > .home-hero ~ .section {
+  overflow-x: clip;
+}
+
+main > .home-hero + .quote-section + .section {
+  padding-block: clamp(52px, 6vw, 76px);
+}
+
+main > .home-hero + .quote-section + .section + .section {
+  padding-block: clamp(38px, 5vw, 62px) clamp(66px, 7vw, 90px);
+}
+
+main > .home-hero ~ .section .section-heading {
+  margin-bottom: 18px;
+}
+
+main > .home-hero ~ .section .section-intro {
+  max-width: 720px;
+  margin: 0 0 28px;
+}
+
+main > .home-hero ~ .section .rich-project-grid {
+  gap: clamp(18px, 2.2vw, 26px);
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+main > .home-hero ~ .section .button-row {
+  margin-top: 28px;
+}
+
+main > .home-hero ~ .section .contact-panel {
+  gap: clamp(18px, 2.2vw, 28px);
+}
+
+main > .home-hero ~ .section .contact-card {
+  display: flex;
+  flex-direction: column;
+}
+
+main > .home-hero ~ .section .contact-card .contact-actions {
+  margin-top: 0;
+}
+
+main > .home-hero ~ .section .contact-link {
+  overflow-wrap: anywhere;
+}
+
 .feedback-layout {
   display: grid;
   place-items: center;
@@ -1870,6 +1924,38 @@ blockquote {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  main > .home-hero + .quote-section {
+    min-height: auto;
+    padding-block: 52px;
+  }
+
+  main > .home-hero + .quote-section + .section {
+    padding-block: 48px 58px;
+  }
+
+  main > .home-hero + .quote-section + .section + .section {
+    padding-block: 34px 66px;
+  }
+
+  main > .home-hero ~ .section .section-intro {
+    margin-bottom: 24px;
+  }
+
+  main > .home-hero ~ .section .rich-project-grid {
+    gap: 20px;
+    max-width: 800px;
+  }
+
+  main > .home-hero ~ .section .rich-project-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 390px);
+  }
+
+  main > .home-hero ~ .section .contact-panel {
+    gap: 18px;
+  }
+
   .section-heading,
   .site-footer {
     display: block;
@@ -1998,6 +2084,64 @@ blockquote {
   .book-grid.compact,
   .credits-grid {
     grid-template-columns: 1fr;
+  }
+
+  main > .home-hero + .quote-section {
+    padding-block: 34px 30px;
+  }
+
+  main > .home-hero + .quote-section + .section {
+    padding-block: 34px 42px;
+  }
+
+  main > .home-hero + .quote-section + .section + .section {
+    padding-block: 26px 54px;
+  }
+
+  main > .home-hero ~ .section .section-heading {
+    margin-bottom: 12px;
+  }
+
+  main > .home-hero ~ .section .section-intro {
+    margin-bottom: 20px;
+  }
+
+  main > .home-hero ~ .section .rich-project-grid {
+    gap: 16px;
+    max-width: 360px;
+  }
+
+  main > .home-hero ~ .section .rich-project-card {
+    grid-column: auto;
+    justify-self: stretch;
+    width: 100%;
+    padding: 16px;
+  }
+
+  main > .home-hero ~ .section .rich-project-card .project-image-wrap {
+    width: min(100%, 260px);
+    margin-inline: auto;
+  }
+
+  main > .home-hero ~ .section .button-row {
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  main > .home-hero ~ .section .contact-panel {
+    gap: 16px;
+  }
+
+  main > .home-hero ~ .section .contact-card {
+    padding: 22px;
+  }
+
+  main > .home-hero ~ .section .contact-actions {
+    gap: 10px;
+  }
+
+  main > .home-hero ~ .section .contact-link {
+    min-height: 48px;
   }
 
   .portrait-placeholder,
