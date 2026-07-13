@@ -64,20 +64,25 @@ if (feedbackForm) {
     book: params.get("book") || "",
     chapter: params.get("chapter") || "",
   };
-  const target = context.chapter || context.book || context.series || context.collection;
   const title = document.querySelector("[data-feedback-title]");
   const contextLine = document.querySelector("[data-feedback-context]");
   const status = document.querySelector("[data-feedback-status]");
+  const formatContext = (value) => value.replace(/\s+-\s+/g, " \u2014 ");
 
   Object.entries(context).forEach(([key, value]) => {
     const input = feedbackForm.elements[key];
     if (input) input.value = value;
   });
 
-  if (title) title.textContent = `Feedback for ${target}`;
+  if (title) title.textContent = "Share Your Feedback";
   if (contextLine) {
     const parts = [context.collection, context.series, context.book, context.chapter].filter(Boolean);
-    contextLine.textContent = parts.join(" / ");
+    contextLine.textContent = "";
+    parts.forEach((part) => {
+      const line = document.createElement("span");
+      line.textContent = formatContext(part);
+      contextLine.appendChild(line);
+    });
   }
 
   feedbackForm.addEventListener("submit", async (event) => {
@@ -88,10 +93,12 @@ if (feedbackForm) {
     const data = new FormData(feedbackForm);
     const message = data.get("message")?.toString().trim();
     const payload = new FormData();
-    ["collection", "series", "book", "chapter", "name"].forEach((key) => {
+    payload.append("date", new Date().toISOString());
+    payload.append("name", data.get("name")?.toString().trim() || "");
+    payload.append("message", message || "");
+    ["collection", "series", "book", "chapter"].forEach((key) => {
       payload.append(key, data.get(key)?.toString().trim() || "");
     });
-    payload.append("message", message || "");
     
     if (!message) return;
     if (submitButton) submitButton.disabled = true;
