@@ -81,14 +81,34 @@ if (feedbackForm) {
   }
 
   feedbackForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    event.preventDefault(); 
+    
     const submitButton = feedbackForm.querySelector("button[type='submit']");
+    const status = document.querySelector("[data-feedback-status]");
     const data = new FormData(feedbackForm);
-    const name = data.get("name")?.toString().trim();
-    const message = data.get("message")?.toString().trim();
+    
+    if (submitButton) submitButton.disabled = true;
+    if (status) status.textContent = "Sending feedback...";
 
-    if (!name || !message) return;
-    if (status) status.textContent = "Feedback delivery is being updated. Please use the direct contact links for now.";
+    try {
+      const response = await fetch(feedbackForm.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        status.textContent = "Thank you! Your feedback has been sent.";
+        feedbackForm.reset(); // This clears the form boxes
+      } else {
+        status.textContent = "Oops! There was a problem submitting your form.";
+      }
+    } catch (error) {
+      status.textContent = "Oops! There was a network problem.";
+    }
+    
     if (submitButton) submitButton.disabled = false;
   });
 }
