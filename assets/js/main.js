@@ -86,14 +86,21 @@ if (feedbackForm) {
     const submitButton = feedbackForm.querySelector("button[type='submit']");
     const status = document.querySelector("[data-feedback-status]");
     const data = new FormData(feedbackForm);
+    const message = data.get("message")?.toString().trim();
+    const payload = new FormData();
+    ["collection", "series", "book", "chapter", "name"].forEach((key) => {
+      payload.append(key, data.get(key)?.toString().trim() || "");
+    });
+    payload.append("message", message || "");
     
+    if (!message) return;
     if (submitButton) submitButton.disabled = true;
     if (status) status.textContent = "Sending feedback...";
 
     try {
       const response = await fetch(feedbackForm.action, {
         method: 'POST',
-        body: data,
+        body: payload,
         headers: {
             'Accept': 'application/json'
         }
