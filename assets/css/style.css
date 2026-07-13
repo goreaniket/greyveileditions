@@ -272,6 +272,47 @@ button:focus-visible,
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
 }
 
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.home-hero::before,
+.home-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-hero::before {
+  inset: 34px -3vw 42px;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 74% 34%, rgba(255, 255, 255, .62), transparent 31%),
+    radial-gradient(circle at 24% 28%, rgba(140, 106, 74, .12), transparent 35%),
+    repeating-linear-gradient(0deg, rgba(42, 52, 64, .018) 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(90deg, rgba(140, 106, 74, .016) 0 1px, transparent 1px 7px),
+    linear-gradient(135deg, rgba(248, 247, 244, .82), rgba(231, 226, 218, .48));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .48);
+}
+
+.home-hero::after {
+  inset: 12% -18% 10% 48%;
+  background: radial-gradient(circle, rgba(216, 194, 166, .28), transparent 58%);
+}
+
+.home-hero > .reveal {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero-art {
+  position: relative;
+  isolation: isolate;
+}
+
 .project-hero {
   position: relative;
   place-items: center;
@@ -586,6 +627,87 @@ h3 {
   box-shadow: none;
   mix-blend-mode: multiply;
   object-fit: contain;
+}
+
+.home-hero .logo-archive {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-book-composition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: min(540px, 46vw);
+  height: min(520px, 44vw);
+  opacity: .18;
+  pointer-events: none;
+  transform: translate(-48%, -50%);
+  filter: saturate(.74) sepia(.12);
+}
+
+.hero-book {
+  position: absolute;
+  width: clamp(86px, 10vw, 136px);
+  aspect-ratio: 2 / 3;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 22px 46px rgba(42, 52, 64, .22);
+  mix-blend-mode: multiply;
+}
+
+.hero-book-01 {
+  left: 12%;
+  top: 18%;
+  transform: rotate(-16deg);
+}
+
+.hero-book-02 {
+  right: 18%;
+  top: 8%;
+  transform: rotate(12deg);
+}
+
+.hero-book-03 {
+  left: 24%;
+  bottom: 9%;
+  transform: rotate(-6deg);
+}
+
+.hero-book-04 {
+  right: 12%;
+  bottom: 15%;
+  transform: rotate(17deg);
+}
+
+.hero-book-05 {
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%) rotate(2deg);
+}
+
+@media (min-width: 641px) {
+  .hero-book-01 {
+    background-image: url("../../projects/human-mind/assets/covers/the last shift.jpeg");
+  }
+
+  .hero-book-02 {
+    background-image: url("../../projects/human-paradox/assets/covers/the paradox of awareness.jpeg");
+  }
+
+  .hero-book-03 {
+    background-image: url("../../projects/human-fiction/assets/covers/the fiction of awareness.jpeg");
+  }
+
+  .hero-book-04 {
+    background-image: url("../../projects/human-paradox/assets/covers/the end of interpretation.jpeg");
+  }
+
+  .hero-book-05 {
+    background-image: url("../../projects/human-mind/assets/covers/when understanding begins .jpeg");
+  }
 }
 
 .greyveil-logo-panel {
@@ -1696,6 +1818,12 @@ blockquote {
     text-align: center;
   }
 
+  .home-hero .hero-book-composition {
+    width: min(480px, 74vw);
+    height: min(440px, 68vw);
+    opacity: .14;
+  }
+
   .hero .reveal:last-child {
     justify-content: center;
   }
@@ -1788,6 +1916,33 @@ blockquote {
   .site-header {
     top: 10px;
     max-width: calc(100vw - 20px);
+  }
+
+  .home-hero {
+    min-height: auto;
+    gap: 28px;
+    padding-block: var(--header-offset) 54px;
+  }
+
+  .home-hero::before {
+    inset: 18px -8px 20px;
+  }
+
+  .home-hero::after,
+  .home-hero .hero-book-composition {
+    display: none;
+  }
+
+  .home-hero .hero-text {
+    margin-top: 18px;
+  }
+
+  .home-hero .button-row {
+    margin-top: 24px;
+  }
+
+  .home-hero .logo-archive {
+    width: min(260px, 76vw);
   }
 
   h1 {
