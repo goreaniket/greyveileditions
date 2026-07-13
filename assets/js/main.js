@@ -91,16 +91,21 @@ if (feedbackForm) {
     const submitButton = feedbackForm.querySelector("button[type='submit']");
     const status = document.querySelector("[data-feedback-status]");
     const data = new FormData(feedbackForm);
-    const message = data.get("message")?.toString().trim();
+    const feedback = data.get("feedback")?.toString().trim();
+    const submission = {
+      name: data.get("name")?.toString().trim() || "",
+      feedback: feedback || "",
+      collection: data.get("collection")?.toString().trim() || "",
+      series: data.get("series")?.toString().trim() || "",
+      book: data.get("book")?.toString().trim() || "",
+      chapter: data.get("chapter")?.toString().trim() || "",
+    };
     const payload = new FormData();
-    payload.append("date", new Date().toISOString());
-    payload.append("name", data.get("name")?.toString().trim() || "");
-    payload.append("message", message || "");
-    ["collection", "series", "book", "chapter"].forEach((key) => {
-      payload.append(key, data.get(key)?.toString().trim() || "");
+    ["name", "feedback", "collection", "series", "book", "chapter"].forEach((key) => {
+      payload.append(key, submission[key]);
     });
     
-    if (!message) return;
+    if (!feedback) return;
     if (submitButton) submitButton.disabled = true;
     if (status) status.textContent = "Sending feedback...";
 

@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feedback | Greyveil Editions</title>
-  <meta name="description" content="Share feedback on The Human Paradox Collection, a series, a book, or a chapter from Greyveil Editions." />
+  <title>Reader Feedback | Greyveil Editions</title>
+  <meta name="description" content="Share feedback with Greyveil Editions on a collection, series, book, or chapter from Greyveil Collection Volume I." />
+  <link rel="canonical" href="https://greyveil-editions.example.com/feedback/" />
+  <meta property="og:title" content="Reader Feedback | Greyveil Editions" />
+  <meta property="og:description" content="Share feedback with Greyveil Editions on a collection, series, book, or chapter from Greyveil Collection Volume I." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://greyveil-editions.example.com/feedback/" />
+  <meta property="og:image" content="https://greyveil-editions.example.com/assets/images/greyveil-logo.png" />
+  <meta property="og:site_name" content="Greyveil Editions" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reader Feedback | Greyveil Editions" />
+  <meta name="twitter:description" content="Share feedback with Greyveil Editions on a collection, series, book, or chapter from Greyveil Collection Volume I." />
+  <meta name="twitter:image" content="https://greyveil-editions.example.com/assets/images/greyveil-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -50,7 +61,7 @@
         <input type="hidden" name="book" />
         <input type="hidden" name="chapter" />
         <label><span>Name</span><input name="name" type="text" autocomplete="name" /></label>
-        <label><span>Your feedback</span><textarea name="message" rows="7" required></textarea></label>
+        <label><span>Your feedback</span><textarea name="feedback" rows="7" required></textarea></label>
         <button class="button primary" type="submit">Send Feedback</button>
         <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
       </form>
