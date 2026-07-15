@@ -13,8 +13,11 @@ updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
 
 navToggle?.addEventListener("click", () => {
+  if (!nav) return;
+
   const open = nav.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
 });
 
 document.querySelectorAll(".dropdown").forEach((dropdown) => {
