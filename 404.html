@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Greyveil Editions</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    .not-found-main {
+      min-height: min(720px, calc(100svh - 120px));
+      display: grid;
+      align-items: center;
+      padding-block: calc(var(--header-offset) + 42px) 64px;
+    }
+
+    .not-found-panel {
+      max-width: 780px;
+      text-align: center;
+    }
+
+    .not-found-panel h1 {
+      max-width: 720px;
+      margin-inline: auto;
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: .96;
+    }
+
+    .not-found-panel .hero-text {
+      margin-inline: auto;
+    }
+
+    .not-found-actions {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .not-found-actions .hero-link {
+      margin-top: 0;
+      min-height: 44px;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .not-found-main {
+        min-height: auto;
+        padding-block: calc(var(--header-offset) + 24px) 48px;
+      }
+
+      .not-found-panel {
+        text-align: left;
+      }
+
+      .not-found-panel h1,
+      .not-found-panel .hero-text {
+        margin-inline: 0;
+      }
+
+      .not-found-actions {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="/index.html">Greyveil Editions</a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle aria-controls="primary-navigation">Menu</button>
+    <nav id="primary-navigation" class="site-nav" data-nav aria-label="Primary">
+      <a href="/index.html">Home</a>
+      <a href="/about/index.html">About</a>
+      <div class="dropdown">
+        <a class="dropdown-trigger" href="/projects/index.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="/projects/index.html">The Human Paradox Collection</a>
+          <a href="/projects/human-mind/index.html">The Human Mind</a>
+          <a href="/projects/human-paradox/index.html">The Human Paradox</a>
+          <a href="/projects/human-fiction/index.html">The Human Fiction</a>
+        </div>
+      </div>
+      <a href="/credits/index.html">Credits</a>
+      <a href="/contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="not-found-main">
+    <section class="page-shell not-found-panel reveal" aria-labelledby="not-found-heading">
+      <p class="eyebrow">Page Not Found</p>
+      <h1 id="not-found-heading">This page has slipped beyond the veil.</h1>
+      <p class="hero-text">The page you were looking for may have moved, changed, or never existed.</p>
+      <div class="button-row not-found-actions">
+        <a class="button primary" href="/index.html">Return Home</a>
+        <a class="hero-link" href="/projects/index.html">Explore Volume I</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--rich">
+    <div class="page-shell footer-grid">
+      <div class="footer-brand">
+        <p class="footer-brand-name">Greyveil Editions</p>
+        <p>A literary and psychology publishing house exploring memory, attachment, silence, and the quiet architecture of human experience.</p>
+      </div>
+      <nav class="footer-col" aria-label="Site navigation">
+        <h3>Site</h3>
+        <a href="/index.html">Home</a>
+        <a href="/about/index.html">About</a>
+        <a href="/projects/index.html">Projects</a>
+        <a href="/credits/index.html">Credits</a>
+        <a href="/contact/index.html">Contact</a>
+      </nav>
+      <nav class="footer-col" aria-label="Connect with Greyveil Editions">
+        <h3>Connect</h3>
+        <a href="mailto:greyveileditions@gmail.com">Email</a>
+        <a href="tel:+917874560944">Phone</a>
+        <a href="https://wa.me/917874560944">WhatsApp</a>
+        <a href="https://www.instagram.com/greyveil_editions?utm_source=qr&igsh=bXZqcTJ6NmppYWJp">Instagram</a>
+      </nav>
+    </div>
+    <div class="page-shell footer-bottom">
+      <p>&copy; <span id="year"></span> Greyveil Editions &mdash; Lalit R. Mishra. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
