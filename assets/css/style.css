@@ -690,23 +690,43 @@ h3 {
 
 @media (min-width: 641px) {
   .hero-book-01 {
-    background-image: url("../../projects/human-mind/assets/covers/the last shift.jpeg");
+    background-image: url("../images/home-hero-the-last-shift.jpg");
+    background-image: image-set(
+      url("../images/home-hero-the-last-shift.webp") type("image/webp"),
+      url("../images/home-hero-the-last-shift.jpg") type("image/jpeg")
+    );
   }
 
   .hero-book-02 {
-    background-image: url("../../projects/human-paradox/assets/covers/the paradox of awareness.jpeg");
+    background-image: url("../images/home-hero-the-paradox-of-awareness.jpg");
+    background-image: image-set(
+      url("../images/home-hero-the-paradox-of-awareness.webp") type("image/webp"),
+      url("../images/home-hero-the-paradox-of-awareness.jpg") type("image/jpeg")
+    );
   }
 
   .hero-book-03 {
-    background-image: url("../../projects/human-fiction/assets/covers/the fiction of awareness.jpeg");
+    background-image: url("../images/home-hero-the-fiction-of-awareness.jpg");
+    background-image: image-set(
+      url("../images/home-hero-the-fiction-of-awareness.webp") type("image/webp"),
+      url("../images/home-hero-the-fiction-of-awareness.jpg") type("image/jpeg")
+    );
   }
 
   .hero-book-04 {
-    background-image: url("../../projects/human-paradox/assets/covers/the end of interpretation.jpeg");
+    background-image: url("../images/home-hero-the-end-of-interpretation.jpg");
+    background-image: image-set(
+      url("../images/home-hero-the-end-of-interpretation.webp") type("image/webp"),
+      url("../images/home-hero-the-end-of-interpretation.jpg") type("image/jpeg")
+    );
   }
 
   .hero-book-05 {
-    background-image: url("../../projects/human-mind/assets/covers/when understanding begins .jpeg");
+    background-image: url("../images/home-hero-when-understanding-begins.jpg");
+    background-image: image-set(
+      url("../images/home-hero-when-understanding-begins.webp") type("image/webp"),
+      url("../images/home-hero-when-understanding-begins.jpg") type("image/jpeg")
+    );
   }
 }
 
@@ -1990,6 +2010,82 @@ blockquote {
 
   .human-mind-series-book .contact-panel {
     gap: 18px;
+  }
+}
+
+@media (min-width: 901px) {
+  .home-hero {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+    align-items: center;
+    gap: clamp(42px, 5vw, 84px);
+    min-height: clamp(620px, 76svh, 760px);
+    padding-block: calc(var(--header-offset) + 18px) 56px;
+    padding-inline: max(36px, calc((100vw - 1360px) / 2));
+    text-align: left;
+  }
+
+  .home-hero::before {
+    inset: 28px 0 26px;
+    border-radius: 0;
+  }
+
+  .home-hero > .reveal:first-child {
+    justify-self: end;
+    width: min(100%, 680px);
+  }
+
+  .home-hero h1 {
+    max-width: 12.5ch;
+    font-size: clamp(3.2rem, 4.8vw, 5.05rem);
+    line-height: 1.04;
+  }
+
+  .home-hero .hero-text {
+    max-width: 610px;
+    margin-top: 22px;
+    font-size: clamp(1.02rem, 1.12vw, 1.18rem);
+  }
+
+  .home-hero .button-row {
+    justify-content: flex-start;
+    margin-top: 28px;
+  }
+
+  .home-hero .hero-link {
+    margin-top: 14px;
+  }
+
+  .home-hero .reveal:last-child {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-hero-art {
+    display: grid;
+    min-height: clamp(400px, 38vw, 560px);
+    place-items: center;
+  }
+
+  .home-hero .logo-archive {
+    width: clamp(300px, 27vw, 410px);
+    aspect-ratio: 1;
+    overflow: visible;
+  }
+
+  .home-hero .logo-archive .book-cover-image {
+    opacity: .9;
+    filter: saturate(.84) contrast(.96);
+    -webkit-mask-image: radial-gradient(ellipse 88% 92% at 50% 48%, #000 78%, rgba(0, 0, 0, .82) 90%, transparent 100%);
+    mask-image: radial-gradient(ellipse 88% 92% at 50% 48%, #000 78%, rgba(0, 0, 0, .82) 90%, transparent 100%);
+  }
+
+  .home-hero .hero-book-composition {
+    width: clamp(420px, 38vw, 620px);
+    height: clamp(400px, 36vw, 590px);
+    opacity: .2;
+    transform: translate(-50%, -50%) rotate(-3deg);
   }
 }
 

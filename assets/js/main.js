@@ -3,6 +3,8 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const cursorGlow = document.querySelector(".cursor-glow");
 const year = document.getElementById("year");
+const finePointer = window.matchMedia("(pointer: fine)").matches;
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (year) year.textContent = new Date().getFullYear();
 
@@ -15,11 +17,12 @@ navToggle?.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", String(open));
 });
 
-document.addEventListener("pointermove", (event) => {
-  if (!cursorGlow) return;
-  cursorGlow.style.left = `${event.clientX}px`;
-  cursorGlow.style.top = `${event.clientY}px`;
-});
+if (cursorGlow && finePointer && !reducedMotion) {
+  document.addEventListener("pointermove", (event) => {
+    cursorGlow.style.left = `${event.clientX}px`;
+    cursorGlow.style.top = `${event.clientY}px`;
+  });
+}
 
 document.querySelectorAll(".reveal").forEach((node) => node.classList.add("visible"));
 
@@ -43,6 +46,7 @@ const wordObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll("[data-words]").forEach((node) => wordObserver.observe(node));
 
 document.querySelectorAll(".tilt-card").forEach((card) => {
+  if (!finePointer || reducedMotion) return;
   card.addEventListener("pointermove", (event) => {
     const rect = card.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - .5;
@@ -62,7 +66,6 @@ if (feedbackForm) {
     collection: params.get("collection") || "The Human Paradox Collection",
     series: params.get("series") || "",
     book: params.get("book") || "",
-    chapter: params.get("chapter") || "",
   };
   const title = document.querySelector("[data-feedback-title]");
   const contextLine = document.querySelector("[data-feedback-context]");
@@ -76,7 +79,7 @@ if (feedbackForm) {
 
   if (title) title.textContent = "Share Your Feedback";
   if (contextLine) {
-    const parts = [context.collection, context.series, context.book, context.chapter].filter(Boolean);
+    const parts = [context.collection, context.series, context.book].filter(Boolean);
     contextLine.textContent = "";
     parts.forEach((part) => {
       const line = document.createElement("span");
@@ -92,20 +95,22 @@ if (feedbackForm) {
     const status = document.querySelector("[data-feedback-status]");
     const data = new FormData(feedbackForm);
     const feedback = data.get("feedback")?.toString().trim();
+    const email = data.get("email")?.toString().trim();
     const submission = {
       name: data.get("name")?.toString().trim() || "",
+      email: email || "",
       feedback: feedback || "",
+      message: feedback || "",
       collection: data.get("collection")?.toString().trim() || "",
       series: data.get("series")?.toString().trim() || "",
       book: data.get("book")?.toString().trim() || "",
-      chapter: data.get("chapter")?.toString().trim() || "",
     };
     const payload = new FormData();
-    ["name", "feedback", "collection", "series", "book", "chapter"].forEach((key) => {
+    ["name", "email", "feedback", "message", "collection", "series", "book"].forEach((key) => {
       payload.append(key, submission[key]);
     });
     
-    if (!feedback) return;
+    if (!feedback || !email) return;
     if (submitButton) submitButton.disabled = true;
     if (status) status.textContent = "Sending feedback...";
 
@@ -120,7 +125,9 @@ if (feedbackForm) {
       
       if (response.ok) {
         status.textContent = "Thank you! Your feedback has been sent.";
-        feedbackForm.reset(); // This clears the form boxes
+        feedbackForm.elements.name.value = "";
+        feedbackForm.elements.email.value = "";
+        feedbackForm.elements.feedback.value = "";
       } else {
         status.textContent = "Oops! There was a problem submitting your form.";
       }
