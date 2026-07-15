@@ -64,12 +64,12 @@
   <div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
   <header class="site-header" data-header>
     <a class="brand" href="index.html">Greyveil Editions</a>
-    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>Menu</button>
-    <nav class="site-nav" data-nav aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle aria-controls="primary-navigation">Menu</button>
+    <nav id="primary-navigation" class="site-nav" data-nav aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about/index.html">About</a>
       <div class="dropdown">
-        <a class="dropdown-trigger" href="projects/index.html" aria-haspopup="true">Projects</a>
+        <a class="dropdown-trigger" href="projects/index.html" aria-haspopup="true" aria-expanded="false">Projects</a>
         <div class="dropdown-menu">
           <a href="projects/index.html">The Human Paradox Collection</a>
           <a href="projects/human-mind/index.html">The Human Mind</a>
@@ -132,7 +132,7 @@
           <strong>Enter Series</strong>
         </a>
         <a class="project-card rich-project-card tilt-card reveal delay-2" href="projects/human-fiction/index.html">
-          <div class="project-image-wrap"><img src="assets/images/the human fiction.jpeg" width="1024" height="1536" alt="The Human Fiction series mark" loading="lazy" decoding="async"></div>
+          <div class="project-image-wrap"><img src="assets/images/the human fiction.jpeg" width="1024" height="1536" alt="The Human Fiction series artwork" loading="lazy" decoding="async"></div>
           <span>Available</span>
           <h3>The Human Fiction</h3>
           <p>Stories, narratives and fictional explorations of human nature.</p>

@@ -31,6 +31,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <div class="cursor-glow" aria-hidden="true"></div>
 
@@ -46,17 +47,17 @@
 
     <a class="brand" href="../index.html">Greyveil Editions</a>
 
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false">
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation" aria-controls="primary-navigation">
       Menu
     </button>
 
-    <nav class="site-nav" data-nav>
+    <nav id="primary-navigation" class="site-nav" data-nav aria-label="Primary">
 
       <a href="../index.html">Home</a>
       <a href="index.html" aria-current="page">About</a>
 
       <div class="dropdown">
-        <button class="dropdown-trigger">Projects</button>
+        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Projects</button>
         <div class="dropdown-menu">
           <a href="../projects/index.html">The Human Paradox Collection</a>
           <a href="../projects/human-mind/index.html">The Human Mind</a>
@@ -72,7 +73,7 @@
 
   </header>
 
-  <main>
+  <main id="main-content">
 
     <section class="section page-shell about-layout about-feature">
 

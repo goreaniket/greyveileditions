@@ -67,6 +67,10 @@ a {
 
 a:focus-visible,
 button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid var(--bronze);
   outline-offset: 3px;
@@ -1479,6 +1483,12 @@ main > .home-hero ~ .section .contact-link {
   background: rgba(255, 255, 255, .72);
   color: var(--charcoal);
   font: inherit;
+}
+
+.feedback-form input:focus-visible,
+.feedback-form textarea:focus-visible {
+  border-color: var(--bronze);
+  box-shadow: 0 0 0 3px rgba(140, 106, 74, .18);
 }
 
 .feedback-form textarea {

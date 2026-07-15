@@ -17,6 +17,22 @@ navToggle?.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", String(open));
 });
 
+document.querySelectorAll(".dropdown").forEach((dropdown) => {
+  const trigger = dropdown.querySelector(".dropdown-trigger");
+  if (!trigger) return;
+
+  const setExpanded = (expanded) => {
+    trigger.setAttribute("aria-expanded", String(expanded));
+  };
+
+  dropdown.addEventListener("focusin", () => setExpanded(true));
+  dropdown.addEventListener("focusout", (event) => {
+    if (!dropdown.contains(event.relatedTarget)) setExpanded(false);
+  });
+  dropdown.addEventListener("pointerenter", () => setExpanded(true));
+  dropdown.addEventListener("pointerleave", () => setExpanded(false));
+});
+
 if (cursorGlow && finePointer && !reducedMotion) {
   document.addEventListener("pointermove", (event) => {
     cursorGlow.style.left = `${event.clientX}px`;
