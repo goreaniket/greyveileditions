@@ -208,6 +208,16 @@ summary:focus-visible,
   border-radius: 6px;
 }
 
+.dropdown-menu .dropdown-volume {
+  color: var(--slate);
+  font-weight: 700;
+}
+
+.dropdown-menu .dropdown-series {
+  padding-left: 26px;
+  font-size: .82rem;
+}
+
 .dropdown-menu a:hover {
   background: rgba(140, 106, 74, .08);
 }
@@ -1939,12 +1949,19 @@ blockquote {
     top: calc(100% + 8px);
     left: 0;
     right: 0;
+    box-sizing: border-box;
     display: none;
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100svh - 96px);
+    overflow-x: clip;
+    overflow-y: auto;
     padding: 16px;
     border-radius: 8px;
-    background: rgba(248, 247, 244, .96);
+    background: rgb(248, 247, 244);
     box-shadow: var(--shadow);
   }
 
@@ -1952,10 +1969,24 @@ blockquote {
     display: flex;
   }
 
+  .site-nav a,
+  .site-nav .dropdown-trigger {
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .dropdown {
+    width: 100%;
+    min-width: 0;
+  }
+
   .dropdown-menu {
     position: static;
     display: grid;
+    width: 100%;
     min-width: 0;
+    max-width: 100%;
     padding: 8px 0 0 12px;
     border: 0;
     background: transparent;
@@ -1963,6 +1994,10 @@ blockquote {
     opacity: 1;
     pointer-events: auto;
     transform: none;
+  }
+
+  .dropdown-menu .dropdown-series {
+    padding-left: 28px;
   }
 
   .dropdown:hover .dropdown-menu,
@@ -2155,34 +2190,28 @@ blockquote {
       "lede"
       "art"
       "description";
-    gap: 14px;
-    padding-block: calc(var(--header-offset) - 24px) 16px;
+    gap: 12px;
+    min-height: 0;
+    padding-block: calc(var(--header-offset) - 30px) 12px;
     place-items: center;
     text-align: center;
   }
 
   .series-landing .project-hero .hero-text {
-    margin-inline: auto;
-  }
-
-  .series-landing .project-hero .button-row {
-    justify-content: center;
-  }
-
-  .series-landing .project-hero h1 {
-    font-size: clamp(2.35rem, 11vw, 3.05rem);
-    line-height: 1.03;
-  }
-
-  .series-landing .project-hero .hero-text {
-    margin-top: 12px;
+    margin: 12px auto 0;
     font-size: 1rem;
     line-height: 1.48;
   }
 
   .series-landing .project-hero .button-row {
+    justify-content: center;
     gap: 10px;
     margin-top: 18px;
+  }
+
+  .series-landing .project-hero h1 {
+    font-size: clamp(2.35rem, 11vw, 3.05rem);
+    line-height: 1.03;
   }
 
   .series-landing .project-hero .button {
@@ -2192,7 +2221,14 @@ blockquote {
   }
 
   .series-landing .project-hero .series-art-frame {
-    width: clamp(112px, 30vw, 150px);
+    width: min(82vw, 340px);
+    max-width: 100%;
+  }
+
+  .series-landing .series-art-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .series-landing .project-hero .series-art-frame .author-image {
@@ -2215,7 +2251,7 @@ blockquote {
   }
 
   .series-landing #books {
-    padding-block: 18px 52px;
+    padding-block: 14px 48px;
   }
 
   .series-landing #books .section-heading {
@@ -2320,8 +2356,8 @@ blockquote {
 
   .home-hero {
     min-height: auto;
-    gap: 28px;
-    padding-block: var(--header-offset) 54px;
+    gap: 16px;
+    padding-block: calc(var(--header-offset) - 8px) 38px;
   }
 
   .home-hero::before {
@@ -2342,25 +2378,128 @@ blockquote {
   }
 
   .home-hero .hero-text {
-    margin-top: 18px;
+    margin-top: 14px;
   }
 
   .home-hero .button-row {
-    margin-top: 24px;
+    margin-top: 18px;
+  }
+
+  .home-hero .hero-link {
+    margin-top: 10px;
   }
 
   .home-hero .logo-archive {
-    width: clamp(188px, 54vw, 220px);
+    width: min(86vw, 340px);
+    height: auto;
+    max-width: none;
     aspect-ratio: 1;
     overflow: visible;
   }
 
-  h1 {
-    font-size: clamp(2.8rem, 15vw, 3.25rem);
+  .home-hero .book-cover-image {
+    display: block;
+    width: min(86vw, 340px);
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.55rem, 12vw, 3.15rem);
+    line-height: 1.02;
   }
 
   h2 {
     font-size: 2.45rem;
+  }
+
+  .about-feature {
+    gap: 18px;
+    padding-block: calc(var(--header-offset) - 26px) 30px;
+  }
+
+  .about-feature .copy {
+    order: -1;
+  }
+
+  .about-feature h1 {
+    font-size: clamp(2.4rem, 10vw, 3.4rem);
+    line-height: 1.04;
+  }
+
+  .about-feature .copy p:not(.eyebrow) {
+    max-width: 32ch;
+    margin-block: 10px 0;
+    line-height: 1.6;
+  }
+
+  .about-feature .greyveil-logo-panel {
+    width: min(72vw, 280px);
+    margin-inline: auto;
+  }
+
+  .about-layout:not(.about-feature) {
+    gap: 26px;
+    padding-block: 42px 58px;
+  }
+
+  .projects-collection-hero {
+    min-height: 0;
+    padding-block: calc(var(--header-offset) - 16px) 34px;
+  }
+
+  .projects-collection-hero h1 {
+    font-size: clamp(2.5rem, 11vw, 3.25rem);
+    line-height: 1.03;
+  }
+
+  .projects-collection-hero .hero-text {
+    max-width: 34ch;
+    margin-top: 12px;
+    font-size: 1rem;
+    line-height: 1.46;
+  }
+
+  .projects-collection-hero .collection-book-stack {
+    display: block;
+    top: 56%;
+    width: min(460px, 118vw);
+    height: 220px;
+    opacity: .075;
+    filter: blur(1.8px);
+  }
+
+  .projects-collection-hero + .section {
+    padding-block: 28px 50px;
+  }
+
+  .projects-collection-hero + .section .section-heading h2 {
+    font-size: clamp(2.05rem, 9vw, 2.65rem);
+  }
+
+  main > .project-hero:not(.projects-collection-hero):not(.feedback-hero):not(.series-landing-hero) {
+    min-height: 0;
+    gap: 10px;
+    padding-block: calc(var(--header-offset) - 24px) 18px;
+  }
+
+  main > .project-hero:not(.projects-collection-hero):not(.feedback-hero):not(.series-landing-hero) h1 {
+    font-size: clamp(2.25rem, 9.6vw, 3rem);
+    line-height: 1.04;
+  }
+
+  main > .project-hero:not(.projects-collection-hero):not(.feedback-hero):not(.series-landing-hero) .hero-text {
+    max-width: 34ch;
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  main > .project-hero:not(.projects-collection-hero):not(.feedback-hero):not(.series-landing-hero) + .section {
+    padding-block: 18px 52px;
   }
 
   .feedback-hero {
@@ -2493,10 +2632,6 @@ blockquote {
   .project-card strong,
   .contact-link {
     width: 100%;
-  }
-
-  .collection-book-stack {
-    display: none;
   }
 
   .human-mind-series-book .book-detail {
