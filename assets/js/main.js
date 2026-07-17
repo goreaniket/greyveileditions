@@ -82,7 +82,7 @@ const feedbackForm = document.querySelector("[data-feedback-form]");
 if (feedbackForm) {
   const params = new URLSearchParams(window.location.search);
   const context = {
-    collection: params.get("collection") || "The Human Paradox Collection",
+    collection: params.get("collection") || "Greyveil Collection",
     series: params.get("series") || "",
     book: params.get("book") || "",
   };

@@ -809,6 +809,89 @@ h3 {
   object-fit: contain;
 }
 
+.series-landing .project-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 320px);
+  grid-template-areas:
+    "lede art"
+    "description art";
+  align-items: center;
+  gap: clamp(16px, 2.2vw, 28px) clamp(34px, 5vw, 76px);
+  min-height: 0;
+  padding-block: calc(var(--header-offset) + 14px) 36px;
+  text-align: left;
+}
+
+.series-landing .series-hero-lede {
+  grid-area: lede;
+  width: 100%;
+  max-width: 760px;
+}
+
+.series-landing .project-hero h1 {
+  font-size: clamp(3rem, 5vw, 4.7rem);
+  line-height: 1.04;
+}
+
+.series-landing .project-hero .hero-text {
+  max-width: 640px;
+  margin-top: 16px;
+  margin-inline: 0;
+  font-size: clamp(1rem, 1.12vw, 1.14rem);
+  line-height: 1.54;
+}
+
+.series-landing .project-hero .button-row {
+  justify-content: flex-start;
+  margin-top: 22px;
+}
+
+.series-landing .project-hero .series-art-frame {
+  grid-area: art;
+  width: clamp(210px, 21vw, 310px);
+  justify-self: center;
+  align-self: center;
+}
+
+.series-landing .series-hero-description {
+  grid-area: description;
+  width: 100%;
+  max-width: 720px;
+  align-self: start;
+}
+
+.series-landing .series-hero-description .eyebrow {
+  margin-bottom: 10px;
+}
+
+.series-landing .series-hero-description h2 {
+  font-size: clamp(1.85rem, 2.7vw, 2.8rem);
+  line-height: 1.04;
+}
+
+.series-landing .series-hero-description p:not(.eyebrow) {
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.58;
+}
+
+.series-landing #books {
+  padding-block: 30px 78px;
+}
+
+.series-landing #books .section-heading {
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.series-landing #books .section-heading h2 {
+  font-size: clamp(2rem, 2.8vw, 3.1rem);
+  line-height: 1.04;
+}
+
+.series-landing #books .book-grid {
+  gap: 18px;
+}
+
 .about-feature {
   padding-block-start: var(--header-offset);
 }
@@ -2023,6 +2106,131 @@ blockquote {
   }
 }
 
+@media (max-width: 900px) {
+  .series-landing .project-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
+    grid-template-areas:
+      "lede art"
+      "description art";
+    gap: 18px clamp(24px, 5vw, 42px);
+    padding-block: var(--header-offset) 28px;
+    place-items: center stretch;
+    text-align: left;
+  }
+
+  .series-landing .series-hero-lede,
+  .series-landing .series-hero-description {
+    max-width: 700px;
+  }
+
+  .series-landing .project-hero .hero-text {
+    margin-inline: 0;
+  }
+
+  .series-landing .project-hero .button-row {
+    justify-content: flex-start;
+  }
+
+  .series-landing .project-hero .series-art-frame {
+    width: clamp(160px, 24vw, 220px);
+  }
+
+  .series-landing .series-hero-description {
+    text-align: left;
+  }
+
+  .series-landing #books {
+    padding-block: 28px 68px;
+  }
+
+  .series-landing #books .section-heading {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .series-landing .project-hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "lede"
+      "art"
+      "description";
+    gap: 14px;
+    padding-block: calc(var(--header-offset) - 24px) 16px;
+    place-items: center;
+    text-align: center;
+  }
+
+  .series-landing .project-hero .hero-text {
+    margin-inline: auto;
+  }
+
+  .series-landing .project-hero .button-row {
+    justify-content: center;
+  }
+
+  .series-landing .project-hero h1 {
+    font-size: clamp(2.35rem, 11vw, 3.05rem);
+    line-height: 1.03;
+  }
+
+  .series-landing .project-hero .hero-text {
+    margin-top: 12px;
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+
+  .series-landing .project-hero .button-row {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .series-landing .project-hero .button {
+    flex: 1 1 142px;
+    width: auto;
+    padding-inline: 12px;
+  }
+
+  .series-landing .project-hero .series-art-frame {
+    width: clamp(112px, 30vw, 150px);
+  }
+
+  .series-landing .project-hero .series-art-frame .author-image {
+    padding: 3px;
+  }
+
+  .series-landing .series-hero-description .eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .series-landing .series-hero-description h2 {
+    font-size: clamp(1.68rem, 7.4vw, 2.12rem);
+    line-height: 1.04;
+  }
+
+  .series-landing .series-hero-description p:not(.eyebrow) {
+    margin-top: 10px;
+    font-size: .94rem;
+    line-height: 1.5;
+  }
+
+  .series-landing #books {
+    padding-block: 18px 52px;
+  }
+
+  .series-landing #books .section-heading {
+    margin-bottom: 14px;
+  }
+
+  .series-landing #books .section-heading h2 {
+    font-size: clamp(1.9rem, 8vw, 2.35rem);
+  }
+
+  .series-landing #books .book-grid {
+    gap: 16px;
+  }
+}
+
 @media (min-width: 901px) {
   .home-hero {
     width: 100%;
@@ -2125,6 +2333,14 @@ blockquote {
     display: none;
   }
 
+  .home-hero .reveal.home-hero-art {
+    display: grid;
+    width: 100%;
+    min-height: 0;
+    place-items: center;
+    justify-self: center;
+  }
+
   .home-hero .hero-text {
     margin-top: 18px;
   }
@@ -2134,7 +2350,9 @@ blockquote {
   }
 
   .home-hero .logo-archive {
-    width: min(260px, 76vw);
+    width: clamp(188px, 54vw, 220px);
+    aspect-ratio: 1;
+    overflow: visible;
   }
 
   h1 {
