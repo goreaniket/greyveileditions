@@ -675,73 +675,56 @@ h3 {
 .hero-book-01 {
   left: 12%;
   top: 18%;
+  background-image: url("../images/home-hero-the-last-shift.jpg");
+  background-image: image-set(
+    url("../images/home-hero-the-last-shift.webp") type("image/webp"),
+    url("../images/home-hero-the-last-shift.jpg") type("image/jpeg")
+  );
   transform: rotate(-16deg);
 }
 
 .hero-book-02 {
   right: 18%;
   top: 8%;
+  background-image: url("../images/home-hero-the-paradox-of-awareness.jpg");
+  background-image: image-set(
+    url("../images/home-hero-the-paradox-of-awareness.webp") type("image/webp"),
+    url("../images/home-hero-the-paradox-of-awareness.jpg") type("image/jpeg")
+  );
   transform: rotate(12deg);
 }
 
 .hero-book-03 {
   left: 24%;
   bottom: 9%;
+  background-image: url("../images/home-hero-the-fiction-of-awareness.jpg");
+  background-image: image-set(
+    url("../images/home-hero-the-fiction-of-awareness.webp") type("image/webp"),
+    url("../images/home-hero-the-fiction-of-awareness.jpg") type("image/jpeg")
+  );
   transform: rotate(-6deg);
 }
 
 .hero-book-04 {
   right: 12%;
   bottom: 15%;
+  background-image: url("../images/home-hero-the-end-of-interpretation.jpg");
+  background-image: image-set(
+    url("../images/home-hero-the-end-of-interpretation.webp") type("image/webp"),
+    url("../images/home-hero-the-end-of-interpretation.jpg") type("image/jpeg")
+  );
   transform: rotate(17deg);
 }
 
 .hero-book-05 {
   left: 50%;
   top: 49%;
+  background-image: url("../images/home-hero-when-understanding-begins.jpg");
+  background-image: image-set(
+    url("../images/home-hero-when-understanding-begins.webp") type("image/webp"),
+    url("../images/home-hero-when-understanding-begins.jpg") type("image/jpeg")
+  );
   transform: translate(-50%, -50%) rotate(2deg);
-}
-
-@media (min-width: 641px) {
-  .hero-book-01 {
-    background-image: url("../images/home-hero-the-last-shift.jpg");
-    background-image: image-set(
-      url("../images/home-hero-the-last-shift.webp") type("image/webp"),
-      url("../images/home-hero-the-last-shift.jpg") type("image/jpeg")
-    );
-  }
-
-  .hero-book-02 {
-    background-image: url("../images/home-hero-the-paradox-of-awareness.jpg");
-    background-image: image-set(
-      url("../images/home-hero-the-paradox-of-awareness.webp") type("image/webp"),
-      url("../images/home-hero-the-paradox-of-awareness.jpg") type("image/jpeg")
-    );
-  }
-
-  .hero-book-03 {
-    background-image: url("../images/home-hero-the-fiction-of-awareness.jpg");
-    background-image: image-set(
-      url("../images/home-hero-the-fiction-of-awareness.webp") type("image/webp"),
-      url("../images/home-hero-the-fiction-of-awareness.jpg") type("image/jpeg")
-    );
-  }
-
-  .hero-book-04 {
-    background-image: url("../images/home-hero-the-end-of-interpretation.jpg");
-    background-image: image-set(
-      url("../images/home-hero-the-end-of-interpretation.webp") type("image/webp"),
-      url("../images/home-hero-the-end-of-interpretation.jpg") type("image/jpeg")
-    );
-  }
-
-  .hero-book-05 {
-    background-image: url("../images/home-hero-when-understanding-begins.jpg");
-    background-image: image-set(
-      url("../images/home-hero-when-understanding-begins.webp") type("image/webp"),
-      url("../images/home-hero-when-understanding-begins.jpg") type("image/jpeg")
-    );
-  }
 }
 
 .greyveil-logo-panel {
@@ -2020,12 +2003,6 @@ blockquote {
     text-align: center;
   }
 
-  .home-hero .hero-book-composition {
-    width: min(480px, 74vw);
-    height: min(440px, 68vw);
-    opacity: .14;
-  }
-
   .hero .reveal:last-child {
     justify-content: center;
   }
@@ -2138,6 +2115,38 @@ blockquote {
 
   .human-mind-series-book .contact-panel {
     gap: 18px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .home-hero-art {
+    display: grid;
+    width: min(100%, 460px);
+    min-height: min(68vw, 430px);
+    overflow: clip;
+    place-items: center;
+    justify-self: center;
+  }
+
+  .home-hero .logo-archive {
+    width: min(54vw, 380px);
+    aspect-ratio: 1;
+    overflow: visible;
+  }
+
+  .home-hero .book-cover-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  .home-hero .hero-book-composition {
+    width: min(72vw, 460px);
+    height: min(68vw, 430px);
+    opacity: .14;
+    transform: translate(-50%, -50%) rotate(-2deg);
   }
 }
 
@@ -2356,23 +2365,24 @@ blockquote {
 
   .home-hero {
     min-height: auto;
-    gap: 16px;
-    padding-block: calc(var(--header-offset) - 8px) 38px;
+    gap: 24px;
+    padding-block: calc(var(--header-offset) - 38px) 34px;
   }
 
   .home-hero::before {
     inset: 18px -8px 20px;
   }
 
-  .home-hero::after,
-  .home-hero .hero-book-composition {
+  .home-hero::after {
     display: none;
   }
 
   .home-hero .reveal.home-hero-art {
+    order: -1;
     display: grid;
-    width: 100%;
-    min-height: 0;
+    width: min(100%, 390px);
+    min-height: min(92vw, 380px);
+    overflow: clip;
     place-items: center;
     justify-self: center;
   }
@@ -2390,7 +2400,7 @@ blockquote {
   }
 
   .home-hero .logo-archive {
-    width: min(86vw, 340px);
+    width: min(88vw, 360px);
     height: auto;
     max-width: none;
     aspect-ratio: 1;
@@ -2399,12 +2409,25 @@ blockquote {
 
   .home-hero .book-cover-image {
     display: block;
-    width: min(86vw, 340px);
+    width: 100%;
     height: auto;
     max-width: none;
     object-fit: contain;
     visibility: visible;
     opacity: 1;
+  }
+
+  .home-hero .hero-book-composition {
+    display: block;
+    width: min(105vw, 400px);
+    height: min(94vw, 380px);
+    opacity: .12;
+    transform: translate(-50%, -50%) rotate(-3deg);
+  }
+
+  .home-hero .hero-book {
+    width: clamp(68px, 22vw, 102px);
+    box-shadow: 0 16px 34px rgba(42, 52, 64, .18);
   }
 
   .home-hero h1 {
@@ -2417,12 +2440,8 @@ blockquote {
   }
 
   .about-feature {
-    gap: 18px;
-    padding-block: calc(var(--header-offset) - 26px) 30px;
-  }
-
-  .about-feature .copy {
-    order: -1;
+    gap: 20px;
+    padding-block: calc(var(--header-offset) - 38px) 28px;
   }
 
   .about-feature h1 {
@@ -2437,8 +2456,32 @@ blockquote {
   }
 
   .about-feature .greyveil-logo-panel {
-    width: min(72vw, 280px);
+    position: relative;
+    width: min(82vw, 330px);
+    aspect-ratio: 1;
+    overflow: visible;
+    isolation: isolate;
     margin-inline: auto;
+  }
+
+  .about-feature .greyveil-logo-panel::before {
+    content: "";
+    position: absolute;
+    inset: 8% -7% -6% 9%;
+    z-index: -1;
+    border: 1px solid rgba(140, 106, 74, .16);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 24% 18%, rgba(140, 106, 74, .14), transparent 38%),
+      linear-gradient(145deg, rgba(255, 255, 255, .38), rgba(231, 226, 218, .28));
+    box-shadow: 0 18px 42px rgba(42, 52, 64, .1);
+    transform: rotate(-4deg);
+  }
+
+  .about-feature img {
+    position: relative;
+    z-index: 1;
+    padding: clamp(8px, 3vw, 16px);
   }
 
   .about-layout:not(.about-feature) {
