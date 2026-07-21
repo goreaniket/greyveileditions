@@ -115,6 +115,8 @@ if (feedbackForm) {
     const data = new FormData(feedbackForm);
     const feedback = data.get("feedback")?.toString().trim();
     const email = data.get("email")?.toString().trim();
+    const occupation = data.get("occupation")?.toString().trim();
+    const rating = data.get("rating")?.toString().trim();
     const submission = {
       name: data.get("name")?.toString().trim() || "",
       email: email || "",
@@ -123,9 +125,11 @@ if (feedbackForm) {
       collection: data.get("collection")?.toString().trim() || "",
       series: data.get("series")?.toString().trim() || "",
       book: data.get("book")?.toString().trim() || "",
+      occupation: occupation || "",
+      rating: rating || "",
     };
     const payload = new FormData();
-    ["name", "email", "feedback", "message", "collection", "series", "book"].forEach((key) => {
+    ["name", "email", "feedback", "message", "collection", "series", "book", "occupation", "rating"].forEach((key) => {
       payload.append(key, submission[key]);
     });
     
@@ -147,6 +151,8 @@ if (feedbackForm) {
         feedbackForm.elements.name.value = "";
         feedbackForm.elements.email.value = "";
         feedbackForm.elements.feedback.value = "";
+        feedbackForm.elements.occupation.value = "";
+        feedbackForm.elements.rating.value = "";
       } else {
         status.textContent = "Oops! There was a problem submitting your form.";
       }

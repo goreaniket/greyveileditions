@@ -70,6 +70,32 @@
         <label><span>Name</span><input name="name" type="text" autocomplete="name" /></label>
         <label><span>Email</span><input name="email" type="email" autocomplete="email" required /></label>
         <label><span>Your feedback</span><textarea name="feedback" rows="7" required></textarea></label>
+        <label>
+          <span>Occupation</span>
+          <select name="occupation" required>
+            <option value="" selected disabled hidden>Select occupation</option>
+            <option value="Student">Student</option>
+            <option value="Educator">Educator</option>
+            <option value="Working Professional">Working Professional</option>
+            <option value="Writer">Writer</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <label>
+          <span>Rate this book</span>
+          <select name="rating" required>
+            <option value="" selected disabled hidden>Select rating</option>
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+            <option value="3.5">3.5</option>
+            <option value="4">4</option>
+            <option value="4.5">4.5</option>
+            <option value="5">5</option>
+          </select>
+        </label>
         <button class="button primary" type="submit">Send Feedback</button>
         <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
       </form>

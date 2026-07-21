@@ -1575,7 +1575,8 @@ main > .home-hero ~ .section .contact-link {
 }
 
 .feedback-form input,
-.feedback-form textarea {
+.feedback-form textarea,
+.feedback-form select {
   width: 100%;
   border: 1px solid rgba(42, 52, 64, .16);
   border-radius: 8px;
@@ -1586,7 +1587,8 @@ main > .home-hero ~ .section .contact-link {
 }
 
 .feedback-form input:focus-visible,
-.feedback-form textarea:focus-visible {
+.feedback-form textarea:focus-visible,
+.feedback-form select:focus-visible {
   border-color: var(--bronze);
   box-shadow: 0 0 0 3px rgba(140, 106, 74, .18);
 }
@@ -2617,11 +2619,13 @@ blockquote {
 
   .feedback-form input,
   .feedback-form textarea,
+  .feedback-form select,
   .feedback-form button {
     width: 100%;
   }
 
   .feedback-form input,
+  .feedback-form select,
   .feedback-form button {
     min-height: 48px;
   }
