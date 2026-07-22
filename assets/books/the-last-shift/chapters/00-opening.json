@@ -1,0 +1,108 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Last Shift",
+  "shortTitle": "Opening",
+  "file": "chapters/00-opening.json",
+  "feedbackEnabled": false,
+  "index": 0,
+  "sourceRange": [
+    2,
+    9
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "HUMAN MIND SERIES",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK I",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3
+    },
+    {
+      "type": "space",
+      "sourceParagraphs": 1
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE LAST SHIFT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(",
+          "italic": true
+        },
+        {
+          "text": "Understanding the Mind ",
+          "italic": true
+        },
+        {
+          "text": "Beyon",
+          "italic": true
+        },
+        {
+          "text": "d,",
+          "italic": true
+        },
+        {
+          "text": "  Attachment",
+          "italic": true
+        },
+        {
+          "text": ", Identity & Illusion",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " LALIT R. MISHRA",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "space",
+      "sourceParagraphs": 1
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9
+    }
+  ]
+}

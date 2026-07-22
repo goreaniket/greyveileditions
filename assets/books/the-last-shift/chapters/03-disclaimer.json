@@ -1,0 +1,43 @@
+{
+  "id": "disclaimer",
+  "kind": "frontmatter",
+  "label": "Disclaimer",
+  "title": "Disclaimer",
+  "shortTitle": "Disclaimer",
+  "file": "chapters/03-disclaimer.json",
+  "feedbackEnabled": false,
+  "index": 3,
+  "sourceRange": [
+    60,
+    62
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is a work of psychological reflection and literary expression. It is not based on any specific real-life individual, event, or relationship, though it may draw from universal human emotions and experiences."
+        }
+      ],
+      "sourceParagraph": 60
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any resemblance to actual persons, living or dead, or real events is purely coincidental."
+        }
+      ],
+      "sourceParagraph": 61
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This content is intended for literary and reflective purposes only and should not be considered psychological, medical, or therapeutic advice. The author does not claim to diagnose, treat, or cure any condition."
+        }
+      ],
+      "sourceParagraph": 62
+    }
+  ]
+}

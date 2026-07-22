@@ -1,0 +1,436 @@
+{
+  "id": "the-last-shift",
+  "title": "The Last Shift",
+  "subtitle": "Understanding the Mind Beyond, Attachment, Identity & Illusion",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Mind",
+  "seriesDisplay": "The Human Mind Series",
+  "bookNumber": "Book I",
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-mind/assets/covers/the%20last%20shift.jpeg",
+  "sourceWordFile": "E:\\Lalit website\\greyveil editions\\projects\\human-mind\\chapters\\word\\THE LAST SHIFT PART-1.docx",
+  "comparisonPdfFile": "E:\\Lalit website\\greyveil editions\\projects\\human-mind\\chapters\\PDF\\the last shift.pdf",
+  "readerRoute": "/projects/human-mind/books/the-last-shift/reader/",
+  "storageKey": "greyveil:the-last-shift:continuous-reader:v2",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Mind",
+    "book": "The Last Shift",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-last-shift",
+    "variables": {
+      "--reader-accent": "#3c496b",
+      "--reader-accent-soft": "rgba(60, 73, 107, .1)",
+      "--reader-warm": "#8b6f4d",
+      "--reader-paper": "#fbf7ef",
+      "--reader-paper-soft": "#f7efe2"
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Last Shift",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "feedbackEnabled": false,
+      "index": 0,
+      "sourceRange": [
+        2,
+        9
+      ]
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "feedbackEnabled": false,
+      "index": 1,
+      "sourceRange": [
+        13,
+        37
+      ]
+    },
+    {
+      "id": "copyright",
+      "kind": "frontmatter",
+      "label": "Copyright",
+      "title": "Copyright",
+      "shortTitle": "Copyright",
+      "file": "chapters/02-copyright.json",
+      "feedbackEnabled": false,
+      "index": 2,
+      "sourceRange": [
+        39,
+        57
+      ]
+    },
+    {
+      "id": "disclaimer",
+      "kind": "frontmatter",
+      "label": "Disclaimer",
+      "title": "Disclaimer",
+      "shortTitle": "Disclaimer",
+      "file": "chapters/03-disclaimer.json",
+      "feedbackEnabled": false,
+      "index": 3,
+      "sourceRange": [
+        60,
+        62
+      ]
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "Dedication",
+      "shortTitle": "Dedication",
+      "file": "chapters/04-dedication.json",
+      "feedbackEnabled": false,
+      "index": 4,
+      "sourceRange": [
+        64,
+        69
+      ]
+    },
+    {
+      "id": "authors-note",
+      "kind": "frontmatter",
+      "label": "Author's Note",
+      "title": "Author's Note",
+      "shortTitle": "Author's Note",
+      "file": "chapters/05-authors-note.json",
+      "feedbackEnabled": false,
+      "index": 5,
+      "sourceRange": [
+        72,
+        87
+      ]
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "Prologue",
+      "shortTitle": "Prologue",
+      "file": "chapters/06-prologue.json",
+      "feedbackEnabled": true,
+      "index": 6,
+      "sourceRange": [
+        90,
+        130
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "Introduction",
+      "shortTitle": "Introduction",
+      "file": "chapters/07-introduction.json",
+      "feedbackEnabled": true,
+      "index": 7,
+      "sourceRange": [
+        133,
+        176
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "Chapter 1",
+      "number": "Chapter 1",
+      "phase": "Phase I - Attachment",
+      "title": "The Beginning of Attachment",
+      "shortTitle": "The Beginning of Attachment",
+      "file": "chapters/08-chapter-01.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        185,
+        188,
+        189
+      ],
+      "index": 8,
+      "sourceRange": [
+        190,
+        289
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "Chapter 2",
+      "number": "Chapter 2",
+      "phase": "Phase I - Attachment",
+      "title": "Silent Attachment",
+      "shortTitle": "Silent Attachment",
+      "file": "chapters/09-chapter-02.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        291,
+        292
+      ],
+      "index": 9,
+      "sourceRange": [
+        294,
+        372
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "Chapter 3",
+      "number": "Chapter 3",
+      "phase": "Phase II - Distance",
+      "title": "Fear of Losing",
+      "shortTitle": "Fear of Losing",
+      "file": "chapters/10-chapter-03.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        378,
+        379,
+        382
+      ],
+      "index": 10,
+      "sourceRange": [
+        384,
+        483
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "Chapter 4",
+      "number": "Chapter 4",
+      "phase": "Phase II - Distance",
+      "title": "Emotional Exhaustion",
+      "shortTitle": "Emotional Exhaustion",
+      "file": "chapters/11-chapter-04.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        486,
+        487
+      ],
+      "index": 11,
+      "sourceRange": [
+        489,
+        593
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "Chapter 5",
+      "number": "Chapter 5",
+      "phase": "Phase III - Detachment",
+      "title": "Detachment",
+      "subtitle": "(The Quiet Disappearance)",
+      "shortTitle": "Detachment",
+      "file": "chapters/12-chapter-05.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        599,
+        602,
+        603
+      ],
+      "index": 12,
+      "sourceRange": [
+        605,
+        694
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "Chapter 6",
+      "number": "Chapter 6",
+      "phase": "Phase IV - Void",
+      "title": "Emotional Shutdown",
+      "shortTitle": "Emotional Shutdown",
+      "file": "chapters/13-chapter-06.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        700,
+        703,
+        704
+      ],
+      "index": 13,
+      "sourceRange": [
+        706,
+        815
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "Chapter 7",
+      "number": "Chapter 7",
+      "phase": "Phase IV - Void",
+      "title": "Isolation (Self-Distance)",
+      "shortTitle": "Isolation",
+      "file": "chapters/14-chapter-07.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        818,
+        819
+      ],
+      "index": 14,
+      "sourceRange": [
+        821,
+        930
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "Chapter 8",
+      "number": "Chapter 8",
+      "phase": "Phase V - Awareness",
+      "title": "The Mind Questions Itself",
+      "shortTitle": "The Mind Questions Itself",
+      "file": "chapters/15-chapter-08.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        936,
+        939,
+        940
+      ],
+      "index": 15,
+      "sourceRange": [
+        942,
+        1070
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "Chapter 9",
+      "number": "Chapter 9",
+      "phase": "Phase VI - The Last Shift",
+      "title": "The Things We Realize Too Late",
+      "shortTitle": "Things We Realize Too Late",
+      "file": "chapters/16-chapter-09.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        1076,
+        1079,
+        1080
+      ],
+      "index": 16,
+      "sourceRange": [
+        1082,
+        1187
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "kind": "chapter",
+      "label": "Chapter 10",
+      "number": "Chapter 10",
+      "phase": "Phase VI - The Last Shift",
+      "title": "What Remains When Everything Quiets Down",
+      "shortTitle": "What Remains",
+      "file": "chapters/17-chapter-10.json",
+      "feedbackEnabled": true,
+      "sourceHeadingParagraphs": [
+        1190,
+        1191
+      ],
+      "index": 17,
+      "sourceRange": [
+        1193,
+        1290
+      ]
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "label": "End Realization",
+      "title": "End Realization",
+      "shortTitle": "End Realization",
+      "file": "chapters/18-end-realization.json",
+      "feedbackEnabled": true,
+      "index": 18,
+      "sourceRange": [
+        1293,
+        1331
+      ]
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "Epilogue",
+      "shortTitle": "Epilogue",
+      "file": "chapters/19-epilogue.json",
+      "feedbackEnabled": true,
+      "index": 19,
+      "sourceRange": [
+        1334,
+        1387
+      ]
+    },
+    {
+      "id": "part-ii-teaser",
+      "kind": "teaser",
+      "label": "Part II Teaser",
+      "title": "Part II - Second Layer (Teaser)",
+      "shortTitle": "Part II Teaser",
+      "file": "chapters/20-part-ii-teaser.json",
+      "feedbackEnabled": false,
+      "index": 20,
+      "sourceRange": [
+        1390,
+        1400
+      ]
+    },
+    {
+      "id": "about-author",
+      "kind": "frontmatter",
+      "label": "About the Author",
+      "title": "About the Author",
+      "shortTitle": "About the Author",
+      "file": "chapters/21-about-author.json",
+      "feedbackEnabled": false,
+      "index": 21,
+      "sourceRange": [
+        1403,
+        1422
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "Word manuscript is the live source for this reader.",
+    "The PDF was used only as a visual and structural reference.",
+    "The source contents list names Chapter 10 as The Last Shift, while the chapter opening names it What Remains When Everything Quiets Down.",
+    "The source contents spelling PHASAE I - ATTACHMENT is preserved in the contents unit."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "label": "Dedication",
+  "title": "Dedication",
+  "shortTitle": "Dedication",
+  "file": "chapters/04-dedication.json",
+  "feedbackEnabled": false,
+  "index": 4,
+  "sourceRange": [
+    64,
+    69
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "For everyone who kept carrying emotions "
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "they never had the words to explain. "
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And for the version of you "
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that survived every chapter "
+        }
+      ],
+      "sourceParagraph": 67
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without knowing "
+        }
+      ],
+      "sourceParagraph": 68
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it was becoming stronger. "
+        }
+      ],
+      "sourceParagraph": 69
+    }
+  ]
+}

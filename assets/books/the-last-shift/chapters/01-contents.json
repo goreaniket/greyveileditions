@@ -1,0 +1,141 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "file": "chapters/01-contents.json",
+  "feedbackEnabled": false,
+  "index": 1,
+  "sourceRange": [
+    13,
+    37
+  ],
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright Claims………………………………………………………………3",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer……………………………………………………………………….4",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication .....................................................................................5",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "Author's Note .................................................................................6",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-line",
+      "text": "Prologue .........................................................................................7",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction ...................................................................................10",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASAE I - ATTACHMENT",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1 — The Beginning of Attachment .....................................14",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2 — Silent Attachment ......................................................20",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE II — DISTANCE",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3 — Fear of Losing ...........................................................26",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4 — Emotional Exhaustion ...............................................32",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE III — DETACHMENT",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5 — Detachment (The Quiet Disappearance)…………………39",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6 — Emotional Shutdown .................................................45",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE IV — VOID",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7 — Isolation (Self-Distance) .............................................51",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE V — AWARENESS",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8 — The Mind Questions Itself ..........................................58",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9 — The Things We Realize Too Late .................................66",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE VI — THE LAST SHIFT",
+      "sourceParagraph": 33
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 10 — The Last Shift ..........................................................72",
+      "sourceParagraph": 34
+    },
+    {
+      "type": "toc-heading",
+      "text": "EPILOGUE.....................................................................................80",
+      "sourceParagraph": 35
+    },
+    {
+      "type": "toc-heading",
+      "text": "PART II — SECOND LAYER ...........................................................83",
+      "sourceParagraph": 36
+    },
+    {
+      "type": "toc-heading",
+      "text": "ABOUT THE AUTHOR ...................................................................84",
+      "sourceParagraph": 37
+    }
+  ]
+}

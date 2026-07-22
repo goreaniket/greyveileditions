@@ -1,0 +1,364 @@
+{
+  "id": "part-ii-teaser",
+  "kind": "teaser",
+  "label": "Part II Teaser",
+  "title": "Part II - Second Layer (Teaser)",
+  "shortTitle": "Part II Teaser",
+  "file": "chapters/20-part-ii-teaser.json",
+  "feedbackEnabled": false,
+  "index": 20,
+  "sourceRange": [
+    1390,
+    1400
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar "
+        },
+        {
+          "text": "tumhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " yeh journey khatam ho "
+        },
+        {
+          "text": "gayi"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 1390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "galat"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 1391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "abhi"
+        },
+        {
+          "text": " ek layer "
+        },
+        {
+          "text": "baaki"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh jo attachment se "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " deep "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 1393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur awareness se "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " uncomfortable."
+        }
+      ],
+      "sourceParagraph": 1394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan "
+        },
+        {
+          "text": "sawal"
+        },
+        {
+          "text": " logon "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 1395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "khud reality "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum "
+        },
+        {
+          "text": "wahan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pahunchte"
+        },
+        {
+          "text": " ho…"
+        }
+      ],
+      "sourceParagraph": 1397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tumhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jawab"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "milte"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf"
+        },
+        {
+          "text": " ek aur question "
+        },
+        {
+          "text": "milta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 1399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Agar yeh sab main "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoon"
+        },
+        {
+          "text": "… "
+        },
+        {
+          "text": "toh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "phir"
+        },
+        {
+          "text": " main "
+        },
+        {
+          "text": "hoon"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": "?” ye end of part -1 "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagana"
+        }
+      ],
+      "sourceParagraph": 1400
+    }
+  ]
+}

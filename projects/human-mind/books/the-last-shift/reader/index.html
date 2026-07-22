@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Last Shift Reader | Greyveil Editions</title>
+  <meta name="description" content="A continuous paginated Greyveil Editions reader for The Last Shift by Lalit R. Mishra." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://greyveileditions.vercel.app/projects/human-mind/books/the-last-shift/reader/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../../../assets/css/reader.css?v=20260722" />
+</head>
+<body class="reader-book reader-theme-last-shift" data-book-url="../../../../../assets/books/the-last-shift/book.json">
+  <a class="reader-skip-link" href="#reader-content">Skip to book content</a>
+
+  <header class="reader-toolbar" aria-label="Reader controls">
+    <div class="reader-toolbar__primary">
+      <a class="reader-control reader-control--exit" href="../../the-last-shift.html">Exit Reader</a>
+      <button class="reader-control" type="button" aria-expanded="false" aria-controls="reader-contents" data-open-contents>Contents</button>
+      <p class="reader-status" data-reader-status>Opening book</p>
+      <div class="reader-progress" aria-label="Reading progress">
+        <span data-progress-label>0%</span>
+        <span class="reader-progress__track" aria-hidden="true"><span data-progress-bar></span></span>
+      </div>
+    </div>
+
+    <div class="reader-toolbar__secondary">
+      <div class="reader-control-group" aria-label="Font size">
+        <button class="reader-control reader-control--icon" type="button" aria-label="Decrease font size" data-font-decrease>A-</button>
+        <button class="reader-control reader-control--icon" type="button" aria-label="Increase font size" data-font-increase>A+</button>
+      </div>
+
+      <div class="reader-theme-switcher" aria-label="Theme">
+        <button class="reader-control" type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+        <button class="reader-control" type="button" data-theme-choice="sepia" aria-pressed="false">Sepia</button>
+        <button class="reader-control" type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="reader-content" class="reader-stage" aria-live="polite">
+    <div class="reader-loading" data-reader-loading>
+      <p>Setting the pages...</p>
+    </div>
+    <article class="reader-pages" data-reader-pages aria-label="The Last Shift"></article>
+  </main>
+
+  <div class="contents-backdrop" data-contents-backdrop hidden></div>
+  <aside class="contents-drawer" id="reader-contents" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="reader-contents-title" data-contents-drawer inert>
+    <div class="contents-drawer__header">
+      <div>
+        <p class="contents-drawer__eyebrow">Greyveil Editions</p>
+        <h2 id="reader-contents-title">Contents</h2>
+      </div>
+      <button class="reader-control reader-control--icon" type="button" aria-label="Close contents" data-close-contents>Close</button>
+    </div>
+    <nav class="contents-list" aria-label="Book contents" data-contents-list></nav>
+  </aside>
+
+  <noscript>
+    <p class="reader-noscript">This reader needs JavaScript to load the prepared book pages.</p>
+  </noscript>
+
+  <script src="../../../../../assets/js/reader.js?v=20260722" defer></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+{
+  "id": "about-author",
+  "kind": "frontmatter",
+  "label": "About the Author",
+  "title": "About the Author",
+  "shortTitle": "About the Author",
+  "file": "chapters/21-about-author.json",
+  "feedbackEnabled": false,
+  "index": 21,
+  "sourceRange": [
+    1403,
+    1422
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is a writer focused on the psychology of "
+        }
+      ],
+      "sourceParagraph": 1403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "human behavior, attachment, self-awareness, emotional "
+        }
+      ],
+      "sourceParagraph": 1404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "patterns, and the silent transformations that often go "
+        }
+      ],
+      "sourceParagraph": 1405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unnoticed within everyday life. "
+        }
+      ],
+      "sourceParagraph": 1406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work explores the space between thought and feeling—"
+        }
+      ],
+      "sourceParagraph": 1407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the questions people carry quietly, the connections they "
+        }
+      ],
+      "sourceParagraph": 1408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "struggle to understand, and the internal shifts that shape "
+        }
+      ],
+      "sourceParagraph": 1409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "who they eventually become. "
+        }
+      ],
+      "sourceParagraph": 1410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Rather than providing conclusions, his writing invites "
+        }
+      ],
+      "sourceParagraph": 1411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "readers to observe their own experiences through a deeper "
+        }
+      ],
+      "sourceParagraph": 1412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "psychological lens, uncovering the patterns hidden beneath "
+        }
+      ],
+      "sourceParagraph": 1413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "attachment, distance, loss, growth, and self-discovery. "
+        }
+      ],
+      "sourceParagraph": 1414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Last Shift is his debut work and the first installment in "
+        }
+      ],
+      "sourceParagraph": 1415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "an ongoing exploration of the human mind and its many "
+        }
+      ],
+      "sourceParagraph": 1416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "layers. "
+        }
+      ],
+      "sourceParagraph": 1417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because sometimes the longest journey is not towards "
+        }
+      ],
+      "sourceParagraph": 1418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "someone else "
+        }
+      ],
+      "sourceParagraph": 1419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but back to yourself. "
+        }
+      ],
+      "sourceParagraph": 1420
+    },
+    {
+      "type": "space",
+      "sourceParagraphs": 1
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 1422
+    }
+  ]
+}
