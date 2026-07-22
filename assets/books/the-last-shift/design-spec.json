@@ -1,0 +1,202 @@
+{
+  "bookSlug": "the-last-shift",
+  "title": "The Last Shift",
+  "collection": "The Human Paradox Collection",
+  "series": "Human Mind",
+  "visualThemeName": "Displaced Thresholds",
+  "emotionalKeywords": [
+    "quiet",
+    "psychological",
+    "reflective",
+    "restrained",
+    "distant",
+    "transitional",
+    "mist-like"
+  ],
+  "trimReference": {
+    "digitalRatio": "11:16",
+    "fixedPageEquivalent": "5.5in x 8.5in",
+    "orientation": "portrait"
+  },
+  "lightTheme": {
+    "outerCanvas": "#E7E9EA",
+    "paper": "#F7F3EA",
+    "paperSecondary": "#F0EBE1",
+    "bodyText": "#293440",
+    "headingText": "#1F2935",
+    "primary": "#4B5878",
+    "secondary": "#91A6B5",
+    "accent": "#718797",
+    "pageBorder": "rgba(75, 88, 120, 0.18)",
+    "pageShadow": "0 18px 50px rgba(35, 45, 55, 0.11)"
+  },
+  "sepiaTheme": {
+    "outerCanvas": "#E3D8C8",
+    "paper": "#F2E7D6",
+    "paperSecondary": "#EADFCE",
+    "bodyText": "#39342F",
+    "headingText": "#2D2925",
+    "primary": "#59617A",
+    "secondary": "#96999C",
+    "accent": "#7F7770",
+    "pageBorder": "rgba(89, 97, 122, 0.19)",
+    "pageShadow": "0 18px 48px rgba(67, 55, 43, 0.14)"
+  },
+  "darkTheme": {
+    "outerCanvas": "#111720",
+    "paper": "#1A222C",
+    "paperSecondary": "#202A36",
+    "bodyText": "#EDE8DF",
+    "headingText": "#F4EFE7",
+    "primary": "#9EA8CD",
+    "secondary": "#748196",
+    "accent": "#8F9BAA",
+    "pageBorder": "rgba(158, 168, 205, 0.23)",
+    "pageShadow": "0 22px 58px rgba(3, 7, 12, 0.38)"
+  },
+  "displayFont": "Cormorant Garamond, Georgia, serif",
+  "bodyFont": "Georgia, Times New Roman, serif",
+  "interfaceFont": "Inter, Arial, sans-serif",
+  "bodyFontSizeDesktop": "18px",
+  "bodyFontSizeTablet": "17px minimum",
+  "bodyFontSizeMobile": "17px minimum",
+  "lineHeight": 1.7,
+  "paragraphIndent": "1.1em",
+  "pageWidthDesktop": "660px",
+  "pageHeightDesktop": "960px",
+  "pagePaddingDesktop": "76px 68px",
+  "pagePaddingTablet": "60px 52px",
+  "pagePaddingMobile": "38px 20px",
+  "titlePageStyle": {
+    "alignment": "left",
+    "titleSizeDesktop": "88px",
+    "titleSizeMobile": "54px",
+    "titleLineHeight": 0.88,
+    "copyMaxWidth": "470px",
+    "coverTreatment": "Hidden on the interior title page; cover palette informs the edition",
+    "motif": "Two horizontal rules, 92px and 58px, offset by 14px",
+    "whitespace": "Copy vertically centered with a slight upward optical shift"
+  },
+  "chapterOpeningStyle": {
+    "alignment": "left",
+    "minimumHeightDesktop": "228px",
+    "minimumHeightMobile": "164px",
+    "phaseSize": "11px",
+    "chapterNumberSize": "18px",
+    "titleSizeDesktop": "48px",
+    "titleSizeMobile": "39px",
+    "marker": "Paired 72px and 42px rules offset by 12px",
+    "openingParagraphIndent": "0"
+  },
+  "sectionBreakStyle": {
+    "height": "58px",
+    "primaryRule": "42px x 1px at 50% opacity",
+    "secondaryRule": "26px x 1px at 28% opacity",
+    "offset": "8px horizontal, 5px vertical"
+  },
+  "pageNumberStyle": {
+    "font": "Inter, Arial, sans-serif",
+    "fontSize": "11px",
+    "position": "centered, 28px from bottom",
+    "rule": "24px x 1px, centered 8px above numeral",
+    "hiddenOn": [
+      "opening",
+      "contents",
+      "dedication",
+      "feedback"
+    ]
+  },
+  "quoteStyle": {
+    "font": "Cormorant Garamond, Georgia, serif",
+    "fontSizeDesktop": "25px",
+    "fontSizeMobile": "22px",
+    "lineHeight": 1.25,
+    "leftRule": "1px solid primary at 42% opacity",
+    "decoration": "No oversized quotation marks"
+  },
+  "contentsStyle": {
+    "headingSizeDesktop": "50px",
+    "headingSizeMobile": "40px",
+    "phaseSize": "19px",
+    "entrySize": "14px",
+    "rowTreatment": "Unboxed editorial lines with preserved source leaders",
+    "drawerActiveMarker": "2px primary left rule with 9% accent wash"
+  },
+  "feedbackStyle": {
+    "surface": "Final-matter page using the book paper color",
+    "panelWidth": "520px maximum",
+    "panelBorder": "1px top rule at page-border opacity",
+    "controlHeightDesktop": "42px",
+    "controlHeightMobile": "44px minimum",
+    "inputFontSizeMobile": "16px minimum",
+    "mobileHeight": "Natural content height with no panel scrolling",
+    "focusBehavior": "No automatic focus on mobile"
+  },
+  "ornamentRules": {
+    "motifName": "Displaced Threshold",
+    "allowedForms": [
+      "paired offset rules",
+      "single faint page-edge line",
+      "short page-number rule"
+    ],
+    "maximumRuleWidth": "92px",
+    "maximumOpacity": 0.5,
+    "prohibited": [
+      "floral ornaments",
+      "asterisk dividers",
+      "gold decoration",
+      "textures",
+      "full-page illustration",
+      "decorative gradients"
+    ]
+  },
+  "responsiveAdaptations": {
+    "mobile320To640": {
+      "pageWidth": "calc(100vw - 28px) maximum",
+      "pageHeight": "min(900px, calc(100svh - 124px))",
+      "pagePadding": "38px 20px",
+      "bodySizeFloor": "17px",
+      "chapterMinimumHeight": "164px",
+      "ornamentScale": "72%",
+      "feedback": "Natural-height page; one-column controls; no nested scroll"
+    },
+    "tablet641To1024": {
+      "pageWidth": "min(640px, calc(100vw - 36px))",
+      "pageHeight": "930px",
+      "pagePadding": "60px 52px",
+      "bodySizeFloor": "17px",
+      "chapterMinimumHeight": "198px"
+    },
+    "desktop1025Plus": {
+      "pageWidth": "660px",
+      "pageHeight": "960px",
+      "pagePadding": "76px 68px",
+      "bodySize": "18px default",
+      "pageGap": "54px"
+    }
+  },
+  "futureWordPdfMapping": {
+    "fixedPageTheme": "Light theme only",
+    "trimSize": "5.5in x 8.5in",
+    "insideMargin": "0.72in",
+    "outsideMargin": "0.62in",
+    "topMargin": "0.68in",
+    "bottomMargin": "0.72in",
+    "bodyFont": "Georgia",
+    "bodyFontSize": "11.5pt",
+    "bodyLineSpacing": "18.5pt exact",
+    "firstLineIndent": "0.18in",
+    "displayFont": "Cormorant Garamond",
+    "chapterTitleSize": "30pt",
+    "titleSize": "50pt",
+    "sectionBreak": "Two rules: 0.42in and 0.26in, offset 0.08in",
+    "pageNumber": "Inter 8pt or Arial 8pt, centered 0.28in from trim bottom",
+    "specialPages": "Opening, contents, dedication, and feedback equivalents carry no folio",
+    "printPalette": {
+      "paper": "Natural white stock approximating #F7F3EA",
+      "text": "#293440 or process black equivalent",
+      "accent": "#4B5878"
+    },
+    "digitalOnly": "Dark theme and interactive controls"
+  }
+}
