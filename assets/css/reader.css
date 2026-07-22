@@ -5,15 +5,28 @@
   --reader-paper: #fbf7ef;
   --reader-paper-soft: #f7efe2;
   --reader-text: #273340;
+  --reader-heading: #202b36;
   --reader-muted: rgba(39, 51, 64, .66);
+  --reader-subtle: rgba(39, 51, 64, .58);
   --reader-faint: rgba(39, 51, 64, .12);
   --reader-rule: rgba(71, 82, 97, .16);
+  --reader-border: rgba(39, 51, 64, .18);
   --reader-accent: #3c496b;
+  --reader-accent-strong: #303d60;
   --reader-accent-soft: rgba(60, 73, 107, .1);
   --reader-warm: #8b6f4d;
   --reader-focus: #59688f;
   --reader-control-bg: rgba(251, 247, 239, .86);
   --reader-control-border: rgba(39, 51, 64, .14);
+  --reader-input-bg: #fffaf2;
+  --reader-input-text: #273340;
+  --reader-placeholder: rgba(39, 51, 64, .56);
+  --reader-success: #386846;
+  --reader-error-text: #9b3f3f;
+  --reader-bg-warm-glow: rgba(139, 111, 77, .09);
+  --reader-bg-accent-glow: rgba(60, 73, 107, .08);
+  --reader-bg-line: rgba(39, 51, 64, .018);
+  --reader-page-edge: rgba(39, 51, 64, .038);
   --reader-shadow: 0 18px 58px rgba(37, 47, 59, .11);
   --reader-serif: Georgia, "Times New Roman", serif;
   --reader-display: "Cormorant Garamond", Georgia, serif;
@@ -30,33 +43,59 @@
   --reader-paper: #f8eddb;
   --reader-paper-soft: #f1dfc6;
   --reader-text: #342d25;
+  --reader-heading: #29231d;
   --reader-muted: rgba(52, 45, 37, .66);
+  --reader-subtle: rgba(52, 45, 37, .58);
   --reader-faint: rgba(52, 45, 37, .14);
   --reader-rule: rgba(52, 45, 37, .18);
+  --reader-border: rgba(52, 45, 37, .2);
   --reader-accent: #3e4a68;
+  --reader-accent-strong: #303c5c;
   --reader-accent-soft: rgba(62, 74, 104, .12);
   --reader-warm: #7d6141;
   --reader-focus: #445276;
   --reader-control-bg: rgba(248, 237, 219, .9);
   --reader-control-border: rgba(52, 45, 37, .16);
+  --reader-input-bg: #fff5e4;
+  --reader-input-text: #342d25;
+  --reader-placeholder: rgba(52, 45, 37, .56);
+  --reader-success: #3f6948;
+  --reader-error-text: #984343;
+  --reader-bg-warm-glow: rgba(125, 97, 65, .1);
+  --reader-bg-accent-glow: rgba(62, 74, 104, .07);
+  --reader-bg-line: rgba(52, 45, 37, .024);
+  --reader-page-edge: rgba(52, 45, 37, .042);
   --reader-shadow: 0 18px 52px rgba(55, 43, 31, .14);
 }
 
 [data-reader-theme="dark"] {
   color-scheme: dark;
   --reader-bg: #15171b;
-  --reader-paper: #1b1f25;
-  --reader-paper-soft: #202631;
-  --reader-text: #e9e2d6;
-  --reader-muted: rgba(233, 226, 214, .68);
-  --reader-faint: rgba(233, 226, 214, .13);
-  --reader-rule: rgba(233, 226, 214, .16);
-  --reader-accent: #aab6da;
-  --reader-accent-soft: rgba(170, 182, 218, .12);
-  --reader-warm: #d2b486;
-  --reader-focus: #c0c9e8;
-  --reader-control-bg: rgba(27, 31, 37, .9);
-  --reader-control-border: rgba(233, 226, 214, .14);
+  --reader-paper: #1d2128;
+  --reader-paper-soft: #242a34;
+  --reader-text: #eee8dc;
+  --reader-heading: #f5f0e7;
+  --reader-muted: rgba(238, 232, 220, .76);
+  --reader-subtle: rgba(238, 232, 220, .64);
+  --reader-faint: rgba(238, 232, 220, .14);
+  --reader-rule: rgba(238, 232, 220, .2);
+  --reader-border: rgba(238, 232, 220, .2);
+  --reader-accent: #b8c4ea;
+  --reader-accent-strong: #d4dcf5;
+  --reader-accent-soft: rgba(184, 196, 234, .15);
+  --reader-warm: #d4b98d;
+  --reader-focus: #d5ddff;
+  --reader-control-bg: rgba(29, 33, 40, .96);
+  --reader-control-border: rgba(238, 232, 220, .22);
+  --reader-input-bg: #232832;
+  --reader-input-text: #f2ece2;
+  --reader-placeholder: rgba(242, 236, 226, .64);
+  --reader-success: #a8d6af;
+  --reader-error-text: #f1aaa4;
+  --reader-bg-warm-glow: rgba(212, 185, 141, .055);
+  --reader-bg-accent-glow: rgba(184, 196, 234, .045);
+  --reader-bg-line: rgba(238, 232, 220, .018);
+  --reader-page-edge: rgba(238, 232, 220, .038);
   --reader-shadow: 0 22px 64px rgba(0, 0, 0, .34);
 }
 
@@ -75,9 +114,9 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at 14% 6%, rgba(139, 111, 77, .09), transparent 25%),
-    radial-gradient(circle at 86% 5%, rgba(60, 73, 107, .08), transparent 23%),
-    repeating-linear-gradient(0deg, rgba(39, 51, 64, .018) 0 1px, transparent 1px 8px),
+    radial-gradient(circle at 14% 6%, var(--reader-bg-warm-glow), transparent 25%),
+    radial-gradient(circle at 86% 5%, var(--reader-bg-accent-glow), transparent 23%),
+    repeating-linear-gradient(0deg, var(--reader-bg-line) 0 1px, transparent 1px 8px),
     var(--reader-bg);
   color: var(--reader-text);
   font-family: var(--reader-serif);
@@ -185,7 +224,7 @@ textarea:focus-visible,
 
 .reader-control:disabled {
   cursor: not-allowed;
-  opacity: .42;
+  opacity: .58;
 }
 
 .reader-control--exit {
@@ -300,7 +339,7 @@ body.is-paginating .reader-loading {
   padding: var(--page-padding-block) var(--page-padding-inline);
   border-inline: 1px solid var(--reader-rule);
   background:
-    linear-gradient(90deg, rgba(39, 51, 64, .038), transparent 20px, transparent calc(100% - 20px), rgba(39, 51, 64, .032)),
+    linear-gradient(90deg, var(--reader-page-edge), transparent 20px, transparent calc(100% - 20px), var(--reader-page-edge)),
     var(--reader-paper);
   box-shadow: var(--reader-shadow);
 }
@@ -341,7 +380,7 @@ body.is-paginating .reader-loading {
   right: var(--page-padding-inline);
   bottom: 30px;
   z-index: 1;
-  color: color-mix(in srgb, var(--reader-muted) 74%, transparent);
+  color: var(--reader-subtle);
   font-family: var(--reader-sans);
   font-size: .72rem;
 }
@@ -388,7 +427,7 @@ body.is-paginating .reader-loading {
 .contents-drawer h2,
 .feedback-panel h2 {
   margin: 0;
-  color: var(--reader-text);
+  color: var(--reader-heading);
   font-family: var(--reader-display);
   font-weight: 600;
   letter-spacing: 0;
@@ -667,11 +706,26 @@ body.is-paginating .reader-loading {
 .feedback-panel textarea {
   width: 100%;
   min-height: 40px;
-  border: 1px solid var(--reader-control-border);
+  border: 1px solid var(--reader-border);
   border-radius: 0;
   padding: 9px 10px;
-  background: color-mix(in srgb, var(--reader-paper) 86%, var(--reader-bg));
-  color: var(--reader-text);
+  background: var(--reader-input-bg);
+  color: var(--reader-input-text);
+}
+
+.feedback-panel input::placeholder,
+.feedback-panel textarea::placeholder {
+  color: var(--reader-placeholder);
+  opacity: 1;
+}
+
+.feedback-panel select:invalid {
+  color: var(--reader-placeholder);
+}
+
+.feedback-panel option {
+  background: var(--reader-input-bg);
+  color: var(--reader-input-text);
 }
 
 .feedback-panel textarea {
@@ -692,6 +746,19 @@ body.is-paginating .reader-loading {
   color: var(--reader-muted);
   font-size: .82rem;
   text-align: center;
+}
+
+.feedback-panel__status[data-state="success"] {
+  color: var(--reader-success);
+}
+
+.feedback-panel__status[data-state="error"] {
+  color: var(--reader-error-text);
+}
+
+[data-reader-theme="dark"] .reader-control:hover,
+[data-reader-theme="dark"] .reader-control[aria-pressed="true"] {
+  color: var(--reader-accent-strong);
 }
 
 .contents-backdrop {

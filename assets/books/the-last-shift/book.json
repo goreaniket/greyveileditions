@@ -58,7 +58,6 @@
       "title": "The Last Shift",
       "shortTitle": "Opening",
       "file": "chapters/00-opening.json",
-      "feedbackEnabled": false,
       "index": 0,
       "sourceRange": [
         2,
@@ -72,7 +71,6 @@
       "title": "Contents",
       "shortTitle": "Contents",
       "file": "chapters/01-contents.json",
-      "feedbackEnabled": false,
       "index": 1,
       "sourceRange": [
         13,
@@ -86,7 +84,6 @@
       "title": "Copyright",
       "shortTitle": "Copyright",
       "file": "chapters/02-copyright.json",
-      "feedbackEnabled": false,
       "index": 2,
       "sourceRange": [
         39,
@@ -100,7 +97,6 @@
       "title": "Disclaimer",
       "shortTitle": "Disclaimer",
       "file": "chapters/03-disclaimer.json",
-      "feedbackEnabled": false,
       "index": 3,
       "sourceRange": [
         60,
@@ -114,7 +110,6 @@
       "title": "Dedication",
       "shortTitle": "Dedication",
       "file": "chapters/04-dedication.json",
-      "feedbackEnabled": false,
       "index": 4,
       "sourceRange": [
         64,
@@ -128,7 +123,6 @@
       "title": "Author's Note",
       "shortTitle": "Author's Note",
       "file": "chapters/05-authors-note.json",
-      "feedbackEnabled": false,
       "index": 5,
       "sourceRange": [
         72,
@@ -142,7 +136,6 @@
       "title": "Prologue",
       "shortTitle": "Prologue",
       "file": "chapters/06-prologue.json",
-      "feedbackEnabled": true,
       "index": 6,
       "sourceRange": [
         90,
@@ -156,7 +149,6 @@
       "title": "Introduction",
       "shortTitle": "Introduction",
       "file": "chapters/07-introduction.json",
-      "feedbackEnabled": true,
       "index": 7,
       "sourceRange": [
         133,
@@ -172,7 +164,6 @@
       "title": "The Beginning of Attachment",
       "shortTitle": "The Beginning of Attachment",
       "file": "chapters/08-chapter-01.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         185,
         188,
@@ -193,7 +184,6 @@
       "title": "Silent Attachment",
       "shortTitle": "Silent Attachment",
       "file": "chapters/09-chapter-02.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         291,
         292
@@ -213,7 +203,6 @@
       "title": "Fear of Losing",
       "shortTitle": "Fear of Losing",
       "file": "chapters/10-chapter-03.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         378,
         379,
@@ -234,7 +223,6 @@
       "title": "Emotional Exhaustion",
       "shortTitle": "Emotional Exhaustion",
       "file": "chapters/11-chapter-04.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         486,
         487
@@ -255,7 +243,6 @@
       "subtitle": "(The Quiet Disappearance)",
       "shortTitle": "Detachment",
       "file": "chapters/12-chapter-05.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         599,
         602,
@@ -276,7 +263,6 @@
       "title": "Emotional Shutdown",
       "shortTitle": "Emotional Shutdown",
       "file": "chapters/13-chapter-06.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         700,
         703,
@@ -297,7 +283,6 @@
       "title": "Isolation (Self-Distance)",
       "shortTitle": "Isolation",
       "file": "chapters/14-chapter-07.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         818,
         819
@@ -317,7 +302,6 @@
       "title": "The Mind Questions Itself",
       "shortTitle": "The Mind Questions Itself",
       "file": "chapters/15-chapter-08.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         936,
         939,
@@ -338,7 +322,6 @@
       "title": "The Things We Realize Too Late",
       "shortTitle": "Things We Realize Too Late",
       "file": "chapters/16-chapter-09.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         1076,
         1079,
@@ -359,7 +342,6 @@
       "title": "What Remains When Everything Quiets Down",
       "shortTitle": "What Remains",
       "file": "chapters/17-chapter-10.json",
-      "feedbackEnabled": true,
       "sourceHeadingParagraphs": [
         1190,
         1191
@@ -377,7 +359,6 @@
       "title": "End Realization",
       "shortTitle": "End Realization",
       "file": "chapters/18-end-realization.json",
-      "feedbackEnabled": true,
       "index": 18,
       "sourceRange": [
         1293,
@@ -391,7 +372,6 @@
       "title": "Epilogue",
       "shortTitle": "Epilogue",
       "file": "chapters/19-epilogue.json",
-      "feedbackEnabled": true,
       "index": 19,
       "sourceRange": [
         1334,
@@ -405,7 +385,6 @@
       "title": "Part II - Second Layer (Teaser)",
       "shortTitle": "Part II Teaser",
       "file": "chapters/20-part-ii-teaser.json",
-      "feedbackEnabled": false,
       "index": 20,
       "sourceRange": [
         1390,
@@ -419,7 +398,6 @@
       "title": "About the Author",
       "shortTitle": "About the Author",
       "file": "chapters/21-about-author.json",
-      "feedbackEnabled": false,
       "index": 21,
       "sourceRange": [
         1403,

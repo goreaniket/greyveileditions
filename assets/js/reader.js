@@ -57,6 +57,7 @@
   let resizeTimer = null;
   let paginationToken = 0;
   let restoring = false;
+  let appliedBookVariables = [];
 
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
@@ -83,12 +84,25 @@
     }
   };
 
-  const applyBookTheme = () => {
+  const applyBookTheme = (readerTheme) => {
     const theme = book.theme || {};
     if (theme.className) body.classList.add(theme.className);
-    Object.entries(theme.variables || {}).forEach(([name, value]) => {
+
+    appliedBookVariables.forEach((name) => document.documentElement.style.removeProperty(name));
+    appliedBookVariables = [];
+
+    const configuredVariables = theme.variables || {};
+    const hasScopedVariables = ["light", "sepia", "dark"].some((name) => configuredVariables[name]);
+    const variables = hasScopedVariables
+      ? configuredVariables[readerTheme] || {}
+      : readerTheme === "light"
+        ? configuredVariables
+        : {};
+
+    Object.entries(variables).forEach(([name, value]) => {
       if (/^--reader-[a-z0-9-]+$/.test(name) && typeof value === "string") {
-        body.style.setProperty(name, value);
+        document.documentElement.style.setProperty(name, value);
+        appliedBookVariables.push(name);
       }
     });
   };
@@ -133,6 +147,7 @@
     placeholderOption.value = "";
     placeholderOption.textContent = placeholder;
     placeholderOption.selected = true;
+    placeholderOption.defaultSelected = true;
     placeholderOption.disabled = true;
     placeholderOption.hidden = true;
     select.append(placeholderOption);
@@ -671,6 +686,7 @@
   const applyTheme = (theme) => {
     const safeTheme = ["light", "sepia", "dark"].includes(theme) ? theme : "light";
     document.documentElement.dataset.readerTheme = safeTheme;
+    applyBookTheme(safeTheme);
     themeButtons.forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.themeChoice === safeTheme));
     });
@@ -717,7 +733,7 @@
       drawer.classList.add("is-open");
       drawer.setAttribute("aria-hidden", "false");
       openContentsButton.setAttribute("aria-expanded", "true");
-      closeContentsButton.focus();
+      closeContentsButton.focus({ preventScroll: true });
     });
   };
 
@@ -727,7 +743,7 @@
     drawer.setAttribute("inert", "");
     openContentsButton.setAttribute("aria-expanded", "false");
     drawerBackdrop.hidden = true;
-    if (focusButton) openContentsButton.focus();
+    if (focusButton) openContentsButton.focus({ preventScroll: true });
   };
 
   const closeContentsOnEscape = (event) => {
@@ -748,7 +764,7 @@
       const expanded = panel.hidden;
       panel.hidden = !expanded;
       toggle.setAttribute("aria-expanded", String(expanded));
-      if (expanded) panel.querySelector("input, textarea, select, button")?.focus();
+      if (expanded) panel.querySelector('input:not([type="hidden"]), textarea, select, button')?.focus({ preventScroll: true });
     });
 
     close?.addEventListener("click", () => {
@@ -784,6 +800,7 @@
       });
 
       submitButton.disabled = true;
+      status.dataset.state = "loading";
       status.textContent = "Sending feedback...";
 
       try {
@@ -794,6 +811,7 @@
         });
 
         if (response.ok) {
+          status.dataset.state = "success";
           status.textContent = "Thank you. Your feedback has been sent.";
           form.elements.name.value = "";
           form.elements.email.value = "";
@@ -801,9 +819,11 @@
           form.elements.occupation.value = "";
           form.elements.rating.value = "";
         } else {
+          status.dataset.state = "error";
           status.textContent = "There was a problem submitting your feedback.";
         }
       } catch (error) {
+        status.dataset.state = "error";
         status.textContent = "There was a network problem.";
       }
 
@@ -825,7 +845,6 @@
     }
     book.storageKey = book.storageKey || `greyveil:${book.id}:continuous-reader:v2`;
     book.feedbackContext = { ...(book.feedbackContext || {}), feedbackType: book.feedbackContext?.feedbackType || "book" };
-    applyBookTheme();
     savedState = readState();
     const rootUrl = new URL(".", bookResponseUrl.href);
     units = await Promise.all(book.units.map((unit) => fetchJson(new URL(unit.file, rootUrl).href)));
