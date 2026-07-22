@@ -966,6 +966,101 @@ body.is-paginating .reader-loading {
   }
 }
 
+@media (max-width: 640px) {
+  .book-page--feedback.is-feedback-expanded {
+    height: auto;
+    min-height: var(--page-height);
+  }
+
+  .book-page--feedback.is-feedback-expanded .book-page__content {
+    height: auto;
+    min-height: calc(var(--page-height) - (var(--page-padding-block) * 2));
+    overflow: visible;
+  }
+
+  .book-page--feedback.is-feedback-expanded .book-end {
+    height: auto;
+    min-height: calc(var(--page-height) - (var(--page-padding-block) * 2));
+    align-content: start;
+  }
+
+  .book-end > [data-feedback-toggle] {
+    min-height: 44px;
+  }
+
+  .book-page--feedback.is-feedback-expanded .feedback-panel {
+    width: 100%;
+    max-height: none;
+    margin-top: 4px;
+    padding: 20px 18px 18px;
+    overflow: visible;
+    scroll-margin-top: 122px;
+  }
+
+  .feedback-panel form {
+    min-width: 0;
+    gap: 14px;
+  }
+
+  .feedback-panel label {
+    min-width: 0;
+    font-size: .875rem;
+  }
+
+  .feedback-panel label:has(input[name="name"]) {
+    order: 1;
+  }
+
+  .feedback-panel label:has(input[name="email"]) {
+    order: 2;
+  }
+
+  .feedback-panel label:has(select[name="occupation"]) {
+    order: 3;
+  }
+
+  .feedback-panel label:has(select[name="rating"]) {
+    order: 4;
+  }
+
+  .feedback-panel label:has(textarea[name="feedback"]) {
+    order: 5;
+  }
+
+  .feedback-panel__actions {
+    order: 6;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .feedback-panel__status {
+    order: 7;
+    font-size: .875rem;
+  }
+
+  .feedback-panel input,
+  .feedback-panel select,
+  .feedback-panel textarea,
+  .feedback-panel__actions .reader-control {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+  }
+
+  .feedback-panel input,
+  .feedback-panel select,
+  .feedback-panel textarea {
+    font-size: 16px;
+    scroll-margin-top: 136px;
+  }
+
+  .feedback-panel textarea {
+    min-height: 132px;
+  }
+}
+
 @media (min-width: 1440px) {
   :root {
     --page-width: 680px;

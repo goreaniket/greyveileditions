@@ -759,18 +759,32 @@
     const close = pagesRoot.querySelector("[data-feedback-close]");
     const form = pagesRoot.querySelector("[data-book-feedback]");
     if (!toggle || !panel || !form) return;
+    const feedbackPage = panel.closest(".book-page");
+    const firstControl = panel.querySelector('input:not([type="hidden"]), textarea, select, button');
+    feedbackPage?.classList.add("book-page--feedback");
 
     toggle.addEventListener("click", () => {
       const expanded = panel.hidden;
       panel.hidden = !expanded;
+      feedbackPage?.classList.toggle("is-feedback-expanded", expanded);
       toggle.setAttribute("aria-expanded", String(expanded));
-      if (expanded) panel.querySelector('input:not([type="hidden"]), textarea, select, button')?.focus({ preventScroll: true });
+      if (!expanded) return;
+
+      if (window.matchMedia("(max-width: 640px)").matches) {
+        window.requestAnimationFrame(() => {
+          const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+          panel.scrollIntoView({ behavior, block: "start" });
+        });
+      } else {
+        firstControl?.focus({ preventScroll: true });
+      }
     });
 
     close?.addEventListener("click", () => {
       panel.hidden = true;
+      feedbackPage?.classList.remove("is-feedback-expanded");
       toggle.setAttribute("aria-expanded", "false");
-      toggle.focus();
+      toggle.focus({ preventScroll: true });
     });
 
     form.addEventListener("submit", async (event) => {
