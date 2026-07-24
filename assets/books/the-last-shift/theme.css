@@ -3,6 +3,7 @@
   --page-height: 960px;
   --page-padding-block: 76px;
   --page-padding-inline: 68px;
+  min-width: 0;
   background: var(--reader-bg);
 }
 
@@ -367,7 +368,7 @@
   opacity: .55;
 }
 
-.reader-theme-last-shift .book-end h2 {
+.reader-theme-last-shift .book-end > h2 {
   max-width: 9ch;
   font-size: 4.35rem;
 }
@@ -452,6 +453,7 @@
 @media (max-width: 640px) {
   .reader-theme-last-shift {
     --page-width: calc(100vw - 28px);
+    --page-height: min(900px, calc(100svh - 124px));
     --page-padding-block: 38px;
     --page-padding-inline: 20px;
   }
@@ -548,6 +550,16 @@
     font-size: 1.28rem;
   }
 
+  .reader-theme-last-shift .dedication-page .unit-header {
+    min-height: 0;
+    padding: 0 0 20px;
+  }
+
+  .reader-theme-last-shift .dedication-page .reader-paragraph {
+    font-size: 1.42rem;
+    line-height: 1.18;
+  }
+
   .reader-theme-last-shift .book-page:has([data-unit-kind="contents"]) .unit-header {
     min-height: 112px;
   }
@@ -575,7 +587,7 @@
     font-size: 1.38rem;
   }
 
-  .reader-theme-last-shift .book-end h2 {
+  .reader-theme-last-shift .book-end > h2 {
     font-size: 3.35rem;
   }
 
