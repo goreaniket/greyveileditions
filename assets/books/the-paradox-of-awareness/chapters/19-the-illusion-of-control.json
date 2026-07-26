@@ -1,0 +1,19 @@
+{
+  "id": "the-illusion-of-control",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "ARC IV —",
+  "title": "THE ILLUSION OF CONTROL",
+  "shortTitle": "THE ILLUSION OF CONTROL",
+  "sourceRange": [
+    1400,
+    1401
+  ],
+  "headerSourceParagraphs": {
+    "number": 1400,
+    "title": 1401
+  },
+  "elements": [],
+  "index": 19,
+  "file": "chapters/19-the-illusion-of-control.json"
+}

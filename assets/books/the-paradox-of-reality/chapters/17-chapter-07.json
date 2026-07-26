@@ -1,0 +1,916 @@
+{
+  "id": "chapter-07",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 7",
+  "title": "CHAPTER 7 — WHEN THE WORLD HAS NO FIXED MEANING",
+  "shortTitle": "WHEN THE WORLD HAS NO FIXED MEANING",
+  "sourceRange": [
+    865,
+    964
+  ],
+  "headerSourceParagraphs": {
+    "title": 865
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi ek phase aata hai…"
+        }
+      ],
+      "sourceParagraph": 866
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab duniya bilkul normal chal rahi hoti hai…"
+        }
+      ],
+      "sourceParagraph": 867
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par us normal ke andar ek strange instability develop hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 868
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi event hota hai."
+        }
+      ],
+      "sourceParagraph": 869
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi breakdown hota hai."
+        }
+      ],
+      "sourceParagraph": 870
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi obvious change hota hai."
+        }
+      ],
+      "sourceParagraph": 871
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek cheez quietly shift karti hai:"
+        }
+      ],
+      "sourceParagraph": 872
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " cheezon ka “fixed sense”"
+        }
+      ],
+      "sourceParagraph": 873
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle har cheez apni jagah hoti hai."
+        }
+      ],
+      "sourceParagraph": 874
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har situation ka ek direct meaning hota hai."
+        }
+      ],
+      "sourceParagraph": 875
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har moment ka ek automatic interpretation hota hai."
+        }
+      ],
+      "sourceParagraph": 876
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab yeh automatic system thoda slow lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 877
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kisi cheez ko dekhte ho…"
+        }
+      ],
+      "sourceParagraph": 878
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur turant uska meaning generate nahi hota."
+        }
+      ],
+      "sourceParagraph": 879
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek small pause hota hai."
+        }
+      ],
+      "sourceParagraph": 880
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek gap."
+        }
+      ],
+      "sourceParagraph": 881
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan mind pehli baar instant answer nahi deta."
+        }
+      ],
+      "sourceParagraph": 882
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh gap pehli baar noticeable hota hai."
+        }
+      ],
+      "sourceParagraph": 883
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir dheere dheere ek aur cheez hoti hai."
+        }
+      ],
+      "sourceParagraph": 884
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi situation ke multiple meanings ek saath surface karne lagte hain."
+        }
+      ],
+      "sourceParagraph": 885
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting baat yeh hai…"
+        }
+      ],
+      "sourceParagraph": 886
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki koi bhi meaning completely wrong nahi lagta."
+        }
+      ],
+      "sourceParagraph": 887
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur koi bhi meaning completely final nahi lagta."
+        }
+      ],
+      "sourceParagraph": 888
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch “possible” lagta hai."
+        }
+      ],
+      "sourceParagraph": 889
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek insaan ko ek situation normal lagti hai."
+        }
+      ],
+      "sourceParagraph": 890
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dusre insaan ko wahi situation heavy lagti hai."
+        }
+      ],
+      "sourceParagraph": 891
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Teesre insaan ko wahi situation meaningless lagti hai."
+        }
+      ],
+      "sourceParagraph": 892
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sab apni reality ko correct samajh rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 893
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahan pe conflict opinions ka nahi hota."
+        }
+      ],
+      "sourceParagraph": 894
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahan pe conflict interpretation layers ka hota hai."
+        }
+      ],
+      "sourceParagraph": 895
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab ek deeper shift start hota hai."
+        }
+      ],
+      "sourceParagraph": 896
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheezein pehle stable meaning rakhti thi…"
+        }
+      ],
+      "sourceParagraph": 897
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh ab thodi loose lagne lagti hain."
+        }
+      ],
+      "sourceParagraph": 898
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Words same rehte hain…"
+        }
+      ],
+      "sourceParagraph": 899
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unka weight change ho jata hai."
+        }
+      ],
+      "sourceParagraph": 900
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek sentence ab ek fixed direction mein lock nahi hota."
+        }
+      ],
+      "sourceParagraph": 901
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh multiple directions open kar deta hai."
+        }
+      ],
+      "sourceParagraph": 902
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind usko hold nahi kar pata."
+        }
+      ],
+      "sourceParagraph": 903
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi meaning fully settle hota hai."
+        }
+      ],
+      "sourceParagraph": 904
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi meaning fully reject hota hai."
+        }
+      ],
+      "sourceParagraph": 905
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch temporary lagta hai."
+        }
+      ],
+      "sourceParagraph": 906
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh temporary nature pehli baar visible hota hai."
+        }
+      ],
+      "sourceParagraph": 907
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi kisi simple cheez ko dekhte hue…"
+        }
+      ],
+      "sourceParagraph": 908
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek strange neutrality aa jaati hai."
+        }
+      ],
+      "sourceParagraph": 909
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na usmein emotional push hota hai."
+        }
+      ],
+      "sourceParagraph": 910
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na usmein rejection hota hai."
+        }
+      ],
+      "sourceParagraph": 911
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek “unassigned” feeling hoti hai."
+        }
+      ],
+      "sourceParagraph": 912
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise world abhi label ke bina exist kar raha ho."
+        }
+      ],
+      "sourceParagraph": 913
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh label-less state confusing nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 914
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unfamiliar hoti hai."
+        }
+      ],
+      "sourceParagraph": 915
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind ko hamesha classification ki aadat hoti hai:"
+        }
+      ],
+      "sourceParagraph": 916
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh good hai"
+        }
+      ],
+      "sourceParagraph": 917
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh bad hai"
+        }
+      ],
+      "sourceParagraph": 918
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh safe hai"
+        }
+      ],
+      "sourceParagraph": 919
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh unsafe hai"
+        }
+      ],
+      "sourceParagraph": 920
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab yeh classification stick nahi karti."
+        }
+      ],
+      "sourceParagraph": 921
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har label thoda sa try karta hai attach hone ka…"
+        }
+      ],
+      "sourceParagraph": 922
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur phir drop ho jata hai."
+        }
+      ],
+      "sourceParagraph": 923
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise reality kisi bhi fixed container mein fit nahi ho rahi ho."
+        }
+      ],
+      "sourceParagraph": 924
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan pe ek deeper realization slowly form hota hai:"
+        }
+      ],
+      "sourceParagraph": 925
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad duniya kabhi defined thi hi nahi"
+        }
+      ],
+      "sourceParagraph": 926
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " shayad definition sirf ek mental overlay tha"
+        }
+      ],
+      "sourceParagraph": 927
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh overlay weak hota hai…"
+        }
+      ],
+      "sourceParagraph": 928
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh world khatam nahi hota…"
+        }
+      ],
+      "sourceParagraph": 929
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas uska “fixed interpretation” dissolve ho jata hai."
+        }
+      ],
+      "sourceParagraph": 930
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab ek aur deeper layer:"
+        }
+      ],
+      "sourceParagraph": 931
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "language bhi ab stable nahi lagti."
+        }
+      ],
+      "sourceParagraph": 932
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi sentence:"
+        }
+      ],
+      "sourceParagraph": 933
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi truth lagta hai"
+        }
+      ],
+      "sourceParagraph": 934
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi assumption lagta hai"
+        }
+      ],
+      "sourceParagraph": 935
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi incomplete lagta hai"
+        }
+      ],
+      "sourceParagraph": 936
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur koi final reading exist nahi karti."
+        }
+      ],
+      "sourceParagraph": 937
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab language hi unstable ho jati hai…"
+        }
+      ],
+      "sourceParagraph": 938
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh reality ka structure bhi loose lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 939
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab ek strange phase aata hai:"
+        }
+      ],
+      "sourceParagraph": 940
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum kisi bhi cheez ko “define” karne ki koshish karte ho…"
+        }
+      ],
+      "sourceParagraph": 941
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur definition incomplete lagti hai."
+        }
+      ],
+      "sourceParagraph": 942
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh incompleteness failure nahi lagti…"
+        }
+      ],
+      "sourceParagraph": 943
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh nature lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 944
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek silent shift hota hai:"
+        }
+      ],
+      "sourceParagraph": 945
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " reality lose nahi hoti"
+        }
+      ],
+      "sourceParagraph": 946
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " bas uska interpretation system visible ho jata hai"
+        }
+      ],
+      "sourceParagraph": 947
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab system visible hota hai…"
+        }
+      ],
+      "sourceParagraph": 948
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh cheezein pehli baar “as it is” nahi lagti."
+        }
+      ],
+      "sourceParagraph": 949
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch ek flow jaisa lagta hai…"
+        }
+      ],
+      "sourceParagraph": 950
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kisi fixed meaning ko hold nahi karta."
+        }
+      ],
+      "sourceParagraph": 951
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab ek final realization slowly settle hota hai:"
+        }
+      ],
+      "sourceParagraph": 952
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad meaning reality ka property nahi hai…"
+        }
+      ],
+      "sourceParagraph": 953
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayd meaning sirf ek temporary construction hai…"
+        }
+      ],
+      "sourceParagraph": 954
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo mind continuously attach aur detach karta rehta hai."
+        }
+      ],
+      "sourceParagraph": 955
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh attachment loose hota hai…"
+        }
+      ],
+      "sourceParagraph": 956
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh world empty nahi hota…"
+        }
+      ],
+      "sourceParagraph": 957
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas unlabelled ho jata hai."
+        }
+      ],
+      "sourceParagraph": 958
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na meaning hota hai."
+        }
+      ],
+      "sourceParagraph": 959
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na meaninglessness hoti hai."
+        }
+      ],
+      "sourceParagraph": 960
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek raw presence hoti hai…"
+        }
+      ],
+      "sourceParagraph": 961
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kisi explanation ke bina bhi complete lagti hai…"
+        }
+      ],
+      "sourceParagraph": 962
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kisi conclusion ke bina bhi ongoing rehti hai."
+        }
+      ],
+      "sourceParagraph": 963
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 964
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "number": "Chapter 7",
+  "phase": "The Paradox of Reality",
+  "index": 17,
+  "file": "chapters/17-chapter-07.json"
+}

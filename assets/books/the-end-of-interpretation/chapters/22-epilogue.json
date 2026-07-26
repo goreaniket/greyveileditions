@@ -1,0 +1,318 @@
+{
+  "id": "epilogue",
+  "kind": "epilogue",
+  "sourceKind": "epilogue",
+  "label": "Epilogue",
+  "title": "EPILOGUE-",
+  "shortTitle": "EPILOGUE-",
+  "sourceRange": [
+    1191,
+    1225
+  ],
+  "headerSourceParagraphs": {
+    "title": 1191,
+    "subtitle": 1192
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum yahan tak aaye ho…"
+        }
+      ],
+      "sourceParagraph": 1193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumne kuch “seekha” nahi hai."
+        }
+      ],
+      "sourceParagraph": 1194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumne sirf ek cheez notice ki hai:"
+        }
+      ],
+      "sourceParagraph": 1195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo seekh raha tha… woh bhi change ho raha tha."
+        }
+      ],
+      "sourceParagraph": 1196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch moments ke baad yeh realization bhi important nahi lagta."
+        }
+      ],
+      "sourceParagraph": 1197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na yeh special lagta hai."
+        }
+      ],
+      "sourceParagraph": 1198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na yeh final lagta hai."
+        }
+      ],
+      "sourceParagraph": 1199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch normal hi lagta hai."
+        }
+      ],
+      "sourceParagraph": 1200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas thoda less heavy."
+        }
+      ],
+      "sourceParagraph": 1201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoda less necessary."
+        }
+      ],
+      "sourceParagraph": 1202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoda less urgent."
+        }
+      ],
+      "sourceParagraph": 1203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts ab bhi aate hain."
+        }
+      ],
+      "sourceParagraph": 1204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings ab bhi hoti hain."
+        }
+      ],
+      "sourceParagraph": 1205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ab bhi chalti hai."
+        }
+      ],
+      "sourceParagraph": 1206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ek cheez change ho jaati hai:"
+        }
+      ],
+      "sourceParagraph": 1207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab har cheez ko explain karna compulsory nahi lagta"
+        }
+      ],
+      "sourceParagraph": 1208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab explanation compulsory nahi hota…"
+        }
+      ],
+      "sourceParagraph": 1209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh experience apne aap thoda sa clean ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na tum kuch pakad rahe hote ho."
+        }
+      ],
+      "sourceParagraph": 1211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na tum kuch chhod rahe hote ho."
+        }
+      ],
+      "sourceParagraph": 1212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas cheezein ho rahi hoti hain."
+        }
+      ],
+      "sourceParagraph": 1213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi sabse strange truth hai:"
+        }
+      ],
+      "sourceParagraph": 1214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jo tum dhoondh rahe the… woh kabhi missing tha hi nahi"
+        }
+      ],
+      "sourceParagraph": 1215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin usko “dhoondhne wala” hi hamesha noise create karta raha."
+        }
+      ],
+      "sourceParagraph": 1216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab woh noise thoda kam hota hai…"
+        }
+      ],
+      "sourceParagraph": 1217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh reality change nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas usko dekhne ka pressure kam ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab ek simple sa feel bachta hai:"
+        }
+      ],
+      "sourceParagraph": 1220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch bhi solve nahi hua…"
+        }
+      ],
+      "sourceParagraph": 1221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin kuch bhi urgent bhi nahi raha."
+        }
+      ],
+      "sourceParagraph": 1222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh hi Book 3 ka end nahi hai."
+        }
+      ],
+      "sourceParagraph": 1223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh sirf ek pause hai…"
+        }
+      ],
+      "sourceParagraph": 1224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan system apni hi speed se thoda alag ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1225
+    }
+  ],
+  "subtitle": "AFTER EVERYTHING IS SEEN",
+  "index": 22,
+  "file": "chapters/22-epilogue.json"
+}

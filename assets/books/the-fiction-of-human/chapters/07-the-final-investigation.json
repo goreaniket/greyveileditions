@@ -1,0 +1,786 @@
+{
+  "id": "the-final-investigation",
+  "kind": "introduction",
+  "sourceKind": "introduction",
+  "label": "Introduction",
+  "title": "The Final Investigation",
+  "shortTitle": "The Final Investigation",
+  "sourceRange": [
+    245,
+    331
+  ],
+  "headerSourceParagraphs": {
+    "number": 245,
+    "title": 246
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho sakta hai tumne poori zindagi ek aisi cheez ko protect kiya ho..."
+        }
+      ],
+      "sourceParagraph": 247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jise tumne kabhi directly dekha hi nahi."
+        }
+      ],
+      "sourceParagraph": 248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho sakta hai tumne uske liye struggle kiya ho."
+        }
+      ],
+      "sourceParagraph": 249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske liye suffer kiya ho."
+        }
+      ],
+      "sourceParagraph": 250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske liye compare kiya ho."
+        }
+      ],
+      "sourceParagraph": 251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske liye future banaya ho."
+        }
+      ],
+      "sourceParagraph": 252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske liye past carry kiya ho."
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir bhi..."
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi ruk kar genuinely ye na poocha ho:"
+        }
+      ],
+      "sourceParagraph": 255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main jis cheez ko \"main\" kehta hoon..."
+        }
+      ],
+      "sourceParagraph": 256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo hai kya?"
+        }
+      ],
+      "sourceParagraph": 257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye kitab usi question se shuru hoti hai."
+        }
+      ],
+      "sourceParagraph": 258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na self-help ke question se."
+        }
+      ],
+      "sourceParagraph": 259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na success ke question se."
+        }
+      ],
+      "sourceParagraph": 260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na happiness ke question se."
+        }
+      ],
+      "sourceParagraph": 261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki us question se..."
+        }
+      ],
+      "sourceParagraph": 262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo shayad har question ke peeche chhupa hua hai."
+        }
+      ],
+      "sourceParagraph": 263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is series ki shuruaat human mind se hui thi."
+        }
+      ],
+      "sourceParagraph": 264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Humne dekha thoughts kaise kaam karte hain."
+        }
+      ],
+      "sourceParagraph": 265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory kaise reality ko influence karti hai."
+        }
+      ],
+      "sourceParagraph": 266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perception kaise experience ko shape karti hai."
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir hum paradoxes tak gaye."
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan understanding aur confusion ek saath exist karte nazar aaye."
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan certainty aur doubt ek hi coin ke do sides lagne lage."
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir hum fictions tak aaye."
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Self."
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning."
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming."
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek uncomfortable possibility saamne aayi."
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho sakta hai bahut si cheezein jise hum reality samajh kar jeete hain..."
+        }
+      ],
+      "sourceParagraph": 276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "stories hon."
+        }
+      ],
+      "sourceParagraph": 277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Useful stories."
+        }
+      ],
+      "sourceParagraph": 278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Powerful stories."
+        }
+      ],
+      "sourceParagraph": 279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin stories."
+        }
+      ],
+      "sourceParagraph": 280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek final question bacha"
+        }
+      ],
+      "sourceParagraph": 281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar self ek story ho sakta hai..."
+        }
+      ],
+      "sourceParagraph": 282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar meaning ek story ho sakta hai..."
+        }
+      ],
+      "sourceParagraph": 283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar becoming ek story ho sakta hai..."
+        }
+      ],
+      "sourceParagraph": 284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh phir wo kaun hai..."
+        }
+      ],
+      "sourceParagraph": 285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo in sab stories ko apna maanta hai?"
+        }
+      ],
+      "sourceParagraph": 286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo kaun hai..."
+        }
+      ],
+      "sourceParagraph": 287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kehta hai:"
+        }
+      ],
+      "sourceParagraph": 288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meri life"
+        }
+      ],
+      "sourceParagraph": 289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mera future"
+        }
+      ],
+      "sourceParagraph": 290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mera pain"
+        }
+      ],
+      "sourceParagraph": 291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meri journey"
+        }
+      ],
+      "sourceParagraph": 292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse important..."
+        }
+      ],
+      "sourceParagraph": 293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kya humne kabhi usse directly dekha bhi hai?"
+        }
+      ],
+      "sourceParagraph": 294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya hum sirf uske baare mein bani hui descriptions ko jaante hain?"
+        }
+      ],
+      "sourceParagraph": 295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye kitab answers dene ki koshish nahi karegi."
+        }
+      ],
+      "sourceParagraph": 296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye tumhe koi naya belief bhi nahi degi."
+        }
+      ],
+      "sourceParagraph": 297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye tumhe koi nayi identity bhi nahi degi."
+        }
+      ],
+      "sourceParagraph": 298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki shayad problem identities ki kami nahi hai."
+        }
+      ],
+      "sourceParagraph": 299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem identities ki excess hai."
+        }
+      ],
+      "sourceParagraph": 300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye kitab sirf observe karegi."
+        }
+      ],
+      "sourceParagraph": 301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Carefully."
+        }
+      ],
+      "sourceParagraph": 302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Patiently."
+        }
+      ],
+      "sourceParagraph": 303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without rushing toward conclusions."
+        }
+      ],
+      "sourceParagraph": 304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum identity ko dekhenge."
+        }
+      ],
+      "sourceParagraph": 305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Narratives ko."
+        }
+      ],
+      "sourceParagraph": 306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perception ko."
+        }
+      ],
+      "sourceParagraph": 307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Separation ko."
+        }
+      ],
+      "sourceParagraph": 308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us psychological structure ko..."
+        }
+      ],
+      "sourceParagraph": 309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jise hum \"human\" kehte aaye hain."
+        }
+      ],
+      "sourceParagraph": 310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho sakta hai is journey ke end par tumhe koi final answer na mile."
+        }
+      ],
+      "sourceParagraph": 311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho sakta hai koi ultimate conclusion bhi na mile."
+        }
+      ],
+      "sourceParagraph": 312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad kuch aur mile."
+        }
+      ],
+      "sourceParagraph": 313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek crack."
+        }
+      ],
+      "sourceParagraph": 314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek opening."
+        }
+      ],
+      "sourceParagraph": 315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek different way of seeing."
+        }
+      ],
+      "sourceParagraph": 316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki kabhi kabhi transformation new beliefs se nahi aati."
+        }
+      ],
+      "sourceParagraph": 317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Transformation us moment se aati hai..."
+        }
+      ],
+      "sourceParagraph": 318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab pehli baar kuch aisa visible ho jata hai..."
+        }
+      ],
+      "sourceParagraph": 319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hamesha se saamne tha."
+        }
+      ],
+      "sourceParagraph": 320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is kitab ko certainty ke saath mat padhna."
+        }
+      ],
+      "sourceParagraph": 321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isse curiosity ke saath padhna."
+        }
+      ],
+      "sourceParagraph": 322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isse agreement ke saath mat padhna."
+        }
+      ],
+      "sourceParagraph": 323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isse observation ke saath padhna."
+        }
+      ],
+      "sourceParagraph": 324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ho sakta hai jo human tum samajhne nikle ho..."
+        }
+      ],
+      "sourceParagraph": 325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kisi theory ke andar na mile."
+        }
+      ],
+      "sourceParagraph": 326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho sakta hai wo kisi definition ke andar bhi na mile."
+        }
+      ],
+      "sourceParagraph": 327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ho sakta hai..."
+        }
+      ],
+      "sourceParagraph": 328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki is poori investigation ki sabse surprising discovery ye ho:"
+        }
+      ],
+      "sourceParagraph": 329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki jis human ko tum poori zindagi samajhne ki koshish karte rahe..."
+        }
+      ],
+      "sourceParagraph": 330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumne usse kabhi directly dekha hi nahi."
+        }
+      ],
+      "sourceParagraph": 331
+    }
+  ],
+  "index": 7,
+  "number": "INTRODUCTION —",
+  "file": "chapters/07-the-final-investigation.json"
+}

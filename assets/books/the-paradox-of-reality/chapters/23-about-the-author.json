@@ -1,0 +1,191 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "ABOUT THE AUTHOR",
+  "sourceRange": [
+    1217,
+    1236
+  ],
+  "headerSourceParagraphs": {
+    "title": 1217
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is not interested in providing answers."
+        }
+      ],
+      "sourceParagraph": 1218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is interested in observing the questions that quietly shape human experience."
+        }
+      ],
+      "sourceParagraph": 1219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work explores the invisible structures behind thought, identity, perception, meaning, and reality itself. Rather than treating life as something to be solved, he approaches it as something to be observed, questioned, and experienced without certainty."
+        }
+      ],
+      "sourceParagraph": 1220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What began as personal introspection gradually evolved into a deeper exploration of the human condition. Through years of reflection, observation, and writing, he became fascinated by the hidden mechanisms through which people create meaning, construct identity, and interpret the world around them."
+        }
+      ],
+      "sourceParagraph": 1221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His writing does not seek comfort."
+        }
+      ],
+      "sourceParagraph": 1222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It seeks honesty."
+        }
+      ],
+      "sourceParagraph": 1223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not the honesty that provides conclusions, but the honesty that remains when conclusions begin to dissolve."
+        }
+      ],
+      "sourceParagraph": 1224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Influenced more by direct observation than by fixed ideology, Lalit's work moves through philosophy, psychology, self-awareness, and existential inquiry, while refusing to belong completely to any one of them."
+        }
+      ],
+      "sourceParagraph": 1225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He writes not as a teacher."
+        }
+      ],
+      "sourceParagraph": 1226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not as an authority."
+        }
+      ],
+      "sourceParagraph": 1227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not as someone who has reached the end of understanding."
+        }
+      ],
+      "sourceParagraph": 1228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But as someone willing to continue looking where most people stop questioning."
+        }
+      ],
+      "sourceParagraph": 1229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Paradoxes is the result of that ongoing observation."
+        }
+      ],
+      "sourceParagraph": 1230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A journey through awareness, meaning, identity, reality, and the contradictions that quietly exist beneath everyday life."
+        }
+      ],
+      "sourceParagraph": 1231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And perhaps, like every honest journey, it is not moving toward certainty..."
+        }
+      ],
+      "sourceParagraph": 1232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but toward a clearer relationship with uncertainty."
+        }
+      ],
+      "sourceParagraph": 1233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 1234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Author of The Human Paradoxes Series"
+        }
+      ],
+      "sourceParagraph": 1235
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Some questions do not exist to be answered. They exist to change the one who asks them.\""
+        }
+      ],
+      "sourceParagraph": 1236
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 23,
+  "file": "chapters/23-about-the-author.json"
+}

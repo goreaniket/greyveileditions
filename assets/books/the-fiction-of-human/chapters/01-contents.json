@@ -1,0 +1,134 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    11,
+    34
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 11
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright................................................................................3",
+      "sourceParagraph": 12
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ..............................................................................4",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ............................................................................. 5",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author ............................................................. 6",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "Prologue — Before the Story ...........................................…….10",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction — The Final Investigation ..................................15",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC I — THE INVENTION OF THE HUMAN",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1-The Story Called Human ........................................21",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2-The Construction of Identity ..................................26",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3-The Narrative Animal ............................................ 30",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC II — THE MACHINE OF REALITY",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4-The Reality-Making Machine ................................. 36",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5-The World Inside the Story .................................... 41",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC III — THE COLLAPSE OF THE CHARACTER",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6-When the Story Sees Itself ......................................47",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7-The Fiction of Separation ....................................... 52",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC IV — BEYOND THE STORY",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8-What Remains Without the Story ........................... 58",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9-The End of the Search ............................................63",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 10-What Remains Without the Story ..........................68",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-line",
+      "text": "End Realization — The Last Fiction ........................................ 74",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-line",
+      "text": "Epilogue — After the Human .................................................. 80",
+      "sourceParagraph": 33
+    },
+    {
+      "type": "toc-line",
+      "text": "About The Author ………………………………………………………..84\n",
+      "sourceParagraph": 34
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

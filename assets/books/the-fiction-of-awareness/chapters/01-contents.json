@@ -1,0 +1,104 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    12,
+    29
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 12
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright ©...............................................................3",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ................................................................4",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ................................................................5",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author ................................................6",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-line",
+      "text": "Prologue…………………………………………………………8",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction — The Fiction of Self .............................10",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-heading",
+      "text": "BOOK I — THE FICTION OF SELF",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1-The Illusion of a Fixed “I” ...........................14",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2-The Illusion of Memory Ownership .............19",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3-The Fiction of the Inner Voice .....................22",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4-The Fiction of Meaning ...............................27",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5-The Fiction of Becoming .............................31",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6-The Collapse of the Self-Story .....................34",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7-The Witness Without Identity ......................37",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-line",
+      "text": "End Realization ...........................................................40",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-line",
+      "text": "Epilogue — After the Story Ends ..................................44",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-line",
+      "text": "About the Author .........................................................46",
+      "sourceParagraph": 29
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

@@ -1,0 +1,831 @@
+{
+  "id": "chapter-01",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 1",
+  "title": "The Illusion of a Fixed “I”",
+  "shortTitle": "The Illusion of a Fixed “I”",
+  "sourceRange": [
+    189,
+    280
+  ],
+  "headerSourceParagraphs": {
+    "number": 189,
+    "title": 190
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum ek aisi cheez ke saath jeete hain jisko hum kabhi directly observe nahi karte…"
+        }
+      ],
+      "sourceParagraph": 191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir bhi uske bina hum kisi experience ko imagine nahi kar sakte."
+        }
+      ],
+      "sourceParagraph": 192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo cheez hai — “I”."
+        }
+      ],
+      "sourceParagraph": 193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye “I” kabhi experience ke andar ek object ki tarah present nahi hota."
+        }
+      ],
+      "sourceParagraph": 194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum dhyaan se dekho, toh na thoughts ke andar koi “I” milta hai…"
+        }
+      ],
+      "sourceParagraph": 195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na emotions ke andar…"
+        }
+      ],
+      "sourceParagraph": 196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na memories ke andar…"
+        }
+      ],
+      "sourceParagraph": 197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir bhi har experience ke saath ek invisible center feel hota hai."
+        }
+      ],
+      "sourceParagraph": 198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise har cheez kisi ek point se belong kar rahi ho."
+        }
+      ],
+      "sourceParagraph": 199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin wo point kabhi dikhai nahi deta."
+        }
+      ],
+      "sourceParagraph": 200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf assume kiya jata hai."
+        }
+      ],
+      "sourceParagraph": 201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se fiction start hoti hai."
+        }
+      ],
+      "sourceParagraph": 202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har moment jo experience hota hai, uske saath mind ek silent operation karta hai:"
+        }
+      ],
+      "sourceParagraph": 203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo experience ko label karta hai."
+        }
+      ],
+      "sourceParagraph": 204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek thought aata hai…"
+        }
+      ],
+      "sourceParagraph": 205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur turant uske upar ownership attach ho jati hai:"
+        }
+      ],
+      "sourceParagraph": 206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main soch raha hoon.”"
+        }
+      ],
+      "sourceParagraph": 207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar sirf thought ko dekha jaye…"
+        }
+      ],
+      "sourceParagraph": 208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo bas ek movement hai."
+        }
+      ],
+      "sourceParagraph": 209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us movement ke andar koi signature nahi hota."
+        }
+      ],
+      "sourceParagraph": 210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na “mine”, na “not mine”."
+        }
+      ],
+      "sourceParagraph": 211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir ek memory aati hai…"
+        }
+      ],
+      "sourceParagraph": 212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur wo memory ek personal timeline bana deti hai:"
+        }
+      ],
+      "sourceParagraph": 213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye mere saath hua tha.”"
+        }
+      ],
+      "sourceParagraph": 214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But memory khud kabhi ye claim nahi karti."
+        }
+      ],
+      "sourceParagraph": 215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Claim mind add karta hai."
+        }
+      ],
+      "sourceParagraph": 216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same with emotion."
+        }
+      ],
+      "sourceParagraph": 217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek feeling arise hoti hai…"
+        }
+      ],
+      "sourceParagraph": 218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and immediately it becomes:"
+        }
+      ],
+      "sourceParagraph": 219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye mujhe lag raha hai.”"
+        }
+      ],
+      "sourceParagraph": 220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin feeling sirf energy + sensation hai."
+        }
+      ],
+      "sourceParagraph": 221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ownership later interpretation hai."
+        }
+      ],
+      "sourceParagraph": 222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahan ek subtle pattern emerge hota hai:"
+        }
+      ],
+      "sourceParagraph": 223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experience → Label → Ownership → Identity reinforcement"
+        }
+      ],
+      "sourceParagraph": 224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye cycle itni fast hoti hai ki hum kabhi pause karke dekh hi nahi paate ki ownership add ho rahi hai."
+        }
+      ],
+      "sourceParagraph": 225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum usko reality maan lete hain."
+        }
+      ],
+      "sourceParagraph": 226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye “I” koi single entity nahi lagta…"
+        }
+      ],
+      "sourceParagraph": 227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek continuous stitching process lagta hai."
+        }
+      ],
+      "sourceParagraph": 228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har moment ke fragments ko jod ke ek smooth illusion banaya jata hai."
+        }
+      ],
+      "sourceParagraph": 229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye stitching visible nahi hoti."
+        }
+      ],
+      "sourceParagraph": 230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki wo gap mein hoti hai."
+        }
+      ],
+      "sourceParagraph": 231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind gaps ko ignore karta hai."
+        }
+      ],
+      "sourceParagraph": 232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo cheez gap mein hoti hai…"
+        }
+      ],
+      "sourceParagraph": 233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sabse zyada real feel hoti hai."
+        }
+      ],
+      "sourceParagraph": 234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye “I” kabhi questioned nahi hota."
+        }
+      ],
+      "sourceParagraph": 235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki wo experience ke beech mein nahi hai…"
+        }
+      ],
+      "sourceParagraph": 236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo experience ke upar overlay ki tarah chal raha hota hai."
+        }
+      ],
+      "sourceParagraph": 237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum direct attention se dekho…"
+        }
+      ],
+      "sourceParagraph": 238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange thing samajh aati hai:"
+        }
+      ],
+      "sourceParagraph": 239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I” never appears before experience."
+        }
+      ],
+      "sourceParagraph": 240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It always appears after experience."
+        }
+      ],
+      "sourceParagraph": 241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "As a commentary."
+        }
+      ],
+      "sourceParagraph": 242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "As a conclusion."
+        }
+      ],
+      "sourceParagraph": 243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir bhi hum us commentary ko origin maan lete hain."
+        }
+      ],
+      "sourceParagraph": 244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi misunderstanding se ek aur layer build hoti hai:"
+        }
+      ],
+      "sourceParagraph": 245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I am the one experiencing.”"
+        }
+      ],
+      "sourceParagraph": 246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar deeply dekha jaye…"
+        }
+      ],
+      "sourceParagraph": 247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh experience pehle aata hai…"
+        }
+      ],
+      "sourceParagraph": 248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur “I” baad mein interpret kiya jata hai."
+        }
+      ],
+      "sourceParagraph": 249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Matlab:"
+        }
+      ],
+      "sourceParagraph": 250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience independent hai"
+        }
+      ],
+      "sourceParagraph": 251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but identity dependent hai"
+        }
+      ],
+      "sourceParagraph": 252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo cheez dependent hoti hai…"
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kabhi original source nahi ho sakti."
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir bhi mind us dependent structure ko center bana deta hai…"
+        }
+      ],
+      "sourceParagraph": 255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur us center ke around life organize hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is organization ke bina hum scattered feel karte…"
+        }
+      ],
+      "sourceParagraph": 257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "isliye mind ek false continuity create karta hai."
+        }
+      ],
+      "sourceParagraph": 258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye continuity hi “self” ban jati hai."
+        }
+      ],
+      "sourceParagraph": 259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Important baat ye hai:"
+        }
+      ],
+      "sourceParagraph": 260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye self kabhi fully formed nahi hota."
+        }
+      ],
+      "sourceParagraph": 261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye har moment recreate hota hai…"
+        }
+      ],
+      "sourceParagraph": 262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har new experience ke saath."
+        }
+      ],
+      "sourceParagraph": 263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without exception."
+        }
+      ],
+      "sourceParagraph": 264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye jo hum “me” kehte hain…"
+        }
+      ],
+      "sourceParagraph": 265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek fixed object nahi hai."
+        }
+      ],
+      "sourceParagraph": 266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo ek ongoing construction hai."
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo kabhi complete nahi hota…"
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf continue hota hai."
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kyuki ye continue hota rehta hai…"
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum usko permanent maan lete hain."
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin permanence yahan illusion hai."
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Continuity ka effect hai."
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality ka proof nahi."
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye realization thoda clear hota hai…"
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek uncomfortable simplicity bachi rehti hai:"
+        }
+      ],
+      "sourceParagraph": 276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf experience hota hai…"
+        }
+      ],
+      "sourceParagraph": 277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur us experience ke upar ek story chal rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us story ka naam hai:"
+        }
+      ],
+      "sourceParagraph": 279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I”"
+        }
+      ],
+      "sourceParagraph": 280
+    }
+  ],
+  "index": 8,
+  "number": "CHAPTER 1 :",
+  "file": "chapters/08-chapter-01.json"
+}

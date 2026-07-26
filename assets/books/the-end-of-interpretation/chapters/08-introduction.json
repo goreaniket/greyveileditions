@@ -1,0 +1,901 @@
+{
+  "id": "introduction",
+  "kind": "introduction",
+  "sourceKind": "introduction",
+  "label": "Introduction",
+  "title": "INTRODUCTION",
+  "shortTitle": "INTRODUCTION",
+  "sourceRange": [
+    157,
+    255
+  ],
+  "headerSourceParagraphs": {
+    "title": 157
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN THE SYSTEM STARTS TO FAIL QUIETLY"
+        }
+      ],
+      "sourceParagraph": 158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh koi motivational book nahi hai."
+        }
+      ],
+      "sourceParagraph": 159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur na hi yeh kisi “better life” ke direction mein jaane wali journey hai."
+        }
+      ],
+      "sourceParagraph": 160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh us phase ke baare mein hai jahan insaan improve nahi hota…"
+        }
+      ],
+      "sourceParagraph": 161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan ka internal system hi apni authority loose karne lagta hai."
+        }
+      ],
+      "sourceParagraph": 162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein har cheez simple lagti hai."
+        }
+      ],
+      "sourceParagraph": 163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life = problem + solution."
+        }
+      ],
+      "sourceParagraph": 164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotion = reason + response."
+        }
+      ],
+      "sourceParagraph": 165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thought = analysis + conclusion."
+        }
+      ],
+      "sourceParagraph": 166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity = label + behaviour."
+        }
+      ],
+      "sourceParagraph": 167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur lagta hai yahi reality hai."
+        }
+      ],
+      "sourceParagraph": 168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poora din ek invisible rule follow hota hai:"
+        }
+      ],
+      "sourceParagraph": 169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " har cheez ko explain karo "
+        }
+      ],
+      "sourceParagraph": 170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har cheez ko define karo"
+        }
+      ],
+      "sourceParagraph": 171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har cheez ko control karo"
+        }
+      ],
+      "sourceParagraph": 172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har cheez ko meaning do"
+        }
+      ],
+      "sourceParagraph": 173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isko hi “living” samajh liya jaata hai."
+        }
+      ],
+      "sourceParagraph": 174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kabhi kabhi ek strange phase start hota hai…"
+        }
+      ],
+      "sourceParagraph": 175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan zindagi same rehti hai…"
+        }
+      ],
+      "sourceParagraph": 176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin usko samajhne ka pressure thoda sa change hone lagta hai."
+        }
+      ],
+      "sourceParagraph": 177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi big event hota hai."
+        }
+      ],
+      "sourceParagraph": 178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi breakdown."
+        }
+      ],
+      "sourceParagraph": 179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi dramatic realization."
+        }
+      ],
+      "sourceParagraph": 180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek silent fatigue jaisa feeling."
+        }
+      ],
+      "sourceParagraph": 181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise dimaag ko har cheez ko continuously explain karne ki aadat se thoda break milne lagta hai…"
+        }
+      ],
+      "sourceParagraph": 182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without permission."
+        }
+      ],
+      "sourceParagraph": 183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi se ek dangerous shift start hota hai:"
+        }
+      ],
+      "sourceParagraph": 184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jo cheez pehle “important explanation” lagti thi"
+        }
+      ],
+      "sourceParagraph": 185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " woh dheere dheere “optional noise” lagne lagti hai"
+        }
+      ],
+      "sourceParagraph": 186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is book mein tumhe koi new knowledge nahi milegi."
+        }
+      ],
+      "sourceParagraph": 187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh book tumhe better thoughts nahi degi."
+        }
+      ],
+      "sourceParagraph": 188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh tumhe positive direction nahi degi."
+        }
+      ],
+      "sourceParagraph": 189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh sirf ek cheez expose karegi:"
+        }
+      ],
+      "sourceParagraph": 190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tum “main” ke naam pe operate kar rahe ho… woh ek layered system hai"
+        }
+      ],
+      "sourceParagraph": 191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh system kuch parts mein divided hai:"
+        }
+      ],
+      "sourceParagraph": 192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meaning generator"
+        }
+      ],
+      "sourceParagraph": 193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thought stream"
+        }
+      ],
+      "sourceParagraph": 194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "narration engine"
+        }
+      ],
+      "sourceParagraph": 195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity builder"
+        }
+      ],
+      "sourceParagraph": 196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reaction mechanism"
+        }
+      ],
+      "sourceParagraph": 197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "internal dialogue loop"
+        }
+      ],
+      "sourceParagraph": 198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "observer reference point"
+        }
+      ],
+      "sourceParagraph": 199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "solving instinct"
+        }
+      ],
+      "sourceParagraph": 200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Normal life mein yeh sab ek single “I” lagta hai."
+        }
+      ],
+      "sourceParagraph": 201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab tum observe karna start karte ho…"
+        }
+      ],
+      "sourceParagraph": 202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh yeh ek single thing nahi lagta…"
+        }
+      ],
+      "sourceParagraph": 203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh ek process stack lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab process stack dikhne lagta hai…"
+        }
+      ],
+      "sourceParagraph": 205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek cheez naturally weak ho jaati hai:"
+        }
+      ],
+      "sourceParagraph": 206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " ownership illusion"
+        }
+      ],
+      "sourceParagraph": 207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki pehle tumhe lagta tha:"
+        }
+      ],
+      "sourceParagraph": 208
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main soch raha hoon”"
+        }
+      ],
+      "sourceParagraph": 209
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main feel kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 210
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main react kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 211
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main samajh raha hoon”"
+        }
+      ],
+      "sourceParagraph": 212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab yeh statements thoda delay se aate hain."
+        }
+      ],
+      "sourceParagraph": 213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi aate hi nahi."
+        }
+      ],
+      "sourceParagraph": 214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi sirf observation ban jaate hain."
+        }
+      ],
+      "sourceParagraph": 215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is book ka sabse uncomfortable part yeh hai:"
+        }
+      ],
+      "sourceParagraph": 216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tumhe koi naya belief replace nahi milega"
+        }
+      ],
+      "sourceParagraph": 217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tumhara purana belief slow dissolve hoga"
+        }
+      ],
+      "sourceParagraph": 218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi guidance milegi."
+        }
+      ],
+      "sourceParagraph": 219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi comfort structure banega."
+        }
+      ],
+      "sourceParagraph": 220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek gradual exposure hoga:"
+        }
+      ],
+      "sourceParagraph": 221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo “center” tum apne andar feel karte the…"
+        }
+      ],
+      "sourceParagraph": 222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh actually stable tha hi nahi."
+        }
+      ],
+      "sourceParagraph": 223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh realization loud nahi hota."
+        }
+      ],
+      "sourceParagraph": 224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh shock nahi hota."
+        }
+      ],
+      "sourceParagraph": 225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh breakdown nahi hota."
+        }
+      ],
+      "sourceParagraph": 226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh ek silent system error jaisa hota hai…"
+        }
+      ],
+      "sourceParagraph": 227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumhe pehli baar dikhaata hai:"
+        }
+      ],
+      "sourceParagraph": 228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " experience ho raha hai"
+        }
+      ],
+      "sourceParagraph": 229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " lekin us experience ka permanent owner unclear hai"
+        }
+      ],
+      "sourceParagraph": 230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jaise jaise tum aage badhte ho…"
+        }
+      ],
+      "sourceParagraph": 231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe yeh feel hone lagta hai ki:"
+        }
+      ],
+      "sourceParagraph": 232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "cheezein change nahi ho rahi…"
+        }
+      ],
+      "sourceParagraph": 233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas unka “meaning layer” weak ho raha hai."
+        }
+      ],
+      "sourceParagraph": 234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab meaning layer weak hoti hai…"
+        }
+      ],
+      "sourceParagraph": 235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh poora internal structure thoda unstable ho jaata hai:"
+        }
+      ],
+      "sourceParagraph": 236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thought less authoritative"
+        }
+      ],
+      "sourceParagraph": 237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity less fixed"
+        }
+      ],
+      "sourceParagraph": 238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "narration less dominant"
+        }
+      ],
+      "sourceParagraph": 239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reaction less owned"
+        }
+      ],
+      "sourceParagraph": 240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum beech mein khade ho…"
+        }
+      ],
+      "sourceParagraph": 241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na pehle jaise sure…"
+        }
+      ],
+      "sourceParagraph": 242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na completely lost…"
+        }
+      ],
+      "sourceParagraph": 243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek unfamiliar clarity mein."
+        }
+      ],
+      "sourceParagraph": 244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh book tumhe kisi conclusion tak nahi le jaayegi."
+        }
+      ],
+      "sourceParagraph": 245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh tumhe conclusion ki necessity hi doubt karna sikha degi."
+        }
+      ],
+      "sourceParagraph": 246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi sabse strong shift hai:"
+        }
+      ],
+      "sourceParagraph": 247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jab tumhe answers nahi milte…"
+        }
+      ],
+      "sourceParagraph": 248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tumhe questions ki urgency hi kam lagne lagti hai"
+        }
+      ],
+      "sourceParagraph": 249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab yeh book start nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh slowly unfold hoti hai…"
+        }
+      ],
+      "sourceParagraph": 251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaise koi system apni layers ko ek ek karke loose kar raha ho…"
+        }
+      ],
+      "sourceParagraph": 252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without noise."
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without drama."
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "just silence breaking structure."
+        }
+      ],
+      "sourceParagraph": 255
+    }
+  ],
+  "index": 8,
+  "file": "chapters/08-introduction.json"
+}

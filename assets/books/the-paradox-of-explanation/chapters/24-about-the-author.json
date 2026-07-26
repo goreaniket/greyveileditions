@@ -1,0 +1,272 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR-",
+  "shortTitle": "ABOUT THE AUTHOR-",
+  "sourceRange": [
+    2604,
+    2632
+  ],
+  "headerSourceParagraphs": {
+    "title": 2604
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R Mishra is not trying to be understood."
+        }
+      ],
+      "sourceParagraph": 2605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And maybe that’s exactly why people end up trying to understand him."
+        }
+      ],
+      "sourceParagraph": 2606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He doesn’t speak like someone who is “explaining life.”"
+        }
+      ],
+      "sourceParagraph": 2607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He speaks like someone who is still watching it happen in real time."
+        }
+      ],
+      "sourceParagraph": 2608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is something unusual about his writing "
+        }
+      ],
+      "sourceParagraph": 2609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it doesn’t feel like information."
+        }
+      ],
+      "sourceParagraph": 2610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It feels like someone is sitting in your head and pointing out thoughts you usually ignore."
+        }
+      ],
+      "sourceParagraph": 2611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is not a philosopher."
+        }
+      ],
+      "sourceParagraph": 2612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not a guru."
+        }
+      ],
+      "sourceParagraph": 2613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not a motivational voice."
+        }
+      ],
+      "sourceParagraph": 2614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Just someone who noticed a strange pattern:"
+        }
+      ],
+      "sourceParagraph": 2615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " people don’t suffer because life is complicated…"
+        }
+      ],
+      "sourceParagraph": 2616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "they suffer because their mind keeps adding meaning to everything."
+        }
+      ],
+      "sourceParagraph": 2617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the more you read him…"
+        }
+      ],
+      "sourceParagraph": 2618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the more uncomfortable it becomes to pretend you don’t relate."
+        }
+      ],
+      "sourceParagraph": 2619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His writing style is simple, but not soft."
+        }
+      ],
+      "sourceParagraph": 2620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Direct, but not loud."
+        }
+      ],
+      "sourceParagraph": 2621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Deep, but not trying to impress."
+        }
+      ],
+      "sourceParagraph": 2622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It doesn’t tell you what to think."
+        }
+      ],
+      "sourceParagraph": 2623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It makes you notice what you are already thinking."
+        }
+      ],
+      "sourceParagraph": 2624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And somewhere in between reading him…"
+        }
+      ],
+      "sourceParagraph": 2625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you don’t feel like you are reading a book anymore."
+        }
+      ],
+      "sourceParagraph": 2626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You feel like you are being observed by your own thoughts."
+        }
+      ],
+      "sourceParagraph": 2627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is not offering answers."
+        }
+      ],
+      "sourceParagraph": 2628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is exposing the habit of chasing them."
+        }
+      ],
+      "sourceParagraph": 2629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And if you ever feel like talking to him after reading this…"
+        }
+      ],
+      "sourceParagraph": 2630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that is not curiosity."
+        }
+      ],
+      "sourceParagraph": 2631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That is recognition."
+        }
+      ],
+      "sourceParagraph": 2632
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 24,
+  "file": "chapters/24-about-the-author.json"
+}

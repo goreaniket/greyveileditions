@@ -1,0 +1,685 @@
+{
+  "id": "introduction",
+  "kind": "introduction",
+  "sourceKind": "introduction",
+  "label": "Introduction",
+  "title": "INTRODUCTION",
+  "shortTitle": "INTRODUCTION",
+  "sourceRange": [
+    266,
+    340
+  ],
+  "headerSourceParagraphs": {
+    "title": 266
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi life bahar se bilkul normal chal rahi hoti hai…"
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar ek strange sa silence grow kar raha hota hai."
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch collapse hota hai."
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch dramatically change hota hai."
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi clear reason hota hai."
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek subtle shift hota hai…"
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo pehle notice bhi nahi hota."
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum dekhte ho same duniya ko."
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same log."
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same faces."
+        }
+      ],
+      "sourceParagraph": 276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same routine moments."
+        }
+      ],
+      "sourceParagraph": 277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par un moments ka “feel” change hone lagta hai."
+        }
+      ],
+      "sourceParagraph": 278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle jo cheezein direct lagti thi…"
+        }
+      ],
+      "sourceParagraph": 279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab unke beech ek invisible gap feel hone lagta hai."
+        }
+      ],
+      "sourceParagraph": 280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise reality seedhi nahi mil rahi…"
+        }
+      ],
+      "sourceParagraph": 281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh kisi filter ke through aa rahi ho."
+        }
+      ],
+      "sourceParagraph": 282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh filter koi external cheez nahi hota."
+        }
+      ],
+      "sourceParagraph": 283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh tumhare andar hi hota hai."
+        }
+      ],
+      "sourceParagraph": 284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein tum isko ignore kar dete ho."
+        }
+      ],
+      "sourceParagraph": 285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki life abhi bhi functional lagti hai."
+        }
+      ],
+      "sourceParagraph": 286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch chal raha hota hai."
+        }
+      ],
+      "sourceParagraph": 287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par dheere dheere ek strange realization "
+        }
+      ],
+      "sourceParagraph": 288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Build hota hai:"
+        }
+      ],
+      "sourceParagraph": 289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jo tum dekh rahe ho… woh directly “world” nahi hai"
+        }
+      ],
+      "sourceParagraph": 290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " woh world ka processed version hai"
+        }
+      ],
+      "sourceParagraph": 291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh baat disturb nahi karti…"
+        }
+      ],
+      "sourceParagraph": 292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par permanently perception ko change kar deti hai."
+        }
+      ],
+      "sourceParagraph": 293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi ek simple sa moment hota hai:"
+        }
+      ],
+      "sourceParagraph": 294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi baat hoti hai, koi silence hota hai, koi expression hota hai…"
+        }
+      ],
+      "sourceParagraph": 295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur uske baad ek single meaning nahi aata."
+        }
+      ],
+      "sourceParagraph": 296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Multiple interpretations ek saath appear ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur koi bhi interpretation fully final nahi lagta."
+        }
+      ],
+      "sourceParagraph": 298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se ek deep shift start hota hai:"
+        }
+      ],
+      "sourceParagraph": 299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " certainty slowly lose hone lagti hai"
+        }
+      ],
+      "sourceParagraph": 300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle tum sochte the:"
+        }
+      ],
+      "sourceParagraph": 301
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main dekh raha hoon reality ko”"
+        }
+      ],
+      "sourceParagraph": 302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab lagta hai:"
+        }
+      ],
+      "sourceParagraph": 303
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main reality ko interpret kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek aur layer aati hai:"
+        }
+      ],
+      "sourceParagraph": 305
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“shayad main reality ko construct kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh realization ek thought nahi hota."
+        }
+      ],
+      "sourceParagraph": 307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh ek lived experience ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheez pehle stable thi…"
+        }
+      ],
+      "sourceParagraph": 309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh ab fluid lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo cheez pehle solid lagti thi…"
+        }
+      ],
+      "sourceParagraph": 311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh ab continuously change hoti hui lagti hai."
+        }
+      ],
+      "sourceParagraph": 312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch completely real lagta hai."
+        }
+      ],
+      "sourceParagraph": 313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch completely unreal lagta hai."
+        }
+      ],
+      "sourceParagraph": 314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek unfolding experience hota hai…"
+        }
+      ],
+      "sourceParagraph": 315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kisi final meaning pe rukta nahi."
+        }
+      ],
+      "sourceParagraph": 316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh phase uncomfortable bhi nahi hota…"
+        }
+      ],
+      "sourceParagraph": 317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur peaceful bhi nahi hota."
+        }
+      ],
+      "sourceParagraph": 318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek raw awareness hoti hai."
+        }
+      ],
+      "sourceParagraph": 319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unfiltered. Unnamed. Uncontrolled."
+        }
+      ],
+      "sourceParagraph": 320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tum kisi cheez ko pehli baar “as it is” dekh rahe ho…"
+        }
+      ],
+      "sourceParagraph": 321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without forcing it into meaning."
+        }
+      ],
+      "sourceParagraph": 322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe Book IV ka real entry point hota hai:"
+        }
+      ],
+      "sourceParagraph": 323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jab reality ko samajhne ki koshish kam ho jaati hai… aur usko observe karne ka awareness zyada ho jaata hai"
+        }
+      ],
+      "sourceParagraph": 324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jaise jaise yeh awareness grow karti hai…"
+        }
+      ],
+      "sourceParagraph": 325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek cheez slowly dissolve hone lagti hai:"
+        }
+      ],
+      "sourceParagraph": 326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " fixed interpretation ki addiction"
+        }
+      ],
+      "sourceParagraph": 327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality disappear nahi hoti."
+        }
+      ],
+      "sourceParagraph": 328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life stop nahi hoti."
+        }
+      ],
+      "sourceParagraph": 329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "World change nahi hota."
+        }
+      ],
+      "sourceParagraph": 330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek layer quietly gir jaati hai:"
+        }
+      ],
+      "sourceParagraph": 331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " meaning ko lock karne ki compulsion"
+        }
+      ],
+      "sourceParagraph": 332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo bachta hai…"
+        }
+      ],
+      "sourceParagraph": 333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh koi answer nahi hota."
+        }
+      ],
+      "sourceParagraph": 334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi conclusion nahi hota."
+        }
+      ],
+      "sourceParagraph": 335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi final truth nahi hota."
+        }
+      ],
+      "sourceParagraph": 336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek continuously moving field hota hai…"
+        }
+      ],
+      "sourceParagraph": 337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo apne aap ko explain nahi karta…"
+        }
+      ],
+      "sourceParagraph": 338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf unfold hota rehta hai."
+        }
+      ],
+      "sourceParagraph": 339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Book IV — The Paradox of Reality begins here not as a story… but as the observation of raw universal experience itself."
+        }
+      ],
+      "sourceParagraph": 340
+    }
+  ],
+  "index": 7,
+  "file": "chapters/07-introduction.json"
+}

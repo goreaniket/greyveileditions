@@ -1,0 +1,134 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    10,
+    33
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 10
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "COPYRIGHT ................................................................................3",
+      "sourceParagraph": 11
+    },
+    {
+      "type": "toc-line",
+      "text": "DISCLAIMER...............................................................................4",
+      "sourceParagraph": 12
+    },
+    {
+      "type": "toc-line",
+      "text": "DEDICATION ..............................................................................6",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "NOTE FROM THE AUTHOR .........................................................8",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "PROLOGUE.................................................................................11",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "INTRODUCTION ..........................................................................18",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC I — THE FRACTURE OF SEEING",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1 — When Seeing Is Not Knowing ...................................23",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2 — The Invisible Filter ...................................................27",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3 — The Memory Inside the Moment ...............................32",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC II — THE CONSTRUCTION OF REALITY",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4 — The Reality You Never Directly See ...........................38",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5 — A Thousand Worlds in One World ............................43",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC III — THE COLLAPSE OF CERTAINTY",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6 — When Certainty Stops Working ................................48",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7 — When the World Has No Fixed Meaning ...................52",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC IV — THE QUIET DISSOLUTION",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8 — When Thought Loses Its Authority .........................58",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9 — When Nothing Needs to Be Understood ..................62",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-line",
+      "text": "CLOSING",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-line",
+      "text": "END REALIZTION— The Uncomfortable Seeing ............................66",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-line",
+      "text": "EPILOGUE ..................................................................................68",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-line",
+      "text": "ABOUT THE AUTHOR…………………….........................................71",
+      "sourceParagraph": 33
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

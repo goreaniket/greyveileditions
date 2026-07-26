@@ -1,0 +1,434 @@
+{
+  "id": "note-from-the-author",
+  "kind": "introduction",
+  "sourceKind": "author-note",
+  "label": "Author's Note",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "NOTE FROM THE AUTHOR",
+  "sourceRange": [
+    82,
+    128
+  ],
+  "headerSourceParagraphs": {
+    "title": 82
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you are reading this page, then we have already traveled a long distance together."
+        }
+      ],
+      "sourceParagraph": 83
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not through places."
+        }
+      ],
+      "sourceParagraph": 84
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not through events."
+        }
+      ],
+      "sourceParagraph": 85
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But through questions."
+        }
+      ],
+      "sourceParagraph": 86
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The kind of questions that rarely leave visible marks on the outside, yet quietly reshape the way a person sees everything."
+        }
+      ],
+      "sourceParagraph": 87
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "When I began writing The Human Paradoxes, I did not start with answers."
+        }
+      ],
+      "sourceParagraph": 88
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I started with confusion."
+        }
+      ],
+      "sourceParagraph": 89
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "With observation."
+        }
+      ],
+      "sourceParagraph": 90
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "With moments that felt too strange to ignore."
+        }
+      ],
+      "sourceParagraph": 91
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Moments where certainty felt fragile."
+        }
+      ],
+      "sourceParagraph": 92
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Moments where identity felt unstable."
+        }
+      ],
+      "sourceParagraph": 93
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Moments where reality itself seemed less solid than it appeared."
+        }
+      ],
+      "sourceParagraph": 94
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "For a long time, I believed that understanding would eventually bring final clarity."
+        }
+      ],
+      "sourceParagraph": 95
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That if I looked deeply enough, questioned carefully enough, and thought honestly enough, I would eventually arrive somewhere permanent."
+        }
+      ],
+      "sourceParagraph": 96
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But the deeper I looked, the more something unexpected revealed itself."
+        }
+      ],
+      "sourceParagraph": 97
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life was not becoming simpler."
+        }
+      ],
+      "sourceParagraph": 98
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was becoming wider."
+        }
+      ],
+      "sourceParagraph": 99
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The questions were not disappearing."
+        }
+      ],
+      "sourceParagraph": 100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They were changing shape."
+        }
+      ],
+      "sourceParagraph": 101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the answers I once searched for were slowly losing their importance."
+        }
+      ],
+      "sourceParagraph": 102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book was written from that space."
+        }
+      ],
+      "sourceParagraph": 103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not from certainty."
+        }
+      ],
+      "sourceParagraph": 104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not from expertise."
+        }
+      ],
+      "sourceParagraph": 105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not from a position above the reader."
+        }
+      ],
+      "sourceParagraph": 106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But from the same human condition we all share."
+        }
+      ],
+      "sourceParagraph": 107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The condition of trying to understand an experience while being inside the experience itself."
+        }
+      ],
+      "sourceParagraph": 108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perhaps that is one of the strangest things about being human."
+        }
+      ],
+      "sourceParagraph": 109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We are both the observer and the observed."
+        }
+      ],
+      "sourceParagraph": 110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The question and the one asking it."
+        }
+      ],
+      "sourceParagraph": 111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The creator of meaning and the one trapped inside it."
+        }
+      ],
+      "sourceParagraph": 112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And somewhere within that contradiction, an entire life unfolds."
+        }
+      ],
+      "sourceParagraph": 113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If this book leaves you with more questions than answers, that is not a failure."
+        }
+      ],
+      "sourceParagraph": 114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because some questions are not doors meant to be closed."
+        }
+      ],
+      "sourceParagraph": 115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are windows."
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They do not give us conclusions."
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They give us perspective."
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And sometimes perspective changes a life more deeply than certainty ever could."
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So as you continue this journey, I hope you do not simply agree or disagree with these pages."
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I hope you observe."
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I hope you question."
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I hope you notice the invisible structures beneath your own experience."
+        }
+      ],
+      "sourceParagraph": 123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And most importantly, I hope you remain curious enough to keep looking, even when no final answer appears."
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because perhaps the deepest discoveries are not found when reality finally makes sense."
+        }
+      ],
+      "sourceParagraph": 125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perhaps they are found when we become honest enough to see that reality was never asking to be solved."
+        }
+      ],
+      "sourceParagraph": 126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only observed."
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 128
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 5,
+  "file": "chapters/05-note-from-the-author.json"
+}

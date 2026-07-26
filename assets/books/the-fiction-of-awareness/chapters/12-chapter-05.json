@@ -1,0 +1,561 @@
+{
+  "id": "chapter-05",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 5",
+  "title": "The Fiction of Becoming",
+  "shortTitle": "The Fiction of Becoming",
+  "sourceRange": [
+    491,
+    552
+  ],
+  "headerSourceParagraphs": {
+    "number": 491,
+    "title": 492
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sab ek invisible direction mein jee rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek future version ki taraf."
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo abhi exist nahi karta…"
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par hamesha present hota hai."
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye idea simple lagta hai:"
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main better banunga.”"
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main heal ho jaunga.”"
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main complete ho jaunga.”"
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar deeply dekha jaye…"
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh “becoming” kabhi end point nahi hota."
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye ek continuous projection system hota hai."
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har present moment ke saath mind ek parallel image banata hai:"
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“jo main hona chahiye tha.”"
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“jo main ho sakta hoon.”"
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“jo main ban raha hoon.”"
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ye image kabhi present reality mein exist nahi karti."
+        }
+      ],
+      "sourceParagraph": 508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sirf imagination mein exist karti hai."
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting baat ye hai:"
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum present ko live nahi karte…"
+        }
+      ],
+      "sourceParagraph": 511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum present ko compare karte rehte hain."
+        }
+      ],
+      "sourceParagraph": 512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ke against."
+        }
+      ],
+      "sourceParagraph": 513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is comparison se ek gap create hota hai:"
+        }
+      ],
+      "sourceParagraph": 514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main abhi kaafi nahi hoon.”"
+        }
+      ],
+      "sourceParagraph": 515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi gap ko hum growth samajh lete hain."
+        }
+      ],
+      "sourceParagraph": 516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin growth aksar reality change nahi karti…"
+        }
+      ],
+      "sourceParagraph": 517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf dissatisfaction ko organize karti hai."
+        }
+      ],
+      "sourceParagraph": 518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming ka illusion ye hai:"
+        }
+      ],
+      "sourceParagraph": 519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Ek final version exist karta hai jahan main finally okay ho jaunga.”"
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jaise hi wo version imagine hota hai…"
+        }
+      ],
+      "sourceParagraph": 521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind ek aur version create kar deta hai."
+        }
+      ],
+      "sourceParagraph": 522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye becoming kabhi complete nahi hota."
+        }
+      ],
+      "sourceParagraph": 523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki wo completion pe based hi nahi hai."
+        }
+      ],
+      "sourceParagraph": 524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo deferral pe based hai."
+        }
+      ],
+      "sourceParagraph": 525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har achievement ke baad…"
+        }
+      ],
+      "sourceParagraph": 526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek naya “next” create ho jata hai."
+        }
+      ],
+      "sourceParagraph": 527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur identity us “next” ke around re-assemble hoti rehti hai."
+        }
+      ],
+      "sourceParagraph": 528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So life ek journey nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life ek continuous postponement ban jati hai."
+        }
+      ],
+      "sourceParagraph": 530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye postponement hi identity ko alive rakhta hai."
+        }
+      ],
+      "sourceParagraph": 531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar koi instant completeness feel ho jaye…"
+        }
+      ],
+      "sourceParagraph": 532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh becoming collapse ho jata hai."
+        }
+      ],
+      "sourceParagraph": 533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind us collapse ko tolerate nahi karta."
+        }
+      ],
+      "sourceParagraph": 534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye wo turant ek new lack create kar deta hai."
+        }
+      ],
+      "sourceParagraph": 535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming ka sabse deep fiction ye hai:"
+        }
+      ],
+      "sourceParagraph": 536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I am not enough yet, but I will become enough.”"
+        }
+      ],
+      "sourceParagraph": 537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin “enough” kabhi define hi nahi hota."
+        }
+      ],
+      "sourceParagraph": 538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye arrival kabhi possible nahi hota."
+        }
+      ],
+      "sourceParagraph": 539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye structure clearly dikhta hai…"
+        }
+      ],
+      "sourceParagraph": 540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange shift hota hai:"
+        }
+      ],
+      "sourceParagraph": 541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "future suddenly motivation nahi lagta…"
+        }
+      ],
+      "sourceParagraph": 542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek illusionary distance lagta hai."
+        }
+      ],
+      "sourceParagraph": 543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur present pehle se complete nahi banta…"
+        }
+      ],
+      "sourceParagraph": 544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas less distorted lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming yahin dissolve hota hai:"
+        }
+      ],
+      "sourceParagraph": 546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab future ko destination nahi…"
+        }
+      ],
+      "sourceParagraph": 547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf thought projection maana jaye."
+        }
+      ],
+      "sourceParagraph": 548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab sirf ek simple reality bachi rehti hai:"
+        }
+      ],
+      "sourceParagraph": 549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo abhi hai… wo already happening hai."
+        }
+      ],
+      "sourceParagraph": 550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without delay."
+        }
+      ],
+      "sourceParagraph": 551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without upgrade requirement."
+        }
+      ],
+      "sourceParagraph": 552
+    }
+  ],
+  "index": 12,
+  "number": "CHAPTER 5 :",
+  "file": "chapters/12-chapter-05.json"
+}

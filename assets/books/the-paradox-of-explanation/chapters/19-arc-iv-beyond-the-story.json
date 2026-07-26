@@ -1,0 +1,19 @@
+{
+  "id": "arc-iv-beyond-the-story",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC IV — BEYOND THE STORY",
+  "shortTitle": "ARC IV — BEYOND THE STORY",
+  "sourceRange": [
+    2083,
+    2083
+  ],
+  "headerSourceParagraphs": {
+    "title": 2083
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 19,
+  "file": "chapters/19-arc-iv-beyond-the-story.json"
+}

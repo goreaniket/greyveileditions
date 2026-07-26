@@ -1,0 +1,68 @@
+{
+  "id": "copyright-notice",
+  "kind": "copyright",
+  "sourceKind": "copyright",
+  "label": "Copyright",
+  "title": "COPYRIGHT NOTICE",
+  "shortTitle": "COPYRIGHT NOTICE",
+  "sourceRange": [
+    34,
+    39
+  ],
+  "headerSourceParagraphs": {
+    "title": 34
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "©️ 2026. "
+        },
+        {
+          "text": "All rights reserved."
+        }
+      ],
+      "sourceParagraph": 35
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No part of this book may be reproduced, distributed, stored, or transmitted in any form or by any means — electronic, mechanical, photocopying, recording, or otherwise — without prior written permission from the author."
+        }
+      ],
+      "sourceParagraph": 36
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is an original work by Lalit R. Mishra."
+        }
+      ],
+      "sourceParagraph": 37
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any resemblance to real persons, living or dead, events, or situations is purely coincidental."
+        }
+      ],
+      "sourceParagraph": 38
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unauthorized use, copying, or distribution of this material is strictly prohibited."
+        }
+      ],
+      "sourceParagraph": 39
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 2,
+  "file": "chapters/02-copyright-notice.json"
+}

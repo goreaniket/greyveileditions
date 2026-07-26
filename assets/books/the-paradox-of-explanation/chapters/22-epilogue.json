@@ -1,0 +1,561 @@
+{
+  "id": "epilogue",
+  "kind": "epilogue",
+  "sourceKind": "epilogue",
+  "label": "Epilogue",
+  "title": "EPILOGUE-",
+  "shortTitle": "EPILOGUE-",
+  "sourceRange": [
+    2470,
+    2531
+  ],
+  "headerSourceParagraphs": {
+    "title": 2470,
+    "subtitle": 2471
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum yahan tak aa gaye ho…"
+        }
+      ],
+      "sourceParagraph": 2472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch tumhare andar already change ho chuka hai."
+        }
+      ],
+      "sourceParagraph": 2473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad tumhe pata bhi nahi."
+        }
+      ],
+      "sourceParagraph": 2474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum shuru mein answers dhoondh rahe the:"
+        }
+      ],
+      "sourceParagraph": 2475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh kyun ho raha hai?"
+        }
+      ],
+      "sourceParagraph": 2476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "iska meaning kya hai?"
+        }
+      ],
+      "sourceParagraph": 2477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe kya samajhna chahiye?"
+        }
+      ],
+      "sourceParagraph": 2478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin dheere dheere…"
+        }
+      ],
+      "sourceParagraph": 2479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh questions heavy lagne lage."
+        }
+      ],
+      "sourceParagraph": 2480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki answers milne ki jagah…"
+        }
+      ],
+      "sourceParagraph": 2481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "questions hi dissolve hone lage."
+        }
+      ],
+      "sourceParagraph": 2482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab questions dissolve hote hain…"
+        }
+      ],
+      "sourceParagraph": 2483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh clarity nahi aati."
+        }
+      ],
+      "sourceParagraph": 2484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Space aata hai."
+        }
+      ],
+      "sourceParagraph": 2485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us space mein…"
+        }
+      ],
+      "sourceParagraph": 2486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind ek last baar poochta hai:"
+        }
+      ],
+      "sourceParagraph": 2487
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": " “Toh main hoon kaun?”"
+        }
+      ],
+      "sourceParagraph": 2488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab woh question bhi different lagta hai."
+        }
+      ],
+      "sourceParagraph": 2489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Less urgent."
+        }
+      ],
+      "sourceParagraph": 2490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Less solid."
+        }
+      ],
+      "sourceParagraph": 2491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Less desperate."
+        }
+      ],
+      "sourceParagraph": 2492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum notice karne lagte ho:"
+        }
+      ],
+      "sourceParagraph": 2493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo question pooch raha tha…"
+        }
+      ],
+      "sourceParagraph": 2494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh question se alag nahi tha."
+        }
+      ],
+      "sourceParagraph": 2495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh bhi same movement ka part tha."
+        }
+      ],
+      "sourceParagraph": 2496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same loop."
+        }
+      ],
+      "sourceParagraph": 2497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same search."
+        }
+      ],
+      "sourceParagraph": 2498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same need to define."
+        }
+      ],
+      "sourceParagraph": 2499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab…"
+        }
+      ],
+      "sourceParagraph": 2500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh structure poori tarah gayab nahi hua hai…"
+        }
+      ],
+      "sourceParagraph": 2501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin uski grip weak ho gayi hai."
+        }
+      ],
+      "sourceParagraph": 2502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us gap mein…"
+        }
+      ],
+      "sourceParagraph": 2503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek simple sa realization bachta hai:"
+        }
+      ],
+      "sourceParagraph": 2504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life kabhi missing nahi thi."
+        }
+      ],
+      "sourceParagraph": 2505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf interpretation usse door bana rahi thi."
+        }
+      ],
+      "sourceParagraph": 2506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation thodi kam hoti hai…"
+        }
+      ],
+      "sourceParagraph": 2507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch “naya” nahi banta."
+        }
+      ],
+      "sourceParagraph": 2508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch direct ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 2509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thought sirf thought hota hai"
+        }
+      ],
+      "sourceParagraph": 2510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "emotion sirf emotion hota hai"
+        }
+      ],
+      "sourceParagraph": 2511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "moment sirf moment hota hai"
+        }
+      ],
+      "sourceParagraph": 2512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina meaning ke."
+        }
+      ],
+      "sourceParagraph": 2513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina ownership ke."
+        }
+      ],
+      "sourceParagraph": 2514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina story ke."
+        }
+      ],
+      "sourceParagraph": 2515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh cheez hold nahi ki ja sakti."
+        }
+      ],
+      "sourceParagraph": 2516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jaise hi tum isse pakadne ki koshish karte ho…"
+        }
+      ],
+      "sourceParagraph": 2517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh phir se idea ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 2518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye yeh sirf ek direction reh jaati hai:"
+        }
+      ],
+      "sourceParagraph": 2519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " kuch bhi fix karne ki zarurat nahi thi"
+        }
+      ],
+      "sourceParagraph": 2520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " sirf dekhne ki zarurat thi"
+        }
+      ],
+      "sourceParagraph": 2521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi poora point tha:"
+        }
+      ],
+      "sourceParagraph": 2522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "khud ko badalne ka nahi…"
+        }
+      ],
+      "sourceParagraph": 2523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf yeh dekhne ka…"
+        }
+      ],
+      "sourceParagraph": 2524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum sirf apni story nahi ho."
+        }
+      ],
+      "sourceParagraph": 2525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab…"
+        }
+      ],
+      "sourceParagraph": 2526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh book bhi ek knowledge banne ki jagah nahi hai."
+        }
+      ],
+      "sourceParagraph": 2527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki knowledge bhi identity ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 2528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh last cheez jo bachi hai:"
+        }
+      ],
+      "sourceParagraph": 2529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum abhi bhi yahin ho…"
+        }
+      ],
+      "sourceParagraph": 2530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin pehle se thoda kam story ke andar."
+        }
+      ],
+      "sourceParagraph": 2531
+    }
+  ],
+  "subtitle": "WHEN EVEN THE QUESTION DISAPPEARS",
+  "index": 22,
+  "file": "chapters/22-epilogue.json"
+}

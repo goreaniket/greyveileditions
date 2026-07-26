@@ -1,0 +1,661 @@
+{
+  "id": "chapter-06",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 6",
+  "title": "CHAPTER 6 — WHEN CERTAINTY STOPS WORKING",
+  "shortTitle": "WHEN CERTAINTY STOPS WORKING",
+  "sourceRange": [
+    793,
+    864
+  ],
+  "headerSourceParagraphs": {
+    "title": 793
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi ek phase aata hai…"
+        }
+      ],
+      "sourceParagraph": 794
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab duniya badalti nahi hai…"
+        }
+      ],
+      "sourceParagraph": 795
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par usko samajhne ka tareeka tootne lagta hai."
+        }
+      ],
+      "sourceParagraph": 796
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh tootna loud nahi hota."
+        }
+      ],
+      "sourceParagraph": 797
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silent hota hai."
+        }
+      ],
+      "sourceParagraph": 798
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Slow hota hai."
+        }
+      ],
+      "sourceParagraph": 799
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur andar se feel hota hai."
+        }
+      ],
+      "sourceParagraph": 800
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein mind simple hota hai:"
+        }
+      ],
+      "sourceParagraph": 801
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh sahi hai"
+        }
+      ],
+      "sourceParagraph": 802
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh galat hai"
+        }
+      ],
+      "sourceParagraph": 803
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh safe hai"
+        }
+      ],
+      "sourceParagraph": 804
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh unsafe hai"
+        }
+      ],
+      "sourceParagraph": 805
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is level pe reality stable lagti hai."
+        }
+      ],
+      "sourceParagraph": 806
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez ka answer hota hai."
+        }
+      ],
+      "sourceParagraph": 807
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya kam se kam lagta hai ki hai."
+        }
+      ],
+      "sourceParagraph": 808
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir ek moment aata hai…"
+        }
+      ],
+      "sourceParagraph": 809
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab ek conclusion fully stick nahi karta."
+        }
+      ],
+      "sourceParagraph": 810
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum sochte ho:"
+        }
+      ],
+      "sourceParagraph": 811
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“shayad yeh aisa hai”"
+        }
+      ],
+      "sourceParagraph": 812
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin turant ek aur thought aata hai:"
+        }
+      ],
+      "sourceParagraph": 813
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“ya shayad nahi hai”"
+        }
+      ],
+      "sourceParagraph": 814
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh conflict pehli baar noticeable hota hai."
+        }
+      ],
+      "sourceParagraph": 815
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab mind pehli baar “single answer” nahi bana pata."
+        }
+      ],
+      "sourceParagraph": 816
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab cheezein aur complex ho jaati hain."
+        }
+      ],
+      "sourceParagraph": 817
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi situation ke andar:"
+        }
+      ],
+      "sourceParagraph": 818
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek version truth lagta hai"
+        }
+      ],
+      "sourceParagraph": 819
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek version doubt lagta hai"
+        }
+      ],
+      "sourceParagraph": 820
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek version confusion lagta hai"
+        }
+      ],
+      "sourceParagraph": 821
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sab ek saath exist karte hain."
+        }
+      ],
+      "sourceParagraph": 822
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab reality ek line nahi rehti."
+        }
+      ],
+      "sourceParagraph": 823
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh ek bundle of possibilities ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 824
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahan pe sabse uncomfortable phase aata hai."
+        }
+      ],
+      "sourceParagraph": 825
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi bhi cheez pe final stamp lag hi nahi pata."
+        }
+      ],
+      "sourceParagraph": 826
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har conclusion ke andar ek counter-conclusion chhupa hota hai."
+        }
+      ],
+      "sourceParagraph": 827
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Example:"
+        }
+      ],
+      "sourceParagraph": 828
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi insaan kuch kehta hai…"
+        }
+      ],
+      "sourceParagraph": 829
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“yeh sach hai”"
+        }
+      ],
+      "sourceParagraph": 830
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“yeh half truth ho sakta hai”"
+        }
+      ],
+      "sourceParagraph": 831
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“ya main galat samajh raha hoon”"
+        }
+      ],
+      "sourceParagraph": 832
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh loop break nahi hota."
+        }
+      ],
+      "sourceParagraph": 833
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har answer apne andar doubt carry karta hai."
+        }
+      ],
+      "sourceParagraph": 834
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab ek deeper realization aata hai:"
+        }
+      ],
+      "sourceParagraph": 835
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " problem reality mein nahi hai"
+        }
+      ],
+      "sourceParagraph": 836
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " problem “certainty system” mein hai"
+        }
+      ],
+      "sourceParagraph": 837
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ek machine hai jo:"
+        }
+      ],
+      "sourceParagraph": 838
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "simplify karta hai"
+        }
+      ],
+      "sourceParagraph": 839
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "finalize karta hai"
+        }
+      ],
+      "sourceParagraph": 840
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "label karta hai"
+        }
+      ],
+      "sourceParagraph": 841
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab input complex ho jaata hai…"
+        }
+      ],
+      "sourceParagraph": 842
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "system overload hone lagta hai."
+        }
+      ],
+      "sourceParagraph": 843
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh overload confusion nahi banata…"
+        }
+      ],
+      "sourceParagraph": 844
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " yeh “non-finality” banata hai"
+        }
+      ],
+      "sourceParagraph": 845
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab normal cheez bhi different feel hoti hai:"
+        }
+      ],
+      "sourceParagraph": 846
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baat sunte ho → multiple meanings trigger hote hain"
+        }
+      ],
+      "sourceParagraph": 847
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "decision lete ho → internal resistance hota hai"
+        }
+      ],
+      "sourceParagraph": 848
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "observation karte ho → immediate conclusion nahi aata"
+        }
+      ],
+      "sourceParagraph": 849
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sab kuch slightly unstable lagta hai…"
+        }
+      ],
+      "sourceParagraph": 850
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par broken nahii"
+        }
+      ],
+      "sourceParagraph": 851
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh confusion nahi hai."
+        }
+      ],
+      "sourceParagraph": 852
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh collapse of single interpretation habit hai."
+        }
+      ],
+      "sourceParagraph": 853
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh state stable hone lagti hai…"
+        }
+      ],
+      "sourceParagraph": 854
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek silent understanding aati hai:"
+        }
+      ],
+      "sourceParagraph": 855
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " certainty truth nahi thi"
+        }
+      ],
+      "sourceParagraph": 856
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " certainty sirf mind ka compression tool tha"
+        }
+      ],
+      "sourceParagraph": 857
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab compression weak hota hai…"
+        }
+      ],
+      "sourceParagraph": 858
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh reality open ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 859
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na fully clear."
+        }
+      ],
+      "sourceParagraph": 860
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na fully unclear."
+        }
+      ],
+      "sourceParagraph": 861
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek flowing field…"
+        }
+      ],
+      "sourceParagraph": 862
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan answers fixed nahi rehte…"
+        }
+      ],
+      "sourceParagraph": 863
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf possibilities rehti hain."
+        }
+      ],
+      "sourceParagraph": 864
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "number": "Chapter 6",
+  "phase": "The Paradox of Reality",
+  "index": 16,
+  "file": "chapters/16-chapter-06.json"
+}

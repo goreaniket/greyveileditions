@@ -1,0 +1,19 @@
+{
+  "id": "the-awakening-of-seeing",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "ARC I —",
+  "title": "THE AWAKENING OF SEEING",
+  "shortTitle": "THE AWAKENING OF SEEING",
+  "sourceRange": [
+    229,
+    230
+  ],
+  "headerSourceParagraphs": {
+    "number": 229,
+    "title": 230
+  },
+  "elements": [],
+  "index": 8,
+  "file": "chapters/08-the-awakening-of-seeing.json"
+}

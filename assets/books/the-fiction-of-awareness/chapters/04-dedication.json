@@ -1,0 +1,110 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "sourceKind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "DEDICATION",
+  "sourceRange": [
+    47,
+    57
+  ],
+  "headerSourceParagraphs": {
+    "title": 47
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is dedicated to every mind that has ever questioned itself in silence."
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those moments when thoughts became heavier than words…"
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and still, you continued to observe."
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the ones who felt deeply but could not explain why."
+        }
+      ],
+      "sourceParagraph": 51
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who lived inside their own narratives without realizing they were narratives."
+        }
+      ],
+      "sourceParagraph": 52
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to the silent space within every reader…"
+        }
+      ],
+      "sourceParagraph": 53
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "where certainty softens,"
+        }
+      ],
+      "sourceParagraph": 54
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and observation begins."
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "May this work meet you not as information…"
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but as a reflection you were always close to seeing."
+        }
+      ],
+      "sourceParagraph": 57
+    }
+  ],
+  "index": 4,
+  "suppressHeaderNumber": true,
+  "file": "chapters/04-dedication.json"
+}

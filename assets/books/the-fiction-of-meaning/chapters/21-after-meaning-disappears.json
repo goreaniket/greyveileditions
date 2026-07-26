@@ -1,0 +1,291 @@
+{
+  "id": "after-meaning-disappears",
+  "kind": "epilogue",
+  "sourceKind": "epilogue",
+  "label": "Epilogue",
+  "title": "AFTER MEANING DISAPPEARS",
+  "shortTitle": "AFTER MEANING DISAPPEARS",
+  "sourceRange": [
+    681,
+    712
+  ],
+  "headerSourceParagraphs": {
+    "number": 681,
+    "title": 682
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum yahan tak pahunche ho…"
+        }
+      ],
+      "sourceParagraph": 683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek cheez already change ho chuki hoti hai."
+        }
+      ],
+      "sourceParagraph": 684
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality change nahi hui hoti…"
+        }
+      ],
+      "sourceParagraph": 685
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf usko explain karne ki urgency kam ho chuki hoti hai."
+        }
+      ],
+      "sourceParagraph": 686
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo pehle “meaningful” lagta tha…"
+        }
+      ],
+      "sourceParagraph": 687
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ab sirf “happening” lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 688
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na usme koi hidden message hota hai…"
+        }
+      ],
+      "sourceParagraph": 689
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi final explanation."
+        }
+      ],
+      "sourceParagraph": 690
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf unfolding hota hai."
+        }
+      ],
+      "sourceParagraph": 691
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts aate hain…"
+        }
+      ],
+      "sourceParagraph": 692
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unko justify karne ki zarurat kam ho jati hai."
+        }
+      ],
+      "sourceParagraph": 693
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings hoti hain…"
+        }
+      ],
+      "sourceParagraph": 694
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unko label karna heavy lagta hai."
+        }
+      ],
+      "sourceParagraph": 695
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Events hote hain…"
+        }
+      ],
+      "sourceParagraph": 696
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unko story banane ka pressure gir jata hai."
+        }
+      ],
+      "sourceParagraph": 697
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab story banane ka pressure girta hai…"
+        }
+      ],
+      "sourceParagraph": 698
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch khaas nahi bachta."
+        }
+      ],
+      "sourceParagraph": 699
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas directness bachta hai."
+        }
+      ],
+      "sourceParagraph": 700
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye directness koi special state nahi hai."
+        }
+      ],
+      "sourceParagraph": 701
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sirf interpretation ka absence hai."
+        }
+      ],
+      "sourceParagraph": 702
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interpretation ke absence mein…"
+        }
+      ],
+      "sourceParagraph": 703
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience apne aap sufficient lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 704
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na “kya matlab hai” ki urgency hoti hai…"
+        }
+      ],
+      "sourceParagraph": 705
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na “kyu ho raha hai” ka burden."
+        }
+      ],
+      "sourceParagraph": 706
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ye hota hai:"
+        }
+      ],
+      "sourceParagraph": 707
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo ho raha hai… wo ho raha hai."
+        }
+      ],
+      "sourceParagraph": 708
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe Book II khatam nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 709
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf apni zarurat kho deti hai."
+        }
+      ],
+      "sourceParagraph": 710
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jahan meaning nahi chahiye…"
+        }
+      ],
+      "sourceParagraph": 711
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wahan explanation bhi unnecessary ho jata hai."
+        }
+      ],
+      "sourceParagraph": 712
+    }
+  ],
+  "index": 21,
+  "number": "EPILOGUE —",
+  "file": "chapters/21-after-meaning-disappears.json"
+}

@@ -1,0 +1,1148 @@
+{
+  "id": "chapter-08",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 8:",
+  "title": "LIFE CONTINUES",
+  "shortTitle": "LIFE CONTINUES",
+  "sourceRange": [
+    1164,
+    1290
+  ],
+  "headerSourceParagraphs": {
+    "number": 1164,
+    "title": 1165
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poore life hum ek strange wait mein rehte hain."
+        }
+      ],
+      "sourceParagraph": 1166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi consciously."
+        }
+      ],
+      "sourceParagraph": 1167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi unconsciously."
+        }
+      ],
+      "sourceParagraph": 1168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum wait karte hain us moment ka..."
+        }
+      ],
+      "sourceParagraph": 1169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab sab finally clear ho jayega."
+        }
+      ],
+      "sourceParagraph": 1170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab confusion khatam ho jayegi."
+        }
+      ],
+      "sourceParagraph": 1171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab fear khatam ho jayega."
+        }
+      ],
+      "sourceParagraph": 1172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab uncertainty khatam ho jayegi."
+        }
+      ],
+      "sourceParagraph": 1173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab hum ready feel karenge."
+        }
+      ],
+      "sourceParagraph": 1174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir..."
+        }
+      ],
+      "sourceParagraph": 1175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jeena start karenge."
+        }
+      ],
+      "sourceParagraph": 1176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kam se kam mind yahi kehta hai."
+        }
+      ],
+      "sourceParagraph": 1177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas yeh phase nikal jaaye."
+        }
+      ],
+      "sourceParagraph": 1178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas yeh problem solve ho jaaye."
+        }
+      ],
+      "sourceParagraph": 1179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas yeh answer mil jaaye."
+        }
+      ],
+      "sourceParagraph": 1180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir life start hogi."
+        }
+      ],
+      "sourceParagraph": 1181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad poori journey ka sabse strange realization yeh hai..."
+        }
+      ],
+      "sourceParagraph": 1182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life kabhi wait nahi kar rahi thi."
+        }
+      ],
+      "sourceParagraph": 1183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ne kabhi pause nahi liya."
+        }
+      ],
+      "sourceParagraph": 1184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ne kabhi tumhari readiness ka intezaar nahi kiya."
+        }
+      ],
+      "sourceParagraph": 1185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum answers dhoond rahe the..."
+        }
+      ],
+      "sourceParagraph": 1186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life continue kar rahi thi."
+        }
+      ],
+      "sourceParagraph": 1187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum future se darr rahe the..."
+        }
+      ],
+      "sourceParagraph": 1188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life continue kar rahi thi."
+        }
+      ],
+      "sourceParagraph": 1189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum past mein phanse hue the..."
+        }
+      ],
+      "sourceParagraph": 1190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life continue kar rahi thi."
+        }
+      ],
+      "sourceParagraph": 1191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum khud ko samajhne ki koshish kar rahe the..."
+        }
+      ],
+      "sourceParagraph": 1192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life continue kar rahi thi."
+        }
+      ],
+      "sourceParagraph": 1193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh sirf tumhare saath nahi ho raha tha."
+        }
+      ],
+      "sourceParagraph": 1194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum ready hone ka wait kar rahe the..."
+        }
+      ],
+      "sourceParagraph": 1195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kahin koi pehli baar chalna seekh raha tha."
+        }
+      ],
+      "sourceParagraph": 1196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahin koi pehli baar pyaar mein pad raha tha."
+        }
+      ],
+      "sourceParagraph": 1197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahin koi aakhri baar kisi ko dekh raha tha."
+        }
+      ],
+      "sourceParagraph": 1198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahin koi janam le raha tha."
+        }
+      ],
+      "sourceParagraph": 1199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahin koi mar raha tha."
+        }
+      ],
+      "sourceParagraph": 1200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur duniya ne permission nahi maangi."
+        }
+      ],
+      "sourceParagraph": 1201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Suraj ugta raha."
+        }
+      ],
+      "sourceParagraph": 1202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Raat aati rahi."
+        }
+      ],
+      "sourceParagraph": 1203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hawa chalti rahi."
+        }
+      ],
+      "sourceParagraph": 1204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Samay behta raha."
+        }
+      ],
+      "sourceParagraph": 1205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life continue karti rahi."
+        }
+      ],
+      "sourceParagraph": 1206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek aur realization saamne aati hai."
+        }
+      ],
+      "sourceParagraph": 1207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem yeh nahi thi ki life ruk gayi thi."
+        }
+      ],
+      "sourceParagraph": 1208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem yeh thi..."
+        }
+      ],
+      "sourceParagraph": 1209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki humne life ko ek destination bana diya tha."
+        }
+      ],
+      "sourceParagraph": 1210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise pehle hum samjhenge."
+        }
+      ],
+      "sourceParagraph": 1211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir jeeyenge."
+        }
+      ],
+      "sourceParagraph": 1212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle answers milenge."
+        }
+      ],
+      "sourceParagraph": 1213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir jeeyenge."
+        }
+      ],
+      "sourceParagraph": 1214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle certainty milegi."
+        }
+      ],
+      "sourceParagraph": 1215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir jeeyenge."
+        }
+      ],
+      "sourceParagraph": 1216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle peace milegi."
+        }
+      ],
+      "sourceParagraph": 1217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir jeeyenge."
+        }
+      ],
+      "sourceParagraph": 1218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin saalon baad..."
+        }
+      ],
+      "sourceParagraph": 1219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek uncomfortable question saamne khada milta hai."
+        }
+      ],
+      "sourceParagraph": 1220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar life future mein start honi thi..."
+        }
+      ],
+      "sourceParagraph": 1221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ab tak kya chal raha tha?"
+        }
+      ],
+      "sourceParagraph": 1222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar life answers ke baad start honi thi..."
+        }
+      ],
+      "sourceParagraph": 1223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh answers se pehle jo saare saal guzre..."
+        }
+      ],
+      "sourceParagraph": 1224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh kya the?"
+        }
+      ],
+      "sourceParagraph": 1225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar life certainty ke baad start honi thi..."
+        }
+      ],
+      "sourceParagraph": 1226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh uncertainty ke andar jo saansein li gayi..."
+        }
+      ],
+      "sourceParagraph": 1227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh kya thi?"
+        }
+      ],
+      "sourceParagraph": 1228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin poori journey dheere dheere ulatne lagti hai."
+        }
+      ],
+      "sourceParagraph": 1229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki tum realize karte ho..."
+        }
+      ],
+      "sourceParagraph": 1230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum life ko observe nahi kar rahe the."
+        }
+      ],
+      "sourceParagraph": 1231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum life ke andar the."
+        }
+      ],
+      "sourceParagraph": 1232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hamesha se."
+        }
+      ],
+      "sourceParagraph": 1233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum confused the..."
+        }
+      ],
+      "sourceParagraph": 1234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh bhi life thi."
+        }
+      ],
+      "sourceParagraph": 1235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum overthink kar rahe the..."
+        }
+      ],
+      "sourceParagraph": 1236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh bhi life thi."
+        }
+      ],
+      "sourceParagraph": 1237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum hurt the..."
+        }
+      ],
+      "sourceParagraph": 1238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh bhi life thi."
+        }
+      ],
+      "sourceParagraph": 1239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum heal kar rahe the..."
+        }
+      ],
+      "sourceParagraph": 1240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh bhi life thi."
+        }
+      ],
+      "sourceParagraph": 1241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum search kar rahe the..."
+        }
+      ],
+      "sourceParagraph": 1242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh bhi life thi."
+        }
+      ],
+      "sourceParagraph": 1243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tumhe lag raha tha ki tum jee nahi rahe..."
+        }
+      ],
+      "sourceParagraph": 1244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab bhi."
+        }
+      ],
+      "sourceParagraph": 1245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh life hi thi."
+        }
+      ],
+      "sourceParagraph": 1246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye poori journey ka final realization itna simple lagta hai."
+        }
+      ],
+      "sourceParagraph": 1247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itna simple..."
+        }
+      ],
+      "sourceParagraph": 1248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki mind usse miss kar deta hai."
+        }
+      ],
+      "sourceParagraph": 1249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life kabhi problem nahi thi."
+        }
+      ],
+      "sourceParagraph": 1250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life kabhi puzzle nahi thi."
+        }
+      ],
+      "sourceParagraph": 1251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life kabhi question nahi thi."
+        }
+      ],
+      "sourceParagraph": 1252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Question hum the."
+        }
+      ],
+      "sourceParagraph": 1253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Puzzle hum the."
+        }
+      ],
+      "sourceParagraph": 1254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Search hum the."
+        }
+      ],
+      "sourceParagraph": 1255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir..."
+        }
+      ],
+      "sourceParagraph": 1256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "itni searching ke baad."
+        }
+      ],
+      "sourceParagraph": 1257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itni suffering ke baad."
+        }
+      ],
+      "sourceParagraph": 1258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itni understanding ke baad."
+        }
+      ],
+      "sourceParagraph": 1259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itne paradoxes ke baad."
+        }
+      ],
+      "sourceParagraph": 1260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek almost embarrassing realization saamne aati hai."
+        }
+      ],
+      "sourceParagraph": 1261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum poori life arrival ka wait kar rahe the."
+        }
+      ],
+      "sourceParagraph": 1262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin koi arrival tha hi nahi."
+        }
+      ],
+      "sourceParagraph": 1263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum poori life complete hone ka wait kar rahe the."
+        }
+      ],
+      "sourceParagraph": 1264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin existence ne kabhi tumhe incomplete maana hi nahi."
+        }
+      ],
+      "sourceParagraph": 1265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum poori life life tak pahunchne ki koshish kar rahe the."
+        }
+      ],
+      "sourceParagraph": 1266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin tum kabhi life se door the hi nahi."
+        }
+      ],
+      "sourceParagraph": 1267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not for a single second."
+        }
+      ],
+      "sourceParagraph": 1268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na jab tum toot rahe the."
+        }
+      ],
+      "sourceParagraph": 1269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na jab tum jeet rahe the."
+        }
+      ],
+      "sourceParagraph": 1270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na jab tum samajh rahe the."
+        }
+      ],
+      "sourceParagraph": 1271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na jab tum kho gaye the."
+        }
+      ],
+      "sourceParagraph": 1272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi nahi."
+        }
+      ],
+      "sourceParagraph": 1273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad poori journey ka final paradox yahi tha."
+        }
+      ],
+      "sourceParagraph": 1274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum jis cheez tak pahunchna chahte the..."
+        }
+      ],
+      "sourceParagraph": 1275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum kabhi usse alag the hi nahi."
+        }
+      ],
+      "sourceParagraph": 1276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh finally dikhai deta hai..."
+        }
+      ],
+      "sourceParagraph": 1277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh koi fireworks nahi hote."
+        }
+      ],
+      "sourceParagraph": 1278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi cosmic revelation nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi ultimate answer nahi milta."
+        }
+      ],
+      "sourceParagraph": 1280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek halki si khamoshi."
+        }
+      ],
+      "sourceParagraph": 1281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi bahut purani search apne aap gir gayi ho."
+        }
+      ],
+      "sourceParagraph": 1282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi darwaza khula nahi..."
+        }
+      ],
+      "sourceParagraph": 1283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf dikh gaya ho ki woh kabhi band tha hi nahi."
+        }
+      ],
+      "sourceParagraph": 1284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us moment mein..."
+        }
+      ],
+      "sourceParagraph": 1285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pehli baar..."
+        }
+      ],
+      "sourceParagraph": 1286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad tum life ko samajhte nahi."
+        }
+      ],
+      "sourceParagraph": 1287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad pehli baar..."
+        }
+      ],
+      "sourceParagraph": 1288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas uske saath hote ho."
+        }
+      ],
+      "sourceParagraph": 1289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE END"
+        }
+      ],
+      "sourceParagraph": 1290,
+      "role": "section-heading"
+    }
+  ],
+  "number": "CHAPTER 8:",
+  "phase": "The Paradox of Stillness",
+  "index": 19,
+  "file": "chapters/19-chapter-08.json"
+}

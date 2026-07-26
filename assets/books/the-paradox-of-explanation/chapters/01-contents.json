@@ -1,0 +1,134 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    8,
+    31
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 8
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright .............................................................................................3 ",
+      "sourceParagraph": 9
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer .............................................................................................4",
+      "sourceParagraph": 10
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ..............................................................................................5",
+      "sourceParagraph": 11
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author ..............................................................................6",
+      "sourceParagraph": 12
+    },
+    {
+      "type": "toc-line",
+      "text": "Prologue .................................................................................................8",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction ...........................................................................................10",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC I — THE NEED TO UNDERSTAND",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1 — The Need to Know Why .......................................................17",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2 — The Stories We Build ...........................................................54",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3 — The Self That Never Stays Fixed ...........................................63",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC II — THE SEARCH FOR CERTAINTY",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4 — The Illusion of Control ..........................................................70",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5 — The Fear of What Has Not Happened ....................................77",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6 — When Nothing Needs a Meaning ...........................................83",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC III — THE COLLAPSE OF EXPLANATION",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7 — When the Mind Stops Explaining ..........................................91",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8 — The Moment You Stop Trusting Your Own Thoughts .............99",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC IV — BEYOND THE STORY",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9 — When You Meet Yourself Without the Story ...........................109",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 10 — The Silence That Does Not Need You ...................................117",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-line",
+      "text": "EPILOGUE ................................................................................................127",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-line",
+      "text": "THE END OF REALISATIO.........................................................................130",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-line",
+      "text": "ABOUT THE AUTHOR................................................................................134",
+      "sourceParagraph": 31
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

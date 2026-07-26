@@ -1,0 +1,19 @@
+{
+  "id": "arc-ii-the-dissolving-self",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC II — THE DISSOLVING SELF",
+  "shortTitle": "ARC II — THE DISSOLVING SELF",
+  "sourceRange": [
+    533,
+    533
+  ],
+  "headerSourceParagraphs": {
+    "title": 533
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 12,
+  "file": "chapters/12-arc-ii-the-dissolving-self.json"
+}

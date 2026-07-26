@@ -1,0 +1,83 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    44,
+    51
+  ],
+  "headerSourceParagraphs": {
+    "title": 44
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is intended for educational, philosophical, literary, and reflective purposes only."
+        }
+      ],
+      "sourceParagraph": 45
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The ideas, observations, and perspectives presented throughout this work are intended to encourage inquiry, self-reflection, and exploration. They should not be considered professional psychological, psychiatric, medical, legal, or therapeutic advice."
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The author does not claim to provide definitive answers regarding human consciousness, identity, meaning, or existence. Readers are encouraged to approach the content with an open and critical mind, forming their own conclusions and interpretations."
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any resemblance to actual persons, events, or experiences is coincidental unless explicitly stated otherwise."
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This work is an exploration of ideas, not a declaration of absolute truth."
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The purpose of this book is not to tell readers what to believe."
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Its purpose is to invite them to observe."
+        }
+      ],
+      "sourceParagraph": 51
+    }
+  ],
+  "index": 3,
+  "suppressHeaderNumber": true,
+  "file": "chapters/03-disclaimer.json"
+}

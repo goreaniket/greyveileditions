@@ -1,0 +1,674 @@
+{
+  "id": "note-from-the-author",
+  "kind": "introduction",
+  "sourceKind": "author-note",
+  "label": "Author's Note",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "NOTE FROM THE AUTHOR",
+  "sourceRange": [
+    70,
+    142
+  ],
+  "headerSourceParagraphs": {
+    "title": 70
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R.Mishra",
+          "bold": true
+        },
+        {
+          "text": "\t",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 71,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is a strange assumption most minds carry without ever questioning it."
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That reality is incomplete."
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That something is missing."
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That somewhere, somehow, life is not yet enough."
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This assumption does not always feel like a belief."
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It feels like common sense."
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Like background truth."
+        }
+      ],
+      "sourceParagraph": 78
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Like something obvious."
+        }
+      ],
+      "sourceParagraph": 79
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And because it feels obvious…"
+        }
+      ],
+      "sourceParagraph": 80
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it is rarely seen."
+        }
+      ],
+      "sourceParagraph": 81
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Most of what humans call “growth”, “progress”, or “search” is built on top of this single invisible premise:"
+        }
+      ],
+      "sourceParagraph": 82
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that the present is insufficient."
+        }
+      ],
+      "sourceParagraph": 83
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "From there, everything follows."
+        }
+      ],
+      "sourceParagraph": 84
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Goals."
+        }
+      ],
+      "sourceParagraph": 85
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Comparison."
+        }
+      ],
+      "sourceParagraph": 86
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming."
+        }
+      ],
+      "sourceParagraph": 87
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Endless adjustment of self."
+        }
+      ],
+      "sourceParagraph": 88
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Endless adjustment of life."
+        }
+      ],
+      "sourceParagraph": 89
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not necessarily because reality demands it…"
+        }
+      ],
+      "sourceParagraph": 90
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because the mind refuses to accept what is already here."
+        }
+      ],
+      "sourceParagraph": 91
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This work does not try to correct life."
+        }
+      ],
+      "sourceParagraph": 92
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not try to improve reality."
+        }
+      ],
+      "sourceParagraph": 93
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not try to offer a better system of thinking."
+        }
+      ],
+      "sourceParagraph": 94
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It only tries to expose one subtle distortion:"
+        }
+      ],
+      "sourceParagraph": 95
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the belief that something is missing right now."
+        }
+      ],
+      "sourceParagraph": 96
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because if that belief is seen clearly…"
+        }
+      ],
+      "sourceParagraph": 97
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "something unexpected happens."
+        }
+      ],
+      "sourceParagraph": 98
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not resolution."
+        }
+      ],
+      "sourceParagraph": 99
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not completion."
+        }
+      ],
+      "sourceParagraph": 100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not final peace."
+        }
+      ],
+      "sourceParagraph": 101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But the collapse of the need to constantly resolve."
+        }
+      ],
+      "sourceParagraph": 102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And that collapse can feel uncomfortable."
+        }
+      ],
+      "sourceParagraph": 103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because something is wrong…"
+        }
+      ],
+      "sourceParagraph": 104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because the structure of constant searching begins to lose its necessity."
+        }
+      ],
+      "sourceParagraph": 105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A mind built on pursuit does not immediately recognize stillness as safety."
+        }
+      ],
+      "sourceParagraph": 106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It often interprets it as emptiness."
+        }
+      ],
+      "sourceParagraph": 107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Or loss."
+        }
+      ],
+      "sourceParagraph": 108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Or uncertainty."
+        }
+      ],
+      "sourceParagraph": 109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But in that moment of resistance…"
+        }
+      ],
+      "sourceParagraph": 110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "a deeper observation becomes possible."
+        }
+      ],
+      "sourceParagraph": 111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That even this resistance is happening within life."
+        }
+      ],
+      "sourceParagraph": 112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not outside it."
+        }
+      ],
+      "sourceParagraph": 113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not separate from it."
+        }
+      ],
+      "sourceParagraph": 114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not delayed until later."
+        }
+      ],
+      "sourceParagraph": 115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Now."
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is the part most interpretations avoid:"
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that there was never a moment when life was “not happening”."
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only moments when it was not recognized as enough."
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And recognition is not something added to reality."
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is something that removes the distance created by thought."
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So the danger in this work is not in what it claims."
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There are no claims."
+        }
+      ],
+      "sourceParagraph": 123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The danger is in what it quietly removes."
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The need for an imagined missing piece."
+        }
+      ],
+      "sourceParagraph": 125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The need for a future arrival."
+        }
+      ],
+      "sourceParagraph": 126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The need for a final version of experience."
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And when those structures weaken…"
+        }
+      ],
+      "sourceParagraph": 128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life does not become extraordinary."
+        }
+      ],
+      "sourceParagraph": 129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It becomes unexplainably ordinary."
+        }
+      ],
+      "sourceParagraph": 130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So ordinary…"
+        }
+      ],
+      "sourceParagraph": 131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that the mind struggles to continue its usual story."
+        }
+      ],
+      "sourceParagraph": 132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And in that struggle…"
+        }
+      ],
+      "sourceParagraph": 133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "there is a pause."
+        }
+      ],
+      "sourceParagraph": 134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not as achievement."
+        }
+      ],
+      "sourceParagraph": 135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not as enlightenment."
+        }
+      ],
+      "sourceParagraph": 136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not as escape."
+        }
+      ],
+      "sourceParagraph": 137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But as a direct encounter with what was always already here."
+        }
+      ],
+      "sourceParagraph": 138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unedited."
+        }
+      ],
+      "sourceParagraph": 139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uninterpreted."
+        }
+      ],
+      "sourceParagraph": 140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unfinished only in thought."
+        }
+      ],
+      "sourceParagraph": 141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And complete without it."
+        }
+      ],
+      "sourceParagraph": 142
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 5,
+  "file": "chapters/05-note-from-the-author.json"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "copyright",
+  "kind": "copyright",
+  "sourceKind": "copyright",
+  "label": "Copyright",
+  "title": "COPYRIGHT NOTICE",
+  "shortTitle": "COPYRIGHT NOTICE",
+  "sourceRange": [
+    30,
+    34
+  ],
+  "headerSourceParagraphs": {
+    "title": 30
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© "
+        },
+        {
+          "text": "2026."
+        },
+        {
+          "text": "All rights reserved."
+        }
+      ],
+      "sourceParagraph": 31
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No part of this book may be reproduced, distributed, stored in a retrieval system, or transmitted in any form or by any means — electronic, mechanical, photocopying, recording, or otherwise — without prior written permission from the author, except for brief quotations used in reviews or critical analysis."
+        }
+      ],
+      "sourceParagraph": 32
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction is a work of philosophical exploration. Names, concepts, and ideas presented within are original expressions of the author’s narrative framework unless otherwise stated."
+        }
+      ],
+      "sourceParagraph": 33
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unauthorized use, duplication, or commercial distribution of this material is strictly prohibited."
+        }
+      ],
+      "sourceParagraph": 34
+    }
+  ],
+  "index": 2,
+  "suppressHeaderNumber": true,
+  "file": "chapters/02-copyright.json"
+}

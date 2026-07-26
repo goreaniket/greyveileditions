@@ -1,0 +1,518 @@
+{
+  "id": "the-fiction-of-human",
+  "slug": "the-fiction-of-human",
+  "title": "The Fiction of the Human",
+  "subtitle": "The final fiction was never the world. It was the one who believed he existed separately from it.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Fiction",
+  "seriesDisplay": "The Human Fiction Series",
+  "bookNumber": "Book IV",
+  "bookIndex": 4,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-fiction/assets/covers/the%20fiction%20of%20human%20.jpeg",
+  "cover": {
+    "web": "/assets/books/the-fiction-of-human/cover/front-cover.webp",
+    "print": "/assets/books/the-fiction-of-human/cover/front-cover-print.png",
+    "source": "/assets/books/the-fiction-of-human/cover/cover-source.png",
+    "alt": "The Fiction of the Human book cover"
+  },
+  "readerRoute": "/projects/human-fiction/books/the-fiction-of-human/reader/",
+  "readerExitUrl": "/projects/human-fiction/books/the-fiction-of-human.html",
+  "storageKey": "greyveil:the-fiction-of-human:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Fiction",
+    "book": "The Fiction of the Human",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-fiction-human",
+    "variables": {
+      "light": {
+        "--reader-bg": "#DADDD7",
+        "--reader-paper": "#F6EBDD",
+        "--reader-paper-soft": "#E9DBC8",
+        "--reader-text": "#272B28",
+        "--reader-heading": "#181D1A",
+        "--reader-muted": "color-mix(in srgb, #272B28 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #272B28 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #272B28 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #69735A 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #272B28 20%, transparent)",
+        "--reader-accent": "#69735A",
+        "--reader-accent-strong": "#454F39",
+        "--reader-accent-soft": "color-mix(in srgb, #69735A 12%, transparent)",
+        "--reader-warm": "#A97949",
+        "--reader-focus": "#454F39",
+        "--reader-control-bg": "#E9DBC8",
+        "--reader-control-border": "color-mix(in srgb, #272B28 18%, transparent)",
+        "--reader-input-bg": "#F6EBDD",
+        "--reader-input-text": "#272B28",
+        "--reader-placeholder": "color-mix(in srgb, #272B28 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #69735A 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "sepia": {
+        "--reader-bg": "#D8CCBA",
+        "--reader-paper": "#EFE0CA",
+        "--reader-paper-soft": "#E2CFB6",
+        "--reader-text": "#332D25",
+        "--reader-heading": "#211C17",
+        "--reader-muted": "color-mix(in srgb, #332D25 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #332D25 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #332D25 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #716B52 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #332D25 20%, transparent)",
+        "--reader-accent": "#716B52",
+        "--reader-accent-strong": "#514C37",
+        "--reader-accent-soft": "color-mix(in srgb, #716B52 12%, transparent)",
+        "--reader-warm": "#9D7046",
+        "--reader-focus": "#514C37",
+        "--reader-control-bg": "#E2CFB6",
+        "--reader-control-border": "color-mix(in srgb, #332D25 18%, transparent)",
+        "--reader-input-bg": "#EFE0CA",
+        "--reader-input-text": "#332D25",
+        "--reader-placeholder": "color-mix(in srgb, #332D25 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #716B52 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "dark": {
+        "--reader-bg": "#10130F",
+        "--reader-paper": "#1B2119",
+        "--reader-paper-soft": "#252C22",
+        "--reader-text": "#EEE8DA",
+        "--reader-heading": "#FAF0E1",
+        "--reader-muted": "color-mix(in srgb, #EEE8DA 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EEE8DA 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EEE8DA 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #BCC8A6 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EEE8DA 20%, transparent)",
+        "--reader-accent": "#BCC8A6",
+        "--reader-accent-strong": "#DCE5CB",
+        "--reader-accent-soft": "color-mix(in srgb, #BCC8A6 12%, transparent)",
+        "--reader-warm": "#CFA064",
+        "--reader-focus": "#DCE5CB",
+        "--reader-control-bg": "#252C22",
+        "--reader-control-border": "color-mix(in srgb, #EEE8DA 18%, transparent)",
+        "--reader-input-bg": "#1B2119",
+        "--reader-input-text": "#EEE8DA",
+        "--reader-placeholder": "color-mix(in srgb, #EEE8DA 56%, transparent)",
+        "--reader-success": "#A6D1AD",
+        "--reader-error-text": "#EBA8A2",
+        "--reader-page-edge": "color-mix(in srgb, #BCC8A6 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-fiction/chapters/WORD/THE FICTION OF HUMAN.docx",
+    "pdfVerification": "/projects/human-fiction/chapters/PDF/THE FICTION OF HUMAN book 4.pdf",
+    "sourceParagraphsNonEmpty": 1541,
+    "semanticUnits": 25,
+    "chapters": 10,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Fiction of the Human",
+      "shortTitle": "Opening",
+      "sourceRange": [
+        1,
+        10
+      ],
+      "openingMode": "source",
+      "index": 0,
+      "file": "chapters/00-opening.json"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "sourceRange": [
+        11,
+        34
+      ],
+      "suppressHeaderNumber": true,
+      "index": 1,
+      "file": "chapters/01-contents.json"
+    },
+    {
+      "id": "copyright",
+      "kind": "copyright",
+      "sourceKind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT",
+      "shortTitle": "COPYRIGHT",
+      "sourceRange": [
+        35,
+        43
+      ],
+      "index": 2,
+      "suppressHeaderNumber": true,
+      "file": "chapters/02-copyright.json"
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "sourceKind": "disclaimer",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "sourceRange": [
+        44,
+        51
+      ],
+      "index": 3,
+      "suppressHeaderNumber": true,
+      "file": "chapters/03-disclaimer.json"
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "sourceKind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "sourceRange": [
+        52,
+        66
+      ],
+      "index": 4,
+      "suppressHeaderNumber": true,
+      "file": "chapters/04-dedication.json"
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "sourceKind": "author-note",
+      "label": "Note from the Author",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "sourceRange": [
+        67,
+        136
+      ],
+      "index": 5,
+      "suppressHeaderNumber": true,
+      "file": "chapters/05-note-from-the-author.json"
+    },
+    {
+      "id": "before-the-story",
+      "kind": "prologue",
+      "sourceKind": "prologue",
+      "label": "Prologue",
+      "title": "Before the Story",
+      "shortTitle": "Before the Story",
+      "sourceRange": [
+        137,
+        244
+      ],
+      "index": 6,
+      "number": "PROLOGUE —",
+      "file": "chapters/06-before-the-story.json"
+    },
+    {
+      "id": "the-final-investigation",
+      "kind": "introduction",
+      "sourceKind": "introduction",
+      "label": "Introduction",
+      "title": "The Final Investigation",
+      "shortTitle": "The Final Investigation",
+      "sourceRange": [
+        245,
+        331
+      ],
+      "index": 7,
+      "number": "INTRODUCTION —",
+      "file": "chapters/07-the-final-investigation.json"
+    },
+    {
+      "id": "the-invention-of-the-human",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc I",
+      "title": "THE INVENTION OF THE HUMAN",
+      "shortTitle": "THE INVENTION OF THE HUMAN",
+      "sourceRange": [
+        332,
+        333
+      ],
+      "index": 8,
+      "number": "ARC I —",
+      "file": "chapters/08-the-invention-of-the-human.json"
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 1",
+      "title": "The Story Called Human",
+      "shortTitle": "The Story Called Human",
+      "sourceRange": [
+        334,
+        439
+      ],
+      "index": 9,
+      "number": "CHAPTER 1 —",
+      "file": "chapters/09-chapter-01.json"
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 2",
+      "title": "The Construction of Identity",
+      "shortTitle": "The Construction of Identity",
+      "sourceRange": [
+        440,
+        521
+      ],
+      "index": 10,
+      "number": "CHAPTER 2 —",
+      "file": "chapters/10-chapter-02.json"
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 3",
+      "title": "The Narrative Animal",
+      "shortTitle": "The Narrative Animal",
+      "sourceRange": [
+        522,
+        613
+      ],
+      "index": 11,
+      "number": "CHAPTER 3 —",
+      "file": "chapters/11-chapter-03.json"
+    },
+    {
+      "id": "the-machine-of-reality",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc II",
+      "title": "THE MACHINE OF REALITY",
+      "shortTitle": "THE MACHINE OF REALITY",
+      "sourceRange": [
+        614,
+        615
+      ],
+      "index": 12,
+      "number": "ARC II —",
+      "file": "chapters/12-the-machine-of-reality.json"
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 4",
+      "title": "The Reality-Making Machine",
+      "shortTitle": "The Reality-Making Machine",
+      "sourceRange": [
+        616,
+        709
+      ],
+      "index": 13,
+      "number": "CHAPTER 4 —",
+      "file": "chapters/13-chapter-04.json"
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 5",
+      "title": "The World Inside the Story",
+      "shortTitle": "The World Inside the Story",
+      "sourceRange": [
+        710,
+        803
+      ],
+      "index": 14,
+      "number": "CHAPTER 5 —",
+      "file": "chapters/14-chapter-05.json"
+    },
+    {
+      "id": "the-collapse-of-the-character",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc III",
+      "title": "THE COLLAPSE OF THE CHARACTER",
+      "shortTitle": "THE COLLAPSE OF THE CHARACTER",
+      "sourceRange": [
+        804,
+        805
+      ],
+      "index": 15,
+      "number": "ARC III —",
+      "file": "chapters/15-the-collapse-of-the-character.json"
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 6",
+      "title": "When the Story Sees Itself",
+      "shortTitle": "When the Story Sees Itself",
+      "sourceRange": [
+        806,
+        904
+      ],
+      "index": 16,
+      "number": "CHAPTER 6 —",
+      "file": "chapters/16-chapter-06.json"
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 7",
+      "title": "The Fiction of Separation",
+      "shortTitle": "The Fiction of Separation",
+      "sourceRange": [
+        905,
+        1012
+      ],
+      "index": 17,
+      "number": "CHAPTER 7 —",
+      "file": "chapters/17-chapter-07.json"
+    },
+    {
+      "id": "beyond-the-story",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc IV",
+      "title": "BEYOND THE STORY",
+      "shortTitle": "BEYOND THE STORY",
+      "sourceRange": [
+        1013,
+        1014
+      ],
+      "index": 18,
+      "number": "ARC IV —",
+      "file": "chapters/18-beyond-the-story.json"
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 8",
+      "title": "What Remains Without the Story",
+      "shortTitle": "What Remains Without the Story",
+      "sourceRange": [
+        1015,
+        1122
+      ],
+      "index": 19,
+      "number": "CHAPTER 8 —",
+      "file": "chapters/19-chapter-08.json"
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 9",
+      "title": "The End of the Search",
+      "shortTitle": "The End of the Search",
+      "sourceRange": [
+        1123,
+        1215
+      ],
+      "index": 20,
+      "number": "CHAPTER 9 —",
+      "file": "chapters/20-chapter-09.json"
+    },
+    {
+      "id": "chapter-10",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 10",
+      "title": "What Remains Without the Story",
+      "shortTitle": "What Remains Without the Story",
+      "sourceRange": [
+        1216,
+        1329
+      ],
+      "index": 21,
+      "number": "CHAPTER 10 —",
+      "file": "chapters/21-chapter-10.json"
+    },
+    {
+      "id": "the-last-fiction",
+      "kind": "ending",
+      "sourceKind": "ending",
+      "label": "End Realization",
+      "title": "THE LAST FICTION",
+      "shortTitle": "THE LAST FICTION",
+      "sourceRange": [
+        1330,
+        1445
+      ],
+      "index": 22,
+      "number": "END REALIZATION —",
+      "file": "chapters/22-the-last-fiction.json"
+    },
+    {
+      "id": "after-the-human",
+      "kind": "epilogue",
+      "sourceKind": "epilogue",
+      "label": "Epilogue",
+      "title": "After the Human",
+      "shortTitle": "After the Human",
+      "sourceRange": [
+        1446,
+        1528
+      ],
+      "index": 23,
+      "number": "EPILOGUE —",
+      "file": "chapters/23-after-the-human.json"
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "sourceKind": "about-author",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "sourceRange": [
+        1529,
+        1541
+      ],
+      "index": 24,
+      "suppressHeaderNumber": true,
+      "file": "chapters/24-about-the-author.json"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "note-from-the-author",
+  "kind": "introduction",
+  "sourceKind": "author-note",
+  "label": "Note from the Author",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "NOTE FROM THE AUTHOR",
+  "sourceRange": [
+    49,
+    69
+  ],
+  "headerSourceParagraphs": {
+    "title": 49
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction is not written to convince, correct, or conclude."
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is written to observe."
+        }
+      ],
+      "sourceParagraph": 51
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What it observes is not the world as an external reality…"
+        }
+      ],
+      "sourceParagraph": 52
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but the way reality is continuously constructed through thought, memory, and interpretation."
+        }
+      ],
+      "sourceParagraph": 53
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Most of what feels like “understanding” is not final truth…"
+        }
+      ],
+      "sourceParagraph": 54
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it is ongoing narration."
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A process that turns raw experience into structured meaning."
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This work does not oppose meaning."
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It only points to how meaning is formed in the first place."
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing in these pages requires belief."
+        }
+      ],
+      "sourceParagraph": 59
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And nothing requires rejection."
+        }
+      ],
+      "sourceParagraph": 60
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because both belief and rejection arise from the same mechanism — interpretation."
+        }
+      ],
+      "sourceParagraph": 61
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The intention here is not to provide answers…"
+        }
+      ],
+      "sourceParagraph": 62
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but to make the process of asking visible."
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And once the process is seen clearly…"
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "its automatic authority begins to soften on its own."
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction does not end with a conclusion."
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It ends with a shift in seeing —"
+        }
+      ],
+      "sourceParagraph": 67
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that experience does not need to be explained to be real."
+        }
+      ],
+      "sourceParagraph": 68
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It only needs to be seen."
+        }
+      ],
+      "sourceParagraph": 69
+    }
+  ],
+  "index": 5,
+  "suppressHeaderNumber": true,
+  "file": "chapters/05-note-from-the-author.json"
+}

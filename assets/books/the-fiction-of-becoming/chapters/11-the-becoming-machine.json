@@ -1,0 +1,20 @@
+{
+  "id": "the-becoming-machine",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc II",
+  "title": "THE BECOMING MACHINE",
+  "shortTitle": "THE BECOMING MACHINE",
+  "sourceRange": [
+    336,
+    337
+  ],
+  "headerSourceParagraphs": {
+    "number": 336,
+    "title": 337
+  },
+  "elements": [],
+  "index": 11,
+  "number": "ARC II —",
+  "file": "chapters/11-the-becoming-machine.json"
+}

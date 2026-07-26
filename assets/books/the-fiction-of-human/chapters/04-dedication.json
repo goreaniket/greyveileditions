@@ -1,0 +1,146 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "sourceKind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "DEDICATION",
+  "sourceRange": [
+    52,
+    66
+  ],
+  "headerSourceParagraphs": {
+    "title": 52
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To every person who has ever felt lost inside their own mind."
+        }
+      ],
+      "sourceParagraph": 53
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who searched for answers in silence."
+        }
+      ],
+      "sourceParagraph": 54
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who carried questions no one else could hear."
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who spent nights overthinking, remembering, wondering, and trying to understand themselves."
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who felt broken."
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who felt incomplete."
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who felt alone."
+        }
+      ],
+      "sourceParagraph": 59
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "May you discover that you were never as lost as you believed."
+        }
+      ],
+      "sourceParagraph": 60
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "May you find moments of clarity in confusion."
+        }
+      ],
+      "sourceParagraph": 61
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Peace in uncertainty."
+        }
+      ],
+      "sourceParagraph": 62
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And meaning beyond the stories you have been told."
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Most of all..."
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "May you remember that being human was never something you needed to earn."
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was always something you already were."
+        }
+      ],
+      "sourceParagraph": 66
+    }
+  ],
+  "index": 4,
+  "suppressHeaderNumber": true,
+  "file": "chapters/04-dedication.json"
+}

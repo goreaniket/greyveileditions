@@ -1,0 +1,131 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "ABOUT THE AUTHOR",
+  "sourceRange": [
+    1529,
+    1541
+  ],
+  "headerSourceParagraphs": {
+    "title": 1529
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is a writer driven by a simple but profound question:"
+        }
+      ],
+      "sourceParagraph": 1530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why do human beings think, feel, suffer, search, and transform the way they do?"
+        }
+      ],
+      "sourceParagraph": 1531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Rather than approaching these questions through rigid theories or fixed conclusions, his work explores them through observation, introspection, and inquiry."
+        }
+      ],
+      "sourceParagraph": 1532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His writing focuses on the inner world of human experience, including identity, meaning, perception, overthinking, emotional pain, healing, consciousness, and the psychological structures that shape everyday life."
+        }
+      ],
+      "sourceParagraph": 1533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Mind, Human Paradox, and Human Fiction series emerged from years of reflection on the nature of thought, selfhood, and human existence. Instead of providing answers to be accepted, these books invite readers to look more closely at their own experience and discover what becomes visible through direct observation."
+        }
+      ],
+      "sourceParagraph": 1534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At its core, his work is not about teaching people what to think."
+        }
+      ],
+      "sourceParagraph": 1535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is about encouraging them to see."
+        }
+      ],
+      "sourceParagraph": 1536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "When he is not writing, Lalit continues exploring psychology, philosophy, consciousness, literature, and the timeless questions that have fascinated human beings for generations."
+        }
+      ],
+      "sourceParagraph": 1537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He believes that some of the most important discoveries in life are not found by travelling farther."
+        }
+      ],
+      "sourceParagraph": 1538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are found by looking deeper."
+        }
+      ],
+      "sourceParagraph": 1539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And sometimes..."
+        }
+      ],
+      "sourceParagraph": 1540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the longest journey is the journey back to ourselves."
+        },
+        {
+          "text": "\n"
+        }
+      ],
+      "sourceParagraph": 1541
+    }
+  ],
+  "index": 24,
+  "suppressHeaderNumber": true,
+  "file": "chapters/24-about-the-author.json"
+}

@@ -1,0 +1,462 @@
+{
+  "id": "chapter-03",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 3",
+  "title": "The Fiction of Growth",
+  "shortTitle": "The Fiction of Growth",
+  "sourceRange": [
+    338,
+    388
+  ],
+  "headerSourceParagraphs": {
+    "number": 338,
+    "title": 339
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum growth ko ek natural truth ki tarah treat karte hain."
+        }
+      ],
+      "sourceParagraph": 340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise life ka default rule ho:"
+        }
+      ],
+      "sourceParagraph": 341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“hamesha better banna hai”"
+        }
+      ],
+      "sourceParagraph": 342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar growth ko directly observe kiya jaye…"
+        }
+      ],
+      "sourceParagraph": 343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek uncomfortable pattern dikhta hai."
+        }
+      ],
+      "sourceParagraph": 344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Growth kabhi “being” se start nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo hamesha “lack” se start hoti hai."
+        }
+      ],
+      "sourceParagraph": 346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek feeling:"
+        }
+      ],
+      "sourceParagraph": 347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“abhi main complete nahi hoon.”"
+        }
+      ],
+      "sourceParagraph": 348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi feeling se ek direction create hoti hai:"
+        }
+      ],
+      "sourceParagraph": 349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“mujhe improve hona hai.”"
+        }
+      ],
+      "sourceParagraph": 350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Growth ka base equation simple hai:"
+        }
+      ],
+      "sourceParagraph": 351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present self ≠ ideal self"
+        }
+      ],
+      "sourceParagraph": 352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jahan inequality hoti hai…"
+        }
+      ],
+      "sourceParagraph": 353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wahan movement start ho jata hai."
+        }
+      ],
+      "sourceParagraph": 354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present ko insufficient maanna"
+        }
+      ],
+      "sourceParagraph": 355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ideal self imagine karna"
+        }
+      ],
+      "sourceParagraph": 356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "effort create karna"
+        }
+      ],
+      "sourceParagraph": 357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "temporary improvement"
+        }
+      ],
+      "sourceParagraph": 358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "normalization"
+        }
+      ],
+      "sourceParagraph": 359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "naya ideal create hona"
+        }
+      ],
+      "sourceParagraph": 360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "repeat"
+        }
+      ],
+      "sourceParagraph": 361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Growth actually “progress” nahi hai…"
+        }
+      ],
+      "sourceParagraph": 362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye comparison ka continuous re-calibration hai."
+        }
+      ],
+      "sourceParagraph": 363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur comparison kabhi khatam nahi hota…"
+        }
+      ],
+      "sourceParagraph": 364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki ideal self fixed nahi hota."
+        }
+      ],
+      "sourceParagraph": 365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo hamesha update hota rehta hai."
+        }
+      ],
+      "sourceParagraph": 366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is system ka sabse strong impact ye hota hai:"
+        }
+      ],
+      "sourceParagraph": 367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present kabhi enough feel nahi karta"
+        }
+      ],
+      "sourceParagraph": 368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe kitna bhi achieve ho jaye…"
+        }
+      ],
+      "sourceParagraph": 369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek naya gap immediately appear ho jata hai."
+        }
+      ],
+      "sourceParagraph": 370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Growth sirf external improvement nahi hai…"
+        }
+      ],
+      "sourceParagraph": 371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye internal dissatisfaction ko sustain karne ka system bhi hai."
+        }
+      ],
+      "sourceParagraph": 372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dissatisfaction hi fuel hai."
+        }
+      ],
+      "sourceParagraph": 373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar thoda sa gap clearly dikha liya jaye…"
+        }
+      ],
+      "sourceParagraph": 374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange clarity aati hai:"
+        }
+      ],
+      "sourceParagraph": 375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "growth khud problem nahi hai…"
+        }
+      ],
+      "sourceParagraph": 376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem ye hai ki growth ko identity bana diya gaya hai."
+        }
+      ],
+      "sourceParagraph": 377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab identity “becoming” pe based hoti hai…"
+        }
+      ],
+      "sourceParagraph": 378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh “being” always incomplete lagta hai."
+        }
+      ],
+      "sourceParagraph": 379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar ideal self ka pressure soften ho jaye…"
+        }
+      ],
+      "sourceParagraph": 380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh growth stop nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas uska emotional weight gir jata hai."
+        }
+      ],
+      "sourceParagraph": 382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo bachta hai…"
+        }
+      ],
+      "sourceParagraph": 383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek simple action hota hai:"
+        }
+      ],
+      "sourceParagraph": 384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without urgency, without identity crisis."
+        }
+      ],
+      "sourceParagraph": 385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na chase."
+        }
+      ],
+      "sourceParagraph": 386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na escape."
+        }
+      ],
+      "sourceParagraph": 387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf movement."
+        }
+      ],
+      "sourceParagraph": 388
+    }
+  ],
+  "index": 12,
+  "number": "CHAPTER 3 —",
+  "file": "chapters/12-chapter-03.json"
+}

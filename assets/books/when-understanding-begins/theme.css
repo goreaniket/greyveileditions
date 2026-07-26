@@ -59,6 +59,7 @@
 .reader-theme-understanding-begins .book-page:has([data-unit-kind="ending"]), .reader-theme-understanding-begins .book-page:has([data-unit-kind="epilogue"]), .reader-theme-understanding-begins .book-page:has([data-unit-id="about-author"]), .reader-theme-understanding-begins .book-page--feedback { background: linear-gradient(180deg, transparent 68%, color-mix(in srgb, var(--reader-accent) 7%, transparent)), var(--reader-paper); }
 .reader-theme-understanding-begins .book-page__number { color: var(--reader-subtle); font-family: var(--reader-sans); font-size: .72rem; letter-spacing: .08em; }
 .reader-theme-understanding-begins .book-end { text-align: center; }
+.reader-theme-understanding-begins .book-page--feedback .book-end h2 { max-width: 100%; font-size: clamp(2.45rem, 4.8vw, 3.75rem); line-height: .96; overflow-wrap: anywhere; text-wrap: balance; }
 .reader-theme-understanding-begins .feedback-panel { border-top-color: color-mix(in srgb, var(--reader-accent) 26%, transparent); }
 .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel { max-height: none; overflow: visible; }
 .reader-theme-understanding-begins .feedback-panel input, .reader-theme-understanding-begins .feedback-panel textarea, .reader-theme-understanding-begins .feedback-panel select { min-height: 44px; background: var(--reader-input-bg); color: var(--reader-input-text); border-color: var(--reader-control-border); }
@@ -86,4 +87,27 @@
   .reader-theme-understanding-begins .reader-paragraph[data-element-role="section-heading"], .reader-theme-understanding-begins .reader-paragraph[data-element-role="part-heading"], .reader-theme-understanding-begins .reader-paragraph[data-element-role="chapter-end"] { font-size: .72rem; letter-spacing: .09em; }
   .reader-theme-understanding-begins .source-contents { font-size: .78rem; }
   .reader-theme-understanding-begins .source-contents__heading { font-size: .76rem; }
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .book-end h2 {
+    max-width: 100%;
+    font-size: clamp(2.2rem, 12vw, 3rem);
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel h2 {
+    font-size: clamp(1.9rem, 10vw, 2.35rem);
+    overflow-wrap: anywhere;
+  }
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel form,
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel label,
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel input,
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel textarea,
+  .reader-theme-understanding-begins .book-page--feedback.is-feedback-expanded .feedback-panel select {
+    max-width: 100%;
+    min-width: 0;
+  }
 }

@@ -1,0 +1,1101 @@
+{
+  "id": "introduction",
+  "kind": "introduction",
+  "sourceKind": "introduction",
+  "label": "Introduction",
+  "title": "INTRODUCTION-",
+  "shortTitle": "INTRODUCTION-",
+  "sourceRange": [
+    122,
+    243
+  ],
+  "headerSourceParagraphs": {
+    "title": 122,
+    "subtitle": 123
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is a point in human life…"
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum sochna start nahi karte…"
+        }
+      ],
+      "sourceParagraph": 125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum soch ke andar rehna start kar dete ho."
+        }
+      ],
+      "sourceParagraph": 126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse dangerous baat yeh hoti hai…"
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe yeh difference kabhi pata hi nahi chalta."
+        }
+      ],
+      "sourceParagraph": 128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum bas ek din uthte ho…"
+        }
+      ],
+      "sourceParagraph": 129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur tum already ek story ke andar jee rahe hote ho."
+        }
+      ],
+      "sourceParagraph": 130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not life."
+        }
+      ],
+      "sourceParagraph": 131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But meaning of life."
+        }
+      ],
+      "sourceParagraph": 132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh story kisi ek bade moment se nahi banti."
+        }
+      ],
+      "sourceParagraph": 133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh chhoti chhoti cheezon se banti hai:"
+        }
+      ],
+      "sourceParagraph": 134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek rejection…"
+        }
+      ],
+      "sourceParagraph": 135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek failure…"
+        }
+      ],
+      "sourceParagraph": 136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek delay…"
+        }
+      ],
+      "sourceParagraph": 137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek silence…"
+        }
+      ],
+      "sourceParagraph": 138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek misunderstanding…"
+        }
+      ],
+      "sourceParagraph": 139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har cheez turant translate hoti hai."
+        }
+      ],
+      "sourceParagraph": 140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality → Meaning."
+        }
+      ],
+      "sourceParagraph": 141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Moment → Conclusion."
+        }
+      ],
+      "sourceParagraph": 142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experience → Identity."
+        }
+      ],
+      "sourceParagraph": 143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Failure hota hai."
+        }
+      ],
+      "sourceParagraph": 144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality simple hoti hai:"
+        }
+      ],
+      "sourceParagraph": 145
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“kuch nahi hua.”"
+        }
+      ],
+      "sourceParagraph": 146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin mind rukta nahi."
+        }
+      ],
+      "sourceParagraph": 147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh turant likhta hai:"
+        }
+      ],
+      "sourceParagraph": 148
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main enough nahi hoon.”"
+        }
+      ],
+      "sourceParagraph": 149
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main capable nahi hoon.”"
+        }
+      ],
+      "sourceParagraph": 150
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“mere saath hi aisa hota hai.”"
+        }
+      ],
+      "sourceParagraph": 151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh ek baar nahi hota."
+        }
+      ],
+      "sourceParagraph": 152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh baar baar hota hai."
+        }
+      ],
+      "sourceParagraph": 153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itna baar…"
+        }
+      ],
+      "sourceParagraph": 154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum reality ko nahi yaad rakhte."
+        }
+      ],
+      "sourceParagraph": 155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum uska interpretation yaad rakhte ho."
+        }
+      ],
+      "sourceParagraph": 156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi se ek silent transformation hoti hai."
+        }
+      ],
+      "sourceParagraph": 157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum life ko experience nahi karte…"
+        }
+      ],
+      "sourceParagraph": 158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum life ko explain karte ho."
+        }
+      ],
+      "sourceParagraph": 159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur explanation ka trap yeh hai:"
+        }
+      ],
+      "sourceParagraph": 160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh kabhi stop nahi hota."
+        }
+      ],
+      "sourceParagraph": 161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek thought → ek identity"
+        }
+      ],
+      "sourceParagraph": 162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek identity → ek pattern"
+        }
+      ],
+      "sourceParagraph": 163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek pattern → ek personality"
+        }
+      ],
+      "sourceParagraph": 164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere…"
+        }
+      ],
+      "sourceParagraph": 165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum ek living story ban jaate ho."
+        }
+      ],
+      "sourceParagraph": 166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo apne aap ko jee rahi hai…"
+        }
+      ],
+      "sourceParagraph": 167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but realize nahi kar rahi ki woh story hai."
+        }
+      ],
+      "sourceParagraph": 168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse strange illusion yeh hai:"
+        }
+      ],
+      "sourceParagraph": 169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum “soch rahe ho”…"
+        }
+      ],
+      "sourceParagraph": 170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jabki tum already soch ke andar trapped ho."
+        }
+      ],
+      "sourceParagraph": 171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab koi system continuously chal raha ho…"
+        }
+      ],
+      "sourceParagraph": 172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh woh normal lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe woh tumhe hi kyun na define kar raha ho."
+        }
+      ],
+      "sourceParagraph": 174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek point aata hai…"
+        }
+      ],
+      "sourceParagraph": 175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab ek uncomfortable question quietly emerge karta hai:"
+        }
+      ],
+      "sourceParagraph": 176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " Agar jo main apne baare mein maanta hoon… sirf interpretation hai… toh main hoon kaun?"
+        }
+      ],
+      "sourceParagraph": 177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se problem start hoti hai."
+        }
+      ],
+      "sourceParagraph": 178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind answer nahi dhoondh raha hota…"
+        }
+      ],
+      "sourceParagraph": 179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind control dhoondh raha hota hai."
+        }
+      ],
+      "sourceParagraph": 180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interpretation control deta hai."
+        }
+      ],
+      "sourceParagraph": 181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye mind interpretation chhodna nahi chahta."
+        }
+      ],
+      "sourceParagraph": 182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even if it hurts."
+        }
+      ],
+      "sourceParagraph": 183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even if it distorts reality."
+        }
+      ],
+      "sourceParagraph": 184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even if it becomes identity."
+        }
+      ],
+      "sourceParagraph": 185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki unknown se zyada dangerous…"
+        }
+      ],
+      "sourceParagraph": 186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "known illusion hota hai."
+        }
+      ],
+      "sourceParagraph": 187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi reason hai:"
+        }
+      ],
+      "sourceParagraph": 188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum apni stories ko protect karte hain…"
+        }
+      ],
+      "sourceParagraph": 189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "even when they are limiting us."
+        }
+      ],
+      "sourceParagraph": 190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because agar story toot gayi…"
+        }
+      ],
+      "sourceParagraph": 191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh lagta hai “main” bhi toot jaunga."
+        }
+      ],
+      "sourceParagraph": 192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh belief itna deep hota hai ki:"
+        }
+      ],
+      "sourceParagraph": 193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "past tumhe define karta hai"
+        }
+      ],
+      "sourceParagraph": 194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "memory tumhe shape karti hai"
+        }
+      ],
+      "sourceParagraph": 195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience tumhe identity deta hai"
+        }
+      ],
+      "sourceParagraph": 196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kabhi kabhi…"
+        }
+      ],
+      "sourceParagraph": 197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek gap aata hai."
+        }
+      ],
+      "sourceParagraph": 198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Very small."
+        }
+      ],
+      "sourceParagraph": 199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Almost invisible."
+        }
+      ],
+      "sourceParagraph": 200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan koi thought nahi hota."
+        }
+      ],
+      "sourceParagraph": 201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi identity active nahi hoti."
+        }
+      ],
+      "sourceParagraph": 202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi explanation running nahi hota."
+        }
+      ],
+      "sourceParagraph": 203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas awareness hoti hai."
+        }
+      ],
+      "sourceParagraph": 204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silent."
+        }
+      ],
+      "sourceParagraph": 205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unclaimed."
+        }
+      ],
+      "sourceParagraph": 206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unlabeled."
+        }
+      ],
+      "sourceParagraph": 207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh awareness kisi cheez ko define nahi karti."
+        }
+      ],
+      "sourceParagraph": 208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf notice karti hai."
+        }
+      ],
+      "sourceParagraph": 209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh moment mind ko disturb karta hai."
+        }
+      ],
+      "sourceParagraph": 210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki agar tum apni thoughts nahi ho…"
+        }
+      ],
+      "sourceParagraph": 211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh phir tum ho kya?"
+        }
+      ],
+      "sourceParagraph": 212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind turant answers banata hai:"
+        }
+      ],
+      "sourceParagraph": 213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "self, soul, identity, consciousness…"
+        }
+      ],
+      "sourceParagraph": 214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But har answer…"
+        }
+      ],
+      "sourceParagraph": 215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf ek aur thought hota hai."
+        }
+      ],
+      "sourceParagraph": 216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur thought kabhi observer nahi ho sakta."
+        }
+      ],
+      "sourceParagraph": 217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan pe ek crack aata hai perception mein."
+        }
+      ],
+      "sourceParagraph": 218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad main life ke andar nahi hoon…"
+        }
+      ],
+      "sourceParagraph": 219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad life mere andar appear ho rahi hai."
+        }
+      ],
+      "sourceParagraph": 220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not as belief."
+        }
+      ],
+      "sourceParagraph": 221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But as direct, uncomfortable seeing."
+        }
+      ],
+      "sourceParagraph": 222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh seeing hoti hai…"
+        }
+      ],
+      "sourceParagraph": 223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh explanation ki need kam hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jab reality direct ho…"
+        }
+      ],
+      "sourceParagraph": 225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh meaning extra lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se yeh book start hoti hai."
+        }
+      ],
+      "sourceParagraph": 227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not to give you answers."
+        }
+      ],
+      "sourceParagraph": 228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But to interrupt the habit…"
+        }
+      ],
+      "sourceParagraph": 229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "of turning everything into meaning."
+        }
+      ],
+      "sourceParagraph": 230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki shayad problem yeh nahi hai ki tumhe answers nahi milte."
+        }
+      ],
+      "sourceParagraph": 231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem yeh hai ki…"
+        }
+      ],
+      "sourceParagraph": 232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum har cheez ko answer bana dete ho."
+        }
+      ],
+      "sourceParagraph": 233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar yeh habit ek second ke liye bhi toot jaaye…"
+        }
+      ],
+      "sourceParagraph": 234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh life pehli baar direct lagti hai."
+        }
+      ],
+      "sourceParagraph": 235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unfiltered."
+        }
+      ],
+      "sourceParagraph": 236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unclaimed."
+        }
+      ],
+      "sourceParagraph": 237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uninterpreted."
+        }
+      ],
+      "sourceParagraph": 238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us moment mein…"
+        }
+      ],
+      "sourceParagraph": 239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe koi nayi cheez nahi milti."
+        }
+      ],
+      "sourceParagraph": 240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe sirf yeh dikh jaata hai:"
+        }
+      ],
+      "sourceParagraph": 241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tum kabhi lost the hi nahi"
+        }
+      ],
+      "sourceParagraph": 242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum sirf interpretation ke andar busy the."
+        }
+      ],
+      "sourceParagraph": 243
+    }
+  ],
+  "subtitle": "YOU ARE NOT WHAT YOU THINK YOU ARE",
+  "index": 7,
+  "file": "chapters/07-introduction.json"
+}

@@ -1,0 +1,862 @@
+{
+  "id": "chapter-09",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 9:",
+  "title": "WHEN NOTHING NEEDS TO BE SOLVED",
+  "shortTitle": "WHEN NOTHING NEEDS TO BE SOLVED",
+  "sourceRange": [
+    1013,
+    1107
+  ],
+  "headerSourceParagraphs": {
+    "number": 1013,
+    "title": 1014
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi ek point aata hai jahan problem kam nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 1015
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas “problem” naam ka structure hi weak ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1016
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein har cheez ek task lagti thi."
+        }
+      ],
+      "sourceParagraph": 1017
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Samajhna."
+        }
+      ],
+      "sourceParagraph": 1018
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fix karna."
+        }
+      ],
+      "sourceParagraph": 1019
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Improve karna."
+        }
+      ],
+      "sourceParagraph": 1020
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Analyze karna."
+        }
+      ],
+      "sourceParagraph": 1021
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reach a conclusion."
+        }
+      ],
+      "sourceParagraph": 1022
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dimaag har moment ko ek unfinished equation bana deta tha."
+        }
+      ],
+      "sourceParagraph": 1023
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jiska solution “baad mein” milna hai."
+        }
+      ],
+      "sourceParagraph": 1024
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab ek strange shift hota hai."
+        }
+      ],
+      "sourceParagraph": 1025
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Situation same hoti hai."
+        }
+      ],
+      "sourceParagraph": 1026
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life same chal rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 1027
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log same rehte hain."
+        }
+      ],
+      "sourceParagraph": 1028
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin andar ek cheez change ho jaati hai:"
+        }
+      ],
+      "sourceParagraph": 1029
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " har cheez ko solve karne ki urgency kam ho jaati hai"
+        }
+      ],
+      "sourceParagraph": 1030
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle: “Iska matlab kya hai?”"
+        }
+      ],
+      "sourceParagraph": 1031
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab: “Shayad koi matlab fix karna zaroori hi nahi.”"
+        }
+      ],
+      "sourceParagraph": 1032
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle: “Main theek hoon ya nahi?”"
+        }
+      ],
+      "sourceParagraph": 1033
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab: “Yeh question hi important nahi lagta.”"
+        }
+      ],
+      "sourceParagraph": 1034
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh laziness nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1035
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh avoidance nahi hota."
+        }
+      ],
+      "sourceParagraph": 1036
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh ek natural collapse hota hai:"
+        }
+      ],
+      "sourceParagraph": 1037
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "constant solving mechanism ka."
+        }
+      ],
+      "sourceParagraph": 1038
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise dimaag ko hamesha har cheez ko fix karne ki aadat thi…"
+        }
+      ],
+      "sourceParagraph": 1039
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur ab woh aadat weak pad rahi ho."
+        }
+      ],
+      "sourceParagraph": 1040
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi tum kisi situation mein hote ho…"
+        }
+      ],
+      "sourceParagraph": 1041
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur pehli baar tumhe yeh urge nahi hota:"
+        }
+      ],
+      "sourceParagraph": 1042
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“isko samajhna hai.”"
+        }
+      ],
+      "sourceParagraph": 1043
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas cheez ho rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 1044
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without extra layer."
+        }
+      ],
+      "sourceParagraph": 1045
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting baat yeh hai:"
+        }
+      ],
+      "sourceParagraph": 1046
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem disappear nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 1047
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf “problem” ka label lose ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1048
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek situation hoti hai:"
+        }
+      ],
+      "sourceParagraph": 1049
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch bhi — argument, silence, memory, delay."
+        }
+      ],
+      "sourceParagraph": 1050
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle instant movement hota:"
+        }
+      ],
+      "sourceParagraph": 1051
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "analyse"
+        }
+      ],
+      "sourceParagraph": 1052
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpret"
+        }
+      ],
+      "sourceParagraph": 1053
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "assign meaning"
+        }
+      ],
+      "sourceParagraph": 1054
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "find cause"
+        }
+      ],
+      "sourceParagraph": 1055
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "predict outcome"
+        }
+      ],
+      "sourceParagraph": 1056
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab woh chain start hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1057
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin complete nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1058
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Beech mein ek stop jaisa feel hota hai."
+        }
+      ],
+      "sourceParagraph": 1059
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not forced."
+        }
+      ],
+      "sourceParagraph": 1060
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not intentional."
+        }
+      ],
+      "sourceParagraph": 1061
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas natural pause."
+        }
+      ],
+      "sourceParagraph": 1062
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us pause mein ek cheez clear hoti hai:"
+        }
+      ],
+      "sourceParagraph": 1063
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "cheez ko solve karne se zyada, cheez ko dekhna possible hai"
+        }
+      ],
+      "sourceParagraph": 1064
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh “dekhna” bhi effort nahi maangta."
+        }
+      ],
+      "sourceParagraph": 1065
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise pehli baar tum realize karte ho:"
+        }
+      ],
+      "sourceParagraph": 1066
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har cheez ek puzzle nahi hai."
+        }
+      ],
+      "sourceParagraph": 1067
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch cheezein bas happening hain."
+        }
+      ],
+      "sourceParagraph": 1068
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum unhe solve nahi karte…"
+        }
+      ],
+      "sourceParagraph": 1069
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh woh incomplete nahi lagti."
+        }
+      ],
+      "sourceParagraph": 1070
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh just “as it is” lagti hain."
+        }
+      ],
+      "sourceParagraph": 1071
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh shift bahut subtle hai."
+        }
+      ],
+      "sourceParagraph": 1072
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki kuch dramatic change nahi hota."
+        }
+      ],
+      "sourceParagraph": 1073
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na life rukti hai."
+        }
+      ],
+      "sourceParagraph": 1074
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na thoughts completely disappear hote hain."
+        }
+      ],
+      "sourceParagraph": 1075
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek internal pressure kam ho jaata hai:"
+        }
+      ],
+      "sourceParagraph": 1076
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " constant solving ka pressure"
+        }
+      ],
+      "sourceParagraph": 1077
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab solving kam hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1078
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek aur layer dissolve hoti hai:"
+        }
+      ],
+      "sourceParagraph": 1079
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " continuous dissatisfaction"
+        }
+      ],
+      "sourceParagraph": 1080
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki dissatisfaction aksar solution ke expectation se aati hai."
+        }
+      ],
+      "sourceParagraph": 1081
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab expectation weak hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1082
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh experience neutral ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1083
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na better."
+        }
+      ],
+      "sourceParagraph": 1084
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na worse."
+        }
+      ],
+      "sourceParagraph": 1085
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas present."
+        }
+      ],
+      "sourceParagraph": 1086
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum kisi cheez ko feel karte ho…"
+        }
+      ],
+      "sourceParagraph": 1087
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur turant usko change karne ki need nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1088
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas usko allow kiya jaata hai."
+        }
+      ],
+      "sourceParagraph": 1089
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "As it is."
+        }
+      ],
+      "sourceParagraph": 1090
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh “allowing” koi practice nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1091
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi technique nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1092
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh bas ek fatigue hota hai:"
+        }
+      ],
+      "sourceParagraph": 1093
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "constant interference ka fatigue."
+        }
+      ],
+      "sourceParagraph": 1094
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum peeche dekhte ho…"
+        }
+      ],
+      "sourceParagraph": 1095
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek cheez clear hoti hai:"
+        }
+      ],
+      "sourceParagraph": 1096
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tum zindagi ko jee nahi rahe the"
+        }
+      ],
+      "sourceParagraph": 1097
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tum zindagi ko continuously fix karne ki koshish kar rahe the"
+        }
+      ],
+      "sourceParagraph": 1098
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab…"
+        }
+      ],
+      "sourceParagraph": 1099
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fix karne ka mechanism thoda silent ho gaya hai."
+        }
+      ],
+      "sourceParagraph": 1100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh silence empty nahi lagta."
+        }
+      ],
+      "sourceParagraph": 1101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh simple lagta hai."
+        }
+      ],
+      "sourceParagraph": 1102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise kuch bhi explain karna zaroori nahi raha…"
+        }
+      ],
+      "sourceParagraph": 1103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki kuch bhi incomplete feel nahi ho raha."
+        }
+      ],
+      "sourceParagraph": 1104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe Book 3 ek final internal shift tak aata hai:"
+        }
+      ],
+      "sourceParagraph": 1105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jab life problem nahi rehti…"
+        }
+      ],
+      "sourceParagraph": 1106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " bas experience reh jaata hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1107
+    }
+  ],
+  "number": "CHAPTER 9:",
+  "phase": "The End of Interpretation",
+  "index": 19,
+  "file": "chapters/19-chapter-09.json"
+}

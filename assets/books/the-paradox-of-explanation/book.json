@@ -1,0 +1,484 @@
+{
+  "id": "the-paradox-of-explanation",
+  "slug": "the-paradox-of-explanation",
+  "title": "The Paradox of Explanation",
+  "subtitle": "The mind explains reality until reality no longer needs an explanation.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "seriesDisplay": "The Human Paradox Series",
+  "bookNumber": "Book II",
+  "bookIndex": 2,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-paradox/assets/covers/the%20paradox%20of%20explanation.jpeg",
+  "cover": {
+    "web": "/assets/books/the-paradox-of-explanation/cover/front-cover.webp",
+    "print": "/assets/books/the-paradox-of-explanation/cover/front-cover-print.png",
+    "source": "/assets/books/the-paradox-of-explanation/cover/cover-source.png",
+    "alt": "The Paradox of Explanation book cover"
+  },
+  "readerRoute": "/projects/human-paradox/books/the-paradox-of-explanation/reader/",
+  "readerExitUrl": "/projects/human-paradox/books/the-paradox-of-explanation.html",
+  "storageKey": "greyveil:the-paradox-of-explanation:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Paradox",
+    "book": "The Paradox of Explanation",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-paradox-explanation",
+    "variables": {
+      "light": {
+        "--reader-bg": "#D9E0DE",
+        "--reader-paper": "#F5EBDC",
+        "--reader-paper-soft": "#E8DDCC",
+        "--reader-text": "#253130",
+        "--reader-heading": "#14201F",
+        "--reader-muted": "color-mix(in srgb, #253130 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #253130 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #253130 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #4D6670 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #253130 20%, transparent)",
+        "--reader-accent": "#4D6670",
+        "--reader-accent-strong": "#2F4E5C",
+        "--reader-accent-soft": "color-mix(in srgb, #4D6670 12%, transparent)",
+        "--reader-warm": "#997250",
+        "--reader-focus": "#2F4E5C",
+        "--reader-control-bg": "#E8DDCC",
+        "--reader-control-border": "color-mix(in srgb, #253130 18%, transparent)",
+        "--reader-input-bg": "#F5EBDC",
+        "--reader-input-text": "#253130",
+        "--reader-placeholder": "color-mix(in srgb, #253130 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #4D6670 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#DED4C5",
+        "--reader-paper": "#F0E2CC",
+        "--reader-paper-soft": "#E5D4BD",
+        "--reader-text": "#342C24",
+        "--reader-heading": "#231D17",
+        "--reader-muted": "color-mix(in srgb, #342C24 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #342C24 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #342C24 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #5C6B69 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #342C24 20%, transparent)",
+        "--reader-accent": "#5C6B69",
+        "--reader-accent-strong": "#445451",
+        "--reader-accent-soft": "color-mix(in srgb, #5C6B69 12%, transparent)",
+        "--reader-warm": "#8F6A49",
+        "--reader-focus": "#445451",
+        "--reader-control-bg": "#E5D4BD",
+        "--reader-control-border": "color-mix(in srgb, #342C24 18%, transparent)",
+        "--reader-input-bg": "#F0E2CC",
+        "--reader-input-text": "#342C24",
+        "--reader-placeholder": "color-mix(in srgb, #342C24 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #5C6B69 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#0B1213",
+        "--reader-paper": "#142021",
+        "--reader-paper-soft": "#1D2B2D",
+        "--reader-text": "#EFE7D9",
+        "--reader-heading": "#F8F0E3",
+        "--reader-muted": "color-mix(in srgb, #EFE7D9 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EFE7D9 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EFE7D9 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #93B1B9 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EFE7D9 20%, transparent)",
+        "--reader-accent": "#93B1B9",
+        "--reader-accent-strong": "#BFD7DE",
+        "--reader-accent-soft": "color-mix(in srgb, #93B1B9 12%, transparent)",
+        "--reader-warm": "#C19766",
+        "--reader-focus": "#BFD7DE",
+        "--reader-control-bg": "#1D2B2D",
+        "--reader-control-border": "color-mix(in srgb, #EFE7D9 18%, transparent)",
+        "--reader-input-bg": "#142021",
+        "--reader-input-text": "#EFE7D9",
+        "--reader-placeholder": "color-mix(in srgb, #EFE7D9 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #93B1B9 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-paradox/chapters/WORD/THE PARADOX OF EXPLAINATION.docx",
+    "pdfVerification": "/projects/human-paradox/chapters/PDF/the paradox of explaination book 2.pdf",
+    "sourceParagraphsNonEmpty": 2632,
+    "semanticUnits": 25,
+    "chapters": 10,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Paradox of Explanation",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        7
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        8,
+        31
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "copyright-notice",
+      "kind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT NOTICE",
+      "shortTitle": "COPYRIGHT NOTICE",
+      "file": "chapters/02-copyright-notice.json",
+      "index": 2,
+      "sourceRange": [
+        32,
+        36
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        37,
+        42
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        43,
+        49
+      ]
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "file": "chapters/05-note-from-the-author.json",
+      "index": 5,
+      "sourceRange": [
+        50,
+        82
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "PROLOGUE-",
+      "shortTitle": "PROLOGUE-",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        83,
+        121
+      ],
+      "subtitle": "BEFORE YOU TRUST YOUR OWN MIND"
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "INTRODUCTION-",
+      "shortTitle": "INTRODUCTION-",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        122,
+        243
+      ],
+      "subtitle": "YOU ARE NOT WHAT YOU THINK YOU ARE"
+    },
+    {
+      "id": "arc-i-the-need-to-understand",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC I — THE NEED TO UNDERSTAND",
+      "shortTitle": "ARC I — THE NEED TO UNDERSTAND",
+      "file": "chapters/08-arc-i-the-need-to-understand.json",
+      "index": 8,
+      "sourceRange": [
+        244,
+        244
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "CHAPTER 1-",
+      "title": "THE NEED TO KNOW WHY",
+      "shortTitle": "THE NEED TO KNOW WHY",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        245,
+        993
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "CHAPTER 2-",
+      "title": "THE STORIES WE BUILD",
+      "shortTitle": "THE STORIES WE BUILD",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        994,
+        1187
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "CHAPTER 3-",
+      "title": "THE SELF THAT NEVER STAYS FIXED",
+      "shortTitle": "THE SELF THAT NEVER STAYS FIXED",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        1188,
+        1319
+      ]
+    },
+    {
+      "id": "arc-ii-the-search-for-certainty",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC II — THE SEARCH FOR CERTAINTY",
+      "shortTitle": "ARC II — THE SEARCH FOR CERTAINTY",
+      "file": "chapters/12-arc-ii-the-search-for-certainty.json",
+      "index": 12,
+      "sourceRange": [
+        1320,
+        1320
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "CHAPTER 4-",
+      "title": "THE ILLUSION OF CONTROL",
+      "shortTitle": "THE ILLUSION OF CONTROL",
+      "file": "chapters/13-chapter-04.json",
+      "index": 13,
+      "sourceRange": [
+        1321,
+        1456
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "CHAPTER 5-",
+      "title": "THE FEAR OF WHAT HAS NOT HAPPENED",
+      "shortTitle": "THE FEAR OF WHAT HAS NOT HAPPENED",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        1457,
+        1570
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "CHAPTER 6-",
+      "title": "WHEN NOTHING NEEDS A MEANING",
+      "shortTitle": "WHEN NOTHING NEEDS A MEANING",
+      "file": "chapters/15-chapter-06.json",
+      "index": 15,
+      "sourceRange": [
+        1571,
+        1718
+      ]
+    },
+    {
+      "id": "arc-iii-the-collapse-of-explanation",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC III — THE COLLAPSE OF EXPLANATION",
+      "shortTitle": "ARC III — THE COLLAPSE OF EXPLANATION",
+      "file": "chapters/16-arc-iii-the-collapse-of-explanation.json",
+      "index": 16,
+      "sourceRange": [
+        1719,
+        1719
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "CHAPTER 7-",
+      "title": "WHEN THE MIND STOPS EXPLAINING",
+      "shortTitle": "WHEN THE MIND STOPS EXPLAINING",
+      "file": "chapters/17-chapter-07.json",
+      "index": 17,
+      "sourceRange": [
+        1720,
+        1888
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "CHAPTER 8-",
+      "title": "THE MOMENT YOU STOP TRUSTING YOUR OWN THOUGHTS",
+      "shortTitle": "THE MOMENT YOU STOP TRUSTING YOUR OWN THOUGHTS",
+      "file": "chapters/18-chapter-08.json",
+      "index": 18,
+      "sourceRange": [
+        1889,
+        2082
+      ]
+    },
+    {
+      "id": "arc-iv-beyond-the-story",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC IV — BEYOND THE STORY",
+      "shortTitle": "ARC IV — BEYOND THE STORY",
+      "file": "chapters/19-arc-iv-beyond-the-story.json",
+      "index": 19,
+      "sourceRange": [
+        2083,
+        2083
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "CHAPTER 9-",
+      "title": "WHEN YOU MEET YOURSELF WITHOUT THE STORY",
+      "shortTitle": "WHEN YOU MEET YOURSELF WITHOUT THE STORY",
+      "file": "chapters/20-chapter-09.json",
+      "index": 20,
+      "sourceRange": [
+        2084,
+        2260
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "kind": "chapter",
+      "label": "CHAPTER 10-",
+      "title": "THE SILENCE THAT DOES NOT NEED YOU",
+      "shortTitle": "THE SILENCE THAT DOES NOT NEED YOU",
+      "file": "chapters/21-chapter-10.json",
+      "index": 21,
+      "sourceRange": [
+        2261,
+        2469
+      ]
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "EPILOGUE-",
+      "shortTitle": "EPILOGUE-",
+      "file": "chapters/22-epilogue.json",
+      "index": 22,
+      "sourceRange": [
+        2470,
+        2531
+      ],
+      "subtitle": "WHEN EVEN THE QUESTION DISAPPEARS"
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION-",
+      "shortTitle": "END REALIZATION-",
+      "file": "chapters/23-end-realization.json",
+      "index": 23,
+      "sourceRange": [
+        2532,
+        2603
+      ],
+      "subtitle": "YOU WERE NEVER LOST"
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR-",
+      "shortTitle": "ABOUT THE AUTHOR-",
+      "file": "chapters/24-about-the-author.json",
+      "index": 24,
+      "sourceRange": [
+        2604,
+        2632
+      ],
+      "suppressHeaderNumber": true
+    }
+  ]
+}

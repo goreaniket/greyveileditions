@@ -1,0 +1,101 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    39,
+    48
+  ],
+  "headerSourceParagraphs": {
+    "title": 39
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction is a philosophical and reflective work."
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not provide psychological, medical, legal, or professional advice."
+        }
+      ],
+      "sourceParagraph": 41
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All concepts presented are interpretive explorations of perception, identity, and meaning."
+        }
+      ],
+      "sourceParagraph": 42
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are intended for reflection, not instruction."
+        }
+      ],
+      "sourceParagraph": 43
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book does not claim absolute truth."
+        }
+      ],
+      "sourceParagraph": 44
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It explores how truth is often constructed through interpretation."
+        }
+      ],
+      "sourceParagraph": 45
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Readers are encouraged to engage independently and critically with the material."
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No idea within this book should be treated as final, absolute, or universally applicable."
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The author holds no responsibility for personal interpretations or conclusions drawn from this work."
+        }
+      ],
+      "sourceParagraph": 48
+    }
+  ],
+  "index": 3,
+  "suppressHeaderNumber": true,
+  "file": "chapters/03-disclaimer.json"
+}

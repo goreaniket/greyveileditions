@@ -1,0 +1,533 @@
+{
+  "id": "end-realization",
+  "kind": "ending",
+  "sourceKind": "ending",
+  "label": "End Realization",
+  "title": "END REALIZATION",
+  "shortTitle": "END REALIZATION",
+  "sourceRange": [
+    591,
+    648
+  ],
+  "headerSourceParagraphs": {
+    "title": 591
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar yahan tak aaya hai…"
+        }
+      ],
+      "sourceParagraph": 592
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad ek cheez notice hone lagi ho…"
+        }
+      ],
+      "sourceParagraph": 593
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki kuch “solve” nahi hua."
+        }
+      ],
+      "sourceParagraph": 594
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi point hai."
+        }
+      ],
+      "sourceParagraph": 595
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Humne hamesha ye assume kiya:"
+        }
+      ],
+      "sourceParagraph": 596
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki understanding se kuch change hoga."
+        }
+      ],
+      "sourceParagraph": 597
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab ek strange clarity aati hai:"
+        }
+      ],
+      "sourceParagraph": 598
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "understanding bhi ek movement hai…"
+        }
+      ],
+      "sourceParagraph": 599
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "arrival nahi."
+        }
+      ],
+      "sourceParagraph": 600
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main kya banunga” — ye question kabhi future ke baare mein nahi tha…"
+        }
+      ],
+      "sourceParagraph": 601
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye present ke dissatisfaction ka echo tha."
+        }
+      ],
+      "sourceParagraph": 602
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dissatisfaction kabhi reality ka part nahi tha…"
+        }
+      ],
+      "sourceParagraph": 603
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo comparison ka side-effect tha."
+        }
+      ],
+      "sourceParagraph": 604
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main incomplete hoon”"
+        }
+      ],
+      "sourceParagraph": 605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main complete ho sakta hoon”"
+        }
+      ],
+      "sourceParagraph": 606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dono ek hi system ke do poles the."
+        }
+      ],
+      "sourceParagraph": 607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab system dikhta hai…"
+        }
+      ],
+      "sourceParagraph": 608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh poles meaningful nahi rehte."
+        }
+      ],
+      "sourceParagraph": 609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na incompleteness bachi…"
+        }
+      ],
+      "sourceParagraph": 610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na completeness ka idea."
+        }
+      ],
+      "sourceParagraph": 611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek silent fact:"
+        }
+      ],
+      "sourceParagraph": 612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience is happening."
+        }
+      ],
+      "sourceParagraph": 613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without explanation."
+        }
+      ],
+      "sourceParagraph": 614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without hierarchy."
+        }
+      ],
+      "sourceParagraph": 615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without timeline."
+        }
+      ],
+      "sourceParagraph": 616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming ka sabse hidden illusion ye nahi tha ki tum grow kar rahe ho…"
+        }
+      ],
+      "sourceParagraph": 617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "illusion ye tha ki tum “someone” ho jo grow kar raha hai."
+        }
+      ],
+      "sourceParagraph": 618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wo “someone” kabhi directly milta hi nahi."
+        }
+      ],
+      "sourceParagraph": 619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf thought ke andar ek reference point hota hai."
+        }
+      ],
+      "sourceParagraph": 620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab ye clearly dikhta hai…"
+        }
+      ],
+      "sourceParagraph": 621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange reversal hota hai:"
+        }
+      ],
+      "sourceParagraph": 622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum experience ko live karna start nahi karte…"
+        }
+      ],
+      "sourceParagraph": 623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum realize karte ho ki experience kabhi stop hi nahi hua tha."
+        }
+      ],
+      "sourceParagraph": 624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf interpretation uske upar chal raha tha."
+        }
+      ],
+      "sourceParagraph": 625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " nahi tha."
+        }
+      ],
+      "sourceParagraph": 626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na “becoming” start hua tha…"
+        }
+      ],
+      "sourceParagraph": 627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na “becoming” end hota hai."
+        }
+      ],
+      "sourceParagraph": 628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek continuous unfolding…"
+        }
+      ],
+      "sourceParagraph": 629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo apne aap ko “someone becoming” ki tarah read karta raha."
+        }
+      ],
+      "sourceParagraph": 630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na future self real hai."
+        }
+      ],
+      "sourceParagraph": 631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na present self fixed hai."
+        }
+      ],
+      "sourceParagraph": 632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na journey linear hai."
+        }
+      ],
+      "sourceParagraph": 633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf shifting perception hai…"
+        }
+      ],
+      "sourceParagraph": 634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo khud ko story bana leta hai."
+        }
+      ],
+      "sourceParagraph": 635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye sab bhi unnecessary lagne lagta hai…"
+        }
+      ],
+      "sourceParagraph": 636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh koi new state nahi aati."
+        }
+      ],
+      "sourceParagraph": 637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ye obvious ho jata hai:"
+        }
+      ],
+      "sourceParagraph": 638
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo ho raha hai… wo explain hone se pehle hi complete hai."
+        }
+      ],
+      "sourceParagraph": 639
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur explanation…"
+        }
+      ],
+      "sourceParagraph": 640
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf usko delay karta hai."
+        }
+      ],
+      "sourceParagraph": 641
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye Book III end nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf ek illusion of direction drop kar deti hai."
+        }
+      ],
+      "sourceParagraph": 643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo bachta hai…"
+        }
+      ],
+      "sourceParagraph": 644
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kisi conclusion ki tarah nahi hota."
+        }
+      ],
+      "sourceParagraph": 645
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo bas hota hai:"
+        }
+      ],
+      "sourceParagraph": 646
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "uninterpreted presence."
+        }
+      ],
+      "sourceParagraph": 647
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without becoming anything else."
+        }
+      ],
+      "sourceParagraph": 648
+    }
+  ],
+  "index": 19,
+  "suppressHeaderNumber": true,
+  "file": "chapters/19-end-realization.json"
+}

@@ -1,0 +1,136 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Paradox of Awareness",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    10
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\n",
+          "bold": true
+        },
+        {
+          "text": "THE HUMAN PARADOX SERIES",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK I",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE PARADOX OF AWARENESS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(The mind cannot become aware of itself without questioning everything it once believed to be true.)",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4,
+      "role": "epigraph"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Awareness is not the discovery of truth."
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is the gradual collapse of every illusion "
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you mistook for yourself.\""
+        }
+      ],
+      "sourceParagraph": 8
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL EDITIONS",
+          "bold": true
+        },
+        {
+          "text": " ",
+          "bold": true
+        },
+        {
+          "text": "2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "T",
+          "bold": true
+        },
+        {
+          "text": "HE HUMAN PARADOX SERIES ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 10,
+      "role": "section-heading"
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

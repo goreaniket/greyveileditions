@@ -1,0 +1,19 @@
+{
+  "id": "the-inner-disconnect",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "ARC III —",
+  "title": "THE INNER DISCONNECT",
+  "shortTitle": "THE INNER DISCONNECT",
+  "sourceRange": [
+    1139,
+    1140
+  ],
+  "headerSourceParagraphs": {
+    "number": 1139,
+    "title": 1140
+  },
+  "elements": [],
+  "index": 16,
+  "file": "chapters/16-the-inner-disconnect.json"
+}

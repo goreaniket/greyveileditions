@@ -1,0 +1,398 @@
+{
+  "id": "epilogue",
+  "kind": "epilogue",
+  "sourceKind": "epilogue",
+  "label": "Epilogue",
+  "title": "EPILOGUE :",
+  "shortTitle": "EPILOGUE :",
+  "sourceRange": [
+    728,
+    770
+  ],
+  "headerSourceParagraphs": {
+    "title": 728
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tumne is book ko kisi conclusion ki tarah padha hai…"
+        }
+      ],
+      "sourceParagraph": 729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek subtle misunderstanding reh jaati hai."
+        }
+      ],
+      "sourceParagraph": 730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki yahan koi conclusion tha hi nahi."
+        }
+      ],
+      "sourceParagraph": 731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo kuch bhi chapters mein hua…"
+        }
+      ],
+      "sourceParagraph": 732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek dismantling process jaisa lag sakta hai…"
+        }
+      ],
+      "sourceParagraph": 733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin asal mein kuch dismantle nahi hua."
+        }
+      ],
+      "sourceParagraph": 734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek cheez visible hui:"
+        }
+      ],
+      "sourceParagraph": 735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo “center” lagta tha…"
+        }
+      ],
+      "sourceParagraph": 736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kabhi locate hi nahi hua."
+        }
+      ],
+      "sourceParagraph": 737
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na andar."
+        }
+      ],
+      "sourceParagraph": 738
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na bahar."
+        }
+      ],
+      "sourceParagraph": 739
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na thoughts mein."
+        }
+      ],
+      "sourceParagraph": 740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na silence mein."
+        }
+      ],
+      "sourceParagraph": 741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf experience chal raha tha."
+        }
+      ],
+      "sourceParagraph": 742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us experience ke saath ek story attach ho rahi thi:"
+        }
+      ],
+      "sourceParagraph": 743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye mere saath ho raha hai”"
+        }
+      ],
+      "sourceParagraph": 744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye story thodi transparent hoti hai…"
+        }
+      ],
+      "sourceParagraph": 745
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh experience change nahi hota…"
+        }
+      ],
+      "sourceParagraph": 746
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf interpretation soften ho jati hai."
+        }
+      ],
+      "sourceParagraph": 747
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is book ka end koi disappearance nahi hai."
+        }
+      ],
+      "sourceParagraph": 748
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na self vanish hota hai."
+        }
+      ],
+      "sourceParagraph": 749
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na world dissolve hota hai."
+        }
+      ],
+      "sourceParagraph": 750
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek cheez shift hoti hai:"
+        }
+      ],
+      "sourceParagraph": 751
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ownership ka weight."
+        }
+      ],
+      "sourceParagraph": 752
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thought ab bhi aata hai…"
+        }
+      ],
+      "sourceParagraph": 753
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin wo “mera thought” kam lagta hai."
+        }
+      ],
+      "sourceParagraph": 754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feeling ab bhi hoti hai…"
+        }
+      ],
+      "sourceParagraph": 755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin wo “meri feeling” kam tight lagti hai."
+        }
+      ],
+      "sourceParagraph": 756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ab bhi chalti hai…"
+        }
+      ],
+      "sourceParagraph": 757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin usko explain karne ki urgency kam ho jati hai."
+        }
+      ],
+      "sourceParagraph": 758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo bachta hai…"
+        }
+      ],
+      "sourceParagraph": 759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo koi mystical state nahi hota."
+        }
+      ],
+      "sourceParagraph": 760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo sirf ek simple clarity hoti hai:"
+        }
+      ],
+      "sourceParagraph": 761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo bhi ho raha hai… ho raha hai."
+        }
+      ],
+      "sourceParagraph": 762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is “ho raha hai” ke andar…"
+        }
+      ],
+      "sourceParagraph": 763
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi hidden owner dhoondhne ki zarurat nahi bachi hoti."
+        }
+      ],
+      "sourceParagraph": 764
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction yahin pe khatam nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 765
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo yahan pe relax karti hai."
+        }
+      ],
+      "sourceParagraph": 766
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar kuch reh jata hai…"
+        }
+      ],
+      "sourceParagraph": 767
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo ek silent understanding hai:"
+        }
+      ],
+      "sourceParagraph": 768
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shuruaat bhi story thi…"
+        }
+      ],
+      "sourceParagraph": 769
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur ant bhi story nahi tha."
+        }
+      ],
+      "sourceParagraph": 770
+    }
+  ],
+  "index": 16,
+  "suppressHeaderNumber": true,
+  "file": "chapters/16-epilogue.json"
+}

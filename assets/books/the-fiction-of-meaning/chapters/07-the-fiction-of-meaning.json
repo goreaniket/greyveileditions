@@ -1,0 +1,633 @@
+{
+  "id": "the-fiction-of-meaning",
+  "kind": "introduction",
+  "sourceKind": "introduction",
+  "label": "Introduction",
+  "title": "THE FICTION OF MEANING",
+  "shortTitle": "THE FICTION OF MEANING",
+  "sourceRange": [
+    114,
+    183
+  ],
+  "headerSourceParagraphs": {
+    "number": 114,
+    "title": 115
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek moment har insaan ki life mein aata hai…"
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab sirf experience kaafi nahi lagta."
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch andar se push karta hai:"
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Iska matlab kya hai?”"
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi ek question ke saath…"
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reality ka ek second layer create ho jata hai."
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na actual world…"
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but world ka interpretation."
+        }
+      ],
+      "sourceParagraph": 123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction — Book II yahin se start hoti hai:"
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na ki meaning already present hai…"
+        }
+      ],
+      "sourceParagraph": 125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "balke is urge se ki meaning create karna zaroori lagta hai."
+        }
+      ],
+      "sourceParagraph": 126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning se pehle sirf occurrence hota hai."
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek thought aata hai."
+        }
+      ],
+      "sourceParagraph": 128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek feeling pass hoti hai."
+        }
+      ],
+      "sourceParagraph": 129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek event unfold hota hai."
+        }
+      ],
+      "sourceParagraph": 130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek silence hota hai."
+        }
+      ],
+      "sourceParagraph": 131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin almost instantly…"
+        }
+      ],
+      "sourceParagraph": 132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind kuch bhi raw nahi rehne deta."
+        }
+      ],
+      "sourceParagraph": 133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo translate karta hai."
+        }
+      ],
+      "sourceParagraph": 134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Label deta hai."
+        }
+      ],
+      "sourceParagraph": 135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Explain karta hai."
+        }
+      ],
+      "sourceParagraph": 136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Conclusion bana deta hai."
+        }
+      ],
+      "sourceParagraph": 137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is instant translation mein…"
+        }
+      ],
+      "sourceParagraph": 138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "raw experience ek structured reality ban jata hai."
+        }
+      ],
+      "sourceParagraph": 139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book ye nahi kehti ki meaning galat hai."
+        }
+      ],
+      "sourceParagraph": 140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye ek deeper cheez dikhati hai:"
+        }
+      ],
+      "sourceParagraph": 141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki meaning milta nahi…"
+        }
+      ],
+      "sourceParagraph": 142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "banaya jata hai."
+        }
+      ],
+      "sourceParagraph": 143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Continuously."
+        }
+      ],
+      "sourceParagraph": 144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unconsciously."
+        }
+      ],
+      "sourceParagraph": 145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Automatically."
+        }
+      ],
+      "sourceParagraph": 146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kyuki ye process itni fast hoti hai…"
+        }
+      ],
+      "sourceParagraph": 147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hume lagta hai ki meaning pehle se exist karta hai."
+        }
+      ],
+      "sourceParagraph": 148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise reality already meaningful ho."
+        }
+      ],
+      "sourceParagraph": 149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar thoda aur clearly dekha jaye…"
+        }
+      ],
+      "sourceParagraph": 150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange possibility dikhti hai:"
+        }
+      ],
+      "sourceParagraph": 151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad reality meaningful nahi hai…"
+        }
+      ],
+      "sourceParagraph": 152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf mind usko meaningful bana raha hai."
+        }
+      ],
+      "sourceParagraph": 153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Book II isi invisible habit ko explore karti hai:"
+        }
+      ],
+      "sourceParagraph": 154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kaise hum experience ko story bana dete hain,"
+        }
+      ],
+      "sourceParagraph": 155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "events ko lesson bana dete hain,"
+        }
+      ],
+      "sourceParagraph": 156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "randomness ko design bana dete hain,"
+        }
+      ],
+      "sourceParagraph": 157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur silence ko message bana dete hain."
+        }
+      ],
+      "sourceParagraph": 158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na ki meaning ko destroy karne ke liye…"
+        }
+      ],
+      "sourceParagraph": 159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but uske origin ko clearly dekhne ke liye."
+        }
+      ],
+      "sourceParagraph": 160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jab meaning ka source clearly dikh jata hai…"
+        }
+      ],
+      "sourceParagraph": 161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo apni authority lose karne lagta hai."
+        }
+      ],
+      "sourceParagraph": 162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab ek strange shift aata hai:"
+        }
+      ],
+      "sourceParagraph": 163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience ko explain karne ki urgency kam ho jati hai."
+        }
+      ],
+      "sourceParagraph": 164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab urgency kam hoti hai…"
+        }
+      ],
+      "sourceParagraph": 165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh jo bachta hai wo confusion nahi hota."
+        }
+      ],
+      "sourceParagraph": 166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo hota hai directness."
+        }
+      ],
+      "sourceParagraph": 167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Raw presence."
+        }
+      ],
+      "sourceParagraph": 168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unfiltered reality."
+        }
+      ],
+      "sourceParagraph": 169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book tumhe koi new belief dene ke liye nahi hai."
+        }
+      ],
+      "sourceParagraph": 170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sirf ye dikhane ke liye hai:"
+        }
+      ],
+      "sourceParagraph": 171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki understanding khud ek continuous creation hai."
+        }
+      ],
+      "sourceParagraph": 172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye mechanism clearly dikhta hai…"
+        }
+      ],
+      "sourceParagraph": 173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh life same rehti hai…"
+        }
+      ],
+      "sourceParagraph": 174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but usko dekhne ka tarika change ho jata hai."
+        }
+      ],
+      "sourceParagraph": 175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na meaning disappear hota hai…"
+        }
+      ],
+      "sourceParagraph": 176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na experience change hota hai."
+        }
+      ],
+      "sourceParagraph": 177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf meaning ki grip soft ho jati hai."
+        }
+      ],
+      "sourceParagraph": 178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo bachta hai…"
+        }
+      ],
+      "sourceParagraph": 179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek simple realization hota hai:"
+        }
+      ],
+      "sourceParagraph": 180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life kabhi explain hone ke liye bani hi nahi thi…"
+        }
+      ],
+      "sourceParagraph": 181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf jee jaane ke liye thi."
+        }
+      ],
+      "sourceParagraph": 182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur explanation hamesha baad mein add kiya gaya tha."
+        }
+      ],
+      "sourceParagraph": 183
+    }
+  ],
+  "index": 7,
+  "number": "INTRODUCTION —",
+  "file": "chapters/07-the-fiction-of-meaning.json"
+}

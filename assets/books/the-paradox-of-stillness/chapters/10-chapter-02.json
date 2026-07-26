@@ -1,0 +1,913 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 2:",
+  "title": "LIFE AFTER THE QUESTION",
+  "shortTitle": "LIFE AFTER THE QUESTION",
+  "sourceRange": [
+    456,
+    556
+  ],
+  "headerSourceParagraphs": {
+    "number": 456,
+    "title": 457
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch questions aise hote hain jo sirf mind mein nahi rehte."
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh life ka hissa ban jaate hain."
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle woh bas ek thought lagte hain."
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek curiosity."
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek cheez jise samajhna hai."
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh question tumhare saath rehna shuru kar deta hai."
+        }
+      ],
+      "sourceParagraph": 464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhare dinon mein."
+        }
+      ],
+      "sourceParagraph": 465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhari khamoshiyon mein."
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhari walks mein."
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhari sleepless nights mein."
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum actively uske baare mein soch bhi nahi rahe hote."
+        }
+      ],
+      "sourceParagraph": 469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir bhi woh kahin na kahin present hota hai."
+        }
+      ],
+      "sourceParagraph": 470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise background mein chalti hui koi awaaz."
+        }
+      ],
+      "sourceParagraph": 471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan ka question alag hota hai."
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi ke liye:"
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Main kaun hoon?\""
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi ke liye:"
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Mere saath hi kyun hua?\""
+        }
+      ],
+      "sourceParagraph": 476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi ke liye:"
+        }
+      ],
+      "sourceParagraph": 477
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Mujhe kya karna chahiye?\""
+        }
+      ],
+      "sourceParagraph": 478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kisi ke liye:"
+        }
+      ],
+      "sourceParagraph": 479
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Kya life mein sach mein koi meaning hai?\""
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questions alag hote hain."
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin unke peeche jo feeling hoti hai..."
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh aksar same hoti hai."
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hope."
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki ek din answer milega."
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sab settle ho jayega."
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din clarity aayegi."
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din confusion khatam hoga."
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din andar jo noise hai woh chup ho jayega."
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi hope ke saath log saalon tak jeete hain."
+        }
+      ],
+      "sourceParagraph": 490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi poori zindagi."
+        }
+      ],
+      "sourceParagraph": 491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ko lagta hai ki har question answer deserve karta hai."
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har problem ka solution hota hai."
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har mystery ka explanation hota hai."
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har uncertainty ke end par certainty khadi hoti hai."
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kuch questions alag nature ke hote hain."
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jitna unke peeche bhaago..."
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utne door lagte hain."
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jitna unko pakadne ki koshish karo..."
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna woh shape change kar dete hain."
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere tum realize karte ho..."
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum answer ke kareeb nahi ja rahe."
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum bas question ke aas paas circles bana rahe ho."
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek din kuch unexpected hota hai."
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Answer nahi milta."
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi revelation nahi hoti."
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life achanak explain nahi ho jaati."
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas question halka lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle jaise weight nahi rehta."
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle jaise urgency nahi rehti."
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle jaise desperation nahi rehti."
+        }
+      ],
+      "sourceParagraph": 511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh bahut strange feel hota hai."
+        }
+      ],
+      "sourceParagraph": 512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki saalon tak tumne socha tha ki answer important hai."
+        }
+      ],
+      "sourceParagraph": 513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab lagne lagta hai..."
+        }
+      ],
+      "sourceParagraph": 514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad answer se zyada important woh life thi jo answer ka wait karte karte nikal rahi thi."
+        }
+      ],
+      "sourceParagraph": 515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan ek ajeeb realization saamne aati hai."
+        }
+      ],
+      "sourceParagraph": 516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum question mein busy the..."
+        }
+      ],
+      "sourceParagraph": 517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life chal rahi thi."
+        }
+      ],
+      "sourceParagraph": 518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum samajhne ki koshish kar rahe the..."
+        }
+      ],
+      "sourceParagraph": 519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life chal rahi thi."
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum certainty dhoond rahe the..."
+        }
+      ],
+      "sourceParagraph": 521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life chal rahi thi."
+        }
+      ],
+      "sourceParagraph": 522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Barish aati rahi."
+        }
+      ],
+      "sourceParagraph": 523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mausam badalte rahe."
+        }
+      ],
+      "sourceParagraph": 524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log milte rahe."
+        }
+      ],
+      "sourceParagraph": 525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log jaate rahe."
+        }
+      ],
+      "sourceParagraph": 526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Din saalon mein badalte rahe."
+        }
+      ],
+      "sourceParagraph": 527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur existence ko koi farq nahi pada ki tum answer ke kitne kareeb ho."
+        }
+      ],
+      "sourceParagraph": 528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir dheere dheere tum ordinary moments ko notice karna shuru karte ho."
+        }
+      ],
+      "sourceParagraph": 529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek random laugh."
+        }
+      ],
+      "sourceParagraph": 530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek cup chai."
+        }
+      ],
+      "sourceParagraph": 531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek shaam ki hawa."
+        }
+      ],
+      "sourceParagraph": 532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek familiar jagah."
+        }
+      ],
+      "sourceParagraph": 533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek khidki se aati roshni."
+        }
+      ],
+      "sourceParagraph": 534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wahi cheezein jo pehle background mein thi."
+        }
+      ],
+      "sourceParagraph": 535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur achanak woh important lagne lagti hain."
+        }
+      ],
+      "sourceParagraph": 536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because they contain answers."
+        }
+      ],
+      "sourceParagraph": 537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because they never needed answers."
+        }
+      ],
+      "sourceParagraph": 538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi point hai jahan question apni power lose karna start karta hai."
+        }
+      ],
+      "sourceParagraph": 539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Question gayab nahi hota."
+        }
+      ],
+      "sourceParagraph": 540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh exist karta rehta hai."
+        }
+      ],
+      "sourceParagraph": 541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi wapas bhi aata hai."
+        }
+      ],
+      "sourceParagraph": 542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi raat ko phir saamne khada milta hai."
+        }
+      ],
+      "sourceParagraph": 543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab woh throne par nahi baitha hota."
+        }
+      ],
+      "sourceParagraph": 544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab woh tumhari life ka center nahi hota."
+        }
+      ],
+      "sourceParagraph": 545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab woh sirf ek question hota hai."
+        }
+      ],
+      "sourceParagraph": 546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum..."
+        }
+      ],
+      "sourceParagraph": 547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf ek insaan."
+        }
+      ],
+      "sourceParagraph": 548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo uske bina bhi jee sakta hai."
+        }
+      ],
+      "sourceParagraph": 549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad life after the question ka matlab bhi yahi hai."
+        }
+      ],
+      "sourceParagraph": 550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Answer mil jaana nahi."
+        }
+      ],
+      "sourceParagraph": 551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki itna jee lena..."
+        }
+      ],
+      "sourceParagraph": 552
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki answer ki zarurat dheere dheere kam padne lage."
+        }
+      ],
+      "sourceParagraph": 553
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki kuch questions solve hone ke liye nahi aate."
+        }
+      ],
+      "sourceParagraph": 554
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh aate hain..."
+        }
+      ],
+      "sourceParagraph": 555
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "taaki tum unke saath jeete jeete badal jao."
+        }
+      ],
+      "sourceParagraph": 556
+    }
+  ],
+  "number": "CHAPTER 2:",
+  "phase": "The Paradox of Stillness",
+  "index": 10,
+  "file": "chapters/10-chapter-02.json"
+}

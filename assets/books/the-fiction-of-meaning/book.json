@@ -1,0 +1,488 @@
+{
+  "id": "the-fiction-of-meaning",
+  "slug": "the-fiction-of-meaning",
+  "title": "The Fiction of Meaning",
+  "subtitle": "The mind cannot tolerate randomness. So it creates meaning... even where none exists.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Fiction",
+  "seriesDisplay": "The Human Fiction Series",
+  "bookNumber": "Book II",
+  "bookIndex": 2,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-fiction/assets/covers/the%20fiction%20of%20meaning.jpeg",
+  "cover": {
+    "web": "/assets/books/the-fiction-of-meaning/cover/front-cover.webp",
+    "print": "/assets/books/the-fiction-of-meaning/cover/front-cover-print.png",
+    "source": "/assets/books/the-fiction-of-meaning/cover/cover-source.png",
+    "alt": "The Fiction of Meaning book cover"
+  },
+  "readerRoute": "/projects/human-fiction/books/the-fiction-of-meaning/reader/",
+  "readerExitUrl": "/projects/human-fiction/books/the-fiction-of-meaning.html",
+  "storageKey": "greyveil:the-fiction-of-meaning:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Fiction",
+    "book": "The Fiction of Meaning",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-fiction-meaning",
+    "variables": {
+      "light": {
+        "--reader-bg": "#DEDAD2",
+        "--reader-paper": "#F8EEDC",
+        "--reader-paper-soft": "#ECE0CB",
+        "--reader-text": "#2C2927",
+        "--reader-heading": "#1E1A18",
+        "--reader-muted": "color-mix(in srgb, #2C2927 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #2C2927 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #2C2927 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #6D6179 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #2C2927 20%, transparent)",
+        "--reader-accent": "#6D6179",
+        "--reader-accent-strong": "#4F435E",
+        "--reader-accent-soft": "color-mix(in srgb, #6D6179 12%, transparent)",
+        "--reader-warm": "#A36D46",
+        "--reader-focus": "#4F435E",
+        "--reader-control-bg": "#ECE0CB",
+        "--reader-control-border": "color-mix(in srgb, #2C2927 18%, transparent)",
+        "--reader-input-bg": "#F8EEDC",
+        "--reader-input-text": "#2C2927",
+        "--reader-placeholder": "color-mix(in srgb, #2C2927 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #6D6179 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "sepia": {
+        "--reader-bg": "#DCCEB9",
+        "--reader-paper": "#F1DFC5",
+        "--reader-paper-soft": "#E5D0B3",
+        "--reader-text": "#342A22",
+        "--reader-heading": "#241B16",
+        "--reader-muted": "color-mix(in srgb, #342A22 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #342A22 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #342A22 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #77614F 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #342A22 20%, transparent)",
+        "--reader-accent": "#77614F",
+        "--reader-accent-strong": "#5A4534",
+        "--reader-accent-soft": "color-mix(in srgb, #77614F 12%, transparent)",
+        "--reader-warm": "#9D6A43",
+        "--reader-focus": "#5A4534",
+        "--reader-control-bg": "#E5D0B3",
+        "--reader-control-border": "color-mix(in srgb, #342A22 18%, transparent)",
+        "--reader-input-bg": "#F1DFC5",
+        "--reader-input-text": "#342A22",
+        "--reader-placeholder": "color-mix(in srgb, #342A22 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #77614F 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "dark": {
+        "--reader-bg": "#111019",
+        "--reader-paper": "#1C1A27",
+        "--reader-paper-soft": "#272331",
+        "--reader-text": "#EFE8DC",
+        "--reader-heading": "#FAF1E5",
+        "--reader-muted": "color-mix(in srgb, #EFE8DC 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EFE8DC 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EFE8DC 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #C3B5D6 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EFE8DC 20%, transparent)",
+        "--reader-accent": "#C3B5D6",
+        "--reader-accent-strong": "#E0D2F0",
+        "--reader-accent-soft": "color-mix(in srgb, #C3B5D6 12%, transparent)",
+        "--reader-warm": "#D3A36B",
+        "--reader-focus": "#E0D2F0",
+        "--reader-control-bg": "#272331",
+        "--reader-control-border": "color-mix(in srgb, #EFE8DC 18%, transparent)",
+        "--reader-input-bg": "#1C1A27",
+        "--reader-input-text": "#EFE8DC",
+        "--reader-placeholder": "color-mix(in srgb, #EFE8DC 56%, transparent)",
+        "--reader-success": "#A6D1AD",
+        "--reader-error-text": "#EBA8A2",
+        "--reader-page-edge": "color-mix(in srgb, #C3B5D6 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-fiction/chapters/WORD/THE FICTION OF MEANING.docx",
+    "pdfVerification": "/projects/human-fiction/chapters/PDF/THE FICTION OF MEANING book 2.pdf",
+    "sourceParagraphsNonEmpty": 737,
+    "semanticUnits": 23,
+    "chapters": 7,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Fiction of Meaning",
+      "shortTitle": "Opening",
+      "sourceRange": [
+        1,
+        10
+      ],
+      "openingMode": "source",
+      "index": 0,
+      "file": "chapters/00-opening.json"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "sourceRange": [
+        11,
+        32
+      ],
+      "suppressHeaderNumber": true,
+      "index": 1,
+      "file": "chapters/01-contents.json"
+    },
+    {
+      "id": "copyright",
+      "kind": "copyright",
+      "sourceKind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT NOTICE",
+      "shortTitle": "COPYRIGHT NOTICE",
+      "sourceRange": [
+        33,
+        38
+      ],
+      "index": 2,
+      "suppressHeaderNumber": true,
+      "file": "chapters/02-copyright.json"
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "sourceKind": "disclaimer",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "sourceRange": [
+        39,
+        48
+      ],
+      "index": 3,
+      "suppressHeaderNumber": true,
+      "file": "chapters/03-disclaimer.json"
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "sourceKind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "sourceRange": [
+        49,
+        58
+      ],
+      "index": 4,
+      "suppressHeaderNumber": true,
+      "file": "chapters/04-dedication.json"
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "sourceKind": "author-note",
+      "label": "Note from the Author",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "sourceRange": [
+        59,
+        86
+      ],
+      "index": 5,
+      "suppressHeaderNumber": true,
+      "file": "chapters/05-note-from-the-author.json"
+    },
+    {
+      "id": "before-meaning-begins",
+      "kind": "prologue",
+      "sourceKind": "prologue",
+      "label": "Prologue",
+      "title": "BEFORE MEANING BEGINS",
+      "shortTitle": "BEFORE MEANING BEGINS",
+      "sourceRange": [
+        87,
+        113
+      ],
+      "index": 6,
+      "number": "PROLOGUE —",
+      "file": "chapters/06-before-meaning-begins.json"
+    },
+    {
+      "id": "the-fiction-of-meaning",
+      "kind": "introduction",
+      "sourceKind": "introduction",
+      "label": "Introduction",
+      "title": "THE FICTION OF MEANING",
+      "shortTitle": "THE FICTION OF MEANING",
+      "sourceRange": [
+        114,
+        183
+      ],
+      "index": 7,
+      "number": "INTRODUCTION —",
+      "file": "chapters/07-the-fiction-of-meaning.json"
+    },
+    {
+      "id": "the-need-for-meaning-foundation",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc I",
+      "title": "THE NEED FOR MEANING (FOUNDATION)",
+      "shortTitle": "THE NEED FOR MEANING (FOUNDATION)",
+      "sourceRange": [
+        184,
+        185
+      ],
+      "index": 8,
+      "number": "ARC I —",
+      "file": "chapters/08-the-need-for-meaning-foundation.json"
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 1",
+      "title": "The Illusion of Purpose",
+      "shortTitle": "The Illusion of Purpose",
+      "sourceRange": [
+        186,
+        242
+      ],
+      "index": 9,
+      "number": "CHAPTER 1 —",
+      "file": "chapters/09-chapter-01.json"
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 2",
+      "title": "The Fiction of Interpretation",
+      "shortTitle": "The Fiction of Interpretation",
+      "sourceRange": [
+        243,
+        311
+      ],
+      "index": 10,
+      "number": "CHAPTER 2 —",
+      "file": "chapters/10-chapter-02.json"
+    },
+    {
+      "id": "the-meaning-loop-attachment-mechanism",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc II",
+      "title": "THE MEANING LOOP (ATTACHMENT MECHANISM)",
+      "shortTitle": "THE MEANING LOOP (ATTACHMENT MECHANISM)",
+      "sourceRange": [
+        312,
+        313
+      ],
+      "index": 11,
+      "number": "ARC II —",
+      "file": "chapters/11-the-meaning-loop-attachment-mechanism.json"
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 3",
+      "title": "The Meaning Attachment Loop",
+      "shortTitle": "The Meaning Attachment Loop",
+      "sourceRange": [
+        314,
+        379
+      ],
+      "index": 12,
+      "number": "CHAPTER 3 —",
+      "file": "chapters/12-chapter-03.json"
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 4",
+      "title": "The Search for Hidden Significance",
+      "shortTitle": "The Search for Hidden Significance",
+      "sourceRange": [
+        380,
+        436
+      ],
+      "index": 13,
+      "number": "CHAPTER 4 —",
+      "file": "chapters/13-chapter-04.json"
+    },
+    {
+      "id": "the-story-construction-narrative-system",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc III",
+      "title": "THE STORY CONSTRUCTION (NARRATIVE SYSTEM)",
+      "shortTitle": "THE STORY CONSTRUCTION (NARRATIVE SYSTEM)",
+      "sourceRange": [
+        437,
+        438
+      ],
+      "index": 14,
+      "number": "ARC III —",
+      "file": "chapters/14-the-story-construction-narrative-system.json"
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 5",
+      "title": "The Story-Making Mind",
+      "shortTitle": "The Story-Making Mind",
+      "sourceRange": [
+        439,
+        507
+      ],
+      "index": 15,
+      "number": "CHAPTER 5 —",
+      "file": "chapters/15-chapter-05.json"
+    },
+    {
+      "id": "the-collapse-of-meaning-breakdown-phase",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc IV",
+      "title": "THE COLLAPSE OF MEANING (BREAKDOWN PHASE)",
+      "shortTitle": "THE COLLAPSE OF MEANING (BREAKDOWN PHASE)",
+      "sourceRange": [
+        508,
+        509
+      ],
+      "index": 16,
+      "number": "ARC IV —",
+      "file": "chapters/16-the-collapse-of-meaning-breakdown-phase.json"
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 6",
+      "title": "The Collapse of Meaning Systems",
+      "shortTitle": "The Collapse of Meaning Systems",
+      "sourceRange": [
+        510,
+        571
+      ],
+      "index": 17,
+      "number": "CHAPTER 6 —",
+      "file": "chapters/17-chapter-06.json"
+    },
+    {
+      "id": "beyond-meaning-post-structure-silence",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc V",
+      "title": "BEYOND MEANING (POST-STRUCTURE SILENCE)",
+      "shortTitle": "BEYOND MEANING (POST-STRUCTURE SILENCE)",
+      "sourceRange": [
+        572,
+        573
+      ],
+      "index": 18,
+      "number": "ARC V —",
+      "file": "chapters/18-beyond-meaning-post-structure-silence.json"
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 7",
+      "title": "When Nothing Means Anything",
+      "shortTitle": "When Nothing Means Anything",
+      "sourceRange": [
+        574,
+        638
+      ],
+      "index": 19,
+      "number": "CHAPTER 7 —",
+      "file": "chapters/19-chapter-07.json"
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "sourceKind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION",
+      "shortTitle": "END REALIZATION",
+      "sourceRange": [
+        639,
+        680
+      ],
+      "index": 20,
+      "suppressHeaderNumber": true,
+      "file": "chapters/20-end-realization.json"
+    },
+    {
+      "id": "after-meaning-disappears",
+      "kind": "epilogue",
+      "sourceKind": "epilogue",
+      "label": "Epilogue",
+      "title": "AFTER MEANING DISAPPEARS",
+      "shortTitle": "AFTER MEANING DISAPPEARS",
+      "sourceRange": [
+        681,
+        712
+      ],
+      "index": 21,
+      "number": "EPILOGUE —",
+      "file": "chapters/21-after-meaning-disappears.json"
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "sourceKind": "about-author",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "sourceRange": [
+        713,
+        737
+      ],
+      "index": 22,
+      "suppressHeaderNumber": true,
+      "file": "chapters/22-about-the-author.json"
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "id": "end-realization",
+  "kind": "ending",
+  "sourceKind": "ending",
+  "label": "End Realization",
+  "title": "END REALIZATION:",
+  "shortTitle": "END REALIZATION:",
+  "sourceRange": [
+    1341,
+    1406
+  ],
+  "headerSourceParagraphs": {
+    "title": 1341
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Akhir mein sab kuch ek simple jagah par aake ruk jaata hai."
+        }
+      ],
+      "sourceParagraph": 1342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na answers."
+        }
+      ],
+      "sourceParagraph": 1343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na clarity."
+        }
+      ],
+      "sourceParagraph": 1344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na final understanding."
+        }
+      ],
+      "sourceParagraph": 1345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek strange silence."
+        }
+      ],
+      "sourceParagraph": 1346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us silence ke andar ek baat dheere se dikhai deti hai…"
+        }
+      ],
+      "sourceParagraph": 1347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo pehle kabhi clearly nahi dekhi gayi thi."
+        }
+      ],
+      "sourceParagraph": 1348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum jis cheez ko poori life “solve” karne ki koshish kar rahe the…"
+        }
+      ],
+      "sourceParagraph": 1349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh shayad kabhi problem thi hi nahi."
+        }
+      ],
+      "sourceParagraph": 1350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf ek pattern tha."
+        }
+      ],
+      "sourceParagraph": 1351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek repeating motion."
+        }
+      ],
+      "sourceParagraph": 1352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ka apne aap ko busy rakhne ka tareeka."
+        }
+      ],
+      "sourceParagraph": 1353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jab tak question zinda rehta hai…"
+        }
+      ],
+      "sourceParagraph": 1354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab tak tum chase mein rehte ho."
+        }
+      ],
+      "sourceParagraph": 1355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur chase mein ek illusion hota hai…"
+        }
+      ],
+      "sourceParagraph": 1356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki movement ka matlab progress hai."
+        }
+      ],
+      "sourceParagraph": 1357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab sab shant hota hai…"
+        }
+      ],
+      "sourceParagraph": 1358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek uncomfortable clarity aati hai."
+        }
+      ],
+      "sourceParagraph": 1359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki tum kabhi kahin “pahunch” hi nahi rahe the."
+        }
+      ],
+      "sourceParagraph": 1360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum sirf chal rahe the."
+        }
+      ],
+      "sourceParagraph": 1361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And movement itself was the entire story."
+        }
+      ],
+      "sourceParagraph": 1362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na start."
+        }
+      ],
+      "sourceParagraph": 1363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na end."
+        }
+      ],
+      "sourceParagraph": 1364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na destination."
+        }
+      ],
+      "sourceParagraph": 1365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf continuation."
+        }
+      ],
+      "sourceParagraph": 1366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse ajeeb realization yeh nahi hota ki tumne kuch miss kar diya."
+        }
+      ],
+      "sourceParagraph": 1367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki yeh hota hai ki…"
+        }
+      ],
+      "sourceParagraph": 1368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch tha hi nahi jise miss kiya ja sake."
+        }
+      ],
+      "sourceParagraph": 1369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi hidden answer."
+        }
+      ],
+      "sourceParagraph": 1370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi final layer."
+        }
+      ],
+      "sourceParagraph": 1371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi last secret."
+        }
+      ],
+      "sourceParagraph": 1372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf wahi cheezein jo hamesha se thi:"
+        }
+      ],
+      "sourceParagraph": 1373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "saans lena"
+        }
+      ],
+      "sourceParagraph": 1374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dekhna"
+        }
+      ],
+      "sourceParagraph": 1375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mehsoos karna"
+        }
+      ],
+      "sourceParagraph": 1376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur phir se bhool jaana"
+        }
+      ],
+      "sourceParagraph": 1377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi point hai jahan mind resist karta hai."
+        }
+      ],
+      "sourceParagraph": 1378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind meaning chahata hai."
+        }
+      ],
+      "sourceParagraph": 1379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan sirf existence hoti hai."
+        }
+      ],
+      "sourceParagraph": 1380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without explanation."
+        }
+      ],
+      "sourceParagraph": 1381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without permission."
+        }
+      ],
+      "sourceParagraph": 1382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without reason."
+        }
+      ],
+      "sourceParagraph": 1383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab explanation gir jaata hai…"
+        }
+      ],
+      "sourceParagraph": 1384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh jo bachta hai woh peace nahi hota."
+        }
+      ],
+      "sourceParagraph": 1385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh clarity bhi nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf ek raw exposure hota hai…"
+        }
+      ],
+      "sourceParagraph": 1387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki reality kabhi tumhare questions ka jawab dene ke liye bani hi nahi thi."
+        }
+      ],
+      "sourceParagraph": 1388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhara poora struggle…"
+        }
+      ],
+      "sourceParagraph": 1389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad jawab paane ka nahi tha."
+        }
+      ],
+      "sourceParagraph": 1390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki ek imaginary problem ko solve karne ka tha."
+        }
+      ],
+      "sourceParagraph": 1391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh samajh aata hai…"
+        }
+      ],
+      "sourceParagraph": 1392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch “achha lagta hai” aisa nahi hota."
+        }
+      ],
+      "sourceParagraph": 1393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek weight drop hota hai."
+        }
+      ],
+      "sourceParagraph": 1394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na victory."
+        }
+      ],
+      "sourceParagraph": 1395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na loss."
+        }
+      ],
+      "sourceParagraph": 1396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf unnecessary burden ka gir jaana."
+        }
+      ],
+      "sourceParagraph": 1397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur uske baad bhi life chalti rehti hai."
+        }
+      ],
+      "sourceParagraph": 1398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same duniya."
+        }
+      ],
+      "sourceParagraph": 1399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same log."
+        }
+      ],
+      "sourceParagraph": 1400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same noise."
+        }
+      ],
+      "sourceParagraph": 1401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek difference hota hai."
+        }
+      ],
+      "sourceParagraph": 1402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab tum usse explain karne ki koshish nahi karte."
+        }
+      ],
+      "sourceParagraph": 1403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi sabse uncomfortable truth hai:"
+        }
+      ],
+      "sourceParagraph": 1404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki kuch bhi kabhi complete nahi hua tha…"
+        }
+      ],
+      "sourceParagraph": 1405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki kabhi kuch incomplete tha hi nahi."
+        }
+      ],
+      "sourceParagraph": 1406
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 21,
+  "file": "chapters/21-end-realization.json"
+}

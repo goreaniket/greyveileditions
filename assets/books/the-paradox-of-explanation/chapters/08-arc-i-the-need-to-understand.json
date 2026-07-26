@@ -1,0 +1,19 @@
+{
+  "id": "arc-i-the-need-to-understand",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC I — THE NEED TO UNDERSTAND",
+  "shortTitle": "ARC I — THE NEED TO UNDERSTAND",
+  "sourceRange": [
+    244,
+    244
+  ],
+  "headerSourceParagraphs": {
+    "title": 244
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 8,
+  "file": "chapters/08-arc-i-the-need-to-understand.json"
+}

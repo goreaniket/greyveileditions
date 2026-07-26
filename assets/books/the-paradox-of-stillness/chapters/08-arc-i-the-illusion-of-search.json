@@ -1,0 +1,19 @@
+{
+  "id": "arc-i-the-illusion-of-search",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC I — THE ILLUSION OF SEARCH",
+  "shortTitle": "ARC I — THE ILLUSION OF SEARCH",
+  "sourceRange": [
+    331,
+    331
+  ],
+  "headerSourceParagraphs": {
+    "title": 331
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 8,
+  "file": "chapters/08-arc-i-the-illusion-of-search.json"
+}

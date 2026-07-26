@@ -1,0 +1,19 @@
+{
+  "id": "arc-i-the-fracture-of-seeing",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC I — THE FRACTURE OF SEEING",
+  "shortTitle": "ARC I — THE FRACTURE OF SEEING",
+  "sourceRange": [
+    341,
+    341
+  ],
+  "headerSourceParagraphs": {
+    "title": 341
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 8,
+  "file": "chapters/08-arc-i-the-fracture-of-seeing.json"
+}

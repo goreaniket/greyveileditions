@@ -1,0 +1,19 @@
+{
+  "id": "arc-ii-the-search-for-certainty",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC II — THE SEARCH FOR CERTAINTY",
+  "shortTitle": "ARC II — THE SEARCH FOR CERTAINTY",
+  "sourceRange": [
+    1320,
+    1320
+  ],
+  "headerSourceParagraphs": {
+    "title": 1320
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 12,
+  "file": "chapters/12-arc-ii-the-search-for-certainty.json"
+}

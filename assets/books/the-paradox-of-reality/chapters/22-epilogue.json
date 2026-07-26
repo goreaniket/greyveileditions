@@ -1,0 +1,472 @@
+{
+  "id": "epilogue",
+  "kind": "epilogue",
+  "sourceKind": "epilogue",
+  "label": "Epilogue",
+  "title": "EPILOGUE",
+  "shortTitle": "EPILOGUE",
+  "sourceRange": [
+    1166,
+    1216
+  ],
+  "headerSourceParagraphs": {
+    "title": 1166
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab sab kuch observe kar liya jata hai…"
+        }
+      ],
+      "sourceParagraph": 1167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh bahar ki duniya mein kuch alag nahi hota."
+        }
+      ],
+      "sourceParagraph": 1168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log waise hi baat karte hain."
+        }
+      ],
+      "sourceParagraph": 1169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Situations waise hi chalti rehti hain."
+        }
+      ],
+      "sourceParagraph": 1170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life apni normal speed mein rehti hai."
+        }
+      ],
+      "sourceParagraph": 1171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par andar ek cheez change ho chuki hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " urgency of meaning"
+        }
+      ],
+      "sourceParagraph": 1173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle har cheez ko turant samajhna hota tha."
+        }
+      ],
+      "sourceParagraph": 1174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har moment ko define karna hota tha."
+        }
+      ],
+      "sourceParagraph": 1175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har feeling ko explain karna hota tha."
+        }
+      ],
+      "sourceParagraph": 1176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab yeh compulsion dheere dheere weak ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi cheez ko dekh kar ab turant label nahi banta."
+        }
+      ],
+      "sourceParagraph": 1178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar banta bhi hai…"
+        }
+      ],
+      "sourceParagraph": 1179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh woh final nahi lagta."
+        }
+      ],
+      "sourceParagraph": 1180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts ab bhi aate hain."
+        }
+      ],
+      "sourceParagraph": 1181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretations ab bhi generate hoti hain."
+        }
+      ],
+      "sourceParagraph": 1182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ab bhi stories banata hai."
+        }
+      ],
+      "sourceParagraph": 1183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ab un stories ko hold karne ki zarurat feel nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh aati hain…"
+        }
+      ],
+      "sourceParagraph": 1185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur chali jaati hain…"
+        }
+      ],
+      "sourceParagraph": 1186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without becoming “truth”."
+        }
+      ],
+      "sourceParagraph": 1187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle experience ko control karna hota tha."
+        }
+      ],
+      "sourceParagraph": 1188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab experience ko sirf notice kiya jaata hai."
+        }
+      ],
+      "sourceParagraph": 1189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na usko change karne ki urgency hoti hai."
+        }
+      ],
+      "sourceParagraph": 1190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na usko fix karne ka pressure hota hai."
+        }
+      ],
+      "sourceParagraph": 1191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek simple awareness hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo bhi ho raha hai…"
+        }
+      ],
+      "sourceParagraph": 1193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh ho raha hai."
+        }
+      ],
+      "sourceParagraph": 1194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan pe ek strange clarity aati hai:"
+        }
+      ],
+      "sourceParagraph": 1195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi final understanding exist nahi karti"
+        }
+      ],
+      "sourceParagraph": 1196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na end point hota hai."
+        }
+      ],
+      "sourceParagraph": 1197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na complete picture hoti hai."
+        }
+      ],
+      "sourceParagraph": 1198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na ultimate truth hota hai."
+        }
+      ],
+      "sourceParagraph": 1199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ongoing flow hota hai…"
+        }
+      ],
+      "sourceParagraph": 1200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo khud ko continuously generate karta rehta hai."
+        }
+      ],
+      "sourceParagraph": 1201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya same rehti hai."
+        }
+      ],
+      "sourceParagraph": 1202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par uska emotional weight change ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Cheezein ab bhi meaningful ho sakti hain…"
+        }
+      ],
+      "sourceParagraph": 1204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unhe “forcefully meaningful” banana zaruri nahi lagta."
+        }
+      ],
+      "sourceParagraph": 1205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh state settle hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek simple si understanding reh jaati hai:"
+        }
+      ],
+      "sourceParagraph": 1207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " shayad kabhi kuch solve karna tha hi nahi"
+        }
+      ],
+      "sourceParagraph": 1208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh realization bhi hold nahi kiya jaata."
+        }
+      ],
+      "sourceParagraph": 1209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh bhi flow mein dissolve ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na meaning bachta hai."
+        }
+      ],
+      "sourceParagraph": 1211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na meaninglessness."
+        }
+      ],
+      "sourceParagraph": 1212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na explanation ka pressure."
+        }
+      ],
+      "sourceParagraph": 1213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek quiet presence hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kisi conclusion ke bina bhi complete hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kisi question ke bina bhi chalti rehti hai."
+        },
+        {
+          "text": "\n"
+        }
+      ],
+      "sourceParagraph": 1216
+    }
+  ],
+  "index": 22,
+  "file": "chapters/22-epilogue.json"
+}

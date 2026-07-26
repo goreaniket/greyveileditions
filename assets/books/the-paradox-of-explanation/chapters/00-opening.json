@@ -1,0 +1,112 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Paradox of Explanation",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    7
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN PARADOX",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK II",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE ",
+          "bold": true
+        },
+        {
+          "text": "PARADOX",
+          "bold": true
+        },
+        {
+          "text": " OF EXPLANATION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(The mind explains reality",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "until reality no longer needs an explanation.)",
+          "bold": true,
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "LALIT R. MISHRA",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL EDITIONS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 6,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 7,
+      "role": "section-heading"
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

@@ -1,0 +1,624 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 2",
+  "title": "The Fiction of Interpretation",
+  "shortTitle": "The Fiction of Interpretation",
+  "sourceRange": [
+    243,
+    311
+  ],
+  "headerSourceParagraphs": {
+    "number": 243,
+    "title": 244
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum jo bhi experience karte hain…"
+        }
+      ],
+      "sourceParagraph": 245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo direct nahi hota."
+        }
+      ],
+      "sourceParagraph": 246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo hamesha interpret hota hai."
+        }
+      ],
+      "sourceParagraph": 247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek cheez hoti hai…"
+        }
+      ],
+      "sourceParagraph": 248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur uske baad turant mind uska meaning generate karta hai."
+        }
+      ],
+      "sourceParagraph": 249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality pehle aati hai."
+        }
+      ],
+      "sourceParagraph": 250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretation baad mein."
+        }
+      ],
+      "sourceParagraph": 251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin awareness mein dono itne close hote hain…"
+        }
+      ],
+      "sourceParagraph": 252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki gap feel hi nahi hota."
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi gap-less illusion ko hum “understanding” samajh lete hain."
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek situation hai."
+        }
+      ],
+      "sourceParagraph": 255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur usi instant pe multiple interpretations generate ho jati hain:"
+        }
+      ],
+      "sourceParagraph": 256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye galat hai"
+        }
+      ],
+      "sourceParagraph": 257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye sahi hai"
+        }
+      ],
+      "sourceParagraph": 258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye kismat hai"
+        }
+      ],
+      "sourceParagraph": 259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye lesson hai"
+        }
+      ],
+      "sourceParagraph": 260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye sign hai"
+        }
+      ],
+      "sourceParagraph": 261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin situation khud kuch bhi declare nahi karti."
+        }
+      ],
+      "sourceParagraph": 262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo silent hoti hai."
+        }
+      ],
+      "sourceParagraph": 263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Neutral hoti hai."
+        }
+      ],
+      "sourceParagraph": 264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretation ek filter hai."
+        }
+      ],
+      "sourceParagraph": 265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo raw experience ko readable banata hai."
+        }
+      ],
+      "sourceParagraph": 266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo cheez readable ban jaye…"
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo controllable lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye mind interpretation ko hold karta hai."
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki interpretation uncertainty ko reduce karti hai."
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin problem ye hai:"
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpretation reality nahi hoti."
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo sirf framing hoti hai."
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur framing change ho sakti hai…"
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina experience change hue."
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi event…"
+        }
+      ],
+      "sourceParagraph": 276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "different states mein completely different meaning le leta hai."
+        }
+      ],
+      "sourceParagraph": 277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Iska matlab:"
+        }
+      ],
+      "sourceParagraph": 278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meaning fixed nahi hai."
+        }
+      ],
+      "sourceParagraph": 279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning fluid hai."
+        }
+      ],
+      "sourceParagraph": 280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin mind us fluidity ko ignore karta hai…"
+        }
+      ],
+      "sourceParagraph": 281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur ek stable version choose kar leta hai:"
+        }
+      ],
+      "sourceParagraph": 282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye iska meaning hai”"
+        }
+      ],
+      "sourceParagraph": 283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur usi moment pe illusion solid ho jata hai."
+        }
+      ],
+      "sourceParagraph": 284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretation ka sabse strong effect ye hai:"
+        }
+      ],
+      "sourceParagraph": 285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo experience ko story bana deta hai."
+        }
+      ],
+      "sourceParagraph": 286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur story banne ke baad…"
+        }
+      ],
+      "sourceParagraph": 287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum experience ko nahi dekhte…"
+        }
+      ],
+      "sourceParagraph": 288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum story ko dekhte hain."
+        }
+      ],
+      "sourceParagraph": 289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur story ko defend karte hain."
+        }
+      ],
+      "sourceParagraph": 290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye do log same reality mein bhi…"
+        }
+      ],
+      "sourceParagraph": 291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "completely different “truth” experience karte hain."
+        }
+      ],
+      "sourceParagraph": 292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki truth experience nahi hota…"
+        }
+      ],
+      "sourceParagraph": 293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "truth interpretation hota hai."
+        }
+      ],
+      "sourceParagraph": 294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interpretation always subjective hoti hai."
+        }
+      ],
+      "sourceParagraph": 295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab ye clearly dikhta hai…"
+        }
+      ],
+      "sourceParagraph": 296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange thing happen hoti hai:"
+        }
+      ],
+      "sourceParagraph": 297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "events same rehte hain…"
+        }
+      ],
+      "sourceParagraph": 298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but unka “weight” change ho jata hai."
+        }
+      ],
+      "sourceParagraph": 299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki weight meaning se aata hai…"
+        }
+      ],
+      "sourceParagraph": 300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "event se nahi."
+        }
+      ],
+      "sourceParagraph": 301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab meaning ka illusion visible ho jata hai…"
+        }
+      ],
+      "sourceParagraph": 302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek gap open hota hai:"
+        }
+      ],
+      "sourceParagraph": 303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "between what happened…"
+        }
+      ],
+      "sourceParagraph": 304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and what we think it means."
+        }
+      ],
+      "sourceParagraph": 305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us gap mein…"
+        }
+      ],
+      "sourceParagraph": 306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "quietness appear hoti hai."
+        }
+      ],
+      "sourceParagraph": 307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo na explanation maangti hai…"
+        }
+      ],
+      "sourceParagraph": 308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na rejection."
+        }
+      ],
+      "sourceParagraph": 309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek observation reh jata hai:"
+        }
+      ],
+      "sourceParagraph": 310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpretation is happening… not truth is being revealed."
+        }
+      ],
+      "sourceParagraph": 311
+    }
+  ],
+  "index": 10,
+  "number": "CHAPTER 2 —",
+  "file": "chapters/10-chapter-02.json"
+}

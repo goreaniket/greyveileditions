@@ -1,0 +1,469 @@
+{
+  "id": "prologue",
+  "kind": "prologue",
+  "sourceKind": "prologue",
+  "label": "Prologue",
+  "title": "PROLOGUE",
+  "shortTitle": "PROLOGUE",
+  "sourceRange": [
+    105,
+    155
+  ],
+  "headerSourceParagraphs": {
+    "title": 105
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BEFORE THE SYSTEM BREAKS"
+        }
+      ],
+      "sourceParagraph": 106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh kahani shuru nahi ho rahi."
+        }
+      ],
+      "sourceParagraph": 107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh kahani us jagah se aa rahi hai jahan kahaniyan ban’na start hoti hain."
+        }
+      ],
+      "sourceParagraph": 108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch cheezein life mein aisi hoti hain jo loud nahi hoti."
+        }
+      ],
+      "sourceParagraph": 109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na wo entrance leti hain."
+        }
+      ],
+      "sourceParagraph": 110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na wo announcement karti hain."
+        }
+      ],
+      "sourceParagraph": 111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas dheere dheere sab kuch change kar deti hain."
+        }
+      ],
+      "sourceParagraph": 112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein insaan apni reality ko simple samajhta hai."
+        }
+      ],
+      "sourceParagraph": 113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main hoon."
+        }
+      ],
+      "sourceParagraph": 114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya hai."
+        }
+      ],
+      "sourceParagraph": 115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur beech mein experiences hain."
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas itna hi."
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin dheere dheere yeh simplicity ek complex system mein badal jaati hai."
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har experience ko meaning chahiye hota hai."
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har feeling ko explanation chahiye hota hai."
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har moment ko interpretation chahiye hota hai."
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo “life” thi… woh ek running analysis ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab tumhe lagta hai ki tum jee rahe ho…"
+        }
+      ],
+      "sourceParagraph": 123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin tum sirf decode kar rahe hote ho."
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is book ke andar koi naya truth nahi milega."
+        }
+      ],
+      "sourceParagraph": 125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi final answer nahi milega."
+        }
+      ],
+      "sourceParagraph": 126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi perfect clarity nahi milegi."
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is book ke andar sirf ek cheez slowly expose hogi:"
+        }
+      ],
+      "sourceParagraph": 128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jo tum “main” samajh rahe the… woh ek continuously moving system hai"
+        }
+      ],
+      "sourceParagraph": 129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh system kuch layers mein kaam karta hai:"
+        }
+      ],
+      "sourceParagraph": 130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meaning banata hai"
+        }
+      ],
+      "sourceParagraph": 131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thought generate karta hai"
+        }
+      ],
+      "sourceParagraph": 132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "narration create karta hai"
+        }
+      ],
+      "sourceParagraph": 133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity assign karta hai"
+        }
+      ],
+      "sourceParagraph": 134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reaction produce karta hai"
+        }
+      ],
+      "sourceParagraph": 135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dialogue run karta hai"
+        }
+      ],
+      "sourceParagraph": 136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "observer imagine karta hai"
+        }
+      ],
+      "sourceParagraph": 137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "solution force karta hai"
+        }
+      ],
+      "sourceParagraph": 138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagta hai yeh sab ek single “you” hai."
+        }
+      ],
+      "sourceParagraph": 139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin yeh actually ek stack hai."
+        }
+      ],
+      "sourceParagraph": 140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek process."
+        }
+      ],
+      "sourceParagraph": 141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek movement."
+        }
+      ],
+      "sourceParagraph": 142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab movement ko observe kiya jaata hai…"
+        }
+      ],
+      "sourceParagraph": 143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange breakdown start hota hai."
+        }
+      ],
+      "sourceParagraph": 144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na dramatic."
+        }
+      ],
+      "sourceParagraph": 145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na emotional."
+        }
+      ],
+      "sourceParagraph": 146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na visible."
+        }
+      ],
+      "sourceParagraph": 147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas silent."
+        }
+      ],
+      "sourceParagraph": 148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is silence ka matlab peace nahi hota."
+        }
+      ],
+      "sourceParagraph": 149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is silence ka matlab absence bhi nahi hota."
+        }
+      ],
+      "sourceParagraph": 150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh sirf ek shift hota hai:"
+        }
+      ],
+      "sourceParagraph": 151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " system apni hi authority ko question karna start karta hai"
+        }
+      ],
+      "sourceParagraph": 152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi se Book 3 ka real journey start hota hai."
+        }
+      ],
+      "sourceParagraph": 153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan samajhne ki zarurat kam nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajhne ki urgency hi dissolve hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 155
+    }
+  ],
+  "index": 6,
+  "file": "chapters/06-prologue.json"
+}

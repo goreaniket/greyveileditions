@@ -1,0 +1,98 @@
+{
+  "id": "copyright",
+  "kind": "copyright",
+  "sourceKind": "copyright",
+  "label": "Copyright",
+  "title": "COPYRIGHT",
+  "shortTitle": "COPYRIGHT",
+  "sourceRange": [
+    35,
+    43
+  ],
+  "headerSourceParagraphs": {
+    "title": 35
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© "
+        },
+        {
+          "text": "2026,"
+        },
+        {
+          "text": "Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 36
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All rights reserved."
+        }
+      ],
+      "sourceParagraph": 37
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No part of this publication may be reproduced, distributed, transmitted, stored in a retrieval system, or transmitted in any form or by any means, including electronic, mechanical, photocopying, recording, or otherwise, without prior written permission from the author, except in the case of brief quotations used in reviews, articles, or academic references."
+        }
+      ],
+      "sourceParagraph": 38
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is a work of original authorship and is protected under applicable copyright laws."
+        }
+      ],
+      "sourceParagraph": 39
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unauthorized reproduction or distribution of any portion of this work may result in legal action."
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "First Edition"
+        }
+      ],
+      "sourceParagraph": 41
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Written by: Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 42
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All rights reserved."
+        }
+      ],
+      "sourceParagraph": 43
+    }
+  ],
+  "index": 2,
+  "suppressHeaderNumber": true,
+  "file": "chapters/02-copyright.json"
+}

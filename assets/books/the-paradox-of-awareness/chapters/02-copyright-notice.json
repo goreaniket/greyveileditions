@@ -1,0 +1,56 @@
+{
+  "id": "copyright-notice",
+  "kind": "copyright",
+  "sourceKind": "copyright",
+  "label": "Copyright",
+  "title": "COPYRIGHT NOTICE",
+  "shortTitle": "COPYRIGHT NOTICE",
+  "sourceRange": [
+    38,
+    42
+  ],
+  "headerSourceParagraphs": {
+    "title": 38
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© 2026. All rights reserved."
+        }
+      ],
+      "sourceParagraph": 39
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book and its contents are the intellectual property of the author. No part of this publication may be copied, reproduced, stored, distributed, or transmitted in any form — digital or physical — without prior written permission."
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The structure, expression, and presentation of ideas in this book are protected under applicable copyright laws."
+        }
+      ],
+      "sourceParagraph": 41
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any unauthorized use of this material will be considered a violation of intellectual property rights."
+        }
+      ],
+      "sourceParagraph": 42
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 2,
+  "file": "chapters/02-copyright-notice.json"
+}

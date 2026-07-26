@@ -1,0 +1,515 @@
+{
+  "id": "prologue",
+  "kind": "prologue",
+  "sourceKind": "prologue",
+  "label": "Prologue",
+  "title": "PROLOGUE —",
+  "shortTitle": "PROLOGUE —",
+  "sourceRange": [
+    70,
+    125
+  ],
+  "headerSourceParagraphs": {
+    "title": 70
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BEFORE BECOMING BEGINS"
+        }
+      ],
+      "sourceParagraph": 71
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan ke andar ek silent pressure continuously chalta rehta hai…"
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kabhi visible nahi hota, par har moment ko shape karta rehta hai."
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye pressure ek simple sa question se start hota hai:"
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main kya banunga?”"
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar is question ko sirf thought na samjha jaye…"
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ye ek psychological architecture hai."
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek invisible structure jo present ko hold karta hai…"
+        }
+      ],
+      "sourceParagraph": 78
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur usko continuously ek imagined future ke against measure karta hai."
+        }
+      ],
+      "sourceParagraph": 79
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind sirf present ko experience nahi karta…"
+        }
+      ],
+      "sourceParagraph": 80
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo present ko project bhi karta hai."
+        }
+      ],
+      "sourceParagraph": 81
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur projection kabhi neutral nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 82
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo hamesha directional hoti hai:"
+        }
+      ],
+      "sourceParagraph": 83
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "better"
+        }
+      ],
+      "sourceParagraph": 84
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "higher"
+        }
+      ],
+      "sourceParagraph": 85
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "improved"
+        }
+      ],
+      "sourceParagraph": 86
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "complete"
+        }
+      ],
+      "sourceParagraph": 87
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ideal"
+        }
+      ],
+      "sourceParagraph": 88
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ideal exist karta hai…"
+        }
+      ],
+      "sourceParagraph": 89
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh present automatically “incomplete” ban jata hai."
+        }
+      ],
+      "sourceParagraph": 90
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is structure ke andar koi moment free nahi hota."
+        }
+      ],
+      "sourceParagraph": 91
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har experience ek comparison field mein enter hota hai:"
+        }
+      ],
+      "sourceParagraph": 92
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "what is vs what is imagined"
+        }
+      ],
+      "sourceParagraph": 93
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan ek subtle violence hoti hai…"
+        }
+      ],
+      "sourceParagraph": 94
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo visible nahi hoti:"
+        }
+      ],
+      "sourceParagraph": 95
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present ko continuously insufficient feel karwana."
+        }
+      ],
+      "sourceParagraph": 96
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming koi single journey nahi hai…"
+        }
+      ],
+      "sourceParagraph": 97
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek continuous recalibration loop hai:"
+        }
+      ],
+      "sourceParagraph": 98
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present arises"
+        }
+      ],
+      "sourceParagraph": 99
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "future image appears"
+        }
+      ],
+      "sourceParagraph": 100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "gap is felt"
+        }
+      ],
+      "sourceParagraph": 101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "effort begins"
+        }
+      ],
+      "sourceParagraph": 102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "temporary alignment"
+        }
+      ],
+      "sourceParagraph": 103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "future shifts again"
+        }
+      ],
+      "sourceParagraph": 104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "loop restarts"
+        }
+      ],
+      "sourceParagraph": 105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye loop itni smooth speed se chalta hai…"
+        }
+      ],
+      "sourceParagraph": 106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki lagta hai ye hi reality hai."
+        }
+      ],
+      "sourceParagraph": 107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ek illusion create karta hai:"
+        }
+      ],
+      "sourceParagraph": 108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main ek fixed point se ek better point ki taraf ja raha hoon.”"
+        }
+      ],
+      "sourceParagraph": 109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin dono points imagination mein hote hain…"
+        }
+      ],
+      "sourceParagraph": 110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf movement real lagta hai."
+        }
+      ],
+      "sourceParagraph": 111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming ka sabse hidden function ye nahi hai ki tum change ho…"
+        }
+      ],
+      "sourceParagraph": 112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye hai ki tum kabhi settle na ho."
+        }
+      ],
+      "sourceParagraph": 113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki settling ka matlab hota hai:"
+        }
+      ],
+      "sourceParagraph": 114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "future projection ka pause ho jana."
+        }
+      ],
+      "sourceParagraph": 115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind ko pause unsafe lagta hai."
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is book ka entry point koi philosophy nahi hai…"
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek lived structure hai:"
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo har insaan silently carry karta hai."
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye structure visible hota hai…"
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange discomfort aata hai:"
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo “main ban raha hoon” lagta tha…"
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek continuous mental motion tha."
+        }
+      ],
+      "sourceParagraph": 123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo “main hoon” lagta hai…"
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo already unfolding present moment hai"
+        }
+      ],
+      "sourceParagraph": 125
+    }
+  ],
+  "index": 6,
+  "suppressHeaderNumber": true,
+  "file": "chapters/06-prologue.json"
+}

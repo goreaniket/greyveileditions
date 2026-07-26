@@ -1,0 +1,1750 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 2-",
+  "title": "THE STORIES WE BUILD",
+  "shortTitle": "THE STORIES WE BUILD",
+  "sourceRange": [
+    994,
+    1187
+  ],
+  "headerSourceParagraphs": {
+    "number": 994,
+    "title": 995
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is a strange thing about human"
+        }
+      ],
+      "sourceParagraph": 996
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "memory."
+        }
+      ],
+      "sourceParagraph": 997
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not store life."
+        }
+      ],
+      "sourceParagraph": 998
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It stores meaning."
+        }
+      ],
+      "sourceParagraph": 999
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not what happened…"
+        }
+      ],
+      "sourceParagraph": 1000
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but what it felt like it meant."
+        }
+      ],
+      "sourceParagraph": 1001
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere, bina realize kiye, hum apni life jeena band kar dete hain."
+        }
+      ],
+      "sourceParagraph": 1002
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We don’t live experiences anymore."
+        }
+      ],
+      "sourceParagraph": 1003
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We start editing them."
+        }
+      ],
+      "sourceParagraph": 1004
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not once."
+        }
+      ],
+      "sourceParagraph": 1005
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not twice."
+        }
+      ],
+      "sourceParagraph": 1006
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But every single time we remember them."
+        }
+      ],
+      "sourceParagraph": 1007
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek moment hota hai."
+        }
+      ],
+      "sourceParagraph": 1008
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A silence after an argument."
+        }
+      ],
+      "sourceParagraph": 1009
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A message that never comes back."
+        }
+      ],
+      "sourceParagraph": 1010
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A reply that feels different from before."
+        }
+      ],
+      "sourceParagraph": 1011
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A door that stays closed a little longer than expected."
+        }
+      ],
+      "sourceParagraph": 1012
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A person jo suddenly unfamiliar lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 1013
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Outwardly, nothing dramatic happens."
+        }
+      ],
+      "sourceParagraph": 1014
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But inwardly, something shifts."
+        }
+      ],
+      "sourceParagraph": 1015
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the mind, almost instantly, fills that silence."
+        }
+      ],
+      "sourceParagraph": 1016
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not with facts…"
+        }
+      ],
+      "sourceParagraph": 1017
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but with meaning."
+        }
+      ],
+      "sourceParagraph": 1018
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“They don’t care anymore.”"
+        }
+      ],
+      "sourceParagraph": 1019
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I was never important.”"
+        }
+      ],
+      "sourceParagraph": 1020
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Something is wrong with me.”"
+        }
+      ],
+      "sourceParagraph": 1021
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“This always happens with me.”"
+        }
+      ],
+      "sourceParagraph": 1022
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh jo meaning hai…"
+        }
+      ],
+      "sourceParagraph": 1023
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh dheere dheere ek event ko rewrite kar deta hai."
+        }
+      ],
+      "sourceParagraph": 1024
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not in reality."
+        }
+      ],
+      "sourceParagraph": 1025
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But in perception."
+        }
+      ],
+      "sourceParagraph": 1026
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sochte hain hum apni life ko yaad kar rahe hain."
+        }
+      ],
+      "sourceParagraph": 1027
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But most of the time, we are not remembering life."
+        }
+      ],
+      "sourceParagraph": 1028
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We are reconstructing it."
+        }
+      ],
+      "sourceParagraph": 1029
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory ek static file nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1030
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is a living system."
+        }
+      ],
+      "sourceParagraph": 1031
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har baar jab hum kisi purani memory ko revisit karte hain…"
+        }
+      ],
+      "sourceParagraph": 1032
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "we don’t retrieve it like a recording."
+        }
+      ],
+      "sourceParagraph": 1033
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We rebuild it like a story."
+        }
+      ],
+      "sourceParagraph": 1034
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har reconstruction mein thoda sa change hota hai."
+        }
+      ],
+      "sourceParagraph": 1035
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch parts highlight ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 1036
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch fade ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 1037
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kuch completely naye meanings ke saath rewrite ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 1038
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because we are lying."
+        }
+      ],
+      "sourceParagraph": 1039
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because raw reality ko carry karna uncomfortable hota hai."
+        }
+      ],
+      "sourceParagraph": 1040
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum closure dhoondhte hain."
+        }
+      ],
+      "sourceParagraph": 1041
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even when none exists."
+        }
+      ],
+      "sourceParagraph": 1042
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "First illusion:"
+        }
+      ],
+      "sourceParagraph": 1043
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We believe we are recalling life."
+        }
+      ],
+      "sourceParagraph": 1044
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But actually, we are rewriting it."
+        }
+      ],
+      "sourceParagraph": 1045
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek rejection hota hai."
+        }
+      ],
+      "sourceParagraph": 1046
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Technically simple."
+        }
+      ],
+      "sourceParagraph": 1047
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A “no”."
+        }
+      ],
+      "sourceParagraph": 1048
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas itna."
+        }
+      ],
+      "sourceParagraph": 1049
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But mind us “no” ko simple nahi rehne deta."
+        }
+      ],
+      "sourceParagraph": 1050
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh usse expand karta hai."
+        }
+      ],
+      "sourceParagraph": 1051
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dheere dheere woh rejection ban jaata hai:"
+        }
+      ],
+      "sourceParagraph": 1052
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am not enough”"
+        }
+      ],
+      "sourceParagraph": 1053
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am not chosen”"
+        }
+      ],
+      "sourceParagraph": 1054
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am not valuable”"
+        }
+      ],
+      "sourceParagraph": 1055
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Something is fundamentally wrong with me”"
+        }
+      ],
+      "sourceParagraph": 1056
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheez ek external moment thi…"
+        }
+      ],
+      "sourceParagraph": 1057
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh internal identity ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 1058
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur identity sabse dangerous hoti hai."
+        }
+      ],
+      "sourceParagraph": 1059
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki pain temporary hota hai."
+        }
+      ],
+      "sourceParagraph": 1060
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But identity persistent hoti hai."
+        }
+      ],
+      "sourceParagraph": 1061
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan ek invisible transformation hota hai."
+        }
+      ],
+      "sourceParagraph": 1062
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek interpretation, agar repeat ho jaaye…"
+        }
+      ],
+      "sourceParagraph": 1063
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh woh perception ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 1064
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur perception, reality ko reshape karne lagta hai."
+        }
+      ],
+      "sourceParagraph": 1065
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar ek baar dimaag ne decide kar liya:"
+        }
+      ],
+      "sourceParagraph": 1066
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am not enough”"
+        }
+      ],
+      "sourceParagraph": 1067
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh duniya neutral nahi rehti."
+        }
+      ],
+      "sourceParagraph": 1068
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya already interpreted hoti hai."
+        }
+      ],
+      "sourceParagraph": 1069
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har silence rejection lagta hai."
+        }
+      ],
+      "sourceParagraph": 1070
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har delay disrespect."
+        }
+      ],
+      "sourceParagraph": 1071
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har change abandonment."
+        }
+      ],
+      "sourceParagraph": 1072
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har unfamiliar tone threat."
+        }
+      ],
+      "sourceParagraph": 1073
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality same rehti hai."
+        }
+      ],
+      "sourceParagraph": 1074
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But lens distorted ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1075
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur distorted lens ko reality lagta hai."
+        }
+      ],
+      "sourceParagraph": 1076
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum log reality se directly nahi milte."
+        }
+      ],
+      "sourceParagraph": 1077
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We meet reality through filters."
+        }
+      ],
+      "sourceParagraph": 1078
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse dangerous baat yeh hai:"
+        }
+      ],
+      "sourceParagraph": 1079
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "filters humein pata bhi nahi hote."
+        }
+      ],
+      "sourceParagraph": 1080
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum unhe “truth” samajh lete hain."
+        }
+      ],
+      "sourceParagraph": 1081
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur pattern quietly chalta rehta hai."
+        }
+      ],
+      "sourceParagraph": 1082
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Selective memory."
+        }
+      ],
+      "sourceParagraph": 1083
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum un moments ko zyada clarity dete hain jo humari existing story ko support karte hain."
+        }
+      ],
+      "sourceParagraph": 1084
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur un moments ko ignore kar dete hain jo us story ko break karte hain."
+        }
+      ],
+      "sourceParagraph": 1085
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar hum believe karte hain:"
+        }
+      ],
+      "sourceParagraph": 1086
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I always fail”"
+        }
+      ],
+      "sourceParagraph": 1087
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dimaag 5 failures ko cinematic detail mein replay karta hai."
+        }
+      ],
+      "sourceParagraph": 1088
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur 20 small wins ko completely blur kar deta hai."
+        }
+      ],
+      "sourceParagraph": 1089
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because they are irrelevant."
+        }
+      ],
+      "sourceParagraph": 1090
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because they are dangerous to the narrative."
+        }
+      ],
+      "sourceParagraph": 1091
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki agar story break ho gayi…"
+        }
+      ],
+      "sourceParagraph": 1092
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh identity unstable ho jaayegi."
+        }
+      ],
+      "sourceParagraph": 1093
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek illusion ban jaata hai:"
+        }
+      ],
+      "sourceParagraph": 1094
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life predictable lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 1095
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But life repeat nahi ho rahi hoti."
+        }
+      ],
+      "sourceParagraph": 1096
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum repeat kar rahe hote hain apni interpretation."
+        }
+      ],
+      "sourceParagraph": 1097
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation strong ho jaati hai…"
+        }
+      ],
+      "sourceParagraph": 1098
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek aur shift hota hai."
+        }
+      ],
+      "sourceParagraph": 1099
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Question change ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle:"
+        }
+      ],
+      "sourceParagraph": 1101
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“What happened?”"
+        }
+      ],
+      "sourceParagraph": 1102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir:"
+        }
+      ],
+      "sourceParagraph": 1103
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Why did this happen?”"
+        }
+      ],
+      "sourceParagraph": 1104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir finally:"
+        }
+      ],
+      "sourceParagraph": 1105
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Why does this always happen to me?”"
+        }
+      ],
+      "sourceParagraph": 1106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh curiosity nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh reinforcement hota hai."
+        }
+      ],
+      "sourceParagraph": 1108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Existing belief system ko stable banane ka mechanism."
+        }
+      ],
+      "sourceParagraph": 1109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because “always” is not reality."
+        }
+      ],
+      "sourceParagraph": 1110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is emotional pattern turned into belief."
+        }
+      ],
+      "sourceParagraph": 1111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sabse uncomfortable realization yeh hai:"
+        }
+      ],
+      "sourceParagraph": 1112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You are not living your past."
+        }
+      ],
+      "sourceParagraph": 1113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You are living your explanation of your past."
+        }
+      ],
+      "sourceParagraph": 1114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur explanation ka problem yeh hai…"
+        }
+      ],
+      "sourceParagraph": 1115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it feels more solid than truth."
+        }
+      ],
+      "sourceParagraph": 1116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality fluid hoti hai."
+        }
+      ],
+      "sourceParagraph": 1117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Situations evolve karti hain."
+        }
+      ],
+      "sourceParagraph": 1118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "People change karte hain."
+        }
+      ],
+      "sourceParagraph": 1119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Circumstances shift hoti hain."
+        }
+      ],
+      "sourceParagraph": 1120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But story stable lagti hai."
+        }
+      ],
+      "sourceParagraph": 1121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur human mind stability ko safety samajhta hai."
+        }
+      ],
+      "sourceParagraph": 1122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe woh false hi kyun na ho."
+        }
+      ],
+      "sourceParagraph": 1123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stories comfort deti hain."
+        }
+      ],
+      "sourceParagraph": 1124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki stories chaos ko structure bana deti hain."
+        }
+      ],
+      "sourceParagraph": 1125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even if that structure is imaginary."
+        }
+      ],
+      "sourceParagraph": 1126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even if it is incomplete."
+        }
+      ],
+      "sourceParagraph": 1127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even if it is biased."
+        }
+      ],
+      "sourceParagraph": 1128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A painful truth unstable lagta hai."
+        }
+      ],
+      "sourceParagraph": 1129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But a meaningful lie stable lagta hai."
+        }
+      ],
+      "sourceParagraph": 1130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur insaan aksar truth nahi choose karta."
+        }
+      ],
+      "sourceParagraph": 1131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan stability choose karta hai."
+        }
+      ],
+      "sourceParagraph": 1132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye closure addictive hota hai."
+        }
+      ],
+      "sourceParagraph": 1133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sirf answers nahi dhoondh rahe hote."
+        }
+      ],
+      "sourceParagraph": 1134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum dhoondh rahe hote hain ek final explanation."
+        }
+      ],
+      "sourceParagraph": 1135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisi story jo sab kuch end kar de."
+        }
+      ],
+      "sourceParagraph": 1136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo confusion ko permanently seal kar de."
+        }
+      ],
+      "sourceParagraph": 1137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But life rarely behaves like that."
+        }
+      ],
+      "sourceParagraph": 1138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So hum us gap ko khud fill kar dete hain."
+        }
+      ],
+      "sourceParagraph": 1139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab story stable ho jaati hai…"
+        }
+      ],
+      "sourceParagraph": 1140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh hum apni identity us story se fuse kar dete hain."
+        }
+      ],
+      "sourceParagraph": 1141
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am unlucky.”"
+        }
+      ],
+      "sourceParagraph": 1142
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am always rejected.”"
+        }
+      ],
+      "sourceParagraph": 1143
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am not meant for this.”"
+        }
+      ],
+      "sourceParagraph": 1144
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I am stuck.”"
+        }
+      ],
+      "sourceParagraph": 1145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek silent shift hota hai."
+        }
+      ],
+      "sourceParagraph": 1146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum experience karna band kar dete hain."
+        }
+      ],
+      "sourceParagraph": 1147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum interpret karna start kar dete hain."
+        }
+      ],
+      "sourceParagraph": 1148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But stories are not real structures."
+        }
+      ],
+      "sourceParagraph": 1149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are mental constructs."
+        }
+      ],
+      "sourceParagraph": 1150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And anything constructed…"
+        }
+      ],
+      "sourceParagraph": 1151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "can collapse."
+        }
+      ],
+      "sourceParagraph": 1152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But collapse tabhi hota hai jab contradiction allow kiya jaaye."
+        }
+      ],
+      "sourceParagraph": 1153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Otherwise hum opposite karte hain."
+        }
+      ],
+      "sourceParagraph": 1154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum reality ko bend karte hain…"
+        }
+      ],
+      "sourceParagraph": 1155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to protect the story."
+        }
+      ],
+      "sourceParagraph": 1156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se ek loop form hota hai."
+        }
+      ],
+      "sourceParagraph": 1157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not a life loop."
+        }
+      ],
+      "sourceParagraph": 1158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But an interpretation loop."
+        }
+      ],
+      "sourceParagraph": 1159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same events."
+        }
+      ],
+      "sourceParagraph": 1160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Different faces."
+        }
+      ],
+      "sourceParagraph": 1161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same feeling."
+        }
+      ],
+      "sourceParagraph": 1162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Different situations."
+        }
+      ],
+      "sourceParagraph": 1163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But same internal conclusion."
+        }
+      ],
+      "sourceParagraph": 1164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek point pe ek deeper question arise hota hai:"
+        }
+      ],
+      "sourceParagraph": 1165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not"
+        }
+      ],
+      "sourceParagraph": 1166
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“What happened?”"
+        }
+      ],
+      "sourceParagraph": 1167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But"
+        }
+      ],
+      "sourceParagraph": 1168
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Why does everything feel the same again and again?”"
+        }
+      ],
+      "sourceParagraph": 1169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur answer uncomfortable hota hai:"
+        }
+      ],
+      "sourceParagraph": 1170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because reality same nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lens same hota hai."
+        }
+      ],
+      "sourceParagraph": 1172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sabse disturbing realization yeh hai:"
+        }
+      ],
+      "sourceParagraph": 1173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum apni life nahi jee rahe."
+        }
+      ],
+      "sourceParagraph": 1174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum apni life ki story jee rahe ho."
+        }
+      ],
+      "sourceParagraph": 1175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh samajh aata hai…"
+        }
+      ],
+      "sourceParagraph": 1176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh pehli baar ek gap open hota hai."
+        }
+      ],
+      "sourceParagraph": 1177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Between event and interpretation."
+        }
+      ],
+      "sourceParagraph": 1178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Between experience and meaning."
+        }
+      ],
+      "sourceParagraph": 1179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Between reality and story."
+        }
+      ],
+      "sourceParagraph": 1180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And that gap…"
+        }
+      ],
+      "sourceParagraph": 1181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is not confusion."
+        }
+      ],
+      "sourceParagraph": 1182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That gap is awareness starting for the first time."
+        }
+      ],
+      "sourceParagraph": 1183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahin se Chapter 2 actually end nahi hota…"
+        }
+      ],
+      "sourceParagraph": 1184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yahin se ek naya question start hota hai:"
+        }
+      ],
+      "sourceParagraph": 1185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar story truth nahi hai…"
+        }
+      ],
+      "sourceParagraph": 1186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh phir main kya hoon?"
+        }
+      ],
+      "sourceParagraph": 1187
+    }
+  ],
+  "number": "CHAPTER 2-",
+  "phase": "The Paradox of Explanation",
+  "index": 10,
+  "file": "chapters/10-chapter-02.json"
+}

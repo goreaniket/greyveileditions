@@ -1,0 +1,957 @@
+{
+  "id": "chapter-01",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 1",
+  "title": "The Story Called Human",
+  "shortTitle": "The Story Called Human",
+  "sourceRange": [
+    334,
+    439
+  ],
+  "headerSourceParagraphs": {
+    "number": 334,
+    "title": 335
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poori zindagi hum ek question ke saath jeete hain."
+        }
+      ],
+      "sourceParagraph": 336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi loudly."
+        }
+      ],
+      "sourceParagraph": 337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi silently."
+        }
+      ],
+      "sourceParagraph": 338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi words mein."
+        }
+      ],
+      "sourceParagraph": 339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi bas ek feeling ki tarah."
+        }
+      ],
+      "sourceParagraph": 340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wo question hai:"
+        }
+      ],
+      "sourceParagraph": 341
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Main kaun hoon?\""
+        }
+      ],
+      "sourceParagraph": 342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin bahut kam log ek aur question poochte hain."
+        }
+      ],
+      "sourceParagraph": 343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisa question jo shayad pehle question se bhi zyada dangerous hai."
+        }
+      ],
+      "sourceParagraph": 344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo ye pooch raha hai..."
+        }
+      ],
+      "sourceParagraph": 345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kaun hai?"
+        }
+      ],
+      "sourceParagraph": 346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ho sakta hai poori search ek assumption par khadi ho."
+        }
+      ],
+      "sourceParagraph": 347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisa assumption jo itna purana hai..."
+        }
+      ],
+      "sourceParagraph": 348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki ab wo assumption lagta hi nahi."
+        }
+      ],
+      "sourceParagraph": 349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo reality lagta hai."
+        }
+      ],
+      "sourceParagraph": 350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhara naam tumse pehle aa gaya."
+        }
+      ],
+      "sourceParagraph": 351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhari identity tumhari understanding se pehle aa gayi."
+        }
+      ],
+      "sourceParagraph": 352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe bataya gaya tum kaun ho."
+        }
+      ],
+      "sourceParagraph": 353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe bataya gaya tum kya ho."
+        }
+      ],
+      "sourceParagraph": 354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe bataya gaya tum kya ban sakte ho."
+        }
+      ],
+      "sourceParagraph": 355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumne sunna shuru kiya."
+        }
+      ],
+      "sourceParagraph": 357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir maanna shuru kiya."
+        }
+      ],
+      "sourceParagraph": 358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir repeat karna shuru kiya."
+        }
+      ],
+      "sourceParagraph": 359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek din..."
+        }
+      ],
+      "sourceParagraph": 360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina kisi specific moment ke..."
+        }
+      ],
+      "sourceParagraph": 361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek story reality ban gayi."
+        }
+      ],
+      "sourceParagraph": 362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story simple thi:"
+        }
+      ],
+      "sourceParagraph": 363
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Ye main hoon.\""
+        }
+      ],
+      "sourceParagraph": 364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur uske baad poori duniya badal gayi. "
+        }
+      ],
+      "sourceParagraph": 365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tak character nahi tha..."
+        }
+      ],
+      "sourceParagraph": 366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience bas experience tha."
+        }
+      ],
+      "sourceParagraph": 367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir character aaya."
+        }
+      ],
+      "sourceParagraph": 368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur suddenly sab kuch personal ho gaya."
+        }
+      ],
+      "sourceParagraph": 369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab pain sirf pain nahi tha."
+        }
+      ],
+      "sourceParagraph": 370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo mera pain tha."
+        }
+      ],
+      "sourceParagraph": 371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fear sirf fear nahi tha."
+        }
+      ],
+      "sourceParagraph": 372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo mera fear tha."
+        }
+      ],
+      "sourceParagraph": 373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Loss sirf loss nahi tha."
+        }
+      ],
+      "sourceParagraph": 374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo mera loss tha."
+        }
+      ],
+      "sourceParagraph": 375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ussi moment..."
+        }
+      ],
+      "sourceParagraph": 376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek psychological universe paida hua."
+        }
+      ],
+      "sourceParagraph": 377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek centre ke around."
+        }
+      ],
+      "sourceParagraph": 378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek invisible centre."
+        }
+      ],
+      "sourceParagraph": 379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek \"main\"."
+        }
+      ],
+      "sourceParagraph": 380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Strange baat ye hai..."
+        }
+      ],
+      "sourceParagraph": 381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki zyada tar log life ka weight nahi uthate."
+        }
+      ],
+      "sourceParagraph": 382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo apni story ka weight uthate hain."
+        }
+      ],
+      "sourceParagraph": 383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Past ka weight."
+        }
+      ],
+      "sourceParagraph": 384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity ka weight."
+        }
+      ],
+      "sourceParagraph": 385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Image ka weight."
+        }
+      ],
+      "sourceParagraph": 386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Expectation ka weight."
+        }
+      ],
+      "sourceParagraph": 387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "story itni heavy ho jati hai..."
+        }
+      ],
+      "sourceParagraph": 389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki banda usse khud samajhne lagta hai."
+        }
+      ],
+      "sourceParagraph": 390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi notice kiya?"
+        }
+      ],
+      "sourceParagraph": 391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhare baare mein jo kuch bhi tum jaante ho..."
+        }
+      ],
+      "sourceParagraph": 392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo memory se aata hai."
+        }
+      ],
+      "sourceParagraph": 393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Naam?"
+        }
+      ],
+      "sourceParagraph": 394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory."
+        }
+      ],
+      "sourceParagraph": 395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Personality?"
+        }
+      ],
+      "sourceParagraph": 396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory."
+        }
+      ],
+      "sourceParagraph": 397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "History?"
+        }
+      ],
+      "sourceParagraph": 398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory."
+        }
+      ],
+      "sourceParagraph": 399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Success?"
+        }
+      ],
+      "sourceParagraph": 400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory."
+        }
+      ],
+      "sourceParagraph": 401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Failure?"
+        }
+      ],
+      "sourceParagraph": 402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory."
+        }
+      ],
+      "sourceParagraph": 403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh phir ek strange possibility khadi hoti hai."
+        }
+      ],
+      "sourceParagraph": 404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar memory kuch der ke liye silent ho jaye..."
+        }
+      ],
+      "sourceParagraph": 405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh jo bachega..."
+        }
+      ],
+      "sourceParagraph": 406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kaun hoga?"
+        }
+      ],
+      "sourceParagraph": 407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum usually human ko biological term samajhte hain."
+        }
+      ],
+      "sourceParagraph": 408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin is book mein human ka matlab body nahi hai."
+        }
+      ],
+      "sourceParagraph": 409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human ka matlab hai:"
+        }
+      ],
+      "sourceParagraph": 410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo psychological character..."
+        }
+      ],
+      "sourceParagraph": 411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo apne aap ko continuously narrate karta rehta hai."
+        }
+      ],
+      "sourceParagraph": 412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek character jo kehta hai:"
+        }
+      ],
+      "sourceParagraph": 413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meri life"
+        }
+      ],
+      "sourceParagraph": 414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mera future"
+        }
+      ],
+      "sourceParagraph": 415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mera pain"
+        }
+      ],
+      "sourceParagraph": 416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meri journey"
+        }
+      ],
+      "sourceParagraph": 417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi narration ki wajah se..."
+        }
+      ],
+      "sourceParagraph": 418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek sense of continuity paida hota hai."
+        }
+      ],
+      "sourceParagraph": 419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek feeling ki:"
+        }
+      ],
+      "sourceParagraph": 420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main kal bhi tha."
+        }
+      ],
+      "sourceParagraph": 421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main aaj bhi hoon."
+        }
+      ],
+      "sourceParagraph": 422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main kal bhi rahunga."
+        }
+      ],
+      "sourceParagraph": 423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kya ye continuity reality hai..."
+        }
+      ],
+      "sourceParagraph": 424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya narration ka effect?"
+        }
+      ],
+      "sourceParagraph": 425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har story ki power ek cheez par depend karti hai."
+        }
+      ],
+      "sourceParagraph": 426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki usse story na dekha jaye."
+        }
+      ],
+      "sourceParagraph": 427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jis din story..."
+        }
+      ],
+      "sourceParagraph": 428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "story ki tarah dikhne lagti hai..."
+        }
+      ],
+      "sourceParagraph": 429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "us din kuch change ho jata hai."
+        }
+      ],
+      "sourceParagraph": 430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo disappear nahi hoti."
+        }
+      ],
+      "sourceParagraph": 431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin uska spell tootne lagta hai."
+        }
+      ],
+      "sourceParagraph": 432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sabse pehla crack wahi hota hai..."
+        }
+      ],
+      "sourceParagraph": 433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab insaan pehli baar genuinely poochta hai:"
+        }
+      ],
+      "sourceParagraph": 434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya main story ke andar hoon?"
+        }
+      ],
+      "sourceParagraph": 435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya story mere andar hai?"
+        }
+      ],
+      "sourceParagraph": 436
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar dono nahi..."
+        }
+      ],
+      "sourceParagraph": 437
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh phir ye \"main\" hai kya?"
+        }
+      ],
+      "sourceParagraph": 438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi question se sab kuch shuru hota hai."
+        }
+      ],
+      "sourceParagraph": 439
+    }
+  ],
+  "index": 9,
+  "number": "CHAPTER 1 —",
+  "file": "chapters/09-chapter-01.json"
+}

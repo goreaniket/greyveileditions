@@ -1,0 +1,73 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "sourceKind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "DEDICATION",
+  "sourceRange": [
+    46,
+    52
+  ],
+  "headerSourceParagraphs": {
+    "title": 46
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not dedicated to a person."
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is dedicated to those who think deeply but speak rarely."
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who feel everything but explain nothing."
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who carry entire worlds inside their mind…"
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and still continue to observe them."
+        }
+      ],
+      "sourceParagraph": 51
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to the version of you that didn’t stop reading even when nothing was promised…"
+        }
+      ],
+      "sourceParagraph": 52
+    }
+  ],
+  "index": 4,
+  "file": "chapters/04-dedication.json"
+}

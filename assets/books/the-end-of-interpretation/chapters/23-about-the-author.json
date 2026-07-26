@@ -1,0 +1,355 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "ABOUT THE AUTHOR",
+  "sourceRange": [
+    1226,
+    1263
+  ],
+  "headerSourceParagraphs": {
+    "title": 1226
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1227,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There are people who write books to tell stories."
+        }
+      ],
+      "sourceParagraph": 1228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And then there are people who write because silence becomes too structured inside them."
+        }
+      ],
+      "sourceParagraph": 1229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra belongs to neither category completely."
+        }
+      ],
+      "sourceParagraph": 1230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not write to explain life."
+        }
+      ],
+      "sourceParagraph": 1231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He writes to observe how explanation itself builds a false sense of life."
+        }
+      ],
+      "sourceParagraph": 1232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At first glance, his writing may look like philosophy."
+        }
+      ],
+      "sourceParagraph": 1233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But underneath, it is something more uncomfortable:"
+        }
+      ],
+      "sourceParagraph": 1234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "a systematic breakdown of how the mind constructs “reality” moment by moment."
+        }
+      ],
+      "sourceParagraph": 1235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work does not offer motivation."
+        }
+      ],
+      "sourceParagraph": 1236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not offer comfort."
+        }
+      ],
+      "sourceParagraph": 1237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not offer conclusions."
+        }
+      ],
+      "sourceParagraph": 1238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because according to him, conclusions are where perception stops evolving."
+        }
+      ],
+      "sourceParagraph": 1239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Instead, his writing moves through layers:"
+        }
+      ],
+      "sourceParagraph": 1240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meaning → thought → narration → identity → reaction → dialogue → observation → silence"
+        }
+      ],
+      "sourceParagraph": 1241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not as theory…"
+        }
+      ],
+      "sourceParagraph": 1242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but as lived internal dissection."
+        }
+      ],
+      "sourceParagraph": 1243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is not presenting himself as a teacher."
+        }
+      ],
+      "sourceParagraph": 1244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "In fact, his central argument quietly dissolves the need for one:"
+        }
+      ],
+      "sourceParagraph": 1245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " if experience is continuously changing, no fixed authority can define it"
+        }
+      ],
+      "sourceParagraph": 1246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The tone of his work is intentionally unsettling."
+        }
+      ],
+      "sourceParagraph": 1247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not to disturb the reader…"
+        }
+      ],
+      "sourceParagraph": 1248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but to expose how much of life is already constructed disturbance masked as normal thinking."
+        }
+      ],
+      "sourceParagraph": 1249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not ask the reader to believe anything."
+        }
+      ],
+      "sourceParagraph": 1250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He only points toward one uncomfortable possibility:"
+        }
+      ],
+      "sourceParagraph": 1251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " most of what we call “me” is a process, not a person"
+        }
+      ],
+      "sourceParagraph": 1252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And if that feels strange, unclear, or even uncomfortable…"
+        }
+      ],
+      "sourceParagraph": 1253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that reaction itself is part of the observation."
+        }
+      ],
+      "sourceParagraph": 1254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because in his framework, nothing is outside the system."
+        }
+      ],
+      "sourceParagraph": 1255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not thought."
+        }
+      ],
+      "sourceParagraph": 1256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not identity."
+        }
+      ],
+      "sourceParagraph": 1257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not even the one reading this."
+        }
+      ],
+      "sourceParagraph": 1258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra does not claim truth."
+        }
+      ],
+      "sourceParagraph": 1259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He only removes the urgency to chase it."
+        }
+      ],
+      "sourceParagraph": 1260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And what remains after that…"
+        }
+      ],
+      "sourceParagraph": 1261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is not an answer."
+        }
+      ],
+      "sourceParagraph": 1262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Just awareness, without an explanation insisting on itself."
+        }
+      ],
+      "sourceParagraph": 1263
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 23,
+  "file": "chapters/23-about-the-author.json"
+}

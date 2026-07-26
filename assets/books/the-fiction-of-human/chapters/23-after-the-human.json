@@ -1,0 +1,750 @@
+{
+  "id": "after-the-human",
+  "kind": "epilogue",
+  "sourceKind": "epilogue",
+  "label": "Epilogue",
+  "title": "After the Human",
+  "shortTitle": "After the Human",
+  "sourceRange": [
+    1446,
+    1528
+  ],
+  "headerSourceParagraphs": {
+    "number": 1446,
+    "title": 1447
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum yahan tak pahunch gaye ho..."
+        }
+      ],
+      "sourceParagraph": 1448
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad tum notice kar chuke hoge..."
+        }
+      ],
+      "sourceParagraph": 1449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki ye journey answers collect karne ki journey nahi thi."
+        }
+      ],
+      "sourceParagraph": 1450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye questions ko deepen karne ki journey bhi nahi thi."
+        }
+      ],
+      "sourceParagraph": 1451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye ek aur philosophy create karne ki journey bhi nahi thi."
+        }
+      ],
+      "sourceParagraph": 1452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 1453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "un cheezon ko dekhne ki journey thi..."
+        }
+      ],
+      "sourceParagraph": 1454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jinhe hum usually reality samajh lete hain."
+        }
+      ],
+      "sourceParagraph": 1455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Self."
+        }
+      ],
+      "sourceParagraph": 1456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning."
+        }
+      ],
+      "sourceParagraph": 1457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming."
+        }
+      ],
+      "sourceParagraph": 1458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity."
+        }
+      ],
+      "sourceParagraph": 1459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story."
+        }
+      ],
+      "sourceParagraph": 1460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human."
+        }
+      ],
+      "sourceParagraph": 1461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur chapter by chapter..."
+        }
+      ],
+      "sourceParagraph": 1462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek strange cheez saamne aati gayi."
+        }
+      ],
+      "sourceParagraph": 1463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jitna hum dekhte gaye..."
+        }
+      ],
+      "sourceParagraph": 1464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna certainty dissolve hoti gayi."
+        }
+      ],
+      "sourceParagraph": 1465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin uske saath saath..."
+        }
+      ],
+      "sourceParagraph": 1466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek aur cheez emerge hoti gayi."
+        }
+      ],
+      "sourceParagraph": 1467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lightness."
+        }
+      ],
+      "sourceParagraph": 1468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sochte hain freedom answers se aati hai."
+        }
+      ],
+      "sourceParagraph": 1469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kai baar freedom..."
+        }
+      ],
+      "sourceParagraph": 1470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "answers ke kam hone se aati hai."
+        }
+      ],
+      "sourceParagraph": 1471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sochte hain peace certainty se aati hai."
+        }
+      ],
+      "sourceParagraph": 1472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kai baar peace..."
+        }
+      ],
+      "sourceParagraph": 1473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "certainty ko carry na karne se aati hai."
+        }
+      ],
+      "sourceParagraph": 1474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur hum sochte hain completion future mein hai."
+        }
+      ],
+      "sourceParagraph": 1475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kai baar completion..."
+        }
+      ],
+      "sourceParagraph": 1476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "future ko chase karna band karne mein hoti hai."
+        }
+      ],
+      "sourceParagraph": 1477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human story beautiful bhi thi."
+        }
+      ],
+      "sourceParagraph": 1478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Painful bhi."
+        }
+      ],
+      "sourceParagraph": 1479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Confusing bhi."
+        }
+      ],
+      "sourceParagraph": 1480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaningful bhi."
+        }
+      ],
+      "sourceParagraph": 1481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur contradictory bhi."
+        }
+      ],
+      "sourceParagraph": 1482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne civilizations banayi."
+        }
+      ],
+      "sourceParagraph": 1483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne religions banaye."
+        }
+      ],
+      "sourceParagraph": 1484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne philosophies banayi."
+        }
+      ],
+      "sourceParagraph": 1485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne wars bhi banaye."
+        }
+      ],
+      "sourceParagraph": 1486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne poetry likhi."
+        }
+      ],
+      "sourceParagraph": 1487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne heartbreaks feel kiye."
+        }
+      ],
+      "sourceParagraph": 1488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne stars ko dekha."
+        }
+      ],
+      "sourceParagraph": 1489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne khud ko dhoonda."
+        }
+      ],
+      "sourceParagraph": 1490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sabse interesting baat ye thi..."
+        }
+      ],
+      "sourceParagraph": 1491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki poori journey mein..."
+        }
+      ],
+      "sourceParagraph": 1492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "human continuously khud ko samajhne ki koshish karta raha."
+        }
+      ],
+      "sourceParagraph": 1493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad kuch bhi nahi."
+        }
+      ],
+      "sourceParagraph": 1494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sab kuch."
+        }
+      ],
+      "sourceParagraph": 1495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya wahi hai."
+        }
+      ],
+      "sourceParagraph": 1496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aasman wahi hai."
+        }
+      ],
+      "sourceParagraph": 1497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hawa wahi hai."
+        }
+      ],
+      "sourceParagraph": 1498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life wahi hai."
+        }
+      ],
+      "sourceParagraph": 1499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin dekhne ka tareeka badal gaya."
+        }
+      ],
+      "sourceParagraph": 1500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab har thought ko believe karna zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 1501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har fear ko obey karna zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 1502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har story ko reality samajhna zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 1503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har version of yourself ko protect karna bhi zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 1504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan story dheemi padti hai..."
+        }
+      ],
+      "sourceParagraph": 1505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wahan ek space nazar aati hai."
+        }
+      ],
+      "sourceParagraph": 1506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisi space jo kabhi gayab nahi hui thi."
+        }
+      ],
+      "sourceParagraph": 1507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas noise zyada tha."
+        }
+      ],
+      "sourceParagraph": 1508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi space mein..."
+        }
+      ],
+      "sourceParagraph": 1509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life sabse direct hoti hai."
+        }
+      ],
+      "sourceParagraph": 1510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina explanation ke."
+        }
+      ],
+      "sourceParagraph": 1511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina narration ke."
+        }
+      ],
+      "sourceParagraph": 1512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina ownership ke."
+        }
+      ],
+      "sourceParagraph": 1513
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"After the Human\" ka matlab human ko reject karna nahi."
+        }
+      ],
+      "sourceParagraph": 1514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human ko transcend karna bhi nahi."
+        }
+      ],
+      "sourceParagraph": 1515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human ko destroy karna bhi nahi."
+        }
+      ],
+      "sourceParagraph": 1516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Iska matlab sirf itna hai:"
+        }
+      ],
+      "sourceParagraph": 1517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human story ko story ki tarah dekh pana."
+        }
+      ],
+      "sourceParagraph": 1518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uski beauty ko appreciate kar pana."
+        }
+      ],
+      "sourceParagraph": 1519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uski suffering ko samajh pana."
+        }
+      ],
+      "sourceParagraph": 1520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir bhi uske andar completely kho na jana."
+        }
+      ],
+      "sourceParagraph": 1521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jis moment story visible ho jati hai..."
+        }
+      ],
+      "sourceParagraph": 1522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usi moment ek nayi possibility janam leti hai."
+        }
+      ],
+      "sourceParagraph": 1523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aisi possibility jahan life ko continuously explain karne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 1524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf jeene ki zarurat hai."
+        }
+      ],
+      "sourceParagraph": 1525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad..."
+        }
+      ],
+      "sourceParagraph": 1526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aakhir mein..."
+        }
+      ],
+      "sourceParagraph": 1527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yehi kaafi hai."
+        }
+      ],
+      "sourceParagraph": 1528
+    }
+  ],
+  "index": 23,
+  "number": "EPILOGUE —",
+  "file": "chapters/23-after-the-human.json"
+}

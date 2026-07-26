@@ -1,0 +1,173 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "ABOUT THE AUTHOR",
+  "sourceRange": [
+    1830,
+    1847
+  ],
+  "headerSourceParagraphs": {
+    "title": 1830
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit is a student and writer who explores human consciousness not as a concept, but as a lived disturbance."
+        }
+      ],
+      "sourceParagraph": 1831
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work does not attempt to explain life."
+        }
+      ],
+      "sourceParagraph": 1832
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It observes what happens when life starts getting observed too closely."
+        }
+      ],
+      "sourceParagraph": 1833
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is interested in the subtle breaking point where awareness stops being clarity and starts becoming overload where understanding no longer simplifies experience, but starts separating the experiencer from the experience itself."
+        }
+      ],
+      "sourceParagraph": 1834
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Most of his writing moves through the invisible shifts inside the human mind:"
+        }
+      ],
+      "sourceParagraph": 1835
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "when instinct turns into analysis,"
+        }
+      ],
+      "sourceParagraph": 1836
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "when feeling turns into interpretation,"
+        }
+      ],
+      "sourceParagraph": 1837
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and when presence slowly gets replaced by observation."
+        }
+      ],
+      "sourceParagraph": 1838
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not see confusion as lack of understanding."
+        }
+      ],
+      "sourceParagraph": 1839
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He sees it as the side effect of too much understanding without grounding."
+        }
+      ],
+      "sourceParagraph": 1840
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There are no conclusions in his writing because he does not believe human perception ever reaches a final state."
+        }
+      ],
+      "sourceParagraph": 1841
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It only keeps restructuring itself depending on how closely it is watched."
+        }
+      ],
+      "sourceParagraph": 1842
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not a message."
+        }
+      ],
+      "sourceParagraph": 1843
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is a record of what happens when a mind begins to notice its own patterns without interruption."
+        }
+      ],
+      "sourceParagraph": 1844
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And once that noticing begins…"
+        }
+      ],
+      "sourceParagraph": 1845
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it rarely fully stops."
+        }
+      ],
+      "sourceParagraph": 1846
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It only changes its form."
+        }
+      ],
+      "sourceParagraph": 1847
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 24,
+  "file": "chapters/24-about-the-author.json"
+}

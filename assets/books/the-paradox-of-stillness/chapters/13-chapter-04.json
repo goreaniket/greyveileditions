@@ -1,0 +1,994 @@
+{
+  "id": "chapter-04",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 4:",
+  "title": "THE WEIGHTLESS MOMENT",
+  "shortTitle": "THE WEIGHTLESS MOMENT",
+  "sourceRange": [
+    654,
+    763
+  ],
+  "headerSourceParagraphs": {
+    "number": 654,
+    "title": 655
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan ek ajeeb jagah par jeeta hai."
+        }
+      ],
+      "sourceParagraph": 656
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Physical world mein nahi."
+        }
+      ],
+      "sourceParagraph": 657
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf present moment mein bhi nahi."
+        }
+      ],
+      "sourceParagraph": 658
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki aksar..."
+        }
+      ],
+      "sourceParagraph": 659
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yaadon aur possibilities ke beech."
+        }
+      ],
+      "sourceParagraph": 660
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Body yahan hoti hai."
+        }
+      ],
+      "sourceParagraph": 661
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind kahin aur."
+        }
+      ],
+      "sourceParagraph": 662
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi past mein."
+        }
+      ],
+      "sourceParagraph": 663
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi future mein."
+        }
+      ],
+      "sourceParagraph": 664
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi dono mein ek saath."
+        }
+      ],
+      "sourceParagraph": 665
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere yeh itna normal lagne lagta hai ki hum notice hi nahi karte."
+        }
+      ],
+      "sourceParagraph": 666
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum breakfast karte hue future ke baare mein soch rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 667
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum walk karte hue past ke conversations repeat kar rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 668
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum kisi ke saath baithe hote hain..."
+        }
+      ],
+      "sourceParagraph": 669
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin mentally kahin aur hote hain."
+        }
+      ],
+      "sourceParagraph": 670
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi wajah se life kabhi kabhi itni heavy lagti hai."
+        }
+      ],
+      "sourceParagraph": 671
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because the moment is heavy."
+        }
+      ],
+      "sourceParagraph": 672
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because the moment ke andar dus hazaar aur moments uthakar laaye ja rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 673
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek regret."
+        }
+      ],
+      "sourceParagraph": 674
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek fear."
+        }
+      ],
+      "sourceParagraph": 675
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek memory."
+        }
+      ],
+      "sourceParagraph": 676
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek expectation."
+        }
+      ],
+      "sourceParagraph": 677
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek imaginary future."
+        }
+      ],
+      "sourceParagraph": 678
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere present moment ek storage room ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 679
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan mind har cheez collect karke rakhta rehta hai."
+        }
+      ],
+      "sourceParagraph": 680
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Purani baatein."
+        }
+      ],
+      "sourceParagraph": 681
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Purani galtiyan."
+        }
+      ],
+      "sourceParagraph": 682
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Purane versions of ourselves."
+        }
+      ],
+      "sourceParagraph": 683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur saath hi future ki worries."
+        }
+      ],
+      "sourceParagraph": 684
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ki plans."
+        }
+      ],
+      "sourceParagraph": 685
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ki uncertainties."
+        }
+      ],
+      "sourceParagraph": 686
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir hum kehte hain:"
+        }
+      ],
+      "sourceParagraph": 687
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Life heavy lag rahi hai.\""
+        }
+      ],
+      "sourceParagraph": 688
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 689
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life heavy nahi hoti."
+        }
+      ],
+      "sourceParagraph": 690
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind jo weight carry kar raha hota hai..."
+        }
+      ],
+      "sourceParagraph": 691
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh heavy hota hai."
+        }
+      ],
+      "sourceParagraph": 692
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Socho."
+        }
+      ],
+      "sourceParagraph": 693
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Iss exact moment mein."
+        }
+      ],
+      "sourceParagraph": 694
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Abhi."
+        }
+      ],
+      "sourceParagraph": 695
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jis second tum yeh padh rahe ho."
+        }
+      ],
+      "sourceParagraph": 696
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya problem actually present hai?"
+        }
+      ],
+      "sourceParagraph": 697
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sach mein present."
+        }
+      ],
+      "sourceParagraph": 698
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not memory."
+        }
+      ],
+      "sourceParagraph": 699
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not imagination."
+        }
+      ],
+      "sourceParagraph": 700
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not possibility."
+        }
+      ],
+      "sourceParagraph": 701
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Abhi."
+        }
+      ],
+      "sourceParagraph": 702
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur bahut baar ek strange realization saamne aati hai."
+        }
+      ],
+      "sourceParagraph": 703
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki current moment utna heavy nahi tha jitna mind usse bana raha tha."
+        }
+      ],
+      "sourceParagraph": 704
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Weight kahin aur se aa raha tha."
+        }
+      ],
+      "sourceParagraph": 705
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Past se."
+        }
+      ],
+      "sourceParagraph": 706
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future se."
+        }
+      ],
+      "sourceParagraph": 707
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stories se."
+        }
+      ],
+      "sourceParagraph": 708
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretations se."
+        }
+      ],
+      "sourceParagraph": 709
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek aur strange cheez samajh aati hai."
+        }
+      ],
+      "sourceParagraph": 710
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind sirf events carry nahi karta."
+        }
+      ],
+      "sourceParagraph": 711
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind meanings carry karta hai."
+        }
+      ],
+      "sourceParagraph": 712
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi ek memory nahi dard deti."
+        }
+      ],
+      "sourceParagraph": 713
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us memory ka meaning dard deta hai."
+        }
+      ],
+      "sourceParagraph": 714
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi future nahi daraata."
+        }
+      ],
+      "sourceParagraph": 715
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ke baare mein bani hui story daraati hai."
+        }
+      ],
+      "sourceParagraph": 716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi liye do log same situation mein completely different experience kar sakte hain."
+        }
+      ],
+      "sourceParagraph": 717
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki situation same hoti hai."
+        }
+      ],
+      "sourceParagraph": 718
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story alag hoti hai."
+        }
+      ],
+      "sourceParagraph": 719
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi jagah ek weightless moment paida hota hai."
+        }
+      ],
+      "sourceParagraph": 720
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not when life becomes perfect."
+        }
+      ],
+      "sourceParagraph": 721
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not when all problems disappear."
+        }
+      ],
+      "sourceParagraph": 722
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not when every question gets answered."
+        }
+      ],
+      "sourceParagraph": 723
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But when, for a brief moment..."
+        }
+      ],
+      "sourceParagraph": 724
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the mind stops carrying everything."
+        }
+      ],
+      "sourceParagraph": 725
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek moment ke liye."
+        }
+      ],
+      "sourceParagraph": 726
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Past ko side rakh deta hai."
+        }
+      ],
+      "sourceParagraph": 727
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ko side rakh deta hai."
+        }
+      ],
+      "sourceParagraph": 728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sirf yahan hota hai."
+        }
+      ],
+      "sourceParagraph": 729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us second mein kuch magical nahi hota."
+        }
+      ],
+      "sourceParagraph": 730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sky nahi khulta."
+        }
+      ],
+      "sourceParagraph": 731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Universe secrets reveal nahi karta."
+        }
+      ],
+      "sourceParagraph": 732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kuch aur hota hai."
+        }
+      ],
+      "sourceParagraph": 733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Weight kam ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Achanak saans halki lagti hai."
+        }
+      ],
+      "sourceParagraph": 735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Achanak room zyada clear lagta hai."
+        }
+      ],
+      "sourceParagraph": 736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Achanak life utni complicated nahi lagti."
+        }
+      ],
+      "sourceParagraph": 737
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because reality changed."
+        }
+      ],
+      "sourceParagraph": 738
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because psychological load thodi der ke liye neeche rakh diya gaya."
+        }
+      ],
+      "sourceParagraph": 739
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab ek uncomfortable realization aati hai."
+        }
+      ],
+      "sourceParagraph": 740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum poori life problems solve karne mein busy rehte hain."
+        }
+      ],
+      "sourceParagraph": 741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kabhi kabhi problem problem nahi hoti."
+        }
+      ],
+      "sourceParagraph": 742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem woh extra weight hota hai jo hum uske saath attach kar dete hain."
+        }
+      ],
+      "sourceParagraph": 743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek moment."
+        }
+      ],
+      "sourceParagraph": 744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek ordinary moment."
+        }
+      ],
+      "sourceParagraph": 745
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan tumhe kuch prove nahi karna."
+        }
+      ],
+      "sourceParagraph": 746
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahin pahunchna nahi."
+        }
+      ],
+      "sourceParagraph": 747
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch samajhna nahi."
+        }
+      ],
+      "sourceParagraph": 748
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch become nahi karna."
+        }
+      ],
+      "sourceParagraph": 749
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas exist karna hai."
+        }
+      ],
+      "sourceParagraph": 750
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye weightless moments itne rare lagte hain."
+        }
+      ],
+      "sourceParagraph": 751
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki woh life se nahi milte."
+        }
+      ],
+      "sourceParagraph": 752
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh tab milte hain jab mind kuch der ke liye apna bojh neeche rakh deta hai."
+        }
+      ],
+      "sourceParagraph": 753
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us silence mein..."
+        }
+      ],
+      "sourceParagraph": 754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek strange freedom mehsoos hoti hai."
+        }
+      ],
+      "sourceParagraph": 755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aisi freedom jo achievement se nahi aati."
+        }
+      ],
+      "sourceParagraph": 756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Understanding se nahi aati."
+        }
+      ],
+      "sourceParagraph": 757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Control se nahi aati."
+        }
+      ],
+      "sourceParagraph": 758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas presence se aati hai."
+        }
+      ],
+      "sourceParagraph": 759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye..."
+        }
+      ],
+      "sourceParagraph": 760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sabse halka moment woh nahi hota jahan life perfect ho."
+        }
+      ],
+      "sourceParagraph": 761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse halka moment woh hota hai..."
+        }
+      ],
+      "sourceParagraph": 762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan tum kuch der ke liye life ka weight uthana band kar dete ho."
+        }
+      ],
+      "sourceParagraph": 763
+    }
+  ],
+  "number": "CHAPTER 4:",
+  "phase": "The Paradox of Stillness",
+  "index": 13,
+  "file": "chapters/13-chapter-04.json"
+}

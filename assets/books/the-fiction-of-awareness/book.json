@@ -1,0 +1,413 @@
+{
+  "id": "the-fiction-of-awareness",
+  "slug": "the-fiction-of-awareness",
+  "title": "The Fiction of Awareness",
+  "subtitle": "The greatest fiction ever created was not a story. It was the one called \"Me.\"",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Fiction",
+  "seriesDisplay": "The Human Fiction Series",
+  "bookNumber": "Book I",
+  "bookIndex": 1,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-fiction/assets/covers/the%20fiction%20of%20awareness.jpeg",
+  "cover": {
+    "web": "/assets/books/the-fiction-of-awareness/cover/front-cover.webp",
+    "print": "/assets/books/the-fiction-of-awareness/cover/front-cover-print.png",
+    "source": "/assets/books/the-fiction-of-awareness/cover/cover-source.png",
+    "alt": "The Fiction of Awareness book cover"
+  },
+  "readerRoute": "/projects/human-fiction/books/the-fiction-of-awareness/reader/",
+  "readerExitUrl": "/projects/human-fiction/books/the-fiction-of-awareness.html",
+  "storageKey": "greyveil:the-fiction-of-awareness:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Fiction",
+    "book": "The Fiction of Awareness",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-fiction-awareness",
+    "variables": {
+      "light": {
+        "--reader-bg": "#D9DEDB",
+        "--reader-paper": "#F7EFE2",
+        "--reader-paper-soft": "#EEE5D7",
+        "--reader-text": "#252B2D",
+        "--reader-heading": "#171C1E",
+        "--reader-muted": "color-mix(in srgb, #252B2D 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #252B2D 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #252B2D 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #5C6E66 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #252B2D 20%, transparent)",
+        "--reader-accent": "#5C6E66",
+        "--reader-accent-strong": "#354940",
+        "--reader-accent-soft": "color-mix(in srgb, #5C6E66 12%, transparent)",
+        "--reader-warm": "#A6764C",
+        "--reader-focus": "#354940",
+        "--reader-control-bg": "#EEE5D7",
+        "--reader-control-border": "color-mix(in srgb, #252B2D 18%, transparent)",
+        "--reader-input-bg": "#F7EFE2",
+        "--reader-input-text": "#252B2D",
+        "--reader-placeholder": "color-mix(in srgb, #252B2D 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #5C6E66 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "sepia": {
+        "--reader-bg": "#DDD1BF",
+        "--reader-paper": "#F4E5CF",
+        "--reader-paper-soft": "#E8D7BE",
+        "--reader-text": "#362F27",
+        "--reader-heading": "#251F1A",
+        "--reader-muted": "color-mix(in srgb, #362F27 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #362F27 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #362F27 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #746A54 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #362F27 20%, transparent)",
+        "--reader-accent": "#746A54",
+        "--reader-accent-strong": "#514936",
+        "--reader-accent-soft": "color-mix(in srgb, #746A54 12%, transparent)",
+        "--reader-warm": "#9B6843",
+        "--reader-focus": "#514936",
+        "--reader-control-bg": "#E8D7BE",
+        "--reader-control-border": "color-mix(in srgb, #362F27 18%, transparent)",
+        "--reader-input-bg": "#F4E5CF",
+        "--reader-input-text": "#362F27",
+        "--reader-placeholder": "color-mix(in srgb, #362F27 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #746A54 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "dark": {
+        "--reader-bg": "#0E1312",
+        "--reader-paper": "#17201D",
+        "--reader-paper-soft": "#202A26",
+        "--reader-text": "#EFE7DA",
+        "--reader-heading": "#FAF0E2",
+        "--reader-muted": "color-mix(in srgb, #EFE7DA 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EFE7DA 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EFE7DA 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #AFC4B8 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EFE7DA 20%, transparent)",
+        "--reader-accent": "#AFC4B8",
+        "--reader-accent-strong": "#D5E2DB",
+        "--reader-accent-soft": "color-mix(in srgb, #AFC4B8 12%, transparent)",
+        "--reader-warm": "#C89A65",
+        "--reader-focus": "#D5E2DB",
+        "--reader-control-bg": "#202A26",
+        "--reader-control-border": "color-mix(in srgb, #EFE7DA 18%, transparent)",
+        "--reader-input-bg": "#17201D",
+        "--reader-input-text": "#EFE7DA",
+        "--reader-placeholder": "color-mix(in srgb, #EFE7DA 56%, transparent)",
+        "--reader-success": "#A6D1AD",
+        "--reader-error-text": "#EBA8A2",
+        "--reader-page-edge": "color-mix(in srgb, #AFC4B8 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-fiction/chapters/WORD/THE FICTION OF AWARENESS.docx",
+    "pdfVerification": "/projects/human-fiction/chapters/PDF/the fiction of awareness book 1.pdf",
+    "sourceParagraphsNonEmpty": 789,
+    "semanticUnits": 18,
+    "chapters": 7,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Fiction of Awareness",
+      "shortTitle": "Opening",
+      "sourceRange": [
+        1,
+        11
+      ],
+      "openingMode": "source",
+      "index": 0,
+      "file": "chapters/00-opening.json"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "sourceRange": [
+        12,
+        29
+      ],
+      "suppressHeaderNumber": true,
+      "index": 1,
+      "file": "chapters/01-contents.json"
+    },
+    {
+      "id": "copyright",
+      "kind": "copyright",
+      "sourceKind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT NOTICE",
+      "shortTitle": "COPYRIGHT NOTICE",
+      "sourceRange": [
+        30,
+        34
+      ],
+      "index": 2,
+      "suppressHeaderNumber": true,
+      "file": "chapters/02-copyright.json"
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "sourceKind": "disclaimer",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "sourceRange": [
+        35,
+        46
+      ],
+      "index": 3,
+      "suppressHeaderNumber": true,
+      "file": "chapters/03-disclaimer.json"
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "sourceKind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "sourceRange": [
+        47,
+        57
+      ],
+      "index": 4,
+      "suppressHeaderNumber": true,
+      "file": "chapters/04-dedication.json"
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "sourceKind": "author-note",
+      "label": "Note from the Author",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "sourceRange": [
+        58,
+        86
+      ],
+      "index": 5,
+      "suppressHeaderNumber": true,
+      "file": "chapters/05-note-from-the-author.json"
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "sourceKind": "prologue",
+      "label": "Prologue",
+      "title": "PROLOGUE:",
+      "shortTitle": "PROLOGUE:",
+      "sourceRange": [
+        87,
+        116
+      ],
+      "index": 6,
+      "suppressHeaderNumber": true,
+      "file": "chapters/06-prologue.json"
+    },
+    {
+      "id": "the-fiction-of-self",
+      "kind": "introduction",
+      "sourceKind": "introduction",
+      "label": "Introduction",
+      "title": "THE FICTION OF SELF",
+      "shortTitle": "THE FICTION OF SELF",
+      "sourceRange": [
+        117,
+        188
+      ],
+      "index": 7,
+      "number": "INTRODUCTION:",
+      "file": "chapters/07-the-fiction-of-self.json"
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 1",
+      "title": "The Illusion of a Fixed “I”",
+      "shortTitle": "The Illusion of a Fixed “I”",
+      "sourceRange": [
+        189,
+        280
+      ],
+      "index": 8,
+      "number": "CHAPTER 1 :",
+      "file": "chapters/08-chapter-01.json"
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 2",
+      "title": "The Illusion of Memory Ownership",
+      "shortTitle": "The Illusion of Memory Ownership",
+      "sourceRange": [
+        281,
+        344
+      ],
+      "index": 9,
+      "number": "CHAPTER 2 :",
+      "file": "chapters/09-chapter-02.json"
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 3",
+      "title": "The Fiction of the Inner Voice",
+      "shortTitle": "The Fiction of the Inner Voice",
+      "sourceRange": [
+        345,
+        422
+      ],
+      "index": 10,
+      "number": "CHAPTER 3 :",
+      "file": "chapters/10-chapter-03.json"
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 4",
+      "title": "The Fiction of Meaning",
+      "shortTitle": "The Fiction of Meaning",
+      "sourceRange": [
+        423,
+        490
+      ],
+      "index": 11,
+      "number": "CHAPTER 4:",
+      "file": "chapters/11-chapter-04.json"
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 5",
+      "title": "The Fiction of Becoming",
+      "shortTitle": "The Fiction of Becoming",
+      "sourceRange": [
+        491,
+        552
+      ],
+      "index": 12,
+      "number": "CHAPTER 5 :",
+      "file": "chapters/12-chapter-05.json"
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 6",
+      "title": "The Collapse of the Self-Story",
+      "shortTitle": "The Collapse of the Self-Story",
+      "sourceRange": [
+        553,
+        610
+      ],
+      "index": 13,
+      "number": "CHAPTER 6:",
+      "file": "chapters/13-chapter-06.json"
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 7",
+      "title": "The Witness Without Identity",
+      "shortTitle": "The Witness Without Identity",
+      "sourceRange": [
+        611,
+        670
+      ],
+      "index": 14,
+      "number": "CHAPTER 7:",
+      "file": "chapters/14-chapter-07.json"
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "sourceKind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION",
+      "shortTitle": "END REALIZATION",
+      "sourceRange": [
+        671,
+        727
+      ],
+      "index": 15,
+      "suppressHeaderNumber": true,
+      "file": "chapters/15-end-realization.json"
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "sourceKind": "epilogue",
+      "label": "Epilogue",
+      "title": "EPILOGUE :",
+      "shortTitle": "EPILOGUE :",
+      "sourceRange": [
+        728,
+        770
+      ],
+      "index": 16,
+      "suppressHeaderNumber": true,
+      "file": "chapters/16-epilogue.json"
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "sourceKind": "about-author",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "sourceRange": [
+        771,
+        789
+      ],
+      "index": 17,
+      "suppressHeaderNumber": true,
+      "file": "chapters/17-about-the-author.json"
+    }
+  ]
+}

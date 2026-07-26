@@ -1,0 +1,476 @@
+{
+  "id": "the-paradox-of-reality",
+  "slug": "the-paradox-of-reality",
+  "title": "The Paradox of Reality",
+  "subtitle": "When perception becomes the prison, reality becomes the illusion.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "seriesDisplay": "The Human Paradox Series",
+  "bookNumber": "Book IV",
+  "bookIndex": 4,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-paradox/assets/covers/the%20paradox%20of%20reality.jpeg",
+  "cover": {
+    "web": "/assets/books/the-paradox-of-reality/cover/front-cover.webp",
+    "print": "/assets/books/the-paradox-of-reality/cover/front-cover-print.png",
+    "source": "/assets/books/the-paradox-of-reality/cover/cover-source.png",
+    "alt": "The Paradox of Reality book cover"
+  },
+  "readerRoute": "/projects/human-paradox/books/the-paradox-of-reality/reader/",
+  "readerExitUrl": "/projects/human-paradox/books/the-paradox-of-reality.html",
+  "storageKey": "greyveil:the-paradox-of-reality:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Paradox",
+    "book": "The Paradox of Reality",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-paradox-reality",
+    "variables": {
+      "light": {
+        "--reader-bg": "#DDE2DD",
+        "--reader-paper": "#F7EFE2",
+        "--reader-paper-soft": "#EAE2D4",
+        "--reader-text": "#29302C",
+        "--reader-heading": "#1D241F",
+        "--reader-muted": "color-mix(in srgb, #29302C 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #29302C 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #29302C 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #687858 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #29302C 20%, transparent)",
+        "--reader-accent": "#687858",
+        "--reader-accent-strong": "#4B5B43",
+        "--reader-accent-soft": "color-mix(in srgb, #687858 12%, transparent)",
+        "--reader-warm": "#9B744E",
+        "--reader-focus": "#4B5B43",
+        "--reader-control-bg": "#EAE2D4",
+        "--reader-control-border": "color-mix(in srgb, #29302C 18%, transparent)",
+        "--reader-input-bg": "#F7EFE2",
+        "--reader-input-text": "#29302C",
+        "--reader-placeholder": "color-mix(in srgb, #29302C 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #687858 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#DED7C8",
+        "--reader-paper": "#F2E5D0",
+        "--reader-paper-soft": "#E6D8C2",
+        "--reader-text": "#352E26",
+        "--reader-heading": "#241F18",
+        "--reader-muted": "color-mix(in srgb, #352E26 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #352E26 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #352E26 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #71684D 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #352E26 20%, transparent)",
+        "--reader-accent": "#71684D",
+        "--reader-accent-strong": "#585139",
+        "--reader-accent-soft": "color-mix(in srgb, #71684D 12%, transparent)",
+        "--reader-warm": "#96724B",
+        "--reader-focus": "#585139",
+        "--reader-control-bg": "#E6D8C2",
+        "--reader-control-border": "color-mix(in srgb, #352E26 18%, transparent)",
+        "--reader-input-bg": "#F2E5D0",
+        "--reader-input-text": "#352E26",
+        "--reader-placeholder": "color-mix(in srgb, #352E26 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #71684D 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#0E130F",
+        "--reader-paper": "#191E18",
+        "--reader-paper-soft": "#232B21",
+        "--reader-text": "#EFE7D9",
+        "--reader-heading": "#F8F0E4",
+        "--reader-muted": "color-mix(in srgb, #EFE7D9 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EFE7D9 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EFE7D9 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #AEBB8B 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EFE7D9 20%, transparent)",
+        "--reader-accent": "#AEBB8B",
+        "--reader-accent-strong": "#D2DAA9",
+        "--reader-accent-soft": "color-mix(in srgb, #AEBB8B 12%, transparent)",
+        "--reader-warm": "#C29A68",
+        "--reader-focus": "#D2DAA9",
+        "--reader-control-bg": "#232B21",
+        "--reader-control-border": "color-mix(in srgb, #EFE7D9 18%, transparent)",
+        "--reader-input-bg": "#191E18",
+        "--reader-input-text": "#EFE7D9",
+        "--reader-placeholder": "color-mix(in srgb, #EFE7D9 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #AEBB8B 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-paradox/chapters/WORD/THE PARADO OF REALITY.docx",
+    "pdfVerification": "/projects/human-paradox/chapters/PDF/the paradox of reality book 4.pdf",
+    "sourceParagraphsNonEmpty": 1236,
+    "semanticUnits": 24,
+    "chapters": 9,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Paradox of Reality",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        9
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        10,
+        33
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "copyright",
+      "kind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT",
+      "shortTitle": "COPYRIGHT",
+      "file": "chapters/02-copyright.json",
+      "index": 2,
+      "sourceRange": [
+        34,
+        44
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        45,
+        63
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        64,
+        81
+      ]
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "file": "chapters/05-note-from-the-author.json",
+      "index": 5,
+      "sourceRange": [
+        82,
+        128
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "PROLOGUE",
+      "shortTitle": "PROLOGUE",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        129,
+        265
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "INTRODUCTION",
+      "shortTitle": "INTRODUCTION",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        266,
+        340
+      ]
+    },
+    {
+      "id": "arc-i-the-fracture-of-seeing",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC I — THE FRACTURE OF SEEING",
+      "shortTitle": "ARC I — THE FRACTURE OF SEEING",
+      "file": "chapters/08-arc-i-the-fracture-of-seeing.json",
+      "index": 8,
+      "sourceRange": [
+        341,
+        341
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "Chapter 1",
+      "title": "CHAPTER 1 — THE FEELING THAT REALITY IS NOT STABLE",
+      "shortTitle": "THE FEELING THAT REALITY IS NOT STABLE",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        342,
+        412
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "Chapter 2",
+      "title": "CHAPTER 2 — WHEN SEEING STOPS BEING DIRECT",
+      "shortTitle": "WHEN SEEING STOPS BEING DIRECT",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        413,
+        507
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "Chapter 3",
+      "title": "CHAPTER 3 — MEMORY IS REWRITING REALITY",
+      "shortTitle": "MEMORY IS REWRITING REALITY",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        508,
+        610
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "arc-ii-the-construction-of-reality",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC II — THE CONSTRUCTION OF REALITY",
+      "shortTitle": "ARC II — THE CONSTRUCTION OF REALITY",
+      "file": "chapters/12-arc-ii-the-construction-of-reality.json",
+      "index": 12,
+      "sourceRange": [
+        611,
+        611
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "CHAPTER 4 —",
+      "title": "THE MIND AS A REALITY CONSTRUCTION SYSTEM",
+      "shortTitle": "THE MIND AS A REALITY CONSTRUCTION SYSTEM",
+      "file": "chapters/13-chapter-04.json",
+      "index": 13,
+      "sourceRange": [
+        612,
+        716
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "Chapter 5",
+      "title": "CHAPTER 5 — WHEN TWO REALITIES START COEXISTING",
+      "shortTitle": "WHEN TWO REALITIES START COEXISTING",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        717,
+        791
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "arc-iii-the-collapse-of-certainty",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC III — THE COLLAPSE OF CERTAINTY",
+      "shortTitle": "ARC III — THE COLLAPSE OF CERTAINTY",
+      "file": "chapters/15-arc-iii-the-collapse-of-certainty.json",
+      "index": 15,
+      "sourceRange": [
+        792,
+        792
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "Chapter 6",
+      "title": "CHAPTER 6 — WHEN CERTAINTY STOPS WORKING",
+      "shortTitle": "WHEN CERTAINTY STOPS WORKING",
+      "file": "chapters/16-chapter-06.json",
+      "index": 16,
+      "sourceRange": [
+        793,
+        864
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "Chapter 7",
+      "title": "CHAPTER 7 — WHEN THE WORLD HAS NO FIXED MEANING",
+      "shortTitle": "WHEN THE WORLD HAS NO FIXED MEANING",
+      "file": "chapters/17-chapter-07.json",
+      "index": 17,
+      "sourceRange": [
+        865,
+        964
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "arc-iv-the-quiet-dissolution",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC IV — THE QUIET DISSOLUTION",
+      "shortTitle": "ARC IV — THE QUIET DISSOLUTION",
+      "file": "chapters/18-arc-iv-the-quiet-dissolution.json",
+      "index": 18,
+      "sourceRange": [
+        965,
+        965
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "Chapter 8",
+      "title": "CHAPTER 8 — WHEN THOUGHT LOSES ITS AUTHORITY",
+      "shortTitle": "WHEN THOUGHT LOSES ITS AUTHORITY",
+      "file": "chapters/19-chapter-08.json",
+      "index": 19,
+      "sourceRange": [
+        966,
+        1042
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "Chapter 9",
+      "title": "CHAPTER 9 — WHEN NOTHING NEEDS TO BE UNDERSTOOD",
+      "shortTitle": "WHEN NOTHING NEEDS TO BE UNDERSTOOD",
+      "file": "chapters/20-chapter-09.json",
+      "index": 20,
+      "sourceRange": [
+        1043,
+        1122
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION",
+      "shortTitle": "END REALIZATION",
+      "file": "chapters/21-end-realization.json",
+      "index": 21,
+      "sourceRange": [
+        1123,
+        1165
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "EPILOGUE",
+      "shortTitle": "EPILOGUE",
+      "file": "chapters/22-epilogue.json",
+      "index": 22,
+      "sourceRange": [
+        1166,
+        1216
+      ]
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "file": "chapters/23-about-the-author.json",
+      "index": 23,
+      "sourceRange": [
+        1217,
+        1236
+      ],
+      "suppressHeaderNumber": true
+    }
+  ]
+}

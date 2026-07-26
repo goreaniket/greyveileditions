@@ -1,0 +1,73 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "sourceKind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "DEDICATION",
+  "sourceRange": [
+    43,
+    49
+  ],
+  "headerSourceParagraphs": {
+    "title": 43
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not dedicated to one person"
+        }
+      ],
+      "sourceParagraph": 44
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is dedicated to those who think too much but say too little."
+        }
+      ],
+      "sourceParagraph": 45
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who feel deeply but explain nothing."
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who are tired of their own thoughts…"
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yet still keep listening to them."
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to the version of you that didn’t stop reading this far."
+        }
+      ],
+      "sourceParagraph": 49
+    }
+  ],
+  "index": 4,
+  "file": "chapters/04-dedication.json"
+}

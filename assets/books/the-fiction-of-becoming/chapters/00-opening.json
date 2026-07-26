@@ -1,0 +1,146 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Fiction of Becoming",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    11
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN FICTION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK II",
+          "bold": true
+        },
+        {
+          "text": "I",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE FICTION OF BECOMING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "(",
+          "italic": true
+        },
+        {
+          "text": "The greatest illusion was never who you were.",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "It was the belief that you would finally become someone else.",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 5
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"The mind promised completion in the future."
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It called the present 'unfinished'"
+        }
+      ],
+      "sourceParagraph": 8
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "so that becoming would never have to end.\"»"
+        }
+      ],
+      "sourceParagraph": 9
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL",
+          "bold": true
+        },
+        {
+          "text": " EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 10,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN FICTION COLLECTION",
+          "bold": true
+        },
+        {
+          "text": "\n"
+        }
+      ],
+      "sourceParagraph": 11
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

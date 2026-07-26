@@ -1,0 +1,129 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    11,
+    33
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 11
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright .....................................................................................3 ",
+      "sourceParagraph": 12
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ....................................................................................4 ",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ....................................................................................5",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author ....................................................................6",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "PROLOGUE-Before the System Breaks ..........................................9",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction ..................................................................................13",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC I — THE BREAKDOWN OF STRUCTURE",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1 — The Collapse of Meaning ...........................................18",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2 — When Thoughts Become Noise ..................................23",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3 — The Breakdown of Narration .....................................28",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC II — THE DISSOLVING SELF",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4 — The Weakening of Identity .........................................33",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5 — When Reaction Loses Ownership ...............................38",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6 — The Disappearance of Internal Dialogue .....................44",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC III — PERCEPTION WITHOUT FILTER",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7 — When Seeing Becomes Enough ..................................50",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8 — The Observer Without a Center ..................................54",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9 — When Nothing Needs to Be Solved ..............................59",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC IV — THE QUIET COMPLETION",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-line",
+      "text": "End Realization — After Everything Is Seen ................................... 65",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-line",
+      "text": "EPILOGUE– After Everything is seen……………………………………………….69",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-line",
+      "text": "About The Author……………………………………………................................71\n",
+      "sourceParagraph": 33
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

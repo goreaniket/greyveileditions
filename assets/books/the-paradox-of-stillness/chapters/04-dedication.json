@@ -1,0 +1,184 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "sourceKind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "DEDICATION",
+  "sourceRange": [
+    51,
+    69
+  ],
+  "headerSourceParagraphs": {
+    "title": 51
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is dedicated to every mind that has ever tried to find certainty in an uncertain experience."
+        }
+      ],
+      "sourceParagraph": 52
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who have spent years trying to become “enough” without knowing when that idea began."
+        }
+      ],
+      "sourceParagraph": 53
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who have mistaken thought for truth, and search for necessity."
+        }
+      ],
+      "sourceParagraph": 54
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the ones who believed something was missing…"
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and built entire lives around that belief."
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to those who may one day notice…"
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that the feeling of incompleteness was never evidence of incompleteness."
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only a pattern of thought repeating itself."
+        }
+      ],
+      "sourceParagraph": 59
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "May this work not comfort you."
+        }
+      ],
+      "sourceParagraph": 60
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "May it not reassure you."
+        }
+      ],
+      "sourceParagraph": 61
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "May it not offer escape."
+        }
+      ],
+      "sourceParagraph": 62
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And if it changes anything at all…"
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it may only be this:"
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the seriousness with which certain thoughts are taken."
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because when that seriousness loosens…"
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "even slightly…"
+        }
+      ],
+      "sourceParagraph": 67
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "what remains is not a new answer."
+        }
+      ],
+      "sourceParagraph": 68
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But the possibility that no answer was ever required."
+        },
+        {
+          "text": "\n"
+        }
+      ],
+      "sourceParagraph": 69
+    }
+  ],
+  "index": 4,
+  "file": "chapters/04-dedication.json"
+}

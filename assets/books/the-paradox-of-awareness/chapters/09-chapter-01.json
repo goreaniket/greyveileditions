@@ -1,0 +1,7471 @@
+{
+  "id": "chapter-01",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 1:",
+  "title": "THE FIRST AWAKENING",
+  "shortTitle": "THE FIRST AWAKENING",
+  "sourceRange": [
+    231,
+    476
+  ],
+  "headerSourceParagraphs": {
+    "number": 231,
+    "title": 232
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART I",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 233,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE FIRST HUMAN QUESTION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 234,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi "
+        },
+        {
+          "text": "socha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aakhir "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " aur "
+        },
+        {
+          "text": "baaki"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jeevon"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "farq"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Taakat"
+        },
+        {
+          "text": "? "
+        }
+      ],
+      "sourceParagraph": 237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nahi."
+        }
+      ],
+      "sourceParagraph": 238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Haathi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "humse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "taakatvar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Speed?"
+        }
+      ],
+      "sourceParagraph": 240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nahi."
+        }
+      ],
+      "sourceParagraph": 241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Cheetah "
+        },
+        {
+          "text": "humse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tez"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Senses?"
+        }
+      ],
+      "sourceParagraph": 243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nahi."
+        }
+      ],
+      "sourceParagraph": 244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kai "
+        },
+        {
+          "text": "jaanwar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "humse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " sun "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": ", aur "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mehsoos"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Iss"
+        },
+        {
+          "text": " poori "
+        },
+        {
+          "text": "dharti"
+        },
+        {
+          "text": " par "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " ek hi "
+        },
+        {
+          "text": "prajati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "raat"
+        },
+        {
+          "text": " ko "
+        },
+        {
+          "text": "aasmaan"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "taraf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sochti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 247
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Main "
+        },
+        {
+          "text": "kaun"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoon"
+        },
+        {
+          "text": "?\""
+        }
+      ],
+      "sourceParagraph": 248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf"
+        },
+        {
+          "text": " ek hi "
+        },
+        {
+          "text": "prajati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " hi "
+        },
+        {
+          "text": "zindagi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf"
+        },
+        {
+          "text": " ek hi "
+        },
+        {
+          "text": "prajati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "jaanti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki ek din "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " mar "
+        },
+        {
+          "text": "jayegi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "humari"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "taakat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bojh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "kahani"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "yahan"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "shuru"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahani "
+        },
+        {
+          "text": "shuru"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hazaaron"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehle"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Socho"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "aadimanav"
+        },
+        {
+          "text": " jungle "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kinaare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baitha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "paas"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "na"
+        },
+        {
+          "text": " koi kitab "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi "
+        },
+        {
+          "text": "dharm"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi science."
+        }
+      ],
+      "sourceParagraph": 259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi philosophy."
+        }
+      ],
+      "sourceParagraph": 260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse"
+        },
+        {
+          "text": " galaxies "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " pata."
+        }
+      ],
+      "sourceParagraph": 261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Atoms "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " pata."
+        }
+      ],
+      "sourceParagraph": 262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Universe "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " pata."
+        }
+      ],
+      "sourceParagraph": 263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "uske"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "paas"
+        },
+        {
+          "text": " ek "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh "
+        },
+        {
+          "text": "aasmaan"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "taraf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sitare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chamak"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hawa "
+        },
+        {
+          "text": "chal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "waise"
+        },
+        {
+          "text": " hi "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaise"
+        },
+        {
+          "text": " kal "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "aaj"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "alag"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "usne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sitare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhe"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "usne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " khud ko "
+        },
+        {
+          "text": "dekha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "usi"
+        },
+        {
+          "text": " pal ek "
+        },
+        {
+          "text": "nayi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "paida"
+        },
+        {
+          "text": " hui."
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness."
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khud ko "
+        },
+        {
+          "text": "dekhne"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "kshamata"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khud "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sochne"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "kshamata"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khud se "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karne"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "kshamata"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh ek "
+        },
+        {
+          "text": "chhota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sa"
+        },
+        {
+          "text": " pal "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar "
+        },
+        {
+          "text": "dhyaan"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "dekho"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh poori human history "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " pal se "
+        },
+        {
+          "text": "nikli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Science."
+        }
+      ],
+      "sourceParagraph": 281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Philosophy."
+        }
+      ],
+      "sourceParagraph": 282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Religion."
+        }
+      ],
+      "sourceParagraph": 283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Art."
+        }
+      ],
+      "sourceParagraph": 284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poetry."
+        }
+      ],
+      "sourceParagraph": 285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Civilizations."
+        }
+      ],
+      "sourceParagraph": 286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab ek hi "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "santaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness."
+        }
+      ],
+      "sourceParagraph": 288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "yahan"
+        },
+        {
+          "text": " ek "
+        },
+        {
+          "text": "ajeeb"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum awareness ko "
+        },
+        {
+          "text": "hamesha"
+        },
+        {
+          "text": " gift "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "roop"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bina"
+        },
+        {
+          "text": " hum seekh "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Badal "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Grow "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ek "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "kam"
+        },
+        {
+          "text": " log "
+        },
+        {
+          "text": "poochte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar awareness "
+        },
+        {
+          "text": "itni"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badi"
+        },
+        {
+          "text": " gift "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh "
+        },
+        {
+          "text": "phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " aware log "
+        },
+        {
+          "text": "aksar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pareshan"
+        },
+        {
+          "text": " kyu "
+        },
+        {
+          "text": "dikhte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyu "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " log "
+        },
+        {
+          "text": "jitna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "utna"
+        },
+        {
+          "text": " hi "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ulajhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyu "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sachchaiyaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "azaad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bajaye"
+        },
+        {
+          "text": " aur "
+        },
+        {
+          "text": "bhaari"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bana"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " important..."
+        }
+      ],
+      "sourceParagraph": 300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya awareness "
+        },
+        {
+          "text": "sach"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " freedom "
+        },
+        {
+          "text": "deti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " un "
+        },
+        {
+          "text": "cheezon"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "waaqif"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jinhe"
+        },
+        {
+          "text": " hum "
+        },
+        {
+          "text": "pehle"
+        },
+        {
+          "text": " ignore "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": " the?"
+        }
+      ],
+      "sourceParagraph": 302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "iss"
+        },
+        {
+          "text": " kitab ki poori journey "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": " ka "
+        },
+        {
+          "text": "jawab"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dhoondhne"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "koshish"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki"
+        },
+        {
+          "text": " ho "
+        },
+        {
+          "text": "sakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki awareness "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "taakat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "na"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho "
+        },
+        {
+          "text": "sakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "wahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " ka "
+        },
+        {
+          "text": "pehla"
+        },
+        {
+          "text": " paradox "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART II",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 306,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE GIFT OF SEEING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 307,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi notice "
+        },
+        {
+          "text": "kiya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dharti"
+        },
+        {
+          "text": " ka "
+        },
+        {
+          "text": "eklauta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jeev"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " problems se "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " thoughts "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saath"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ladta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "hiran"
+        },
+        {
+          "text": " jungle "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhaagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jab "
+        },
+        {
+          "text": "uske"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "peeche"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sher"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab "
+        },
+        {
+          "text": "khatra"
+        },
+        {
+          "text": " khatam ho "
+        },
+        {
+          "text": "jata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ruk"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh "
+        },
+        {
+          "text": "khaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Paani "
+        },
+        {
+          "text": "peeta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zindagi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jeene"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saath"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ajeeb"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khatra khatam ho "
+        },
+        {
+          "text": "jata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Situation khatam ho "
+        },
+        {
+          "text": "jaati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem khatam ho "
+        },
+        {
+          "text": "jaati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "dimaag"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rukta"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh "
+        },
+        {
+          "text": "ussi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baat"
+        },
+        {
+          "text": " ko "
+        },
+        {
+          "text": "dobara"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jeeta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dobara "
+        },
+        {
+          "text": "sochta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dobara "
+        },
+        {
+          "text": "mehsoos"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "aisi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pareshan"
+        },
+        {
+          "text": " ho "
+        },
+        {
+          "text": "jata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo hui hi "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Raat "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " 2 "
+        },
+        {
+          "text": "baje"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phone ki battery "
+        },
+        {
+          "text": "lagbhag"
+        },
+        {
+          "text": " khatam ho "
+        },
+        {
+          "text": "chuki"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Neend"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " aa "
+        },
+        {
+          "text": "rahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "ungli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "abhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " screen scroll "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur reel."
+        }
+      ],
+      "sourceParagraph": 330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek aur."
+        }
+      ],
+      "sourceParagraph": 331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " ek aur."
+        }
+      ],
+      "sourceParagraph": 332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " ek aur."
+        }
+      ],
+      "sourceParagraph": 333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise hum entertainment "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Escape "
+        },
+        {
+          "text": "dhoondh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahe"
+        },
+        {
+          "text": " hon."
+        }
+      ],
+      "sourceParagraph": 335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab phone finally band "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tab "
+        },
+        {
+          "text": "asli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "awaaz"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "shuru"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Andar ki "
+        },
+        {
+          "text": "awaaz"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kal "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoga"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main "
+        },
+        {
+          "text": "sahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoon"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aisa"
+        },
+        {
+          "text": " kyu bola?"
+        }
+      ],
+      "sourceParagraph": 341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maine "
+        },
+        {
+          "text": "aisa"
+        },
+        {
+          "text": " kyu "
+        },
+        {
+          "text": "kiya"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ka "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoga"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poore universe "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " hi ek "
+        },
+        {
+          "text": "aisa"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jeev"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "chup"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kamre"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "shor"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "paida"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "shor"
+        },
+        {
+          "text": " bahar "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Andar "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mujhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "aaj"
+        },
+        {
+          "text": " ka "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "bhaag"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh khud se "
+        },
+        {
+          "text": "bhaag"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "waqt"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "na"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chahiye"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur notification."
+        }
+      ],
+      "sourceParagraph": 350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur video."
+        }
+      ],
+      "sourceParagraph": 351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur conversation."
+        }
+      ],
+      "sourceParagraph": 352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " der "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " hi thoughts "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saath"
+        },
+        {
+          "text": " akela "
+        },
+        {
+          "text": "na"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rehna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pade"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " awareness ka "
+        },
+        {
+          "text": "pehla"
+        },
+        {
+          "text": " secret "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "yahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " ko "
+        },
+        {
+          "text": "dekhna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness khud ko "
+        },
+        {
+          "text": "dekhna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kai "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo hum "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pasand"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aata"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "bachcha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sheeshe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saamne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "khada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh "
+        },
+        {
+          "text": "muskura"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek adult "
+        },
+        {
+          "text": "sheeshe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saamne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "khada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kai "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chehra"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhta"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "galtiyan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apni"
+        },
+        {
+          "text": " failures."
+        }
+      ],
+      "sourceParagraph": 364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apne"
+        },
+        {
+          "text": " regrets."
+        }
+      ],
+      "sourceParagraph": 365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mirror "
+        },
+        {
+          "text": "wahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "dekhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wala"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "gaya"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " awareness ki "
+        },
+        {
+          "text": "kahani"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya "
+        },
+        {
+          "text": "kam"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badalti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dekhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wala"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Result kal "
+        },
+        {
+          "text": "aane"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wala"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hua"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab normal "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "tumhara"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dimaag"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usne"
+        },
+        {
+          "text": " kal ko "
+        },
+        {
+          "text": "sau"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jee"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liya"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fail "
+        },
+        {
+          "text": "hua"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "toh"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pass "
+        },
+        {
+          "text": "hua"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "toh"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kahenge"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ka "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoga"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality "
+        },
+        {
+          "text": "abhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aayi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin suffering aa "
+        },
+        {
+          "text": "gayi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aksar"
+        },
+        {
+          "text": " do "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " suffer "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " imagination "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " reality "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "toh"
+        },
+        {
+          "text": " reality "
+        },
+        {
+          "text": "aati"
+        },
+        {
+          "text": " hi "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin suffering aa "
+        },
+        {
+          "text": "jaati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahi awareness ka gift "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "abhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hua"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi "
+        },
+        {
+          "text": "wajah"
+        },
+        {
+          "text": " se hum "
+        },
+        {
+          "text": "sapne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi "
+        },
+        {
+          "text": "wajah"
+        },
+        {
+          "text": " se hum "
+        },
+        {
+          "text": "badalte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi "
+        },
+        {
+          "text": "wajah"
+        },
+        {
+          "text": " se hum grow "
+        },
+        {
+          "text": "karte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wajah"
+        },
+        {
+          "text": " se hum "
+        },
+        {
+          "text": "darte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART III"
+        }
+      ],
+      "sourceParagraph": 393,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE BURDEN OF SEEING"
+        }
+      ],
+      "sourceParagraph": 394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aaj"
+        },
+        {
+          "text": " ka "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "kam"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khud se "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "thak"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chuka"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apni"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aadaton"
+        },
+        {
+          "text": " se."
+        }
+      ],
+      "sourceParagraph": 397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apne"
+        },
+        {
+          "text": " patterns se."
+        }
+      ],
+      "sourceParagraph": 398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apne"
+        },
+        {
+          "text": " nature se."
+        }
+      ],
+      "sourceParagraph": 399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ajeeb "
+        },
+        {
+          "text": "baat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "na"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sher "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sochta"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 401
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Kaash main "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " aur "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": ".\""
+        }
+      ],
+      "sourceParagraph": 402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabootar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sochta"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 403
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\""
+        },
+        {
+          "text": "Mujhe"
+        },
+        {
+          "text": " better version "
+        },
+        {
+          "text": "banna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ".\""
+        }
+      ],
+      "sourceParagraph": 404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Roz."
+        }
+      ],
+      "sourceParagraph": 406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har "
+        },
+        {
+          "text": "saal"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har birthday."
+        }
+      ],
+      "sourceParagraph": 408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har "
+        },
+        {
+          "text": "naye"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saal"
+        },
+        {
+          "text": " par."
+        }
+      ],
+      "sourceParagraph": 409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "naya"
+        },
+        {
+          "text": " version."
+        }
+      ],
+      "sourceParagraph": 410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "nayi"
+        },
+        {
+          "text": " identity."
+        }
+      ],
+      "sourceParagraph": 411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "naya"
+        },
+        {
+          "text": " khud."
+        }
+      ],
+      "sourceParagraph": 412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "eklauta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jeev"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " hi nature "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "khilaaf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baghawat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "itna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "thakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj"
+        },
+        {
+          "text": " bahut log "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " problems se "
+        },
+        {
+          "text": "pareshan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " reaction se "
+        },
+        {
+          "text": "pareshan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unhe"
+        },
+        {
+          "text": " pata "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki overthinking "
+        },
+        {
+          "text": "unhe"
+        },
+        {
+          "text": " hurt "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " overthink "
+        },
+        {
+          "text": "karte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unhe"
+        },
+        {
+          "text": " pata "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "yaadein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chhod"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deni"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chahiye"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "unhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pakad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baithe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rehte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unhe"
+        },
+        {
+          "text": " pata "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aadatein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "unhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "peeche"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kheench"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "unse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chipke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rehte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "andar"
+        },
+        {
+          "text": " do log "
+        },
+        {
+          "text": "rehte"
+        },
+        {
+          "text": " hon."
+        }
+      ],
+      "sourceParagraph": 423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek jo "
+        },
+        {
+          "text": "dekh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek jo "
+        },
+        {
+          "text": "badal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "paata"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "yahi"
+        },
+        {
+          "text": " awareness ka "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ajeeb"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "roop"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum "
+        },
+        {
+          "text": "galti"
+        },
+        {
+          "text": " ko "
+        },
+        {
+          "text": "dekh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "usse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "turant"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum pattern ko "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakte"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "usse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "todna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "alag"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kai log "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jagah"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "phas"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaate"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh observe "
+        },
+        {
+          "text": "kam"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sochte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "dheere"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dheere"
+        },
+        {
+          "text": " rai ka "
+        },
+        {
+          "text": "pahad"
+        },
+        {
+          "text": " ban "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life "
+        },
+        {
+          "text": "chhoti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problems "
+        },
+        {
+          "text": "badi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 436
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas lens "
+        },
+        {
+          "text": "badal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 437
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zindagi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "utni"
+        },
+        {
+          "text": " buri "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jitni"
+        },
+        {
+          "text": " hum "
+        },
+        {
+          "text": "uske"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baare"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "banayi"
+        },
+        {
+          "text": " hui "
+        },
+        {
+          "text": "kahaniyan"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kai "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " problem reality "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 439
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem us interpretation "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo hum reality ko "
+        },
+        {
+          "text": "dete"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Do log."
+        }
+      ],
+      "sourceParagraph": 441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi situation."
+        }
+      ],
+      "sourceParagraph": 442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek toot "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek seekh "
+        },
+        {
+          "text": "leta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Difference?"
+        }
+      ],
+      "sourceParagraph": 445
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Situation "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 446
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lens."
+        }
+      ],
+      "sourceParagraph": 447
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " jab "
+        },
+        {
+          "text": "dekhne"
+        },
+        {
+          "text": " ka "
+        },
+        {
+          "text": "nazariya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badalta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 448
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh "
+        },
+        {
+          "text": "dheere"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dheere"
+        },
+        {
+          "text": " poori "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badalti"
+        },
+        {
+          "text": " hui "
+        },
+        {
+          "text": "lagti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badalti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observer "
+        },
+        {
+          "text": "badal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "yahin"
+        },
+        {
+          "text": " awareness ka "
+        },
+        {
+          "text": "pehla"
+        },
+        {
+          "text": " paradox "
+        },
+        {
+          "text": "paida"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jis"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " ne "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " khud ko "
+        },
+        {
+          "text": "samajhne"
+        },
+        {
+          "text": " ki power di..."
+        }
+      ],
+      "sourceParagraph": 453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wahi "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " khud "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "khilaaf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jis"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " ne "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " grow "
+        },
+        {
+          "text": "karne"
+        },
+        {
+          "text": " ki ability di..."
+        }
+      ],
+      "sourceParagraph": 455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wahi "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " thoughts "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " jail "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "daal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sakti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness ne "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaanwaron"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "alag"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "banaya"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness ne "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " civilizations di."
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness ne "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " meaning diya."
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " awareness ne hi "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bojh"
+        },
+        {
+          "text": " ka "
+        },
+        {
+          "text": "ehsaas"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " karaya."
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar yeh "
+        },
+        {
+          "text": "sach"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": " yeh "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki awareness gift "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Gift "
+        },
+        {
+          "text": "toh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sawaal"
+        },
+        {
+          "text": " yeh "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " us gift ko "
+        },
+        {
+          "text": "sambhalna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaanta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "talwar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " ek gift ho "
+        },
+        {
+          "text": "sakti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "zakhm"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " de "
+        },
+        {
+          "text": "sakti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness ne "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sikhaya"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " ab "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " yeh "
+        },
+        {
+          "text": "seekhna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoga"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kab"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "kab"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rehna"
+        },
+        {
+          "text": " hi problem ban "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "isliye"
+        },
+        {
+          "text": " suffer "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kyunki"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kam"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekh"
+        },
+        {
+          "text": " pata "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "isliye"
+        },
+        {
+          "text": " suffer "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "itna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "leta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": "..."
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahi awareness ka "
+        },
+        {
+          "text": "pehla"
+        },
+        {
+          "text": " paradox "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ". "
+        }
+      ],
+      "sourceParagraph": 476
+    }
+  ],
+  "number": "CHAPTER 1:",
+  "phase": "The Paradox of Awareness",
+  "index": 9,
+  "file": "chapters/09-chapter-01.json"
+}

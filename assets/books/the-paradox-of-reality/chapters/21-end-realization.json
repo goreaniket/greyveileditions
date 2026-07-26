@@ -1,0 +1,398 @@
+{
+  "id": "end-realization",
+  "kind": "ending",
+  "sourceKind": "ending",
+  "label": "End Realization",
+  "title": "END REALIZATION",
+  "shortTitle": "END REALIZATION",
+  "sourceRange": [
+    1123,
+    1165
+  ],
+  "headerSourceParagraphs": {
+    "title": 1123
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aakhir mein jab sab layers thodi der ke liye quiet ho jaati hain…"
+        }
+      ],
+      "sourceParagraph": 1124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh koi grand conclusion nahi bachta."
+        }
+      ],
+      "sourceParagraph": 1125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na answers ka pressure rehta hai."
+        }
+      ],
+      "sourceParagraph": 1126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na questions ka urgency."
+        }
+      ],
+      "sourceParagraph": 1127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kisi cheez ko finalize karne ki need."
+        }
+      ],
+      "sourceParagraph": 1128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek simple sa seeing reh jaata hai…"
+        }
+      ],
+      "sourceParagraph": 1129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kisi explanation ke bina bhi chal raha hota hai."
+        }
+      ],
+      "sourceParagraph": 1130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya mein kuch change nahi hota:"
+        }
+      ],
+      "sourceParagraph": 1131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "log waise hi baat karte hain"
+        }
+      ],
+      "sourceParagraph": 1132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "situations waise hi unfold hoti hain"
+        }
+      ],
+      "sourceParagraph": 1133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "din apni normal speed mein chalta rehta hai"
+        }
+      ],
+      "sourceParagraph": 1134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par difference duniya mein nahi hota…"
+        }
+      ],
+      "sourceParagraph": 1135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "difference “dekhne ke tareeke” mein hota hai."
+        }
+      ],
+      "sourceParagraph": 1136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab cheezein pehle jaisi rigid nahi lagti."
+        }
+      ],
+      "sourceParagraph": 1137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi bhi moment ka ek fixed meaning nahi banta."
+        }
+      ],
+      "sourceParagraph": 1138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek cheez ko dekh kar ab turant final label nahi aata."
+        }
+      ],
+      "sourceParagraph": 1139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar aata bhi hai…"
+        }
+      ],
+      "sourceParagraph": 1140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh woh hold nahi karta."
+        }
+      ],
+      "sourceParagraph": 1141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab experience ko todne ki koshish kam ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Samajhne ki urgency kam ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Explain karne ka pressure kam ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo reh jaata hai…"
+        }
+      ],
+      "sourceParagraph": 1145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh sirf experience hota hai."
+        }
+      ],
+      "sourceParagraph": 1146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without extra layer."
+        }
+      ],
+      "sourceParagraph": 1147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without extra weight."
+        }
+      ],
+      "sourceParagraph": 1148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo pehle “solve karna” lagta tha…"
+        }
+      ],
+      "sourceParagraph": 1149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab sirf “dekhna” lagta hai."
+        }
+      ],
+      "sourceParagraph": 1150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch control karna hota hai."
+        }
+      ],
+      "sourceParagraph": 1151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch fix karna hota hai."
+        }
+      ],
+      "sourceParagraph": 1152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch conclude karna hota hai."
+        }
+      ],
+      "sourceParagraph": 1153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas cheezein apne flow mein hoti rehti hain."
+        }
+      ],
+      "sourceParagraph": 1154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahin bhi ek final point nahi milta."
+        }
+      ],
+      "sourceParagraph": 1155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na thinking mein."
+        }
+      ],
+      "sourceParagraph": 1156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na feeling mein."
+        }
+      ],
+      "sourceParagraph": 1157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na understanding mein."
+        }
+      ],
+      "sourceParagraph": 1158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez ongoing lagti hai…"
+        }
+      ],
+      "sourceParagraph": 1159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo khud ko continuously unfold kar rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 1160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek simple clarity bachi rehti hai:"
+        }
+      ],
+      "sourceParagraph": 1161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jo bhi ho raha hai… woh already ho raha hai"
+        }
+      ],
+      "sourceParagraph": 1162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur usko kisi aur cheez mein convert karne ki zarurat nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek quiet presence hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo cheezon ko as it is rehne deti hai."
+        }
+      ],
+      "sourceParagraph": 1165
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 21,
+  "file": "chapters/21-end-realization.json"
+}

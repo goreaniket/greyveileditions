@@ -1,0 +1,56 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    37,
+    41
+  ],
+  "headerSourceParagraphs": {
+    "title": 37
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction is a philosophical and psychological exploration of human perception, identity, meaning, and becoming."
+        }
+      ],
+      "sourceParagraph": 38
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is not intended as medical, psychological, or clinical advice."
+        }
+      ],
+      "sourceParagraph": 39
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The content is interpretative in nature and should not be treated as absolute truth or instruction."
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All concepts are presented as reflective frameworks to observe human experience, not to define it."
+        }
+      ],
+      "sourceParagraph": 41
+    }
+  ],
+  "index": 3,
+  "suppressHeaderNumber": true,
+  "file": "chapters/03-disclaimer.json"
+}

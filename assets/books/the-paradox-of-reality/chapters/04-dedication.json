@@ -1,0 +1,172 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "sourceKind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "DEDICATION",
+  "sourceRange": [
+    64,
+    81
+  ],
+  "headerSourceParagraphs": {
+    "title": 64
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is dedicated to the moments that never had names."
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the questions that arrived without warning."
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the nights that felt longer than they should have."
+        }
+      ],
+      "sourceParagraph": 67
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the thoughts that refused to leave."
+        }
+      ],
+      "sourceParagraph": 68
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the silent observations nobody else could see."
+        }
+      ],
+      "sourceParagraph": 69
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to every person who has ever looked at the world and felt that something beneath the surface was waiting to be noticed."
+        }
+      ],
+      "sourceParagraph": 70
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is dedicated to those who kept questioning when certainty would have been easier."
+        }
+      ],
+      "sourceParagraph": 71
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who continued looking when answers were unavailable."
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who carried invisible battles while appearing completely ordinary."
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And most of all..."
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the version of yourself that existed before every conclusion."
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The version that was still curious."
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Still searching."
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Still willing to see."
+        }
+      ],
+      "sourceParagraph": 78
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because every journey through reality begins there."
+        }
+      ],
+      "sourceParagraph": 79
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not with knowledge."
+        }
+      ],
+      "sourceParagraph": 80
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But with the courage to observe what most people immediately explain away."
+        }
+      ],
+      "sourceParagraph": 81
+    }
+  ],
+  "index": 4,
+  "file": "chapters/04-dedication.json"
+}

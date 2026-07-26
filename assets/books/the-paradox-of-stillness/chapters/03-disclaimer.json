@@ -1,0 +1,146 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    36,
+    50
+  ],
+  "headerSourceParagraphs": {
+    "title": 36
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not written to guide, fix, or improve the reader."
+        }
+      ],
+      "sourceParagraph": 37
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is not psychology."
+        }
+      ],
+      "sourceParagraph": 38
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is not therapy."
+        }
+      ],
+      "sourceParagraph": 39
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is not self-help."
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is an observation of how the human mind constructs meaning and then begins to live inside its own construction."
+        }
+      ],
+      "sourceParagraph": 41
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing in this book should be treated as instruction or advice."
+        }
+      ],
+      "sourceParagraph": 42
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There are no techniques here."
+        }
+      ],
+      "sourceParagraph": 43
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No steps to follow."
+        }
+      ],
+      "sourceParagraph": 44
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No system to apply."
+        }
+      ],
+      "sourceParagraph": 45
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The ideas presented may feel uncomfortable at times…"
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "because they question assumptions that are usually never questioned."
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The reader is not being asked to believe anything."
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not being asked to reject anything either."
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only to notice what is already happening within experience."
+        }
+      ],
+      "sourceParagraph": 50
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 3,
+  "file": "chapters/03-disclaimer.json"
+}

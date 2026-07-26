@@ -1,0 +1,74 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "sourceKind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "DEDICATION",
+  "sourceRange": [
+    42,
+    48
+  ],
+  "headerSourceParagraphs": {
+    "title": 42
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dedicated to those who think too deeply…"
+        }
+      ],
+      "sourceParagraph": 43
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feel too silently…"
+        }
+      ],
+      "sourceParagraph": 44
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and still continue to search for meaning inside everything."
+        }
+      ],
+      "sourceParagraph": 45
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to the part of every mind that once asked:"
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Who am I… really?”"
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Even when no answer felt enough."
+        }
+      ],
+      "sourceParagraph": 48
+    }
+  ],
+  "index": 4,
+  "suppressHeaderNumber": true,
+  "file": "chapters/04-dedication.json"
+}

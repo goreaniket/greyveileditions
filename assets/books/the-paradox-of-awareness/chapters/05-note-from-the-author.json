@@ -1,0 +1,131 @@
+{
+  "id": "note-from-the-author",
+  "kind": "introduction",
+  "sourceKind": "author-note",
+  "label": "Author's Note",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "NOTE FROM THE AUTHOR",
+  "sourceRange": [
+    62,
+    74
+  ],
+  "headerSourceParagraphs": {
+    "title": 62
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you have reached this point in the book, it simply means you have stayed with a certain kind of thinking longer than usual. Not for answers, but for observation."
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not built as a guide, and it is not written to convince you of any idea. It is only an attempt to put into words certain patterns that already exist in the way human beings think, interpret, and quietly experience their own mind."
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Most of what appears in these pages is not something new. It is something familiar — but rarely noticed in detail. We pass through these mental patterns every day without naming them. This book only slows them down enough to be seen."
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is no final truth here. No conclusion waiting at the end. Because human experience does not operate in conclusions. It operates in movement — between clarity and confusion, understanding and uncertainty, participation and observation."
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At some point, awareness begins to change how things feel. Not because reality itself changes, but because the distance between “what is happening” and “what is being noticed” becomes visible. That distance is subtle at first. Then it becomes normal. And slowly, it becomes the way everything is experienced."
+        }
+      ],
+      "sourceParagraph": 67
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If anything in this book feels intense, repetitive, or uncomfortably accurate, it is not intentional persuasion. It "
+        },
+        {
+          "text": "is simply recognition. And recognition often feels heavier than ignorance, because it removes the comfort of not noticing."
+        }
+      ],
+      "sourceParagraph": 68
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Still, none of this is meant to create a final interpretation of life. Interpretation itself is part of the loop this book is pointing toward. The purpose is only to make that loop visible."
+        }
+      ],
+      "sourceParagraph": 69
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What you choose to do with that visibility is outside the scope of this book."
+        }
+      ],
+      "sourceParagraph": 70
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You may forget it."
+        }
+      ],
+      "sourceParagraph": 71
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You may reflect on it."
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You may see it in your own thinking later without realizing where it came from."
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All of that is part of how understanding works — it does not stay in one place."
+        }
+      ],
+      "sourceParagraph": 74
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 5,
+  "file": "chapters/05-note-from-the-author.json"
+}

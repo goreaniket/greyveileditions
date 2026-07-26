@@ -1,0 +1,975 @@
+{
+  "id": "chapter-07",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 7",
+  "title": "The Fiction of Separation",
+  "shortTitle": "The Fiction of Separation",
+  "sourceRange": [
+    905,
+    1012
+  ],
+  "headerSourceParagraphs": {
+    "number": 905,
+    "title": 906
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad human story ka sabse purana chapter..."
+        }
+      ],
+      "sourceParagraph": 907
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity nahi tha."
+        }
+      ],
+      "sourceParagraph": 908
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning bhi nahi tha."
+        }
+      ],
+      "sourceParagraph": 909
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming bhi nahi tha."
+        }
+      ],
+      "sourceParagraph": 910
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad sabse pehla chapter ek aur tha."
+        }
+      ],
+      "sourceParagraph": 911
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek invisible assumption."
+        }
+      ],
+      "sourceParagraph": 912
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itna purana..."
+        }
+      ],
+      "sourceParagraph": 913
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki lagbhag har thought uske upar khada hai."
+        }
+      ],
+      "sourceParagraph": 914
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo assumption tha:"
+        }
+      ],
+      "sourceParagraph": 915
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Main alag hoon.\""
+        }
+      ],
+      "sourceParagraph": 916
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi assumption se baaki saari stories paida hui."
+        }
+      ],
+      "sourceParagraph": 917
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek side \"main\"."
+        }
+      ],
+      "sourceParagraph": 918
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Doosri side \"duniya\"."
+        }
+      ],
+      "sourceParagraph": 919
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek side \"andar\"."
+        }
+      ],
+      "sourceParagraph": 920
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Doosri side \"bahar\"."
+        }
+      ],
+      "sourceParagraph": 921
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek side \"self\"."
+        }
+      ],
+      "sourceParagraph": 922
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Doosri side \"others\"."
+        }
+      ],
+      "sourceParagraph": 923
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jaise hi ye division appear hota hai..."
+        }
+      ],
+      "sourceParagraph": 924
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "poora psychological universe janam leta hai."
+        }
+      ],
+      "sourceParagraph": 925
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Comparison."
+        }
+      ],
+      "sourceParagraph": 926
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Competition."
+        }
+      ],
+      "sourceParagraph": 927
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Attachment."
+        }
+      ],
+      "sourceParagraph": 928
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fear."
+        }
+      ],
+      "sourceParagraph": 929
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Possession."
+        }
+      ],
+      "sourceParagraph": 930
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Loneliness."
+        }
+      ],
+      "sourceParagraph": 931
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab dheere dheere isi foundation par grow karte hain."
+        }
+      ],
+      "sourceParagraph": 932
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Strange baat ye hai..."
+        }
+      ],
+      "sourceParagraph": 933
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki ye wall physical nahi hoti."
+        }
+      ],
+      "sourceParagraph": 934
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isse touch nahi kiya ja sakta."
+        }
+      ],
+      "sourceParagraph": 935
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isse dekha nahi ja sakta."
+        }
+      ],
+      "sourceParagraph": 936
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin phir bhi..."
+        }
+      ],
+      "sourceParagraph": 937
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan poori zindagi iske andar jeeta hai."
+        }
+      ],
+      "sourceParagraph": 938
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek invisible boundary."
+        }
+      ],
+      "sourceParagraph": 939
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek feeling:"
+        }
+      ],
+      "sourceParagraph": 940
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Main yahan khatam hota hoon..."
+        }
+      ],
+      "sourceParagraph": 941
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur duniya wahan shuru hoti hai.\""
+        }
+      ],
+      "sourceParagraph": 942
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kyuki ye feeling itni familiar hai..."
+        }
+      ],
+      "sourceParagraph": 943
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "isliye koi usse question nahi karta."
+        }
+      ],
+      "sourceParagraph": 944
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Loneliness aksar logon ki kami se nahi aati."
+        }
+      ],
+      "sourceParagraph": 945
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi loneliness us feeling se aati hai..."
+        }
+      ],
+      "sourceParagraph": 946
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum fundamentally separate ho."
+        }
+      ],
+      "sourceParagraph": 947
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki tum poori tarah kisi tak pahunch nahi sakte."
+        }
+      ],
+      "sourceParagraph": 948
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki koi poori tarah tum tak pahunch nahi sakta."
+        }
+      ],
+      "sourceParagraph": 949
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir poori life ek bridge banane ki koshish ban jati hai."
+        }
+      ],
+      "sourceParagraph": 950
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Love."
+        }
+      ],
+      "sourceParagraph": 951
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Friendship."
+        }
+      ],
+      "sourceParagraph": 952
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Achievement."
+        }
+      ],
+      "sourceParagraph": 953
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Recognition."
+        }
+      ],
+      "sourceParagraph": 954
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab bridge banne lagte hain."
+        }
+      ],
+      "sourceParagraph": 955
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin bridge ki zarurat tabhi hoti hai..."
+        }
+      ],
+      "sourceParagraph": 956
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab pehle separation maana gaya ho."
+        }
+      ],
+      "sourceParagraph": 957
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum connection dhoondte hain."
+        }
+      ],
+      "sourceParagraph": 958
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jo connection dhoond raha hai..."
+        }
+      ],
+      "sourceParagraph": 959
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo pehle se separation assume kar chuka hota hai."
+        }
+      ],
+      "sourceParagraph": 960
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye..."
+        }
+      ],
+      "sourceParagraph": 961
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jitna zyada hum connection ko chase karte hain..."
+        }
+      ],
+      "sourceParagraph": 962
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna hi separation real lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 963
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observe karo."
+        }
+      ],
+      "sourceParagraph": 964
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kitni baar thought silently \"me\" ke around ghoomta hai."
+        }
+      ],
+      "sourceParagraph": 965
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mera future."
+        }
+      ],
+      "sourceParagraph": 966
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meri problem."
+        }
+      ],
+      "sourceParagraph": 967
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mera pain."
+        }
+      ],
+      "sourceParagraph": 968
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mera success."
+        }
+      ],
+      "sourceParagraph": 969
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meri story."
+        }
+      ],
+      "sourceParagraph": 970
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 971
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "poori reality ek centre ke around organise ho jati hai."
+        }
+      ],
+      "sourceParagraph": 972
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kya wo centre actual hai?"
+        }
+      ],
+      "sourceParagraph": 973
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya narration ka effect?"
+        }
+      ],
+      "sourceParagraph": 974
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek moment aata hai..."
+        }
+      ],
+      "sourceParagraph": 975
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab insaan genuinely observe karta hai."
+        }
+      ],
+      "sourceParagraph": 976
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina conclusion ke."
+        }
+      ],
+      "sourceParagraph": 977
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina philosophy ke."
+        }
+      ],
+      "sourceParagraph": 978
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina belief ke."
+        }
+      ],
+      "sourceParagraph": 979
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us moment mein ek strange cheez notice hoti hai."
+        }
+      ],
+      "sourceParagraph": 980
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experience ho raha hai."
+        }
+      ],
+      "sourceParagraph": 981
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin us experience ke centre mein..."
+        }
+      ],
+      "sourceParagraph": 982
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo solid character nazar nahi aata..."
+        }
+      ],
+      "sourceParagraph": 983
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jise saalon se \"main\" kaha ja raha tha."
+        }
+      ],
+      "sourceParagraph": 984
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thought hai."
+        }
+      ],
+      "sourceParagraph": 985
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotion hai."
+        }
+      ],
+      "sourceParagraph": 986
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory hai."
+        }
+      ],
+      "sourceParagraph": 987
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sensation hai."
+        }
+      ],
+      "sourceParagraph": 988
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin un sab ka owner kahan hai?"
+        }
+      ],
+      "sourceParagraph": 989
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye wall force se nahi girti."
+        }
+      ],
+      "sourceParagraph": 990
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye argument se nahi girti."
+        }
+      ],
+      "sourceParagraph": 991
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye belief change karne se nahi girti."
+        }
+      ],
+      "sourceParagraph": 992
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sirf observation se dissolve hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 993
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise darkness light ke saamne fight nahi karti."
+        }
+      ],
+      "sourceParagraph": 994
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Waise hi separation seeing ke saamne survive nahi karta."
+        }
+      ],
+      "sourceParagraph": 995
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 996
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek soft realization emerge hoti hai."
+        }
+      ],
+      "sourceParagraph": 997
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad life aur \"main\" do alag cheezein nahi thi."
+        }
+      ],
+      "sourceParagraph": 998
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad observer aur observed utne separate nahi the jitna lagta tha."
+        }
+      ],
+      "sourceParagraph": 999
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad story aur storyteller bhi utne alag nahi the."
+        }
+      ],
+      "sourceParagraph": 1000
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poora chapter kisi conclusion par khatam nahi hota."
+        }
+      ],
+      "sourceParagraph": 1001
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek silence par."
+        }
+      ],
+      "sourceParagraph": 1002
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek possibility par."
+        }
+      ],
+      "sourceParagraph": 1003
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki shayad jo distance tum poori zindagi cover karne ki koshish kar rahe the..."
+        }
+      ],
+      "sourceParagraph": 1004
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo distance kabhi tha hi nahi."
+        }
+      ],
+      "sourceParagraph": 1005
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye..."
+        }
+      ],
+      "sourceParagraph": 1006
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jitna zyada tum reality ke paas aate ho..."
+        }
+      ],
+      "sourceParagraph": 1007
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna kam tumhe khud ko defend karna padta hai."
+        }
+      ],
+      "sourceParagraph": 1008
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Utna kam tumhe prove karna padta hai."
+        }
+      ],
+      "sourceParagraph": 1009
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Utna kam tumhe banna padta hai."
+        }
+      ],
+      "sourceParagraph": 1010
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur utna hi zyada..."
+        }
+      ],
+      "sourceParagraph": 1011
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum simply hona shuru kar dete ho."
+        }
+      ],
+      "sourceParagraph": 1012
+    }
+  ],
+  "index": 17,
+  "number": "CHAPTER 7 —",
+  "file": "chapters/17-chapter-07.json"
+}

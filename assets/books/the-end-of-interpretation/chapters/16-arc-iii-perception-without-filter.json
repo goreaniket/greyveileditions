@@ -1,0 +1,19 @@
+{
+  "id": "arc-iii-perception-without-filter",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC III — PERCEPTION WITHOUT FILTER",
+  "shortTitle": "ARC III — PERCEPTION WITHOUT FILTER",
+  "sourceRange": [
+    828,
+    828
+  ],
+  "headerSourceParagraphs": {
+    "title": 828
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 16,
+  "file": "chapters/16-arc-iii-perception-without-filter.json"
+}

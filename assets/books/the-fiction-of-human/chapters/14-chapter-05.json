@@ -1,0 +1,849 @@
+{
+  "id": "chapter-05",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 5",
+  "title": "The World Inside the Story",
+  "shortTitle": "The World Inside the Story",
+  "sourceRange": [
+    710,
+    803
+  ],
+  "headerSourceParagraphs": {
+    "number": 710,
+    "title": 711
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai..."
+        }
+      ],
+      "sourceParagraph": 712
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hum duniya mein nahi rehte."
+        }
+      ],
+      "sourceParagraph": 713
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum duniya ke baare mein bani hui apni stories mein rehte hain."
+        }
+      ],
+      "sourceParagraph": 714
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad dono ke beech ka difference hi human suffering ka ek hidden source hai."
+        }
+      ],
+      "sourceParagraph": 715
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki duniya constantly change ho rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin story..."
+        }
+      ],
+      "sourceParagraph": 717
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "stability chahti hai."
+        }
+      ],
+      "sourceParagraph": 718
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya flow hai."
+        }
+      ],
+      "sourceParagraph": 719
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story structure hai."
+        }
+      ],
+      "sourceParagraph": 720
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Duniya alive hai."
+        }
+      ],
+      "sourceParagraph": 721
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story remembered hai."
+        }
+      ],
+      "sourceParagraph": 722
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab remembered structure living reality par impose hota hai..."
+        }
+      ],
+      "sourceParagraph": 723
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab friction paida hota hai."
+        }
+      ],
+      "sourceParagraph": 724
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sochte hain ki hum duniya ko dekh rahe hain."
+        }
+      ],
+      "sourceParagraph": 725
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kya hum waqai dekh rahe hain?"
+        }
+      ],
+      "sourceParagraph": 726
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya hum continuously compare kar rahe hain?"
+        }
+      ],
+      "sourceParagraph": 727
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye accha hai."
+        }
+      ],
+      "sourceParagraph": 728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye bura hai."
+        }
+      ],
+      "sourceParagraph": 729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye mere liye hai."
+        }
+      ],
+      "sourceParagraph": 730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye mere against hai."
+        }
+      ],
+      "sourceParagraph": 731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye hona chahiye tha."
+        }
+      ],
+      "sourceParagraph": 732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye nahi hona chahiye tha."
+        }
+      ],
+      "sourceParagraph": 733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "observation interpretation mein convert ho jata hai."
+        }
+      ],
+      "sourceParagraph": 735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir interpretation reality ban jati hai."
+        }
+      ],
+      "sourceParagraph": 736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan ke andar ek private world hota hai."
+        }
+      ],
+      "sourceParagraph": 737
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek invisible universe."
+        }
+      ],
+      "sourceParagraph": 738
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us universe mein:"
+        }
+      ],
+      "sourceParagraph": 739
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "memories rehti hain"
+        }
+      ],
+      "sourceParagraph": 740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fears rehte hain"
+        }
+      ],
+      "sourceParagraph": 741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hopes rehte hain"
+        }
+      ],
+      "sourceParagraph": 742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "regrets rehte hain"
+        }
+      ],
+      "sourceParagraph": 743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "expectations rehti hain"
+        }
+      ],
+      "sourceParagraph": 744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse interesting baat..."
+        }
+      ],
+      "sourceParagraph": 745
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye hai ki hum us private world ko reality samajhne lagte hain."
+        }
+      ],
+      "sourceParagraph": 746
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek world hai jo actually ho raha hai."
+        }
+      ],
+      "sourceParagraph": 747
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek world hai jo uske baare mein socha ja raha hai."
+        }
+      ],
+      "sourceParagraph": 748
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Zyada tar log doosre world mein rehte hain."
+        }
+      ],
+      "sourceParagraph": 749
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi liye kabhi kabhi banda room mein akela baitha hota hai..."
+        }
+      ],
+      "sourceParagraph": 750
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur phir bhi uske andar poori battle chal rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 751
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality silent hoti hai."
+        }
+      ],
+      "sourceParagraph": 752
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story loud hoti hai."
+        }
+      ],
+      "sourceParagraph": 753
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur loud cheez usually zyada real lagti hai."
+        }
+      ],
+      "sourceParagraph": 754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse dangerous prison wo nahi jisme deewarein hoti hain."
+        }
+      ],
+      "sourceParagraph": 755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse dangerous prison wo hai..."
+        }
+      ],
+      "sourceParagraph": 756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jisme tumhe lagta hai tum free ho."
+        }
+      ],
+      "sourceParagraph": 757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur psychological stories kuch aisi hi hoti hain."
+        }
+      ],
+      "sourceParagraph": 758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo tumhe bandh kar deti hain..."
+        }
+      ],
+      "sourceParagraph": 759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin bars dikhte nahi."
+        }
+      ],
+      "sourceParagraph": 760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki bars thoughts se bane hote hain."
+        }
+      ],
+      "sourceParagraph": 761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity se."
+        }
+      ],
+      "sourceParagraph": 762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning se."
+        }
+      ],
+      "sourceParagraph": 763
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming se."
+        }
+      ],
+      "sourceParagraph": 764
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi liye ye trilogy exist karti hai."
+        }
+      ],
+      "sourceParagraph": 765
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Book I ne self ko dekha."
+        }
+      ],
+      "sourceParagraph": 766
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Book II ne meaning ko dekha."
+        }
+      ],
+      "sourceParagraph": 767
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Book III ne becoming ko dekha."
+        }
+      ],
+      "sourceParagraph": 768
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab Book IV us poori duniya ko dekh rahi hai..."
+        }
+      ],
+      "sourceParagraph": 769
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo in teeno se milkar bani thi."
+        }
+      ],
+      "sourceParagraph": 770
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Strange baat ye hai..."
+        }
+      ],
+      "sourceParagraph": 771
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki log aksar kehte hain:"
+        }
+      ],
+      "sourceParagraph": 772
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Life bahut heavy hai.\""
+        }
+      ],
+      "sourceParagraph": 773
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kabhi kabhi life heavy nahi hoti."
+        }
+      ],
+      "sourceParagraph": 774
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske baare mein bani hui story heavy hoti hai."
+        }
+      ],
+      "sourceParagraph": 775
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek event kuch seconds ka hota hai."
+        }
+      ],
+      "sourceParagraph": 776
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin uski narration saalon tak chal sakti hai."
+        }
+      ],
+      "sourceParagraph": 777
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek sentence kuch moments ka hota hai."
+        }
+      ],
+      "sourceParagraph": 778
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin uska interpretation poori identity ko affect kar sakta hai."
+        }
+      ],
+      "sourceParagraph": 779
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir hum sochte hain ki hume event hurt kar raha hai."
+        }
+      ],
+      "sourceParagraph": 780
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jabki kai baar..."
+        }
+      ],
+      "sourceParagraph": 781
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hume us event ki story hurt kar rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 782
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum kuch der ke liye saari explanations side rakh do..."
+        }
+      ],
+      "sourceParagraph": 783
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh reality surprisingly simple lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 784
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hawa bas hawa hai."
+        }
+      ],
+      "sourceParagraph": 785
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awaz bas awaz hai."
+        }
+      ],
+      "sourceParagraph": 786
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotion bas emotion hai."
+        }
+      ],
+      "sourceParagraph": 787
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur experience ko immediately meaning mein convert karne ki zarurat nahi rehti."
+        }
+      ],
+      "sourceParagraph": 788
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad freedom ka matlab story ko destroy karna nahi."
+        }
+      ],
+      "sourceParagraph": 789
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad freedom ka matlab sirf itna hai:"
+        }
+      ],
+      "sourceParagraph": 790
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "story ko story ki tarah dekh pana."
+        }
+      ],
+      "sourceParagraph": 791
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse reality samajhna band kar dena."
+        }
+      ],
+      "sourceParagraph": 792
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jis moment story visible ho jati hai..."
+        }
+      ],
+      "sourceParagraph": 793
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usi moment uska control kam hone lagta hai."
+        }
+      ],
+      "sourceParagraph": 794
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tumhari poori psychological duniya..."
+        }
+      ],
+      "sourceParagraph": 795
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity, meaning aur becoming se bani hai..."
+        }
+      ],
+      "sourceParagraph": 796
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar wo teeno stories hain..."
+        }
+      ],
+      "sourceParagraph": 797
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh phir tum kis duniya mein jee rahe ho?"
+        }
+      ],
+      "sourceParagraph": 798
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality mein?"
+        }
+      ],
+      "sourceParagraph": 799
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya narration mein?"
+        }
+      ],
+      "sourceParagraph": 800
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar narration kuch der ke liye silent ho jaye..."
+        }
+      ],
+      "sourceParagraph": 801
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh jo bachega..."
+        }
+      ],
+      "sourceParagraph": 802
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kya wo pehli baar directly dekha jayega?"
+        }
+      ],
+      "sourceParagraph": 803
+    }
+  ],
+  "index": 14,
+  "number": "CHAPTER 5 —",
+  "file": "chapters/14-chapter-05.json"
+}

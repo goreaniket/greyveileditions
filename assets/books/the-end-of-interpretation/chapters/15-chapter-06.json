@@ -1,0 +1,817 @@
+{
+  "id": "chapter-06",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 6:",
+  "title": "THE DISAPPEARANCE OF INTERNAL DIALOGUE",
+  "shortTitle": "THE DISAPPEARANCE OF INTERNAL DIALOGUE",
+  "sourceRange": [
+    738,
+    827
+  ],
+  "headerSourceParagraphs": {
+    "number": 738,
+    "title": 739
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum life ko samajhne ki koshish nahi karte…"
+        }
+      ],
+      "sourceParagraph": 740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas usse “carry” kar rahe hote ho."
+        }
+      ],
+      "sourceParagraph": 741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein dimaag ek full-time commentator hota hai."
+        }
+      ],
+      "sourceParagraph": 742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez pe ek line."
+        }
+      ],
+      "sourceParagraph": 743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har moment pe ek explanation."
+        }
+      ],
+      "sourceParagraph": 744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har feeling pe ek analysis."
+        }
+      ],
+      "sourceParagraph": 745
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Main aisa feel kar raha hoon…”"
+        }
+      ],
+      "sourceParagraph": 746
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Iska matlab yeh hai…”"
+        }
+      ],
+      "sourceParagraph": 747
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Woh aisa kyun hua…”"
+        }
+      ],
+      "sourceParagraph": 748
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Ab kya hoga…”"
+        }
+      ],
+      "sourceParagraph": 749
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagta hai yahi normal functioning hai."
+        }
+      ],
+      "sourceParagraph": 750
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin tum notice nahi karte ki yeh voice kabhi rukti hi nahi."
+        }
+      ],
+      "sourceParagraph": 751
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh continuously chalti rehti hai…"
+        }
+      ],
+      "sourceParagraph": 752
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaise silence uske system mein allowed hi na ho."
+        }
+      ],
+      "sourceParagraph": 753
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting baat yeh hai:"
+        }
+      ],
+      "sourceParagraph": 754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh voice tum control nahi kar rahe hote."
+        }
+      ],
+      "sourceParagraph": 755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh apne aap chal rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek situation hoti hai."
+        }
+      ],
+      "sourceParagraph": 757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Normal si."
+        }
+      ],
+      "sourceParagraph": 758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch bhi ho sakta hai — ek message, ek look, ek delay, ek silence."
+        }
+      ],
+      "sourceParagraph": 759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur turant:"
+        }
+      ],
+      "sourceParagraph": 760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind start ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fast."
+        }
+      ],
+      "sourceParagraph": 762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Automatic."
+        }
+      ],
+      "sourceParagraph": 763
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Iska intention kya tha?”"
+        }
+      ],
+      "sourceParagraph": 764
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Main galat toh nahi?”"
+        }
+      ],
+      "sourceParagraph": 765
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Yeh repeat kyun ho raha hai?”"
+        }
+      ],
+      "sourceParagraph": 766
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Iska hidden meaning kya hai?”"
+        }
+      ],
+      "sourceParagraph": 767
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum itne familiar ho is process se…"
+        }
+      ],
+      "sourceParagraph": 768
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum kabhi question hi nahi karte ki yeh zaroori bhi hai ya nahi."
+        }
+      ],
+      "sourceParagraph": 769
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin dheere dheere ek subtle fatigue aata hai."
+        }
+      ],
+      "sourceParagraph": 770
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na emotional."
+        }
+      ],
+      "sourceParagraph": 771
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na dramatic."
+        }
+      ],
+      "sourceParagraph": 772
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek internal overload jaisa feel."
+        }
+      ],
+      "sourceParagraph": 773
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise har cheez ko explain karte karte…"
+        }
+      ],
+      "sourceParagraph": 774
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "explanation hi heavy lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 775
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek chhota sa crack open hota hai."
+        }
+      ],
+      "sourceParagraph": 776
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek moment hota hai jab tum kuch dekh rahe hote ho…"
+        }
+      ],
+      "sourceParagraph": 777
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur dimaag abhi tak uska meaning bana raha hota hai…"
+        }
+      ],
+      "sourceParagraph": 778
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin tum us meaning ke pehle hi aware ho jaate ho."
+        }
+      ],
+      "sourceParagraph": 779
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh strange lagta hai."
+        }
+      ],
+      "sourceParagraph": 780
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki pehli baar tumhe dikh raha hota hai:"
+        }
+      ],
+      "sourceParagraph": 781
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thought aa raha hai"
+        }
+      ],
+      "sourceParagraph": 782
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " thought ban raha hai"
+        }
+      ],
+      "sourceParagraph": 783
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tought justify ho raha hai"
+        }
+      ],
+      "sourceParagraph": 784
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin tum us chain ke andar fully trapped nahi hote."
+        }
+      ],
+      "sourceParagraph": 785
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise ek radio chal raha ho background mein…"
+        }
+      ],
+      "sourceParagraph": 786
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin tum uski frequency pe poori tarah tuned nahi ho."
+        }
+      ],
+      "sourceParagraph": 787
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek aur change hota hai."
+        }
+      ],
+      "sourceParagraph": 788
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Internal narration slow nahi hoti."
+        }
+      ],
+      "sourceParagraph": 789
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf “necessary” nahi lagti."
+        }
+      ],
+      "sourceParagraph": 790
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise pehle har feeling ko sentence banana zaroori lagta tha…"
+        }
+      ],
+      "sourceParagraph": 791
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab woh feeling bas reh jaati hai."
+        }
+      ],
+      "sourceParagraph": 792
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without translation."
+        }
+      ],
+      "sourceParagraph": 793
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without explanation."
+        }
+      ],
+      "sourceParagraph": 794
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi tum kisi situation mein hote ho…"
+        }
+      ],
+      "sourceParagraph": 795
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur pehli baar yeh nahi hota:"
+        }
+      ],
+      "sourceParagraph": 796
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Main kya soch raha hoon?”"
+        }
+      ],
+      "sourceParagraph": 797
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas yeh hota hai:"
+        }
+      ],
+      "sourceParagraph": 798
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch ho raha hai."
+        }
+      ],
+      "sourceParagraph": 799
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh shift bahut small lagta hai…"
+        }
+      ],
+      "sourceParagraph": 800
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin system-level change hota hai."
+        }
+      ],
+      "sourceParagraph": 801
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jab internal dialogue weak hota hai…"
+        }
+      ],
+      "sourceParagraph": 802
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh identity ko continuously define karne ka mechanism bhi weak ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 803
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab identity ko bar-bar define nahi karte…"
+        }
+      ],
+      "sourceParagraph": 804
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange emptiness nahi…"
+        }
+      ],
+      "sourceParagraph": 805
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek neutral clarity aane lagti hai."
+        }
+      ],
+      "sourceParagraph": 806
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na woh positive hoti hai."
+        }
+      ],
+      "sourceParagraph": 807
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na negative."
+        }
+      ],
+      "sourceParagraph": 808
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas less constructed."
+        }
+      ],
+      "sourceParagraph": 809
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh sab kisi practice se nahi hota."
+        }
+      ],
+      "sourceParagraph": 810
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi effort nahi."
+        }
+      ],
+      "sourceParagraph": 811
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi technique nahi."
+        }
+      ],
+      "sourceParagraph": 812
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek natural reduction jaisa feel hota hai."
+        }
+      ],
+      "sourceParagraph": 813
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise dimaag ko apni hi awaaz se thoda break mil raha ho."
+        }
+      ],
+      "sourceParagraph": 814
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum peeche dekhte ho…"
+        }
+      ],
+      "sourceParagraph": 815
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh realize hota hai:"
+        }
+      ],
+      "sourceParagraph": 816
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tum life ko live nahi kar rahe the"
+        }
+      ],
+      "sourceParagraph": 817
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tum life ko continuously explain kar rahe the"
+        }
+      ],
+      "sourceParagraph": 818
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab…"
+        }
+      ],
+      "sourceParagraph": 819
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "explanation optional lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 820
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts ab bhi aate hain."
+        }
+      ],
+      "sourceParagraph": 821
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin woh authority nahi hote."
+        }
+      ],
+      "sourceParagraph": 822
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas signals jaise."
+        }
+      ],
+      "sourceParagraph": 823
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Passing movement."
+        }
+      ],
+      "sourceParagraph": 824
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek silent shift complete hota hai:"
+        }
+      ],
+      "sourceParagraph": 825
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jab soch band nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 826
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " bas zaroori nahi lagti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 827
+    }
+  ],
+  "number": "CHAPTER 6:",
+  "phase": "The End of Interpretation",
+  "index": 15,
+  "file": "chapters/15-chapter-06.json"
+}

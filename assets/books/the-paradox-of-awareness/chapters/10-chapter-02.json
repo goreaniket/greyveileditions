@@ -1,0 +1,4107 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 2:",
+  "title": "THE PRICE OF KNOWING",
+  "shortTitle": "THE PRICE OF KNOWING",
+  "sourceRange": [
+    477,
+    624
+  ],
+  "headerSourceParagraphs": {
+    "number": 477,
+    "title": 478
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "OPENING — THE DAY NOTHING FEELS THE SAME AGAIN",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 479,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi "
+        },
+        {
+          "text": "socha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch "
+        },
+        {
+          "text": "sachchaiyan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sunne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baad"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehle"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaisa"
+        },
+        {
+          "text": " kyun "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " reh "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "bachcha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki Santa Claus real "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur "
+        },
+        {
+          "text": "uske"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " “"
+        },
+        {
+          "text": "galat"
+        },
+        {
+          "text": "” "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": " — bas "
+        },
+        {
+          "text": "thodi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kam"
+        },
+        {
+          "text": " magical ho "
+        },
+        {
+          "text": "jaati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "ladka"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "uske"
+        },
+        {
+          "text": " parents perfect "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur "
+        },
+        {
+          "text": "uske"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "andar"
+        },
+        {
+          "text": " ek invisible gap ban "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " — respect "
+        },
+        {
+          "text": "kam"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": ", par innocence shift ho "
+        },
+        {
+          "text": "jaati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pyaar"
+        },
+        {
+          "text": " lifetime "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "naye"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " ko "
+        },
+        {
+          "text": "thoda"
+        },
+        {
+          "text": " cautiously "
+        },
+        {
+          "text": "jeene"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ajeeb "
+        },
+        {
+          "text": "baat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Truth "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " liberate "
+        },
+        {
+          "text": "karti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "saath"
+        },
+        {
+          "text": " hi "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "pehle"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaise"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rehne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "yahin"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "shuru"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " yeh chapter."
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART I — THE FIRST CUT OF REALITY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 493,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " softly "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aati"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh cut "
+        },
+        {
+          "text": "karti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " cut "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baad"
+        },
+        {
+          "text": " ek purana version quietly "
+        },
+        {
+          "text": "gir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " jab "
+        },
+        {
+          "text": "tumhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " fair "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum "
+        },
+        {
+          "text": "thode"
+        },
+        {
+          "text": " silent ho "
+        },
+        {
+          "text": "jaate"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " jab effort ka expected result "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "milta"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum expectations ko rewrite "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dete"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baar"
+        },
+        {
+          "text": " jab koi "
+        },
+        {
+          "text": "tumhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "galat"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "leta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " honesty ko filter "
+        },
+        {
+          "text": "karna"
+        },
+        {
+          "text": " seekh "
+        },
+        {
+          "text": "lete"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "dheere"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dheere"
+        },
+        {
+          "text": " ek transformation "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan "
+        },
+        {
+          "text": "jeena"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chhodta"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas protect "
+        },
+        {
+          "text": "karna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "shuru"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "andar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " “khud” ko."
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur protection…"
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " prison ban "
+        },
+        {
+          "text": "jaati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART II — THE DEATH OF EASY WORLD",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 508,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bachpan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " straight line "
+        },
+        {
+          "text": "thi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Galti"
+        },
+        {
+          "text": " → "
+        },
+        {
+          "text": "daant"
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mehnat"
+        },
+        {
+          "text": " → result"
+        }
+      ],
+      "sourceParagraph": 511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sach → acceptance"
+        }
+      ],
+      "sourceParagraph": 512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " awareness "
+        },
+        {
+          "text": "aayi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " ek maze ban "
+        },
+        {
+          "text": "gayi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " multiple meanings "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har smile "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "peeche"
+        },
+        {
+          "text": " interpretation."
+        }
+      ],
+      "sourceParagraph": 516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har silence "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "peeche"
+        },
+        {
+          "text": " theory."
+        }
+      ],
+      "sourceParagraph": 517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Example:"
+        }
+      ],
+      "sourceParagraph": 518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek friend reply "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " → “busy "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "” "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "… “ignore "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "” "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " ho "
+        },
+        {
+          "text": "sakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek teacher "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kehta"
+        },
+        {
+          "text": " → “okay” "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "… “disappointed” "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " ho "
+        },
+        {
+          "text": "sakta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan ab "
+        },
+        {
+          "text": "jeeta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "… decode "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "yahin"
+        },
+        {
+          "text": " ek invisible death "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not physical."
+        }
+      ],
+      "sourceParagraph": 523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Simple living ki death."
+        }
+      ],
+      "sourceParagraph": 524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur hum "
+        },
+        {
+          "text": "isse"
+        },
+        {
+          "text": " “maturity” "
+        },
+        {
+          "text": "bol"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dete"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART III — THE CURSE OF UNDERSTANDING PEOPLE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 526,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": " — “Woh "
+        },
+        {
+          "text": "accha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bura"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ".”"
+        }
+      ],
+      "sourceParagraph": 527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " — “Woh "
+        },
+        {
+          "text": "aisa"
+        },
+        {
+          "text": " kyun "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?”"
+        }
+      ],
+      "sourceParagraph": 528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur “kyun” "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " end "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek real life moment:"
+        }
+      ],
+      "sourceParagraph": 530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum "
+        },
+        {
+          "text": "kisi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " se hurt "
+        },
+        {
+          "text": "hote"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle tum "
+        },
+        {
+          "text": "usse"
+        },
+        {
+          "text": " hate "
+        },
+        {
+          "text": "karte"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "samajhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagte"
+        },
+        {
+          "text": " ho ki "
+        },
+        {
+          "text": "usne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aisa"
+        },
+        {
+          "text": " kyun "
+        },
+        {
+          "text": "kiya"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " tum confuse ho "
+        },
+        {
+          "text": "jaate"
+        },
+        {
+          "text": " ho — blame "
+        },
+        {
+          "text": "karein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " understand?"
+        }
+      ],
+      "sourceParagraph": 534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "yahi"
+        },
+        {
+          "text": " phase "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " ko "
+        },
+        {
+          "text": "tod"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mahabharat "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "yahi"
+        },
+        {
+          "text": " conflict "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": " —"
+        }
+      ],
+      "sourceParagraph": 536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Arjun ko problem war se "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "thi"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "thi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usko sab "
+        },
+        {
+          "text": "dikhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": " — "
+        },
+        {
+          "text": "dharm"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "adharm"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "saamne"
+        },
+        {
+          "text": " wale "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab sab "
+        },
+        {
+          "text": "dikhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "… decision heavy ho "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki"
+        },
+        {
+          "text": " ignorance action "
+        },
+        {
+          "text": "deti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness hesitation."
+        }
+      ],
+      "sourceParagraph": 542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur hesitation… "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " ko "
+        },
+        {
+          "text": "andar"
+        },
+        {
+          "text": " se consume "
+        },
+        {
+          "text": "karti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART IV — THE MODERN OVERLOAD",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 544,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " 50 logon se compare "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " 5000 lives scroll "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "ladka"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " life "
+        },
+        {
+          "text": "dekhta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kisi"
+        },
+        {
+          "text": " aur ki highlight life…"
+        }
+      ],
+      "sourceParagraph": 548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " reality "
+        },
+        {
+          "text": "wapas"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur problem comparison "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem yeh "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki: "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " ab ek “alternate version” "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness ne "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dikhayi"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 552
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par "
+        },
+        {
+          "text": "saath"
+        },
+        {
+          "text": " hi "
+        },
+        {
+          "text": "hume"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "andar"
+        },
+        {
+          "text": " se "
+        },
+        {
+          "text": "thoda"
+        },
+        {
+          "text": " bahar "
+        },
+        {
+          "text": "nikaal"
+        },
+        {
+          "text": " diya."
+        }
+      ],
+      "sourceParagraph": 553
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab hum "
+        },
+        {
+          "text": "jeete"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 554
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum observe "
+        },
+        {
+          "text": "karte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 555
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur observer "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " fully present "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 556
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART V — THE ILLUSION OF CONTROL",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 557,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan ka "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bada"
+        },
+        {
+          "text": " illusion:"
+        }
+      ],
+      "sourceParagraph": 558
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Main control "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoon"
+        },
+        {
+          "text": ".”"
+        }
+      ],
+      "sourceParagraph": 559
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality:"
+        }
+      ],
+      "sourceParagraph": 560
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts "
+        },
+        {
+          "text": "bina"
+        },
+        {
+          "text": " permission "
+        },
+        {
+          "text": "aate"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 561
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotions "
+        },
+        {
+          "text": "bina"
+        },
+        {
+          "text": " reason trigger "
+        },
+        {
+          "text": "hote"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 562
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory random time pe attack "
+        },
+        {
+          "text": "karti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 563
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kehta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ": “Main handle "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lunga"
+        },
+        {
+          "text": ".”"
+        }
+      ],
+      "sourceParagraph": 564
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 565
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Toh main weak "
+        },
+        {
+          "text": "hoon"
+        },
+        {
+          "text": ".”"
+        }
+      ],
+      "sourceParagraph": 566
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " weakness "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 567
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " problem yeh "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " ki hum ocean ko "
+        },
+        {
+          "text": "haath"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " hold "
+        },
+        {
+          "text": "karna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chahte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 568
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ko control "
+        },
+        {
+          "text": "karna"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 569
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaise"
+        },
+        {
+          "text": " weather ko command "
+        },
+        {
+          "text": "karna"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 570
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART VI — THE LOOP PEOPLE NEVER SEE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 571,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse dangerous trap "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 572
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sochna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 573
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sochte"
+        },
+        {
+          "text": " reh "
+        },
+        {
+          "text": "jaana"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 574
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": ": observe "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " → analyze "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " → over-analyze "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " → freeze ho "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        }
+      ],
+      "sourceParagraph": 575
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "usse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " aware ho "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " actually stuck "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 577
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mahabharat level pe "
+        },
+        {
+          "text": "samjho"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "toh"
+        },
+        {
+          "text": ": Arjun "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wahi"
+        },
+        {
+          "text": " phase "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": " —"
+        }
+      ],
+      "sourceParagraph": 578
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usko"
+        },
+        {
+          "text": " sab "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " aa "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 579
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par "
+        },
+        {
+          "text": "usse"
+        },
+        {
+          "text": " move "
+        },
+        {
+          "text": "karna"
+        },
+        {
+          "text": " impossible lag "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 580
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur Krishna ne "
+        },
+        {
+          "text": "usse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "yahi"
+        },
+        {
+          "text": " kaha:"
+        }
+      ],
+      "sourceParagraph": 581
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "Samajhna"
+        },
+        {
+          "text": " enough "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ". Karna "
+        },
+        {
+          "text": "zaroori"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ".”"
+        }
+      ],
+      "sourceParagraph": 582
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART VII — WHY PEOPLE GET STUCK",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 583,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek uncomfortable truth:"
+        }
+      ],
+      "sourceParagraph": 584
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " life "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "atakte"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 585
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "apni"
+        },
+        {
+          "text": " understanding "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "atak"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaate"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 586
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“I know what’s wrong.”"
+        }
+      ],
+      "sourceParagraph": 587
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "yahin"
+        },
+        {
+          "text": " paralysis start "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 588
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki"
+        },
+        {
+          "text": " jab tum sab "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaate"
+        },
+        {
+          "text": " ho…"
+        }
+      ],
+      "sourceParagraph": 589
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab "
+        },
+        {
+          "text": "karna"
+        },
+        {
+          "text": " emotionally heavy ho "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 590
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Knowledge action ko replace "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 591
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART VIII — THE CHILD THAT NEVER LEFT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 592,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum "
+        },
+        {
+          "text": "bachpan"
+        },
+        {
+          "text": " ko miss "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "karte"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 593
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum us version ko miss "
+        },
+        {
+          "text": "karte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": " jo:"
+        }
+      ],
+      "sourceParagraph": 594
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina"
+        },
+        {
+          "text": " reason hasta "
+        },
+        {
+          "text": "tha"
+        }
+      ],
+      "sourceParagraph": 595
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina"
+        },
+        {
+          "text": " analysis "
+        },
+        {
+          "text": "jeeta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        }
+      ],
+      "sourceParagraph": 596
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina"
+        },
+        {
+          "text": " fear "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " try "
+        },
+        {
+          "text": "karta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        }
+      ],
+      "sourceParagraph": 597
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur truth?"
+        }
+      ],
+      "sourceParagraph": 598
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh version "
+        },
+        {
+          "text": "gaya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 599
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas "
+        },
+        {
+          "text": "humne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "usko"
+        },
+        {
+          "text": " “permission” "
+        },
+        {
+          "text": "dena"
+        },
+        {
+          "text": " band "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " diya."
+        }
+      ],
+      "sourceParagraph": 600
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART IX — THE SECOND PARADOX",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 601,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar awareness gift "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 602
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "itni"
+        },
+        {
+          "text": " heavy kyun "
+        },
+        {
+          "text": "lagti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "sourceParagraph": 603
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kyunki"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 604
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness "
+        },
+        {
+          "text": "tumhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "duniya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dikhati"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "dikhati"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur khud ko "
+        },
+        {
+          "text": "dekhna"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " violent experience "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " “who you are” "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum “who you were not” "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": " ho."
+        }
+      ],
+      "sourceParagraph": 610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "samajhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "thoda"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badal"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "badla"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hua"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "insaan"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "peeche"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "chhod"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "deta"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Innocence."
+        }
+      ],
+      "sourceParagraph": 615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Blind trust."
+        }
+      ],
+      "sourceParagraph": 616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Simple peace."
+        }
+      ],
+      "sourceParagraph": 617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "isi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " knowledge free "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh "
+        },
+        {
+          "text": "milti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " le "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "asli"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": " yeh "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 621
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Hum "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jaan"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "?”"
+        }
+      ],
+      "sourceParagraph": 622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Asli "
+        },
+        {
+          "text": "sawaal"
+        },
+        {
+          "text": " yeh "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 623
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Hum "
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " ban "
+        },
+        {
+          "text": "rahe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "… "
+        },
+        {
+          "text": "jaanne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "baad"
+        },
+        {
+          "text": "?”"
+        }
+      ],
+      "sourceParagraph": 624
+    }
+  ],
+  "number": "CHAPTER 2:",
+  "phase": "The Paradox of Awareness",
+  "index": 10,
+  "file": "chapters/10-chapter-02.json"
+}

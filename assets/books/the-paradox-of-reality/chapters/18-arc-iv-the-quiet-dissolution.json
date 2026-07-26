@@ -1,0 +1,19 @@
+{
+  "id": "arc-iv-the-quiet-dissolution",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC IV — THE QUIET DISSOLUTION",
+  "shortTitle": "ARC IV — THE QUIET DISSOLUTION",
+  "sourceRange": [
+    965,
+    965
+  ],
+  "headerSourceParagraphs": {
+    "title": 965
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 18,
+  "file": "chapters/18-arc-iv-the-quiet-dissolution.json"
+}

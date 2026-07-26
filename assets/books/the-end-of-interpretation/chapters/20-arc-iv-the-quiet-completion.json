@@ -1,0 +1,19 @@
+{
+  "id": "arc-iv-the-quiet-completion",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC IV — THE QUIET COMPLETION",
+  "shortTitle": "ARC IV — THE QUIET COMPLETION",
+  "sourceRange": [
+    1108,
+    1108
+  ],
+  "headerSourceParagraphs": {
+    "title": 1108
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 20,
+  "file": "chapters/20-arc-iv-the-quiet-completion.json"
+}

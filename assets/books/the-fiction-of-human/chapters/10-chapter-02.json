@@ -1,0 +1,741 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 2",
+  "title": "The Construction of Identity",
+  "shortTitle": "The Construction of Identity",
+  "sourceRange": [
+    440,
+    521
+  ],
+  "headerSourceParagraphs": {
+    "number": 440,
+    "title": 441
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhara naam tum nahi tha."
+        }
+      ],
+      "sourceParagraph": 442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhari personality bhi tum nahi thi."
+        }
+      ],
+      "sourceParagraph": 443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhari history bhi tum nahi thi."
+        }
+      ],
+      "sourceParagraph": 444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ek waqt aisa aaya..."
+        }
+      ],
+      "sourceParagraph": 445
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab ye sab cheezein milkar ek feeling create karne lagi:"
+        }
+      ],
+      "sourceParagraph": 446
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Ye main hoon.\""
+        }
+      ],
+      "sourceParagraph": 447
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad wahi moment tha..."
+        }
+      ],
+      "sourceParagraph": 448
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan identity ka construction shuru hua."
+        }
+      ],
+      "sourceParagraph": 449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab ek bachcha paida hota hai..."
+        }
+      ],
+      "sourceParagraph": 450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "uske paas body hoti hai."
+        }
+      ],
+      "sourceParagraph": 451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sensations hoti hain."
+        }
+      ],
+      "sourceParagraph": 452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experience hota hai."
+        }
+      ],
+      "sourceParagraph": 453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin identity nahi hoti."
+        }
+      ],
+      "sourceParagraph": 454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity dheere dheere build hoti hai."
+        }
+      ],
+      "sourceParagraph": 455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek naam diya jata hai."
+        }
+      ],
+      "sourceParagraph": 456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir us naam ko baar baar repeat kiya jata hai."
+        }
+      ],
+      "sourceParagraph": 457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kuch saalon baad..."
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo naam sirf ek label nahi rehta."
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo self banne lagta hai."
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human mind ki ek strange tendency hai."
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheez baar baar repeat hoti hai..."
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo familiar lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo familiar lagti hai..."
+        }
+      ],
+      "sourceParagraph": 464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo true lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi tarah identity build hoti hai."
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not through discovery."
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Through repetition."
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE COLLECTION PROCESS"
+        }
+      ],
+      "sourceParagraph": 469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity ek single thing nahi hoti."
+        }
+      ],
+      "sourceParagraph": 470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye collection hoti hai:"
+        }
+      ],
+      "sourceParagraph": 471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "memories"
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "labels"
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "achievements"
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "failures"
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "opinions"
+        }
+      ],
+      "sourceParagraph": 476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fears"
+        }
+      ],
+      "sourceParagraph": 477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "desires"
+        }
+      ],
+      "sourceParagraph": 478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek invisible process un sab ko ek centre ke around organise kar deta hai."
+        }
+      ],
+      "sourceParagraph": 479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us centre ka naam hota hai:"
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Me\""
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity ka sabse interesting part ye hai..."
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki wo kabhi directly experience nahi hoti."
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum sadness experience kar sakte ho."
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fear experience kar sakte ho."
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts experience kar sakte ho."
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin \"identity\" ko directly touch nahi kar sakte."
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki identity experience nahi hai."
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity experience ke baare mein bani hui story hai."
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek baar identity ban jaye..."
+        }
+      ],
+      "sourceParagraph": 490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh usse maintain bhi karna padta hai."
+        }
+      ],
+      "sourceParagraph": 491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Defend karna padta hai."
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Improve karna padta hai."
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Protect karna padta hai."
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi wajah se human life mein itni energy consume hoti hai."
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum life jeene se zyada..."
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity manage karne mein busy rehte hain."
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tumhari saari memories kuch der ke liye disappear ho jaye..."
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh kya tum wahi rahoge?"
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya jo \"tum\" lagte ho..."
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo un memories ka arrangement hai?"
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar identity memories ke arrangement se bani hai..."
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kya wo reality hai?"
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya ek construction?"
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad identity fake nahi hai."
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad wo final bhi nahi hai."
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad wo ek useful story hai."
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek functional structure."
+        }
+      ],
+      "sourceParagraph": 508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab functional structure ko absolute reality samajh liya jata hai..."
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab suffering quietly enter karti hai."
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ab har challenge identity ko challenge lagta hai."
+        }
+      ],
+      "sourceParagraph": 511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har criticism self par attack lagta hai."
+        }
+      ],
+      "sourceParagraph": 512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har failure existence par question lagta hai."
+        }
+      ],
+      "sourceParagraph": 513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi tarah..."
+        }
+      ],
+      "sourceParagraph": 514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek story reality ka weight uthane lagti hai."
+        }
+      ],
+      "sourceParagraph": 515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhari identity shayad tumhari sabse familiar possession hai."
+        }
+      ],
+      "sourceParagraph": 516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin familiarity aur truth ek hi cheez nahi hote."
+        }
+      ],
+      "sourceParagraph": 517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sabse purani story hi sabse invisible story hoti hai."
+        }
+      ],
+      "sourceParagraph": 519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo invisible hota hai..."
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wahi sabse zyada powerful hota ha"
+        }
+      ],
+      "sourceParagraph": 521
+    }
+  ],
+  "index": 10,
+  "number": "CHAPTER 2 —",
+  "file": "chapters/10-chapter-02.json"
+}

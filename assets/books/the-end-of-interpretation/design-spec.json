@@ -1,0 +1,123 @@
+{
+  "bookSlug": "the-end-of-interpretation",
+  "title": "The End of Interpretation",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "bookNumber": "Book III",
+  "visualThemeName": "Vanishing Marginalia",
+  "designPurpose": "Margins, rules, and soft violet-grey traces gradually thinning, as if interpretation is becoming less necessary.",
+  "emotionalConceptualKeywords": [
+    "interpretation",
+    "dissolution",
+    "meaning",
+    "silence",
+    "release"
+  ],
+  "colorSystem": {
+    "light": {
+      "background": "#E1E1E4",
+      "paper": "#F6EFE6",
+      "paperSoft": "#EAE2D8",
+      "text": "#292C34",
+      "heading": "#1B1E27",
+      "accent": "#6F698A",
+      "accentStrong": "#4F4B6E",
+      "warmCounterpoint": "#96785A"
+    },
+    "sepia": {
+      "background": "#E0D5C9",
+      "paper": "#F1E4D2",
+      "paperSoft": "#E4D6C4",
+      "text": "#342D29",
+      "heading": "#241F1D",
+      "accent": "#716476",
+      "accentStrong": "#57495E",
+      "warmCounterpoint": "#927152"
+    },
+    "dark": {
+      "background": "#101016",
+      "paper": "#1B1B25",
+      "paperSoft": "#252535",
+      "text": "#EEE7DD",
+      "heading": "#F8F0E8",
+      "accent": "#B0A8CF",
+      "accentStrong": "#D2CBEA",
+      "warmCounterpoint": "#C1A17B"
+    }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Georgia",
+    "interface": "Inter"
+  },
+  "typography": {
+    "desktopBody": "18px",
+    "mobileBody": "17px minimum",
+    "lineHeight": 1.72,
+    "paragraphIndent": "1.05em after first paragraph",
+    "chapterHeading": "clamp(2.28rem, 4.6vw, 3.35rem)"
+  },
+  "pageGeometry": {
+    "desktop": {
+      "width": "664px",
+      "height": "1026px",
+      "paddingBlock": "82px",
+      "paddingInline": "70px",
+      "lineLength": "approximately 60-72 characters"
+    },
+    "tablet": {
+      "width": "min(642px, calc(100vw - 56px))",
+      "height": "940px"
+    },
+    "mobile": {
+      "width": "calc(100vw - 20px)",
+      "safePadding": "20px inline / 36px block",
+      "height": "min(900px, calc(100svh - 118px))"
+    }
+  },
+  "semanticPageTypes": {
+    "cover": "Official cover appears first, unnumbered, contained without cropping.",
+    "titlePage": "Source title-page paragraphs are centered as a conceptual frontispiece; title paragraph receives the display treatment.",
+    "contents": "TOC source lines keep manuscript order with arc and chapter hierarchy.",
+    "chapterOpening": "Interpretive marks recede until the page feels increasingly unclaimed. Chapter openers begin on fresh pages with restrained rule geometry.",
+    "normalContinuation": "Warm ivory paper, deep text, comfortable literary spacing, source paragraph anchors retained.",
+    "sectionBreak": "Small dual-rule mark in accent and warm counterpoint.",
+    "pageNumbers": "Small sans-serif numerals placed by the shared engine at the page foot.",
+    "finalManuscriptPage": "Ending, epilogue, and author pages carry a quieter lower-page wash.",
+    "feedbackSurface": "One whole-book feedback surface after the manuscript, themed only by color and type."
+  },
+  "contentsStyle": "Drawer uses scoped accent border, active row wash, and manuscript-derived jump labels.",
+  "feedbackStyle": "Natural-height mobile expansion, no nested mobile scroll, full-width mobile fields, existing endpoint and payload.",
+  "coverSpecification": {
+    "source": "projects/human-paradox/assets/covers/the end of interpretation.jpeg",
+    "web": "cover/front-cover.webp",
+    "printReference": "cover/front-cover-print.png",
+    "sourceCopy": "cover/cover-source.png",
+    "dimensions": "1024x1536",
+    "aspectRatioPreserved": true
+  },
+  "responsiveAdaptations": {
+    "mobile": "Near full-width page, 17px body text, simplified motif, no horizontal overflow.",
+    "tablet": "Centered page with balanced margins and clear hierarchy.",
+    "desktop": "Trade-book proportions with subtle edge and shadow."
+  },
+  "futureWordMapping": {
+    "pageSize": "5.5 x 8.5 in trade-book reference",
+    "body": "Georgia 11-11.5pt equivalent",
+    "lineHeight": "1.35-1.45 print leading",
+    "margins": "generous inner/outer margins matching reader proportions",
+    "sectionDividers": "translate dual-rule motif to hairline rules"
+  },
+  "futurePdfMapping": {
+    "pageBox": "5.5 x 8.5 in",
+    "cover": "Use higher-resolution artwork if available; current reader cover is a web/display source.",
+    "runningElements": "Small bottom page numbers; chapter openers begin on new pages"
+  },
+  "printLimitations": "Current official cover source is 1024x1536; useful as a reader and print-reference image but not guaranteed 300 DPI production cover art.",
+  "sourceCounts": {
+    "sourceParagraphsNonEmpty": 1263,
+    "semanticUnits": 24,
+    "chapters": 9
+  }
+}

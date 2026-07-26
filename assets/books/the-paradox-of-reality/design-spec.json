@@ -1,0 +1,123 @@
+{
+  "bookSlug": "the-paradox-of-reality",
+  "title": "The Paradox of Reality",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "bookNumber": "Book IV",
+  "visualThemeName": "Perceptual Rift",
+  "designPurpose": "A mineral page split by restrained rift lines, where perception and reality sit close but never perfectly overlap.",
+  "emotionalConceptualKeywords": [
+    "reality",
+    "perception",
+    "belief",
+    "fracture",
+    "uncertainty"
+  ],
+  "colorSystem": {
+    "light": {
+      "background": "#DDE2DD",
+      "paper": "#F7EFE2",
+      "paperSoft": "#EAE2D4",
+      "text": "#29302C",
+      "heading": "#1D241F",
+      "accent": "#687858",
+      "accentStrong": "#4B5B43",
+      "warmCounterpoint": "#9B744E"
+    },
+    "sepia": {
+      "background": "#DED7C8",
+      "paper": "#F2E5D0",
+      "paperSoft": "#E6D8C2",
+      "text": "#352E26",
+      "heading": "#241F18",
+      "accent": "#71684D",
+      "accentStrong": "#585139",
+      "warmCounterpoint": "#96724B"
+    },
+    "dark": {
+      "background": "#0E130F",
+      "paper": "#191E18",
+      "paperSoft": "#232B21",
+      "text": "#EFE7D9",
+      "heading": "#F8F0E4",
+      "accent": "#AEBB8B",
+      "accentStrong": "#D2DAA9",
+      "warmCounterpoint": "#C29A68"
+    }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Georgia",
+    "interface": "Inter"
+  },
+  "typography": {
+    "desktopBody": "18px",
+    "mobileBody": "17px minimum",
+    "lineHeight": 1.72,
+    "paragraphIndent": "1.05em after first paragraph",
+    "chapterHeading": "clamp(2.28rem, 4.6vw, 3.35rem)"
+  },
+  "pageGeometry": {
+    "desktop": {
+      "width": "664px",
+      "height": "1026px",
+      "paddingBlock": "82px",
+      "paddingInline": "70px",
+      "lineLength": "approximately 60-72 characters"
+    },
+    "tablet": {
+      "width": "min(642px, calc(100vw - 56px))",
+      "height": "940px"
+    },
+    "mobile": {
+      "width": "calc(100vw - 20px)",
+      "safePadding": "20px inline / 36px block",
+      "height": "min(900px, calc(100svh - 118px))"
+    }
+  },
+  "semanticPageTypes": {
+    "cover": "Official cover appears first, unnumbered, contained without cropping.",
+    "titlePage": "Source title-page paragraphs are centered as a conceptual frontispiece; title paragraph receives the display treatment.",
+    "contents": "TOC source lines keep manuscript order with arc and chapter hierarchy.",
+    "chapterOpening": "Reality is staged as a controlled fracture between what is seen and what is believed. Chapter openers begin on fresh pages with restrained rule geometry.",
+    "normalContinuation": "Warm ivory paper, deep text, comfortable literary spacing, source paragraph anchors retained.",
+    "sectionBreak": "Small dual-rule mark in accent and warm counterpoint.",
+    "pageNumbers": "Small sans-serif numerals placed by the shared engine at the page foot.",
+    "finalManuscriptPage": "Ending, epilogue, and author pages carry a quieter lower-page wash.",
+    "feedbackSurface": "One whole-book feedback surface after the manuscript, themed only by color and type."
+  },
+  "contentsStyle": "Drawer uses scoped accent border, active row wash, and manuscript-derived jump labels.",
+  "feedbackStyle": "Natural-height mobile expansion, no nested mobile scroll, full-width mobile fields, existing endpoint and payload.",
+  "coverSpecification": {
+    "source": "projects/human-paradox/assets/covers/the paradox of reality.jpeg",
+    "web": "cover/front-cover.webp",
+    "printReference": "cover/front-cover-print.png",
+    "sourceCopy": "cover/cover-source.png",
+    "dimensions": "1023x1537",
+    "aspectRatioPreserved": true
+  },
+  "responsiveAdaptations": {
+    "mobile": "Near full-width page, 17px body text, simplified motif, no horizontal overflow.",
+    "tablet": "Centered page with balanced margins and clear hierarchy.",
+    "desktop": "Trade-book proportions with subtle edge and shadow."
+  },
+  "futureWordMapping": {
+    "pageSize": "5.5 x 8.5 in trade-book reference",
+    "body": "Georgia 11-11.5pt equivalent",
+    "lineHeight": "1.35-1.45 print leading",
+    "margins": "generous inner/outer margins matching reader proportions",
+    "sectionDividers": "translate dual-rule motif to hairline rules"
+  },
+  "futurePdfMapping": {
+    "pageBox": "5.5 x 8.5 in",
+    "cover": "Use higher-resolution artwork if available; current reader cover is a web/display source.",
+    "runningElements": "Small bottom page numbers; chapter openers begin on new pages"
+  },
+  "printLimitations": "Current official cover source is 1023x1537; useful as a reader and print-reference image but not guaranteed 300 DPI production cover art.",
+  "sourceCounts": {
+    "sourceParagraphsNonEmpty": 1236,
+    "semanticUnits": 24,
+    "chapters": 9
+  }
+}

@@ -1,0 +1,849 @@
+{
+  "id": "chapter-04",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 4",
+  "title": "The Reality-Making Machine",
+  "shortTitle": "The Reality-Making Machine",
+  "sourceRange": [
+    616,
+    709
+  ],
+  "headerSourceParagraphs": {
+    "number": 616,
+    "title": 617
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum usually sochte hain ki reality pehle aati hai..."
+        }
+      ],
+      "sourceParagraph": 618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur interpretation baad mein."
+        }
+      ],
+      "sourceParagraph": 619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle duniya."
+        }
+      ],
+      "sourceParagraph": 620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir uski understanding."
+        }
+      ],
+      "sourceParagraph": 621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle event."
+        }
+      ],
+      "sourceParagraph": 622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir uska meaning."
+        }
+      ],
+      "sourceParagraph": 623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye assumption itna natural lagta hai..."
+        }
+      ],
+      "sourceParagraph": 624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hum kabhi usse question hi nahi karte."
+        }
+      ],
+      "sourceParagraph": 625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar thoda closely dekha jaye..."
+        }
+      ],
+      "sourceParagraph": 626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange possibility saamne aati hai."
+        }
+      ],
+      "sourceParagraph": 627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad hum reality ko directly nahi dekhte."
+        }
+      ],
+      "sourceParagraph": 628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad hum us version ko dekhte hain..."
+        }
+      ],
+      "sourceParagraph": 629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo mind already process kar chuka hota hai."
+        }
+      ],
+      "sourceParagraph": 630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har second..."
+        }
+      ],
+      "sourceParagraph": 631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hazaaron cheezein ho rahi hoti hain."
+        }
+      ],
+      "sourceParagraph": 632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awazein."
+        }
+      ],
+      "sourceParagraph": 633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sensations."
+        }
+      ],
+      "sourceParagraph": 634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts."
+        }
+      ],
+      "sourceParagraph": 635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Colors."
+        }
+      ],
+      "sourceParagraph": 636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Movements."
+        }
+      ],
+      "sourceParagraph": 637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin unmein se bahut kam cheezein awareness tak pahunchti hain."
+        }
+      ],
+      "sourceParagraph": 638
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind select karta hai."
+        }
+      ],
+      "sourceParagraph": 639
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Filter karta hai."
+        }
+      ],
+      "sourceParagraph": 640
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Arrange karta hai."
+        }
+      ],
+      "sourceParagraph": 641
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpret karta hai."
+        }
+      ],
+      "sourceParagraph": 642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek final version awareness ke saamne present karta hai."
+        }
+      ],
+      "sourceParagraph": 643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us final version ko hum kehte hain:"
+        }
+      ],
+      "sourceParagraph": 644
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality."
+        }
+      ],
+      "sourceParagraph": 645
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Imagine karo..."
+        }
+      ],
+      "sourceParagraph": 646
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum ek movie dekh rahe ho."
+        }
+      ],
+      "sourceParagraph": 647
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin tumhe pata nahi..."
+        }
+      ],
+      "sourceParagraph": 648
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki movie shuru hone se pehle hi kisi ne uske scenes edit kar diye hain."
+        }
+      ],
+      "sourceParagraph": 649
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch remove kar diya."
+        }
+      ],
+      "sourceParagraph": 650
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch highlight kar diya."
+        }
+      ],
+      "sourceParagraph": 651
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch reorder kar diya."
+        }
+      ],
+      "sourceParagraph": 652
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum jo dekh rahe ho..."
+        }
+      ],
+      "sourceParagraph": 653
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo raw footage nahi hai."
+        }
+      ],
+      "sourceParagraph": 654
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo edited version hai."
+        }
+      ],
+      "sourceParagraph": 655
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad human perception bhi kuch aisa hi hai."
+        }
+      ],
+      "sourceParagraph": 656
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum aksar ye maan kar jeete hain:"
+        }
+      ],
+      "sourceParagraph": 657
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Main cheezon ko jaisa wo hain vaisa dekh raha hoon.\""
+        }
+      ],
+      "sourceParagraph": 658
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin reality mein hum cheezon ko vaisa dekhte hain..."
+        }
+      ],
+      "sourceParagraph": 659
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaisa hum unhe interpret karte hain."
+        }
+      ],
+      "sourceParagraph": 660
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi sentence..."
+        }
+      ],
+      "sourceParagraph": 661
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "do logon ko completely alag lag sakta hai."
+        }
+      ],
+      "sourceParagraph": 662
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi event..."
+        }
+      ],
+      "sourceParagraph": 663
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek insaan ke liye tragedy ho sakta hai."
+        }
+      ],
+      "sourceParagraph": 664
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur doosre ke liye transformation."
+        }
+      ],
+      "sourceParagraph": 665
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Event same."
+        }
+      ],
+      "sourceParagraph": 666
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality experience different."
+        }
+      ],
+      "sourceParagraph": 667
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind sirf information receive nahi karta."
+        }
+      ],
+      "sourceParagraph": 668
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo reality generate karta hai."
+        }
+      ],
+      "sourceParagraph": 669
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory add karta hai."
+        }
+      ],
+      "sourceParagraph": 670
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning add karta hai."
+        }
+      ],
+      "sourceParagraph": 671
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity add karta hai."
+        }
+      ],
+      "sourceParagraph": 672
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fear add karta hai."
+        }
+      ],
+      "sourceParagraph": 673
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hope add karta hai."
+        }
+      ],
+      "sourceParagraph": 674
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek complete psychological world create hota hai."
+        }
+      ],
+      "sourceParagraph": 675
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek world jo itna convincing lagta hai..."
+        }
+      ],
+      "sourceParagraph": 676
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hum usse objective reality samajhne lagte hain."
+        }
+      ],
+      "sourceParagraph": 677
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan ek hi duniya mein nahi rehta."
+        }
+      ],
+      "sourceParagraph": 678
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan apni interpreted duniya mein rehta hai."
+        }
+      ],
+      "sourceParagraph": 679
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi liye..."
+        }
+      ],
+      "sourceParagraph": 680
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "do log ek hi ghar mein rehkar bhi alag realities experience kar sakte hain."
+        }
+      ],
+      "sourceParagraph": 681
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Do log ek hi relationship mein rehkar bhi alag stories jee sakte hain."
+        }
+      ],
+      "sourceParagraph": 682
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Do log ek hi life event ko completely opposite tareeke se yaad rakh sakte hain."
+        }
+      ],
+      "sourceParagraph": 683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality sirf event nahi hoti."
+        }
+      ],
+      "sourceParagraph": 684
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality + interpretation hoti hai."
+        }
+      ],
+      "sourceParagraph": 685
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretation useful hai."
+        }
+      ],
+      "sourceParagraph": 686
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske bina practical life impossible ho jaye."
+        }
+      ],
+      "sourceParagraph": 687
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin problem tab shuru hoti hai..."
+        }
+      ],
+      "sourceParagraph": 688
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab interpretation ko reality samajh liya jata hai."
+        }
+      ],
+      "sourceParagraph": 689
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tab thought observation ki jagah le leta hai."
+        }
+      ],
+      "sourceParagraph": 690
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur narration experience ki jagah."
+        }
+      ],
+      "sourceParagraph": 691
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi hum reality se argue nahi kar rahe hote."
+        }
+      ],
+      "sourceParagraph": 692
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum apni interpretation se argue kar rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 693
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum life se nahi lad rahe hote."
+        }
+      ],
+      "sourceParagraph": 694
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum us version se lad rahe hote hain..."
+        }
+      ],
+      "sourceParagraph": 695
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo mind ne life ka bana diya hota hai."
+        }
+      ],
+      "sourceParagraph": 696
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye fight saalon tak chal sakti hai."
+        }
+      ],
+      "sourceParagraph": 697
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar interpretation kuch der ke liye soft ho jaye..."
+        }
+      ],
+      "sourceParagraph": 698
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar narration thodi dheemi pad jaye..."
+        }
+      ],
+      "sourceParagraph": 699
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar mind har cheez ko immediately define karna band kar de..."
+        }
+      ],
+      "sourceParagraph": 700
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh kya hoga?"
+        }
+      ],
+      "sourceParagraph": 701
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya reality disappear ho jayegi?"
+        }
+      ],
+      "sourceParagraph": 702
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya pehli baar..."
+        }
+      ],
+      "sourceParagraph": 703
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo apne raw form mein nazar aayegi?"
+        }
+      ],
+      "sourceParagraph": 704
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar reality ko continuously create karne ki zarurat nahi..."
+        }
+      ],
+      "sourceParagraph": 705
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh phir ye machine kis ke liye kaam kar rahi hai?"
+        }
+      ],
+      "sourceParagraph": 706
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad..."
+        }
+      ],
+      "sourceParagraph": 707
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "us character ke liye..."
+        }
+      ],
+      "sourceParagraph": 708
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jiski story humne Chapter 1 mein dekhi thi."
+        }
+      ],
+      "sourceParagraph": 709
+    }
+  ],
+  "index": 13,
+  "number": "CHAPTER 4 —",
+  "file": "chapters/13-chapter-04.json"
+}

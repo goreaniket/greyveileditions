@@ -1,0 +1,65 @@
+{
+  "id": "copyright",
+  "kind": "copyright",
+  "sourceKind": "copyright",
+  "label": "Copyright",
+  "title": "COPYRIGHT NOTICE",
+  "shortTitle": "COPYRIGHT NOTICE",
+  "sourceRange": [
+    33,
+    38
+  ],
+  "headerSourceParagraphs": {
+    "title": 33
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 34
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All rights reserved."
+        }
+      ],
+      "sourceParagraph": 35
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No part of this book may be reproduced, stored, distributed, or transmitted in any form or by any means — electronic, mechanical, photocopying, recording, or otherwise — without prior written permission from the author."
+        }
+      ],
+      "sourceParagraph": 36
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This work, The Human Fiction, is a creative philosophical exploration of perception, identity, meaning, and narrative structure."
+        }
+      ],
+      "sourceParagraph": 37
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any resemblance to real experiences or interpretations is coincidental and reflects universal patterns of human cognition."
+        }
+      ],
+      "sourceParagraph": 38
+    }
+  ],
+  "index": 2,
+  "suppressHeaderNumber": true,
+  "file": "chapters/02-copyright.json"
+}

@@ -1,0 +1,123 @@
+{
+  "bookSlug": "the-paradox-of-awareness",
+  "title": "The Paradox of Awareness",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "bookNumber": "Book I",
+  "visualThemeName": "Fractured Aperture",
+  "designPurpose": "A narrow aperture of clarity opening inside graphite quiet, with bronze tension lines suggesting awareness as both light and pressure.",
+  "emotionalConceptualKeywords": [
+    "awareness",
+    "clarity",
+    "burden",
+    "self-observation",
+    "fractured seeing"
+  ],
+  "colorSystem": {
+    "light": {
+      "background": "#DDE2E3",
+      "paper": "#F6EFE4",
+      "paperSoft": "#ECE3D6",
+      "text": "#242B31",
+      "heading": "#151B21",
+      "accent": "#5E6984",
+      "accentStrong": "#39465E",
+      "warmCounterpoint": "#A06F48"
+    },
+    "sepia": {
+      "background": "#DFD4C4",
+      "paper": "#F2E3CF",
+      "paperSoft": "#E5D3BE",
+      "text": "#352D25",
+      "heading": "#241D18",
+      "accent": "#6D6379",
+      "accentStrong": "#4D465D",
+      "warmCounterpoint": "#966B45"
+    },
+    "dark": {
+      "background": "#0D1116",
+      "paper": "#171C24",
+      "paperSoft": "#202735",
+      "text": "#EEE7DA",
+      "heading": "#F8F0E5",
+      "accent": "#A9B3D0",
+      "accentStrong": "#D0D8F0",
+      "warmCounterpoint": "#C8945D"
+    }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Georgia",
+    "interface": "Inter"
+  },
+  "typography": {
+    "desktopBody": "18px",
+    "mobileBody": "17px minimum",
+    "lineHeight": 1.72,
+    "paragraphIndent": "1.05em after first paragraph",
+    "chapterHeading": "clamp(2.28rem, 4.6vw, 3.35rem)"
+  },
+  "pageGeometry": {
+    "desktop": {
+      "width": "664px",
+      "height": "1026px",
+      "paddingBlock": "82px",
+      "paddingInline": "70px",
+      "lineLength": "approximately 60-72 characters"
+    },
+    "tablet": {
+      "width": "min(642px, calc(100vw - 56px))",
+      "height": "940px"
+    },
+    "mobile": {
+      "width": "calc(100vw - 20px)",
+      "safePadding": "20px inline / 36px block",
+      "height": "min(900px, calc(100svh - 118px))"
+    }
+  },
+  "semanticPageTypes": {
+    "cover": "Official cover appears first, unnumbered, contained without cropping.",
+    "titlePage": "Source title-page paragraphs are centered as a conceptual frontispiece; title paragraph receives the display treatment.",
+    "contents": "TOC source lines keep manuscript order with arc and chapter hierarchy.",
+    "chapterOpening": "Awareness as a slit of light that opens the page while splitting certainty. Chapter openers begin on fresh pages with restrained rule geometry.",
+    "normalContinuation": "Warm ivory paper, deep text, comfortable literary spacing, source paragraph anchors retained.",
+    "sectionBreak": "Small dual-rule mark in accent and warm counterpoint.",
+    "pageNumbers": "Small sans-serif numerals placed by the shared engine at the page foot.",
+    "finalManuscriptPage": "Ending, epilogue, and author pages carry a quieter lower-page wash.",
+    "feedbackSurface": "One whole-book feedback surface after the manuscript, themed only by color and type."
+  },
+  "contentsStyle": "Drawer uses scoped accent border, active row wash, and manuscript-derived jump labels.",
+  "feedbackStyle": "Natural-height mobile expansion, no nested mobile scroll, full-width mobile fields, existing endpoint and payload.",
+  "coverSpecification": {
+    "source": "projects/human-paradox/assets/covers/the paradox of awareness.jpeg",
+    "web": "cover/front-cover.webp",
+    "printReference": "cover/front-cover-print.png",
+    "sourceCopy": "cover/cover-source.png",
+    "dimensions": "1023x1537",
+    "aspectRatioPreserved": true
+  },
+  "responsiveAdaptations": {
+    "mobile": "Near full-width page, 17px body text, simplified motif, no horizontal overflow.",
+    "tablet": "Centered page with balanced margins and clear hierarchy.",
+    "desktop": "Trade-book proportions with subtle edge and shadow."
+  },
+  "futureWordMapping": {
+    "pageSize": "5.5 x 8.5 in trade-book reference",
+    "body": "Georgia 11-11.5pt equivalent",
+    "lineHeight": "1.35-1.45 print leading",
+    "margins": "generous inner/outer margins matching reader proportions",
+    "sectionDividers": "translate dual-rule motif to hairline rules"
+  },
+  "futurePdfMapping": {
+    "pageBox": "5.5 x 8.5 in",
+    "cover": "Use higher-resolution artwork if available; current reader cover is a web/display source.",
+    "runningElements": "Small bottom page numbers; chapter openers begin on new pages"
+  },
+  "printLimitations": "Current official cover source is 1023x1537; useful as a reader and print-reference image but not guaranteed 300 DPI production cover art.",
+  "sourceCounts": {
+    "sourceParagraphsNonEmpty": 1847,
+    "semanticUnits": 25,
+    "chapters": 10
+  }
+}

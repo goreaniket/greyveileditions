@@ -1,0 +1,868 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 2",
+  "title": "CHAPTER 2 — WHEN SEEING STOPS BEING DIRECT",
+  "shortTitle": "WHEN SEEING STOPS BEING DIRECT",
+  "sourceRange": [
+    413,
+    507
+  ],
+  "headerSourceParagraphs": {
+    "title": 413
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle lagta hai dekhna sabse simple cheez hai."
+        }
+      ],
+      "sourceParagraph": 414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aankhen khuli → duniya dikhi → matter over."
+        }
+      ],
+      "sourceParagraph": 415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin yeh simplicity sirf surface pe hoti hai."
+        }
+      ],
+      "sourceParagraph": 416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jo “dikhta” hai…"
+        }
+      ],
+      "sourceParagraph": 417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh kabhi raw nahi hota."
+        }
+      ],
+      "sourceParagraph": 418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez jo tum dekhte ho…"
+        }
+      ],
+      "sourceParagraph": 419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "uske saath ek invisible layer already attach hoti hai."
+        }
+      ],
+      "sourceParagraph": 420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning ki."
+        }
+      ],
+      "sourceParagraph": 421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretation ki."
+        }
+      ],
+      "sourceParagraph": 422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory ki."
+        }
+      ],
+      "sourceParagraph": 423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Expectation ki."
+        }
+      ],
+      "sourceParagraph": 424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh sab itni fast hota hai…"
+        }
+      ],
+      "sourceParagraph": 425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhe lagta hai tum seedha reality dekh rahe ho."
+        }
+      ],
+      "sourceParagraph": 426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ek point aata hai…"
+        }
+      ],
+      "sourceParagraph": 427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab yeh process thoda slow dikhne lagta hai."
+        }
+      ],
+      "sourceParagraph": 428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because it changed."
+        }
+      ],
+      "sourceParagraph": 429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because awareness thodi sharp ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kisi normal cheez ko dekhte ho."
+        }
+      ],
+      "sourceParagraph": 431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek face."
+        }
+      ],
+      "sourceParagraph": 432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek room."
+        }
+      ],
+      "sourceParagraph": 433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek movement."
+        }
+      ],
+      "sourceParagraph": 434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek silence."
+        }
+      ],
+      "sourceParagraph": 435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur usi moment pe ek aur cheez parallel chal rahi hoti hai:"
+        }
+      ],
+      "sourceParagraph": 436
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": " “yeh kya hai?”"
+        }
+      ],
+      "sourceParagraph": 437
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": " “iska matlab kya hai?”"
+        }
+      ],
+      "sourceParagraph": 438
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": " “yeh safe hai ya nahi?”"
+        }
+      ],
+      "sourceParagraph": 439
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": " “yeh important hai ya not?”"
+        }
+      ],
+      "sourceParagraph": 440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh questions baad mein nahi aate."
+        }
+      ],
+      "sourceParagraph": 441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh saath-saath chal rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek strange realization start hota hai:"
+        }
+      ],
+      "sourceParagraph": 443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tum dekh nahi rahe ho… tum classify kar rahe ho"
+        }
+      ],
+      "sourceParagraph": 444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez instant category mein chali jaati hai:"
+        }
+      ],
+      "sourceParagraph": 445
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "good / bad"
+        }
+      ],
+      "sourceParagraph": 446
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "important / ignore"
+        }
+      ],
+      "sourceParagraph": 447
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "threat / safe"
+        }
+      ],
+      "sourceParagraph": 448
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "relevant / irrelevant"
+        }
+      ],
+      "sourceParagraph": 449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab classification ho rahi hoti hai…"
+        }
+      ],
+      "sourceParagraph": 450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh direct experience lost ho jata hai."
+        }
+      ],
+      "sourceParagraph": 451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab ek simple scene lo:"
+        }
+      ],
+      "sourceParagraph": 452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi insaan chup hai."
+        }
+      ],
+      "sourceParagraph": 453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas silent."
+        }
+      ],
+      "sourceParagraph": 454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Direct experience kya hai?"
+        }
+      ],
+      "sourceParagraph": 455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "silence."
+        }
+      ],
+      "sourceParagraph": 456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin mind kya karta hai?"
+        }
+      ],
+      "sourceParagraph": 457
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“kuch toh soch raha hoga”"
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“ignore kar raha hai”"
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“attitude hai”"
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“problem hai”"
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahan pe reality shift ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence ab silence nahi rehta."
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence ek story ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh story itni fast generate hoti hai…"
+        }
+      ],
+      "sourceParagraph": 465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhe lagta hai wahi reality hai."
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab thoda gap create hota hai…"
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek micro pause…"
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek uncomfortable clarity aati hai:"
+        }
+      ],
+      "sourceParagraph": 469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo main dekh raha hoon… woh already edited hai"
+        }
+      ],
+      "sourceParagraph": 470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Edited by memory."
+        }
+      ],
+      "sourceParagraph": 471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Edited by expectation."
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Edited by fear."
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Edited by past experience."
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh editing visible ho jaati hai…"
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek aur layer crack hoti hai:"
+        }
+      ],
+      "sourceParagraph": 476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“direct seeing” ka illusion"
+        }
+      ],
+      "sourceParagraph": 477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab reality distant nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par “unprocessed” bhi nahi lagti."
+        }
+      ],
+      "sourceParagraph": 479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh ek continuous translation ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "World → perception → interpretation → meaning → reaction"
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum beech mein ho…"
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but tum “dekhne wale” se zyada…"
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“translate hone wale system” jaisa feel karte ho."
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh shift subtle hai…"
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin irreversible feel hota hai."
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ab tum kisi cheez ko dekh kar usko stop nahi kar sakte…"
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpret hone se."
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek strange discomfort arise hota hai:"
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " agar har cheez interpreted hai… toh original kya hai?"
+        }
+      ],
+      "sourceParagraph": 490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin yeh question bhi quickly dissolve ho jaata hai…"
+        }
+      ],
+      "sourceParagraph": 491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki “original” bhi ek interpretation hi hai."
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh loop thoda heavy ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na clarity fully stable rehti hai."
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na confusion fully solid hota hai."
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek in-between state banti hai…"
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan seeing aur thinking merge ho chuke hote hain…"
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without permission."
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab ek cheez slowly visible hoti hai:"
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " tum duniya ko nahi dekh rahe… tum duniya ko construct hote hue experience kar rahe ho"
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh realization settle hone lagta hai…"
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh reality ka weight change ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same world."
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same objects."
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same people."
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But something fundamental shifts:"
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " directness vanish nahi hoti… bas accessible nahi lagti"
+        }
+      ],
+      "sourceParagraph": 507
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "number": "Chapter 2",
+  "phase": "The Paradox of Reality",
+  "index": 10,
+  "file": "chapters/10-chapter-02.json"
+}

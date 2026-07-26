@@ -1,0 +1,971 @@
+{
+  "id": "end-realization",
+  "kind": "ending",
+  "sourceKind": "ending",
+  "label": "End Realization",
+  "title": "END REALIZATION",
+  "shortTitle": "END REALIZATION",
+  "sourceRange": [
+    1693,
+    1734
+  ],
+  "headerSourceParagraphs": {
+    "title": 1693
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "✦"
+        },
+        {
+          "text": " The Final Realization — “You Were Never Outside Life”"
+        }
+      ],
+      "sourceParagraph": 1694
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab sab "
+        },
+        {
+          "text": "kuch"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " aa "
+        },
+        {
+          "text": "jata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 1695
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh"
+        },
+        {
+          "text": " ek strange silence reh "
+        },
+        {
+          "text": "jaata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1696
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na questions "
+        },
+        {
+          "text": "bachte"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hain"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1697
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na answers ka weight."
+        }
+      ],
+      "sourceParagraph": 1698
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf"
+        },
+        {
+          "text": " ek clarity "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": " jo "
+        },
+        {
+          "text": "khali"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lagti"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1699
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh realization "
+        },
+        {
+          "text": "aata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 1700
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum life ko observe "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahe"
+        },
+        {
+          "text": " the"
+        }
+      ],
+      "sourceParagraph": 1701
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum life se "
+        },
+        {
+          "text": "alag"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " the hi "
+        },
+        {
+          "text": "nahi"
+        }
+      ],
+      "sourceParagraph": 1702
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "usi"
+        },
+        {
+          "text": " experience ka part the "
+        },
+        {
+          "text": "jise"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "samajhne"
+        },
+        {
+          "text": " ki "
+        },
+        {
+          "text": "koshish"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahe"
+        },
+        {
+          "text": " the"
+        }
+      ],
+      "sourceParagraph": 1703
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "✦"
+        },
+        {
+          "text": " The Collapse of All Meanings"
+        }
+      ],
+      "sourceParagraph": 1704
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab meanings jo "
+        },
+        {
+          "text": "tumne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "banaye"
+        },
+        {
+          "text": " the:"
+        }
+      ],
+      "sourceParagraph": 1705
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "awareness"
+        }
+      ],
+      "sourceParagraph": 1706
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity"
+        }
+      ],
+      "sourceParagraph": 1707
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "control"
+        }
+      ],
+      "sourceParagraph": 1708
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "understanding"
+        }
+      ],
+      "sourceParagraph": 1709
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fear"
+        }
+      ],
+      "sourceParagraph": 1710
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "clarity"
+        }
+      ],
+      "sourceParagraph": 1711
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh"
+        },
+        {
+          "text": " sab ek moment "
+        },
+        {
+          "text": "ke"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "liye"
+        },
+        {
+          "text": " hold "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "kar"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "paate"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1712
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "tumhe"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aata"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 1713
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " reality "
+        },
+        {
+          "text": "mein"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1714
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " interpretation "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1715
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "✦"
+        },
+        {
+          "text": " The Quiet Truth"
+        }
+      ],
+      "sourceParagraph": 1716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi grand enlightenment "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1717
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi dramatic awakening "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hoti"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1718
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf"
+        },
+        {
+          "text": " ek simple realization:"
+        }
+      ],
+      "sourceParagraph": 1719
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum "
+        },
+        {
+          "text": "jis"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "cheez"
+        },
+        {
+          "text": " ko “life "
+        },
+        {
+          "text": "samajh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "rahe"
+        },
+        {
+          "text": " the”"
+        }
+      ],
+      "sourceParagraph": 1720
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " experience ka flow "
+        },
+        {
+          "text": "tha"
+        },
+        {
+          "text": "."
+        }
+      ],
+      "sourceParagraph": 1721
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "✦"
+        },
+        {
+          "text": " The Final Paradox "
+        }
+      ],
+      "sourceParagraph": 1722
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "yahin"
+        },
+        {
+          "text": " pe "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " dangerous paradox complete "
+        },
+        {
+          "text": "hota"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 1723
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jitna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "samajhte"
+        },
+        {
+          "text": " ho"
+        }
+      ],
+      "sourceParagraph": 1724
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Utna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": " ho"
+        }
+      ],
+      "sourceParagraph": 1725
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "jitna"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "zyada"
+        },
+        {
+          "text": " tum "
+        },
+        {
+          "text": "dekhte"
+        },
+        {
+          "text": " ho"
+        }
+      ],
+      "sourceParagraph": 1726
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "→ "
+        },
+        {
+          "text": "utna"
+        },
+        {
+          "text": " hi tum “"
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "dekhne"
+        },
+        {
+          "text": " wale” ban "
+        },
+        {
+          "text": "jaate"
+        },
+        {
+          "text": " ho"
+        }
+      ],
+      "sourceParagraph": 1727
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par problem yeh "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "…"
+        }
+      ],
+      "sourceParagraph": 1728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dekhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "wala"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " tum hi ho"
+        }
+      ],
+      "sourceParagraph": 1729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo "
+        },
+        {
+          "text": "dekha"
+        },
+        {
+          "text": " ja "
+        },
+        {
+          "text": "raha"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "… "
+        },
+        {
+          "text": "woh"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "bhi"
+        },
+        {
+          "text": " tum hi ho"
+        }
+      ],
+      "sourceParagraph": 1730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "✦"
+        },
+        {
+          "text": " FINAL LOOP LINE (END OF BOOK)"
+        }
+      ],
+      "sourceParagraph": 1731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur "
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sabse"
+        },
+        {
+          "text": " last truth yeh "
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": ":"
+        }
+      ],
+      "sourceParagraph": 1732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Tum "
+        },
+        {
+          "text": "kabhi"
+        },
+        {
+          "text": " life ko "
+        },
+        {
+          "text": "samajhne"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aaye"
+        },
+        {
+          "text": " hi "
+        },
+        {
+          "text": "nahi"
+        },
+        {
+          "text": " the…"
+        }
+      ],
+      "sourceParagraph": 1733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum "
+        },
+        {
+          "text": "sirf"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "usse"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "jeene"
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "aaye"
+        },
+        {
+          "text": " the, "
+        },
+        {
+          "text": "bina"
+        },
+        {
+          "text": " explain "
+        },
+        {
+          "text": "kiye"
+        },
+        {
+          "text": ".”"
+        }
+      ],
+      "sourceParagraph": 1734
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 22,
+  "file": "chapters/22-end-realization.json"
+}

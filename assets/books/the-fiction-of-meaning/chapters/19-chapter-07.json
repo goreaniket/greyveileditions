@@ -1,0 +1,588 @@
+{
+  "id": "chapter-07",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 7",
+  "title": "When Nothing Means Anything",
+  "shortTitle": "When Nothing Means Anything",
+  "sourceRange": [
+    574,
+    638
+  ],
+  "headerSourceParagraphs": {
+    "number": 574,
+    "title": 575
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aisa lagta hai jaise hum hamesha meaning ke andar jee rahe hain."
+        }
+      ],
+      "sourceParagraph": 576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez ko explain karne ki koshish…"
+        }
+      ],
+      "sourceParagraph": 577
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har moment ko justify karne ki aadat…"
+        }
+      ],
+      "sourceParagraph": 578
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har experience ko “kuch banane” ki urgency."
+        }
+      ],
+      "sourceParagraph": 579
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab saari meaning systems dheere-dheere collapse hone lagti hain…"
+        }
+      ],
+      "sourceParagraph": 580
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange state bachta hai."
+        }
+      ],
+      "sourceParagraph": 581
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na meaning."
+        }
+      ],
+      "sourceParagraph": 582
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na explanation."
+        }
+      ],
+      "sourceParagraph": 583
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na hidden purpose."
+        }
+      ],
+      "sourceParagraph": 584
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehli baar ye feel hota hai ki:"
+        }
+      ],
+      "sourceParagraph": 585
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad kuch bhi explain karna zaroori hi nahi tha."
+        }
+      ],
+      "sourceParagraph": 586
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin yahan ek misunderstanding bhi ho sakti hai."
+        }
+      ],
+      "sourceParagraph": 587
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye state “empty” nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 588
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye sirf “uninterpreted” hoti hai."
+        }
+      ],
+      "sourceParagraph": 589
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Cheezein ab bhi ho rahi hoti hain."
+        }
+      ],
+      "sourceParagraph": 590
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts ab bhi aate hain."
+        }
+      ],
+      "sourceParagraph": 591
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings ab bhi arise hoti hain."
+        }
+      ],
+      "sourceParagraph": 592
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ab bhi chal rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 593
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek cheez missing hoti hai:"
+        }
+      ],
+      "sourceParagraph": 594
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "un par forced meaning."
+        }
+      ],
+      "sourceParagraph": 595
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab meaning drop hota hai…"
+        }
+      ],
+      "sourceParagraph": 596
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh reality disappear nahi hoti."
+        }
+      ],
+      "sourceParagraph": 597
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality zyada simple lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 598
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek moment hota hai…"
+        }
+      ],
+      "sourceParagraph": 599
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur wo kisi “sign” mein convert nahi hota."
+        }
+      ],
+      "sourceParagraph": 600
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek feeling hoti hai…"
+        }
+      ],
+      "sourceParagraph": 601
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur wo kisi “message” mein convert nahi hoti."
+        }
+      ],
+      "sourceParagraph": 602
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek thought hota hai…"
+        }
+      ],
+      "sourceParagraph": 603
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur wo kisi “deeper truth” mein convert nahi hota."
+        }
+      ],
+      "sourceParagraph": 604
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf occurrence hoti hai."
+        }
+      ],
+      "sourceParagraph": 605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pure occurrence."
+        }
+      ],
+      "sourceParagraph": 606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is simplicity ko mind initially resist karta hai."
+        }
+      ],
+      "sourceParagraph": 607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind ka kaam hi meaning banana hai."
+        }
+      ],
+      "sourceParagraph": 608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab meaning banana band ho jata hai…"
+        }
+      ],
+      "sourceParagraph": 609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch dangerous nahi hota."
+        }
+      ],
+      "sourceParagraph": 610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas unnecessary complexity gir jati hai."
+        }
+      ],
+      "sourceParagraph": 611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab complexity girti hai…"
+        }
+      ],
+      "sourceParagraph": 612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek quiet clarity reh jati hai:"
+        }
+      ],
+      "sourceParagraph": 613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo bhi ho raha hai…"
+        }
+      ],
+      "sourceParagraph": 614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo already ho raha hai."
+        }
+      ],
+      "sourceParagraph": 615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without explanation."
+        }
+      ],
+      "sourceParagraph": 616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without justification."
+        }
+      ],
+      "sourceParagraph": 617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without symbolic weight."
+        }
+      ],
+      "sourceParagraph": 618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek final realization quietly emerge hota hai:"
+        }
+      ],
+      "sourceParagraph": 619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad reality kabhi complex thi hi nahi…"
+        }
+      ],
+      "sourceParagraph": 620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf interpretation ne usko complex bana diya tha."
+        }
+      ],
+      "sourceParagraph": 621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation ka pressure hat jata hai…"
+        }
+      ],
+      "sourceParagraph": 622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh cheezein waise hi reh jati hain jaise wo pehle se thi:"
+        }
+      ],
+      "sourceParagraph": 623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "simple, direct, and happening."
+        }
+      ],
+      "sourceParagraph": 624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is point pe koi final answer nahi hota."
+        }
+      ],
+      "sourceParagraph": 625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki question hi dissolve ho jata hai."
+        }
+      ],
+      "sourceParagraph": 626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo bachta hai…"
+        }
+      ],
+      "sourceParagraph": 627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo silence nahi hota as an object…"
+        }
+      ],
+      "sourceParagraph": 628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo silence as absence of need hota hai."
+        }
+      ],
+      "sourceParagraph": 629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Need for meaning."
+        }
+      ],
+      "sourceParagraph": 630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Need for explanation."
+        }
+      ],
+      "sourceParagraph": 631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Need for conclusion."
+        }
+      ],
+      "sourceParagraph": 632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye need nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh experience apne aap sufficient lagta hai."
+        }
+      ],
+      "sourceParagraph": 634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because it is understood…"
+        }
+      ],
+      "sourceParagraph": 635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because it is no longer being forced into understanding."
+        }
+      ],
+      "sourceParagraph": 636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe Book II khatam nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye bas apni necessity kho deti hai."
+        }
+      ],
+      "sourceParagraph": 638
+    }
+  ],
+  "index": 19,
+  "number": "CHAPTER 7 —",
+  "file": "chapters/19-chapter-07.json"
+}

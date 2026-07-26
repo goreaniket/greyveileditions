@@ -1,0 +1,20 @@
+{
+  "id": "the-machine-of-reality",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc II",
+  "title": "THE MACHINE OF REALITY",
+  "shortTitle": "THE MACHINE OF REALITY",
+  "sourceRange": [
+    614,
+    615
+  ],
+  "headerSourceParagraphs": {
+    "number": 614,
+    "title": 615
+  },
+  "elements": [],
+  "index": 12,
+  "number": "ARC II —",
+  "file": "chapters/12-the-machine-of-reality.json"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    11,
+    32
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 11
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright............................................................................................................3",
+      "sourceParagraph": 12
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ..........................................................................................................4",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ..........................................................................................................5",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author ..........................................................................................6",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "Prologue…………………………………………………………………………………………….8",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction — The Fiction of Meaning ...............................................................10",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC I — THE NEED FOR MEANING (FOUNDATION)",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1 — The Illusion of Purpose .....................................................................15",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2 — The Fiction of Interpretation .............................................................18",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC II — THE MEANING LOOP (ATTACHMENT MECHANISM)",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3 — The Meaning Attachment Loop .........................................................23",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4 — The Search for Hidden Significance………………………………………….26",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC III — THE STORY CONSTRUCTION (NARRATIVE SYSTEM)",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5 — The Story-Making Mind ....................................................................30",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC IV — THE COLLAPSE OF MEANING (BREAKDOWN PHASE)",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6 — The Collapse of Meaning Systems ……………………………………………35",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC V — BEYOND MEANING (POST-STRUCTURE SILENCE)",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7 — When Nothing Means Anything..........................................................39",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-line",
+      "text": "End Realization .....................................................................................................42",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-line",
+      "text": "Epilogue — After Meaning Disappears ...................................................................44",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-line",
+      "text": "About the Author ..................................................................................................46",
+      "sourceParagraph": 32
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

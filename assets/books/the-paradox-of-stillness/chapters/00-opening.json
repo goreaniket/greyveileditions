@@ -1,0 +1,126 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Paradox of Stillness",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    9
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN PARADOX",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK V",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE PARADOX OF STILLNESS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "The final paradox was never about finding the truth.It was realizing that nothing was ever missing.",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")",
+          "bold": true,
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4,
+      "role": "epigraph"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"The mind spent a lifetime searching for completion."
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality waited in silence, knowing nothing had ever been incomplete.\""
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL",
+          "bold": true
+        },
+        {
+          "text": " EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 8,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Paradox Collection",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "section-heading"
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

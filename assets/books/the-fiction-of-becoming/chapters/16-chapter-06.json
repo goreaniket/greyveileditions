@@ -1,0 +1,417 @@
+{
+  "id": "chapter-06",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 6",
+  "title": "The Broken Self Narrative",
+  "shortTitle": "The Broken Self Narrative",
+  "sourceRange": [
+    495,
+    540
+  ],
+  "headerSourceParagraphs": {
+    "number": 495,
+    "title": 496
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum apne aap ko aksar ek story ke through define karte hain…"
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur us story ka ek common version hota hai:"
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I am broken.”"
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sirf ek feeling nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek narrative structure hota hai."
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek experience hota hai jo uncomfortable hota hai…"
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur mind usko ek stable identity mein convert kar deta hai."
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "painful experience"
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpretation (“ye galat hua”)"
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "repetition of memory"
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "emotional reinforcement"
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity formation (“I am broken”)"
+        }
+      ],
+      "sourceParagraph": 508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek baar ye identity set ho jaye…"
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh har naya experience usi lens se filter hota hai"
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "normal moment → “temporary relief”"
+        }
+      ],
+      "sourceParagraph": 511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "painful moment → “proof of brokenness”"
+        }
+      ],
+      "sourceParagraph": 512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi asymmetric filtering se narrative strong hota jata hai."
+        }
+      ],
+      "sourceParagraph": 513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Broken self koi fixed entity nahi hota…"
+        }
+      ],
+      "sourceParagraph": 514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye selective interpretation ka result hota hai."
+        }
+      ],
+      "sourceParagraph": 515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind sirf kuch moments ko highlight karta hai…"
+        }
+      ],
+      "sourceParagraph": 516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur baaki ko ignore."
+        }
+      ],
+      "sourceParagraph": 517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo highlighted hota hai…"
+        }
+      ],
+      "sourceParagraph": 518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo identity ban jata hai."
+        }
+      ],
+      "sourceParagraph": 519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Brokenness ka sense tab strong hota hai jab:"
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "past ko repeatedly revisit kiya jaye"
+        }
+      ],
+      "sourceParagraph": 521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present ko comparison se dekha jaye"
+        }
+      ],
+      "sourceParagraph": 522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "future ko “fixing project” bana diya jaye"
+        }
+      ],
+      "sourceParagraph": 523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is combination se ek stable story emerge hoti hai:"
+        }
+      ],
+      "sourceParagraph": 524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Something is fundamentally wrong with me”"
+        }
+      ],
+      "sourceParagraph": 525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "memory → interpretation → identity label → perception filter → confirmation bias → stronger identity"
+        }
+      ],
+      "sourceParagraph": 526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar observation thoda clear ho jaye…"
+        }
+      ],
+      "sourceParagraph": 527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange gap dikhta hai:"
+        }
+      ],
+      "sourceParagraph": 528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience aur story ek cheez nahi hain."
+        }
+      ],
+      "sourceParagraph": 529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experience sirf hota hai…"
+        }
+      ],
+      "sourceParagraph": 530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "story usko define karti hai."
+        }
+      ],
+      "sourceParagraph": 531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Broken self narrative tab weak hota hai…"
+        }
+      ],
+      "sourceParagraph": 532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab har experience ko “proof” ki tarah use karna band ho jata hai."
+        }
+      ],
+      "sourceParagraph": 533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur experience ko sirf experience rehne diya jata hai."
+        }
+      ],
+      "sourceParagraph": 534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad “broken” koi actual state nahi…"
+        }
+      ],
+      "sourceParagraph": 535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf ek repeated interpretation pattern hai."
+        }
+      ],
+      "sourceParagraph": 536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation pattern visible ho jata hai…"
+        }
+      ],
+      "sourceParagraph": 537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh identity ka weight naturally kam ho jata hai."
+        }
+      ],
+      "sourceParagraph": 538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na because kuch fix hua…"
+        }
+      ],
+      "sourceParagraph": 539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because kuch define karna urgent nahi lagta."
+        }
+      ],
+      "sourceParagraph": 540
+    }
+  ],
+  "index": 16,
+  "number": "CHAPTER 6 —",
+  "file": "chapters/16-chapter-06.json"
+}

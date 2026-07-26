@@ -1,0 +1,236 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "ABOUT THE AUTHOR",
+  "sourceRange": [
+    713,
+    737
+  ],
+  "headerSourceParagraphs": {
+    "title": 713
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is the creator of The Human Fiction series."
+        }
+      ],
+      "sourceParagraph": 714
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work does not come from academic philosophy or structured theory…"
+        }
+      ],
+      "sourceParagraph": 715
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but from observation of everyday experience — thought, identity, interpretation, and the quiet mechanisms behind them."
+        }
+      ],
+      "sourceParagraph": 716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is interested in one recurring question:"
+        }
+      ],
+      "sourceParagraph": 717
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "why does life feel like it is happening to a “someone” inside experience?"
+        }
+      ],
+      "sourceParagraph": 718
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Rather than offering answers, his writing focuses on exposing patterns:"
+        }
+      ],
+      "sourceParagraph": 719
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "how the mind constructs continuity,"
+        }
+      ],
+      "sourceParagraph": 720
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "how meaning attaches itself to events,"
+        }
+      ],
+      "sourceParagraph": 721
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "how identity forms through memory and narration,"
+        }
+      ],
+      "sourceParagraph": 722
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and how a stable sense of “I” emerges without ever being directly found."
+        }
+      ],
+      "sourceParagraph": 723
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His approach is not to convince or conclude…"
+        }
+      ],
+      "sourceParagraph": 724
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but to observe carefully enough that assumptions begin to lose their automatic strength."
+        }
+      ],
+      "sourceParagraph": 725
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "In his view, clarity is not something added to life."
+        }
+      ],
+      "sourceParagraph": 726
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is what remains when unnecessary interpretation slows down."
+        }
+      ],
+      "sourceParagraph": 727
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction series reflects this inquiry:"
+        }
+      ],
+      "sourceParagraph": 728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "not as a belief system,"
+        }
+      ],
+      "sourceParagraph": 729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "not as a philosophy to follow,"
+        }
+      ],
+      "sourceParagraph": 730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but as a structured exploration of how human experience becomes personal through narration."
+        }
+      ],
+      "sourceParagraph": 731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not claim authority over truth."
+        }
+      ],
+      "sourceParagraph": 732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He only points toward the structure through which truth is usually interpreted."
+        }
+      ],
+      "sourceParagraph": 733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And within that structure, one question remains central:"
+        }
+      ],
+      "sourceParagraph": 734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "if experience is happening, where exactly is the “one” it is happening to?"
+        }
+      ],
+      "sourceParagraph": 735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This question is not meant to be answered."
+        }
+      ],
+      "sourceParagraph": 736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is meant to be seen clearly enough that its urgency dissolves on its own."
+        }
+      ],
+      "sourceParagraph": 737
+    }
+  ],
+  "index": 22,
+  "suppressHeaderNumber": true,
+  "file": "chapters/22-about-the-author.json"
+}

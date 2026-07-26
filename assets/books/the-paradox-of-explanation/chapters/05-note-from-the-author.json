@@ -1,0 +1,308 @@
+{
+  "id": "note-from-the-author",
+  "kind": "introduction",
+  "sourceKind": "author-note",
+  "label": "Author's Note",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "NOTE FROM THE AUTHOR",
+  "sourceRange": [
+    50,
+    82
+  ],
+  "headerSourceParagraphs": {
+    "title": 50
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you are reading this…"
+        }
+      ],
+      "sourceParagraph": 51
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it already means something in you stopped scrolling."
+        }
+      ],
+      "sourceParagraph": 52
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because this book is special."
+        }
+      ],
+      "sourceParagraph": 53
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because something in it felt familiar in a way you didn’t expect."
+        }
+      ],
+      "sourceParagraph": 54
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I am not writing this as someone who has understood life."
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I am writing this as someone who stopped trusting the automatic explanations the mind keeps producing."
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because most of what we call “understanding”…"
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is actually repetition of old thoughts in new words."
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And most of what we call “confusion”…"
+        }
+      ],
+      "sourceParagraph": 59
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is the moment reality stops matching the story in our head."
+        }
+      ],
+      "sourceParagraph": 60
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not here to give you answers."
+        }
+      ],
+      "sourceParagraph": 61
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If anything, it will do the opposite."
+        }
+      ],
+      "sourceParagraph": 62
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It will quietly interrupt the habit of turning every experience into meaning."
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because somewhere along the way…"
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "we stopped seeing life directly."
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We started translating it."
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And that translation became heavier than the thing itself."
+        }
+      ],
+      "sourceParagraph": 67
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I am not asking you to believe anything written here."
+        }
+      ],
+      "sourceParagraph": 68
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Belief is not the point."
+        }
+      ],
+      "sourceParagraph": 69
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observation is."
+        }
+      ],
+      "sourceParagraph": 70
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And observation is uncomfortable…"
+        }
+      ],
+      "sourceParagraph": 71
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "because it removes the comfort of fixed meanings."
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So if at any point this book feels too direct…"
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "too close…"
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "or too familiar…"
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "don’t rush to label it."
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Just notice it."
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because the intention was never to change your thinking."
+        }
+      ],
+      "sourceParagraph": 78
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was to make you aware that thinking is already happening without your permission."
+        }
+      ],
+      "sourceParagraph": 79
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And maybe that is where the real conversation begins."
+        }
+      ],
+      "sourceParagraph": 80
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not between you and this book…"
+        }
+      ],
+      "sourceParagraph": 81
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but between you and the mind that is reading it."
+        }
+      ],
+      "sourceParagraph": 82
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 5,
+  "file": "chapters/05-note-from-the-author.json"
+}

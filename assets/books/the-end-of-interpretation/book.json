@@ -1,0 +1,469 @@
+{
+  "id": "the-end-of-interpretation",
+  "slug": "the-end-of-interpretation",
+  "title": "The End of Interpretation",
+  "subtitle": "The moment awareness no longer seeks answers, and the self begins to dissolve.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "seriesDisplay": "The Human Paradox Series",
+  "bookNumber": "Book III",
+  "bookIndex": 3,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-paradox/assets/covers/the%20end%20of%20interpretation.jpeg",
+  "cover": {
+    "web": "/assets/books/the-end-of-interpretation/cover/front-cover.webp",
+    "print": "/assets/books/the-end-of-interpretation/cover/front-cover-print.png",
+    "source": "/assets/books/the-end-of-interpretation/cover/cover-source.png",
+    "alt": "The End of Interpretation book cover"
+  },
+  "readerRoute": "/projects/human-paradox/books/the-end-of-interpretation/reader/",
+  "readerExitUrl": "/projects/human-paradox/books/the-end-of-interpretation.html",
+  "storageKey": "greyveil:the-end-of-interpretation:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Paradox",
+    "book": "The End of Interpretation",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-end-interpretation",
+    "variables": {
+      "light": {
+        "--reader-bg": "#E1E1E4",
+        "--reader-paper": "#F6EFE6",
+        "--reader-paper-soft": "#EAE2D8",
+        "--reader-text": "#292C34",
+        "--reader-heading": "#1B1E27",
+        "--reader-muted": "color-mix(in srgb, #292C34 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #292C34 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #292C34 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #6F698A 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #292C34 20%, transparent)",
+        "--reader-accent": "#6F698A",
+        "--reader-accent-strong": "#4F4B6E",
+        "--reader-accent-soft": "color-mix(in srgb, #6F698A 12%, transparent)",
+        "--reader-warm": "#96785A",
+        "--reader-focus": "#4F4B6E",
+        "--reader-control-bg": "#EAE2D8",
+        "--reader-control-border": "color-mix(in srgb, #292C34 18%, transparent)",
+        "--reader-input-bg": "#F6EFE6",
+        "--reader-input-text": "#292C34",
+        "--reader-placeholder": "color-mix(in srgb, #292C34 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #6F698A 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#E0D5C9",
+        "--reader-paper": "#F1E4D2",
+        "--reader-paper-soft": "#E4D6C4",
+        "--reader-text": "#342D29",
+        "--reader-heading": "#241F1D",
+        "--reader-muted": "color-mix(in srgb, #342D29 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #342D29 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #342D29 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #716476 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #342D29 20%, transparent)",
+        "--reader-accent": "#716476",
+        "--reader-accent-strong": "#57495E",
+        "--reader-accent-soft": "color-mix(in srgb, #716476 12%, transparent)",
+        "--reader-warm": "#927152",
+        "--reader-focus": "#57495E",
+        "--reader-control-bg": "#E4D6C4",
+        "--reader-control-border": "color-mix(in srgb, #342D29 18%, transparent)",
+        "--reader-input-bg": "#F1E4D2",
+        "--reader-input-text": "#342D29",
+        "--reader-placeholder": "color-mix(in srgb, #342D29 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #716476 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#101016",
+        "--reader-paper": "#1B1B25",
+        "--reader-paper-soft": "#252535",
+        "--reader-text": "#EEE7DD",
+        "--reader-heading": "#F8F0E8",
+        "--reader-muted": "color-mix(in srgb, #EEE7DD 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EEE7DD 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EEE7DD 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #B0A8CF 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EEE7DD 20%, transparent)",
+        "--reader-accent": "#B0A8CF",
+        "--reader-accent-strong": "#D2CBEA",
+        "--reader-accent-soft": "color-mix(in srgb, #B0A8CF 12%, transparent)",
+        "--reader-warm": "#C1A17B",
+        "--reader-focus": "#D2CBEA",
+        "--reader-control-bg": "#252535",
+        "--reader-control-border": "color-mix(in srgb, #EEE7DD 18%, transparent)",
+        "--reader-input-bg": "#1B1B25",
+        "--reader-input-text": "#EEE7DD",
+        "--reader-placeholder": "color-mix(in srgb, #EEE7DD 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #B0A8CF 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-paradox/chapters/WORD/THE END OF INTERPRETATION.docx",
+    "pdfVerification": "/projects/human-paradox/chapters/PDF/The End of Interpretation book 3 .pdf",
+    "sourceParagraphsNonEmpty": 1263,
+    "semanticUnits": 24,
+    "chapters": 9,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The End of Interpretation",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        10
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        11,
+        33
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "copyright-notice",
+      "kind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT NOTICE",
+      "shortTitle": "COPYRIGHT NOTICE",
+      "file": "chapters/02-copyright-notice.json",
+      "index": 2,
+      "sourceRange": [
+        34,
+        39
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        40,
+        45
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        46,
+        52
+      ]
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "file": "chapters/05-note-from-the-author.json",
+      "index": 5,
+      "sourceRange": [
+        53,
+        104
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "PROLOGUE",
+      "shortTitle": "PROLOGUE",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        105,
+        155
+      ]
+    },
+    {
+      "id": "arc-i-the-breakdown-of-structure",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC I — THE BREAKDOWN OF STRUCTURE",
+      "shortTitle": "ARC I — THE BREAKDOWN OF STRUCTURE",
+      "file": "chapters/07-arc-i-the-breakdown-of-structure.json",
+      "index": 7,
+      "sourceRange": [
+        156,
+        156
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "INTRODUCTION",
+      "shortTitle": "INTRODUCTION",
+      "file": "chapters/08-introduction.json",
+      "index": 8,
+      "sourceRange": [
+        157,
+        255
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "CHAPTER 1:",
+      "title": "WHEN MEANING STOPS SURVIVING REALITY",
+      "shortTitle": "WHEN MEANING STOPS SURVIVING REALITY",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        256,
+        356
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "CHAPTER 2:",
+      "title": "THE POINT WHERE THOUGHT BECOMES NOISE",
+      "shortTitle": "THE POINT WHERE THOUGHT BECOMES NOISE",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        357,
+        455
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "CHAPTER 3:",
+      "title": "THE FAILURE OF INTERNAL NARRATION",
+      "shortTitle": "THE FAILURE OF INTERNAL NARRATION",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        456,
+        532
+      ]
+    },
+    {
+      "id": "arc-ii-the-dissolving-self",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC II — THE DISSOLVING SELF",
+      "shortTitle": "ARC II — THE DISSOLVING SELF",
+      "file": "chapters/12-arc-ii-the-dissolving-self.json",
+      "index": 12,
+      "sourceRange": [
+        533,
+        533
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "CHAPTER 4:",
+      "title": "THE COLLAPSE OF “I AM THIS”",
+      "shortTitle": "THE COLLAPSE OF “I AM THIS”",
+      "file": "chapters/13-chapter-04.json",
+      "index": 13,
+      "sourceRange": [
+        534,
+        626
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "CHAPTER 5:",
+      "title": "THE SILENCE INSIDE REACTION",
+      "shortTitle": "THE SILENCE INSIDE REACTION",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        627,
+        737
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "CHAPTER 6:",
+      "title": "THE DISAPPEARANCE OF INTERNAL DIALOGUE",
+      "shortTitle": "THE DISAPPEARANCE OF INTERNAL DIALOGUE",
+      "file": "chapters/15-chapter-06.json",
+      "index": 15,
+      "sourceRange": [
+        738,
+        827
+      ]
+    },
+    {
+      "id": "arc-iii-perception-without-filter",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC III — PERCEPTION WITHOUT FILTER",
+      "shortTitle": "ARC III — PERCEPTION WITHOUT FILTER",
+      "file": "chapters/16-arc-iii-perception-without-filter.json",
+      "index": 16,
+      "sourceRange": [
+        828,
+        828
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "CHAPTER 7:",
+      "title": "WHEN SEEING BECOMES ENOUGH",
+      "shortTitle": "WHEN SEEING BECOMES ENOUGH",
+      "file": "chapters/17-chapter-07.json",
+      "index": 17,
+      "sourceRange": [
+        829,
+        913
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "CHAPTER 8:",
+      "title": "THE OBSERVER WITHOUT A CENTER",
+      "shortTitle": "THE OBSERVER WITHOUT A CENTER",
+      "file": "chapters/18-chapter-08.json",
+      "index": 18,
+      "sourceRange": [
+        914,
+        1012
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "CHAPTER 9:",
+      "title": "WHEN NOTHING NEEDS TO BE SOLVED",
+      "shortTitle": "WHEN NOTHING NEEDS TO BE SOLVED",
+      "file": "chapters/19-chapter-09.json",
+      "index": 19,
+      "sourceRange": [
+        1013,
+        1107
+      ]
+    },
+    {
+      "id": "arc-iv-the-quiet-completion",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC IV — THE QUIET COMPLETION",
+      "shortTitle": "ARC IV — THE QUIET COMPLETION",
+      "file": "chapters/20-arc-iv-the-quiet-completion.json",
+      "index": 20,
+      "sourceRange": [
+        1108,
+        1108
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION-",
+      "shortTitle": "END REALIZATION-",
+      "file": "chapters/21-end-realization.json",
+      "index": 21,
+      "sourceRange": [
+        1109,
+        1190
+      ],
+      "subtitle": "AFTER THE SYSTEM STOPS INSISTING"
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "EPILOGUE-",
+      "shortTitle": "EPILOGUE-",
+      "file": "chapters/22-epilogue.json",
+      "index": 22,
+      "sourceRange": [
+        1191,
+        1225
+      ],
+      "subtitle": "AFTER EVERYTHING IS SEEN"
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "file": "chapters/23-about-the-author.json",
+      "index": 23,
+      "sourceRange": [
+        1226,
+        1263
+      ],
+      "suppressHeaderNumber": true
+    }
+  ]
+}

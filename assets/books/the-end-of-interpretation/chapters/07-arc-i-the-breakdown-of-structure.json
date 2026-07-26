@@ -1,0 +1,19 @@
+{
+  "id": "arc-i-the-breakdown-of-structure",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC I — THE BREAKDOWN OF STRUCTURE",
+  "shortTitle": "ARC I — THE BREAKDOWN OF STRUCTURE",
+  "sourceRange": [
+    156,
+    156
+  ],
+  "headerSourceParagraphs": {
+    "title": 156
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 7,
+  "file": "chapters/07-arc-i-the-breakdown-of-structure.json"
+}

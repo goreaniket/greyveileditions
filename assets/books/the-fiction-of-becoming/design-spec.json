@@ -1,0 +1,124 @@
+{
+  "bookSlug": "the-fiction-of-becoming",
+  "title": "The Fiction of Becoming",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Fiction",
+  "bookNumber": "Book III",
+  "visualThemeName": "Threshold Motion",
+  "designPurpose": "A dusk threshold treatment where the page feels paused between the self that was and the self being rehearsed.",
+  "emotionalNarrativeKeywords": [
+    "becoming",
+    "future self",
+    "motion",
+    "threshold",
+    "unfinished identity"
+  ],
+  "colorSystem": {
+    "light": {
+      "background": "#DADDE1",
+      "paper": "#F6EBDD",
+      "paperSoft": "#EADCCC",
+      "text": "#292B31",
+      "heading": "#1A1C22",
+      "accent": "#676985",
+      "accentStrong": "#474960",
+      "warmCounterpoint": "#B17754"
+    },
+    "sepia": {
+      "background": "#DDD0C3",
+      "paper": "#F0E0CD",
+      "paperSoft": "#E3D0BE",
+      "text": "#332C28",
+      "heading": "#241E1B",
+      "accent": "#7A6268",
+      "accentStrong": "#5A464B",
+      "warmCounterpoint": "#A56F4D"
+    },
+    "dark": {
+      "background": "#101219",
+      "paper": "#1B1D2A",
+      "paperSoft": "#252737",
+      "text": "#EEE7DD",
+      "heading": "#FAF0E7",
+      "accent": "#B9BCE0",
+      "accentStrong": "#D8DBF4",
+      "warmCounterpoint": "#D59A75"
+    }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Georgia",
+    "interface": "Inter"
+  },
+  "typography": {
+    "desktopBody": "18px",
+    "mobileBody": "17px minimum",
+    "lineHeight": 1.7,
+    "paragraphIndent": "1.05em after the first paragraph",
+    "chapterHeading": "clamp(2.22rem, 4.5vw, 3.42rem)"
+  },
+  "pageGeometry": {
+    "desktop": {
+      "width": "666px",
+      "height": "1028px",
+      "paddingBlock": "80px",
+      "paddingInline": "70px",
+      "lineLength": "approximately 60-72 characters"
+    },
+    "tablet": {
+      "width": "min(642px, calc(100vw - 56px))",
+      "height": "940px"
+    },
+    "mobile": {
+      "width": "calc(100vw - 20px)",
+      "safePadding": "20px inline / 36px block",
+      "height": "min(900px, calc(100svh - 118px))"
+    }
+  },
+  "semanticPageTypes": {
+    "cover": "Official cover appears first, unnumbered, contained without cropping.",
+    "titlePage": "Source title-page paragraphs are centered as a cinematic frontispiece with the book title as the strongest first-page text.",
+    "dedicationOrEpigraph": "Dedicated and quoted matter receives quiet centered spacing and no decorative clutter.",
+    "contents": "TOC source lines preserve manuscript order while receiving narrative hierarchy.",
+    "chapterOpening": "Chapter openers use offset horizon bands that imply movement without decoration and begin on fresh pages.",
+    "normalContinuation": "Warm paper, deep readable text, source anchors retained, and literary spacing preserved.",
+    "sectionBreak": "Small horizontal threshold mark using accent and warm counterpoint.",
+    "pageNumbers": "Small sans-serif numerals placed by the shared engine at the page foot.",
+    "finalManuscriptPage": "Ending, epilogue, and author pages carry a quieter lower-page atmospheric wash.",
+    "feedbackSurface": "One whole-book feedback surface after the manuscript, themed only by color and typography."
+  },
+  "contentsStyle": "Drawer uses scoped accent border, active row wash, and manuscript-derived jump labels.",
+  "feedbackStyle": "Natural-height mobile expansion, no nested mobile scroll, full-width mobile fields, existing endpoint and payload.",
+  "coverSpecification": {
+    "source": "projects/human-fiction/assets/covers/the fiction of becoming.jpeg",
+    "web": "cover/front-cover.webp",
+    "printReference": "cover/front-cover-print.png",
+    "sourceCopy": "cover/cover-source.png",
+    "dimensions": "1023x1537",
+    "aspectRatioPreserved": true
+  },
+  "responsiveAdaptations": {
+    "mobile": "Near full-width page, 17px body text, compact toolbar, simplified motifs, no horizontal overflow.",
+    "tablet": "Centered page with balanced margins and clear chapter hierarchy.",
+    "desktop": "Trade-book proportions with subtle edge and shadow."
+  },
+  "futureWordMapping": {
+    "pageSize": "5.5 x 8.5 in trade-book reference",
+    "body": "Georgia 11-11.5pt equivalent",
+    "lineHeight": "1.35-1.45 print leading",
+    "margins": "generous inner/outer margins matching reader proportions",
+    "sectionDividers": "translate the threshold motif to hairline rules"
+  },
+  "futurePdfMapping": {
+    "pageBox": "5.5 x 8.5 in",
+    "cover": "Use higher-resolution artwork if available; current reader cover is a web/display source.",
+    "runningElements": "Small bottom page numbers; chapter openers begin on new pages."
+  },
+  "printLimitations": "Current official cover source is 1023x1537; useful as a reader and print-reference image but not guaranteed 300 DPI production cover art.",
+  "sourceCounts": {
+    "sourceParagraphsNonEmpty": 694,
+    "semanticUnits": 22,
+    "chapters": 7
+  }
+}

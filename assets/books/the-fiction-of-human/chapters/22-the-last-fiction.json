@@ -1,0 +1,1048 @@
+{
+  "id": "the-last-fiction",
+  "kind": "ending",
+  "sourceKind": "ending",
+  "label": "End Realization",
+  "title": "THE LAST FICTION",
+  "shortTitle": "THE LAST FICTION",
+  "sourceRange": [
+    1330,
+    1445
+  ],
+  "headerSourceParagraphs": {
+    "number": 1330,
+    "title": 1331
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aakhir mein..."
+        }
+      ],
+      "sourceParagraph": 1332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab kitab band hoti hai..."
+        }
+      ],
+      "sourceParagraph": 1333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh aksar hum sochte hain ki journey khatam ho gayi."
+        }
+      ],
+      "sourceParagraph": 1334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kuch journeys aisi hoti hain..."
+        }
+      ],
+      "sourceParagraph": 1335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo last page ke baad shuru hoti hain."
+        }
+      ],
+      "sourceParagraph": 1336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye unmein se ek hai."
+        }
+      ],
+      "sourceParagraph": 1337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poore safar mein humne bahut kuch dekha."
+        }
+      ],
+      "sourceParagraph": 1338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ko."
+        }
+      ],
+      "sourceParagraph": 1339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Paradoxes ko."
+        }
+      ],
+      "sourceParagraph": 1340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stories ko."
+        }
+      ],
+      "sourceParagraph": 1341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity ko."
+        }
+      ],
+      "sourceParagraph": 1342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning ko."
+        }
+      ],
+      "sourceParagraph": 1343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Becoming ko."
+        }
+      ],
+      "sourceParagraph": 1344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human ko."
+        }
+      ],
+      "sourceParagraph": 1345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har layer ke neeche..."
+        }
+      ],
+      "sourceParagraph": 1346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek aur layer milti gayi."
+        }
+      ],
+      "sourceParagraph": 1347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise reality koi solid object nahi..."
+        }
+      ],
+      "sourceParagraph": 1348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "balki ek endless unfolding ho."
+        }
+      ],
+      "sourceParagraph": 1349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 1350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek strange realization saamne aane laga."
+        }
+      ],
+      "sourceParagraph": 1351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez jise hum absolute samajhte the..."
+        }
+      ],
+      "sourceParagraph": 1352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo movement nikli."
+        }
+      ],
+      "sourceParagraph": 1353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har certainty temporary nikli."
+        }
+      ],
+      "sourceParagraph": 1354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har conclusion incomplete nikla."
+        }
+      ],
+      "sourceParagraph": 1355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har story..."
+        }
+      ],
+      "sourceParagraph": 1356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek story nikli."
+        }
+      ],
+      "sourceParagraph": 1357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad ek fiction aur baaki thi."
+        }
+      ],
+      "sourceParagraph": 1358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse subtle."
+        }
+      ],
+      "sourceParagraph": 1359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse invisible."
+        }
+      ],
+      "sourceParagraph": 1360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse difficult."
+        }
+      ],
+      "sourceParagraph": 1361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo fiction jiske bina baaki saari fictions survive nahi kar sakti thi."
+        }
+      ],
+      "sourceParagraph": 1362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo fiction tha:"
+        }
+      ],
+      "sourceParagraph": 1363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki kahin na kahin..."
+        }
+      ],
+      "sourceParagraph": 1364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi final answer hai."
+        }
+      ],
+      "sourceParagraph": 1365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek final understanding."
+        }
+      ],
+      "sourceParagraph": 1366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek final conclusion."
+        }
+      ],
+      "sourceParagraph": 1367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek final state."
+        }
+      ],
+      "sourceParagraph": 1368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek final arrival."
+        }
+      ],
+      "sourceParagraph": 1369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad poori human journey isi belief ke around ghoomti rahi."
+        }
+      ],
+      "sourceParagraph": 1370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas thoda aur."
+        }
+      ],
+      "sourceParagraph": 1371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek aur insight."
+        }
+      ],
+      "sourceParagraph": 1372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek aur achievement."
+        }
+      ],
+      "sourceParagraph": 1373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek aur realization."
+        }
+      ],
+      "sourceParagraph": 1374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir sab complete ho jayega."
+        }
+      ],
+      "sourceParagraph": 1375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kya hoga agar completion kisi destination ka naam hi na ho?"
+        }
+      ],
+      "sourceParagraph": 1376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human mind arrival ko love karta hai."
+        }
+      ],
+      "sourceParagraph": 1377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki arrival certainty promise karta hai."
+        }
+      ],
+      "sourceParagraph": 1378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin life certainty nahi hai."
+        }
+      ],
+      "sourceParagraph": 1379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life movement hai."
+        }
+      ],
+      "sourceParagraph": 1380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life flow hai."
+        }
+      ],
+      "sourceParagraph": 1381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life unfolding hai."
+        }
+      ],
+      "sourceParagraph": 1382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur unfolding ka koi final frame nahi hota."
+        }
+      ],
+      "sourceParagraph": 1383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi liye shayad wisdom answers collect karne mein nahi."
+        }
+      ],
+      "sourceParagraph": 1384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questions ke saath comfortable hone mein hai."
+        }
+      ],
+      "sourceParagraph": 1385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poore safar mein shayad tum kuch dhoond rahe the."
+        }
+      ],
+      "sourceParagraph": 1386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Clarity."
+        }
+      ],
+      "sourceParagraph": 1387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Peace."
+        }
+      ],
+      "sourceParagraph": 1388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning."
+        }
+      ],
+      "sourceParagraph": 1389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Freedom."
+        }
+      ],
+      "sourceParagraph": 1390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Understanding."
+        }
+      ],
+      "sourceParagraph": 1391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ho sakta hai tumhe un sab ki glimpses mili bhi ho."
+        }
+      ],
+      "sourceParagraph": 1392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad sabse strange discovery ye thi:"
+        }
+      ],
+      "sourceParagraph": 1393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo dhoond raha tha..."
+        }
+      ],
+      "sourceParagraph": 1394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bhi story ka part tha."
+        }
+      ],
+      "sourceParagraph": 1395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jis cheez ko dhoonda ja raha tha..."
+        }
+      ],
+      "sourceParagraph": 1396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kabhi gayi hi nahi thi."
+        }
+      ],
+      "sourceParagraph": 1397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Home koi place nahi tha."
+        }
+      ],
+      "sourceParagraph": 1398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Home koi philosophy nahi thi."
+        }
+      ],
+      "sourceParagraph": 1399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Home koi belief nahi tha."
+        }
+      ],
+      "sourceParagraph": 1400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Home koi future achievement bhi nahi tha."
+        }
+      ],
+      "sourceParagraph": 1401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Home shayad sirf ye tha:"
+        }
+      ],
+      "sourceParagraph": 1402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is moment mein wapas aa jana."
+        }
+      ],
+      "sourceParagraph": 1403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina resistance ke."
+        }
+      ],
+      "sourceParagraph": 1404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina comparison ke."
+        }
+      ],
+      "sourceParagraph": 1405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina is demand ke ki life kuch aur ho"
+        }
+      ],
+      "sourceParagraph": 1406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad tum broken nahi the."
+        }
+      ],
+      "sourceParagraph": 1407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad tum incomplete nahi the."
+        }
+      ],
+      "sourceParagraph": 1408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad tum lost bhi nahi the."
+        }
+      ],
+      "sourceParagraph": 1409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad tum sirf stories ke maze mein chal rahe the."
+        }
+      ],
+      "sourceParagraph": 1410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har turn par tumhe lagta tha ki exit agle corner par hai."
+        }
+      ],
+      "sourceParagraph": 1411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jabki poora maze..."
+        }
+      ],
+      "sourceParagraph": 1412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek hi centre ke around bana hua tha."
+        }
+      ],
+      "sourceParagraph": 1413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek imagined centre."
+        }
+      ],
+      "sourceParagraph": 1414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek psychological centre."
+        }
+      ],
+      "sourceParagraph": 1415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek story."
+        }
+      ],
+      "sourceParagraph": 1416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab yahan..."
+        }
+      ],
+      "sourceParagraph": 1417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is final page par..."
+        }
+      ],
+      "sourceParagraph": 1418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi grand message nahi hai."
+        }
+      ],
+      "sourceParagraph": 1419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi command nahi."
+        }
+      ],
+      "sourceParagraph": 1420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi doctrine nahi."
+        }
+      ],
+      "sourceParagraph": 1421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi system nahi."
+        }
+      ],
+      "sourceParagraph": 1422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek observation."
+        }
+      ],
+      "sourceParagraph": 1423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek quiet observation."
+        }
+      ],
+      "sourceParagraph": 1424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki life ko solve karne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 1425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khud ko complete karne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 1426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har mystery ko close karne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 1427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har uncertainty ko certainty mein convert karne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 1428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 1429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dekh lena hi kaafi hota hai."
+        }
+      ],
+      "sourceParagraph": 1430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 1431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hona hi kaafi hota hai."
+        }
+      ],
+      "sourceParagraph": 1432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 1433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "isi pal mein..."
+        }
+      ],
+      "sourceParagraph": 1434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jitna hai..."
+        }
+      ],
+      "sourceParagraph": 1435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna hi poora hota hai."
+        }
+      ],
+      "sourceParagraph": 1436
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye agar is poori journey ko ek sentence mein sametna pade..."
+        }
+      ],
+      "sourceParagraph": 1437
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad wo sentence ye hoga:"
+        }
+      ],
+      "sourceParagraph": 1438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You were never searching for life."
+        }
+      ],
+      "sourceParagraph": 1439
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You were searching through stories."
+        }
+      ],
+      "sourceParagraph": 1440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the moment the stories became visible..."
+        }
+      ],
+      "sourceParagraph": 1441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life was already here."
+        }
+      ],
+      "sourceParagraph": 1442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The End."
+        }
+      ],
+      "sourceParagraph": 1443,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Or perhaps..."
+        }
+      ],
+      "sourceParagraph": 1444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Beginning."
+        }
+      ],
+      "sourceParagraph": 1445
+    }
+  ],
+  "index": 22,
+  "number": "END REALIZATION —",
+  "file": "chapters/22-the-last-fiction.json"
+}

@@ -1,0 +1,162 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Fiction of Awareness",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    11
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN FICTION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK I",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE FICTION OF AWARENESS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "(",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "The greatest fiction ever created was not a story.",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": " ",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "It was the one called \"Me.\"",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")",
+          "bold": true,
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishr",
+          "bold": true
+        },
+        {
+          "text": "a",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"The self was never found."
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was remembered, repeated, defended..."
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "until repetition became identity.\""
+        }
+      ],
+      "sourceParagraph": 8
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL",
+          "bold": true
+        },
+        {
+          "text": " EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN FICTION COLLECTION",
+          "bold": true
+        },
+        {
+          "text": "\n",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 10,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction Collection",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 11,
+      "role": "section-heading"
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

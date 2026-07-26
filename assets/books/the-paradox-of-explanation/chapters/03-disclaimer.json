@@ -1,0 +1,65 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    37,
+    42
+  ],
+  "headerSourceParagraphs": {
+    "title": 37
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is a work of personal reflection and creative expression."
+        }
+      ],
+      "sourceParagraph": 38
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is not intended to provide medical, psychological, legal, or professional advice of any kind."
+        }
+      ],
+      "sourceParagraph": 39
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The content is based on perception, introspection, and subjective interpretation of human thoughts and behavior."
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Readers are advised to use their own judgment while engaging with the material."
+        }
+      ],
+      "sourceParagraph": 41
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The author is not responsible for any conclusions drawn or actions taken based on this book.."
+        }
+      ],
+      "sourceParagraph": 42
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 3,
+  "file": "chapters/03-disclaimer.json"
+}

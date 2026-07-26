@@ -1,0 +1,473 @@
+{
+  "id": "the-fiction-of-becoming",
+  "slug": "the-fiction-of-becoming",
+  "title": "The Fiction of Becoming",
+  "subtitle": "The greatest illusion was never who you were. It was the belief that you would finally become someone else.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Fiction",
+  "seriesDisplay": "The Human Fiction Series",
+  "bookNumber": "Book III",
+  "bookIndex": 3,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-fiction/assets/covers/the%20fiction%20of%20becoming.jpeg",
+  "cover": {
+    "web": "/assets/books/the-fiction-of-becoming/cover/front-cover.webp",
+    "print": "/assets/books/the-fiction-of-becoming/cover/front-cover-print.png",
+    "source": "/assets/books/the-fiction-of-becoming/cover/cover-source.png",
+    "alt": "The Fiction of Becoming book cover"
+  },
+  "readerRoute": "/projects/human-fiction/books/the-fiction-of-becoming/reader/",
+  "readerExitUrl": "/projects/human-fiction/books/the-fiction-of-becoming.html",
+  "storageKey": "greyveil:the-fiction-of-becoming:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Fiction",
+    "book": "The Fiction of Becoming",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-fiction-becoming",
+    "variables": {
+      "light": {
+        "--reader-bg": "#DADDE1",
+        "--reader-paper": "#F6EBDD",
+        "--reader-paper-soft": "#EADCCC",
+        "--reader-text": "#292B31",
+        "--reader-heading": "#1A1C22",
+        "--reader-muted": "color-mix(in srgb, #292B31 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #292B31 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #292B31 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #676985 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #292B31 20%, transparent)",
+        "--reader-accent": "#676985",
+        "--reader-accent-strong": "#474960",
+        "--reader-accent-soft": "color-mix(in srgb, #676985 12%, transparent)",
+        "--reader-warm": "#B17754",
+        "--reader-focus": "#474960",
+        "--reader-control-bg": "#EADCCC",
+        "--reader-control-border": "color-mix(in srgb, #292B31 18%, transparent)",
+        "--reader-input-bg": "#F6EBDD",
+        "--reader-input-text": "#292B31",
+        "--reader-placeholder": "color-mix(in srgb, #292B31 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #676985 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "sepia": {
+        "--reader-bg": "#DDD0C3",
+        "--reader-paper": "#F0E0CD",
+        "--reader-paper-soft": "#E3D0BE",
+        "--reader-text": "#332C28",
+        "--reader-heading": "#241E1B",
+        "--reader-muted": "color-mix(in srgb, #332C28 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #332C28 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #332C28 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #7A6268 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #332C28 20%, transparent)",
+        "--reader-accent": "#7A6268",
+        "--reader-accent-strong": "#5A464B",
+        "--reader-accent-soft": "color-mix(in srgb, #7A6268 12%, transparent)",
+        "--reader-warm": "#A56F4D",
+        "--reader-focus": "#5A464B",
+        "--reader-control-bg": "#E3D0BE",
+        "--reader-control-border": "color-mix(in srgb, #332C28 18%, transparent)",
+        "--reader-input-bg": "#F0E0CD",
+        "--reader-input-text": "#332C28",
+        "--reader-placeholder": "color-mix(in srgb, #332C28 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #7A6268 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(23, 25, 27, .15)"
+      },
+      "dark": {
+        "--reader-bg": "#101219",
+        "--reader-paper": "#1B1D2A",
+        "--reader-paper-soft": "#252737",
+        "--reader-text": "#EEE7DD",
+        "--reader-heading": "#FAF0E7",
+        "--reader-muted": "color-mix(in srgb, #EEE7DD 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EEE7DD 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EEE7DD 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #B9BCE0 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EEE7DD 20%, transparent)",
+        "--reader-accent": "#B9BCE0",
+        "--reader-accent-strong": "#D8DBF4",
+        "--reader-accent-soft": "color-mix(in srgb, #B9BCE0 12%, transparent)",
+        "--reader-warm": "#D59A75",
+        "--reader-focus": "#D8DBF4",
+        "--reader-control-bg": "#252737",
+        "--reader-control-border": "color-mix(in srgb, #EEE7DD 18%, transparent)",
+        "--reader-input-bg": "#1B1D2A",
+        "--reader-input-text": "#EEE7DD",
+        "--reader-placeholder": "color-mix(in srgb, #EEE7DD 56%, transparent)",
+        "--reader-success": "#A6D1AD",
+        "--reader-error-text": "#EBA8A2",
+        "--reader-page-edge": "color-mix(in srgb, #B9BCE0 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-fiction/chapters/WORD/THE FICTION OF BECOMING.docx",
+    "pdfVerification": "/projects/human-fiction/chapters/PDF/THE FICTION OF BECOMING book 3.pdf",
+    "sourceParagraphsNonEmpty": 694,
+    "semanticUnits": 22,
+    "chapters": 7,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Fiction of Becoming",
+      "shortTitle": "Opening",
+      "sourceRange": [
+        1,
+        11
+      ],
+      "openingMode": "source",
+      "index": 0,
+      "file": "chapters/00-opening.json"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "sourceRange": [
+        12,
+        32
+      ],
+      "suppressHeaderNumber": true,
+      "index": 1,
+      "file": "chapters/01-contents.json"
+    },
+    {
+      "id": "copyright",
+      "kind": "copyright",
+      "sourceKind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT",
+      "shortTitle": "COPYRIGHT",
+      "sourceRange": [
+        33,
+        36
+      ],
+      "index": 2,
+      "suppressHeaderNumber": true,
+      "file": "chapters/02-copyright.json"
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "sourceKind": "disclaimer",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "sourceRange": [
+        37,
+        41
+      ],
+      "index": 3,
+      "suppressHeaderNumber": true,
+      "file": "chapters/03-disclaimer.json"
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "sourceKind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "sourceRange": [
+        42,
+        48
+      ],
+      "index": 4,
+      "suppressHeaderNumber": true,
+      "file": "chapters/04-dedication.json"
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "sourceKind": "author-note",
+      "label": "Note from the Author",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "sourceRange": [
+        49,
+        69
+      ],
+      "index": 5,
+      "suppressHeaderNumber": true,
+      "file": "chapters/05-note-from-the-author.json"
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "sourceKind": "prologue",
+      "label": "Prologue",
+      "title": "PROLOGUE —",
+      "shortTitle": "PROLOGUE —",
+      "sourceRange": [
+        70,
+        125
+      ],
+      "index": 6,
+      "suppressHeaderNumber": true,
+      "file": "chapters/06-prologue.json"
+    },
+    {
+      "id": "the-fiction-of-becoming",
+      "kind": "introduction",
+      "sourceKind": "introduction",
+      "label": "Introduction",
+      "title": "THE FICTION OF BECOMING",
+      "shortTitle": "THE FICTION OF BECOMING",
+      "sourceRange": [
+        126,
+        209
+      ],
+      "index": 7,
+      "number": "INTRODUCTION —",
+      "file": "chapters/07-the-fiction-of-becoming.json"
+    },
+    {
+      "id": "the-future-self-illusion",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc I",
+      "title": "THE FUTURE SELF ILLUSION",
+      "shortTitle": "THE FUTURE SELF ILLUSION",
+      "sourceRange": [
+        210,
+        211
+      ],
+      "index": 8,
+      "number": "ARC I —",
+      "file": "chapters/08-the-future-self-illusion.json"
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 1",
+      "title": "The Illusion of “Who I Will Become”",
+      "shortTitle": "The Illusion of “Who I Will Become”",
+      "sourceRange": [
+        212,
+        267
+      ],
+      "index": 9,
+      "number": "CHAPTER 1 —",
+      "file": "chapters/09-chapter-01.json"
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 2",
+      "title": "The Future Self Projection Mechanism",
+      "shortTitle": "The Future Self Projection Mechanism",
+      "sourceRange": [
+        268,
+        335
+      ],
+      "index": 10,
+      "number": "CHAPTER 2 —",
+      "file": "chapters/10-chapter-02.json"
+    },
+    {
+      "id": "the-becoming-machine",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc II",
+      "title": "THE BECOMING MACHINE",
+      "shortTitle": "THE BECOMING MACHINE",
+      "sourceRange": [
+        336,
+        337
+      ],
+      "index": 11,
+      "number": "ARC II —",
+      "file": "chapters/11-the-becoming-machine.json"
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 3",
+      "title": "The Fiction of Growth",
+      "shortTitle": "The Fiction of Growth",
+      "sourceRange": [
+        338,
+        388
+      ],
+      "index": 12,
+      "number": "CHAPTER 3 —",
+      "file": "chapters/12-chapter-03.json"
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 4",
+      "title": "The Achievement Identity Cycle",
+      "shortTitle": "The Achievement Identity Cycle",
+      "sourceRange": [
+        389,
+        440
+      ],
+      "index": 13,
+      "number": "CHAPTER 4 —",
+      "file": "chapters/13-chapter-04.json"
+    },
+    {
+      "id": "the-self-repair-narrative",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc III",
+      "title": "THE SELF-REPAIR NARRATIVE",
+      "shortTitle": "THE SELF-REPAIR NARRATIVE",
+      "sourceRange": [
+        441,
+        442
+      ],
+      "index": 14,
+      "number": "ARC III —",
+      "file": "chapters/14-the-self-repair-narrative.json"
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 5",
+      "title": "The Fiction of Healing",
+      "shortTitle": "The Fiction of Healing",
+      "sourceRange": [
+        443,
+        494
+      ],
+      "index": 15,
+      "number": "CHAPTER 5 —",
+      "file": "chapters/15-chapter-05.json"
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 6",
+      "title": "The Broken Self Narrative",
+      "shortTitle": "The Broken Self Narrative",
+      "sourceRange": [
+        495,
+        540
+      ],
+      "index": 16,
+      "number": "CHAPTER 6 —",
+      "file": "chapters/16-chapter-06.json"
+    },
+    {
+      "id": "the-collapse-of-becoming",
+      "kind": "part",
+      "sourceKind": "part",
+      "label": "Arc IV",
+      "title": "THE COLLAPSE OF BECOMING",
+      "shortTitle": "THE COLLAPSE OF BECOMING",
+      "sourceRange": [
+        541,
+        542
+      ],
+      "index": 17,
+      "number": "ARC IV —",
+      "file": "chapters/17-the-collapse-of-becoming.json"
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "sourceKind": "chapter",
+      "label": "Chapter 7",
+      "title": "The Desire to Change Oneself",
+      "shortTitle": "The Desire to Change Oneself",
+      "sourceRange": [
+        543,
+        590
+      ],
+      "index": 18,
+      "number": "CHAPTER 7 —",
+      "file": "chapters/18-chapter-07.json"
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "sourceKind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION",
+      "shortTitle": "END REALIZATION",
+      "sourceRange": [
+        591,
+        648
+      ],
+      "index": 19,
+      "suppressHeaderNumber": true,
+      "file": "chapters/19-end-realization.json"
+    },
+    {
+      "id": "epilogue-after-becoming-collapses",
+      "kind": "epilogue",
+      "sourceKind": "epilogue",
+      "label": "Epilogue",
+      "title": "EPILOGUE — AFTER BECOMING COLLAPSES",
+      "shortTitle": "EPILOGUE — AFTER BECOMING COLLAPSES",
+      "sourceRange": [
+        649,
+        680
+      ],
+      "index": 20,
+      "suppressHeaderNumber": true,
+      "file": "chapters/20-epilogue-after-becoming-collapses.json"
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "sourceKind": "about-author",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "sourceRange": [
+        681,
+        694
+      ],
+      "index": 21,
+      "suppressHeaderNumber": true,
+      "file": "chapters/21-about-the-author.json"
+    }
+  ]
+}

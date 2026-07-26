@@ -1,0 +1,895 @@
+{
+  "id": "chapter-08",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "CHAPTER 8:",
+  "title": "THE OBSERVER WITHOUT A CENTER",
+  "shortTitle": "THE OBSERVER WITHOUT A CENTER",
+  "sourceRange": [
+    914,
+    1012
+  ],
+  "headerSourceParagraphs": {
+    "number": 914,
+    "title": 915
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi ek phase aata hai jahan tumhe lagta hai ki tum sab kuch samajh rahe ho…"
+        }
+      ],
+      "sourceParagraph": 916
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin dheere dheere ek aur strange realization hota hai:"
+        }
+      ],
+      "sourceParagraph": 917
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad jo “samajhne wala” tha, woh itna solid kabhi tha hi nahi."
+        }
+      ],
+      "sourceParagraph": 918
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein har experience ka ek fixed center hota hai."
+        }
+      ],
+      "sourceParagraph": 919
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek point jahan se sab kuch measure hota hai."
+        }
+      ],
+      "sourceParagraph": 920
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek invisible anchor:"
+        }
+      ],
+      "sourceParagraph": 921
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main dekh raha hoon”"
+        }
+      ],
+      "sourceParagraph": 922
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main feel kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 923
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main decide kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 924
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main experience kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 925
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh anchor itna natural lagta hai ki kabhi doubt hi nahi hota."
+        }
+      ],
+      "sourceParagraph": 926
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise wahi real base ho jahan poori reality tied ho."
+        }
+      ],
+      "sourceParagraph": 927
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab ek subtle disturbance start hota hai."
+        }
+      ],
+      "sourceParagraph": 928
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na loud."
+        }
+      ],
+      "sourceParagraph": 929
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na dramatic."
+        }
+      ],
+      "sourceParagraph": 930
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na emotional breakdown jaisa."
+        }
+      ],
+      "sourceParagraph": 931
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek instability."
+        }
+      ],
+      "sourceParagraph": 932
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi tum kisi cheez ko observe kar rahe hote ho…"
+        }
+      ],
+      "sourceParagraph": 933
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur ek second ke liye yeh clarity aati hai:"
+        }
+      ],
+      "sourceParagraph": 934
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "experience ho raha hai"
+        }
+      ],
+      "sourceParagraph": 935
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " lekin “kaun” experience kar raha hai… woh pakka nahi lagta"
+        }
+      ],
+      "sourceParagraph": 936
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh confusion nahi hota."
+        }
+      ],
+      "sourceParagraph": 937
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh direct noticing hoti hai."
+        }
+      ],
+      "sourceParagraph": 938
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts aa rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 939
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings chal rahi hoti hain."
+        }
+      ],
+      "sourceParagraph": 940
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sensations ho rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 941
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memories arise ho rahi hoti hain."
+        }
+      ],
+      "sourceParagraph": 942
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin har cheez ke saath ek aur layer feel hoti hai…"
+        }
+      ],
+      "sourceParagraph": 943
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " koi fixed owner nahi"
+        }
+      ],
+      "sourceParagraph": 944
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " koi stable center nahi"
+        }
+      ],
+      "sourceParagraph": 945
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " koi permanent reference point nahi"
+        }
+      ],
+      "sourceParagraph": 946
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise sab kuch happening hai…"
+        }
+      ],
+      "sourceParagraph": 947
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin kisi ek jagah pe “belong” nahi kar raha."
+        }
+      ],
+      "sourceParagraph": 948
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehle yeh idea completely unacceptable hota."
+        }
+      ],
+      "sourceParagraph": 949
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki poori life ek cheez sikhi gayi thi:"
+        }
+      ],
+      "sourceParagraph": 950
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " har experience ka “main” hota hai"
+        }
+      ],
+      "sourceParagraph": 951
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ab woh “main” thoda strange lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 952
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab tum usko pakadne jaate ho…"
+        }
+      ],
+      "sourceParagraph": 953
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh khud ek thought ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 954
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum kisi moment mein hote ho…"
+        }
+      ],
+      "sourceParagraph": 955
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur suddenly ek question aata hai:"
+        }
+      ],
+      "sourceParagraph": 956
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“yeh dekh kaun raha hai?”"
+        }
+      ],
+      "sourceParagraph": 957
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh question pehle philosophical lagta tha…"
+        }
+      ],
+      "sourceParagraph": 958
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab yeh ek trap jaisa lagta hai."
+        }
+      ],
+      "sourceParagraph": 959
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki har answer ek naya object ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 960
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum kehte ho “main dekh raha hoon”…"
+        }
+      ],
+      "sourceParagraph": 961
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh “main” ek aur thought ban jaata hai jo dekha ja sakta hai."
+        }
+      ],
+      "sourceParagraph": 962
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum kehte ho “awareness dekh rahi hai”…"
+        }
+      ],
+      "sourceParagraph": 963
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh “awareness” bhi ek concept ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 964
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh loop band nahi hota:"
+        }
+      ],
+      "sourceParagraph": 965
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "observer dhoondo"
+        }
+      ],
+      "sourceParagraph": 966
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " observer bhi observe ho jaata hai"
+        }
+      ],
+      "sourceParagraph": 967
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " phir naye observer ki search"
+        }
+      ],
+      "sourceParagraph": 968
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere yeh search tiring nahi lagti…"
+        }
+      ],
+      "sourceParagraph": 969
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh irrelevant lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 970
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise system ko samajh aa gaya ho:"
+        }
+      ],
+      "sourceParagraph": 971
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jisko dhoondh rahe ho, woh object ban nahi sakta"
+        }
+      ],
+      "sourceParagraph": 972
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek quiet collapse hota hai."
+        }
+      ],
+      "sourceParagraph": 973
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observer disappear nahi hota."
+        }
+      ],
+      "sourceParagraph": 974
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas uski solidity toot jaati hai."
+        }
+      ],
+      "sourceParagraph": 975
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na tum completely vanish hote ho."
+        }
+      ],
+      "sourceParagraph": 976
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na tum ek fixed identity ban ke rehte ho."
+        }
+      ],
+      "sourceParagraph": 977
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas experience hota hai…"
+        }
+      ],
+      "sourceParagraph": 978
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without a permanent owner."
+        }
+      ],
+      "sourceParagraph": 979
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi tum kisi cheez ko dekh rahe hote ho…"
+        }
+      ],
+      "sourceParagraph": 980
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur yeh automatic label nahi aata:"
+        }
+      ],
+      "sourceParagraph": 981
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“main dekh raha hoon”"
+        }
+      ],
+      "sourceParagraph": 982
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas seeing hoti hai."
+        }
+      ],
+      "sourceParagraph": 983
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh seeing koi special state nahi hoti."
+        }
+      ],
+      "sourceParagraph": 984
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na achievement."
+        }
+      ],
+      "sourceParagraph": 985
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na enlightenment feeling."
+        }
+      ],
+      "sourceParagraph": 986
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek reduction hota hai:"
+        }
+      ],
+      "sourceParagraph": 987
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unnecessary center ka fall."
+        }
+      ],
+      "sourceParagraph": 988
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh center loose hota hai…"
+        }
+      ],
+      "sourceParagraph": 989
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh perception spread ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 990
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wide."
+        }
+      ],
+      "sourceParagraph": 991
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Open."
+        }
+      ],
+      "sourceParagraph": 992
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unfixed."
+        }
+      ],
+      "sourceParagraph": 993
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise sab kuch happening ho…"
+        }
+      ],
+      "sourceParagraph": 994
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin kisi ek point par lock na ho."
+        }
+      ],
+      "sourceParagraph": 995
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts aate hain…"
+        }
+      ],
+      "sourceParagraph": 996
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin woh kisi fixed identity ke through pass nahi hote."
+        }
+      ],
+      "sourceParagraph": 997
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings aati hain…"
+        }
+      ],
+      "sourceParagraph": 998
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin woh kisi permanent owner ko define nahi karti."
+        }
+      ],
+      "sourceParagraph": 999
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek strange openness develop hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1000
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kisi structure pe based nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1001
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na control zyada hota hai."
+        }
+      ],
+      "sourceParagraph": 1002
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na confusion zyada hota hai."
+        }
+      ],
+      "sourceParagraph": 1003
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek neutral vastness hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1004
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jisme experience ho raha hota hai."
+        }
+      ],
+      "sourceParagraph": 1005
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum peeche dekhte ho…"
+        }
+      ],
+      "sourceParagraph": 1006
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek cheez clearly break ho chuki hoti hai:"
+        }
+      ],
+      "sourceParagraph": 1007
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main” ek fixed point nahi tha"
+        }
+      ],
+      "sourceParagraph": 1008
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main” ek shifting process tha"
+        }
+      ],
+      "sourceParagraph": 1009
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe Book 3 ka ek aur deep layer collapse hota hai:"
+        }
+      ],
+      "sourceParagraph": 1010
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " jab observer khatam nahi hota…"
+        }
+      ],
+      "sourceParagraph": 1011
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": " bas center dissolve ho jaata hai"
+        }
+      ],
+      "sourceParagraph": 1012
+    }
+  ],
+  "number": "CHAPTER 8:",
+  "phase": "The End of Interpretation",
+  "index": 18,
+  "file": "chapters/18-chapter-08.json"
+}

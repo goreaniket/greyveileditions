@@ -1,0 +1,110 @@
+{
+  "id": "copyright",
+  "kind": "copyright",
+  "sourceKind": "copyright",
+  "label": "Copyright",
+  "title": "COPYRIGHT",
+  "shortTitle": "COPYRIGHT",
+  "sourceRange": [
+    34,
+    44
+  ],
+  "headerSourceParagraphs": {
+    "title": 34
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© 2026 Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 35
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All rights reserved."
+        }
+      ],
+      "sourceParagraph": 36
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No part of this publication may be reproduced, stored, transmitted, distributed, translated, adapted, or used in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without prior written permission from the author, except in the case of brief quotations used for review, criticism, academic discussion, or other legally permitted purposes."
+        }
+      ],
+      "sourceParagraph": 37
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Paradoxes Series, including its concepts, structure, original content, titles, chapters, written material, and intellectual framework, is protected under applicable copyright laws."
+        }
+      ],
+      "sourceParagraph": 38
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unauthorized reproduction or distribution of this work may constitute copyright infringement and may be subject to legal action."
+        }
+      ],
+      "sourceParagraph": 39
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "First Edition"
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Written and Created by"
+        }
+      ],
+      "sourceParagraph": 41
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra"
+        }
+      ],
+      "sourceParagraph": 42
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Some works are written to provide answers."
+        }
+      ],
+      "sourceParagraph": 43
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Others are written to preserve questions.\""
+        }
+      ],
+      "sourceParagraph": 44
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 2,
+  "file": "chapters/02-copyright.json"
+}

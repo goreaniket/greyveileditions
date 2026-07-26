@@ -1,0 +1,119 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    12,
+    32
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 12
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright ©........................................................................",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ........................................................................iii",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ........................................................................iv",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author ........................................................v",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-line",
+      "text": "About the Author ..............................................................i",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction — The Fiction of Becoming ...........................vii",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC I — THE FUTURE SELF ILLUSION",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1-The Illusion of “Who I Will Become” ..................16",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2-The Future Self Projection Mechanism .............19",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC II — THE BECOMING MACHINE",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3-The Fiction of Growth .......................................24",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4-The Achievement Identity Cycle ........................27",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC III — THE SELF-REPAIR NARRATIVE",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5-The Fiction of Healing .......................................31",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6-The Broken Self Narrative .................................34",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC IV — THE COLLAPSE OF BECOMING",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7-The Desire to Change Oneself ...........................38",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-line",
+      "text": "End realization………………...............................................41",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-line",
+      "text": "Epilogue -After Becoming...................................................44",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-line",
+      "text": "About the Author ...............................................................46\n",
+      "sourceParagraph": 32
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

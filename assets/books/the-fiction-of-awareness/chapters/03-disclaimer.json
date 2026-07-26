@@ -1,0 +1,119 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    35,
+    46
+  ],
+  "headerSourceParagraphs": {
+    "title": 35
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction is a philosophical and reflective work."
+        }
+      ],
+      "sourceParagraph": 36
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is not intended to provide psychological, medical, legal, or professional advice of any kind."
+        }
+      ],
+      "sourceParagraph": 37
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All ideas presented in this book are part of an interpretive framework exploring perception, identity, memory, and narrative construction."
+        }
+      ],
+      "sourceParagraph": 38
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are meant for contemplation, not instruction."
+        }
+      ],
+      "sourceParagraph": 39
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any resemblance between the concepts described and personal experiences of the reader is a natural reflection of shared human cognition patterns, not a claim of universal truth."
+        }
+      ],
+      "sourceParagraph": 40
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The content does not aim to define reality, but to examine how reality is interpreted through thought."
+        }
+      ],
+      "sourceParagraph": 41
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Readers are encouraged to engage with the material critically and independently."
+        }
+      ],
+      "sourceParagraph": 42
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No interpretation within this book should be treated as absolute or final."
+        }
+      ],
+      "sourceParagraph": 43
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The author holds no responsibility for personal interpretations, emotional responses, or decisions arising from the reading of this material."
+        }
+      ],
+      "sourceParagraph": 44
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This work is not a replacement for professional guidance in any domain."
+        }
+      ],
+      "sourceParagraph": 45
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is a literary and philosophical exploration of human perception itself."
+        }
+      ],
+      "sourceParagraph": 46
+    }
+  ],
+  "index": 3,
+  "suppressHeaderNumber": true,
+  "file": "chapters/03-disclaimer.json"
+}

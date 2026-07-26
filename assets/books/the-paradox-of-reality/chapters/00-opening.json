@@ -1,0 +1,124 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Paradox of Reality",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    9
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN PARADOX",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK IV"
+        }
+      ],
+      "sourceParagraph": 2
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE PARADOX OF REALITY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "When perception becomes the prison, reality becomes the illusion.",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")",
+          "bold": true,
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Reality was never hidden."
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was simply buried beneath everything the mind believed it already knew.\""
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL",
+          "bold": true
+        },
+        {
+          "text": " EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 8,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Paradox Collection",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "section-heading"
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

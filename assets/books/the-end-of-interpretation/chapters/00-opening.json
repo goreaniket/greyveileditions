@@ -1,0 +1,143 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The End of Interpretation",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    10
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN PARADOX",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Book III",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE END OF INTERPREATATION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "The moment awareness no longer seeks answers, and the self begins to dissolve.",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": ")",
+          "bold": true,
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit",
+          "bold": true
+        },
+        {
+          "text": " R.",
+          "bold": true
+        },
+        {
+          "text": " Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"The final paradox of awareness is this:"
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The more completely you understand the mind,"
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the less the mind is needed to understand reality.\""
+        }
+      ],
+      "sourceParagraph": 8
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL",
+          "bold": true
+        },
+        {
+          "text": " EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Paradox Collection",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 10,
+      "role": "section-heading"
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

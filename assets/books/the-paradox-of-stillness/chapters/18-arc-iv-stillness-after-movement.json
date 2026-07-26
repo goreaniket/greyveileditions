@@ -1,0 +1,19 @@
+{
+  "id": "arc-iv-stillness-after-movement",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC IV — STILLNESS AFTER MOVEMENT",
+  "shortTitle": "ARC IV — STILLNESS AFTER MOVEMENT",
+  "sourceRange": [
+    1163,
+    1163
+  ],
+  "headerSourceParagraphs": {
+    "title": 1163
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 18,
+  "file": "chapters/18-arc-iv-stillness-after-movement.json"
+}

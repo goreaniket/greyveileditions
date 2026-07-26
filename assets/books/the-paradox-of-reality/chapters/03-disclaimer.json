@@ -1,0 +1,182 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    45,
+    63
+  ],
+  "headerSourceParagraphs": {
+    "title": 45
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is a work of philosophical reflection, personal observation, and exploratory thought."
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The ideas presented within these pages are not intended to be absolute truths, scientific conclusions, psychological diagnoses, professional advice, or universal explanations of reality."
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are observations."
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questions."
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perspectives."
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experiments in looking."
+        }
+      ],
+      "sourceParagraph": 51
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The purpose of this book is not to tell the reader what to believe, but to invite deeper examination of experience itself."
+        }
+      ],
+      "sourceParagraph": 52
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Different readers may interpret these ideas differently."
+        }
+      ],
+      "sourceParagraph": 53
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That is not a weakness of the work"
+        }
+      ],
+      "sourceParagraph": 54
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is part of its subject."
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality, meaning, identity, perception, and understanding have been explored by philosophers, psychologists, scientists, and thinkers for centuries. This book does not claim to settle those discussions."
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It simply participates in them."
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Readers are encouraged to think independently, question freely, and form their own conclusions."
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Or perhaps, at times, to remain without conclusions."
+        }
+      ],
+      "sourceParagraph": 59
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If any value exists within these pages, it is not in providing certainty."
+        }
+      ],
+      "sourceParagraph": 60
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is in encouraging observation."
+        }
+      ],
+      "sourceParagraph": 61
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing more."
+        }
+      ],
+      "sourceParagraph": 62
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing less."
+        }
+      ],
+      "sourceParagraph": 63
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 3,
+  "file": "chapters/03-disclaimer.json"
+}

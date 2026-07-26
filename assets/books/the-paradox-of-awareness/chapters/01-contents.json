@@ -1,0 +1,149 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "sourceRange": [
+    11,
+    37
+  ],
+  "suppressHeaderNumber": true,
+  "headerSourceParagraphs": {
+    "title": 11
+  },
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright ............................................... 3",
+      "sourceParagraph": 12
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer .............................................. 4",
+      "sourceParagraph": 13
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication .............................................. 5 ",
+      "sourceParagraph": 14
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author.................................... 6 ",
+      "sourceParagraph": 15
+    },
+    {
+      "type": "toc-line",
+      "text": "Prologue........................................................8",
+      "sourceParagraph": 16
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction ..................................................11",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC I — THE AWAKENING OF SEEING ",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1 — The First Awakening ......................... 18",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2 — The Price of Knowing ....................... 31 ",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3 — The Illusion of “I” ........................ 40",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC II — THE BREAKING OF SELF ",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4 — The Paradox of Identity .................... 47",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5 — The Burden of Too Much Clarity ............. 54",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6 — The Point Where Understanding Starts ",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-line",
+      "text": "Feeling Heavy .......................................... 62",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC III — THE INNER DISCONNECT ",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7 — The Distance Between Knowing and Feeling ",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-line",
+      "text": "............................................ 69",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8 — The Moment You Stop Trusting Yourself ",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-line",
+      "text": "......... 76",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-heading",
+      "text": "ARC IV — THE ILLUSION OF CONTROL ",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9 — The Illusion of Control ................... 85 Chapter 10 — The Thing That Remains When Everything Is ",
+      "sourceParagraph": 33
+    },
+    {
+      "type": "toc-line",
+      "text": "Understood .............................. 93 ",
+      "sourceParagraph": 34
+    },
+    {
+      "type": "toc-line",
+      "text": "Final Realisation ..................................... 100",
+      "sourceParagraph": 35
+    },
+    {
+      "type": "toc-line",
+      "text": "Epilogue-when everything becomes clear .............................................. 103 ",
+      "sourceParagraph": 36
+    },
+    {
+      "type": "toc-line",
+      "text": "About the Author ...................................... 108",
+      "sourceParagraph": 37
+    }
+  ],
+  "index": 1,
+  "file": "chapters/01-contents.json"
+}

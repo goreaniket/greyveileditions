@@ -1,0 +1,840 @@
+{
+  "id": "chapter-09",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 9",
+  "title": "The End of the Search",
+  "shortTitle": "The End of the Search",
+  "sourceRange": [
+    1123,
+    1215
+  ],
+  "headerSourceParagraphs": {
+    "number": 1123,
+    "title": 1124
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har story ka ek destination hota hai."
+        }
+      ],
+      "sourceParagraph": 1125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek ending."
+        }
+      ],
+      "sourceParagraph": 1126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek point jahan character finally pahunchta hai."
+        }
+      ],
+      "sourceParagraph": 1127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye..."
+        }
+      ],
+      "sourceParagraph": 1128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "human life kaafi had tak ek search ban jati hai."
+        }
+      ],
+      "sourceParagraph": 1129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch paane ki search."
+        }
+      ],
+      "sourceParagraph": 1130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch banne ki search."
+        }
+      ],
+      "sourceParagraph": 1131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch samajhne ki search."
+        }
+      ],
+      "sourceParagraph": 1132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch heal karne ki search."
+        }
+      ],
+      "sourceParagraph": 1133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch complete karne ki search."
+        }
+      ],
+      "sourceParagraph": 1134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 1135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "search itni normal lagne lagti hai..."
+        }
+      ],
+      "sourceParagraph": 1136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hum usse question karna bhool jate hain."
+        }
+      ],
+      "sourceParagraph": 1137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har search ke peeche ek hidden assumption hota hai."
+        }
+      ],
+      "sourceParagraph": 1138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek belief."
+        }
+      ],
+      "sourceParagraph": 1139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek silent sentence."
+        }
+      ],
+      "sourceParagraph": 1140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo sentence kuch aisa hota hai:"
+        }
+      ],
+      "sourceParagraph": 1141
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Jo mujhe chahiye..."
+        }
+      ],
+      "sourceParagraph": 1142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo abhi yahan nahi hai.\""
+        }
+      ],
+      "sourceParagraph": 1143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isi belief se movement shuru hoti hai."
+        }
+      ],
+      "sourceParagraph": 1144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ki taraf."
+        }
+      ],
+      "sourceParagraph": 1145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Better version ki taraf."
+        }
+      ],
+      "sourceParagraph": 1146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Better understanding ki taraf."
+        }
+      ],
+      "sourceParagraph": 1147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Better life ki taraf."
+        }
+      ],
+      "sourceParagraph": 1148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kya hoga agar hum ek moment ke liye ruk kar dekhen..."
+        }
+      ],
+      "sourceParagraph": 1149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki search actually kis cheez ko dhoond rahi hai?"
+        }
+      ],
+      "sourceParagraph": 1150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Zyada tar log search ko dekhte hain."
+        }
+      ],
+      "sourceParagraph": 1151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahut kam log seeker ko dekhte hain."
+        }
+      ],
+      "sourceParagraph": 1152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo kaun hai jo itne saalon se dhoond raha hai?"
+        }
+      ],
+      "sourceParagraph": 1153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo kaun hai jo complete hona chahta hai?"
+        }
+      ],
+      "sourceParagraph": 1154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo kaun hai jo continuously next answer ke peeche bhaag raha hai?"
+        }
+      ],
+      "sourceParagraph": 1155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar usse closely dekha jaye..."
+        }
+      ],
+      "sourceParagraph": 1156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange cheez nazar aati hai."
+        }
+      ],
+      "sourceParagraph": 1157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Seeker bhi story ka part hai."
+        }
+      ],
+      "sourceParagraph": 1158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Search ki problem ye nahi hai ki wo galat hai."
+        }
+      ],
+      "sourceParagraph": 1159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem ye hai ki uska horizon continuously move karta rehta hai."
+        }
+      ],
+      "sourceParagraph": 1160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab ek goal milta hai..."
+        }
+      ],
+      "sourceParagraph": 1161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "doosra khada ho jata hai."
+        }
+      ],
+      "sourceParagraph": 1162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab ek answer milta hai..."
+        }
+      ],
+      "sourceParagraph": 1163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "naya question aa jata hai."
+        }
+      ],
+      "sourceParagraph": 1164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab ek mountain climb hota hai..."
+        }
+      ],
+      "sourceParagraph": 1165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "door ek aur mountain dikhne lagta hai."
+        }
+      ],
+      "sourceParagraph": 1166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur poori life isi movement mein nikal sakti hai."
+        }
+      ],
+      "sourceParagraph": 1167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because destination exists."
+        }
+      ],
+      "sourceParagraph": 1168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because searching has become an identity."
+        }
+      ],
+      "sourceParagraph": 1169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi liye itne log physically nahi..."
+        }
+      ],
+      "sourceParagraph": 1170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "psychologically thak jaate hain."
+        }
+      ],
+      "sourceParagraph": 1171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ki wajah se nahi."
+        }
+      ],
+      "sourceParagraph": 1172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Searching ki wajah se."
+        }
+      ],
+      "sourceParagraph": 1173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Continuously improve karne ki wajah se."
+        }
+      ],
+      "sourceParagraph": 1174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Continuously compare karne ki wajah se."
+        }
+      ],
+      "sourceParagraph": 1175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Continuously arrive karne ki koshish ki wajah se."
+        }
+      ],
+      "sourceParagraph": 1176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek point ke baad..."
+        }
+      ],
+      "sourceParagraph": 1177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan destination se zyada rest chahta hai."
+        }
+      ],
+      "sourceParagraph": 1178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi ek strange moment aata hai."
+        }
+      ],
+      "sourceParagraph": 1179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because everything is solved."
+        }
+      ],
+      "sourceParagraph": 1180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because every question is answered."
+        }
+      ],
+      "sourceParagraph": 1181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because something inside quietly says:"
+        }
+      ],
+      "sourceParagraph": 1182
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Bas.\""
+        }
+      ],
+      "sourceParagraph": 1183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us moment mein..."
+        }
+      ],
+      "sourceParagraph": 1184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "search force se nahi rukti."
+        }
+      ],
+      "sourceParagraph": 1185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo naturally slow padne lagti hai."
+        }
+      ],
+      "sourceParagraph": 1186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise ek river finally samundar tak pahunch gayi ho."
+        }
+      ],
+      "sourceParagraph": 1187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye realization shocking ho sakti hai."
+        }
+      ],
+      "sourceParagraph": 1188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki poori life hume sikhaya gaya:"
+        }
+      ],
+      "sourceParagraph": 1189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Become more."
+        }
+      ],
+      "sourceParagraph": 1190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Become better."
+        }
+      ],
+      "sourceParagraph": 1191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Become complete."
+        }
+      ],
+      "sourceParagraph": 1192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Become worthy."
+        }
+      ],
+      "sourceParagraph": 1193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kya hoga agar worthiness destination nahi hai?"
+        }
+      ],
+      "sourceParagraph": 1194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya hoga agar completion future event nahi hai?"
+        }
+      ],
+      "sourceParagraph": 1195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya hoga agar becoming hi story ka part tha?"
+        }
+      ],
+      "sourceParagraph": 1196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Search ka end answers ka end nahi hota."
+        }
+      ],
+      "sourceParagraph": 1197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questions exist kar sakte hain."
+        }
+      ],
+      "sourceParagraph": 1198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Curiosity exist kar sakti hai."
+        }
+      ],
+      "sourceParagraph": 1199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Growth exist kar sakti hai."
+        }
+      ],
+      "sourceParagraph": 1200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin desperation dissolve hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 1201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo feeling dissolve hone lagti hai ki:"
+        }
+      ],
+      "sourceParagraph": 1202
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Mujhe kahin aur hona chahiye.\""
+        }
+      ],
+      "sourceParagraph": 1203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur uske saath..."
+        }
+      ],
+      "sourceParagraph": 1204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek strange peace emerge hoti hai."
+        }
+      ],
+      "sourceParagraph": 1205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not dramatic."
+        }
+      ],
+      "sourceParagraph": 1206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not mystical."
+        }
+      ],
+      "sourceParagraph": 1207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas simple."
+        }
+      ],
+      "sourceParagraph": 1208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise saalon tak bhaagne ke baad..."
+        }
+      ],
+      "sourceParagraph": 1209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum pehli baar chalna shuru karo."
+        }
+      ],
+      "sourceParagraph": 1210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise saalon tak future mein jeene ke baad..."
+        }
+      ],
+      "sourceParagraph": 1211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum pehli baar present ko notice karo."
+        }
+      ],
+      "sourceParagraph": 1212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad wahi moment hota hai..."
+        }
+      ],
+      "sourceParagraph": 1213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab search khatam nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas uska burden khatam ho jata hai."
+        }
+      ],
+      "sourceParagraph": 1215
+    }
+  ],
+  "index": 20,
+  "number": "CHAPTER 9 —",
+  "file": "chapters/20-chapter-09.json"
+}

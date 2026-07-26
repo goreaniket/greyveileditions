@@ -1,0 +1,19 @@
+{
+  "id": "arc-iii-the-collapse-of-resistance",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc",
+  "title": "ARC III — THE COLLAPSE OF RESISTANCE",
+  "shortTitle": "ARC III — THE COLLAPSE OF RESISTANCE",
+  "sourceRange": [
+    884,
+    884
+  ],
+  "headerSourceParagraphs": {
+    "title": 884
+  },
+  "elements": [],
+  "suppressHeaderNumber": true,
+  "index": 15,
+  "file": "chapters/15-arc-iii-the-collapse-of-resistance.json"
+}

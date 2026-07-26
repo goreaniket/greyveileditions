@@ -1,0 +1,478 @@
+{
+  "id": "the-paradox-of-awareness",
+  "slug": "the-paradox-of-awareness",
+  "title": "The Paradox of Awareness",
+  "subtitle": "The mind cannot become aware of itself without questioning everything it once believed to be true.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "seriesDisplay": "The Human Paradox Series",
+  "bookNumber": "Book I",
+  "bookIndex": 1,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-paradox/assets/covers/the%20paradox%20of%20awareness.jpeg",
+  "cover": {
+    "web": "/assets/books/the-paradox-of-awareness/cover/front-cover.webp",
+    "print": "/assets/books/the-paradox-of-awareness/cover/front-cover-print.png",
+    "source": "/assets/books/the-paradox-of-awareness/cover/cover-source.png",
+    "alt": "The Paradox of Awareness book cover"
+  },
+  "readerRoute": "/projects/human-paradox/books/the-paradox-of-awareness/reader/",
+  "readerExitUrl": "/projects/human-paradox/books/the-paradox-of-awareness.html",
+  "storageKey": "greyveil:the-paradox-of-awareness:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Paradox",
+    "book": "The Paradox of Awareness",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-paradox-awareness",
+    "variables": {
+      "light": {
+        "--reader-bg": "#DDE2E3",
+        "--reader-paper": "#F6EFE4",
+        "--reader-paper-soft": "#ECE3D6",
+        "--reader-text": "#242B31",
+        "--reader-heading": "#151B21",
+        "--reader-muted": "color-mix(in srgb, #242B31 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #242B31 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #242B31 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #5E6984 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #242B31 20%, transparent)",
+        "--reader-accent": "#5E6984",
+        "--reader-accent-strong": "#39465E",
+        "--reader-accent-soft": "color-mix(in srgb, #5E6984 12%, transparent)",
+        "--reader-warm": "#A06F48",
+        "--reader-focus": "#39465E",
+        "--reader-control-bg": "#ECE3D6",
+        "--reader-control-border": "color-mix(in srgb, #242B31 18%, transparent)",
+        "--reader-input-bg": "#F6EFE4",
+        "--reader-input-text": "#242B31",
+        "--reader-placeholder": "color-mix(in srgb, #242B31 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #5E6984 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#DFD4C4",
+        "--reader-paper": "#F2E3CF",
+        "--reader-paper-soft": "#E5D3BE",
+        "--reader-text": "#352D25",
+        "--reader-heading": "#241D18",
+        "--reader-muted": "color-mix(in srgb, #352D25 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #352D25 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #352D25 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #6D6379 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #352D25 20%, transparent)",
+        "--reader-accent": "#6D6379",
+        "--reader-accent-strong": "#4D465D",
+        "--reader-accent-soft": "color-mix(in srgb, #6D6379 12%, transparent)",
+        "--reader-warm": "#966B45",
+        "--reader-focus": "#4D465D",
+        "--reader-control-bg": "#E5D3BE",
+        "--reader-control-border": "color-mix(in srgb, #352D25 18%, transparent)",
+        "--reader-input-bg": "#F2E3CF",
+        "--reader-input-text": "#352D25",
+        "--reader-placeholder": "color-mix(in srgb, #352D25 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #6D6379 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#0D1116",
+        "--reader-paper": "#171C24",
+        "--reader-paper-soft": "#202735",
+        "--reader-text": "#EEE7DA",
+        "--reader-heading": "#F8F0E5",
+        "--reader-muted": "color-mix(in srgb, #EEE7DA 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EEE7DA 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EEE7DA 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #A9B3D0 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EEE7DA 20%, transparent)",
+        "--reader-accent": "#A9B3D0",
+        "--reader-accent-strong": "#D0D8F0",
+        "--reader-accent-soft": "color-mix(in srgb, #A9B3D0 12%, transparent)",
+        "--reader-warm": "#C8945D",
+        "--reader-focus": "#D0D8F0",
+        "--reader-control-bg": "#202735",
+        "--reader-control-border": "color-mix(in srgb, #EEE7DA 18%, transparent)",
+        "--reader-input-bg": "#171C24",
+        "--reader-input-text": "#EEE7DA",
+        "--reader-placeholder": "color-mix(in srgb, #EEE7DA 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #A9B3D0 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-paradox/chapters/WORD/THE PARADOX OF AWARENESS.docx",
+    "pdfVerification": "/projects/human-paradox/chapters/PDF/the paradox of awarness book I.pdf",
+    "sourceParagraphsNonEmpty": 1847,
+    "semanticUnits": 25,
+    "chapters": 10,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Paradox of Awareness",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        10
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        11,
+        37
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "copyright-notice",
+      "kind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT NOTICE",
+      "shortTitle": "COPYRIGHT NOTICE",
+      "file": "chapters/02-copyright-notice.json",
+      "index": 2,
+      "sourceRange": [
+        38,
+        42
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        43,
+        51
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        52,
+        61
+      ]
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "file": "chapters/05-note-from-the-author.json",
+      "index": 5,
+      "sourceRange": [
+        62,
+        74
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "PROLOGUE:",
+      "shortTitle": "PROLOGUE:",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        75,
+        124
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "INTRODUCTION",
+      "shortTitle": "INTRODUCTION",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        125,
+        228
+      ]
+    },
+    {
+      "id": "the-awakening-of-seeing",
+      "kind": "part",
+      "label": "ARC I —",
+      "title": "THE AWAKENING OF SEEING",
+      "shortTitle": "THE AWAKENING OF SEEING",
+      "file": "chapters/08-the-awakening-of-seeing.json",
+      "index": 8,
+      "sourceRange": [
+        229,
+        230
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "CHAPTER 1:",
+      "title": "THE FIRST AWAKENING",
+      "shortTitle": "THE FIRST AWAKENING",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        231,
+        476
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "CHAPTER 2:",
+      "title": "THE PRICE OF KNOWING",
+      "shortTitle": "THE PRICE OF KNOWING",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        477,
+        624
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "CHAPTER 3:",
+      "title": "THE ILLUSION OF “I”",
+      "shortTitle": "THE ILLUSION OF “I”",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        625,
+        738
+      ]
+    },
+    {
+      "id": "the-breaking-of-self",
+      "kind": "part",
+      "label": "ARC II —",
+      "title": "THE BREAKING OF SELF",
+      "shortTitle": "THE BREAKING OF SELF",
+      "file": "chapters/12-the-breaking-of-self.json",
+      "index": 12,
+      "sourceRange": [
+        739,
+        740
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "CHAPTER 4:",
+      "title": "THE PARADOX OF IDENTITY",
+      "shortTitle": "THE PARADOX OF IDENTITY",
+      "file": "chapters/13-chapter-04.json",
+      "index": 13,
+      "sourceRange": [
+        741,
+        868
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "CHAPTER:5-",
+      "title": "THE BURDEN OF TOO MUCH CLARITY",
+      "shortTitle": "THE BURDEN OF TOO MUCH CLARITY",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        869,
+        1019
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "Chapter",
+      "title": "CHAPTER-6:",
+      "shortTitle": ":",
+      "file": "chapters/15-chapter-06.json",
+      "index": 15,
+      "sourceRange": [
+        1020,
+        1138
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "the-inner-disconnect",
+      "kind": "part",
+      "label": "ARC III —",
+      "title": "THE INNER DISCONNECT",
+      "shortTitle": "THE INNER DISCONNECT",
+      "file": "chapters/16-the-inner-disconnect.json",
+      "index": 16,
+      "sourceRange": [
+        1139,
+        1140
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "CHAPTER 7:",
+      "title": "THE DISTANCE BETWEEN KNOWING AND FEELING",
+      "shortTitle": "THE DISTANCE BETWEEN KNOWING AND FEELING",
+      "file": "chapters/17-chapter-07.json",
+      "index": 17,
+      "sourceRange": [
+        1141,
+        1258
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "CHAPTER 8:",
+      "title": "THE MOMENT YOU STOP TRUSTING YOURSELF",
+      "shortTitle": "THE MOMENT YOU STOP TRUSTING YOURSELF",
+      "file": "chapters/18-chapter-08.json",
+      "index": 18,
+      "sourceRange": [
+        1259,
+        1399
+      ]
+    },
+    {
+      "id": "the-illusion-of-control",
+      "kind": "part",
+      "label": "ARC IV —",
+      "title": "THE ILLUSION OF CONTROL",
+      "shortTitle": "THE ILLUSION OF CONTROL",
+      "file": "chapters/19-the-illusion-of-control.json",
+      "index": 19,
+      "sourceRange": [
+        1400,
+        1401
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "CHAPTER 9:",
+      "title": "THE ILLUSION OF CONTROL",
+      "shortTitle": "THE ILLUSION OF CONTROL",
+      "file": "chapters/20-chapter-09.json",
+      "index": 20,
+      "sourceRange": [
+        1402,
+        1555
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "kind": "chapter",
+      "label": "CHAPTER 10:",
+      "title": "THE THING THAT REMAINS WHEN EVERYTHING IS UNDERSTOOD",
+      "shortTitle": "THE THING THAT REMAINS WHEN EVERYTHING IS UNDERSTOOD",
+      "file": "chapters/21-chapter-10.json",
+      "index": 21,
+      "sourceRange": [
+        1556,
+        1692
+      ]
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION",
+      "shortTitle": "END REALIZATION",
+      "file": "chapters/22-end-realization.json",
+      "index": 22,
+      "sourceRange": [
+        1693,
+        1734
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "epilogue-when-everything-becomes-too-clear",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "EPILOGUE — WHEN EVERYTHING BECOMES TOO CLEAR",
+      "shortTitle": "EPILOGUE — WHEN EVERYTHING BECOMES TOO CLEAR",
+      "file": "chapters/23-epilogue-when-everything-becomes-too-clear.json",
+      "index": 23,
+      "sourceRange": [
+        1735,
+        1829
+      ]
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "file": "chapters/24-about-the-author.json",
+      "index": 24,
+      "sourceRange": [
+        1830,
+        1847
+      ],
+      "suppressHeaderNumber": true
+    }
+  ]
+}

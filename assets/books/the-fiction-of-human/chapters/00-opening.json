@@ -1,0 +1,130 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Fiction of the Human",
+  "shortTitle": "Opening",
+  "sourceRange": [
+    1,
+    10
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN FICTION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK IV",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE FICTION OF THE HUMAN",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3,
+      "role": "section-heading"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "(",
+          "italic": true
+        },
+        {
+          "text": "The final fiction was never the world.It was the one who believed he existed separately from it.",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 4
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 5
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"The human was never merely a biological reality."
+        }
+      ],
+      "sourceParagraph": 6
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was a story—remembered, defended, repeated,"
+        }
+      ],
+      "sourceParagraph": 7
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "until the storyteller forgot it was telling one.\""
+        }
+      ],
+      "sourceParagraph": 8
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL",
+          "bold": true
+        },
+        {
+          "text": " EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction Collection",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 10,
+      "role": "section-heading"
+    }
+  ],
+  "index": 0,
+  "file": "chapters/00-opening.json"
+}

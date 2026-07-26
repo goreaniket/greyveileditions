@@ -1,0 +1,831 @@
+{
+  "id": "chapter-03",
+  "kind": "chapter",
+  "sourceKind": "chapter",
+  "label": "Chapter 3",
+  "title": "The Narrative Animal",
+  "shortTitle": "The Narrative Animal",
+  "sourceRange": [
+    522,
+    613
+  ],
+  "headerSourceParagraphs": {
+    "number": 522,
+    "title": 523
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi socha hai..."
+        }
+      ],
+      "sourceParagraph": 524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki insaan sirf duniya mein nahi rehta."
+        }
+      ],
+      "sourceParagraph": 525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan kahaniyon mein rehta hai."
+        }
+      ],
+      "sourceParagraph": 526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek ped ko ped hone ke liye kahani ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek nadi ko behne ke liye meaning ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aasman ko exist karne ke liye explanation ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin insaan..."
+        }
+      ],
+      "sourceParagraph": 530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "almost har cheez ko story mein convert kar deta hai."
+        }
+      ],
+      "sourceParagraph": 531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek event hota hai."
+        }
+      ],
+      "sourceParagraph": 532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum uski kahani bana dete hain."
+        }
+      ],
+      "sourceParagraph": 533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek emotion aata hai."
+        }
+      ],
+      "sourceParagraph": 534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum uski kahani bana dete hain."
+        }
+      ],
+      "sourceParagraph": 535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek relationship khatam hota hai."
+        }
+      ],
+      "sourceParagraph": 536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum uski kahani bana dete hain."
+        }
+      ],
+      "sourceParagraph": 537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek sapna toot jata hai."
+        }
+      ],
+      "sourceParagraph": 538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum uski kahani bana dete hain."
+        }
+      ],
+      "sourceParagraph": 539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum events se zyada unki narrations ke saath jeene lagte hain."
+        }
+      ],
+      "sourceParagraph": 541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human mind uncertainty ko pasand nahi karta."
+        }
+      ],
+      "sourceParagraph": 542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse gaps pasand nahi."
+        }
+      ],
+      "sourceParagraph": 543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse unanswered cheezein pasand nahi."
+        }
+      ],
+      "sourceParagraph": 544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse randomness pasand nahi."
+        }
+      ],
+      "sourceParagraph": 545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye jab bhi kuch samajh nahi aata..."
+        }
+      ],
+      "sourceParagraph": 546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind ek narrative create kar deta hai."
+        }
+      ],
+      "sourceParagraph": 547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Narrative reality ko explain nahi karta."
+        }
+      ],
+      "sourceParagraph": 548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Narrative reality ko manageable banata hai."
+        }
+      ],
+      "sourceParagraph": 549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye dono cheezein alag hain."
+        }
+      ],
+      "sourceParagraph": 550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Socho..."
+        }
+      ],
+      "sourceParagraph": 551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar tumhari life mein jo bhi hua..."
+        }
+      ],
+      "sourceParagraph": 552
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "uska koi meaning hi na ho."
+        }
+      ],
+      "sourceParagraph": 553
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi hidden lesson nahi."
+        }
+      ],
+      "sourceParagraph": 554
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi cosmic reason nahi."
+        }
+      ],
+      "sourceParagraph": 555
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi grand purpose nahi."
+        }
+      ],
+      "sourceParagraph": 556
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind immediately uncomfortable feel karta hai."
+        }
+      ],
+      "sourceParagraph": 557
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki story certainty deti hai."
+        }
+      ],
+      "sourceParagraph": 558
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur certainty safety ka illusion deti hai."
+        }
+      ],
+      "sourceParagraph": 559
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi liye insaan sirf answers nahi dhoondta."
+        }
+      ],
+      "sourceParagraph": 560
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo narratives dhoondta hai."
+        }
+      ],
+      "sourceParagraph": 561
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har story ko character chahiye."
+        }
+      ],
+      "sourceParagraph": 562
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har character ko plot."
+        }
+      ],
+      "sourceParagraph": 563
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity character ban gayi."
+        }
+      ],
+      "sourceParagraph": 564
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab life plot ban gayi."
+        }
+      ],
+      "sourceParagraph": 565
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab har event ko kisi direction mein fit hona hai."
+        }
+      ],
+      "sourceParagraph": 566
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har struggle ka meaning hona chahiye."
+        }
+      ],
+      "sourceParagraph": 567
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har pain ka purpose hona chahiye."
+        }
+      ],
+      "sourceParagraph": 568
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har loss se lesson nikalna chahiye."
+        }
+      ],
+      "sourceParagraph": 569
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki agar plot toot gaya..."
+        }
+      ],
+      "sourceParagraph": 570
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh character confuse ho jata hai."
+        }
+      ],
+      "sourceParagraph": 571
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story comfort deti hai."
+        }
+      ],
+      "sourceParagraph": 572
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin wahi story prison bhi ban sakti hai."
+        }
+      ],
+      "sourceParagraph": 573
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ek point ke baad..."
+        }
+      ],
+      "sourceParagraph": 574
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum reality ko nahi dekhte."
+        }
+      ],
+      "sourceParagraph": 575
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum reality ke baare mein apni narration ko dekhte ho."
+        }
+      ],
+      "sourceParagraph": 576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dono mein bahut difference hai."
+        }
+      ],
+      "sourceParagraph": 577
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek direct hai."
+        }
+      ],
+      "sourceParagraph": 578
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek interpreted."
+        }
+      ],
+      "sourceParagraph": 579
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek alive hai."
+        }
+      ],
+      "sourceParagraph": 580
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek remembered."
+        }
+      ],
+      "sourceParagraph": 581
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi hum life se hurt nahi hote."
+        }
+      ],
+      "sourceParagraph": 582
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum us story se hurt hote hain..."
+        }
+      ],
+      "sourceParagraph": 583
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo humne life ke baare mein bana rakhi hoti hai."
+        }
+      ],
+      "sourceParagraph": 584
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Event khatam ho chuka hota hai."
+        }
+      ],
+      "sourceParagraph": 585
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin narration chalti rehti hai."
+        }
+      ],
+      "sourceParagraph": 586
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur narration hi suffering ko alive rakhti hai."
+        }
+      ],
+      "sourceParagraph": 587
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stories powerful isliye nahi hoti kyuki wo true hoti hain."
+        }
+      ],
+      "sourceParagraph": 588
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stories powerful isliye hoti hain..."
+        }
+      ],
+      "sourceParagraph": 589
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki unhe repeat kiya jata hai."
+        }
+      ],
+      "sourceParagraph": 590
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Repeat."
+        }
+      ],
+      "sourceParagraph": 591
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Remember."
+        }
+      ],
+      "sourceParagraph": 592
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reinforce."
+        }
+      ],
+      "sourceParagraph": 593
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Repeat again."
+        }
+      ],
+      "sourceParagraph": 594
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek din..."
+        }
+      ],
+      "sourceParagraph": 595
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "story reality jaisi feel hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 596
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi liye human being ko sirf rational animal kehna enough nahi."
+        }
+      ],
+      "sourceParagraph": 597
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human being ek narrative animal hai."
+        }
+      ],
+      "sourceParagraph": 598
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisa creature jo reality se kam..."
+        }
+      ],
+      "sourceParagraph": 599
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur reality ke baare mein bani hui stories se zyada relate karta hai."
+        }
+      ],
+      "sourceParagraph": 600
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi wajah se..."
+        }
+      ],
+      "sourceParagraph": 601
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek hi event do logon ki zindagi mein completely different meaning le leta hai."
+        }
+      ],
+      "sourceParagraph": 602
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Event same."
+        }
+      ],
+      "sourceParagraph": 603
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Story different."
+        }
+      ],
+      "sourceParagraph": 604
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experience different."
+        }
+      ],
+      "sourceParagraph": 605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar saari stories kuch der ke liye silent ho jaye..."
+        }
+      ],
+      "sourceParagraph": 606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh kya bachega?"
+        }
+      ],
+      "sourceParagraph": 607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya reality disappear ho jayegi?"
+        }
+      ],
+      "sourceParagraph": 608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya pehli baar direct dikhne lagegi?"
+        }
+      ],
+      "sourceParagraph": 609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar reality ko survive karne ke liye story ki zarurat nahi..."
+        }
+      ],
+      "sourceParagraph": 610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh phir story kis cheez ko survive kara rahi hai?"
+        }
+      ],
+      "sourceParagraph": 611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad..."
+        }
+      ],
+      "sourceParagraph": 612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "character ko."
+        }
+      ],
+      "sourceParagraph": 613
+    }
+  ],
+  "index": 11,
+  "number": "CHAPTER 3 —",
+  "file": "chapters/11-chapter-03.json"
+}

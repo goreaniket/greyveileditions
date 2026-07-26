@@ -1,0 +1,137 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "ABOUT THE AUTHOR",
+  "sourceRange": [
+    681,
+    694
+  ],
+  "headerSourceParagraphs": {
+    "title": 681
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is the creator of The Human Fiction series."
+        }
+      ],
+      "sourceParagraph": 682
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He writes from observation, not ideology."
+        }
+      ],
+      "sourceParagraph": 683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "From watching how thought builds identity, how meaning attaches itself to experience, and how a “self” is continuously constructed through narrative."
+        }
+      ],
+      "sourceParagraph": 684
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His central question is simple:"
+        }
+      ],
+      "sourceParagraph": 685
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why does experience feel like it is happening to someone?"
+        }
+      ],
+      "sourceParagraph": 686
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work does not aim to provide answers or beliefs."
+        }
+      ],
+      "sourceParagraph": 687
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It aims to make the structure of thinking visible."
+        }
+      ],
+      "sourceParagraph": 688
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "In his view, clarity is not something added to life."
+        }
+      ],
+      "sourceParagraph": 689
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It appears when unnecessary interpretation quiets down."
+        }
+      ],
+      "sourceParagraph": 690
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Fiction is not a philosophy to follow."
+        }
+      ],
+      "sourceParagraph": 691
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is an exploration of how human experience becomes a story — and how that story is mistaken for reality."
+        }
+      ],
+      "sourceParagraph": 692
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not claim authority over truth."
+        }
+      ],
+      "sourceParagraph": 693
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He only points toward the process through which truth is interpreted."
+        }
+      ],
+      "sourceParagraph": 694
+    }
+  ],
+  "index": 21,
+  "suppressHeaderNumber": true,
+  "file": "chapters/21-about-the-author.json"
+}

@@ -1,0 +1,455 @@
+{
+  "id": "the-paradox-of-stillness",
+  "slug": "the-paradox-of-stillness",
+  "title": "The Paradox of Stillness",
+  "subtitle": "The final paradox was never about finding the truth. It was realizing that nothing was ever missing.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Paradox",
+  "seriesDisplay": "The Human Paradox Series",
+  "bookNumber": "Book V",
+  "bookIndex": 5,
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-paradox/assets/covers/the%20paradox%20of%20stillness.jpeg",
+  "cover": {
+    "web": "/assets/books/the-paradox-of-stillness/cover/front-cover.webp",
+    "print": "/assets/books/the-paradox-of-stillness/cover/front-cover-print.png",
+    "source": "/assets/books/the-paradox-of-stillness/cover/cover-source.png",
+    "alt": "The Paradox of Stillness book cover"
+  },
+  "readerRoute": "/projects/human-paradox/books/the-paradox-of-stillness/reader/",
+  "readerExitUrl": "/projects/human-paradox/books/the-paradox-of-stillness.html",
+  "storageKey": "greyveil:the-paradox-of-stillness:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Paradox",
+    "book": "The Paradox of Stillness",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-paradox-stillness",
+    "variables": {
+      "light": {
+        "--reader-bg": "#DFE3DC",
+        "--reader-paper": "#F6EFE2",
+        "--reader-paper-soft": "#E9E0D1",
+        "--reader-text": "#2C302A",
+        "--reader-heading": "#1F241D",
+        "--reader-muted": "color-mix(in srgb, #2C302A 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #2C302A 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #2C302A 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #6F7351 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #2C302A 20%, transparent)",
+        "--reader-accent": "#6F7351",
+        "--reader-accent-strong": "#565A3E",
+        "--reader-accent-soft": "color-mix(in srgb, #6F7351 12%, transparent)",
+        "--reader-warm": "#94704D",
+        "--reader-focus": "#565A3E",
+        "--reader-control-bg": "#E9E0D1",
+        "--reader-control-border": "color-mix(in srgb, #2C302A 18%, transparent)",
+        "--reader-input-bg": "#F6EFE2",
+        "--reader-input-text": "#2C302A",
+        "--reader-placeholder": "color-mix(in srgb, #2C302A 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #6F7351 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#E1D6C7",
+        "--reader-paper": "#F2E4CF",
+        "--reader-paper-soft": "#E7D7C0",
+        "--reader-text": "#362F27",
+        "--reader-heading": "#262019",
+        "--reader-muted": "color-mix(in srgb, #362F27 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #362F27 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #362F27 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #776B50 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #362F27 20%, transparent)",
+        "--reader-accent": "#776B50",
+        "--reader-accent-strong": "#5D523D",
+        "--reader-accent-soft": "color-mix(in srgb, #776B50 12%, transparent)",
+        "--reader-warm": "#92704A",
+        "--reader-focus": "#5D523D",
+        "--reader-control-bg": "#E7D7C0",
+        "--reader-control-border": "color-mix(in srgb, #362F27 18%, transparent)",
+        "--reader-input-bg": "#F2E4CF",
+        "--reader-input-text": "#362F27",
+        "--reader-placeholder": "color-mix(in srgb, #362F27 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #776B50 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(22, 26, 30, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#10130F",
+        "--reader-paper": "#1A1E17",
+        "--reader-paper-soft": "#242920",
+        "--reader-text": "#EFE8DB",
+        "--reader-heading": "#F8F0E4",
+        "--reader-muted": "color-mix(in srgb, #EFE8DB 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EFE8DB 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EFE8DB 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #B7BA8F 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EFE8DB 20%, transparent)",
+        "--reader-accent": "#B7BA8F",
+        "--reader-accent-strong": "#D6D9AA",
+        "--reader-accent-soft": "color-mix(in srgb, #B7BA8F 12%, transparent)",
+        "--reader-warm": "#C19A68",
+        "--reader-focus": "#D6D9AA",
+        "--reader-control-bg": "#242920",
+        "--reader-control-border": "color-mix(in srgb, #EFE8DB 18%, transparent)",
+        "--reader-input-bg": "#1A1E17",
+        "--reader-input-text": "#EFE8DB",
+        "--reader-placeholder": "color-mix(in srgb, #EFE8DB 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #B7BA8F 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .5)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-paradox/chapters/WORD/THE PARADOX OF STILLNESS.docx",
+    "pdfVerification": "/projects/human-paradox/chapters/PDF/the paradox of stillness book 5.pdf",
+    "sourceParagraphsNonEmpty": 1435,
+    "semanticUnits": 23,
+    "chapters": 8,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Paradox of Stillness",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        9
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        10,
+        31
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "copyright-notice",
+      "kind": "copyright",
+      "label": "Copyright",
+      "title": "COPYRIGHT NOTICE",
+      "shortTitle": "COPYRIGHT NOTICE",
+      "file": "chapters/02-copyright-notice.json",
+      "index": 2,
+      "sourceRange": [
+        32,
+        35
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "disclaimer",
+      "kind": "introduction",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "DISCLAIMER",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        36,
+        50
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "DEDICATION",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        51,
+        69
+      ]
+    },
+    {
+      "id": "note-from-the-author",
+      "kind": "introduction",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "NOTE FROM THE AUTHOR",
+      "file": "chapters/05-note-from-the-author.json",
+      "index": 5,
+      "sourceRange": [
+        70,
+        142
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "PROLOGUE",
+      "shortTitle": "PROLOGUE",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        143,
+        189
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "INTRODUCTION",
+      "shortTitle": "INTRODUCTION",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        190,
+        330
+      ]
+    },
+    {
+      "id": "arc-i-the-illusion-of-search",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC I — THE ILLUSION OF SEARCH",
+      "shortTitle": "ARC I — THE ILLUSION OF SEARCH",
+      "file": "chapters/08-arc-i-the-illusion-of-search.json",
+      "index": 8,
+      "sourceRange": [
+        331,
+        331
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "CHAPTER 1:",
+      "title": "THE DAY NOTHING CHANGED",
+      "shortTitle": "THE DAY NOTHING CHANGED",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        332,
+        455
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "CHAPTER 2:",
+      "title": "LIFE AFTER THE QUESTION",
+      "shortTitle": "LIFE AFTER THE QUESTION",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        456,
+        556
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "CHAPTER 3:",
+      "title": "THE BEAUTY OF ORDINARY THINGS",
+      "shortTitle": "THE BEAUTY OF ORDINARY THINGS",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        557,
+        652
+      ]
+    },
+    {
+      "id": "arc-ii-the-structure-of-meaning",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC II — THE STRUCTURE OF MEANING",
+      "shortTitle": "ARC II — THE STRUCTURE OF MEANING",
+      "file": "chapters/12-arc-ii-the-structure-of-meaning.json",
+      "index": 12,
+      "sourceRange": [
+        653,
+        653
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "CHAPTER 4:",
+      "title": "THE WEIGHTLESS MOMENT",
+      "shortTitle": "THE WEIGHTLESS MOMENT",
+      "file": "chapters/13-chapter-04.json",
+      "index": 13,
+      "sourceRange": [
+        654,
+        763
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "CHAPTER 5:",
+      "title": "THE WOUND STOPS ASKING",
+      "shortTitle": "THE WOUND STOPS ASKING",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        764,
+        883
+      ]
+    },
+    {
+      "id": "arc-iii-the-collapse-of-resistance",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC III — THE COLLAPSE OF RESISTANCE",
+      "shortTitle": "ARC III — THE COLLAPSE OF RESISTANCE",
+      "file": "chapters/15-arc-iii-the-collapse-of-resistance.json",
+      "index": 15,
+      "sourceRange": [
+        884,
+        884
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "CHAPTER 6:",
+      "title": "HEALING WITHOUT CLOSURE",
+      "shortTitle": "HEALING WITHOUT CLOSURE",
+      "file": "chapters/16-chapter-06.json",
+      "index": 16,
+      "sourceRange": [
+        885,
+        1005
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "CHAPTER 7",
+      "title": "NOTHING WAS MISSING",
+      "shortTitle": "NOTHING WAS MISSING",
+      "file": "chapters/17-chapter-07.json",
+      "index": 17,
+      "sourceRange": [
+        1006,
+        1162
+      ]
+    },
+    {
+      "id": "arc-iv-stillness-after-movement",
+      "kind": "part",
+      "label": "Arc",
+      "title": "ARC IV — STILLNESS AFTER MOVEMENT",
+      "shortTitle": "ARC IV — STILLNESS AFTER MOVEMENT",
+      "file": "chapters/18-arc-iv-stillness-after-movement.json",
+      "index": 18,
+      "sourceRange": [
+        1163,
+        1163
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "CHAPTER 8:",
+      "title": "LIFE CONTINUES",
+      "shortTitle": "LIFE CONTINUES",
+      "file": "chapters/19-chapter-08.json",
+      "index": 19,
+      "sourceRange": [
+        1164,
+        1290
+      ]
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "EPILOGUE:",
+      "shortTitle": "EPILOGUE:",
+      "file": "chapters/20-epilogue.json",
+      "index": 20,
+      "sourceRange": [
+        1291,
+        1340
+      ]
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "label": "End Realization",
+      "title": "END REALIZATION:",
+      "shortTitle": "END REALIZATION:",
+      "file": "chapters/21-end-realization.json",
+      "index": 21,
+      "sourceRange": [
+        1341,
+        1406
+      ],
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "about-the-author",
+      "kind": "epilogue",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "ABOUT THE AUTHOR",
+      "file": "chapters/22-about-the-author.json",
+      "index": 22,
+      "sourceRange": [
+        1407,
+        1435
+      ],
+      "suppressHeaderNumber": true
+    }
+  ]
+}

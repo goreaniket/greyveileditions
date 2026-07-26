@@ -1,0 +1,92 @@
+{
+  "id": "disclaimer",
+  "kind": "introduction",
+  "sourceKind": "disclaimer",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "DISCLAIMER",
+  "sourceRange": [
+    43,
+    51
+  ],
+  "headerSourceParagraphs": {
+    "title": 43
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book does not provide guidance, advice, or solutions."
+        }
+      ],
+      "sourceParagraph": 44
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is a psychological and philosophical reflection of human thought patterns, perception, and internal observation."
+        }
+      ],
+      "sourceParagraph": 45
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The content may feel personal at times, but it is not directed toward any individual or specific experience."
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The ideas presented here are not absolute truths."
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are interpretations of how awareness, thinking, and self-observation can alter human experience."
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reading this book may cause increased self-reflection."
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That reflection is not controlled by the author and varies from person to person."
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The author is not responsible for any emotional interpretation, discomfort, or realization that may arise from reading this material."
+        }
+      ],
+      "sourceParagraph": 51
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 3,
+  "file": "chapters/03-disclaimer.json"
+}

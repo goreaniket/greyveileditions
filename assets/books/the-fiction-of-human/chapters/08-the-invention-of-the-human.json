@@ -1,0 +1,20 @@
+{
+  "id": "the-invention-of-the-human",
+  "kind": "part",
+  "sourceKind": "part",
+  "label": "Arc I",
+  "title": "THE INVENTION OF THE HUMAN",
+  "shortTitle": "THE INVENTION OF THE HUMAN",
+  "sourceRange": [
+    332,
+    333
+  ],
+  "headerSourceParagraphs": {
+    "number": 332,
+    "title": 333
+  },
+  "elements": [],
+  "index": 8,
+  "number": "ARC I —",
+  "file": "chapters/08-the-invention-of-the-human.json"
+}

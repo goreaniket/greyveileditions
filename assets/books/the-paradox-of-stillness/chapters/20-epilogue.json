@@ -1,0 +1,460 @@
+{
+  "id": "epilogue",
+  "kind": "epilogue",
+  "sourceKind": "epilogue",
+  "label": "Epilogue",
+  "title": "EPILOGUE:",
+  "shortTitle": "EPILOGUE:",
+  "sourceRange": [
+    1291,
+    1340
+  ],
+  "headerSourceParagraphs": {
+    "title": 1291
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch journeys end nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh bas apne aap quiet ho jaati hain."
+        }
+      ],
+      "sourceParagraph": 1293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kisi final answer ke saath."
+        }
+      ],
+      "sourceParagraph": 1294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kisi dramatic closure ke saath."
+        }
+      ],
+      "sourceParagraph": 1295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki ek simple realization ke saath..."
+        }
+      ],
+      "sourceParagraph": 1296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad end ka concept hi galat tha."
+        }
+      ],
+      "sourceParagraph": 1297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poore safar mein tumne bahut kuch dekha."
+        }
+      ],
+      "sourceParagraph": 1298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awareness."
+        }
+      ],
+      "sourceParagraph": 1299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Understanding."
+        }
+      ],
+      "sourceParagraph": 1300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Certainty."
+        }
+      ],
+      "sourceParagraph": 1301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meaning."
+        }
+      ],
+      "sourceParagraph": 1302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stillness."
+        }
+      ],
+      "sourceParagraph": 1303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Loss."
+        }
+      ],
+      "sourceParagraph": 1304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Acceptance."
+        }
+      ],
+      "sourceParagraph": 1305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har layer ke saath ek belief toot-ta gaya."
+        }
+      ],
+      "sourceParagraph": 1306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki life ko solve kiya ja sakta hai."
+        }
+      ],
+      "sourceParagraph": 1307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki existence ko complete kiya ja sakta hai."
+        }
+      ],
+      "sourceParagraph": 1308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki inner world ko finally settle kiya ja sakta hai."
+        }
+      ],
+      "sourceParagraph": 1309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin har answer ke baad ek naya silence aata raha."
+        }
+      ],
+      "sourceParagraph": 1310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisa silence jo koi final statement nahi deta."
+        }
+      ],
+      "sourceParagraph": 1311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf space deta hai."
+        }
+      ],
+      "sourceParagraph": 1312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us space mein ek ajeeb sa clarity hoti hai."
+        }
+      ],
+      "sourceParagraph": 1313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na excitement."
+        }
+      ],
+      "sourceParagraph": 1314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na disappointment."
+        }
+      ],
+      "sourceParagraph": 1315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek soft understanding."
+        }
+      ],
+      "sourceParagraph": 1316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki jo cheez tum poori life dhoond rahe the..."
+        }
+      ],
+      "sourceParagraph": 1317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh kisi final moment mein nahi thi."
+        }
+      ],
+      "sourceParagraph": 1318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh har moment mein thi."
+        }
+      ],
+      "sourceParagraph": 1319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab yeh realization aata hai..."
+        }
+      ],
+      "sourceParagraph": 1320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh journey khatam nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Journey dissolve ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi line jo kabhi important thi..."
+        }
+      ],
+      "sourceParagraph": 1323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab bas page par faint ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur bachti hai sirf life."
+        }
+      ],
+      "sourceParagraph": 1325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na explained."
+        }
+      ],
+      "sourceParagraph": 1326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na solved."
+        }
+      ],
+      "sourceParagraph": 1327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na complete."
+        }
+      ],
+      "sourceParagraph": 1328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas lived."
+        }
+      ],
+      "sourceParagraph": 1329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi end hai."
+        }
+      ],
+      "sourceParagraph": 1330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo end lagta hai..."
+        }
+      ],
+      "sourceParagraph": 1331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh actually return hai."
+        }
+      ],
+      "sourceParagraph": 1332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usi simplicity mein jahan se sab kuch start hua tha."
+        }
+      ],
+      "sourceParagraph": 1333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek saans."
+        }
+      ],
+      "sourceParagraph": 1334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek moment."
+        }
+      ],
+      "sourceParagraph": 1335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek existence."
+        }
+      ],
+      "sourceParagraph": 1336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur uske baad..."
+        }
+      ],
+      "sourceParagraph": 1337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch bhi nahi badalta."
+        }
+      ],
+      "sourceParagraph": 1338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir bhi..."
+        }
+      ],
+      "sourceParagraph": 1339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sab kuch different ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1340
+    }
+  ],
+  "index": 20,
+  "file": "chapters/20-epilogue.json"
+}

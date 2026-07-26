@@ -1,0 +1,272 @@
+{
+  "id": "about-the-author",
+  "kind": "epilogue",
+  "sourceKind": "about-author",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "ABOUT THE AUTHOR",
+  "sourceRange": [
+    1407,
+    1435
+  ],
+  "headerSourceParagraphs": {
+    "title": 1407
+  },
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is a writer whose intent is to bring human perception back to a simpler and more grounded reality."
+        }
+      ],
+      "sourceParagraph": 1408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He writes with the aim of helping people see life without unnecessary psychological noise — to reduce internal complexity and restore clarity in how everyday experience is understood."
+        }
+      ],
+      "sourceParagraph": 1409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His core intention is not to create new philosophies, but to dissolve overcomplication."
+        }
+      ],
+      "sourceParagraph": 1410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To make life feel less fragmented."
+        }
+      ],
+      "sourceParagraph": 1411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Less mentally heavy."
+        }
+      ],
+      "sourceParagraph": 1412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And more directly observable."
+        }
+      ],
+      "sourceParagraph": 1413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He believes that much of human suffering is not created by life itself, but by the layers of interpretation we build around it."
+        }
+      ],
+      "sourceParagraph": 1414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts about thoughts."
+        }
+      ],
+      "sourceParagraph": 1415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings about feelings."
+        }
+      ],
+      "sourceParagraph": 1416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stories built on top of experiences."
+        }
+      ],
+      "sourceParagraph": 1417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Through his writing, he tries to point toward a more direct way of seeing:"
+        }
+      ],
+      "sourceParagraph": 1418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "where life is not divided into problems and solutions"
+        }
+      ],
+      "sourceParagraph": 1419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "where experience is not constantly analyzed"
+        }
+      ],
+      "sourceParagraph": 1420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "where reality is not continuously reshaped by fear or projection"
+        }
+      ],
+      "sourceParagraph": 1421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The purpose of his work is not to escape reality, but to place the mind in a state where reality is seen as it is — simple, continuous, and already complete in its own unfolding."
+        }
+      ],
+      "sourceParagraph": 1422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He often explores how the mind complicates what is originally simple:"
+        }
+      ],
+      "sourceParagraph": 1423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "turning uncertainty into anxiety"
+        }
+      ],
+      "sourceParagraph": 1424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "turning thought into identity"
+        }
+      ],
+      "sourceParagraph": 1425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "turning search into endless movement"
+        }
+      ],
+      "sourceParagraph": 1426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His writing gently suggests that clarity does not come from adding more understanding, but from removing unnecessary mental layering."
+        }
+      ],
+      "sourceParagraph": 1427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is no attempt here to position life as something mystical or distant."
+        }
+      ],
+      "sourceParagraph": 1428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Instead, it is treated as something immediate, already present, and available without effort."
+        }
+      ],
+      "sourceParagraph": 1429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "In essence, his work is an invitation:"
+        }
+      ],
+      "sourceParagraph": 1430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to see life without excessive interpretation,"
+        }
+      ],
+      "sourceParagraph": 1431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to experience it without constant internal resistance,"
+        }
+      ],
+      "sourceParagraph": 1432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and to allow reality to remain unmodified by unnecessary thought."
+        }
+      ],
+      "sourceParagraph": 1433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because according to his perspective, when the mind becomes less complicated…"
+        }
+      ],
+      "sourceParagraph": 1434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life itself becomes simpler."
+        }
+      ],
+      "sourceParagraph": 1435
+    }
+  ],
+  "suppressHeaderNumber": true,
+  "index": 22,
+  "file": "chapters/22-about-the-author.json"
+}
