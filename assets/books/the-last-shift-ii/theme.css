@@ -1,0 +1,488 @@
+.reader-theme-last-shift-ii {
+  --reader-display: "Cormorant Garamond", Georgia, serif;
+  --reader-serif: Georgia, "Times New Roman", serif;
+  --reader-sans: "Inter", Arial, sans-serif;
+  --page-width: 664px;
+  --page-height: 1026px;
+  --page-padding-block: 82px;
+  --page-padding-inline: 70px;
+  --reader-body-size: 18px;
+}
+
+.reader-theme-last-shift-ii .book-page {
+  background:
+    linear-gradient(90deg, var(--reader-page-edge), transparent 18px, transparent calc(100% - 18px), var(--reader-page-edge)),
+    radial-gradient(circle at 52% 102%, color-mix(in srgb, var(--reader-accent) 8%, transparent), transparent 34%),
+    var(--reader-paper);
+  border-color: color-mix(in srgb, var(--reader-border) 82%, transparent);
+  box-shadow: var(--reader-shadow);
+}
+
+.reader-theme-last-shift-ii .book-page::before {
+  border-color: color-mix(in srgb, var(--reader-accent) 12%, transparent);
+}
+
+.reader-theme-last-shift-ii .book-page::after {
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--reader-accent) 22%, transparent), transparent);
+}
+
+.reader-theme-last-shift-ii .book-page__content {
+  color: var(--reader-text);
+  font-family: var(--reader-serif);
+  font-size: var(--reader-body-size);
+  line-height: 1.73;
+}
+
+.reader-theme-last-shift-ii .reader-paragraph + .reader-paragraph {
+  margin-top: .36em;
+  text-indent: 1.05em;
+}
+
+.reader-theme-last-shift-ii .reader-paragraph[data-element-role],
+.reader-theme-last-shift-ii .reader-quote[data-element-role] {
+  text-indent: 0;
+}
+
+.reader-theme-last-shift-ii .book-page:has([data-cover-page]) {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--reader-accent) 8%, transparent), transparent 24px, transparent calc(100% - 24px), color-mix(in srgb, var(--reader-accent) 8%, transparent)),
+    var(--reader-paper);
+}
+
+.reader-theme-last-shift-ii .reader-cover-page {
+  padding: 4px;
+}
+
+.reader-theme-last-shift-ii .reader-cover-page__frame {
+  background: color-mix(in srgb, var(--reader-paper-soft) 64%, transparent);
+}
+
+.reader-theme-last-shift-ii .reader-cover-page__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid color-mix(in srgb, var(--reader-warm) 28%, transparent);
+  box-shadow: 0 18px 44px rgba(13, 18, 26, .18);
+  filter: none;
+  opacity: 1;
+}
+
+.reader-theme-last-shift-ii .flow-opening {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.reader-theme-last-shift-ii .flow-opening__copy--source {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  align-content: center;
+  min-height: 100%;
+  max-width: 490px;
+  margin-inline: auto;
+}
+
+.reader-theme-last-shift-ii .flow-opening__copy--source .reader-paragraph {
+  margin: 0;
+  text-indent: 0;
+  font-family: var(--reader-sans);
+  color: var(--reader-muted);
+  font-size: .82rem;
+  font-weight: 650;
+  letter-spacing: .12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.reader-theme-last-shift-ii .flow-opening__copy--source [data-element-role="title"] {
+  margin-top: 18px;
+  max-width: 8.8ch;
+  color: var(--reader-heading);
+  font-family: var(--reader-display);
+  font-size: clamp(4.1rem, 11vw, 6.25rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: .86;
+}
+
+.reader-theme-last-shift-ii .flow-opening__copy--source [data-element-role="subtitle-line"] {
+  max-width: 34ch;
+  color: var(--reader-accent);
+  font-family: var(--reader-display);
+  font-size: clamp(1.12rem, 2.8vw, 1.55rem);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.24;
+  text-transform: none;
+}
+
+.reader-theme-last-shift-ii .flow-opening__copy--source [data-element-role="author"] {
+  margin-top: 16px;
+  color: var(--reader-heading);
+}
+
+.reader-theme-last-shift-ii .flow-opening__copy--source .reader-quote {
+  width: min(100%, 390px);
+  margin: 18px auto 12px;
+  padding: 15px 20px;
+  border-block: 1px solid color-mix(in srgb, var(--reader-accent) 26%, transparent);
+  border-left: 0;
+  color: var(--reader-accent-strong);
+  font-size: clamp(1.25rem, 3vw, 1.58rem);
+  line-height: 1.25;
+}
+
+.reader-theme-last-shift-ii .flow-opening__copy--source [data-element-role="publisher"],
+.reader-theme-last-shift-ii .flow-opening__copy--source [data-element-role="collection-line"] {
+  color: var(--reader-subtle);
+  font-size: .75rem;
+}
+
+.reader-theme-last-shift-ii .unit-header {
+  position: relative;
+  min-height: 216px;
+  align-content: center;
+  gap: 11px;
+  padding-block: 22px 34px;
+  text-align: left;
+}
+
+.reader-theme-last-shift-ii .unit-header::before,
+.reader-theme-last-shift-ii .unit-header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: color-mix(in srgb, var(--reader-accent) 44%, transparent);
+}
+
+.reader-theme-last-shift-ii .unit-header::before {
+  width: 84px;
+  margin-bottom: 16px;
+  transform: translateX(14px);
+}
+
+.reader-theme-last-shift-ii .unit-header::after {
+  width: 34px;
+  margin-top: 12px;
+  background: color-mix(in srgb, var(--reader-warm) 44%, transparent);
+}
+
+.reader-theme-last-shift-ii .unit-header--chapter {
+  min-height: 304px;
+  padding-block: 42px 46px;
+}
+
+.reader-theme-last-shift-ii .unit-header__phase,
+.reader-theme-last-shift-ii .contents-drawer__eyebrow {
+  color: var(--reader-subtle);
+  font-family: var(--reader-sans);
+  font-size: .68rem;
+  font-weight: 750;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.reader-theme-last-shift-ii .unit-header__number {
+  color: var(--reader-accent);
+  font-family: var(--reader-sans);
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.reader-theme-last-shift-ii .unit-header h1,
+.reader-theme-last-shift-ii .unit-header:not(.unit-header--chapter) h1 {
+  max-width: 15ch;
+  margin: 0;
+  color: var(--reader-heading);
+  font-family: var(--reader-display);
+  font-size: clamp(2.9rem, 6.2vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: .98;
+  text-wrap: balance;
+}
+
+.reader-theme-last-shift-ii .unit-header--chapter h1 {
+  max-width: 13ch;
+  font-size: clamp(2.55rem, 5vw, 3.55rem);
+}
+
+.reader-theme-last-shift-ii .book-page:has([data-unit-kind="part"]) .unit-header {
+  min-height: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+.reader-theme-last-shift-ii .book-page:has([data-unit-kind="part"]) .unit-header::before,
+.reader-theme-last-shift-ii .book-page:has([data-unit-kind="part"]) .unit-header::after {
+  margin-inline: auto;
+  transform: none;
+}
+
+.reader-theme-last-shift-ii .book-page:has([data-unit-kind="part"]) .unit-header h1 {
+  margin-inline: auto;
+  color: var(--reader-accent-strong);
+  font-size: clamp(3.45rem, 8vw, 5rem);
+}
+
+.reader-theme-last-shift-ii .reader-paragraph[data-element-role="section-heading"],
+.reader-theme-last-shift-ii .reader-paragraph[data-element-role="part-heading"],
+.reader-theme-last-shift-ii .reader-paragraph[data-element-role="chapter-end"] {
+  margin: 1.7em 0 .6em;
+  color: var(--reader-accent-strong);
+  font-family: var(--reader-sans);
+  font-size: .8rem;
+  font-weight: 750;
+  letter-spacing: .11em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.reader-theme-last-shift-ii .reader-paragraph[data-element-role="part-heading"] {
+  color: var(--reader-warm);
+}
+
+.reader-theme-last-shift-ii .reader-paragraph[data-element-role="chapter-end"] {
+  margin-top: 2em;
+  color: var(--reader-subtle);
+  text-align: center;
+}
+
+.reader-theme-last-shift-ii .reader-paragraph[data-element-role="quote-line"] {
+  margin: 1em auto;
+  max-width: 32ch;
+  color: var(--reader-accent);
+  font-family: var(--reader-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.28;
+  text-align: center;
+}
+
+.reader-theme-last-shift-ii .reader-section-break {
+  min-height: 58px;
+}
+
+.reader-theme-last-shift-ii .reader-section-break::before,
+.reader-theme-last-shift-ii .reader-section-break::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 1px;
+  background: color-mix(in srgb, var(--reader-accent) 42%, transparent);
+}
+
+.reader-theme-last-shift-ii .reader-section-break::after {
+  width: 26px;
+  margin-left: 10px;
+  transform: translateY(7px);
+  background: color-mix(in srgb, var(--reader-warm) 34%, transparent);
+}
+
+.reader-theme-last-shift-ii .source-contents {
+  max-width: 530px;
+  font-size: .86rem;
+  line-height: 1.52;
+}
+
+.reader-theme-last-shift-ii .source-contents__heading {
+  margin-top: 16px;
+  color: var(--reader-accent-strong);
+  font-family: var(--reader-display);
+  font-size: 1.28rem;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.reader-theme-last-shift-ii .source-contents__chapter {
+  color: var(--reader-text);
+}
+
+.reader-theme-last-shift-ii .dedication-page .unit-header {
+  text-align: center;
+}
+
+.reader-theme-last-shift-ii .dedication-page .unit-header::before,
+.reader-theme-last-shift-ii .dedication-page .unit-header::after {
+  margin-inline: auto;
+  transform: none;
+}
+
+.reader-theme-last-shift-ii .dedication-page .reader-paragraph {
+  max-width: 34ch;
+  color: var(--reader-accent-strong);
+  font-family: var(--reader-display);
+  font-size: clamp(1.38rem, 3vw, 1.8rem);
+  line-height: 1.32;
+  text-align: center;
+  text-indent: 0;
+}
+
+.reader-theme-last-shift-ii .book-page:has([data-unit-kind="ending"]),
+.reader-theme-last-shift-ii .book-page:has([data-unit-kind="epilogue"]),
+.reader-theme-last-shift-ii .book-page:has([data-unit-id="about-author"]),
+.reader-theme-last-shift-ii .book-page--feedback {
+  background:
+    linear-gradient(180deg, transparent 0 74%, color-mix(in srgb, var(--reader-accent) 7%, transparent)),
+    var(--reader-paper);
+}
+
+.reader-theme-last-shift-ii .book-page__number {
+  color: var(--reader-subtle);
+  font-family: var(--reader-sans);
+  font-size: .68rem;
+  letter-spacing: .12em;
+}
+
+.reader-theme-last-shift-ii .book-page__number::before {
+  background: color-mix(in srgb, var(--reader-accent) 36%, transparent);
+}
+
+.reader-theme-last-shift-ii .contents-drawer {
+  background: color-mix(in srgb, var(--reader-paper) 94%, var(--reader-bg));
+  border-color: var(--reader-border);
+}
+
+.reader-theme-last-shift-ii .contents-list button:hover,
+.reader-theme-last-shift-ii .contents-list button[aria-current="true"] {
+  background: var(--reader-accent-soft);
+  border-color: color-mix(in srgb, var(--reader-accent) 38%, transparent);
+}
+
+.reader-theme-last-shift-ii .book-end {
+  color: var(--reader-text);
+}
+
+.reader-theme-last-shift-ii .feedback-panel {
+  border-top-color: color-mix(in srgb, var(--reader-accent) 26%, transparent);
+}
+
+.reader-theme-last-shift-ii .book-page--feedback.is-feedback-expanded .feedback-panel {
+  max-height: none;
+  overflow: visible;
+}
+
+.reader-theme-last-shift-ii .feedback-panel input,
+.reader-theme-last-shift-ii .feedback-panel textarea,
+.reader-theme-last-shift-ii .feedback-panel select {
+  min-height: 44px;
+  background: var(--reader-input-bg);
+  color: var(--reader-input-text);
+  border-color: var(--reader-control-border);
+  font-size: max(16px, .92rem);
+}
+
+.reader-theme-last-shift-ii .feedback-panel input::placeholder,
+.reader-theme-last-shift-ii .feedback-panel textarea::placeholder {
+  color: var(--reader-placeholder);
+}
+
+.reader-theme-last-shift-ii .feedback-panel input:focus,
+.reader-theme-last-shift-ii .feedback-panel textarea:focus,
+.reader-theme-last-shift-ii .feedback-panel select:focus,
+.reader-theme-last-shift-ii .reader-control:focus-visible {
+  outline: 2px solid var(--reader-focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .reader-theme-last-shift-ii {
+    --page-width: min(642px, calc(100vw - 56px));
+    --page-height: 940px;
+    --page-padding-block: 64px;
+    --page-padding-inline: 56px;
+  }
+
+  .reader-theme-last-shift-ii .unit-header--chapter {
+    min-height: 258px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reader-theme-last-shift-ii {
+    --page-width: calc(100vw - 20px);
+    --page-height: min(900px, calc(100svh - 118px));
+    --page-padding-block: 36px;
+    --page-padding-inline: 19px;
+    --reader-body-size: 17px;
+  }
+
+  .reader-theme-last-shift-ii .reader-pages {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reader-theme-last-shift-ii .reader-cover-page {
+    padding: 0;
+  }
+
+  .reader-theme-last-shift-ii .reader-cover-page__image {
+    box-shadow: 0 12px 28px rgba(13, 18, 26, .16);
+  }
+
+  .reader-theme-last-shift-ii .flow-opening__copy--source {
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .reader-theme-last-shift-ii .flow-opening__copy--source .reader-paragraph {
+    font-size: .68rem;
+    letter-spacing: .1em;
+  }
+
+  .reader-theme-last-shift-ii .flow-opening__copy--source [data-element-role="title"] {
+    max-width: 8.4ch;
+    font-size: clamp(3.15rem, 15vw, 4.4rem);
+  }
+
+  .reader-theme-last-shift-ii .flow-opening__copy--source [data-element-role="subtitle-line"] {
+    max-width: 29ch;
+    font-size: 1.02rem;
+  }
+
+  .reader-theme-last-shift-ii .flow-opening__copy--source .reader-quote {
+    margin-block: 12px 8px;
+    padding: 12px 10px;
+    font-size: 1.12rem;
+  }
+
+  .reader-theme-last-shift-ii .unit-header,
+  .reader-theme-last-shift-ii .unit-header--chapter {
+    min-height: 190px;
+    padding-block: 22px 28px;
+  }
+
+  .reader-theme-last-shift-ii .unit-header::before {
+    width: 58px;
+    margin-bottom: 12px;
+    transform: translateX(8px);
+  }
+
+  .reader-theme-last-shift-ii .unit-header::after {
+    width: 24px;
+  }
+
+  .reader-theme-last-shift-ii .unit-header h1,
+  .reader-theme-last-shift-ii .unit-header:not(.unit-header--chapter) h1,
+  .reader-theme-last-shift-ii .unit-header--chapter h1 {
+    max-width: 12ch;
+    font-size: clamp(2.25rem, 11.8vw, 3.45rem);
+  }
+
+  .reader-theme-last-shift-ii .reader-paragraph[data-element-role="section-heading"],
+  .reader-theme-last-shift-ii .reader-paragraph[data-element-role="part-heading"],
+  .reader-theme-last-shift-ii .reader-paragraph[data-element-role="chapter-end"] {
+    font-size: .72rem;
+    letter-spacing: .09em;
+  }
+
+  .reader-theme-last-shift-ii .source-contents {
+    font-size: .78rem;
+  }
+
+  .reader-theme-last-shift-ii .source-contents__heading {
+    font-size: 1.08rem;
+  }
+}

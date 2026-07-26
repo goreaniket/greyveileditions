@@ -1,0 +1,1671 @@
+{
+  "id": "chapter-14",
+  "kind": "chapter",
+  "label": "Chapter 14",
+  "title": "CHAPTER 14: NOW LIVE",
+  "shortTitle": "Now Live",
+  "file": "chapters/25-chapter-14.json",
+  "index": 25,
+  "sourceRange": [
+    3409,
+    3593
+  ],
+  "headerSourceParagraphs": {
+    "title": 3409
+  },
+  "phase": "Arc IV - The Last Shift",
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    3409
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART 1 — THERE IS NOTHING LEFT TO UNDERSTAND",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3410,
+      "role": "part-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Understanding ki bhi ek limit hoti hai."
+        }
+      ],
+      "sourceParagraph": 3411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad... tum us limit tak aa chuke ho."
+        }
+      ],
+      "sourceParagraph": 3412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek waqt tha jab har cheez ka answer chahiye tha."
+        }
+      ],
+      "sourceParagraph": 3413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why she left."
+        }
+      ],
+      "sourceParagraph": 3414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why they changed."
+        }
+      ],
+      "sourceParagraph": 3415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why people lie."
+        }
+      ],
+      "sourceParagraph": 3416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why mind overthinks."
+        }
+      ],
+      "sourceParagraph": 3417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why attachment hurts."
+        }
+      ],
+      "sourceParagraph": 3418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why silence feels painful."
+        }
+      ],
+      "sourceParagraph": 3419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why identity exists."
+        }
+      ],
+      "sourceParagraph": 3420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why suffering repeats."
+        }
+      ],
+      "sourceParagraph": 3421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har question important lagta tha."
+        }
+      ],
+      "sourceParagraph": 3422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum answers collect karte gaye."
+        }
+      ],
+      "sourceParagraph": 3423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Page after page."
+        }
+      ],
+      "sourceParagraph": 3424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chapter after chapter."
+        }
+      ],
+      "sourceParagraph": 3425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin dheere dheere ek ajeeb cheez hui."
+        }
+      ],
+      "sourceParagraph": 3426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questions kam hone lage."
+        }
+      ],
+      "sourceParagraph": 3427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye ki saare answers mil gaye."
+        }
+      ],
+      "sourceParagraph": 3428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye..."
+        }
+      ],
+      "sourceParagraph": 3429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki kuch questions dissolve ho gaye."
+        }
+      ],
+      "sourceParagraph": 3430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise subah hone ke baad flashlight ki zarurat khatam ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 3431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Flashlight buri nahi thi."
+        }
+      ],
+      "sourceParagraph": 3432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ab darkness utni nahi rahi."
+        }
+      ],
+      "sourceParagraph": 3433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse dangerous addiction knowledge bhi ho sakti hai."
+        }
+      ],
+      "sourceParagraph": 3434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ko lagta hai—"
+        }
+      ],
+      "sourceParagraph": 3435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Bas ek aur understanding..."
+        }
+      ],
+      "sourceParagraph": 3436
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek aur realization..."
+        }
+      ],
+      "sourceParagraph": 3437
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek aur breakthrough..."
+        }
+      ],
+      "sourceParagraph": 3438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir main finally free ho jaunga.\""
+        }
+      ],
+      "sourceParagraph": 3439
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin freedom information se nahi aati."
+        }
+      ],
+      "sourceParagraph": 3440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Freedom tab aati hai..."
+        }
+      ],
+      "sourceParagraph": 3441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab information ko continuously carry karna band kar dete ho."
+        }
+      ],
+      "sourceParagraph": 3442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki har realization ko bhi pakad loge..."
+        }
+      ],
+      "sourceParagraph": 3443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh woh bhi identity ban jayegi."
+        }
+      ],
+      "sourceParagraph": 3444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"I understand people.\""
+        }
+      ],
+      "sourceParagraph": 3445,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"I know psychology.\""
+        }
+      ],
+      "sourceParagraph": 3446,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"I know consciousness.\""
+        }
+      ],
+      "sourceParagraph": 3447,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"I know suffering.\""
+        }
+      ],
+      "sourceParagraph": 3448,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dekho..."
+        }
+      ],
+      "sourceParagraph": 3449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ego quietly wapas aa gaya."
+        }
+      ],
+      "sourceParagraph": 3450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas is baar usne naya mask pehen liya—"
+        }
+      ],
+      "sourceParagraph": 3451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wisdom ka."
+        }
+      ],
+      "sourceParagraph": 3452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye shayad..."
+        }
+      ],
+      "sourceParagraph": 3453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab aur seekhne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 3454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab dekhne ki zarurat hai."
+        }
+      ],
+      "sourceParagraph": 3455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ko."
+        }
+      ],
+      "sourceParagraph": 3456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Logon ko."
+        }
+      ],
+      "sourceParagraph": 3457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khud ko."
+        }
+      ],
+      "sourceParagraph": 3458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fresh."
+        }
+      ],
+      "sourceParagraph": 3459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina previous chapter ke."
+        }
+      ],
+      "sourceParagraph": 3460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina previous conclusion ke."
+        }
+      ],
+      "sourceParagraph": 3461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har din."
+        }
+      ],
+      "sourceParagraph": 3462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir se."
+        }
+      ],
+      "sourceParagraph": 3463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Understanding ka last step..."
+        }
+      ],
+      "sourceParagraph": 3464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "understanding ko bhi chhod dena hota hai."
+        }
+      ],
+      "sourceParagraph": 3465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki river map padhne se nahi..."
+        }
+      ],
+      "sourceParagraph": 3466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "andar utarne se samajh aati hai."
+        }
+      ],
+      "sourceParagraph": 3467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum bahut der se map hi padh rahe the."
+        }
+      ],
+      "sourceParagraph": 3468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad..."
+        }
+      ],
+      "sourceParagraph": 3469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab chalne ka time hai."
+        }
+      ],
+      "sourceParagraph": 3470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— End of Part 1",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3471,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART 2 — STOP WAITING FOR LIFE TO BEGIN",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3472,
+      "role": "part-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur illusion hota hai..."
+        }
+      ],
+      "sourceParagraph": 3473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo bahut quietly humare andar grow karta hai."
+        }
+      ],
+      "sourceParagraph": 3474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Ek din...\""
+        }
+      ],
+      "sourceParagraph": 3475,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din sab theek ho jayega."
+        }
+      ],
+      "sourceParagraph": 3476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din main completely heal ho jaunga."
+        }
+      ],
+      "sourceParagraph": 3477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din overthinking khatam ho jayegi."
+        }
+      ],
+      "sourceParagraph": 3478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din fear nahi rahega."
+        }
+      ],
+      "sourceParagraph": 3479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din confidence aa jayega."
+        }
+      ],
+      "sourceParagraph": 3480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us din..."
+        }
+      ],
+      "sourceParagraph": 3481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main finally jeena shuru karunga."
+        }
+      ],
+      "sourceParagraph": 3482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par shayad..."
+        }
+      ],
+      "sourceParagraph": 3483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh \"ek din\" kabhi aata hi nahi."
+        }
+      ],
+      "sourceParagraph": 3484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki life future mein nahi chalti."
+        }
+      ],
+      "sourceParagraph": 3485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life sirf isi moment mein chalti hai."
+        }
+      ],
+      "sourceParagraph": 3486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tak tum future wale version ka wait karte rahoge..."
+        }
+      ],
+      "sourceParagraph": 3487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present quietly nikalta rahega."
+        }
+      ],
+      "sourceParagraph": 3488
+    },
+    {
+      "type": "section-break",
+      "role": "source-space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE LIFE YOU KEPT POSTPONING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3491,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kitni baar tumne khud se kaha hoga—"
+        }
+      ],
+      "sourceParagraph": 3492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Abhi nahi...\""
+        }
+      ],
+      "sourceParagraph": 3493,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Abhi mood theek nahi hai.\""
+        }
+      ],
+      "sourceParagraph": 3494,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Abhi main ready nahi hoon.\""
+        }
+      ],
+      "sourceParagraph": 3495,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Thoda aur improve ho jaun...\""
+        }
+      ],
+      "sourceParagraph": 3496,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Thoda aur stable ho jaun...\""
+        }
+      ],
+      "sourceParagraph": 3497,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Phir...\""
+        }
+      ],
+      "sourceParagraph": 3498,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh \"phir\"..."
+        }
+      ],
+      "sourceParagraph": 3499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mahino mein badal gaya."
+        }
+      ],
+      "sourceParagraph": 3500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Saalon mein badal gaya."
+        }
+      ],
+      "sourceParagraph": 3501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur bina notice kiye..."
+        }
+      ],
+      "sourceParagraph": 3502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jeene ki preparation hi karte reh gaye."
+        }
+      ],
+      "sourceParagraph": 3503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jeena shuru hi nahi kiya."
+        }
+      ],
+      "sourceParagraph": 3504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "LIFE WAS NEVER ASKING YOU TO BE READY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3506,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nature ko dekho."
+        }
+      ],
+      "sourceParagraph": 3507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Suraj permission nahi leta."
+        }
+      ],
+      "sourceParagraph": 3508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Baarish perfect weather ka wait nahi karti."
+        }
+      ],
+      "sourceParagraph": 3509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ped complete hone ke baad grow nahi karte."
+        }
+      ],
+      "sourceParagraph": 3510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Growth aur imperfection..."
+        }
+      ],
+      "sourceParagraph": 3511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "saath saath chalte hain."
+        }
+      ],
+      "sourceParagraph": 3512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf insaan hi hai..."
+        }
+      ],
+      "sourceParagraph": 3513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo pehle perfect banna chahta hai..."
+        }
+      ],
+      "sourceParagraph": 3514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir jeena chahta hai."
+        }
+      ],
+      "sourceParagraph": 3515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad sequence ulta hai."
+        }
+      ],
+      "sourceParagraph": 3516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle jeena padta hai."
+        }
+      ],
+      "sourceParagraph": 3517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir dheere dheere clarity aati hai."
+        }
+      ],
+      "sourceParagraph": 3518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE ORDINARY DAYS WERE THE REAL LIFE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3520,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek dangerous habit hai mind ki."
+        }
+      ],
+      "sourceParagraph": 3521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf extraordinary moments ko important maanta hai."
+        }
+      ],
+      "sourceParagraph": 3522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Achievement."
+        }
+      ],
+      "sourceParagraph": 3523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Love."
+        }
+      ],
+      "sourceParagraph": 3524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Success."
+        }
+      ],
+      "sourceParagraph": 3525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Big realization."
+        }
+      ],
+      "sourceParagraph": 3526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Big transformation."
+        }
+      ],
+      "sourceParagraph": 3527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par asal zindagi..."
+        }
+      ],
+      "sourceParagraph": 3528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "inke beech mein chal rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 3529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Subah ki chai."
+        }
+      ],
+      "sourceParagraph": 3530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mummy ki awaaz."
+        }
+      ],
+      "sourceParagraph": 3531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dost ka random message."
+        }
+      ],
+      "sourceParagraph": 3532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Akele chalna."
+        }
+      ],
+      "sourceParagraph": 3533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khidki se baarish dekhna."
+        }
+      ],
+      "sourceParagraph": 3534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shaam ka aasmaan."
+        }
+      ],
+      "sourceParagraph": 3535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sab \"important\" nahi lagte."
+        }
+      ],
+      "sourceParagraph": 3536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye hum inhe ignore kar dete hain."
+        }
+      ],
+      "sourceParagraph": 3537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur baad mein realize karte hain..."
+        }
+      ],
+      "sourceParagraph": 3538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki life toh wahi thi."
+        }
+      ],
+      "sourceParagraph": 3539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "STOP TRYING TO MAKE EVERY MOMENT MEAN SOMETHING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3540,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har experience ko lesson banana zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 3541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har pain ko purpose dena zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 3542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan ko soulmate banana zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 3543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har goodbye ko destiny bolna zaroori nahi."
+        }
+      ],
+      "sourceParagraph": 3544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 3545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baarish sirf baarish hoti hai."
+        }
+      ],
+      "sourceParagraph": 3546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence sirf silence hota hai."
+        }
+      ],
+      "sourceParagraph": 3547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek din..."
+        }
+      ],
+      "sourceParagraph": 3548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf ek din hota hai."
+        }
+      ],
+      "sourceParagraph": 3549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind simplicity se uncomfortable hota hai."
+        }
+      ],
+      "sourceParagraph": 3550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki simplicity mein ego ke liye kaam nahi bachta."
+        }
+      ],
+      "sourceParagraph": 3551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE MOST PEACEFUL WAY TO LIVE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3553,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad ab tumhe har cheez samajhne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 3554
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez control karne ki bhi nahi."
+        }
+      ],
+      "sourceParagraph": 3555
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas notice karna hai."
+        }
+      ],
+      "sourceParagraph": 3556
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab hansi aaye..."
+        }
+      ],
+      "sourceParagraph": 3557
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "has lena."
+        }
+      ],
+      "sourceParagraph": 3558
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab aansu aaye..."
+        }
+      ],
+      "sourceParagraph": 3559
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ro lena."
+        }
+      ],
+      "sourceParagraph": 3560
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab pyaar mile..."
+        }
+      ],
+      "sourceParagraph": 3561
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feel kar lena."
+        }
+      ],
+      "sourceParagraph": 3562
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab loss aaye..."
+        }
+      ],
+      "sourceParagraph": 3563
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "uske saath kuch der baith lena."
+        }
+      ],
+      "sourceParagraph": 3564
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life continuously flow kar rahi hai."
+        }
+      ],
+      "sourceParagraph": 3565
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse pakadne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 3566
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske against ladne ki bhi zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 3567
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas..."
+        }
+      ],
+      "sourceParagraph": 3568
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "uske saath chalna hai."
+        }
+      ],
+      "sourceParagraph": 3569
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE LAST SHIFT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3570,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad..."
+        }
+      ],
+      "sourceParagraph": 3571
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yehi poori journey ka final point tha."
+        }
+      ],
+      "sourceParagraph": 3572
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na overthinking ko destroy karna."
+        }
+      ],
+      "sourceParagraph": 3573
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na ego ko maar dena."
+        }
+      ],
+      "sourceParagraph": 3574
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na perfect insaan banna."
+        }
+      ],
+      "sourceParagraph": 3575
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas itna dekh lena..."
+        }
+      ],
+      "sourceParagraph": 3576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhare aur life ke beech..."
+        }
+      ],
+      "sourceParagraph": 3577
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf thoughts khade the."
+        }
+      ],
+      "sourceParagraph": 3578
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab woh thode transparent hote hain..."
+        }
+      ],
+      "sourceParagraph": 3579
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh life wahi rehti hai."
+        }
+      ],
+      "sourceParagraph": 3580
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par pehli baar..."
+        }
+      ],
+      "sourceParagraph": 3581
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum usse directly dekh paate ho."
+        }
+      ],
+      "sourceParagraph": 3582
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na filter."
+        }
+      ],
+      "sourceParagraph": 3583
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na story."
+        }
+      ],
+      "sourceParagraph": 3584
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na fear."
+        }
+      ],
+      "sourceParagraph": 3585
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas..."
+        }
+      ],
+      "sourceParagraph": 3586
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life."
+        }
+      ],
+      "sourceParagraph": 3587
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad..."
+        }
+      ],
+      "sourceParagraph": 3588
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab aur kuch baaki nahi."
+        }
+      ],
+      "sourceParagraph": 3589
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf jeena."
+        }
+      ],
+      "sourceParagraph": 3590
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF PART 2",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 3591,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Tumhe life ko samajhne ke liye paida nahi kiya gaya tha.\""
+        }
+      ],
+      "sourceParagraph": 3592,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Tumhe life ko jeene ke liye paida kiya gaya tha.\""
+        }
+      ],
+      "sourceParagraph": 3593,
+      "role": "quote-line"
+    }
+  ]
+}

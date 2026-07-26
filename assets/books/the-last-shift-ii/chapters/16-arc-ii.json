@@ -1,0 +1,23 @@
+{
+  "id": "arc-ii",
+  "kind": "part",
+  "label": "Arc II",
+  "title": "THE AWARENESS",
+  "shortTitle": "Arc II - The Awareness",
+  "file": "chapters/16-arc-ii.json",
+  "index": 16,
+  "sourceRange": [
+    2259,
+    2260
+  ],
+  "number": "ARC II",
+  "headerSourceParagraphs": {
+    "number": 2259,
+    "title": 2260
+  },
+  "sourceHeadingParagraphs": [
+    2259,
+    2260
+  ],
+  "elements": []
+}

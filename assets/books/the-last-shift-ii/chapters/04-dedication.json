@@ -1,0 +1,73 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "label": "Dedication",
+  "title": "Dedication",
+  "shortTitle": "Dedication",
+  "file": "chapters/04-dedication.json",
+  "index": 4,
+  "sourceRange": [
+    61,
+    67
+  ],
+  "headerSourceParagraphs": {
+    "title": 61
+  },
+  "suppressHeaderNumber": true,
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who have learned to carry complexity without collapsing into it."
+        }
+      ],
+      "sourceParagraph": 62
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the minds that questioned silently, even when no answers arrived."
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the ones who kept noticing—when it would have been easier not to."
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to the self that once searched for certainty in places where only experience exists."
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is not an ending offered to you."
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is a recognition already inside you."
+        }
+      ],
+      "sourceParagraph": 67
+    }
+  ]
+}

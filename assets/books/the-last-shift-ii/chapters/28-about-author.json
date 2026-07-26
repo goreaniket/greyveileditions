@@ -1,0 +1,85 @@
+{
+  "id": "about-author",
+  "kind": "frontmatter",
+  "label": "About the Author",
+  "title": "About the Author",
+  "shortTitle": "About the Author",
+  "file": "chapters/28-about-author.json",
+  "index": 28,
+  "sourceRange": [
+    3751,
+    3759
+  ],
+  "headerSourceParagraphs": {
+    "title": 3751
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    3751
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is an 18-year-old writer whose work exists in the space between observation and interpretation."
+        }
+      ],
+      "sourceParagraph": 3753
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not write to define life or reduce it into explanations. His writing emerges from attention—toward the subtle ways in which experience is continuously reshaped by thought before it is ever lived in its raw form."
+        }
+      ],
+      "sourceParagraph": 3754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is no fixed philosophy behind his work. Only a sustained interest in noticing what usually passes unnoticed: the gap between what happens and what the mind immediately says about it."
+        }
+      ],
+      "sourceParagraph": 3755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He avoids conclusions not out of uncertainty, but out of respect for what cannot be fully contained in them."
+        }
+      ],
+      "sourceParagraph": 3756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Last Shift is his first major work under Greyveil Editions (2026). It reflects an ongoing attempt to document awareness not as an idea, but as a lived, shifting process of perception."
+        }
+      ],
+      "sourceParagraph": 3757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not claim depth. He only stays long enough with experience for distortion to become visible before it turns into belief."
+        }
+      ],
+      "sourceParagraph": 3758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He writes where certainty begins to dissolve."
+        }
+      ],
+      "sourceParagraph": 3759
+    }
+  ]
+}

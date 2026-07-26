@@ -1,0 +1,23 @@
+{
+  "id": "arc-iii",
+  "kind": "part",
+  "label": "Arc III",
+  "title": "THE HEALING",
+  "shortTitle": "Arc III - The Healing",
+  "file": "chapters/21-arc-iii.json",
+  "index": 21,
+  "sourceRange": [
+    2814,
+    2815
+  ],
+  "number": "ARC III",
+  "headerSourceParagraphs": {
+    "number": 2814,
+    "title": 2815
+  },
+  "sourceHeadingParagraphs": [
+    2814,
+    2815
+  ],
+  "elements": []
+}

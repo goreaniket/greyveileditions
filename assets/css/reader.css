@@ -107,12 +107,14 @@
 
 html {
   background: var(--reader-bg);
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
   background:
     radial-gradient(circle at 14% 6%, var(--reader-bg-warm-glow), transparent 25%),
     radial-gradient(circle at 86% 5%, var(--reader-bg-accent-glow), transparent 23%),
@@ -121,6 +123,13 @@ body {
   color: var(--reader-text);
   font-family: var(--reader-serif);
   transition: background-color .22s ease, color .22s ease;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 
 body.is-paginating .reader-pages {
@@ -808,7 +817,12 @@ body.is-paginating .reader-loading {
   transition: transform .22s ease;
 }
 
+.contents-drawer[aria-hidden="true"] {
+  display: none;
+}
+
 .contents-drawer.is-open {
+  display: grid;
   transform: translateX(0);
 }
 

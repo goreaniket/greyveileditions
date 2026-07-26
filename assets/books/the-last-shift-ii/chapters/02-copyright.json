@@ -1,0 +1,64 @@
+{
+  "id": "copyright",
+  "kind": "frontmatter",
+  "label": "Copyright",
+  "title": "Copyright",
+  "shortTitle": "Copyright",
+  "file": "chapters/02-copyright.json",
+  "index": 2,
+  "sourceRange": [
+    48,
+    53
+  ],
+  "headerSourceParagraphs": {
+    "title": 48
+  },
+  "suppressHeaderNumber": true,
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© 2026 The Last Shift"
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All rights reserved."
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This work is protected under copyright law. No portion of this book may be reproduced, stored, or transmitted in any form or by any means—electronic, mechanical, photocopying, recording, or otherwise—without prior written permission from the author."
+        }
+      ],
+      "sourceParagraph": 51
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is a work of reflective philosophy and narrative introspection. It does not claim factual authority over psychological, medical, or scientific domains."
+        }
+      ],
+      "sourceParagraph": 52
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any resemblance to real persons, experiences, or events is coincidental unless explicitly intended within the narrative framework."
+        }
+      ],
+      "sourceParagraph": 53
+    }
+  ]
+}

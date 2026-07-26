@@ -1,0 +1,1037 @@
+{
+  "id": "chapter-12",
+  "kind": "chapter",
+  "label": "Chapter 12",
+  "title": "WHEN EVERYTHING BECOMES CLEAR, NOTHING NEEDS TO BE SOLVED",
+  "shortTitle": "Nothing Needs to Be Solved",
+  "file": "chapters/22-chapter-12.json",
+  "index": 22,
+  "sourceRange": [
+    2819,
+    2927
+  ],
+  "number": "Chapter 12",
+  "headerSourceParagraphs": {
+    "number": 2819,
+    "title": 2820
+  },
+  "phase": "Arc III - The Healing",
+  "sourceHeadingParagraphs": [
+    2819,
+    2820
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek stage aata hai understanding mein jahan "
+        }
+      ],
+      "sourceParagraph": 2822
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lagta hai ki ab finally sab kuch clear ho jayega."
+        }
+      ],
+      "sourceParagraph": 2823
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek final answer."
+        }
+      ],
+      "sourceParagraph": 2824
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek ultimate clarity."
+        }
+      ],
+      "sourceParagraph": 2825
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisa point jahan life “solve” ho jaye."
+        }
+      ],
+      "sourceParagraph": 2826
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par jo actually hota hai, wo completely different hota hai."
+        }
+      ],
+      "sourceParagraph": 2827
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence."
+        }
+      ],
+      "sourceParagraph": 2828
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ye silence bahar ka nahi hota… andar ka hota hai."
+        }
+      ],
+      "sourceParagraph": 2829
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan cheezon ko explain karne ki aadat dheere dheere kam ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 2830
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein dimaag ko lagta hai ki clarity ka matlab hai control milna."
+        }
+      ],
+      "sourceParagraph": 2831
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotions control ho jayein."
+        }
+      ],
+      "sourceParagraph": 2832
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts control ho jayein."
+        }
+      ],
+      "sourceParagraph": 2833
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Situations control ho jayein."
+        }
+      ],
+      "sourceParagraph": 2834
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log samajh mein aa jayein."
+        }
+      ],
+      "sourceParagraph": 2835
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par dheere dheere ek uncomfortable truth samne aata hai:"
+        }
+      ],
+      "sourceParagraph": 2836
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem kabhi “broken life” thi hi nahi."
+        }
+      ],
+      "sourceParagraph": 2837
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem sirf ye thi ki har cheez ko broken samjha ja raha tha."
+        }
+      ],
+      "sourceParagraph": 2838
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life same rehti hai."
+        }
+      ],
+      "sourceParagraph": 2839
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Messages aate rehte hain."
+        }
+      ],
+      "sourceParagraph": 2840
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log apna behavior change karte rehte hain."
+        }
+      ],
+      "sourceParagraph": 2841
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Situations shift hoti rehti hain."
+        }
+      ],
+      "sourceParagraph": 2842
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ek cheez gradually change hoti hai:"
+        }
+      ],
+      "sourceParagraph": 2843
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har cheez ko meaning dene ki urgency kam ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 2844
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle har chhoti cheez ek question ban jaati thi:"
+        }
+      ],
+      "sourceParagraph": 2845
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "kyun"
+        },
+        {
+          "text": " aisa hua?”"
+        }
+      ],
+      "sourceParagraph": 2846,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "kyun"
+        },
+        {
+          "text": " aisa bola?”"
+        }
+      ],
+      "sourceParagraph": 2847,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "kyun"
+        },
+        {
+          "text": " reply aisa aaya?”"
+        }
+      ],
+      "sourceParagraph": 2848,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "kyun"
+        },
+        {
+          "text": " mujhe aisa feel ho raha hai?”"
+        }
+      ],
+      "sourceParagraph": 2849,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye questions sirf questions nahi hote the…"
+        }
+      ],
+      "sourceParagraph": 2850
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye loop ban jaate the."
+        }
+      ],
+      "sourceParagraph": 2851
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ab ek difference aata hai."
+        }
+      ],
+      "sourceParagraph": 2852
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye questions aate toh hain…"
+        }
+      ],
+      "sourceParagraph": 2853
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par wo tumhe consume nahi karte."
+        }
+      ],
+      "sourceParagraph": 2854
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo tumhe apne andar kheench nahi lete."
+        }
+      ],
+      "sourceParagraph": 2855
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo bas pass "
+        },
+        {
+          "text": "hoke"
+        },
+        {
+          "text": " chale jaate hain."
+        }
+      ],
+      "sourceParagraph": 2856
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse ajeeb shift yahi hota hai:"
+        }
+      ],
+      "sourceParagraph": 2857
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence ab uncomfortable nahi lagta."
+        }
+      ],
+      "sourceParagraph": 2858
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence bas silence lagta hai."
+        }
+      ],
+      "sourceParagraph": 2859
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na usme koi hidden meaning hota hai."
+        }
+      ],
+      "sourceParagraph": 2860
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi signal hota hai."
+        }
+      ],
+      "sourceParagraph": 2861
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi emotional message."
+        }
+      ],
+      "sourceParagraph": 2862
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas absence."
+        }
+      ],
+      "sourceParagraph": 2863
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wo absence ab threatening nahi lagti."
+        }
+      ],
+      "sourceParagraph": 2864
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur shift hota hai:"
+        }
+      ],
+      "sourceParagraph": 2865
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pain aata hai."
+        }
+      ],
+      "sourceParagraph": 2866
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts aate hain."
+        }
+      ],
+      "sourceParagraph": 2867
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings aati hain."
+        }
+      ],
+      "sourceParagraph": 2868
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ab wo instantly “main” ban ke chipak nahi jaate."
+        }
+      ],
+      "sourceParagraph": 2869
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab wo zyada tar aisa lagta hai:"
+        }
+      ],
+      "sourceParagraph": 2870
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ye"
+        },
+        {
+          "text": " ho raha hai”"
+        }
+      ],
+      "sourceParagraph": 2871,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na ki"
+        }
+      ],
+      "sourceParagraph": 2872
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ye"
+        },
+        {
+          "text": " mere saath hi kyun ho raha hai”"
+        }
+      ],
+      "sourceParagraph": 2873,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye change dramatic nahi hota."
+        }
+      ],
+      "sourceParagraph": 2874
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi sudden enlightenment moment nahi hota."
+        }
+      ],
+      "sourceParagraph": 2875
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi explosion."
+        }
+      ],
+      "sourceParagraph": 2876
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek slow loosening hoti hai."
+        }
+      ],
+      "sourceParagraph": 2877
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi cheez jo bahut tight pakdi hui thi… dheere dheere relax ho rahi ho."
+        }
+      ],
+      "sourceParagraph": 2878
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dimaag ab bhi stories banata hai."
+        }
+      ],
+      "sourceParagraph": 2879
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab bhi interpretation hoti hai."
+        }
+      ],
+      "sourceParagraph": 2880
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab bhi comparison hota hai."
+        }
+      ],
+      "sourceParagraph": 2881
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab bhi prediction hoti hai."
+        }
+      ],
+      "sourceParagraph": 2882
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par farq yeh hai:"
+        }
+      ],
+      "sourceParagraph": 2883
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab wo authority nahi lagti."
+        }
+      ],
+      "sourceParagraph": 2884
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas mental activity lagti hai."
+        }
+      ],
+      "sourceParagraph": 2885
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek message aata hai:"
+        }
+      ],
+      "sourceParagraph": 2886
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ok”"
+        }
+      ],
+      "sourceParagraph": 2887,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehle jahan ye ek emotional universe create karta tha…"
+        }
+      ],
+      "sourceParagraph": 2888
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab wahan kuch nahi banta."
+        }
+      ],
+      "sourceParagraph": 2889
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na overthinking."
+        }
+      ],
+      "sourceParagraph": 2890
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na meaning."
+        }
+      ],
+      "sourceParagraph": 2891
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na analysis spiral."
+        }
+      ],
+      "sourceParagraph": 2892
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek message."
+        }
+      ],
+      "sourceParagraph": 2893
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wahi khatam."
+        }
+      ],
+      "sourceParagraph": 2894
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yehi wo point hai jisse dimaag hamesha bachna chahta tha:"
+        }
+      ],
+      "sourceParagraph": 2895
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Simple reality."
+        }
+      ],
+      "sourceParagraph": 2896
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina interpretation ke."
+        }
+      ],
+      "sourceParagraph": 2897
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki interpretation hi sab kuch important banati thi."
+        }
+      ],
+      "sourceParagraph": 2898
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur importance hi identity banati thi."
+        }
+      ],
+      "sourceParagraph": 2899
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur identity hi suffering banati thi."
+        }
+      ],
+      "sourceParagraph": 2900
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab interpretation dheere hoti hai…"
+        }
+      ],
+      "sourceParagraph": 2901
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "importance girti hai."
+        }
+      ],
+      "sourceParagraph": 2902
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur importance girte hi…"
+        }
+      ],
+      "sourceParagraph": 2903
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "suffering ka weight bhi girne lagta hai."
+        }
+      ],
+      "sourceParagraph": 2904
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life control mein nahi aati."
+        }
+      ],
+      "sourceParagraph": 2905
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par control ki need kam ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 2906
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yehi real relief hota hai."
+        }
+      ],
+      "sourceParagraph": 2907
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na control milna."
+        }
+      ],
+      "sourceParagraph": 2908
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki control ki zarurat se thoda free ho jana."
+        }
+      ],
+      "sourceParagraph": 2909
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sabse deep realization yahi hai:"
+        }
+      ],
+      "sourceParagraph": 2910
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kabhi life ke andar phanse hi nahi the."
+        }
+      ],
+      "sourceParagraph": 2911
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum interpretation ke andar phase hue the."
+        }
+      ],
+      "sourceParagraph": 2912
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interpretation kabhi fixed thi hi nahi."
+        }
+      ],
+      "sourceParagraph": 2913
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo hamesha change ho rahi thi… bas notice nahi ho rahi thi."
+        }
+      ],
+      "sourceParagraph": 2914
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye cheez thodi si bhi clear ho jaati hai…"
+        }
+      ],
+      "sourceParagraph": 2915
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek belief quietly toot jata hai:"
+        }
+      ],
+      "sourceParagraph": 2916
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "har"
+        },
+        {
+          "text": " cheez ka personal meaning hona chahiye”"
+        }
+      ],
+      "sourceParagraph": 2917,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo bachta hai wo extraordinary nahi hota."
+        }
+      ],
+      "sourceParagraph": 2918
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahut simple hota hai."
+        }
+      ],
+      "sourceParagraph": 2919
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum jeete ho."
+        }
+      ],
+      "sourceParagraph": 2920
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum react karte ho."
+        }
+      ],
+      "sourceParagraph": 2921
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum feel karte ho."
+        }
+      ],
+      "sourceParagraph": 2922
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ab sab kuch bina story ke hota hai."
+        }
+      ],
+      "sourceParagraph": 2923
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi last shift hai:"
+        }
+      ],
+      "sourceParagraph": 2924
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life kabhi heavy thi hi nahi."
+        }
+      ],
+      "sourceParagraph": 2925
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas continuously interpret ho rahi thi."
+        }
+      ],
+      "sourceParagraph": 2926
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF THE LAST SHIFT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2927,
+      "role": "chapter-end"
+    }
+  ]
+}

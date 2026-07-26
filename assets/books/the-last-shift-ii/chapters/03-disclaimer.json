@@ -1,0 +1,55 @@
+{
+  "id": "disclaimer",
+  "kind": "frontmatter",
+  "label": "Disclaimer",
+  "title": "Disclaimer",
+  "shortTitle": "Disclaimer",
+  "file": "chapters/03-disclaimer.json",
+  "index": 3,
+  "sourceRange": [
+    55,
+    59
+  ],
+  "headerSourceParagraphs": {
+    "title": 55
+  },
+  "suppressHeaderNumber": true,
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book exists in the space between observation and interpretation."
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is not a manual, nor a method. It does not prescribe outcomes, nor does it offer correction. The ideas presented here are contemplative constructs—meant to reflect patterns of thought, not define them."
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing within this text should be treated as clinical, diagnostic, or therapeutic instruction."
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The reader is invited, not directed. What is seen here depends entirely on what is brought into it."
+        }
+      ],
+      "sourceParagraph": 59
+    }
+  ]
+}

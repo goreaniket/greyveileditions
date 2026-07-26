@@ -1,0 +1,23 @@
+{
+  "id": "arc-iv",
+  "kind": "part",
+  "label": "Arc IV",
+  "title": "THE LAST SHIFT",
+  "shortTitle": "Arc IV - The Last Shift",
+  "file": "chapters/24-arc-iv.json",
+  "index": 24,
+  "sourceRange": [
+    3405,
+    3406
+  ],
+  "number": "ARC IV",
+  "headerSourceParagraphs": {
+    "number": 3405,
+    "title": 3406
+  },
+  "sourceHeadingParagraphs": [
+    3405,
+    3406
+  ],
+  "elements": []
+}

@@ -1,0 +1,1436 @@
+{
+  "id": "chapter-07",
+  "kind": "chapter",
+  "label": "Chapter 7",
+  "title": "YOU DON’T SEE PEOPLE — YOU SEE YOUR STATE",
+  "shortTitle": "You See Your State",
+  "file": "chapters/15-chapter-07.json",
+  "index": 15,
+  "sourceRange": [
+    2093,
+    2252
+  ],
+  "number": "Chapter 7",
+  "headerSourceParagraphs": {
+    "number": 2093,
+    "title": 2094
+  },
+  "phase": "Arc I - The Distortion",
+  "sourceHeadingParagraphs": [
+    2093,
+    2094
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is a point in life where you slowly start believing that you are understanding people."
+        }
+      ],
+      "sourceParagraph": 2095
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You think you are reading them."
+        }
+      ],
+      "sourceParagraph": 2096
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You think you are decoding their behaviour."
+        }
+      ],
+      "sourceParagraph": 2097
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But slowly, almost invisibly, something else is happening underneath:"
+        }
+      ],
+      "sourceParagraph": 2098
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you are not seeing them at all."
+        }
+      ],
+      "sourceParagraph": 2099
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You are only seeing yourself — in different emotional conditions."
+        }
+      ],
+      "sourceParagraph": 2100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the worst part is, it feels like truth."
+        }
+      ],
+      "sourceParagraph": 2101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not interpretation. Not assumption. Truth."
+        }
+      ],
+      "sourceParagraph": 2102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE ILLUSION OF “OBJECTIVE SEEING”"
+        }
+      ],
+      "sourceParagraph": 2104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human mind has this built-in illusion that it observes reality directly."
+        }
+      ],
+      "sourceParagraph": 2105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But observation is never clean."
+        }
+      ],
+      "sourceParagraph": 2106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is always mixed with:"
+        }
+      ],
+      "sourceParagraph": 2107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "past memory"
+        }
+      ],
+      "sourceParagraph": 2108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "current emotion"
+        }
+      ],
+      "sourceParagraph": 2109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "expectation"
+        }
+      ],
+      "sourceParagraph": 2110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fear"
+        }
+      ],
+      "sourceParagraph": 2111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "attachment level"
+        }
+      ],
+      "sourceParagraph": 2112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And this mixture becomes the lens."
+        }
+      ],
+      "sourceParagraph": 2113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You don’t see the world first and then feel."
+        }
+      ],
+      "sourceParagraph": 2114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You feel first — and then the world gets shaped."
+        }
+      ],
+      "sourceParagraph": 2115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "REAL LIFE SCENE: THE SAME MESSAGE, DIFFERENT REALITIES",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2117,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Imagine this:"
+        }
+      ],
+      "sourceParagraph": 2118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A simple message arrives — “ok”"
+        }
+      ],
+      "sourceParagraph": 2119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That’s it. One word."
+        }
+      ],
+      "sourceParagraph": 2120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Now observe what happens internally."
+        }
+      ],
+      "sourceParagraph": 2121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "On a normal, stable day: It is just a reply. Nothing more."
+        }
+      ],
+      "sourceParagraph": 2122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "On a slightly low day: “ok… maybe he is busy.”"
+        }
+      ],
+      "sourceParagraph": 2123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "On an insecure day: “ok… something is wrong.”"
+        }
+      ],
+      "sourceParagraph": 2124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "On an attached day: “ok… he doesn’t care anymore.”"
+        }
+      ],
+      "sourceParagraph": 2125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same message. Same person. Same situation."
+        }
+      ],
+      "sourceParagraph": 2126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But internally, four completely different worlds are created."
+        }
+      ],
+      "sourceParagraph": 2127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the person on the other side didn’t change even once."
+        }
+      ],
+      "sourceParagraph": 2128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY THIS HAPPENS WITHOUT YOU NOTICING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2130,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because your mind is not a camera."
+        }
+      ],
+      "sourceParagraph": 2131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is a meaning-making machine."
+        }
+      ],
+      "sourceParagraph": 2132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It cannot tolerate empty space."
+        }
+      ],
+      "sourceParagraph": 2133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So"
+        },
+        {
+          "text": " when something is unclear — tone, silence, delay — it immediately fills it."
+        }
+      ],
+      "sourceParagraph": 2134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not with truth."
+        }
+      ],
+      "sourceParagraph": 2135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "With possibility."
+        }
+      ],
+      "sourceParagraph": 2136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And possibility is always shaped by your current emotional state."
+        }
+      ],
+      "sourceParagraph": 2137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "SILENCE IS NEVER SILENCE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2139,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Take another example."
+        }
+      ],
+      "sourceParagraph": 2140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Someone sees your message and doesn’t reply."
+        }
+      ],
+      "sourceParagraph": 2141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fact: no reply."
+        }
+      ],
+      "sourceParagraph": 2142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But your mind refuses to stop there."
+        }
+      ],
+      "sourceParagraph": 2143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It starts building layers:"
+        }
+      ],
+      "sourceParagraph": 2144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "busy"
+        },
+        {
+          "text": " hoga”"
+        }
+      ],
+      "sourceParagraph": 2145,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " ignore kar raha hai”"
+        }
+      ],
+      "sourceParagraph": 2146,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " interest kam ho gaya”"
+        }
+      ],
+      "sourceParagraph": 2147,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " maine kuch galat bola”"
+        }
+      ],
+      "sourceParagraph": 2148,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And slowly, what was a neutral silence becomes a full emotional story."
+        }
+      ],
+      "sourceParagraph": 2149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because something happened."
+        }
+      ],
+      "sourceParagraph": 2150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because your mind cannot sit with “nothing happening.”"
+        }
+      ],
+      "sourceParagraph": 2151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE INTERNAL PROJECTION SYSTEM",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2153,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Here is the uncomfortable truth:"
+        }
+      ],
+      "sourceParagraph": 2154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You don’t interpret people’s behaviour."
+        }
+      ],
+      "sourceParagraph": 2155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You project your internal condition onto their behaviour."
+        }
+      ],
+      "sourceParagraph": 2156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you are calm — everything looks normal."
+        }
+      ],
+      "sourceParagraph": 2157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you are anxious — everything looks suspicious."
+        }
+      ],
+      "sourceParagraph": 2158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you are attached — everything feels personal."
+        }
+      ],
+      "sourceParagraph": 2159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you are emotionally drained — everything feels distant."
+        }
+      ],
+      "sourceParagraph": 2160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing outside changes."
+        }
+      ],
+      "sourceParagraph": 2161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But everything inside changes the meaning of outside."
+        }
+      ],
+      "sourceParagraph": 2162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "REAL LIFE SCENE: FRIENDSHIP SHIFT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2164,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A friendship starts."
+        }
+      ],
+      "sourceParagraph": 2165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At first everything feels natural."
+        }
+      ],
+      "sourceParagraph": 2166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Replies don’t matter. Timing doesn’t matter. Silence doesn’t matter."
+        }
+      ],
+      "sourceParagraph": 2167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Then slowly attachment increases."
+        }
+      ],
+      "sourceParagraph": 2168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Now delay starts having weight."
+        }
+      ],
+      "sourceParagraph": 2169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A late reply is not just delay anymore — it is a signal."
+        }
+      ],
+      "sourceParagraph": 2170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Then expectation enters."
+        }
+      ],
+      "sourceParagraph": 2171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And expectation is the turning point where interpretation begins replacing experience."
+        }
+      ],
+      "sourceParagraph": 2172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Finally, one day you say:"
+        }
+      ],
+      "sourceParagraph": 2173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Woh badal gaya.”"
+        }
+      ],
+      "sourceParagraph": 2174,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But what actually changed was not the person."
+        }
+      ],
+      "sourceParagraph": 2175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was your sensitivity to distance."
+        }
+      ],
+      "sourceParagraph": 2176
+    },
+    {
+      "type": "section-break",
+      "role": "source-space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY PEOPLE FEEL LIKE THEY CHANGE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2179,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because you don’t meet people in one fixed state."
+        }
+      ],
+      "sourceParagraph": 2180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You meet them through different versions of yourself:"
+        }
+      ],
+      "sourceParagraph": 2181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "version that is secure"
+        }
+      ],
+      "sourceParagraph": 2182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "version that is doubtful"
+        }
+      ],
+      "sourceParagraph": 2183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "version that is attached"
+        }
+      ],
+      "sourceParagraph": 2184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "version that is detached"
+        }
+      ],
+      "sourceParagraph": 2185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And each version creates a different “truth” about the same person."
+        }
+      ],
+      "sourceParagraph": 2186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So"
+        },
+        {
+          "text": " when you say:"
+        }
+      ],
+      "sourceParagraph": 2187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "pehle"
+        },
+        {
+          "text": " aisa nahi tha”"
+        }
+      ],
+      "sourceParagraph": 2188,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "what you are really saying is:"
+        }
+      ],
+      "sourceParagraph": 2189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "pehle"
+        },
+        {
+          "text": " main aisa nahi tha jab main usko aise dekh raha tha.”"
+        }
+      ],
+      "sourceParagraph": 2190,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE BREAKING POINT: WHEN ASSUMPTION FEELS LIKE REALITY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2192,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The most dangerous shift happens quietly."
+        }
+      ],
+      "sourceParagraph": 2193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At first:"
+        }
+      ],
+      "sourceParagraph": 2194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "shayad"
+        },
+        {
+          "text": " aisa ho”"
+        }
+      ],
+      "sourceParagraph": 2195,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Then:"
+        }
+      ],
+      "sourceParagraph": 2196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "lag"
+        },
+        {
+          "text": " raha hai aisa hi hai”"
+        }
+      ],
+      "sourceParagraph": 2197,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Then:"
+        }
+      ],
+      "sourceParagraph": 2198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "obviously"
+        },
+        {
+          "text": " aisa hi hai”"
+        }
+      ],
+      "sourceParagraph": 2199,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And finally:"
+        }
+      ],
+      "sourceParagraph": 2200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " jaanta hoon yeh sach hai”"
+        }
+      ],
+      "sourceParagraph": 2201,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At this point, assumption stops being flexible."
+        }
+      ],
+      "sourceParagraph": 2202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It becomes identity-backed belief."
+        }
+      ],
+      "sourceParagraph": 2203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And once belief forms, curiosity dies."
+        }
+      ],
+      "sourceParagraph": 2204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE LOSS OF DIRECT EXPERIENCE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2206,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Slowly, life stops being experienced."
+        }
+      ],
+      "sourceParagraph": 2207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It starts being analyzed."
+        }
+      ],
+      "sourceParagraph": 2208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A laugh is no longer just a laugh."
+        }
+      ],
+      "sourceParagraph": 2209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A pause is no longer just a pause."
+        }
+      ],
+      "sourceParagraph": 2210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A message is no longer just a message."
+        }
+      ],
+      "sourceParagraph": 2211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Everything becomes a signal for something deeper."
+        }
+      ],
+      "sourceParagraph": 2212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And ironically, while trying to understand everything deeper…"
+        }
+      ],
+      "sourceParagraph": 2213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you lose the surface completely."
+        }
+      ],
+      "sourceParagraph": 2214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But surface is where reality actually exists."
+        }
+      ],
+      "sourceParagraph": 2215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY THIS SYSTEM IS HARD TO NOTICE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2217,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because it feels intelligent."
+        }
+      ],
+      "sourceParagraph": 2218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It feels like awareness."
+        }
+      ],
+      "sourceParagraph": 2219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It feels like emotional intelligence."
+        }
+      ],
+      "sourceParagraph": 2220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But often, it is just pattern recognition mixed with fear."
+        }
+      ],
+      "sourceParagraph": 2221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And fear always wants certainty."
+        }
+      ],
+      "sourceParagraph": 2222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So"
+        },
+        {
+          "text": " it creates meaning even when meaning doesn’t exist."
+        }
+      ],
+      "sourceParagraph": 2223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE MOST UNCOMFORTABLE REALIZATION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2225,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You are not reacting to people."
+        }
+      ],
+      "sourceParagraph": 2226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You are reacting to your internal memory of similar situations."
+        }
+      ],
+      "sourceParagraph": 2227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "One silence today is not just today."
+        }
+      ],
+      "sourceParagraph": 2228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It carries every past silence with it."
+        }
+      ],
+      "sourceParagraph": 2229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "One delay today is not just timing."
+        }
+      ],
+      "sourceParagraph": 2230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It carries every past rejection with it."
+        }
+      ],
+      "sourceParagraph": 2231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So present never stays present."
+        }
+      ],
+      "sourceParagraph": 2232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It becomes a carrier of everything unresolved."
+        }
+      ],
+      "sourceParagraph": 2233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN YOU FINALLY SEE IT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2235,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is no dramatic moment."
+        }
+      ],
+      "sourceParagraph": 2236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No enlightenment feeling."
+        }
+      ],
+      "sourceParagraph": 2237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Just a quiet realization:"
+        }
+      ],
+      "sourceParagraph": 2238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I am not seeing what is happening. I am seeing what I am.”"
+        }
+      ],
+      "sourceParagraph": 2239,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And that realization doesn’t fix everything."
+        }
+      ],
+      "sourceParagraph": 2240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But it makes everything slightly transparent."
+        }
+      ],
+      "sourceParagraph": 2241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Less absolute."
+        }
+      ],
+      "sourceParagraph": 2242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Less personal."
+        }
+      ],
+      "sourceParagraph": 2243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Less final."
+        }
+      ],
+      "sourceParagraph": 2244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF CHAPTER 7",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2246,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And maybe that is the real shift:"
+        }
+      ],
+      "sourceParagraph": 2247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "not understanding people better…"
+        }
+      ],
+      "sourceParagraph": 2248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but understanding that "
+        },
+        {
+          "text": "your"
+        },
+        {
+          "text": " understanding itself is not neutral."
+        }
+      ],
+      "sourceParagraph": 2249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And once that is seen clearly…"
+        }
+      ],
+      "sourceParagraph": 2250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "life doesn’t become simpler."
+        }
+      ],
+      "sourceParagraph": 2251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But it becomes less falsely certain."
+        }
+      ],
+      "sourceParagraph": 2252
+    }
+  ]
+}

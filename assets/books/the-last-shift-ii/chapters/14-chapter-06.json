@@ -1,0 +1,1123 @@
+{
+  "id": "chapter-06",
+  "kind": "chapter",
+  "label": "Chapter 6",
+  "title": "THE MOMENT YOU STOP EXPERIENCING, AND START EDITING",
+  "shortTitle": "Stop Experiencing, Start Editing",
+  "file": "chapters/14-chapter-06.json",
+  "index": 14,
+  "sourceRange": [
+    1966,
+    2091
+  ],
+  "number": "Chapter 6",
+  "headerSourceParagraphs": {
+    "number": 1966,
+    "title": 1967
+  },
+  "phase": "Arc I - The Distortion",
+  "sourceHeadingParagraphs": [
+    1966,
+    1967
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE SELF THAT NEVER SHUTS UP",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1969,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur layer hoti hai jo usually notice nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1970
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum jab chup hote ho…"
+        }
+      ],
+      "sourceParagraph": 1971
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab bhi tumhara mind chup nahi hota."
+        }
+      ],
+      "sourceParagraph": 1972
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo continuously narrate kar raha hota hai:"
+        }
+      ],
+      "sourceParagraph": 1973
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ye"
+        },
+        {
+          "text": " thik laga kya?”"
+        }
+      ],
+      "sourceParagraph": 1974,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "wo"
+        },
+        {
+          "text": " kya soch raha hoga?”"
+        }
+      ],
+      "sourceParagraph": 1975,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "maine"
+        },
+        {
+          "text": " overreact toh nahi kiya?”"
+        }
+      ],
+      "sourceParagraph": 1976,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere…"
+        }
+      ],
+      "sourceParagraph": 1977
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "silence bhi silence nahi rehta."
+        }
+      ],
+      "sourceParagraph": 1978
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo analysis ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 1979
+    },
+    {
+      "type": "section-break",
+      "role": "source-space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "YOU START CURATING YOUR PERSONALITY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1982,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan apni personality naturally express nahi karta."
+        }
+      ],
+      "sourceParagraph": 1983
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo usko curate karta hai."
+        }
+      ],
+      "sourceParagraph": 1984
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Different situations = different versions"
+        }
+      ],
+      "sourceParagraph": 1985
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "friends ke saath ek version"
+        }
+      ],
+      "sourceParagraph": 1986
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "family ke saath ek version"
+        }
+      ],
+      "sourceParagraph": 1987
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "alone ek version"
+        }
+      ],
+      "sourceParagraph": 1988
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unknown logon ke saath ek defensive version"
+        }
+      ],
+      "sourceParagraph": 1989
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur problem ye nahi hai ki multiple versions hain…"
+        }
+      ],
+      "sourceParagraph": 1990
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem ye hai ki koi bhi version fully “you” nahi lagta."
+        }
+      ],
+      "sourceParagraph": 1991
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE MOMENT AUTHENTICITY STARTS FEELING RISKY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1993,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek stage aati hai jahan:"
+        }
+      ],
+      "sourceParagraph": 1994
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tum ho…"
+        }
+      ],
+      "sourceParagraph": 1995
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo express karna unsafe lagta hai."
+        }
+      ],
+      "sourceParagraph": 1996
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo tum express karte ho…"
+        }
+      ],
+      "sourceParagraph": 1997
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo tum ho hi nahi."
+        }
+      ],
+      "sourceParagraph": 1998
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is gap mein insaan gradually apne aap se disconnect ho jata hai."
+        }
+      ],
+      "sourceParagraph": 1999
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh disconnect loud nahi hota."
+        }
+      ],
+      "sourceParagraph": 2000
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silent hota hai."
+        }
+      ],
+      "sourceParagraph": 2001
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye dangerous hota hai."
+        }
+      ],
+      "sourceParagraph": 2002
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY YOU START FILTERING EVEN EMOTIONS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2004,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle sirf words filter hote the."
+        }
+      ],
+      "sourceParagraph": 2005
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir behavior filter hua."
+        }
+      ],
+      "sourceParagraph": 2006
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir reactions filter hue."
+        }
+      ],
+      "sourceParagraph": 2007
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek point pe…"
+        }
+      ],
+      "sourceParagraph": 2008
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "emotions bhi filter hone lagte hain."
+        }
+      ],
+      "sourceParagraph": 2009
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum gussa feel karte ho…"
+        }
+      ],
+      "sourceParagraph": 2010
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par express nahi karte."
+        }
+      ],
+      "sourceParagraph": 2011
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum hurt feel karte ho…"
+        }
+      ],
+      "sourceParagraph": 2012
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par justify nahi karte."
+        }
+      ],
+      "sourceParagraph": 2013
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum care "
+        },
+        {
+          "text": "feel"
+        },
+        {
+          "text": " karte ho…"
+        }
+      ],
+      "sourceParagraph": 2014
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par show nahi karte."
+        }
+      ],
+      "sourceParagraph": 2015
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo cheez express nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 2016
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo slowly clarity lose kar deti hai."
+        }
+      ],
+      "sourceParagraph": 2017
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE INTERNAL SPLIT BECOMES NORMAL",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2019,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek waqt ke baad split abnormal nahi lagta."
+        }
+      ],
+      "sourceParagraph": 2020
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo normal lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 2021
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe lagta hai:"
+        }
+      ],
+      "sourceParagraph": 2022
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ye"
+        },
+        {
+          "text": " hi toh maturity hai.”"
+        }
+      ],
+      "sourceParagraph": 2023,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ye"
+        },
+        {
+          "text": " hi toh control hai.”"
+        }
+      ],
+      "sourceParagraph": 2024,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ye"
+        },
+        {
+          "text": " hi toh growth hai.”"
+        }
+      ],
+      "sourceParagraph": 2025,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par andar se…"
+        }
+      ],
+      "sourceParagraph": 2026
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye growth nahi hoti."
+        }
+      ],
+      "sourceParagraph": 2027
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye suppression hota hai with better vocabulary."
+        }
+      ],
+      "sourceParagraph": 2028
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN LIFE BECOMES A PERFORMANCE EVEN IN SILENCE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2030,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse strange phase wo hota hai:"
+        }
+      ],
+      "sourceParagraph": 2031
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum akele hote ho…"
+        }
+      ],
+      "sourceParagraph": 2032
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur phir bhi perform kar rahe hote ho."
+        }
+      ],
+      "sourceParagraph": 2033
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisike liye nahi."
+        }
+      ],
+      "sourceParagraph": 2034
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apne hi idea ke liye."
+        }
+      ],
+      "sourceParagraph": 2035
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " aisa insaan hoon jo strong hai”"
+        }
+      ],
+      "sourceParagraph": 2036,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " aisa insaan hoon jo care nahi karta”"
+        }
+      ],
+      "sourceParagraph": 2037,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " aisa insaan hoon jo unaffected hai”"
+        }
+      ],
+      "sourceParagraph": 2038,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur slowly…"
+        }
+      ],
+      "sourceParagraph": 2039
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "identity ek decision nahi rehti."
+        }
+      ],
+      "sourceParagraph": 2040
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo acting ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 2041
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE COST OF ALWAYS BEING \"OK\"",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2043,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek invisible pattern:"
+        }
+      ],
+      "sourceParagraph": 2044
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum har cheez ko normalize kar dete ho."
+        }
+      ],
+      "sourceParagraph": 2045
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hurt → “it’s fine”"
+        }
+      ],
+      "sourceParagraph": 2046
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "confusion → “it’s okay”"
+        }
+      ],
+      "sourceParagraph": 2047
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "distance → “normal hai”"
+        }
+      ],
+      "sourceParagraph": 2048
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab sab kuch “fine” ho jata hai…"
+        }
+      ],
+      "sourceParagraph": 2049
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch bhi actually fine nahi hota."
+        }
+      ],
+      "sourceParagraph": 2050
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas feel karne ki ability blunt ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 2051
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE MOMENT YOU DON’T KNOW WHAT YOU FEEL ANYMORE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2053,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse scary realization ye hota hai:"
+        }
+      ],
+      "sourceParagraph": 2054
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhe samajh hi nahi aata tum feel kya kar rahe ho."
+        }
+      ],
+      "sourceParagraph": 2055
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because emotion missing hai…"
+        }
+      ],
+      "sourceParagraph": 2056
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because it is constantly being edited before recognition."
+        }
+      ],
+      "sourceParagraph": 2057
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feeling → thought → judgment → suppression"
+        }
+      ],
+      "sourceParagraph": 2058
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur original emotion kabhi surface tak nahi aata."
+        }
+      ],
+      "sourceParagraph": 2059
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY REAL LIFE FEELS FAR EVEN WHEN NOTHING IS WRONG",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2061,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Externally sab normal hota hai."
+        }
+      ],
+      "sourceParagraph": 2062
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No major problem."
+        }
+      ],
+      "sourceParagraph": 2063
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No crisis."
+        }
+      ],
+      "sourceParagraph": 2064
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No breakdown."
+        }
+      ],
+      "sourceParagraph": 2065
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par andar ek strange distance hoti hai."
+        }
+      ],
+      "sourceParagraph": 2066
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tum apni hi life ke observer ho."
+        }
+      ],
+      "sourceParagraph": 2067
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Participate nahi kar rahe."
+        }
+      ],
+      "sourceParagraph": 2068
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas interpret kar rahe ho."
+        }
+      ],
+      "sourceParagraph": 2069
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interpretation kabhi living substitute nahi ban sakta."
+        }
+      ],
+      "sourceParagraph": 2070
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "FINAL LAYER: THE DISAPPEARANCE OF \"UNPLANNED YOU\"",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2072,
+      "role": "part-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse deep loss ye hota hai:"
+        }
+      ],
+      "sourceParagraph": 2073
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tum spontaneous version the…"
+        }
+      ],
+      "sourceParagraph": 2074
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo dheere dheere disappear ho jata hai."
+        }
+      ],
+      "sourceParagraph": 2075
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur uski jagah aa jata hai:"
+        }
+      ],
+      "sourceParagraph": 2076
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "planned you"
+        }
+      ],
+      "sourceParagraph": 2077
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "safe you"
+        }
+      ],
+      "sourceParagraph": 2078
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "controlled you"
+        }
+      ],
+      "sourceParagraph": 2079
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "acceptable you"
+        }
+      ],
+      "sourceParagraph": 2080
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur duniya tumhe accept karti hai…"
+        }
+      ],
+      "sourceParagraph": 2081
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tum apne aap ko encounter hi nahi kar paate."
+        }
+      ],
+      "sourceParagraph": 2082
+    },
+    {
+      "type": "section-break",
+      "role": "source-space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF CHAPTER 6 ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2085,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi pe ek uncomfortable truth khada hota hai:"
+        }
+      ],
+      "sourceParagraph": 2086
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhara problem emotions nahi the…"
+        }
+      ],
+      "sourceParagraph": 2087
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara problem un emotions ko live na kar paane ki habit thi."
+        }
+      ],
+      "sourceParagraph": 2088
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab living wapas aati hai…"
+        }
+      ],
+      "sourceParagraph": 2089
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh life perfect nahi lagti…"
+        }
+      ],
+      "sourceParagraph": 2090
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas real lagti hai."
+        }
+      ],
+      "sourceParagraph": 2091
+    }
+  ]
+}

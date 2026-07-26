@@ -430,6 +430,20 @@
     if (sourceId) node.dataset.sourceParagraph = sourceId;
   };
 
+  const setElementRole = (node, element) => {
+    if (element.role) node.dataset.elementRole = element.role;
+  };
+
+  const headerSource = (unit, key, fallbackIndex) => {
+    if (unit.headerSourceParagraphs && unit.headerSourceParagraphs[key] != null) {
+      return unit.headerSourceParagraphs[key];
+    }
+    if (unit.anchorHeadings && Array.isArray(unit.sourceHeadingParagraphs)) {
+      return unit.sourceHeadingParagraphs[fallbackIndex];
+    }
+    return null;
+  };
+
   const instantScrollTo = (top) => {
     const root = document.documentElement;
     const previousScrollBehavior = root.style.scrollBehavior;
@@ -461,24 +475,28 @@
     const phase = document.createElement("p");
     phase.className = "unit-header__phase";
     phase.textContent = unit.phase || book.series || book.title;
+    setSourceParagraph(phase, headerSource(unit, "phase", null));
     header.append(phase);
 
-    const number = unit.number || unit.label || "";
+    const number = unit.suppressHeaderNumber ? "" : unit.number || unit.label || "";
     if (number) {
       const numberNode = document.createElement("p");
       numberNode.className = "unit-header__number";
       numberNode.textContent = number;
+      setSourceParagraph(numberNode, headerSource(unit, "number", 0));
       header.append(numberNode);
     }
 
     const heading = document.createElement("h1");
     heading.textContent = unit.title;
+    setSourceParagraph(heading, headerSource(unit, "title", number ? 1 : 0));
     header.append(heading);
 
     if (unit.subtitle) {
       const subtitle = document.createElement("p");
       subtitle.className = "unit-header__subtitle";
       subtitle.textContent = unit.subtitle;
+      setSourceParagraph(subtitle, headerSource(unit, "subtitle", number ? 2 : 1));
       header.append(subtitle);
     }
 
@@ -490,6 +508,7 @@
       const divider = document.createElement("div");
       divider.className = "reader-section-break";
       divider.setAttribute("aria-hidden", "true");
+      setElementRole(divider, element);
       return divider;
     }
 
@@ -497,6 +516,7 @@
       const space = document.createElement("div");
       space.className = "reader-space";
       space.setAttribute("aria-hidden", "true");
+      setElementRole(space, element);
       return space;
     }
 
@@ -504,6 +524,7 @@
       const quote = document.createElement("blockquote");
       quote.className = "reader-quote";
       if (element.sourceParagraph) quote.dataset.sourceParagraph = String(element.sourceParagraph);
+      setElementRole(quote, element);
       appendRuns(quote, element.runs);
       return quote;
     }
@@ -516,6 +537,7 @@
           ? "source-contents__chapter"
           : "source-contents__line";
       if (element.sourceParagraph) line.dataset.sourceParagraph = String(element.sourceParagraph);
+      setElementRole(line, element);
       line.textContent = element.text || "";
       return line;
     }
@@ -523,6 +545,7 @@
     const paragraph = document.createElement("p");
     paragraph.className = "reader-paragraph";
     if (element.sourceParagraph) paragraph.dataset.sourceParagraph = String(element.sourceParagraph);
+    setElementRole(paragraph, element);
     appendRuns(paragraph, element.runs);
     return paragraph;
   };
@@ -538,6 +561,16 @@
       unitStart: true,
     });
     const sourceIds = sourceParagraphIds(unit);
+
+    if (unit.openingMode === "source") {
+      const copy = document.createElement("div");
+      copy.className = "flow-opening__copy flow-opening__copy--source";
+      unit.elements.forEach((element) => {
+        copy.append(createElementNode(element, unit));
+      });
+      block.append(copy);
+      return block;
+    }
 
     const copy = document.createElement("div");
     copy.className = "flow-opening__copy";
@@ -978,7 +1011,7 @@
   };
 
   const renderContentsDrawer = () => {
-    const jumpTargets = units.filter((unit) => ["chapter", "prologue", "introduction", "ending", "epilogue", "teaser"].includes(unit.kind));
+    const jumpTargets = units.filter((unit) => ["part", "chapter", "prologue", "introduction", "ending", "epilogue", "teaser"].includes(unit.kind));
     contentsList.innerHTML = "";
     jumpTargets.forEach((unit) => {
       const button = document.createElement("button");

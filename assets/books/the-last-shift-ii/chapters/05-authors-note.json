@@ -1,0 +1,100 @@
+{
+  "id": "authors-note",
+  "kind": "frontmatter",
+  "label": "Author's Note",
+  "title": "A Note from the Author",
+  "shortTitle": "Author's Note",
+  "file": "chapters/05-authors-note.json",
+  "index": 5,
+  "sourceRange": [
+    69,
+    78
+  ],
+  "headerSourceParagraphs": {
+    "title": 69
+  },
+  "suppressHeaderNumber": true,
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not written from a place of certainty."
+        }
+      ],
+      "sourceParagraph": 70
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It emerges from observation—of thought, of perception, and of the subtle ways in which experience becomes interpretation long before it becomes understanding."
+        }
+      ],
+      "sourceParagraph": 71
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What follows is not a framework, nor a conclusion. It is an attempt to describe a process that is usually invisible while it is happening: the gradual substitution of direct experience with internal narration."
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At no point does this text claim authority over truth. It does not define reality; it examines how reality is continuously reconstructed by the mind into something personal, stable, and explainable."
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The ideas presented here should not be treated as doctrine. They are reflections—temporary structures built from attention, language, and inquiry. Their purpose is not to be accepted, but to be seen through."
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If there is any intention behind these pages, it is simply this: to point toward the space in which thought is noticed rather than believed, and experience is allowed to exist without immediate interpretation."
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing here is final. Nothing here is complete. And nothing here requires agreement."
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only attention."
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And perhaps, a quieter relationship with it."
+        }
+      ],
+      "sourceParagraph": 78
+    }
+  ]
+}

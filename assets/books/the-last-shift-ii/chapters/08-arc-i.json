@@ -1,0 +1,23 @@
+{
+  "id": "arc-i",
+  "kind": "part",
+  "label": "Arc I",
+  "title": "THE DISTORTION",
+  "shortTitle": "Arc I - The Distortion",
+  "file": "chapters/08-arc-i.json",
+  "index": 8,
+  "sourceRange": [
+    238,
+    239
+  ],
+  "number": "ARC I",
+  "headerSourceParagraphs": {
+    "number": 238,
+    "title": 239
+  },
+  "sourceHeadingParagraphs": [
+    238,
+    239
+  ],
+  "elements": []
+}

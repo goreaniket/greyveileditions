@@ -1,0 +1,1607 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "label": "Chapter 2",
+  "title": "THE STORIES WE CREATE",
+  "shortTitle": "The Stories We Create",
+  "file": "chapters/10-chapter-02.json",
+  "index": 10,
+  "sourceRange": [
+    416,
+    586
+  ],
+  "number": "Chapter 2",
+  "headerSourceParagraphs": {
+    "number": 416,
+    "title": 417
+  },
+  "phase": "Arc I - The Distortion",
+  "sourceHeadingParagraphs": [
+    416,
+    417
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi reality aur imagination ke beech ka gap itna thin hota hai"
+        }
+      ],
+      "sourceParagraph": 419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hum dono ko ek hi cheez samajh lete hain."
+        }
+      ],
+      "sourceParagraph": 420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wahi se ek silent transformation start hota hai—"
+        }
+      ],
+      "sourceParagraph": 421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jo dekh rahe hote hain, wo nahi…"
+        }
+      ],
+      "sourceParagraph": 422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jo samajh rahe hote hain ki hum dekh rahe hain, wo reality ban jata hai."
+        }
+      ],
+      "sourceParagraph": 423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE NEED TO COMPLETE WHAT IS INCOMPLETE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 425,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind incomplete cheezon ko tolerate nahi karta."
+        }
+      ],
+      "sourceParagraph": 426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek message seen pe chhod diya jata hai."
+        }
+      ],
+      "sourceParagraph": 427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek reply delay ho jata hai."
+        }
+      ],
+      "sourceParagraph": 428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek conversation mid-way cut ho jati hai."
+        }
+      ],
+      "sourceParagraph": 429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek tone thoda off lagta hai."
+        }
+      ],
+      "sourceParagraph": 430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur bas yahi point hota hai jahan reality khatam hoti hai."
+        }
+      ],
+      "sourceParagraph": 431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par mind ke liye yeh end nahi hota…"
+        }
+      ],
+      "sourceParagraph": 432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh start hota hai."
+        }
+      ],
+      "sourceParagraph": 433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "busy"
+        },
+        {
+          "text": " hoga…”"
+        }
+      ],
+      "sourceParagraph": 434,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " ignore kar raha hai…”"
+        }
+      ],
+      "sourceParagraph": 435,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " mood off hai…”"
+        }
+      ],
+      "sourceParagraph": 436,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": " interest change ho gaya hai…”"
+        }
+      ],
+      "sourceParagraph": 437,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh sab thoughts nahi lagte."
+        }
+      ],
+      "sourceParagraph": 438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh explanation lagte hain."
+        }
+      ],
+      "sourceParagraph": 439
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur explanation jab emotionally satisfy kare…"
+        }
+      ],
+      "sourceParagraph": 440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo truth ban jata hai."
+        }
+      ],
+      "sourceParagraph": 441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "HOW SILENCE STARTS SPEAKING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 443,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek silence hota hai."
+        }
+      ],
+      "sourceParagraph": 444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Neutral."
+        }
+      ],
+      "sourceParagraph": 445
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par hum silence ko neutral rehne nahi dete."
+        }
+      ],
+      "sourceParagraph": 446
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum usme voice add kar dete hain:"
+        }
+      ],
+      "sourceParagraph": 447
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "kyun"
+        },
+        {
+          "text": " reply nahi aaya?”"
+        }
+      ],
+      "sourceParagraph": 448,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " galat ho gaya?”"
+        }
+      ],
+      "sourceParagraph": 449,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "kya"
+        },
+        {
+          "text": " change ho gaya?”"
+        }
+      ],
+      "sourceParagraph": 450,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere silence blank nahi rehta…"
+        }
+      ],
+      "sourceParagraph": 451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo filled ho jata hai interpretation se."
+        }
+      ],
+      "sourceParagraph": 452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur filled silence hamesha heavy hota hai."
+        }
+      ],
+      "sourceParagraph": 453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE INNER WRITER THAT NEVER STOPS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 455,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Humare andar ek automatic writer hota hai."
+        }
+      ],
+      "sourceParagraph": 456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo continuously scenes likh raha hota hai:"
+        }
+      ],
+      "sourceParagraph": 457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "late reply → “distance aa gaya”"
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "short message → “cold behavior”"
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "seen without reply → “intentional ignorance”"
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "change in tone → “emotional shift”"
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur problem yeh nahi hai ki wo write karta hai…"
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem yeh hai ki hum us writing ko read karke react karte hain as if it’s real."
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN ASSUMPTION FEELS LIKE UNDERSTANDING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 465,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse dangerous phase yeh hota hai:"
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab assumption confusion nahi lagta."
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo clarity lagta hai."
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "ab"
+        },
+        {
+          "text": " samajh aa gaya.”"
+        }
+      ],
+      "sourceParagraph": 469,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "yeh"
+        },
+        {
+          "text": " toh obvious hai.”"
+        }
+      ],
+      "sourceParagraph": 470,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " pehle hi sense kar raha tha.”"
+        }
+      ],
+      "sourceParagraph": 471,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur clarity ka illusion mind ko relax kar deta hai."
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki uncertainty khatam ho jati hai."
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par jo cheez khatam hoti hai wo uncertainty nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reality exploration hoti hai."
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "HOW ONE MOMENT BECOMES A FULL STORY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 477,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek simple moment:"
+        }
+      ],
+      "sourceParagraph": 478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kisi ne “ok” likh diya."
+        }
+      ],
+      "sourceParagraph": 479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas."
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par mind usse stop nahi karta."
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ok” → tone analysis"
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ok” → emotional meaning"
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ok” → relationship status"
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ok” → future prediction"
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek single word ek full narrative universe ban jata hai."
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting baat yeh hai —"
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo cheez ek second mein hui thi…"
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usko hum hours tak replay karte hain."
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY WE TRUST STORIES MORE THAN EVENTS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 491,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Event unstable hota hai."
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj koi close lagta hai, kal distant."
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj attention milta hai, kal silence."
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj warmth hoti hai, kal confusion."
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par story stable hoti hai."
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "log"
+        },
+        {
+          "text": " eventually leave kar dete hain”"
+        }
+      ],
+      "sourceParagraph": 497,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " important nahi hoon”"
+        }
+      ],
+      "sourceParagraph": 498,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "sab"
+        },
+        {
+          "text": " same hota hai”"
+        }
+      ],
+      "sourceParagraph": 499,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind stability choose karta hai — even if it is false."
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki stability survival jaisa feel hota hai."
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE SHIFT FROM SEEING TO INTERPRETING",
+          "bold": true
+        },
+        {
+          "text": "\t",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 503,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle hum dekhte the."
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir hum samajhne lage."
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir hum interpret karne lage."
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir humne decide kar liya ki:"
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dekhna optional hai"
+        }
+      ],
+      "sourceParagraph": 508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpretation necessary hai"
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation necessary ban jata hai…"
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh direct experience lose ho jata hai."
+        }
+      ],
+      "sourceParagraph": 511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "HOW PATTERNS REPLACE PEOPLE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 513,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur subtle shift hota hai."
+        }
+      ],
+      "sourceParagraph": 514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum insaan ko nahi dekhte…"
+        }
+      ],
+      "sourceParagraph": 515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum patterns dekhte hain."
+        }
+      ],
+      "sourceParagraph": 516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "late"
+        },
+        {
+          "text": " replies = disinterest”"
+        }
+      ],
+      "sourceParagraph": 517,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "short"
+        },
+        {
+          "text": " texts = coldness”"
+        }
+      ],
+      "sourceParagraph": 518,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“silence = rejection”"
+        }
+      ],
+      "sourceParagraph": 519,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pattern safe hota hai kyunki predictable hota hai."
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par insaan unpredictable hote hain."
+        }
+      ],
+      "sourceParagraph": 521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye hum insaan ko pattern mein compress kar dete hain"
+        }
+      ],
+      "sourceParagraph": 522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "taaki wo mentally manageable lage."
+        }
+      ],
+      "sourceParagraph": 523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE SELF-PROOF LOOP DEEPENS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 525,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir loop start hota hai:"
+        }
+      ],
+      "sourceParagraph": 526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum assume karte ho distance hai → tum withdraw karte ho"
+        }
+      ],
+      "sourceParagraph": 527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum withdraw karte ho → connection weak hota hai"
+        }
+      ],
+      "sourceParagraph": 528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Connection weak hota hai → tumhe proof milta hai"
+        }
+      ],
+      "sourceParagraph": 529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir mind kehta hai:"
+        }
+      ],
+      "sourceParagraph": 530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“See? I was right.”"
+        }
+      ],
+      "sourceParagraph": 531,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par jo tum "
+        },
+        {
+          "text": "miss"
+        },
+        {
+          "text": " kar dete ho wo yeh hai ki"
+        }
+      ],
+      "sourceParagraph": 532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumne reality observe nahi ki… tumne reality shape ki."
+        }
+      ],
+      "sourceParagraph": 533
+    },
+    {
+      "type": "section-break",
+      "role": "source-space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN PEOPLE BECOME SYMBOLS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 536,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation aur strong ho jati hai…"
+        }
+      ],
+      "sourceParagraph": 537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "log log nahi rehte."
+        }
+      ],
+      "sourceParagraph": 538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo symbols ban jate hain:"
+        }
+      ],
+      "sourceParagraph": 539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "safe"
+        },
+        {
+          "text": " person”"
+        }
+      ],
+      "sourceParagraph": 540,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "risky"
+        },
+        {
+          "text": " person”"
+        }
+      ],
+      "sourceParagraph": 541,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "confusing"
+        },
+        {
+          "text": " person”"
+        }
+      ],
+      "sourceParagraph": 542,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "temporary"
+        },
+        {
+          "text": " person”"
+        }
+      ],
+      "sourceParagraph": 543,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab koi insaan symbol ban jata hai…"
+        }
+      ],
+      "sourceParagraph": 544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh usko samajhne ki journey khatam ho jati hai."
+        }
+      ],
+      "sourceParagraph": 545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas label reh jata hai."
+        }
+      ],
+      "sourceParagraph": 546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE LOSS OF RAW MOMENTS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 548,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek time pe message bas message hota tha."
+        }
+      ],
+      "sourceParagraph": 549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab message analysis hota hai."
+        }
+      ],
+      "sourceParagraph": 550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek smile bas smile hoti thi."
+        }
+      ],
+      "sourceParagraph": 551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab wo intention hota hai."
+        }
+      ],
+      "sourceParagraph": 552
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek silence bas space hota tha."
+        }
+      ],
+      "sourceParagraph": 553
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab wo meaning hota hai."
+        }
+      ],
+      "sourceParagraph": 554
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab har cheez meaning ban jaye…"
+        }
+      ],
+      "sourceParagraph": 555
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch bhi raw nahi rehta."
+        }
+      ],
+      "sourceParagraph": 556
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab filtered ho jata hai."
+        }
+      ],
+      "sourceParagraph": 557
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "HOW MEMORY DISTORTS PRESENT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 559,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Past experiences quietly present pe chipak jate hain."
+        }
+      ],
+      "sourceParagraph": 560
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek purana hurt → har new silence mein active"
+        }
+      ],
+      "sourceParagraph": 561
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek purani rejection → har delay mein active"
+        }
+      ],
+      "sourceParagraph": 562
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek purani abandonment → har change mein active"
+        }
+      ],
+      "sourceParagraph": 563
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur hum kehte hain:"
+        }
+      ],
+      "sourceParagraph": 564
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " experience use kar raha hoon”"
+        }
+      ],
+      "sourceParagraph": 565,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par asal mein hum experience repeat kar "
+        }
+      ],
+      "sourceParagraph": 566
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 567
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE MOMENT ASSUMPTION BECOMES IDENTITY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 569,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere yeh sirf thinking nahi rehta."
+        }
+      ],
+      "sourceParagraph": 570
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh identity ban jata hai:"
+        }
+      ],
+      "sourceParagraph": 571
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " logon ko pehle hi samajh leta hoon”"
+        }
+      ],
+      "sourceParagraph": 572,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " overthink karta hoon”"
+        }
+      ],
+      "sourceParagraph": 573,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": " intuitive hoon”"
+        }
+      ],
+      "sourceParagraph": 574,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par shayad yeh intuition nahi hota…"
+        }
+      ],
+      "sourceParagraph": 575
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh trained survival interpretation system hota hai."
+        }
+      ],
+      "sourceParagraph": 576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF CHAPTER 2",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 578,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sabse simple truth yeh hai:"
+        }
+      ],
+      "sourceParagraph": 579
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jo dekh rahe hote hain wo duniya nahi hoti…"
+        }
+      ],
+      "sourceParagraph": 580
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo duniya + humari interpretation hoti hai."
+        }
+      ],
+      "sourceParagraph": 581
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation strong ho jati hai…"
+        }
+      ],
+      "sourceParagraph": 582
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh reality secondary ho jati hai."
+        }
+      ],
+      "sourceParagraph": 583
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur hum us point pe pahunch jate hain jahan:"
+        }
+      ],
+      "sourceParagraph": 584
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum dekh nahi rahe hote…"
+        }
+      ],
+      "sourceParagraph": 585
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum apni hi story ko live kar rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 586
+    }
+  ]
+}

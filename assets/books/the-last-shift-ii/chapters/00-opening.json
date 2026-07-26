@@ -1,0 +1,149 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Last Shift II",
+  "shortTitle": "Opening",
+  "file": "chapters/00-opening.json",
+  "index": 0,
+  "sourceRange": [
+    1,
+    14
+  ],
+  "openingMode": "source",
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN MIND",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "series-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK-II",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "book-number"
+    },
+    {
+      "type": "space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE LAST SHIFT",
+          "bold": true
+        },
+        {
+          "text": "-II",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 4,
+      "role": "title"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(",
+          "italic": true
+        },
+        {
+          "text": "Where the Mind Stops Explaining Itself",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 5,
+      "role": "subtitle-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A Philosophical & Psychological Reflection on",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 6,
+      "role": "subtitle-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perception • Awareness • Identity • Healing",
+          "italic": true
+        },
+        {
+          "text": ")",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 7,
+      "role": "subtitle-line"
+    },
+    {
+      "type": "space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "author"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "“Nothing changes first in reality. It changes in the way it is observed.”"
+        }
+      ],
+      "sourceParagraph": 10,
+      "role": "epigraph"
+    },
+    {
+      "type": "space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL EDITIONS 2026 ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 12,
+      "role": "publisher"
+    },
+    {
+      "type": "space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN FICTION COLLECTION",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 14,
+      "role": "collection-line"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "bookSlug": "the-last-shift-ii",
+  "title": "The Last Shift II",
+  "collection": "The Human Paradox Collection",
+  "series": "Human Mind",
+  "visualThemeName": "Afterimage Residue",
+  "designPurpose": "A heavier continuation identity for the mind after the shift: restrained tension, memory after transition, and faint repeated traces of thought that have already moved.",
+  "emotionalKeywords": [
+    "what remains after the shift",
+    "consequence",
+    "continuation",
+    "deeper internal distance",
+    "memory after transition",
+    "psychological residue",
+    "restrained tension",
+    "quiet heaviness",
+    "afterimage",
+    "fading imprint"
+  ],
+  "colorSystem": {
+    "light": {
+      "outerCanvas": "#DDE4E7",
+      "paper": "#F5EFE4",
+      "paperSoft": "#ECE4D8",
+      "text": "#24313B",
+      "heading": "#151E29",
+      "accent": "#515D79",
+      "accentStrong": "#303A59",
+      "traceLavender": "#A7A4B8",
+      "warmIvory": "#F5EFE4",
+      "warmUmber": "#8B745D"
+    },
+    "sepia": {
+      "outerCanvas": "#DED4C7",
+      "paper": "#F1E4D1",
+      "paperSoft": "#E7D8C5",
+      "text": "#342F2A",
+      "heading": "#211E1C",
+      "accent": "#5A536E",
+      "accentStrong": "#433C5A",
+      "traceLavender": "#A8A0AE",
+      "warmUmber": "#8A6D4F"
+    },
+    "dark": {
+      "outerCanvas": "#0D121A",
+      "paper": "#151C27",
+      "paperSoft": "#1D2632",
+      "text": "#ECE5DA",
+      "heading": "#F3EEE5",
+      "accent": "#A9A7C3",
+      "accentStrong": "#CBC8E2",
+      "traceLavender": "#8684A3",
+      "warmBrass": "#C5A579"
+    }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond, Georgia, serif",
+    "body": "Georgia, Times New Roman, serif",
+    "interface": "Inter, Arial, sans-serif"
+  },
+  "typography": {
+    "bodyFontSizeDesktop": "18px",
+    "bodyFontSizeTablet": "17.5px minimum",
+    "bodyFontSizeMobile": "17px minimum",
+    "lineHeight": 1.73,
+    "paragraphIndent": "1.05em",
+    "paragraphSpacing": "0.36em",
+    "chapterTitleDesktop": "44px to 52px depending on length",
+    "chapterTitleMobile": "32px to 38px",
+    "quoteTreatment": "Display serif italic with muted dusk-blue trace."
+  },
+  "pageGeometry": {
+    "desktop": {
+      "pageWidth": "664px",
+      "pageHeight": "1026px",
+      "pagePadding": "82px 70px",
+      "pageGap": "58px",
+      "measure": "60-72 characters per line",
+      "tradeBookReference": "close to 5.5 x 8.5 portrait"
+    },
+    "tablet": {
+      "pageWidth": "min(642px, calc(100vw - 56px))",
+      "pageHeight": "940px",
+      "pagePadding": "64px 56px"
+    },
+    "mobile": {
+      "pageWidth": "calc(100vw - 20px)",
+      "pageHeight": "min(900px, calc(100svh - 118px))",
+      "safePadding": "18-22px horizontal",
+      "bodyFontFloor": "17px",
+      "toolbar": "compact shared toolbar; form controls remain at least 44px"
+    }
+  },
+  "semanticPageTypes": {
+    "frontCover": "Official image appears once as the first unnumbered page, object-fit contain, no crop, no theme filter.",
+    "halfTitle": "No separate half-title detected; source-driven title page follows the cover.",
+    "titlePage": "Source-driven title page preserves series, book number, manuscript title line, three subtitle lines, author, epigraph, publisher, and source collection line.",
+    "copyrightPage": "Compact front-matter page with restrained heading and no folio.",
+    "dedication": "Centered dedication page with quiet afterimage rules and no folio.",
+    "epigraph": "Opening epigraph uses italic display treatment inside the title page.",
+    "contents": "Unboxed source contents with arc headings, chapter rows, and muted leader rhythm.",
+    "chapterOpening": "Fresh page for every chapter; arc label sits above a heavy uppercase title with double-offset trace lines.",
+    "normalContinuation": "Warm paper, deep slate text, measured literary spacing, small first-line indent after adjacent paragraphs.",
+    "sectionBreak": "Two faint offset traces, 52px and 26px, using lavender-blue accent at low opacity.",
+    "quotationTreatment": "Short standalone quote lines and reader blockquotes use display serif italic and a muted trace.",
+    "finalManuscriptPage": "Final reflection, epilogue, and about-author pages receive a faint bottom residue wash.",
+    "feedbackSurface": "Whole-book feedback page inherits warm paper, natural-height mobile behavior, one trigger, and scoped form palette."
+  },
+  "coverSpecification": {
+    "sourceAsset": {
+      "originalRepositoryFile": "/projects/human-mind/assets/covers/the last shift pt-2 .jpeg",
+      "preservedAsset": "/assets/books/the-last-shift-ii/cover/cover-source.png",
+      "format": "JPEG original preserved as PNG reference",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytesOriginal": 121889,
+      "containsCompleteFrontCover": true,
+      "containsTitle": true,
+      "containsSubtitle": true,
+      "containsAuthor": false,
+      "containsPublisherBranding": true,
+      "note": "The official artwork contains Greyveil Editions branding, series/book, title, Part II, second-layer subtitle, and lower tagline; no author name is visible on the cover image."
+    },
+    "websiteAsset": {
+      "path": "/assets/books/the-last-shift-ii/cover/front-cover.webp",
+      "format": "WEBP",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytes": 107570,
+      "optimization": "Converted from the official JPEG at WebP quality 88 with complete artwork preserved."
+    },
+    "printAsset": {
+      "path": "/assets/books/the-last-shift-ii/cover/front-cover-print.png",
+      "format": "PNG",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytes": 896219,
+      "printReadiness": "Best available full-resolution reference, not genuine 300 DPI production print art for a 5.5in x 8.5in trim."
+    },
+    "coverAspectRatio": "1023:1537, approximately 0.6656",
+    "referenceTrimSize": "5.5in x 8.5in portrait",
+    "websitePixelDimensions": "1023 x 1537",
+    "printPixelDimensions": "1023 x 1537",
+    "targetDpi": {
+      "website": "screen asset",
+      "futurePrintTarget": "300 DPI",
+      "availableEffectiveDpiAtReferenceTrim": "approximately 186 DPI by width and 181 DPI by height, below 300 DPI target"
+    },
+    "titlePlacement": "Large centered title in middle/lower-middle, with THE above LAST SHIFT and Part II below.",
+    "subtitlePlacement": "Series/book line above title, Second Layer below Part II, lower tagline near bottom.",
+    "authorPlacement": "No author name visible in the available cover artwork.",
+    "publisherMarkPlacement": "Greyveil Editions logo and wordmark centered in the upper third.",
+    "safeMargin": "Preserve the existing internal gold border and keep all typography inside at least 7% visual margin when fitting pages.",
+    "bleedGuidance": "No bleed-ready paperback cover exists yet; do not crop for bleed without a higher-resolution master.",
+    "colourProfileGuidance": "Current source is RGB JPEG. Future print should request high-resolution RGB or CMYK cover master from the designer/printer.",
+    "imageFitBehavior": "Use object-fit: contain. Do not recolor, filter, stretch, crop, darken, or apply theme overlays to the official artwork.",
+    "WordCoverPageMapping": {
+      "fixedPageOrder": [
+        "Front cover",
+        "Optional blank verso",
+        "Half-title or title page",
+        "Copyright/front matter",
+        "Contents",
+        "Main manuscript"
+      ],
+      "insertionGuidance": "Insert PNG as a full first page using fit-to-page containment; disable Word image compression where possible.",
+      "printLimitation": "Replace before final print production if 300 DPI/bleed is required."
+    },
+    "PdfCoverPageMapping": {
+      "fixedPageOrder": [
+        "Front cover",
+        "Optional blank verso",
+        "Half-title or title page",
+        "Copyright/front matter",
+        "Contents",
+        "Main manuscript"
+      ],
+      "fitMode": "Contain inside trim box unless a higher-resolution bleed-ready asset is supplied.",
+      "printLimitation": "Suitable digital/PDF reference, not final print cover."
+    },
+    "paperbackWrapStatus": {
+      "included": false,
+      "status": "Front cover only; full wrap, spine, and back cover are not included yet.",
+      "spineGuidance": "Spine width depends on final page count, paper stock, binding method, and printer specification."
+    }
+  },
+  "responsiveAdaptations": {
+    "mobile": "Nearly full-width page, 18-22px safe padding, simplified trace motifs, body text no smaller than 17px, no horizontal overflow, natural-height feedback.",
+    "tablet": "Centered page with balanced page proportions and clear chapter hierarchy.",
+    "desktop": "664px x 1026px page target, subtle edge/shadow, literary spacing, 60-72 character measure."
+  },
+  "futureWordMapping": {
+    "trimSize": "5.5in x 8.5in",
+    "bodyFont": "Georgia 11.5pt",
+    "lineSpacing": "18.8pt exact",
+    "firstLineIndent": "0.18in",
+    "chapterTitle": "Cormorant Garamond 28-31pt",
+    "pageNumber": "Inter/Arial 8pt centered at bottom",
+    "sectionBreak": "two short offset rules in muted dusk/lavender tint",
+    "coverOrder": [
+      "Front cover",
+      "Optional blank verso",
+      "Title page",
+      "Copyright/front matter",
+      "Contents",
+      "Main manuscript"
+    ]
+  },
+  "futurePdfMapping": {
+    "fixedPageTheme": "light theme only",
+    "coverFit": "contain first page",
+    "digitalOnly": [
+      "toolbar",
+      "theme switcher",
+      "contents drawer",
+      "progress bar",
+      "feedback form"
+    ],
+    "printEquivalent": "warm ivory stock, deep slate text, muted dusk/lavender accent traces"
+  },
+  "implementationBoundary": {
+    "bookSpecificFiles": [
+      "/assets/books/the-last-shift-ii/book.json",
+      "/assets/books/the-last-shift-ii/design-spec.json",
+      "/assets/books/the-last-shift-ii/theme.css",
+      "/assets/books/the-last-shift-ii/chapters/*.json",
+      "/projects/human-mind/books/the-last-shift-ii/reader/index.html"
+    ],
+    "sharedFiles": [
+      "/assets/js/reader.js only for reusable source-driven opening/header roles/part drawer support",
+      "/assets/css/reader.css unchanged by this Book 2 phase"
+    ]
+  }
+}

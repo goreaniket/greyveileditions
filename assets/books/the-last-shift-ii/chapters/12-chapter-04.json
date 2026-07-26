@@ -1,0 +1,4075 @@
+{
+  "id": "chapter-04",
+  "kind": "chapter",
+  "label": "Chapter 4",
+  "title": "THE NEED TO BE RIGHT",
+  "shortTitle": "The Need to Be Right",
+  "file": "chapters/12-chapter-04.json",
+  "index": 12,
+  "sourceRange": [
+    1050,
+    1517
+  ],
+  "number": "Chapter 4",
+  "headerSourceParagraphs": {
+    "number": 1050,
+    "title": 1051
+  },
+  "phase": "Arc I - The Distortion",
+  "sourceHeadingParagraphs": [
+    1050,
+    1051
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART 1 — WHEN BEING RIGHT BECOMES MORE IMPORTANT THAN SEEING"
+        }
+      ],
+      "sourceParagraph": 1053
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan truth dhoondhne ki baat karta hai."
+        }
+      ],
+      "sourceParagraph": 1054
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar hum honestly "
+        },
+        {
+          "text": "observe"
+        },
+        {
+          "text": " karein…"
+        }
+      ],
+      "sourceParagraph": 1055
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh zyada tar waqt hum truth nahi dhoondh rahe hote."
+        }
+      ],
+      "sourceParagraph": 1056
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum confirmation dhoondh rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 1057
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Confirmation ki jo hum pehle se maante hain… wohi sahi nikle."
+        }
+      ],
+      "sourceParagraph": 1058
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh difference bahut chhota lagta hai."
+        }
+      ],
+      "sourceParagraph": 1059
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad insaan ki psychology ka sabse dangerous difference bhi yehi hai."
+        }
+      ],
+      "sourceParagraph": 1060
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Truth uncomfortable ho sakta hai."
+        }
+      ],
+      "sourceParagraph": 1061
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Confirmation comforting hota hai."
+        }
+      ],
+      "sourceParagraph": 1062
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Truth tumhe change karne ke liye force karta hai."
+        }
+      ],
+      "sourceParagraph": 1063
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Confirmation tumhe wahi rehne deta hai jahan tum already ho."
+        }
+      ],
+      "sourceParagraph": 1064
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye mind naturally truth se pehle confirmation choose karta hai."
+        }
+      ],
+      "sourceParagraph": 1065
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye kyunki wo evil hai."
+        }
+      ],
+      "sourceParagraph": 1066
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye kyunki wo irrational hai."
+        }
+      ],
+      "sourceParagraph": 1067
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye kyunki certainty survive karna aasaan banati hai."
+        }
+      ],
+      "sourceParagraph": 1068
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE STRANGE COMFORT OF CERTAINTY"
+        }
+      ],
+      "sourceParagraph": 1070
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Socho tum kisi cheez ko lekar completely sure ho."
+        }
+      ],
+      "sourceParagraph": 1071
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe wo relationship ho."
+        }
+      ],
+      "sourceParagraph": 1072
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Career ho."
+        }
+      ],
+      "sourceParagraph": 1073
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi insaan ka character ho."
+        }
+      ],
+      "sourceParagraph": 1074
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya khud ke baare mein koi belief."
+        }
+      ],
+      "sourceParagraph": 1075
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us certainty ke andar ek ajeeb si peace hoti hai."
+        }
+      ],
+      "sourceParagraph": 1076
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questions khatam ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 1077
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Confusion kam ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1078
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind relax kar leta hai."
+        }
+      ],
+      "sourceParagraph": 1079
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par certainty ka ek hidden cost bhi hota hai."
+        }
+      ],
+      "sourceParagraph": 1080
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jis din tum sure ho gaye…"
+        }
+      ],
+      "sourceParagraph": 1081
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usi din tum dekhna kam kar dete ho."
+        }
+      ],
+      "sourceParagraph": 1082
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observation dheere dheere khatam hone lagti hai."
+        }
+      ],
+      "sourceParagraph": 1083
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki observation tab hoti hai jab possibility open ho."
+        }
+      ],
+      "sourceParagraph": 1084
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Certainty possibilities ko quietly band kar deti hai."
+        }
+      ],
+      "sourceParagraph": 1085
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab possibilities band ho jaati hain…"
+        }
+      ],
+      "sourceParagraph": 1086
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab reality andar aana bhi band ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1087
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE MOMENT CURIOSITY DIES",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1089,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Curiosity ka matlab sirf questions poochna nahi hota."
+        }
+      ],
+      "sourceParagraph": 1090
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Curiosity ka matlab hota hai—"
+        }
+      ],
+      "sourceParagraph": 1091
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Ho sakta hai main jo dekh raha hoon, uske alawa bhi kuch ho.\""
+        }
+      ],
+      "sourceParagraph": 1092,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sentence simple lagta hai."
+        }
+      ],
+      "sourceParagraph": 1093
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ego ke liye ye sentence bahut heavy hota hai."
+        }
+      ],
+      "sourceParagraph": 1094
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki is sentence ke andar ek risk chhupa hota hai."
+        }
+      ],
+      "sourceParagraph": 1095
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Risk of being wrong."
+        }
+      ],
+      "sourceParagraph": 1096
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ego ko galat hona pasand nahi."
+        }
+      ],
+      "sourceParagraph": 1097
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye wo curiosity ki jagah certainty choose karta hai."
+        }
+      ],
+      "sourceParagraph": 1098
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle hum puchte hain—"
+        }
+      ],
+      "sourceParagraph": 1099
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Kya sach mein aisa hai?\""
+        }
+      ],
+      "sourceParagraph": 1100,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir dheere dheere question badal jata hai—"
+        }
+      ],
+      "sourceParagraph": 1101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Dekha? Main pehle hi keh raha tha.\""
+        }
+      ],
+      "sourceParagraph": 1102,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi moment pe learning slow pad jaati hai."
+        }
+      ],
+      "sourceParagraph": 1103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki learning questions se grow karti hai."
+        }
+      ],
+      "sourceParagraph": 1104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Conclusions se nahi."
+        }
+      ],
+      "sourceParagraph": 1105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY THE EGO HATES BEING WRONG",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1107,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Galat hona sirf information ka issue nahi hota."
+        }
+      ],
+      "sourceParagraph": 1108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind usse identity ka issue bana deta hai."
+        }
+      ],
+      "sourceParagraph": 1109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar meri baat galat nikli…"
+        }
+      ],
+      "sourceParagraph": 1110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kya main bhi galat hoon?"
+        }
+      ],
+      "sourceParagraph": 1111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar mera judgement fail ho gaya…"
+        }
+      ],
+      "sourceParagraph": 1112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kya mujh par trust nahi kiya ja sakta?"
+        }
+      ],
+      "sourceParagraph": 1113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality sirf belief ko challenge karti hai."
+        }
+      ],
+      "sourceParagraph": 1114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ego us challenge ko khud par attack samajh leta hai."
+        }
+      ],
+      "sourceParagraph": 1115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir discussion knowledge ka nahi rehta."
+        }
+      ],
+      "sourceParagraph": 1116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Protection ka ban jata hai."
+        }
+      ],
+      "sourceParagraph": 1117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab goal samajhna nahi hota."
+        }
+      ],
+      "sourceParagraph": 1118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Goal bachna hota hai."
+        }
+      ],
+      "sourceParagraph": 1119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apni image ko."
+        }
+      ],
+      "sourceParagraph": 1120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apni certainty ko."
+        }
+      ],
+      "sourceParagraph": 1121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apni story ko."
+        }
+      ],
+      "sourceParagraph": 1122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN OPINIONS STOP BEING OPINIONS",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1124,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein opinions flexible hote hain."
+        }
+      ],
+      "sourceParagraph": 1125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj kuch aur socha."
+        }
+      ],
+      "sourceParagraph": 1126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kal kuch aur samjha."
+        }
+      ],
+      "sourceParagraph": 1127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par dheere dheere kuch opinions humare andar settle ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 1128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir wo sirf opinions nahi rehte."
+        }
+      ],
+      "sourceParagraph": 1129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo identity ban jaate hain."
+        }
+      ],
+      "sourceParagraph": 1130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"I am this kind of person.\""
+        }
+      ],
+      "sourceParagraph": 1131,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main hamesha logon ko sahi judge karta hoon.\""
+        }
+      ],
+      "sourceParagraph": 1132,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main kabhi kisi pe jaldi trust nahi karta.\""
+        }
+      ],
+      "sourceParagraph": 1133,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main practical hoon.\""
+        }
+      ],
+      "sourceParagraph": 1134,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye statements harmless lagte hain."
+        }
+      ],
+      "sourceParagraph": 1135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par inke andar ek invisible prison hota hai."
+        }
+      ],
+      "sourceParagraph": 1136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki ab agar reality in beliefs ke against jaati hai…"
+        }
+      ],
+      "sourceParagraph": 1137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh sirf belief nahi hilta."
+        }
+      ],
+      "sourceParagraph": 1138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity hilti hai."
+        }
+      ],
+      "sourceParagraph": 1139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur identity ko shake karna…"
+        }
+      ],
+      "sourceParagraph": 1140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind ko existence shake hone jaisa feel hota hai."
+        }
+      ],
+      "sourceParagraph": 1141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE INVISIBLE DEFENSE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1143,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi liye jab koi humse disagree karta hai…"
+        }
+      ],
+      "sourceParagraph": 1144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kabhi kabhi hum uski baat sunte hi nahi."
+        }
+      ],
+      "sourceParagraph": 1145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sirf wait karte hain…"
+        }
+      ],
+      "sourceParagraph": 1146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kab wo bolna khatam kare."
+        }
+      ],
+      "sourceParagraph": 1147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Taaki hum apna answer de sakein."
+        }
+      ],
+      "sourceParagraph": 1148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Surface pe lagta hai conversation chal rahi hai."
+        }
+      ],
+      "sourceParagraph": 1149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality mein do monologues chal rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 1150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dono sun nahi rahe."
+        }
+      ],
+      "sourceParagraph": 1151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dono defend kar rahe hain."
+        }
+      ],
+      "sourceParagraph": 1152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab defense active ho…"
+        }
+      ],
+      "sourceParagraph": 1153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab understanding impossible ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki understanding tab aati hai…"
+        }
+      ],
+      "sourceParagraph": 1155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum temporarily apni certainty side par rakh do."
+        }
+      ],
+      "sourceParagraph": 1156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ego ko ye sabse mushkil kaam lagta hai."
+        }
+      ],
+      "sourceParagraph": 1157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE FIRST SILENT SHIFT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1159,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem galat hone mein kabhi thi hi nahi."
+        }
+      ],
+      "sourceParagraph": 1160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem us fear mein thi…"
+        }
+      ],
+      "sourceParagraph": 1161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki agar hum galat nikle…"
+        }
+      ],
+      "sourceParagraph": 1162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh hum kam ho jayenge."
+        }
+      ],
+      "sourceParagraph": 1163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kam intelligent."
+        }
+      ],
+      "sourceParagraph": 1164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kam aware."
+        }
+      ],
+      "sourceParagraph": 1165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kam capable."
+        }
+      ],
+      "sourceParagraph": 1166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin reality ulta kaam karti hai."
+        }
+      ],
+      "sourceParagraph": 1167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo insaan apni certainty ko question kar leta hai…"
+        }
+      ],
+      "sourceParagraph": 1168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo chhota nahi hota."
+        }
+      ],
+      "sourceParagraph": 1169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uski perception badi ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad growth wahi se shuru hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan insaan pehli baar ye keh pata hai—"
+        }
+      ],
+      "sourceParagraph": 1172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Ho sakta hai main poori picture abhi tak dekh hi na paaya hoon.\""
+        }
+      ],
+      "sourceParagraph": 1173,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— End of Part 1"
+        }
+      ],
+      "sourceParagraph": 1174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART 2 — WHEN THE MIND STARTS PROTECTING ITSELF",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1175,
+      "role": "part-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek point ke baad problem sirf itni nahi rehti ki hum reality ko galat samajhne lagte hain."
+        }
+      ],
+      "sourceParagraph": 1176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem yeh hoti hai ki humara mind humein reality se bachana start kar deta hai."
+        }
+      ],
+      "sourceParagraph": 1177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehli nazar mein yeh achhi baat lagti hai."
+        }
+      ],
+      "sourceParagraph": 1178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Protection."
+        }
+      ],
+      "sourceParagraph": 1179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Safety."
+        }
+      ],
+      "sourceParagraph": 1180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Control."
+        }
+      ],
+      "sourceParagraph": 1181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin har protection growth nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch protections sirf purane pain ko repeat hone se rokne ki koshish karti hain... aur isi process mein nayi possibilities ko bhi andar aane nahi deti."
+        }
+      ],
+      "sourceParagraph": 1183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahin se emotional survival quietly emotional prison banne lagta hai."
+        }
+      ],
+      "sourceParagraph": 1184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE INVISIBLE ARMOUR",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1185,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Physical wound dikhta hai."
+        }
+      ],
+      "sourceParagraph": 1186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotional wound rarely dikhta hai."
+        }
+      ],
+      "sourceParagraph": 1187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye body bandage pehenti hai..."
+        }
+      ],
+      "sourceParagraph": 1188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind patterns pehenta hai."
+        }
+      ],
+      "sourceParagraph": 1189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek baar trust toot gaya..."
+        }
+      ],
+      "sourceParagraph": 1190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab mind kehta hai:"
+        }
+      ],
+      "sourceParagraph": 1191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Next time pehle doubt karna.\""
+        }
+      ],
+      "sourceParagraph": 1192,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek baar ignore feel hua..."
+        }
+      ],
+      "sourceParagraph": 1193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Next time zyada attach mat hona.\""
+        }
+      ],
+      "sourceParagraph": 1194,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek baar expectations ne hurt kiya..."
+        }
+      ],
+      "sourceParagraph": 1195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Next time expect hi mat karna.\""
+        }
+      ],
+      "sourceParagraph": 1196,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ko lagta hai woh strong bana raha hai."
+        }
+      ],
+      "sourceParagraph": 1197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality mein woh sirf walls bana raha hota hai."
+        }
+      ],
+      "sourceParagraph": 1198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur walls ka problem yeh nahi hota ki woh pain ko rok deti hain."
+        }
+      ],
+      "sourceParagraph": 1199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem yeh hota hai ki woh connection ko bhi rok deti hain."
+        }
+      ],
+      "sourceParagraph": 1200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN HYPERVIGILANCE FEELS LIKE MATURITY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1202,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch log har chhoti cheez notice karte hain."
+        }
+      ],
+      "sourceParagraph": 1203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tone."
+        }
+      ],
+      "sourceParagraph": 1204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Timing."
+        }
+      ],
+      "sourceParagraph": 1205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Expressions."
+        }
+      ],
+      "sourceParagraph": 1206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Typing speed."
+        }
+      ],
+      "sourceParagraph": 1207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reply ka gap."
+        }
+      ],
+      "sourceParagraph": 1208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Conversation ka flow."
+        }
+      ],
+      "sourceParagraph": 1209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere unhe lagne lagta hai ki yeh awareness hai."
+        }
+      ],
+      "sourceParagraph": 1210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par har awareness wisdom nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi yeh sirf fear hota hai..."
+        }
+      ],
+      "sourceParagraph": 1212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo details collect kar raha hota hai."
+        }
+      ],
+      "sourceParagraph": 1213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fear predict karna chahta hai."
+        }
+      ],
+      "sourceParagraph": 1214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki usse lagta hai—"
+        }
+      ],
+      "sourceParagraph": 1215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Agar sab pehle samajh gaya... toh hurt nahi hoga.\""
+        }
+      ],
+      "sourceParagraph": 1216,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par life prediction se nahi chalti."
+        }
+      ],
+      "sourceParagraph": 1217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab prediction impossible hoti hai..."
+        }
+      ],
+      "sourceParagraph": 1218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh anxiety permanent ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 1219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE COST OF ALWAYS BEING READY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1221,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Constant alert rehna exhausting hota hai."
+        }
+      ],
+      "sourceParagraph": 1222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par interesting baat yeh hai..."
+        }
+      ],
+      "sourceParagraph": 1223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan is exhaustion ka bhi aadat bana leta hai."
+        }
+      ],
+      "sourceParagraph": 1224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse normal lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 1225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har conversation analyse karna."
+        }
+      ],
+      "sourceParagraph": 1226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har silence decode karna."
+        }
+      ],
+      "sourceParagraph": 1227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har change notice karna."
+        }
+      ],
+      "sourceParagraph": 1228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har possibility calculate karna."
+        }
+      ],
+      "sourceParagraph": 1229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek din..."
+        }
+      ],
+      "sourceParagraph": 1230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind itna tired ho jata hai..."
+        }
+      ],
+      "sourceParagraph": 1231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki peace bhi suspicious lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 1232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki chaos familiar tha."
+        }
+      ],
+      "sourceParagraph": 1233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence unfamiliar hai."
+        }
+      ],
+      "sourceParagraph": 1234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur unfamiliar cheez brain ko unsafe lagti hai."
+        }
+      ],
+      "sourceParagraph": 1235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY CONTROL FEELS SAFE",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1237,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Control certainty ka illusion deta hai."
+        }
+      ],
+      "sourceParagraph": 1238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sochte hain—"
+        }
+      ],
+      "sourceParagraph": 1239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Agar main emotionally invest kam karunga... toh kam hurt hoga.\""
+        }
+      ],
+      "sourceParagraph": 1240,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Agar main pehle hi distance bana lunga... toh rejection feel nahi hoga.\""
+        }
+      ],
+      "sourceParagraph": 1241,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Agar main vulnerable hi nahi hua... toh pain bhi nahi hoga.\""
+        }
+      ],
+      "sourceParagraph": 1242,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sunne mein logical lagta hai."
+        }
+      ],
+      "sourceParagraph": 1243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ek hidden cost hoti hai."
+        }
+      ],
+      "sourceParagraph": 1244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum pain se bach jaate ho..."
+        }
+      ],
+      "sourceParagraph": 1245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par intimacy se bhi."
+        }
+      ],
+      "sourceParagraph": 1246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum rejection "
+        },
+        {
+          "text": "avoid"
+        },
+        {
+          "text": " kar lete ho..."
+        }
+      ],
+      "sourceParagraph": 1247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par acceptance bhi miss kar dete ho."
+        }
+      ],
+      "sourceParagraph": 1248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum hurt kam feel karte ho..."
+        }
+      ],
+      "sourceParagraph": 1249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par love bhi utna deeply feel nahi kar paate."
+        }
+      ],
+      "sourceParagraph": 1250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Protection selective nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh dono directions block karti hai."
+        }
+      ],
+      "sourceParagraph": 1252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE TRAP OF EMOTIONAL SELF-SUFFICIENCY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1254,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur dangerous belief quietly develop hota hai."
+        }
+      ],
+      "sourceParagraph": 1255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Mujhe kisi ki zarurat nahi.\""
+        }
+      ],
+      "sourceParagraph": 1256,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi yeh confidence hota hai."
+        }
+      ],
+      "sourceParagraph": 1257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin bahut baar..."
+        }
+      ],
+      "sourceParagraph": 1258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh disappointment ka after-effect hota hai."
+        }
+      ],
+      "sourceParagraph": 1259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Need ko weakness samajhna easy hai."
+        }
+      ],
+      "sourceParagraph": 1260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par reality yeh hai—"
+        }
+      ],
+      "sourceParagraph": 1261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan connection seek karta hai."
+        }
+      ],
+      "sourceParagraph": 1262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Difference sirf itna hai..."
+        }
+      ],
+      "sourceParagraph": 1263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch openly seek karte hain..."
+        }
+      ],
+      "sourceParagraph": 1264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kuch secretly deny karte hain."
+        }
+      ],
+      "sourceParagraph": 1265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN DISTANCE BECOMES AN IDENTITY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1267,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuru mein distance choice hoti hai."
+        }
+      ],
+      "sourceParagraph": 1268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Baad mein habit."
+        }
+      ],
+      "sourceParagraph": 1269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur uske baad..."
+        }
+      ],
+      "sourceParagraph": 1270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "personality."
+        }
+      ],
+      "sourceParagraph": 1271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log kehte hain—"
+        }
+      ],
+      "sourceParagraph": 1272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main emotionally unavailable hoon.\""
+        }
+      ],
+      "sourceParagraph": 1273,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main kisi pe trust nahi karta.\""
+        }
+      ],
+      "sourceParagraph": 1274,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main kisi ko close nahi aane deta.\""
+        }
+      ],
+      "sourceParagraph": 1275,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise yeh unka nature ho."
+        }
+      ],
+      "sourceParagraph": 1276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par aksar..."
+        }
+      ],
+      "sourceParagraph": 1277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh nature nahi hota."
+        }
+      ],
+      "sourceParagraph": 1278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh repeated protection hoti hai..."
+        }
+      ],
+      "sourceParagraph": 1279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo itni purani ho chuki hoti hai..."
+        }
+      ],
+      "sourceParagraph": 1280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki identity lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 1281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE PARADOX OF SAFETY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1283,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse ajeeb paradox yeh hai—"
+        }
+      ],
+      "sourceParagraph": 1284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jitna zyada mind safety create karta hai..."
+        }
+      ],
+      "sourceParagraph": 1285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utni hi kam life feel hoti hai."
+        }
+      ],
+      "sourceParagraph": 1286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Risk kam."
+        }
+      ],
+      "sourceParagraph": 1287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pain kam."
+        }
+      ],
+      "sourceParagraph": 1288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin excitement bhi kam."
+        }
+      ],
+      "sourceParagraph": 1289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Curiosity bhi kam."
+        }
+      ],
+      "sourceParagraph": 1290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Depth bhi kam."
+        }
+      ],
+      "sourceParagraph": 1291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 1292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan survive toh karta hai..."
+        }
+      ],
+      "sourceParagraph": 1293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par fully live nahi karta."
+        }
+      ],
+      "sourceParagraph": 1294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye..."
+        }
+      ],
+      "sourceParagraph": 1295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf safe rehna..."
+        }
+      ],
+      "sourceParagraph": 1296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jeena nahi hota."
+        }
+      ],
+      "sourceParagraph": 1297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF PART 2",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1299,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ka asli goal humein khush banana nahi hota."
+        }
+      ],
+      "sourceParagraph": 1300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uska goal hota hai—"
+        }
+      ],
+      "sourceParagraph": 1301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "humein bachaye rakhna."
+        }
+      ],
+      "sourceParagraph": 1302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur survival ke liye woh kabhi kabhi wohi cheezein repeat karta rehta hai..."
+        }
+      ],
+      "sourceParagraph": 1303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kabhi kaam aayi thi."
+        }
+      ],
+      "sourceParagraph": 1304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe aaj unki zarurat ho ya na ho."
+        }
+      ],
+      "sourceParagraph": 1305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad healing ka matlab yeh nahi ki hum apne guards ko forcefully gira dein."
+        }
+      ],
+      "sourceParagraph": 1306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad healing ka matlab sirf itna hai..."
+        }
+      ],
+      "sourceParagraph": 1307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hum pehchan lein—"
+        }
+      ],
+      "sourceParagraph": 1308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kab protection humein bacha rahi hai..."
+        }
+      ],
+      "sourceParagraph": 1309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kab wahi protection humein jeene se rok rahi hai."
+        }
+      ],
+      "sourceParagraph": 1310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART 3 — WHY THE MIND CHOOSES THE FAMILIAR PAIN",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1312,
+      "role": "part-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek ajeeb paradox hai."
+        }
+      ],
+      "sourceParagraph": 1313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan hamesha happiness nahi choose karta."
+        }
+      ],
+      "sourceParagraph": 1314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo familiarity "
+        },
+        {
+          "text": "choose"
+        },
+        {
+          "text": " karta hai."
+        }
+      ],
+      "sourceParagraph": 1315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kai baar familiarity ka matlab hota hai — pain."
+        }
+      ],
+      "sourceParagraph": 1316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar kisi ne saalon tak criticism suna ho… toh appreciation usse fake lag sakti hai."
+        }
+      ],
+      "sourceParagraph": 1317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar kisi ne hamesha inconsistency dekhi ho… toh consistency suspicious lag sakti hai."
+        }
+      ],
+      "sourceParagraph": 1318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar kisi ne baar baar logon ko jaate dekha ho… toh jab koi rukta hai… tab bhi mind ready rehta hai uske jaane ka wait karne ke liye."
+        }
+      ],
+      "sourceParagraph": 1319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind ke liye unknown se zyada safe hota hai — known suffering."
+        }
+      ],
+      "sourceParagraph": 1320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye kai baar hum consciously nahi… subconsciously wahi situations create kar dete hain jo hum pehle jee chuke hote hain."
+        }
+      ],
+      "sourceParagraph": 1321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because we enjoy pain."
+        }
+      ],
+      "sourceParagraph": 1322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because pain we understand feels safer than "
+        },
+        {
+          "text": "peace"
+        },
+        {
+          "text": " we don't."
+        }
+      ],
+      "sourceParagraph": 1323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE BRAIN DOESN'T CHASE TRUTH. IT CHASES PREDICTABILITY.",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1325,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sochte hain mind reality dhoondta hai."
+        }
+      ],
+      "sourceParagraph": 1326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par reality thodi unpredictable hoti hai."
+        }
+      ],
+      "sourceParagraph": 1327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind ko prediction pasand hai."
+        }
+      ],
+      "sourceParagraph": 1328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Prediction survival deta hai."
+        }
+      ],
+      "sourceParagraph": 1329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar kisi pattern ne ek baar danger predict kiya… mind us pattern ko save kar leta hai."
+        }
+      ],
+      "sourceParagraph": 1330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske baad har similar situation mein wohi alarm bajta hai."
+        }
+      ],
+      "sourceParagraph": 1331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe danger ho ya na ho."
+        }
+      ],
+      "sourceParagraph": 1332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahi reason hai ki kai log present ko present ki tarah experience hi nahi kar paate."
+        }
+      ],
+      "sourceParagraph": 1333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo har nayi situation ko purani file se compare karte rehte hain."
+        }
+      ],
+      "sourceParagraph": 1334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur comparison itna automatic hota hai… ki unhe pata bhi nahi chalta."
+        }
+      ],
+      "sourceParagraph": 1335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN SAFETY STARTS LOOKING BORING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1337,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur silent shift hota hai."
+        }
+      ],
+      "sourceParagraph": 1338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chaos addictive ho sakta hai."
+        }
+      ],
+      "sourceParagraph": 1339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jis insaan ne emotional highs aur lows mein relationships dekhi ho… uske liye calm connection emotionless lag sakta hai."
+        }
+      ],
+      "sourceParagraph": 1340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No drama."
+        }
+      ],
+      "sourceParagraph": 1341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No guessing."
+        }
+      ],
+      "sourceParagraph": 1342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No chasing."
+        }
+      ],
+      "sourceParagraph": 1343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas stability."
+        }
+      ],
+      "sourceParagraph": 1344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par stability unfamiliar hoti hai."
+        }
+      ],
+      "sourceParagraph": 1345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur unfamiliar cheez ko mind excitement nahi… emptiness samajh leta hai."
+        }
+      ],
+      "sourceParagraph": 1346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye kai baar log healthy cheezon se door chale jaate hain… sirf isliye kyunki unmein woh intensity nahi hoti jiske woh aadat ban chuke hote hain."
+        }
+      ],
+      "sourceParagraph": 1347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Intensity aur intimacy ek hi cheez nahi hote."
+        }
+      ],
+      "sourceParagraph": 1348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par mind dono ko confuse kar deta hai."
+        }
+      ],
+      "sourceParagraph": 1349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE COMFORT OF OLD IDENTITIES",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1351,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har insaan ke paas ek hidden identity hoti hai."
+        }
+      ],
+      "sourceParagraph": 1352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi khud ko \"ignored person\" maanta hai."
+        }
+      ],
+      "sourceParagraph": 1353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi \"problem solver.\""
+        }
+      ],
+      "sourceParagraph": 1354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi \"people pleaser.\""
+        }
+      ],
+      "sourceParagraph": 1355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi \"unlucky.\""
+        }
+      ],
+      "sourceParagraph": 1356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere identity sirf description nahi rehti…"
+        }
+      ],
+      "sourceParagraph": 1357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo filter ban jaati hai."
+        }
+      ],
+      "sourceParagraph": 1358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske baad jo bhi experience aata hai… mind usko identity ke according interpret karta hai."
+        }
+      ],
+      "sourceParagraph": 1359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar identity hai—"
+        }
+      ],
+      "sourceParagraph": 1360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Mujhe koi genuinely choose nahi karta.\""
+        }
+      ],
+      "sourceParagraph": 1361,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh hundred caring moments bhi us belief ko change nahi karte."
+        }
+      ],
+      "sourceParagraph": 1362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ek rejection…"
+        }
+      ],
+      "sourceParagraph": 1363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo instantly proof ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 1364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind evidence collect nahi karta."
+        }
+      ],
+      "sourceParagraph": 1365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo confirmation "
+        },
+        {
+          "text": "collect"
+        },
+        {
+          "text": " karta hai."
+        }
+      ],
+      "sourceParagraph": 1366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHY CHANGE FEELS LIKE A THREAT",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1368,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log sochte hain change difficult hota hai."
+        }
+      ],
+      "sourceParagraph": 1369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality thodi aur deep hai."
+        }
+      ],
+      "sourceParagraph": 1370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Change dangerous feel hota hai."
+        }
+      ],
+      "sourceParagraph": 1371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki change ka matlab hota hai—"
+        }
+      ],
+      "sourceParagraph": 1372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Old identity ko question karna."
+        }
+      ],
+      "sourceParagraph": 1373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Old stories ko doubt karna."
+        }
+      ],
+      "sourceParagraph": 1374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Old conclusions ko chhodna."
+        }
+      ],
+      "sourceParagraph": 1375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab saalon tak kisi belief ke saath jeeya ho…"
+        }
+      ],
+      "sourceParagraph": 1376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh us belief ke bina khud ko imagine karna bhi strange lagta hai."
+        }
+      ],
+      "sourceParagraph": 1377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe belief painful hi kyun na ho."
+        }
+      ],
+      "sourceParagraph": 1378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi liye healing ka first emotion relief nahi hota."
+        }
+      ],
+      "sourceParagraph": 1379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Confusion hota hai."
+        }
+      ],
+      "sourceParagraph": 1380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki purana system toot raha hota hai."
+        }
+      ],
+      "sourceParagraph": 1381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur naya system abhi bana nahi hota."
+        }
+      ],
+      "sourceParagraph": 1382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isi beech ka space sabse uncomfortable hota hai."
+        }
+      ],
+      "sourceParagraph": 1383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN WE DEFEND THE THING THAT HURTS US",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1385,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi notice kiya hai…"
+        }
+      ],
+      "sourceParagraph": 1386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kai log apni hi suffering ko defend karte hain."
+        }
+      ],
+      "sourceParagraph": 1387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar unse kaho—"
+        }
+      ],
+      "sourceParagraph": 1388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Shayad sab log waise nahi hote.\""
+        }
+      ],
+      "sourceParagraph": 1389,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh woh turant examples dene lagte hain ki duniya trust karne layak kyun nahi hai."
+        }
+      ],
+      "sourceParagraph": 1390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar bolo—"
+        }
+      ],
+      "sourceParagraph": 1391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Ho sakta hai tum galat interpret kar rahe ho.\""
+        }
+      ],
+      "sourceParagraph": 1392,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh woh aur strongly apni interpretation prove karne lagte hain."
+        }
+      ],
+      "sourceParagraph": 1393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki issue reality ka nahi hota."
+        }
+      ],
+      "sourceParagraph": 1394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Issue identity ka hota hai."
+        }
+      ],
+      "sourceParagraph": 1395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar belief toot gaya…"
+        }
+      ],
+      "sourceParagraph": 1396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh uske saath ek purana version bhi toot jayega."
+        }
+      ],
+      "sourceParagraph": 1397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har insaan us moment ke liye ready nahi hota."
+        }
+      ],
+      "sourceParagraph": 1398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE INVISIBLE PRISON",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1400,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse dangerous prison woh nahi hoti jisme walls dikhte hain."
+        }
+      ],
+      "sourceParagraph": 1401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse dangerous prison woh hoti hai…"
+        }
+      ],
+      "sourceParagraph": 1402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jisme insaan ko lagta hai ki woh free hai."
+        }
+      ],
+      "sourceParagraph": 1403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum kehte hain—"
+        }
+      ],
+      "sourceParagraph": 1404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main bas practical hoon.\""
+        }
+      ],
+      "sourceParagraph": 1405,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main bas reality dekh raha hoon.\""
+        }
+      ],
+      "sourceParagraph": 1406,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main bas experience se seekha hoon.\""
+        }
+      ],
+      "sourceParagraph": 1407,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi yeh sab sach hota hai."
+        }
+      ],
+      "sourceParagraph": 1408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par kabhi kabhi…"
+        }
+      ],
+      "sourceParagraph": 1409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh sirf purani stories ka refined version hota hai."
+        }
+      ],
+      "sourceParagraph": 1410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab prison familiar language bolne lage…"
+        }
+      ],
+      "sourceParagraph": 1411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tab usse prison pehchanna almost impossible ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 1412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(Part 3 Ends)"
+        }
+      ],
+      "sourceParagraph": 1413
+    },
+    {
+      "type": "section-break",
+      "role": "source-space"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "PART 4 — THE FREEDOM OF NOT KNOWING",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1416,
+      "role": "part-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HEAVIEST WORD IN THE HUMAN MIND"
+        }
+      ],
+      "sourceParagraph": 1417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human mind ke liye sabse uncomfortable word shayad \"pain\" nahi hai."
+        }
+      ],
+      "sourceParagraph": 1418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo hai—"
+        }
+      ],
+      "sourceParagraph": 1419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Maybe.\""
+        }
+      ],
+      "sourceParagraph": 1420,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maybe main galat hoon."
+        }
+      ],
+      "sourceParagraph": 1421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maybe mujhe poori picture nahi dikh rahi."
+        }
+      ],
+      "sourceParagraph": 1422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maybe jis certainty ko main truth samajh raha tha..."
+        }
+      ],
+      "sourceParagraph": 1423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf meri current understanding hai."
+        }
+      ],
+      "sourceParagraph": 1424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye word ego ko pasand nahi."
+        }
+      ],
+      "sourceParagraph": 1425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki ego permanence chahta hai."
+        }
+      ],
+      "sourceParagraph": 1426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse fixed answers pasand hain."
+        }
+      ],
+      "sourceParagraph": 1427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Final conclusions."
+        }
+      ],
+      "sourceParagraph": 1428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Complete certainty."
+        }
+      ],
+      "sourceParagraph": 1429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin reality kabhi final language mein exist nahi karti."
+        }
+      ],
+      "sourceParagraph": 1430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo continuously unfold hoti rehti hai."
+        }
+      ],
+      "sourceParagraph": 1431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo insaan \"maybe\" ko accept kar leta hai..."
+        }
+      ],
+      "sourceParagraph": 1432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo reality ke saath chalna shuru kar deta hai."
+        }
+      ],
+      "sourceParagraph": 1433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na ki uske against."
+        }
+      ],
+      "sourceParagraph": 1434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN UNDERSTANDING REPLACES VICTORY",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1436,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har conversation ko jeetna zaroori nahi hota."
+        }
+      ],
+      "sourceParagraph": 1437
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har disagreement ka winner hona bhi zaroori nahi hota."
+        }
+      ],
+      "sourceParagraph": 1438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi sabse valuable conversation wahi hoti hai..."
+        }
+      ],
+      "sourceParagraph": 1439
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan end mein dono insaan thoda zyada samajhdaar ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 1440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye kyunki kisi ne argument jeeta."
+        }
+      ],
+      "sourceParagraph": 1441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye kyunki dono ne apni certainty thodi si halki kar di."
+        }
+      ],
+      "sourceParagraph": 1442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Understanding ka purpose superiority nahi hota."
+        }
+      ],
+      "sourceParagraph": 1443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Expansion hota hai."
+        }
+      ],
+      "sourceParagraph": 1444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur expansion sirf us mind mein possible hai..."
+        }
+      ],
+      "sourceParagraph": 1445
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo apni boundaries ko permanent nahi maanta."
+        }
+      ],
+      "sourceParagraph": 1446
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE COURAGE TO CHANGE YOUR MIND",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1448,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log aksar consistency ko strength samajhte hain."
+        }
+      ],
+      "sourceParagraph": 1449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par har consistency strength nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi wo sirf stubbornness hoti hai..."
+        }
+      ],
+      "sourceParagraph": 1451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo maturity jaisi dikh rahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 1452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Real courage har baar apni baat prove karna nahi hai."
+        }
+      ],
+      "sourceParagraph": 1453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Real courage kabhi kabhi sirf itna hota hai—"
+        }
+      ],
+      "sourceParagraph": 1454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Main is cheez ko dobara dekhunga.\""
+        }
+      ],
+      "sourceParagraph": 1455,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sentence bahut simple lagta hai."
+        }
+      ],
+      "sourceParagraph": 1456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin isi sentence ki wajah se civilizations badli hain."
+        }
+      ],
+      "sourceParagraph": 1457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Science aage badha hai."
+        }
+      ],
+      "sourceParagraph": 1458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Relationships heal hue hain."
+        }
+      ],
+      "sourceParagraph": 1459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur log apni purani identities se bahar nikle hain."
+        }
+      ],
+      "sourceParagraph": 1460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Growth ka matlab har baar naya answer paana nahi."
+        }
+      ],
+      "sourceParagraph": 1461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi purane answer ko respectfully chhod dena bhi growth hota hai."
+        }
+      ],
+      "sourceParagraph": 1462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE DIFFERENCE BETWEEN AN OPEN MIND AND AN EMPTY MIND",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1464,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Open mind ka matlab har baat maan lena nahi hota."
+        }
+      ],
+      "sourceParagraph": 1465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur na hi har belief ko reject kar dena."
+        }
+      ],
+      "sourceParagraph": 1466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Open mind ka matlab sirf itna hota hai..."
+        }
+      ],
+      "sourceParagraph": 1467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki belief aur self ek hi cheez nahi hain."
+        }
+      ],
+      "sourceParagraph": 1468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj jo main maanta hoon..."
+        }
+      ],
+      "sourceParagraph": 1469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kal usse better understanding mil sakti hai."
+        }
+      ],
+      "sourceParagraph": 1470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar mili..."
+        }
+      ],
+      "sourceParagraph": 1471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh mujhe apne purane version se ladna nahi padega."
+        }
+      ],
+      "sourceParagraph": 1472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe sirf evolve hona hoga."
+        }
+      ],
+      "sourceParagraph": 1473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo insaan evolve kar sakta hai..."
+        }
+      ],
+      "sourceParagraph": 1474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usse apni image bachane ki zarurat nahi padti."
+        }
+      ],
+      "sourceParagraph": 1475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "WHEN TRUTH STOPS BEING PERSONAL",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1477,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad hum truth se isliye nahi darte..."
+        }
+      ],
+      "sourceParagraph": 1478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki wo painful hota hai."
+        }
+      ],
+      "sourceParagraph": 1479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum truth se isliye darte hain..."
+        }
+      ],
+      "sourceParagraph": 1480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki wo personal lagta hai."
+        }
+      ],
+      "sourceParagraph": 1481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar meri belief galat nikli..."
+        }
+      ],
+      "sourceParagraph": 1482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh mujhe lagta hai main hi galat hoon."
+        }
+      ],
+      "sourceParagraph": 1483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par belief aur insaan ek hi cheez nahi hote."
+        }
+      ],
+      "sourceParagraph": 1484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Beliefs badalte rehte hain."
+        }
+      ],
+      "sourceParagraph": 1485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan unse bada hota hai."
+        }
+      ],
+      "sourceParagraph": 1486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jis din yeh difference clear ho jata hai..."
+        }
+      ],
+      "sourceParagraph": 1487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usi din learning effortless lagne lagti hai."
+        }
+      ],
+      "sourceParagraph": 1488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki ab har nayi information threat nahi hoti."
+        }
+      ],
+      "sourceParagraph": 1489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Invitation hoti hai."
+        }
+      ],
+      "sourceParagraph": 1490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE QUIET FREEDOM",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1492,
+      "role": "section-heading"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek ajeeb si freedom hoti hai..."
+        }
+      ],
+      "sourceParagraph": 1493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tumhe har waqt prove nahi karna padta."
+        }
+      ],
+      "sourceParagraph": 1494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har debate mein jeetna nahi padta."
+        }
+      ],
+      "sourceParagraph": 1495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har opinion defend nahi karna padta."
+        }
+      ],
+      "sourceParagraph": 1496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har disagreement ko attack nahi samajhna padta."
+        }
+      ],
+      "sourceParagraph": 1497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us waqt energy bachti hai."
+        }
+      ],
+      "sourceParagraph": 1498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh energy finally us jagah jaati hai..."
+        }
+      ],
+      "sourceParagraph": 1499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan usse pehle kabhi mauka hi nahi mila."
+        }
+      ],
+      "sourceParagraph": 1500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observation."
+        }
+      ],
+      "sourceParagraph": 1501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Curiosity."
+        }
+      ],
+      "sourceParagraph": 1502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Presence."
+        }
+      ],
+      "sourceParagraph": 1503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye teen cheezein sirf tab paida hoti hain..."
+        }
+      ],
+      "sourceParagraph": 1504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab certainty apni grip thodi si dheeli karti hai."
+        }
+      ],
+      "sourceParagraph": 1505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF CHAPTER 4",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1507,
+      "role": "chapter-end"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad wisdom ka opposite ignorance nahi hota."
+        }
+      ],
+      "sourceParagraph": 1508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad wisdom ka opposite hota hai..."
+        }
+      ],
+      "sourceParagraph": 1509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh certainty jo khud ko kabhi question nahi karti."
+        }
+      ],
+      "sourceParagraph": 1510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad growth ka pehla step answers collect karna bhi nahi."
+        }
+      ],
+      "sourceParagraph": 1511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad pehla step sirf itna hai..."
+        }
+      ],
+      "sourceParagraph": 1512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki insaan apne hi answers ko itna strongly pakadna chhod de..."
+        }
+      ],
+      "sourceParagraph": 1513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki naye answers ke liye jagah hi na bache."
+        }
+      ],
+      "sourceParagraph": 1514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har baar galat hona failure nahi hota."
+        }
+      ],
+      "sourceParagraph": 1515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 1516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wahi pehli baar sach ke thoda aur kareeb le jaata hai."
+        }
+      ],
+      "sourceParagraph": 1517
+    }
+  ]
+}

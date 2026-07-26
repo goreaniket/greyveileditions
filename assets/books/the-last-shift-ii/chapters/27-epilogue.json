@@ -1,0 +1,1078 @@
+{
+  "id": "epilogue",
+  "kind": "epilogue",
+  "label": "Epilogue",
+  "title": "THE LAST SHIFT",
+  "shortTitle": "Epilogue",
+  "file": "chapters/27-epilogue.json",
+  "index": 27,
+  "sourceRange": [
+    3631,
+    3749
+  ],
+  "number": "Epilogue",
+  "headerSourceParagraphs": {
+    "number": 3631,
+    "title": 3632
+  },
+  "sourceHeadingParagraphs": [
+    3631,
+    3632
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum yahan tak aa gaye ho..."
+        }
+      ],
+      "sourceParagraph": 3633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad..."
+        }
+      ],
+      "sourceParagraph": 3634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye kitab khatam ho gayi hai."
+        }
+      ],
+      "sourceParagraph": 3635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par shayad..."
+        }
+      ],
+      "sourceParagraph": 3636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhari journey abhi shuru hui hai."
+        }
+      ],
+      "sourceParagraph": 3637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek ajeeb si baat hoti hai na..."
+        }
+      ],
+      "sourceParagraph": 3638
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sochte hain ki books hume answers dene ke liye likhi jaati hain."
+        }
+      ],
+      "sourceParagraph": 3639
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par shayad..."
+        }
+      ],
+      "sourceParagraph": 3640
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "achhi books answers nahi deti."
+        }
+      ],
+      "sourceParagraph": 3641
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf..."
+        }
+      ],
+      "sourceParagraph": 3642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "galat questions gira deti hain."
+        }
+      ],
+      "sourceParagraph": 3643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab galat questions gir jaate hain..."
+        }
+      ],
+      "sourceParagraph": 3644
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kai answers ki zarurat hi nahi rehti."
+        }
+      ],
+      "sourceParagraph": 3645
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad tum notice karoge..."
+        }
+      ],
+      "sourceParagraph": 3646
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki duniya waise hi hai."
+        }
+      ],
+      "sourceParagraph": 3647
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log waise hi bolenge."
+        }
+      ],
+      "sourceParagraph": 3648
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch log samjhenge."
+        }
+      ],
+      "sourceParagraph": 3649
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch galat samjhenge."
+        }
+      ],
+      "sourceParagraph": 3650
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch tumhe chhod kar chale jayenge."
+        }
+      ],
+      "sourceParagraph": 3651
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch bina wajah tumhari life mein aa jayenge."
+        }
+      ],
+      "sourceParagraph": 3652
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi baarish hogi."
+        }
+      ],
+      "sourceParagraph": 3653
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi dhoop hogi."
+        }
+      ],
+      "sourceParagraph": 3654
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi raat bahut lambi lagegi."
+        }
+      ],
+      "sourceParagraph": 3655
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi ek chhoti si subah..."
+        }
+      ],
+      "sourceParagraph": 3656
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bahut gehri shanti de jaayegi."
+        }
+      ],
+      "sourceParagraph": 3657
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life nahi badlegi."
+        }
+      ],
+      "sourceParagraph": 3658
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin..."
+        }
+      ],
+      "sourceParagraph": 3659
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad tum usse dekhne ka tareeka badal doge."
+        }
+      ],
+      "sourceParagraph": 3660
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 3661
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "itna hi kaafi hota hai."
+        }
+      ],
+      "sourceParagraph": 3662
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek waqt tha..."
+        }
+      ],
+      "sourceParagraph": 3663
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum har emotion se ladte the."
+        }
+      ],
+      "sourceParagraph": 3664
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har thought ko analyse karte the."
+        }
+      ],
+      "sourceParagraph": 3665
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har silence ka meaning nikalte the."
+        }
+      ],
+      "sourceParagraph": 3666
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har goodbye ko apni value bana lete the."
+        }
+      ],
+      "sourceParagraph": 3667
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har memory ko..."
+        }
+      ],
+      "sourceParagraph": 3668
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dobara jeete the."
+        }
+      ],
+      "sourceParagraph": 3669
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab shayad..."
+        }
+      ],
+      "sourceParagraph": 3670
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum sirf dekh paoge."
+        }
+      ],
+      "sourceParagraph": 3671
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek thought aayega."
+        }
+      ],
+      "sourceParagraph": 3672
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur chala jayega."
+        }
+      ],
+      "sourceParagraph": 3673
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek emotion aayega."
+        }
+      ],
+      "sourceParagraph": 3674
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur chala jayega."
+        }
+      ],
+      "sourceParagraph": 3675
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek insaan aayega."
+        }
+      ],
+      "sourceParagraph": 3676
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad..."
+        }
+      ],
+      "sourceParagraph": 3677
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh bhi chala jayega."
+        }
+      ],
+      "sourceParagraph": 3678
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehli baar..."
+        }
+      ],
+      "sourceParagraph": 3679
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum samjhoge..."
+        }
+      ],
+      "sourceParagraph": 3680
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki har cheez ka jaana..."
+        }
+      ],
+      "sourceParagraph": 3681
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara tootna nahi hota."
+        }
+      ],
+      "sourceParagraph": 3682
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is kitab mein..."
+        }
+      ],
+      "sourceParagraph": 3683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "humne overthinking ki baat ki."
+        }
+      ],
+      "sourceParagraph": 3684
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Identity ki baat ki."
+        }
+      ],
+      "sourceParagraph": 3685
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pain ki."
+        }
+      ],
+      "sourceParagraph": 3686
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Healing ki."
+        }
+      ],
+      "sourceParagraph": 3687
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur finally..."
+        }
+      ],
+      "sourceParagraph": 3688
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "living ki."
+        }
+      ],
+      "sourceParagraph": 3689
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar is poori kitab ko..."
+        }
+      ],
+      "sourceParagraph": 3690
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf ek sentence mein sametna ho..."
+        }
+      ],
+      "sourceParagraph": 3691
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad woh sentence ye hoga—"
+        }
+      ],
+      "sourceParagraph": 3692
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "\"Tum kabhi apne thoughts nahi the.\""
+        }
+      ],
+      "sourceParagraph": 3693,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas."
+        }
+      ],
+      "sourceParagraph": 3694
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itna hi."
+        }
+      ],
+      "sourceParagraph": 3695
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Baaki sab..."
+        }
+      ],
+      "sourceParagraph": 3696
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "isi ek baat ki alag alag kahaniyan thi."
+        }
+      ],
+      "sourceParagraph": 3697
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din..."
+        }
+      ],
+      "sourceParagraph": 3698
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad tum ye kitab dobara padhoge."
+        }
+      ],
+      "sourceParagraph": 3699
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagega..."
+        }
+      ],
+      "sourceParagraph": 3700
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye pehli baar se alag hai."
+        }
+      ],
+      "sourceParagraph": 3701
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kitab nahi badlegi."
+        }
+      ],
+      "sourceParagraph": 3702
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reader badal chuka hoga."
+        }
+      ],
+      "sourceParagraph": 3703
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wahi..."
+        }
+      ],
+      "sourceParagraph": 3704
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har real journey ki pehchaan hoti hai."
+        }
+      ],
+      "sourceParagraph": 3705
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj ke baad..."
+        }
+      ],
+      "sourceParagraph": 3706
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab bhi tum overthink karoge..."
+        }
+      ],
+      "sourceParagraph": 3707
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad tum khud se ladne ki jagah..."
+        }
+      ],
+      "sourceParagraph": 3708
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf muskura doge."
+        }
+      ],
+      "sourceParagraph": 3709
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab anxiety aayegi..."
+        }
+      ],
+      "sourceParagraph": 3710
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad tum use enemy nahi..."
+        }
+      ],
+      "sourceParagraph": 3711
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "visitor samjhoge."
+        }
+      ],
+      "sourceParagraph": 3712
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab kisi ka jaana dukh dega..."
+        }
+      ],
+      "sourceParagraph": 3713
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad tum us dard ko bhi..."
+        }
+      ],
+      "sourceParagraph": 3714
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "human hone ki price samjhoge."
+        }
+      ],
+      "sourceParagraph": 3715
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab kabhi..."
+        }
+      ],
+      "sourceParagraph": 3716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina kisi wajah ke..."
+        }
+      ],
+      "sourceParagraph": 3717
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "andar se halka mehsoos hoga..."
+        }
+      ],
+      "sourceParagraph": 3718
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh us moment ko analyse mat karna."
+        }
+      ],
+      "sourceParagraph": 3719
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Usse bas jeena."
+        }
+      ],
+      "sourceParagraph": 3720
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki isi ke liye..."
+        }
+      ],
+      "sourceParagraph": 3721
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum paida hue the."
+        }
+      ],
+      "sourceParagraph": 3722
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye kitab..."
+        }
+      ],
+      "sourceParagraph": 3723
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe perfect banane ke liye nahi likhi gayi thi."
+        }
+      ],
+      "sourceParagraph": 3724
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye kitab..."
+        }
+      ],
+      "sourceParagraph": 3725
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe wapas tum tak laane ke liye likhi gayi thi."
+        }
+      ],
+      "sourceParagraph": 3726
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar is safar mein..."
+        }
+      ],
+      "sourceParagraph": 3727
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf ek pal ke liye bhi..."
+        }
+      ],
+      "sourceParagraph": 3728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumne apne mind ke shor ke peeche..."
+        }
+      ],
+      "sourceParagraph": 3729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "apni asli khamoshi ko mehsoos kiya..."
+        }
+      ],
+      "sourceParagraph": 3730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad..."
+        }
+      ],
+      "sourceParagraph": 3731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Last Shift..."
+        }
+      ],
+      "sourceParagraph": 3732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "already ho chuka hai."
+        }
+      ],
+      "sourceParagraph": 3733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab kitab band karo."
+        }
+      ],
+      "sourceParagraph": 3734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Screen band karo."
+        }
+      ],
+      "sourceParagraph": 3735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thodi der..."
+        }
+      ],
+      "sourceParagraph": 3736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf saans lo."
+        }
+      ],
+      "sourceParagraph": 3737
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahar dekho."
+        }
+      ],
+      "sourceParagraph": 3738
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aasmaan shayad wahi hai..."
+        }
+      ],
+      "sourceParagraph": 3739
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kal tha."
+        }
+      ],
+      "sourceParagraph": 3740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ho sakta hai..."
+        }
+      ],
+      "sourceParagraph": 3741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dekhne wala insaan..."
+        }
+      ],
+      "sourceParagraph": 3742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab pehle jaisa na ho."
+        }
+      ],
+      "sourceParagraph": 3743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar aisa hai..."
+        }
+      ],
+      "sourceParagraph": 3744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ye ending nahi."
+        }
+      ],
+      "sourceParagraph": 3745
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye tumhari life ka..."
+        }
+      ],
+      "sourceParagraph": 3746
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pehla sachcha page hai."
+        }
+      ],
+      "sourceParagraph": 3747
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Go."
+        }
+      ],
+      "sourceParagraph": 3748
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Live."
+        }
+      ],
+      "sourceParagraph": 3749
+    }
+  ]
+}

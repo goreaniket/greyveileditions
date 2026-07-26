@@ -1,0 +1,1382 @@
+{
+  "id": "chapter-08",
+  "kind": "chapter",
+  "label": "Chapter 8",
+  "title": "YOU DON’T LOSE PEOPLE — YOU LOSE YOUR VERSION OF THEM",
+  "shortTitle": "You Lose Your Version of Them",
+  "file": "chapters/17-chapter-08.json",
+  "index": 17,
+  "sourceRange": [
+    2264,
+    2414
+  ],
+  "number": "Chapter 8",
+  "headerSourceParagraphs": {
+    "number": 2264,
+    "title": 2265
+  },
+  "phase": "Arc II - The Awareness",
+  "sourceHeadingParagraphs": [
+    2264,
+    2265
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek stage aati hai logon ko samajhne ki jahan pe jo bhi tum connection ke baare mein sochte the, woh sab thoda unstable lagne lagta hai."
+        }
+      ],
+      "sourceParagraph": 2266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye nahi ki duniya achanak badal jaati hai."
+        }
+      ],
+      "sourceParagraph": 2267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye ki log achanak different ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 2268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye ki tumhara unhe dekhne ka tareeka dheere dheere andar se tootne lagta hai."
+        }
+      ],
+      "sourceParagraph": 2269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse ajeeb baat ye hai — koi obvious moment nahi hota jahan tum point karke keh sako, “yahin pe sab badal gaya.”"
+        }
+      ],
+      "sourceParagraph": 2270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi fight. Na koi ending. Na koi announcement."
+        }
+      ],
+      "sourceParagraph": 2271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek gradual shift hota hai jahan andar kuch aisa hota hai jo bahar jo ho raha hota hai usse match karna band kar deta hai."
+        }
+      ],
+      "sourceParagraph": 2272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh mismatch ek feeling create karta hai jise hum loss kehte hain."
+        }
+      ],
+      "sourceParagraph": 2273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe externally kuch bhi khatam na hua ho."
+        }
+      ],
+      "sourceParagraph": 2274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Asal mein tum life mein kabhi raw person ke saath interact nahi karte."
+        }
+      ],
+      "sourceParagraph": 2275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum hamesha unka ek constructed version hi dekhte ho."
+        }
+      ],
+      "sourceParagraph": 2276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek mental structure jo time ke saath build hota hai — conversations, emotional highs, chhote patterns, expectations, silence aur memories se."
+        }
+      ],
+      "sourceParagraph": 2277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab woh structure tumhare mind mein stable ho jaata hai, tum person ko directly dekhna band kar dete ho."
+        }
+      ],
+      "sourceParagraph": 2278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum us version ko dekhne lagte ho jo tumne khud banaya hota hai."
+        }
+      ],
+      "sourceParagraph": 2279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To jab reality thodi si bhi us internal version se shift hoti hai, mind use “situation change” ki tarah register nahi karta."
+        }
+      ],
+      "sourceParagraph": 2280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh use “connection loss” ki tarah register karta hai."
+        }
+      ],
+      "sourceParagraph": 2281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin asal mein jo collapse ho raha hota hai woh relationship nahi hota."
+        }
+      ],
+      "sourceParagraph": 2282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh internal model hota hai us relationship ka."
+        }
+      ],
+      "sourceParagraph": 2283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek simple si cheez lo."
+        }
+      ],
+      "sourceParagraph": 2284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek message aata hai."
+        }
+      ],
+      "sourceParagraph": 2285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ok”"
+        }
+      ],
+      "sourceParagraph": 2286,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas itna hi."
+        }
+      ],
+      "sourceParagraph": 2287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kuch galat hai, na kuch special."
+        }
+      ],
+      "sourceParagraph": 2288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Normal din pe toh ye notice bhi nahi hota."
+        }
+      ],
+      "sourceParagraph": 2289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ek slightly emotionally sensitive din pe wahi message completely different behave karta hai tumhare mind mein."
+        }
+      ],
+      "sourceParagraph": 2290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh ab message nahi rehta."
+        }
+      ],
+      "sourceParagraph": 2291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh signal ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 2292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur signals kabhi akela nahi chhoda jaate."
+        }
+      ],
+      "sourceParagraph": 2293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unhe interpret kiya jaata hai."
+        }
+      ],
+      "sourceParagraph": 2294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To mind turant gaps fill karna start karta hai:"
+        }
+      ],
+      "sourceParagraph": 2295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Why so short?"
+        }
+      ],
+      "sourceParagraph": 2296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch problem hai kya?"
+        }
+      ],
+      "sourceParagraph": 2297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maine kuch galat kiya kya?"
+        }
+      ],
+      "sourceParagraph": 2298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Energy off hai kya?"
+        }
+      ],
+      "sourceParagraph": 2299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch change ho gaya kya?"
+        }
+      ],
+      "sourceParagraph": 2300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab ek neutral interaction already emotional investigation ban chuka hota hai."
+        }
+      ],
+      "sourceParagraph": 2301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye ki message badla."
+        }
+      ],
+      "sourceParagraph": 2302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye ki tumhari internal sensitivity badal gayi."
+        }
+      ],
+      "sourceParagraph": 2303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye log ek basic truth ko samajhne mein galti karte hain."
+        }
+      ],
+      "sourceParagraph": 2304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kisi ko miss nahi kar rahe hote jab distance hota hai."
+        }
+      ],
+      "sourceParagraph": 2305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum us emotional state ko miss kar rahe hote ho jo woh tumhare andar activate karta tha."
+        }
+      ],
+      "sourceParagraph": 2306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh feeling ki tum easily accessible ho."
+        }
+      ],
+      "sourceParagraph": 2307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh feeling ki tumhe naturally reply mil raha hai."
+        }
+      ],
+      "sourceParagraph": 2308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh feeling ki tumhe kuch decode nahi karna pad raha."
+        }
+      ],
+      "sourceParagraph": 2309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh feeling ki tum kisi ke immediate attention space ka part ho."
+        }
+      ],
+      "sourceParagraph": 2310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh feeling comfort create karti hai."
+        }
+      ],
+      "sourceParagraph": 2311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur comfort, jab repeat hota hai, dheere dheere expectation ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 2312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur expectation woh point hai jahan interpretation experience ko replace karna start kar deta hai."
+        }
+      ],
+      "sourceParagraph": 2313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To jab woh comfort kam hota hai, mind use neutral change ki tarah process nahi karta."
+        }
+      ],
+      "sourceParagraph": 2314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh use emotional withdrawal ki tarah process karta hai."
+        }
+      ],
+      "sourceParagraph": 2315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin tum actually react kisi ki absence pe nahi kar rahe hote."
+        }
+      ],
+      "sourceParagraph": 2316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum us state ki absence pe react kar rahe hote ho jisme tum pehle the jab woh present the."
+        }
+      ],
+      "sourceParagraph": 2317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin mind life ko balanced form mein store nahi karta."
+        }
+      ],
+      "sourceParagraph": 2318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh peaks store karta hai."
+        }
+      ],
+      "sourceParagraph": 2319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh strongest conversations yaad rakhta hai, sabse emotional aligned moments, highest points of connection."
+        }
+      ],
+      "sourceParagraph": 2320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur beech ke sab average days quietly delete kar deta hai."
+        }
+      ],
+      "sourceParagraph": 2321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Normal replies."
+        }
+      ],
+      "sourceParagraph": 2322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Neutral silence."
+        }
+      ],
+      "sourceParagraph": 2323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unimportant interactions."
+        }
+      ],
+      "sourceParagraph": 2324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To memory mein jo bachta hai woh reality nahi hota."
+        }
+      ],
+      "sourceParagraph": 2325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh highlight version hota hai reality ka."
+        }
+      ],
+      "sourceParagraph": 2326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se distortion start hota hai."
+        }
+      ],
+      "sourceParagraph": 2327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ab present reality ko jab compare kiya jaata hai, toh woh actual past se compare nahi hoti."
+        }
+      ],
+      "sourceParagraph": 2328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh ek curated emotional version se compare hoti hai."
+        }
+      ],
+      "sourceParagraph": 2329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur curated memory hamesha zyada meaningful lagti hai ongoing reality se."
+        }
+      ],
+      "sourceParagraph": 2330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye ki woh sach hai."
+        }
+      ],
+      "sourceParagraph": 2331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye ki woh emotionally complete hoti hai."
+        }
+      ],
+      "sourceParagraph": 2332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dheere dheere bina notice kiye connection ka form bhi change ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 2333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Start mein interaction direct hota hai."
+        }
+      ],
+      "sourceParagraph": 2334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No analysis. No tracking. No meaning "
+        },
+        {
+          "text": "assign"
+        },
+        {
+          "text": " hota hai timing ko."
+        }
+      ],
+      "sourceParagraph": 2335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Message aata hai, tum reply karte ho. Simple."
+        }
+      ],
+      "sourceParagraph": 2336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin time ke saath emotional involvement badhta hai."
+        }
+      ],
+      "sourceParagraph": 2337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur involvement ke saath expectation aati hai."
+        }
+      ],
+      "sourceParagraph": 2338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur expectation perception ko change kar deti hai."
+        }
+      ],
+      "sourceParagraph": 2339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab delay sirf delay nahi hota."
+        }
+      ],
+      "sourceParagraph": 2340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh signal ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 2341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur signals interpretation demand karte hain."
+        }
+      ],
+      "sourceParagraph": 2342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To har interaction layers mein observe hone lagta hai."
+        }
+      ],
+      "sourceParagraph": 2343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Timing notice hoti hai."
+        }
+      ],
+      "sourceParagraph": 2344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Frequency notice hoti hai."
+        }
+      ],
+      "sourceParagraph": 2345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tone notice hoti hai."
+        }
+      ],
+      "sourceParagraph": 2346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Effort notice hota hai."
+        }
+      ],
+      "sourceParagraph": 2347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab observation monitoring ban jaata hai, connection experience hona band ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 2348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh evaluate hone lagta hai."
+        }
+      ],
+      "sourceParagraph": 2349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur evaluation natural flow ko destroy kar deta hai."
+        }
+      ],
+      "sourceParagraph": 2350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki flow continuous scrutiny ke under exist nahi kar sakta."
+        }
+      ],
+      "sourceParagraph": 2351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence is entire system ka sabse misunderstood part hai."
+        }
+      ],
+      "sourceParagraph": 2352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki silence khud mein kuch bhi nahi hota."
+        }
+      ],
+      "sourceParagraph": 2353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh neutral hota hai by default."
+        }
+      ],
+      "sourceParagraph": 2354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin mind neutrality ko long time tak allow nahi karta."
+        }
+      ],
+      "sourceParagraph": 2355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye woh silence ko immediately fill karta hai."
+        }
+      ],
+      "sourceParagraph": 2356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Explanation se."
+        }
+      ],
+      "sourceParagraph": 2357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Assumption se."
+        }
+      ],
+      "sourceParagraph": 2358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotional prediction se."
+        }
+      ],
+      "sourceParagraph": 2359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "busy hoga"
+        }
+      ],
+      "sourceParagraph": 2360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ignore kar raha hoga"
+        }
+      ],
+      "sourceParagraph": 2361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interest kam ho gaya hoga"
+        }
+      ],
+      "sourceParagraph": 2362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad kuch galat ho gaya"
+        }
+      ],
+      "sourceParagraph": 2363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo originally sirf absence of response tha, woh full emotional narrative ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 2364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye ki kuch communicate hua."
+        }
+      ],
+      "sourceParagraph": 2365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye ki mind empty space tolerate nahi kar sakta."
+        }
+      ],
+      "sourceParagraph": 2366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab narratives banne lagte hain, ek subtle cheez start hoti hai."
+        }
+      ],
+      "sourceParagraph": 2367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind evidence "
+        },
+        {
+          "text": "collect"
+        },
+        {
+          "text": " karna start karta hai."
+        }
+      ],
+      "sourceParagraph": 2368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Consciously nahi. Automatically."
+        }
+      ],
+      "sourceParagraph": 2369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh selective patterns notice karta hai:"
+        }
+      ],
+      "sourceParagraph": 2370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "late replies"
+        }
+      ],
+      "sourceParagraph": 2371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "short responses"
+        }
+      ],
+      "sourceParagraph": 2372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "less initiation"
+        }
+      ],
+      "sourceParagraph": 2373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reduced warmth"
+        }
+      ],
+      "sourceParagraph": 2374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Individually ye sab ordinary events hote hain."
+        }
+      ],
+      "sourceParagraph": 2375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin together woh ek structure banane lagte hain."
+        }
+      ],
+      "sourceParagraph": 2376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab structure ban jaata hai, mind use possibility nahi samajhta."
+        }
+      ],
+      "sourceParagraph": 2377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh use conclusion samajhne lagta hai."
+        }
+      ],
+      "sourceParagraph": 2378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur conclusion clarity jaisa feel hota hai."
+        }
+      ],
+      "sourceParagraph": 2379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe woh sirf emotional reinforcement hi kyu na ho."
+        }
+      ],
+      "sourceParagraph": 2380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye log feel karte hain ki doosre log badal gaye hain."
+        }
+      ],
+      "sourceParagraph": 2381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum kehte hain:"
+        }
+      ],
+      "sourceParagraph": 2382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Woh badal gaya.”"
+        }
+      ],
+      "sourceParagraph": 2383,
+      "role": "quote-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin most cases mein person nahi badalta."
+        }
+      ],
+      "sourceParagraph": 2384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hamari internal threshold for ambiguity badal jaati hai."
+        }
+      ],
+      "sourceParagraph": 2385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab hum emotionally stable hote hain, behavior normal lagta hai."
+        }
+      ],
+      "sourceParagraph": 2386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab hum emotionally attached hote hain, wahi behavior significant lagta hai."
+        }
+      ],
+      "sourceParagraph": 2387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab hum insecure hote hain, wahi behavior distant lagta hai."
+        }
+      ],
+      "sourceParagraph": 2388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To same person different internal states mein different lagta hai."
+        }
+      ],
+      "sourceParagraph": 2389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye ki woh transform hua."
+        }
+      ],
+      "sourceParagraph": 2390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye ki use different versions of us se observe kiya ja raha hota hai."
+        }
+      ],
+      "sourceParagraph": 2391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek important realization form hota hai."
+        }
+      ],
+      "sourceParagraph": 2392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum logon ko directly dekh hi nahi rahe hote."
+        }
+      ],
+      "sourceParagraph": 2393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum unhe apni internal condition ke reflection ki tarah dekh rahe hote ho."
+        }
+      ],
+      "sourceParagraph": 2394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh zyada tar interpretations ka cause nahi hote."
+        }
+      ],
+      "sourceParagraph": 2395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh ek surface hote hain jahan tumhara emotional state project hota hai."
+        }
+      ],
+      "sourceParagraph": 2396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye visible hota hai, andar kuch quietly change hota hai."
+        }
+      ],
+      "sourceParagraph": 2397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reactions kam ho jaate hain."
+        }
+      ],
+      "sourceParagraph": 2398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Certainty weak ho jaati hai."
+        }
+      ],
+      "sourceParagraph": 2399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Interpretation automatic nahi rehta."
+        }
+      ],
+      "sourceParagraph": 2400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na isliye ki sab clear ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 2401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Balki isliye ki sab less absolute ho jaata hai."
+        }
+      ],
+      "sourceParagraph": 2402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi real shift hai jisme ye poora understanding point karta hai."
+        }
+      ],
+      "sourceParagraph": 2403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum ek moment mein logon ko lose nahi karte."
+        }
+      ],
+      "sourceParagraph": 2404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum dheere dheere unke raw reality ke saath interact karna band kar dete ho."
+        }
+      ],
+      "sourceParagraph": 2405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us version ke saath interact karne lagte ho jo tumhara mind ne banaya tha."
+        }
+      ],
+      "sourceParagraph": 2406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab woh version finally toot jaata hai…"
+        }
+      ],
+      "sourceParagraph": 2407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to jo bachta hai woh drama nahi hota."
+        }
+      ],
+      "sourceParagraph": 2408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na closure. Na explanation."
+        }
+      ],
+      "sourceParagraph": 2409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf reality hoti hai — bina interpretation ke upar layer kiye hue."
+        }
+      ],
+      "sourceParagraph": 2410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh reality unusually simple lagti hai."
+        }
+      ],
+      "sourceParagraph": 2411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi even empty."
+        }
+      ],
+      "sourceParagraph": 2412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin woh pehli baar hoti hai jo actually real hoti hai."
+        }
+      ],
+      "sourceParagraph": 2413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "END OF CHAPTER 8",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2414,
+      "role": "chapter-end"
+    }
+  ]
+}

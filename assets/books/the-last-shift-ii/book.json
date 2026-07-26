@@ -1,0 +1,753 @@
+{
+  "id": "the-last-shift-ii",
+  "slug": "the-last-shift-ii",
+  "title": "The Last Shift II",
+  "subtitle": "Where the Mind Stops Explaining Itself: A Philosophical & Psychological Reflection on Perception, Awareness, Identity & Healing",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Mind",
+  "seriesDisplay": "The Human Mind Series",
+  "bookNumber": "Book II",
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-mind/assets/covers/the%20last%20shift%20pt-2%20.jpeg",
+  "cover": {
+    "web": "/assets/books/the-last-shift-ii/cover/front-cover.webp",
+    "print": "/assets/books/the-last-shift-ii/cover/front-cover-print.png",
+    "source": "/assets/books/the-last-shift-ii/cover/cover-source.png",
+    "alt": "The Last Shift II book cover"
+  },
+  "readerRoute": "/projects/human-mind/books/the-last-shift-ii/reader/",
+  "readerExitUrl": "/projects/human-mind/books/the-last-shift-ii.html",
+  "storageKey": "greyveil:the-last-shift-ii:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Mind",
+    "book": "The Last Shift II",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-last-shift-ii",
+    "variables": {
+      "light": {
+        "--reader-bg": "#DDE4E7",
+        "--reader-paper": "#F5EFE4",
+        "--reader-paper-soft": "#ECE4D8",
+        "--reader-text": "#24313B",
+        "--reader-heading": "#151E29",
+        "--reader-muted": "rgba(36, 49, 59, .72)",
+        "--reader-subtle": "rgba(36, 49, 59, .62)",
+        "--reader-faint": "rgba(36, 49, 59, .11)",
+        "--reader-rule": "rgba(65, 74, 98, .19)",
+        "--reader-border": "rgba(36, 49, 59, .20)",
+        "--reader-accent": "#515D79",
+        "--reader-accent-strong": "#303A59",
+        "--reader-accent-soft": "rgba(81, 93, 121, .10)",
+        "--reader-warm": "#8B745D",
+        "--reader-focus": "#404C70",
+        "--reader-control-bg": "#EFE8DE",
+        "--reader-control-border": "rgba(36, 49, 59, .18)",
+        "--reader-input-bg": "#FAF5EC",
+        "--reader-input-text": "#24313B",
+        "--reader-placeholder": "rgba(36, 49, 59, .56)",
+        "--reader-success": "#3C674A",
+        "--reader-error-text": "#94444B",
+        "--reader-page-edge": "rgba(81, 93, 121, .075)",
+        "--reader-shadow": "0 22px 58px rgba(27, 36, 47, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#DED4C7",
+        "--reader-paper": "#F1E4D1",
+        "--reader-paper-soft": "#E7D8C5",
+        "--reader-text": "#342F2A",
+        "--reader-heading": "#211E1C",
+        "--reader-muted": "rgba(52, 47, 42, .72)",
+        "--reader-subtle": "rgba(52, 47, 42, .62)",
+        "--reader-faint": "rgba(52, 47, 42, .12)",
+        "--reader-rule": "rgba(80, 70, 92, .20)",
+        "--reader-border": "rgba(52, 47, 42, .21)",
+        "--reader-accent": "#5A536E",
+        "--reader-accent-strong": "#433C5A",
+        "--reader-accent-soft": "rgba(90, 83, 110, .11)",
+        "--reader-warm": "#8A6D4F",
+        "--reader-focus": "#51496A",
+        "--reader-control-bg": "#EADBC7",
+        "--reader-control-border": "rgba(52, 47, 42, .19)",
+        "--reader-input-bg": "#F9EDDB",
+        "--reader-input-text": "#342F2A",
+        "--reader-placeholder": "rgba(52, 47, 42, .56)",
+        "--reader-success": "#48694C",
+        "--reader-error-text": "#93464C",
+        "--reader-page-edge": "rgba(90, 83, 110, .08)",
+        "--reader-shadow": "0 22px 54px rgba(50, 41, 33, .16)"
+      },
+      "dark": {
+        "--reader-bg": "#0D121A",
+        "--reader-paper": "#151C27",
+        "--reader-paper-soft": "#1D2632",
+        "--reader-text": "#ECE5DA",
+        "--reader-heading": "#F3EEE5",
+        "--reader-muted": "rgba(236, 229, 218, .76)",
+        "--reader-subtle": "rgba(236, 229, 218, .64)",
+        "--reader-faint": "rgba(236, 229, 218, .12)",
+        "--reader-rule": "rgba(169, 167, 195, .24)",
+        "--reader-border": "rgba(236, 229, 218, .21)",
+        "--reader-accent": "#A9A7C3",
+        "--reader-accent-strong": "#CBC8E2",
+        "--reader-accent-soft": "rgba(169, 167, 195, .15)",
+        "--reader-warm": "#C5A579",
+        "--reader-focus": "#D6D2F0",
+        "--reader-control-bg": "#192231",
+        "--reader-control-border": "rgba(236, 229, 218, .21)",
+        "--reader-input-bg": "#202A39",
+        "--reader-input-text": "#F1EBE2",
+        "--reader-placeholder": "rgba(241, 235, 226, .62)",
+        "--reader-success": "#A9D0AE",
+        "--reader-error-text": "#EDA9A4",
+        "--reader-page-edge": "rgba(169, 167, 195, .09)",
+        "--reader-shadow": "0 24px 68px rgba(2, 5, 9, .44)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Last Shift II",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        14
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "Contents",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        15,
+        47
+      ],
+      "headerSourceParagraphs": {
+        "title": 15
+      },
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "copyright",
+      "kind": "frontmatter",
+      "label": "Copyright",
+      "title": "Copyright",
+      "shortTitle": "Copyright",
+      "file": "chapters/02-copyright.json",
+      "index": 2,
+      "sourceRange": [
+        48,
+        53
+      ],
+      "headerSourceParagraphs": {
+        "title": 48
+      },
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "disclaimer",
+      "kind": "frontmatter",
+      "label": "Disclaimer",
+      "title": "Disclaimer",
+      "shortTitle": "Disclaimer",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        55,
+        59
+      ],
+      "headerSourceParagraphs": {
+        "title": 55
+      },
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "Dedication",
+      "shortTitle": "Dedication",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        61,
+        67
+      ],
+      "headerSourceParagraphs": {
+        "title": 61
+      },
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "authors-note",
+      "kind": "frontmatter",
+      "label": "Author's Note",
+      "title": "A Note from the Author",
+      "shortTitle": "Author's Note",
+      "file": "chapters/05-authors-note.json",
+      "index": 5,
+      "sourceRange": [
+        69,
+        78
+      ],
+      "headerSourceParagraphs": {
+        "title": 69
+      },
+      "suppressHeaderNumber": true
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "Before the First Crack",
+      "shortTitle": "Before the First Crack",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        79,
+        157
+      ],
+      "number": "Prologue",
+      "headerSourceParagraphs": {
+        "number": 79,
+        "title": 80
+      },
+      "sourceHeadingParagraphs": [
+        79,
+        80
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "Introduction",
+      "shortTitle": "Introduction",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        159,
+        232
+      ],
+      "headerSourceParagraphs": {
+        "title": 159
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        159
+      ]
+    },
+    {
+      "id": "arc-i",
+      "kind": "part",
+      "label": "Arc I",
+      "title": "THE DISTORTION",
+      "shortTitle": "Arc I - The Distortion",
+      "file": "chapters/08-arc-i.json",
+      "index": 8,
+      "sourceRange": [
+        238,
+        239
+      ],
+      "number": "ARC I",
+      "headerSourceParagraphs": {
+        "number": 238,
+        "title": 239
+      },
+      "sourceHeadingParagraphs": [
+        238,
+        239
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "Chapter 1",
+      "title": "WHAT WE FEEL VS WHAT IS!",
+      "shortTitle": "What We Feel vs What Is",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        241,
+        413
+      ],
+      "number": "Chapter 1",
+      "headerSourceParagraphs": {
+        "number": 241,
+        "title": 242
+      },
+      "phase": "Arc I - The Distortion",
+      "sourceHeadingParagraphs": [
+        241,
+        242
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "Chapter 2",
+      "title": "THE STORIES WE CREATE",
+      "shortTitle": "The Stories We Create",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        416,
+        586
+      ],
+      "number": "Chapter 2",
+      "headerSourceParagraphs": {
+        "number": 416,
+        "title": 417
+      },
+      "phase": "Arc I - The Distortion",
+      "sourceHeadingParagraphs": [
+        416,
+        417
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "Chapter 3",
+      "title": "THE INVISIBLE NARRATOR",
+      "shortTitle": "The Invisible Narrator",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        589,
+        1048
+      ],
+      "number": "Chapter 3",
+      "headerSourceParagraphs": {
+        "number": 589,
+        "title": 590
+      },
+      "phase": "Arc I - The Distortion",
+      "sourceHeadingParagraphs": [
+        589,
+        590
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "Chapter 4",
+      "title": "THE NEED TO BE RIGHT",
+      "shortTitle": "The Need to Be Right",
+      "file": "chapters/12-chapter-04.json",
+      "index": 12,
+      "sourceRange": [
+        1050,
+        1517
+      ],
+      "number": "Chapter 4",
+      "headerSourceParagraphs": {
+        "number": 1050,
+        "title": 1051
+      },
+      "phase": "Arc I - The Distortion",
+      "sourceHeadingParagraphs": [
+        1050,
+        1051
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "Chapter 5",
+      "title": "THE HIDDEN PRISON OF IDENTITY",
+      "shortTitle": "The Hidden Prison of Identity",
+      "file": "chapters/13-chapter-05.json",
+      "index": 13,
+      "sourceRange": [
+        1520,
+        1963
+      ],
+      "number": "Chapter 5",
+      "headerSourceParagraphs": {
+        "number": 1520,
+        "title": 1521
+      },
+      "phase": "Arc I - The Distortion",
+      "sourceHeadingParagraphs": [
+        1520,
+        1521
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "Chapter 6",
+      "title": "THE MOMENT YOU STOP EXPERIENCING, AND START EDITING",
+      "shortTitle": "Stop Experiencing, Start Editing",
+      "file": "chapters/14-chapter-06.json",
+      "index": 14,
+      "sourceRange": [
+        1966,
+        2091
+      ],
+      "number": "Chapter 6",
+      "headerSourceParagraphs": {
+        "number": 1966,
+        "title": 1967
+      },
+      "phase": "Arc I - The Distortion",
+      "sourceHeadingParagraphs": [
+        1966,
+        1967
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "Chapter 7",
+      "title": "YOU DON’T SEE PEOPLE — YOU SEE YOUR STATE",
+      "shortTitle": "You See Your State",
+      "file": "chapters/15-chapter-07.json",
+      "index": 15,
+      "sourceRange": [
+        2093,
+        2252
+      ],
+      "number": "Chapter 7",
+      "headerSourceParagraphs": {
+        "number": 2093,
+        "title": 2094
+      },
+      "phase": "Arc I - The Distortion",
+      "sourceHeadingParagraphs": [
+        2093,
+        2094
+      ]
+    },
+    {
+      "id": "arc-ii",
+      "kind": "part",
+      "label": "Arc II",
+      "title": "THE AWARENESS",
+      "shortTitle": "Arc II - The Awareness",
+      "file": "chapters/16-arc-ii.json",
+      "index": 16,
+      "sourceRange": [
+        2259,
+        2260
+      ],
+      "number": "ARC II",
+      "headerSourceParagraphs": {
+        "number": 2259,
+        "title": 2260
+      },
+      "sourceHeadingParagraphs": [
+        2259,
+        2260
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "Chapter 8",
+      "title": "YOU DON’T LOSE PEOPLE — YOU LOSE YOUR VERSION OF THEM",
+      "shortTitle": "You Lose Your Version of Them",
+      "file": "chapters/17-chapter-08.json",
+      "index": 17,
+      "sourceRange": [
+        2264,
+        2414
+      ],
+      "number": "Chapter 8",
+      "headerSourceParagraphs": {
+        "number": 2264,
+        "title": 2265
+      },
+      "phase": "Arc II - The Awareness",
+      "sourceHeadingParagraphs": [
+        2264,
+        2265
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "Chapter 9",
+      "title": "YOU WERE NEVER REJECTED — YOU WERE JUST INTERPRETING SIGNALS",
+      "shortTitle": "Interpreting Signals",
+      "file": "chapters/18-chapter-09.json",
+      "index": 18,
+      "sourceRange": [
+        2417,
+        2517
+      ],
+      "number": "Chapter 9",
+      "headerSourceParagraphs": {
+        "number": 2417,
+        "title": 2418
+      },
+      "phase": "Arc II - The Awareness",
+      "sourceHeadingParagraphs": [
+        2417,
+        2418
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "kind": "chapter",
+      "label": "Chapter 10",
+      "title": "YOU ARE NOT IN PAIN — YOU ARE JUST BELIEVING YOUR THOUGHTS",
+      "shortTitle": "Believing Your Thoughts",
+      "file": "chapters/19-chapter-10.json",
+      "index": 19,
+      "sourceRange": [
+        2519,
+        2675
+      ],
+      "number": "Chapter 10",
+      "headerSourceParagraphs": {
+        "number": 2519,
+        "title": 2520
+      },
+      "phase": "Arc II - The Awareness",
+      "sourceHeadingParagraphs": [
+        2519,
+        2520
+      ]
+    },
+    {
+      "id": "chapter-11",
+      "kind": "chapter",
+      "label": "Chapter 11",
+      "title": "YOU WERE NEVER A FIXED SELF — JUST A MOVING EXPERIENCE",
+      "shortTitle": "A Moving Experience",
+      "file": "chapters/20-chapter-11.json",
+      "index": 20,
+      "sourceRange": [
+        2678,
+        2808
+      ],
+      "number": "Chapter 11",
+      "headerSourceParagraphs": {
+        "number": 2678,
+        "title": 2679
+      },
+      "phase": "Arc II - The Awareness",
+      "sourceHeadingParagraphs": [
+        2678,
+        2679
+      ]
+    },
+    {
+      "id": "arc-iii",
+      "kind": "part",
+      "label": "Arc III",
+      "title": "THE HEALING",
+      "shortTitle": "Arc III - The Healing",
+      "file": "chapters/21-arc-iii.json",
+      "index": 21,
+      "sourceRange": [
+        2814,
+        2815
+      ],
+      "number": "ARC III",
+      "headerSourceParagraphs": {
+        "number": 2814,
+        "title": 2815
+      },
+      "sourceHeadingParagraphs": [
+        2814,
+        2815
+      ]
+    },
+    {
+      "id": "chapter-12",
+      "kind": "chapter",
+      "label": "Chapter 12",
+      "title": "WHEN EVERYTHING BECOMES CLEAR, NOTHING NEEDS TO BE SOLVED",
+      "shortTitle": "Nothing Needs to Be Solved",
+      "file": "chapters/22-chapter-12.json",
+      "index": 22,
+      "sourceRange": [
+        2819,
+        2927
+      ],
+      "number": "Chapter 12",
+      "headerSourceParagraphs": {
+        "number": 2819,
+        "title": 2820
+      },
+      "phase": "Arc III - The Healing",
+      "sourceHeadingParagraphs": [
+        2819,
+        2820
+      ]
+    },
+    {
+      "id": "chapter-13",
+      "kind": "chapter",
+      "label": "Chapter 13",
+      "title": "HEALING WAS NEVER ABOUT FIXING YOURSELF",
+      "shortTitle": "Healing Was Never Fixing",
+      "file": "chapters/23-chapter-13.json",
+      "index": 23,
+      "sourceRange": [
+        2929,
+        3399
+      ],
+      "number": "Chapter 13",
+      "headerSourceParagraphs": {
+        "number": 2929,
+        "title": 2930
+      },
+      "phase": "Arc III - The Healing",
+      "sourceHeadingParagraphs": [
+        2929,
+        2930
+      ]
+    },
+    {
+      "id": "arc-iv",
+      "kind": "part",
+      "label": "Arc IV",
+      "title": "THE LAST SHIFT",
+      "shortTitle": "Arc IV - The Last Shift",
+      "file": "chapters/24-arc-iv.json",
+      "index": 24,
+      "sourceRange": [
+        3405,
+        3406
+      ],
+      "number": "ARC IV",
+      "headerSourceParagraphs": {
+        "number": 3405,
+        "title": 3406
+      },
+      "sourceHeadingParagraphs": [
+        3405,
+        3406
+      ]
+    },
+    {
+      "id": "chapter-14",
+      "kind": "chapter",
+      "label": "Chapter 14",
+      "title": "CHAPTER 14: NOW LIVE",
+      "shortTitle": "Now Live",
+      "file": "chapters/25-chapter-14.json",
+      "index": 25,
+      "sourceRange": [
+        3409,
+        3593
+      ],
+      "headerSourceParagraphs": {
+        "title": 3409
+      },
+      "phase": "Arc IV - The Last Shift",
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        3409
+      ]
+    },
+    {
+      "id": "final-reflection",
+      "kind": "ending",
+      "label": "Final Reflection",
+      "title": "Final Reflection — After the Shift",
+      "shortTitle": "Final Reflection",
+      "file": "chapters/26-final-reflection.json",
+      "index": 26,
+      "sourceRange": [
+        3595,
+        3629
+      ],
+      "headerSourceParagraphs": {
+        "title": 3595
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        3595
+      ]
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "THE LAST SHIFT",
+      "shortTitle": "Epilogue",
+      "file": "chapters/27-epilogue.json",
+      "index": 27,
+      "sourceRange": [
+        3631,
+        3749
+      ],
+      "number": "Epilogue",
+      "headerSourceParagraphs": {
+        "number": 3631,
+        "title": 3632
+      },
+      "sourceHeadingParagraphs": [
+        3631,
+        3632
+      ]
+    },
+    {
+      "id": "about-author",
+      "kind": "frontmatter",
+      "label": "About the Author",
+      "title": "About the Author",
+      "shortTitle": "About the Author",
+      "file": "chapters/28-about-author.json",
+      "index": 28,
+      "sourceRange": [
+        3751,
+        3759
+      ],
+      "headerSourceParagraphs": {
+        "title": 3751
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        3751
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "Word manuscript is the primary source for this reader.",
+    "The PDF was used only to verify chapter order, front matter, final matter, and content flow.",
+    "The Word title page uses THE LAST SHIFT-II while the existing public site uses The Last Shift II; public metadata keeps the existing site title and the source-driven opening preserves the manuscript title-page line.",
+    "The title page includes THE HUMAN FICTION COLLECTION in the source; it is preserved as manuscript front-matter text without changing the requested collection metadata."
+  ]
+}

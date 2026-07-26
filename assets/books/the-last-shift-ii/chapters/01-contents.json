@@ -1,0 +1,199 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "Contents",
+  "shortTitle": "Contents",
+  "file": "chapters/01-contents.json",
+  "index": 1,
+  "sourceRange": [
+    15,
+    47
+  ],
+  "headerSourceParagraphs": {
+    "title": 15
+  },
+  "suppressHeaderNumber": true,
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright .......................................4",
+      "sourceParagraph": 16,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ......................................5",
+      "sourceParagraph": 17,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ......................................6",
+      "sourceParagraph": 18,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-line",
+      "text": "A Note from the Author .................... 7",
+      "sourceParagraph": 19,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-line",
+      "text": "Prologue: Before the First Crack ........ 8",
+      "sourceParagraph": 20,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-line",
+      "text": "Introduction ..................................... 12",
+      "sourceParagraph": 21,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-heading",
+      "text": "*ARC I: THE DISTORTION*",
+      "sourceParagraph": 22,
+      "role": "contents-heading"
+    },
+    {
+      "type": "toc-line",
+      "text": "Where the Mind Slowly Becomes Your Reality",
+      "sourceParagraph": 23,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1: WHAT WE FEEL VS WHAT IS! .................... 17",
+      "sourceParagraph": 24,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2: THE STORIES WE CREATE .......... 27",
+      "sourceParagraph": 25,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3: THE INVISIBLE NARRATOR .............. 37",
+      "sourceParagraph": 26,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4: THE NEED TO BE RIGHT ............... 64",
+      "sourceParagraph": 27,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5: THE HIDDEN PRISON OF IDENTITY ......... 91",
+      "sourceParagraph": 28,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6: THE MOMENT YOU STOP EXPERIENCING, AND START EDITING ........... 116",
+      "sourceParagraph": 29,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7: YOU DON’T SEE PEOPLE: YOU SEE YOUR STATE ............ 124",
+      "sourceParagraph": 30,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-heading",
+      "text": "*ARC II: THE AWARENESS*",
+      "sourceParagraph": 31,
+      "role": "contents-heading"
+    },
+    {
+      "type": "toc-line",
+      "text": "Seeing the Mind Instead of Becoming It",
+      "sourceParagraph": 32,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8: YOU DON’T LOSE PEOPLE: YOU LOSE YOUR VERSION OF THEM ......... 136",
+      "sourceParagraph": 33,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9: YOU WERE NEVER REJECTED: YOU WERE JUST INTERPRETING SIGNALS ............ 147",
+      "sourceParagraph": 34,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 10: YOU ARE NOT IN PAIN: YOU ARE JUST BELIEVING YOUR THOUGHTS ..............154",
+      "sourceParagraph": 35,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 11: YOU WERE NEVER A FIXED SELF: JUST A MOVING EXPERIENCE .................163",
+      "sourceParagraph": 36,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-heading",
+      "text": "*ARC III: THE HEALING*",
+      "sourceParagraph": 38,
+      "role": "contents-heading"
+    },
+    {
+      "type": "toc-line",
+      "text": "Not Becoming Better. Becoming Real.",
+      "sourceParagraph": 39,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 12: WHEN EVERYTHING BECOMES CLEAR, NOTHING NEEDS TO BE SOLVED .......... 172",
+      "sourceParagraph": 40,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 13: HEALING WAS NEVER ABOUT FIXING YOURSELF .............179",
+      "sourceParagraph": 41,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-heading",
+      "text": "*ARC IV: THE LAST SHIFT*",
+      "sourceParagraph": 43,
+      "role": "contents-heading"
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 14: NOW LIVE .................................203",
+      "sourceParagraph": 44,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-heading",
+      "text": "Final Reflection: After the Shift .............. 212",
+      "sourceParagraph": 45,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-heading",
+      "text": "Epilogue: The Last Page Was Never the End ....... 215",
+      "sourceParagraph": 46,
+      "role": "contents-line"
+    },
+    {
+      "type": "toc-heading",
+      "text": "About the Author ................................. 221",
+      "sourceParagraph": 47,
+      "role": "contents-line"
+    }
+  ]
+}
