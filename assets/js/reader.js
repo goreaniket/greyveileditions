@@ -5,24 +5,186 @@
   const PAGINATION_DELAY = 80;
   const SCROLL_SAVE_DELAY = 120;
 
-  // Minimum book.json schema: id, title, readerRoute, storageKey,
-  // feedbackEndpoint, feedbackContext, occupationOptions, ratingOptions, and
-  // units[] with each unit file containing ordered elements and sourceParagraph anchors.
+  // Minimum book.json schema: id, title, readerRoute, themeStylesheet,
+  // designSpecFile, feedbackEndpoint, feedbackContext, occupationOptions,
+  // ratingOptions, and units[] with each unit file containing ordered elements
+  // and sourceParagraph anchors.
   const body = document.body;
-  const bookUrl = body.dataset.bookUrl;
-  const pagesRoot = document.querySelector("[data-reader-pages]");
-  const loading = document.querySelector("[data-reader-loading]");
-  const statusNode = document.querySelector("[data-reader-status]");
-  const progressLabel = document.querySelector("[data-progress-label]");
-  const progressBar = document.querySelector("[data-progress-bar]");
-  const openContentsButton = document.querySelector("[data-open-contents]");
-  const closeContentsButton = document.querySelector("[data-close-contents]");
-  const drawer = document.querySelector("[data-contents-drawer]");
-  const drawerBackdrop = document.querySelector("[data-contents-backdrop]");
-  const contentsList = document.querySelector("[data-contents-list]");
-  const fontDecrease = document.querySelector("[data-font-decrease]");
-  const fontIncrease = document.querySelector("[data-font-increase]");
-  const themeButtons = Array.from(document.querySelectorAll("[data-theme-choice]"));
+  let bookUrl = body.dataset.bookUrl || "";
+  let pagesRoot = null;
+  let loading = null;
+  let statusNode = null;
+  let progressLabel = null;
+  let progressBar = null;
+  let openContentsButton = null;
+  let closeContentsButton = null;
+  let drawer = null;
+  let drawerBackdrop = null;
+  let contentsList = null;
+  let fontDecrease = null;
+  let fontIncrease = null;
+  let themeButtons = [];
+
+  const createNode = (tagName, attributes = {}, text = "") => {
+    const node = document.createElement(tagName);
+    Object.entries(attributes).forEach(([name, value]) => {
+      if (value === false || value == null) return;
+      node.setAttribute(name, value === true ? "" : value);
+    });
+    if (text) node.textContent = text;
+    return node;
+  };
+
+  const createReaderShell = () => {
+    body.classList.add("reader-book");
+    body.dataset.readerShell = "shared";
+
+    const fragment = document.createDocumentFragment();
+    const skipLink = createNode("a", { class: "reader-skip-link", href: "#reader-content" }, "Skip to book content");
+
+    const toolbar = createNode("header", { class: "reader-toolbar", "aria-label": "Reader controls" });
+    const primary = createNode("div", { class: "reader-toolbar__primary" });
+    const exitLink = createNode(
+      "a",
+      {
+        class: "reader-control reader-control--exit",
+        href: body.dataset.readerExitUrl || "../",
+        "data-reader-exit": "",
+      },
+      body.dataset.readerExitLabel || "Exit Reader"
+    );
+    const contentsButton = createNode(
+      "button",
+      {
+        class: "reader-control",
+        type: "button",
+        "aria-expanded": "false",
+        "aria-controls": "reader-contents",
+        "data-open-contents": "",
+      },
+      "Contents"
+    );
+    const status = createNode("p", { class: "reader-status", "data-reader-status": "" }, "Opening book");
+    const progress = createNode("div", { class: "reader-progress", "aria-label": "Reading progress" });
+    const progressText = createNode("span", { "data-progress-label": "" }, "0%");
+    const progressTrack = createNode("span", { class: "reader-progress__track", "aria-hidden": "true" });
+    progressTrack.append(createNode("span", { "data-progress-bar": "" }));
+    progress.append(progressText, progressTrack);
+    primary.append(exitLink, contentsButton, status, progress);
+
+    const secondary = createNode("div", { class: "reader-toolbar__secondary" });
+    const fontControls = createNode("div", { class: "reader-control-group", "aria-label": "Font size" });
+    fontControls.append(
+      createNode(
+        "button",
+        {
+          class: "reader-control reader-control--icon",
+          type: "button",
+          "aria-label": "Decrease font size",
+          "data-font-decrease": "",
+        },
+        "A-"
+      ),
+      createNode(
+        "button",
+        {
+          class: "reader-control reader-control--icon",
+          type: "button",
+          "aria-label": "Increase font size",
+          "data-font-increase": "",
+        },
+        "A+"
+      )
+    );
+    const themeSwitcher = createNode("div", { class: "reader-theme-switcher", "aria-label": "Theme" });
+    ["light", "sepia", "dark"].forEach((themeName) => {
+      themeSwitcher.append(
+        createNode(
+          "button",
+          {
+            class: "reader-control",
+            type: "button",
+            "data-theme-choice": themeName,
+            "aria-pressed": String(themeName === "light"),
+          },
+          themeName.charAt(0).toUpperCase() + themeName.slice(1)
+        )
+      );
+    });
+    secondary.append(fontControls, themeSwitcher);
+    toolbar.append(primary, secondary);
+
+    const main = createNode("main", { id: "reader-content", class: "reader-stage", "aria-live": "polite" });
+    const loadingNode = createNode("div", { class: "reader-loading", "data-reader-loading": "" });
+    loadingNode.append(createNode("p", {}, "Setting the pages..."));
+    const article = createNode("article", {
+      class: "reader-pages",
+      "data-reader-pages": "",
+      "aria-label": body.dataset.readerLabel || "Book",
+    });
+    main.append(loadingNode, article);
+
+    const backdrop = createNode("div", { class: "contents-backdrop", "data-contents-backdrop": "", hidden: "" });
+    const contentsDrawer = createNode("aside", {
+      class: "contents-drawer",
+      id: "reader-contents",
+      role: "dialog",
+      "aria-modal": "true",
+      "aria-hidden": "true",
+      "aria-labelledby": "reader-contents-title",
+      "data-contents-drawer": "",
+      inert: "",
+    });
+    const drawerHeader = createNode("div", { class: "contents-drawer__header" });
+    const drawerTitleGroup = createNode("div");
+    drawerTitleGroup.append(
+      createNode("p", { class: "contents-drawer__eyebrow", "data-reader-publisher": "" }, body.dataset.readerBrand || "Greyveil Editions"),
+      createNode("h2", { id: "reader-contents-title" }, "Contents")
+    );
+    drawerHeader.append(
+      drawerTitleGroup,
+      createNode(
+        "button",
+        {
+          class: "reader-control reader-control--icon",
+          type: "button",
+          "aria-label": "Close contents",
+          "data-close-contents": "",
+        },
+        "Close"
+      )
+    );
+    contentsDrawer.append(
+      drawerHeader,
+      createNode("nav", { class: "contents-list", "aria-label": "Book contents", "data-contents-list": "" })
+    );
+
+    fragment.append(skipLink, toolbar, main, backdrop, contentsDrawer);
+    body.prepend(fragment);
+  };
+
+  const bindReaderNodes = () => {
+    bookUrl = body.dataset.bookUrl || "";
+    pagesRoot = document.querySelector("[data-reader-pages]");
+    loading = document.querySelector("[data-reader-loading]");
+    statusNode = document.querySelector("[data-reader-status]");
+    progressLabel = document.querySelector("[data-progress-label]");
+    progressBar = document.querySelector("[data-progress-bar]");
+    openContentsButton = document.querySelector("[data-open-contents]");
+    closeContentsButton = document.querySelector("[data-close-contents]");
+    drawer = document.querySelector("[data-contents-drawer]");
+    drawerBackdrop = document.querySelector("[data-contents-backdrop]");
+    contentsList = document.querySelector("[data-contents-list]");
+    fontDecrease = document.querySelector("[data-font-decrease]");
+    fontIncrease = document.querySelector("[data-font-increase]");
+    themeButtons = Array.from(document.querySelectorAll("[data-theme-choice]"));
+  };
+
+  if (!document.querySelector("[data-reader-pages]")) {
+    createReaderShell();
+  }
+
+  bindReaderNodes();
 
   const requiredNodes = {
     bookUrl,
@@ -43,7 +205,9 @@
     .filter(([, node]) => !node)
     .map(([name]) => name);
 
-  if (missingNodes.length || themeButtons.length !== 3) {
+  if (themeButtons.length !== 3) missingNodes.push("themeButtons");
+
+  if (missingNodes.length) {
     console.error(`Reader markup is missing required controls: ${missingNodes.join(", ")}`);
     return;
   }
@@ -64,6 +228,67 @@
   }
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+  const updateReaderShellFromBook = () => {
+    const publisher = book.publisher || "Greyveil Editions";
+    const title = book.title || "Book";
+    const article = document.querySelector("[data-reader-pages]");
+    const publisherNode = document.querySelector("[data-reader-publisher]");
+    const exitLink = document.querySelector("[data-reader-exit], .reader-control--exit");
+    const description = document.querySelector("meta[name='description']");
+
+    if (article) article.setAttribute("aria-label", title);
+    if (publisherNode) publisherNode.textContent = publisher;
+    if (exitLink) {
+      const configuredExit = body.dataset.readerExitUrl || book.readerExitUrl || book.detailPageUrl;
+      if (configuredExit) exitLink.setAttribute("href", configuredExit);
+      exitLink.textContent = body.dataset.readerExitLabel || "Exit Reader";
+    }
+
+    if (!body.dataset.readerPreserveTitle) {
+      document.title = `${title} Reader | ${publisher}`;
+    }
+
+    if (description && !body.dataset.readerPreserveDescription) {
+      const author = book.author ? ` by ${book.author}` : "";
+      description.setAttribute("content", `A continuous paginated ${publisher} reader for ${title}${author}.`);
+    }
+  };
+
+  const loadStylesheet = (href, label) => new Promise((resolve) => {
+    if (!href) {
+      resolve();
+      return;
+    }
+
+    const absoluteHref = new URL(href, window.location.href).href;
+    const existing = Array.from(document.querySelectorAll("link[rel~='stylesheet']"))
+      .find((link) => link.href === absoluteHref);
+
+    if (existing) {
+      resolve();
+      return;
+    }
+
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = absoluteHref;
+    link.dataset.readerBookStylesheet = label || "book-theme";
+    link.addEventListener("load", () => resolve(), { once: true });
+    link.addEventListener("error", () => {
+      console.warn(`Reader stylesheet could not be loaded: ${absoluteHref}`);
+      resolve();
+    }, { once: true });
+    document.head.append(link);
+  });
+
+  const loadBookStylesheet = async (bookResponseUrl) => {
+    const stylesheet = book.themeStylesheet || book.themeStylesheetFile || book.theme?.stylesheet;
+    if (!stylesheet) return;
+
+    const bookRootUrl = new URL(".", bookResponseUrl.href);
+    await loadStylesheet(new URL(stylesheet, bookRootUrl).href, book.id);
+  };
 
   const readState = () => {
     if (!book) return {};
@@ -857,6 +1082,8 @@
     if (!book.id || !book.title || !Array.isArray(book.units)) {
       throw new Error("Book configuration is missing required metadata.");
     }
+    updateReaderShellFromBook();
+    await loadBookStylesheet(bookResponseUrl);
     book.storageKey = book.storageKey || `greyveil:${book.id}:continuous-reader:v2`;
     book.feedbackContext = { ...(book.feedbackContext || {}), feedbackType: book.feedbackContext?.feedbackType || "book" };
     savedState = readState();

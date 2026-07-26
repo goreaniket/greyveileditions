@@ -12,6 +12,7 @@
   "editionYear": "2026",
   "coverUrl": "/projects/human-mind/assets/covers/the%20last%20shift.jpeg",
   "readerRoute": "/projects/human-mind/books/the-last-shift/reader/",
+  "readerExitUrl": "/projects/human-mind/books/the-last-shift.html",
   "storageKey": "greyveil:the-last-shift:continuous-reader:v2",
   "designSpecFile": "design-spec.json",
   "themeStylesheet": "theme.css",

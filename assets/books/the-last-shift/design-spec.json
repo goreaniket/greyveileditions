@@ -3,200 +3,296 @@
   "title": "The Last Shift",
   "collection": "The Human Paradox Collection",
   "series": "Human Mind",
-  "visualThemeName": "Displaced Thresholds",
+  "visualThemeName": "Displaced Silence",
+  "designPurpose": "A quiet psychological reader identity built around emotional distance, gradual transition, and small displaced marks that feel like thoughts moving out of alignment.",
   "emotionalKeywords": [
-    "quiet",
-    "psychological",
-    "reflective",
-    "restrained",
-    "distant",
-    "transitional",
-    "mist-like"
+    "quiet psychological reflection",
+    "shifting",
+    "displacement",
+    "silence",
+    "emotional distance",
+    "gradual transition",
+    "mist-blue",
+    "indigo",
+    "warm ivory",
+    "deep slate"
   ],
-  "trimReference": {
-    "digitalRatio": "11:16",
-    "fixedPageEquivalent": "5.5in x 8.5in",
-    "orientation": "portrait"
+  "colorSystem": {
+    "light": {
+      "outerCanvas": "#E5EAEE",
+      "paper": "#F7F1E6",
+      "paperSoft": "#EFE7D9",
+      "text": "#24303C",
+      "heading": "#192533",
+      "mutedText": "rgba(36, 48, 60, 0.72)",
+      "subtleText": "rgba(36, 48, 60, 0.58)",
+      "faintRule": "rgba(36, 48, 60, 0.10)",
+      "pageRule": "rgba(64, 80, 105, 0.18)",
+      "inputBorder": "rgba(36, 48, 60, 0.22)",
+      "accent": "#405678",
+      "accentStrong": "#2E3F61",
+      "accentSoft": "rgba(64, 86, 120, 0.10)",
+      "mist": "#B8C4CF",
+      "warmMist": "#7E8F9B",
+      "focus": "#31496D",
+      "controlBackground": "#F2EBDD",
+      "inputBackground": "#FBF7EE",
+      "pageEdge": "rgba(64, 86, 120, 0.085)",
+      "pageShadow": "0 22px 56px rgba(27, 39, 51, 0.13)"
+    },
+    "sepia": {
+      "outerCanvas": "#DED7CC",
+      "paper": "#F3E6D5",
+      "paperSoft": "#EADCCB",
+      "text": "#332F2B",
+      "heading": "#24211F",
+      "mutedText": "rgba(51, 47, 43, 0.72)",
+      "subtleText": "rgba(51, 47, 43, 0.58)",
+      "faintRule": "rgba(51, 47, 43, 0.11)",
+      "pageRule": "rgba(79, 88, 114, 0.20)",
+      "inputBorder": "rgba(51, 47, 43, 0.22)",
+      "accent": "#4F5872",
+      "accentStrong": "#39445F",
+      "accentSoft": "rgba(79, 88, 114, 0.11)",
+      "mist": "#AEB5BA",
+      "warmMist": "#706E6B",
+      "focus": "#43516F",
+      "controlBackground": "#EEE0CD",
+      "inputBackground": "#FAEEDC",
+      "pageEdge": "rgba(79, 88, 114, 0.075)",
+      "pageShadow": "0 22px 52px rgba(48, 39, 31, 0.15)"
+    },
+    "dark": {
+      "outerCanvas": "#0E1622",
+      "paper": "#172131",
+      "paperSoft": "#1F2A3A",
+      "text": "#EEE9DF",
+      "heading": "#F6F0E7",
+      "mutedText": "rgba(238, 233, 223, 0.76)",
+      "subtleText": "rgba(238, 233, 223, 0.62)",
+      "faintRule": "rgba(238, 233, 223, 0.12)",
+      "pageRule": "rgba(155, 170, 214, 0.23)",
+      "inputBorder": "rgba(238, 233, 223, 0.22)",
+      "accent": "#9BAAD6",
+      "accentStrong": "#C4CEF0",
+      "accentSoft": "rgba(155, 170, 214, 0.15)",
+      "mist": "#74849E",
+      "warmMist": "#A5B5C0",
+      "focus": "#CDD7FF",
+      "controlBackground": "#1C2737",
+      "inputBackground": "#222E40",
+      "pageEdge": "rgba(155, 170, 214, 0.09)",
+      "pageShadow": "0 24px 64px rgba(0, 0, 0, 0.40)"
+    }
   },
-  "lightTheme": {
-    "outerCanvas": "#E7E9EA",
-    "paper": "#F7F3EA",
-    "paperSecondary": "#F0EBE1",
-    "bodyText": "#293440",
-    "headingText": "#1F2935",
-    "primary": "#4B5878",
-    "secondary": "#91A6B5",
-    "accent": "#586F7F",
-    "pageBorder": "rgba(75, 88, 120, 0.18)",
-    "pageShadow": "0 18px 50px rgba(35, 45, 55, 0.11)"
+  "fonts": {
+    "display": "Cormorant Garamond, Georgia, serif",
+    "body": "Georgia, Times New Roman, serif",
+    "interface": "Inter, Arial, sans-serif"
   },
-  "sepiaTheme": {
-    "outerCanvas": "#E3D8C8",
-    "paper": "#F2E7D6",
-    "paperSecondary": "#EADFCE",
-    "bodyText": "#39342F",
-    "headingText": "#2D2925",
-    "primary": "#59617A",
-    "secondary": "#96999C",
-    "accent": "#68615C",
-    "pageBorder": "rgba(89, 97, 122, 0.19)",
-    "pageShadow": "0 18px 48px rgba(67, 55, 43, 0.14)"
+  "typography": {
+    "bodyFontSizeDesktop": "18px",
+    "bodyFontSizeTablet": "17.5px minimum via shared reader floor",
+    "bodyFontSizeMobile": "17px minimum",
+    "lineHeight": 1.72,
+    "paragraphIndent": "1.08em",
+    "paragraphSpacing": "0.34em between adjacent body paragraphs",
+    "quoteDesktop": "25px / 1.26",
+    "quoteMobile": "22px / 1.24",
+    "interfaceControlSize": "12px to 12.5px, 700 weight",
+    "letterSpacing": "0 for all display headings; 0.12em only for small uppercase metadata"
   },
-  "darkTheme": {
-    "outerCanvas": "#111720",
-    "paper": "#1A222C",
-    "paperSecondary": "#202A36",
-    "bodyText": "#EDE8DF",
-    "headingText": "#F4EFE7",
-    "primary": "#9EA8CD",
-    "secondary": "#748196",
-    "accent": "#8F9BAA",
-    "pageBorder": "rgba(158, 168, 205, 0.23)",
-    "pageShadow": "0 22px 58px rgba(3, 7, 12, 0.38)"
+  "pageGeometry": {
+    "desktop": {
+      "viewportRange": "1025px and wider",
+      "pageWidth": "654px",
+      "pageHeight": "1008px",
+      "pagePadding": "82px 70px",
+      "bodyMeasure": "approximately 60-72 characters per line",
+      "pageGap": "58px",
+      "proportionReference": "close to 5.5 x 8.5 trade-book portrait"
+    },
+    "tablet": {
+      "viewportRange": "641px to 1024px",
+      "pageWidth": "min(638px, calc(100vw - 56px))",
+      "pageHeight": "940px",
+      "pagePadding": "64px 56px",
+      "bodyMeasure": "centered literary page with balanced outer margins"
+    },
+    "mobile": {
+      "viewportRange": "320px to 640px",
+      "pageWidth": "calc(100vw - 20px)",
+      "pageHeight": "min(900px, calc(100svh - 118px))",
+      "pagePadding": "36px 18px",
+      "stageGutter": "8px left and right",
+      "safeHorizontalPadding": "18px to 22px",
+      "bodyFontFloor": "17px",
+      "overflowRule": "no horizontal overflow; title and chapter headings constrained by max-width and reduced motif scale"
+    }
   },
-  "displayFont": "Cormorant Garamond, Georgia, serif",
-  "bodyFont": "Georgia, Times New Roman, serif",
-  "interfaceFont": "Inter, Arial, sans-serif",
-  "bodyFontSizeDesktop": "18px",
-  "bodyFontSizeTablet": "17px minimum",
-  "bodyFontSizeMobile": "17px minimum",
-  "lineHeight": 1.7,
-  "paragraphIndent": "1.1em",
-  "pageWidthDesktop": "660px",
-  "pageHeightDesktop": "960px",
-  "pagePaddingDesktop": "76px 68px",
-  "pagePaddingTablet": "60px 52px",
-  "pagePaddingMobile": "38px 20px",
-  "titlePageStyle": {
-    "alignment": "left",
-    "titleSizeDesktop": "88px",
-    "titleSizeMobile": "54px",
-    "titleLineHeight": 0.88,
-    "copyMaxWidth": "470px",
-    "coverTreatment": "Hidden on the interior title page; cover palette informs the edition",
-    "motif": "Two horizontal rules, 92px and 58px, offset by 14px",
-    "whitespace": "Copy vertically centered with a slight upward optical shift"
+  "semanticPageTypes": {
+    "titlePage": {
+      "composition": "left-set title block centered vertically with a slight upward optical shift",
+      "titleSizeDesktop": "86px",
+      "titleSizeTablet": "72px",
+      "titleSizeMobile": "52px",
+      "lineHeight": 0.88,
+      "copyMaxWidth": "452px",
+      "coverTreatment": "cover image hidden inside the reader title page",
+      "motif": "two displaced horizontal rules, 96px and 58px, offset 14px horizontally and 12px vertically"
+    },
+    "dedicationOrEpigraph": {
+      "composition": "centered, quiet, with generous vertical breathing room",
+      "textSizeDesktop": "29px",
+      "textSizeMobile": "23px",
+      "motif": "paired short rules above the dedication, centered but intentionally offset"
+    },
+    "contentsPage": {
+      "headingSizeDesktop": "49px",
+      "headingSizeMobile": "38px",
+      "entrySizeDesktop": "14px",
+      "entrySizeMobile": "12px",
+      "treatment": "unboxed editorial lines; source leaders preserved; active drawer item uses a slim indigo left rule"
+    },
+    "chapterOpeningPage": {
+      "alignment": "left",
+      "minimumHeightDesktop": "238px",
+      "minimumHeightTablet": "206px",
+      "minimumHeightMobile": "164px",
+      "phaseSize": "11px",
+      "chapterNumberSize": "17px",
+      "titleSizeDesktop": "47px",
+      "titleSizeMobile": "37px",
+      "subtitleSizeDesktop": "25px",
+      "openingParagraphIndent": "0",
+      "motif": "72px and 42px rules displaced by 12px; motif becomes 54px and 32px on mobile"
+    },
+    "normalContinuationPage": {
+      "bodyFlow": "quiet continuous prose with small first-line indent and no decorative interruptions except manuscript section breaks",
+      "lineHeight": 1.72,
+      "paragraphIndent": "1.08em",
+      "topBottomFrame": "faint internal horizontal rules inherited from page surface"
+    },
+    "sectionBreak": {
+      "heightDesktop": "60px",
+      "heightMobile": "44px",
+      "primaryRule": "44px x 1px at 50% accent opacity",
+      "secondaryRule": "27px x 1px at 28% accent opacity",
+      "offset": "12px horizontal and 7px vertical"
+    },
+    "pageNumbers": {
+      "font": "Inter, Arial, sans-serif",
+      "fontSize": "11px",
+      "desktopPlacement": "centered, 30px from bottom",
+      "mobilePlacement": "centered, 18px from bottom",
+      "rule": "24px x 1px centered above the numeral at 34% accent opacity",
+      "hiddenOn": [
+        "opening",
+        "contents",
+        "dedication",
+        "feedback"
+      ]
+    },
+    "finalManuscriptPage": {
+      "appliesTo": "ending, epilogue, teaser, and about-author pages",
+      "treatment": "subtle bottom indigo wash and slightly quieter text to signal closing distance without changing content"
+    },
+    "feedbackSurface": {
+      "surface": "same warm ivory paper as final matter",
+      "panelWidth": "520px maximum",
+      "panelBorder": "1px top rule using page-rule color",
+      "controlHeightDesktop": "42px",
+      "controlHeightMobile": "44px minimum",
+      "inputFontSizeMobile": "16px minimum",
+      "mobileBehavior": "natural-height expanded feedback page with no nested panel scrolling",
+      "payloadRule": "feedback endpoint and fields are controlled by shared reader.js and book.json, not the theme"
+    }
   },
-  "chapterOpeningStyle": {
-    "alignment": "left",
-    "minimumHeightDesktop": "228px",
-    "minimumHeightMobile": "164px",
-    "phaseSize": "11px",
-    "chapterNumberSize": "18px",
-    "titleSizeDesktop": "48px",
-    "titleSizeMobile": "39px",
-    "marker": "Paired 72px and 42px rules offset by 12px",
-    "openingParagraphIndent": "0"
-  },
-  "sectionBreakStyle": {
-    "height": "58px",
-    "primaryRule": "42px x 1px at 50% opacity",
-    "secondaryRule": "26px x 1px at 28% opacity",
-    "offset": "8px horizontal, 5px vertical"
-  },
-  "pageNumberStyle": {
-    "font": "Inter, Arial, sans-serif",
-    "fontSize": "11px",
-    "position": "centered, 28px from bottom",
-    "rule": "24px x 1px, centered 8px above numeral",
-    "hiddenOn": [
-      "opening",
-      "contents",
-      "dedication",
-      "feedback"
-    ]
-  },
-  "quoteStyle": {
-    "font": "Cormorant Garamond, Georgia, serif",
-    "fontSizeDesktop": "25px",
-    "fontSizeMobile": "22px",
-    "lineHeight": 1.25,
-    "leftRule": "1px solid primary at 42% opacity",
-    "decoration": "No oversized quotation marks"
-  },
-  "contentsStyle": {
-    "headingSizeDesktop": "50px",
-    "headingSizeMobile": "40px",
-    "phaseSize": "19px",
-    "entrySize": "14px",
-    "rowTreatment": "Unboxed editorial lines with preserved source leaders",
-    "drawerActiveMarker": "2px primary left rule with 9% accent wash"
-  },
-  "feedbackStyle": {
-    "surface": "Final-matter page using the book paper color",
-    "panelWidth": "520px maximum",
-    "panelBorder": "1px top rule at page-border opacity",
-    "controlHeightDesktop": "42px",
-    "controlHeightMobile": "44px minimum",
-    "inputFontSizeMobile": "16px minimum",
-    "mobileHeight": "Natural content height with no panel scrolling",
-    "focusBehavior": "No automatic focus on mobile"
-  },
-  "ornamentRules": {
-    "motifName": "Displaced Threshold",
+  "ornamentSystem": {
+    "motifName": "Displaced Silence",
     "allowedForms": [
-      "paired offset rules",
+      "paired offset horizontal rules",
       "single faint page-edge line",
-      "short page-number rule"
+      "short centered page-number rule",
+      "subtle final-page bottom wash"
     ],
-    "maximumRuleWidth": "92px",
-    "maximumOpacity": 0.5,
+    "maximumRuleWidth": "96px",
+    "maximumOpacity": 0.50,
     "prohibited": [
       "floral ornaments",
       "asterisk dividers",
       "gold decoration",
-      "textures",
+      "heavy textures",
       "full-page illustration",
-      "decorative gradients"
+      "decorative blobs",
+      "decorative orbs",
+      "large gradients"
     ]
   },
   "responsiveAdaptations": {
-    "mobile320To640": {
-      "pageWidth": "calc(100vw - 28px) maximum",
-      "pageHeight": "min(900px, calc(100svh - 124px))",
-      "pagePadding": "38px 20px",
-      "bodySizeFloor": "17px",
-      "chapterMinimumHeight": "164px",
-      "ornamentScale": "72%",
-      "feedback": "Natural-height page; one-column controls; no nested scroll"
+    "mobile390InspectionTarget": {
+      "pageWidth": "CSS target calc(100vw - 20px), rendered inside an 8px stage gutter",
+      "horizontalPadding": "18px",
+      "toolbar": "compact shared toolbar retained; controls inherit tighter theme sizing",
+      "motifs": "shortened and shifted less aggressively",
+      "feedback": "expanded panel remains natural height and one-column"
     },
-    "tablet641To1024": {
-      "pageWidth": "min(640px, calc(100vw - 36px))",
-      "pageHeight": "930px",
-      "pagePadding": "60px 52px",
-      "bodySizeFloor": "17px",
-      "chapterMinimumHeight": "198px"
+    "tablet768InspectionTarget": {
+      "pageWidth": "638px",
+      "horizontalPadding": "56px",
+      "chapterHierarchy": "left-set chapter header with full displaced motif"
     },
-    "desktop1025Plus": {
-      "pageWidth": "660px",
-      "pageHeight": "960px",
-      "pagePadding": "76px 68px",
-      "bodySize": "18px default",
-      "pageGap": "54px"
+    "desktop1366InspectionTarget": {
+      "pageWidth": "654px",
+      "pageHeight": "1008px",
+      "horizontalPadding": "70px",
+      "spacing": "58px between pages with subtle edge and shadow"
     }
   },
   "futureWordPdfMapping": {
-    "fixedPageTheme": "Light theme only",
+    "fixedPageTheme": "light theme only",
     "trimSize": "5.5in x 8.5in",
     "insideMargin": "0.72in",
     "outsideMargin": "0.62in",
-    "topMargin": "0.68in",
-    "bottomMargin": "0.72in",
+    "topMargin": "0.72in",
+    "bottomMargin": "0.74in",
     "bodyFont": "Georgia",
     "bodyFontSize": "11.5pt",
-    "bodyLineSpacing": "18.5pt exact",
+    "bodyLineSpacing": "18.7pt exact",
     "firstLineIndent": "0.18in",
     "displayFont": "Cormorant Garamond",
-    "chapterTitleSize": "30pt",
-    "titleSize": "50pt",
-    "sectionBreak": "Two rules: 0.42in and 0.26in, offset 0.08in",
-    "pageNumber": "Inter 8pt or Arial 8pt, centered 0.28in from trim bottom",
-    "specialPages": "Opening, contents, dedication, and feedback equivalents carry no folio",
+    "titleSize": "49pt",
+    "chapterTitleSize": "29pt",
+    "chapterNumberSize": "10pt Inter or Arial",
+    "contentsEntrySize": "8.8pt Inter or Arial",
+    "sectionBreak": "two rules: 0.44in and 0.27in, displaced by 0.12in horizontally and 0.07in vertically",
+    "pageNumber": "Inter 8pt or Arial 8pt, centered 0.30in from trim bottom with 0.24in rule above",
+    "specialPages": "opening, contents, dedication, and feedback equivalents carry no folio",
     "printPalette": {
-      "paper": "Natural white stock approximating #F7F3EA",
-      "text": "#293440 or process black equivalent",
-      "accent": "#4B5878"
+      "paper": "natural warm ivory stock approximating #F7F1E6",
+      "text": "#24303C or process black equivalent",
+      "accent": "#405678",
+      "softRule": "18% tint of #405678"
     },
-    "digitalOnly": "Dark theme and interactive controls"
+    "digitalOnly": [
+      "dark theme",
+      "theme switcher",
+      "toolbar",
+      "contents drawer",
+      "progress bar",
+      "feedback form"
+    ]
+  },
+  "implementationBoundary": {
+    "bookSpecificFiles": [
+      "/assets/books/the-last-shift/design-spec.json",
+      "/assets/books/the-last-shift/theme.css"
+    ],
+    "sharedFilesNotOwnedByThisPhase": [
+      "/assets/js/reader.js",
+      "/assets/css/reader.css",
+      "/projects/human-mind/books/the-last-shift/reader/index.html",
+      "/assets/books/the-last-shift/book.json"
+    ]
   }
 }
