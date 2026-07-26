@@ -222,6 +222,7 @@
   let paginationToken = 0;
   let restoring = false;
   let appliedBookVariables = [];
+  let coverFailed = false;
 
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
@@ -289,6 +290,25 @@
     const bookRootUrl = new URL(".", bookResponseUrl.href);
     await loadStylesheet(new URL(stylesheet, bookRootUrl).href, book.id);
   };
+
+  const normalizeBookCover = (bookRootUrl) => {
+    const cover = book.cover || {};
+    if (!cover || typeof cover.web !== "string" || !cover.web.trim()) {
+      book.cover = null;
+      return;
+    }
+
+    try {
+      book.cover = {
+        ...cover,
+        webUrl: new URL(cover.web, bookRootUrl).href,
+      };
+    } catch (error) {
+      book.cover = null;
+    }
+  };
+
+  const hasCover = () => Boolean(!coverFailed && book?.cover?.webUrl);
 
   const readState = () => {
     if (!book) return {};
@@ -556,6 +576,34 @@
     return block;
   };
 
+  const createCoverBlock = () => {
+    const block = createBlock("reader-cover-page", {
+      unitId: "front-cover",
+      unitTitle: book.title || "Cover",
+      unitLabel: "Cover",
+      unitKind: "cover",
+      pageLock: true,
+      noPageNumber: true,
+      unitStart: true,
+    });
+    block.dataset.coverPage = "true";
+
+    const frame = document.createElement("div");
+    frame.className = "reader-cover-page__frame";
+
+    const image = document.createElement("img");
+    image.className = "reader-cover-page__image";
+    image.src = book.cover.webUrl;
+    image.alt = book.cover.alt || `Cover of ${book.title || "this book"}`;
+    image.decoding = "async";
+    image.loading = "eager";
+    image.dataset.coverImage = "";
+
+    frame.append(image);
+    block.append(frame);
+    return block;
+  };
+
   const createContentsBlocks = (unit) => {
     const blocks = [];
     const opener = createBlock("source-contents-page", {
@@ -719,6 +767,7 @@
 
   const buildSourceBlocks = () => {
     sourceBlocks = [];
+    if (hasCover()) sourceBlocks.push(createCoverBlock());
     units.forEach((unit) => {
       sourceBlocks.push(...createUnitBlocks(unit));
     });
@@ -801,6 +850,7 @@
       pagesRoot.innerHTML = "";
       pagesRoot.append(fragment);
       indexMarkers();
+      bindCoverFallback();
       bindFeedback();
       updateProgress();
       restorePosition(restore);
@@ -1070,6 +1120,22 @@
     });
   };
 
+  const handleCoverImageError = () => {
+    if (coverFailed) return;
+    coverFailed = true;
+    buildSourceBlocks();
+    paginate({ restore: { hash: "", scrollRatio: 0 } });
+  };
+
+  const bindCoverFallback = () => {
+    pagesRoot.querySelectorAll("[data-cover-image]").forEach((image) => {
+      if (image.dataset.coverFallbackBound) return;
+      image.dataset.coverFallbackBound = "true";
+      image.addEventListener("error", handleCoverImageError, { once: true });
+      if (image.complete && image.naturalWidth === 0) handleCoverImageError();
+    });
+  };
+
   const fetchJson = async (url) => {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`Unable to load ${url}`);
@@ -1088,6 +1154,7 @@
     book.feedbackContext = { ...(book.feedbackContext || {}), feedbackType: book.feedbackContext?.feedbackType || "book" };
     savedState = readState();
     const rootUrl = new URL(".", bookResponseUrl.href);
+    normalizeBookCover(rootUrl);
     units = await Promise.all(book.units.map((unit) => fetchJson(new URL(unit.file, rootUrl).href)));
     buildSourceBlocks();
   };

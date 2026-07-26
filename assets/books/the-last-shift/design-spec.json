@@ -5,6 +5,80 @@
   "series": "Human Mind",
   "visualThemeName": "Displaced Silence",
   "designPurpose": "A quiet psychological reader identity built around emotional distance, gradual transition, and small displaced marks that feel like thoughts moving out of alignment.",
+  "coverSpecification": {
+    "sourceAsset": {
+      "originalRepositoryFile": "/projects/human-mind/assets/covers/the last shift.jpeg",
+      "preservedAsset": "/assets/books/the-last-shift/cover/cover-source.png",
+      "format": "JPEG original preserved as PNG reference",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytesOriginal": 124828,
+      "containsCompleteFrontCover": true,
+      "containsTitle": true,
+      "containsSubtitle": true,
+      "containsAuthor": true,
+      "containsPublisherBranding": true
+    },
+    "websiteAsset": {
+      "path": "/assets/books/the-last-shift/cover/front-cover.webp",
+      "format": "WEBP",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytes": 113478,
+      "optimization": "Converted from the official JPEG at WebP quality 88; preserves cover typography while reducing file size."
+    },
+    "printAsset": {
+      "path": "/assets/books/the-last-shift/cover/front-cover-print.png",
+      "format": "PNG",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytes": 951328,
+      "printReadiness": "Best available full-resolution reference, not genuine 300 DPI production print art for a 5.5in x 8.5in trim."
+    },
+    "coverAspectRatio": "1023:1537, approximately 0.6656",
+    "referenceTrimSize": "5.5in x 8.5in portrait",
+    "websitePixelDimensions": "1023 x 1537",
+    "printPixelDimensions": "1023 x 1537",
+    "targetDpi": {
+      "website": "screen asset",
+      "futurePrintTarget": "300 DPI",
+      "availableEffectiveDpiAtReferenceTrim": "approximately 186 DPI by width and 181 DPI by height, below 300 DPI target"
+    },
+    "titlePlacement": "Large centered title block in the lower-middle area, below the Greyveil mark.",
+    "subtitlePlacement": "Centered below the series/book line, under the title divider.",
+    "authorPlacement": "Centered near the lower cover, above the publisher and year.",
+    "publisherMarkPlacement": "Greyveil Editions logo and wordmark are centered in the upper third; publisher name repeats near the lower edge.",
+    "safeMargin": "Existing artwork keeps key typography within the internal border; preserve at least 7% visual margin on all sides when fitting into fixed pages.",
+    "bleedGuidance": "No full paperback bleed file exists yet. Do not crop this asset for bleed without a higher-resolution cover master.",
+    "colourProfileGuidance": "Current source is an RGB web JPEG. Future print production should request a high-resolution RGB or CMYK master from the designer/printer.",
+    "imageFitBehavior": "Use object-fit: contain for the digital reader. Preserve the complete artwork, aspect ratio, and typography. Do not recolor, filter, stretch, or crop.",
+    "WordCoverPageMapping": {
+      "fixedPageOrder": [
+        "Front cover",
+        "Optional blank verso",
+        "Half-title or title page",
+        "Copyright/front matter",
+        "Contents",
+        "Main manuscript"
+      ],
+      "insertionGuidance": "Insert the PNG as a full first page using fit-to-page containment. Disable Word image compression where possible.",
+      "printLimitation": "Current PNG is below 300 DPI for the reference trim and should be replaced before final print production."
+    },
+    "PdfCoverPageMapping": {
+      "fixedPageOrder": [
+        "Front cover",
+        "Optional blank verso",
+        "Half-title or title page",
+        "Copyright/front matter",
+        "Contents",
+        "Main manuscript"
+      ],
+      "fitMode": "Contain within the trim box unless a higher-resolution bleed-ready cover is supplied.",
+      "printLimitation": "Current asset is suitable as a digital/PDF reference but is not a final 300 DPI print cover."
+    },
+    "paperbackWrapStatus": {
+      "included": false,
+      "status": "Front cover only. Full wrap cover, spine, and back cover are not included yet.",
+      "spineGuidance": "Spine width depends on final page count, paper stock, binding method, and printer specification."
+    }
+  },
   "emotionalKeywords": [
     "quiet psychological reflection",
     "shifting",

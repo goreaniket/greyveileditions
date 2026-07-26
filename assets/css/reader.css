@@ -393,6 +393,30 @@ body.is-paginating .reader-loading {
   break-inside: avoid;
 }
 
+.reader-cover-page {
+  display: grid;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.reader-cover-page__frame {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.reader-cover-page__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .flow-opening {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(116px, 180px);
