@@ -1,0 +1,133 @@
+{
+  "id": "opening",
+  "kind": "opening",
+  "label": "Opening",
+  "title": "The Quiet I Started Living With",
+  "shortTitle": "Opening",
+  "file": "chapters/00-opening.json",
+  "index": 0,
+  "sourceRange": [
+    1,
+    15
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE HUMAN MIND SERIES",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1,
+      "role": "series-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "BOOK III",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 2,
+      "role": "book-number"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "THE QUIET I STARTED LIVING WITH",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 4,
+      "role": "title"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(A Psychological Reflection on Silence, Identity, Overthinking, and the Invisible Distance Between Who We Are and Who We Slowly Become)",
+          "italic": true
+        }
+      ],
+      "sourceParagraph": 5,
+      "role": "subtitle-line"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 6,
+      "role": "author"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Some people lose themselves all at once."
+        }
+      ],
+      "sourceParagraph": 7,
+      "role": "epigraph"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "Others disappear so quietly..."
+        }
+      ],
+      "sourceParagraph": 8,
+      "role": "epigraph"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "they continue living for years without realizing they are no longer fully present."
+        }
+      ],
+      "sourceParagraph": 9,
+      "role": "epigraph"
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "This book is for those who are ready to notice that quiet.\""
+        }
+      ],
+      "sourceParagraph": 10,
+      "role": "epigraph"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "GREYVEIL EDITIONS 2026",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 12,
+      "role": "publisher"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Human Mind Collection",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 14,
+      "role": "collection-line"
+    }
+  ],
+  "openingMode": "source"
+}

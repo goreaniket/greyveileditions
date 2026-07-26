@@ -1,0 +1,23 @@
+{
+  "id": "part-1",
+  "kind": "part",
+  "label": "Part 1",
+  "title": "THE TRAP (WHY YOU GET STUCK)",
+  "shortTitle": "Part 1",
+  "file": "chapters/08-part-1.json",
+  "index": 8,
+  "sourceRange": [
+    248,
+    250
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 248,
+    "title": 249
+  },
+  "number": "PART 1:",
+  "sourceHeadingParagraphs": [
+    248,
+    249
+  ]
+}

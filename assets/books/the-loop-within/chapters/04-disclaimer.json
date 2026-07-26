@@ -1,0 +1,94 @@
+{
+  "id": "disclaimer",
+  "kind": "frontmatter",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "Disclaimer",
+  "file": "chapters/04-disclaimer.json",
+  "index": 4,
+  "sourceRange": [
+    81,
+    90
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not written to guide you. "
+        }
+      ],
+      "sourceParagraph": 82
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is written to make you notice what you are already doing inside your mind. "
+        }
+      ],
+      "sourceParagraph": 83
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not claim to heal, fix, or improve anything. "
+        }
+      ],
+      "sourceParagraph": 84
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It only observes how emotional experience is built — through repetition, "
+        }
+      ],
+      "sourceParagraph": 85
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpretation, and silent reinforcement of thought loops. "
+        }
+      ],
+      "sourceParagraph": 86
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If at any point this feels personal… "
+        }
+      ],
+      "sourceParagraph": 87
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it is not because the book is speaking about you. "
+        }
+      ],
+      "sourceParagraph": 88
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is because the mind recognizes its own structure."
+        }
+      ],
+      "sourceParagraph": 89
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 81
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    81
+  ]
+}

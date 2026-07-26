@@ -1,0 +1,23 @@
+{
+  "id": "part-2",
+  "kind": "part",
+  "label": "Part 2",
+  "title": "THE DISTORTION (WHY IT FEELS SO REAL)",
+  "shortTitle": "Part 2",
+  "file": "chapters/13-part-2.json",
+  "index": 13,
+  "sourceRange": [
+    514,
+    517
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 514,
+    "title": 515
+  },
+  "number": "PART 2:",
+  "sourceHeadingParagraphs": [
+    514,
+    515
+  ]
+}

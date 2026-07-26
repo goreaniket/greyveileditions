@@ -1,0 +1,826 @@
+{
+  "id": "chapter-15",
+  "kind": "chapter",
+  "label": "Chapter 15",
+  "title": "THE VERSION OF ME THAT DOESN’T FIT ANYMORE",
+  "shortTitle": "THE VERSION OF ME THAT DOESNT FIT ANYMORE",
+  "file": "chapters/26-chapter-15.json",
+  "index": 26,
+  "sourceRange": [
+    1714,
+    1805
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe lagta hai main ab us insaan jaisa nahi raha jo main pehle tha.   "
+        }
+      ],
+      "sourceParagraph": 1716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ajeeb baat yeh hai… main usse poori "
+        }
+      ],
+      "sourceParagraph": 1717
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tarah chhod bhi nahi paaya.   "
+        }
+      ],
+      "sourceParagraph": 1718
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi purani skin ho… "
+        }
+      ],
+      "sourceParagraph": 1719
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo ab tight ho gayi ho… par  "
+        }
+      ],
+      "sourceParagraph": 1720
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utarti bhi nahi.     "
+        }
+      ],
+      "sourceParagraph": 1721
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main khud ko yaad karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1722
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mujhe lagta hai…   "
+        }
+      ],
+      "sourceParagraph": 1723
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“haan, main aisa tha.”   "
+        }
+      ],
+      "sourceParagraph": 1724
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin turant baad lagta hai…   "
+        }
+      ],
+      "sourceParagraph": 1725
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ya shayad main kabhi tha hi nahi.”   "
+        }
+      ],
+      "sourceParagraph": 1726
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dono thoughts ek saath chalte hain.     "
+        }
+      ],
+      "sourceParagraph": 1727
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dono hi mujhe confuse nahi karte ab.   "
+        }
+      ],
+      "sourceParagraph": 1728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas thoda sa empty kar dete hain.   "
+        }
+      ],
+      "sourceParagraph": 1729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main pehle zyada react karta tha.   "
+        }
+      ],
+      "sourceParagraph": 1730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chhoti chhoti cheezein.   "
+        }
+      ],
+      "sourceParagraph": 1731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log  "
+        }
+      ],
+      "sourceParagraph": 1732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Messages.   "
+        }
+      ],
+      "sourceParagraph": 1733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence.   "
+        }
+      ],
+      "sourceParagraph": 1734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Presence.   "
+        }
+      ],
+      "sourceParagraph": 1735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Absence.   "
+        }
+      ],
+      "sourceParagraph": 1736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab kuch bhi directly hit nahi karta.    "
+        }
+      ],
+      "sourceParagraph": 1737
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehle mujhe lagta tha yeh progress hai.     "
+        }
+      ],
+      "sourceParagraph": 1738
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab lagta hai… main bas thoda kam "
+        }
+      ],
+      "sourceParagraph": 1739
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "available ho gaya hu.     "
+        }
+      ],
+      "sourceParagraph": 1740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main kisi se milta hu… "
+        }
+      ],
+      "sourceParagraph": 1741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baat karta hu… smile bhi "
+        }
+      ],
+      "sourceParagraph": 1742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "karta hu… "
+        }
+      ],
+      "sourceParagraph": 1743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin beech beech mein ek gap hota hai.   "
+        }
+      ],
+      "sourceParagraph": 1744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise main poori tarah wahan nahi hu.   "
+        }
+      ],
+      "sourceParagraph": 1745
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main observe karta hu apne aap ko.   "
+        }
+      ],
+      "sourceParagraph": 1746
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki main kaise react kar raha hu.   "
+        }
+      ],
+      "sourceParagraph": 1747
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir sochta hu… "
+        }
+      ],
+      "sourceParagraph": 1748
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“kya yeh main hu?”   "
+        }
+      ],
+      "sourceParagraph": 1749
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“kya yeh main hu?”   "
+        }
+      ],
+      "sourceParagraph": 1750
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jawab nahi aata.     "
+        }
+      ],
+      "sourceParagraph": 1751
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek purani si memory aati hai… jab "
+        }
+      ],
+      "sourceParagraph": 1752
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main cheezein feel karta tha bina soche.     "
+        }
+      ],
+      "sourceParagraph": 1753
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab main sochta hu pehle… "
+        }
+      ],
+      "sourceParagraph": 1754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feel baad mein aata hai… ya "
+        }
+      ],
+      "sourceParagraph": 1755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi aata hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 1756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main kisi cheez ko miss karta hu… lekin us missing "
+        }
+      ],
+      "sourceParagraph": 1757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ka intensity bhi change ho gaya hai "
+        }
+      ],
+      "sourceParagraph": 1758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi cheez door ho… "
+        }
+      ],
+      "sourceParagraph": 1759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par us door hone ka dard bhi dheere dheere fade ho gaya ho.   "
+        }
+      ],
+      "sourceParagraph": 1760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mujhe samajh nahi aata… yeh "
+        }
+      ],
+      "sourceParagraph": 1761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "healing hai ya loss ka next stage.   "
+        }
+      ],
+      "sourceParagraph": 1762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main khud ko force karta hu… feel "
+        }
+      ],
+      "sourceParagraph": 1763
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "karne ke liye.   "
+        }
+      ],
+      "sourceParagraph": 1764
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Purani yaadein.   "
+        }
+      ],
+      "sourceParagraph": 1765
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Purane moments.  "
+        }
+      ],
+      "sourceParagraph": 1766
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Purane emotions.    "
+        }
+      ],
+      "sourceParagraph": 1767
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin woh wapas nahi aate.     "
+        }
+      ],
+      "sourceParagraph": 1768
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek faint echo aata hai.    "
+        }
+      ],
+      "sourceParagraph": 1769
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi awaaz jo kisi aur room se aa rahi ho.   "
+        }
+      ],
+      "sourceParagraph": 1770
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ab bhi wahi insaan hu… jo "
+        }
+      ],
+      "sourceParagraph": 1771
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sochta hai. jo samajhta hai.  jo "
+        }
+      ],
+      "sourceParagraph": 1772
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chal raha hai.   "
+        }
+      ],
+      "sourceParagraph": 1773
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin woh urgency nahi rahi.   "
+        }
+      ],
+      "sourceParagraph": 1774
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh intensity nahi rahi.     "
+        }
+      ],
+      "sourceParagraph": 1775
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh “everything matters” wala feel dheere dheere kam ho gaya hai.   "
+        }
+      ],
+      "sourceParagraph": 1776
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mujhe darr nahi lagta is baat se.    "
+        }
+      ],
+      "sourceParagraph": 1777
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas main notice karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1778
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki main kisi cheez ke andar poori tarah doob nahi pa raha.   "
+        }
+      ],
+      "sourceParagraph": 1779
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main hamesha thoda bahar hi reh jaata hu.   "
+        }
+      ],
+      "sourceParagraph": 1780
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise main life ko live nahi kar raha…  main "
+        }
+      ],
+      "sourceParagraph": 1781
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usse read kar raha hu.     "
+        }
+      ],
+      "sourceParagraph": 1782
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi mujhe lagta hai… shayad main ab kisi  "
+        }
+      ],
+      "sourceParagraph": 1783
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek fixed version mein fix hogya hu  "
+        }
+      ],
+      "sourceParagraph": 1784
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mai har jagah thoda sa mismatch                                                                                                                                "
+        }
+      ],
+      "sourceParagraph": 1785
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log ke saath bhi.   "
+        }
+      ],
+      "sourceParagraph": 1786
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Khud ke saath bhi.   "
+        }
+      ],
+      "sourceParagraph": 1787
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh mismatch painful nahi hai.     "
+        }
+      ],
+      "sourceParagraph": 1788
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas real hai.   "
+        }
+      ],
+      "sourceParagraph": 1789
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ab kisi purane version ko wapas laane ki koshish nahi karta.     "
+        }
+      ],
+      "sourceParagraph": 1790
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki mujhe pata hai… woh "
+        }
+      ],
+      "sourceParagraph": 1791
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wapas nahi aayega. Aur shayad main "
+        }
+      ],
+      "sourceParagraph": 1792
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bhi nahi jaa sakta us taraf.   "
+        }
+      ],
+      "sourceParagraph": 1793
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh main bas yahin hu.   "
+        }
+      ],
+      "sourceParagraph": 1794
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoda changed.   "
+        }
+      ],
+      "sourceParagraph": 1795
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoda absent.   "
+        }
+      ],
+      "sourceParagraph": 1796
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoda aware.     "
+        }
+      ],
+      "sourceParagraph": 1797
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi ko log growing up bolte hain.     "
+        }
+      ],
+      "sourceParagraph": 1798
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya shayad kuch aur.     "
+        }
+      ],
+      "sourceParagraph": 1799
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe nahi pata.   "
+        }
+      ],
+      "sourceParagraph": 1800
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas itna pata hai… ki main ab woh nahi hu jo main yaad karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1801
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad…  yeh hi end of "
+        }
+      ],
+      "sourceParagraph": 1802
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "something hai.   "
+        }
+      ],
+      "sourceParagraph": 1803
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur start of something else.   "
+        }
+      ],
+      "sourceParagraph": 1804
+    }
+  ],
+  "phase": "Phase IV - Becoming Someone the Silence Could No Longer Hide",
+  "headerSourceParagraphs": {
+    "number": 1714,
+    "title": 1715
+  },
+  "number": "CHAPTER 15",
+  "sourceHeadingParagraphs": [
+    1714,
+    1715
+  ]
+}

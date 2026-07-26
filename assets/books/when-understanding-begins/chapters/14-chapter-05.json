@@ -1,0 +1,574 @@
+{
+  "id": "chapter-05",
+  "kind": "chapter",
+  "label": "Chapter 5",
+  "title": "THE MOMENT WE REALIZE TOO LATE",
+  "shortTitle": "THE MOMENT WE REALIZE TOO LATE",
+  "file": "chapters/14-chapter-05.json",
+  "index": 14,
+  "sourceRange": [
+    613,
+    689
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jbtk realize hota hai tbtk bht der ho chuki hoti haii "
+        }
+      ],
+      "sourceParagraph": 615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye line jitni chhoti hai utni hi dangerous bhi hai "
+        }
+      ],
+      "sourceParagraph": 616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas ek imaginary duniya mai hi kaapte rahoge "
+        }
+      ],
+      "sourceParagraph": 617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without parents "
+        }
+      ],
+      "sourceParagraph": 618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "if tum reality ke saath imagine kroge to "
+        }
+      ],
+      "sourceParagraph": 619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har ek chiz ka time hota hai "
+        }
+      ],
+      "sourceParagraph": 620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur hume waqt ke saath aage badh ke responsibilities uthani chahiye "
+        }
+      ],
+      "sourceParagraph": 621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hume unhe samajhna chahiye "
+        }
+      ],
+      "sourceParagraph": 622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "puri zindagi ek baap aur maa "
+        }
+      ],
+      "sourceParagraph": 623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas humare liye karte karte "
+        }
+      ],
+      "sourceParagraph": 624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek din duniya chhod jaate hai "
+        }
+      ],
+      "sourceParagraph": 625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek common line hai "
+        }
+      ],
+      "sourceParagraph": 626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par jab koi parents meri is book ko read kar raha hai yaha tak reach karke "
+        }
+      ],
+      "sourceParagraph": 627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to shayad unhe bhi feel ho raha hoga "
+        }
+      ],
+      "sourceParagraph": 628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye har koi nahi samjhega "
+        }
+      ],
+      "sourceParagraph": 629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo samjhega "
+        }
+      ],
+      "sourceParagraph": 630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "im sure woh change karne ka try karega "
+        }
+      ],
+      "sourceParagraph": 631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur better tarike se life spend karega "
+        }
+      ],
+      "sourceParagraph": 632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "regret jab aata hai na… "
+        }
+      ],
+      "sourceParagraph": 633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh us waqt nahi aata jab galti hoti hai "
+        }
+      ],
+      "sourceParagraph": 634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh us waqt aata hai jab kuch change nahi kar sakte "
+        }
+      ],
+      "sourceParagraph": 635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo daant "
+        }
+      ],
+      "sourceParagraph": 636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo chhoti chhoti moments "
+        }
+      ],
+      "sourceParagraph": 637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan to nahi rehta "
+        }
+      ],
+      "sourceParagraph": 638
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par uski yaadein hi tumhe andar se maar deti hai "
+        }
+      ],
+      "sourceParagraph": 639
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "regrets tumhe kha jaate hai "
+        }
+      ],
+      "sourceParagraph": 640
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum school ya office se aaoge na thak ke "
+        }
+      ],
+      "sourceParagraph": 641
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo pehle mummy se pani ya papa se baat hoti thi "
+        }
+      ],
+      "sourceParagraph": 642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aaj waha ek khamoshi hogi "
+        }
+      ],
+      "sourceParagraph": 643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye normal lagega "
+        }
+      ],
+      "sourceParagraph": 644
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par jinke paas nahi hai unhe pata hai ye kya hota hai "
+        }
+      ],
+      "sourceParagraph": 645
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir tumhe lagega: "
+        }
+      ],
+      "sourceParagraph": 646
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“us time dimaag khula kyun nahi” "
+        }
+      ],
+      "sourceParagraph": 647
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aaj hum daat pe jawab de dete hai "
+        }
+      ],
+      "sourceParagraph": 648
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par kabhi socha hai "
+        }
+      ],
+      "sourceParagraph": 649
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unhe kaisa feel ho raha hota hai? "
+        }
+      ],
+      "sourceParagraph": 650
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab hum chhote the "
+        }
+      ],
+      "sourceParagraph": 651
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "school se aake sab share karte the "
+        }
+      ],
+      "sourceParagraph": 652
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“aaj ye padha, ye hua, ye kiya” "
+        }
+      ],
+      "sourceParagraph": 653
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par jab real time aata hai share karne ka "
+        }
+      ],
+      "sourceParagraph": 654
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab hum baat bhi nahi karna chahte "
+        }
+      ],
+      "sourceParagraph": 655
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "haan idhar parents ko bhi thoda samajhna chahiye "
+        }
+      ],
+      "sourceParagraph": 656
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki bachche bhi pressure mein rehte hai "
+        }
+      ],
+      "sourceParagraph": 657
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi suicidal thoughts tak chale jate hai "
+        }
+      ],
+      "sourceParagraph": 658
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye common ho gaya hai "
+        }
+      ],
+      "sourceParagraph": 659
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab parents ko bhi regret hota hai: "
+        }
+      ],
+      "sourceParagraph": 660
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“mujhe strict nahi hona chahiye tha” "
+        }
+      ],
+      "sourceParagraph": 661
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“mujhe samajhna chahiye tha” "
+        }
+      ],
+      "sourceParagraph": 662
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is point pe dono side ko samajhna chahiye "
+        }
+      ],
+      "sourceParagraph": 663
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur har relation ka base hona chahiye: "
+        }
+      ],
+      "sourceParagraph": 664
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki agar dost jaisa bond ho "
+        }
+      ],
+      "sourceParagraph": 665
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh bina dar ke baat ho sakti hai "
+        }
+      ],
+      "sourceParagraph": 666
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "no judgement "
+        }
+      ],
+      "sourceParagraph": 667
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "no fear "
+        }
+      ],
+      "sourceParagraph": 668
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "idk maybe ye over lag raha hoga "
+        }
+      ],
+      "sourceParagraph": 669
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par main sirf reality samne rakh raha hu "
+        }
+      ],
+      "sourceParagraph": 670
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mera perspective hai "
+        }
+      ],
+      "sourceParagraph": 671
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad ye book padhke "
+        }
+      ],
+      "sourceParagraph": 672
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mere jaise najane kitne log change ho jaye "
+        }
+      ],
+      "sourceParagraph": 673
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“kabhi kabhi hum life ko samajhne mein itna late ho jaate hai… ki samajh tab "
+        }
+      ],
+      "sourceParagraph": 674
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aati hai jab kuch badalne ke liye kuch bachta hi nahi” "
+        }
+      ],
+      "sourceParagraph": 675
+    }
+  ],
+  "phase": "Layer 2 - The Human Heart",
+  "headerSourceParagraphs": {
+    "number": 613,
+    "title": 614
+  },
+  "number": "CHAPTER 5:",
+  "sourceHeadingParagraphs": [
+    613,
+    614
+  ]
+}

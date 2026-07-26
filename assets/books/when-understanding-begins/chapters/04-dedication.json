@@ -1,0 +1,58 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "Dedication",
+  "file": "chapters/04-dedication.json",
+  "index": 4,
+  "sourceRange": [
+    62,
+    67
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To every parent who stayed silent while carrying too much. "
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to every child who felt unheard while feeling too deeply. "
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the homes where love was always present… but understanding needed more "
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "space."
+        }
+      ],
+      "sourceParagraph": 66
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 62
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    62
+  ]
+}

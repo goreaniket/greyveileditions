@@ -1,0 +1,23 @@
+{
+  "id": "layer-3",
+  "kind": "part",
+  "label": "Layer 3",
+  "title": "HEALING PHASE",
+  "shortTitle": "Layer 3",
+  "file": "chapters/15-layer-3.json",
+  "index": 15,
+  "sourceRange": [
+    690,
+    693
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 690,
+    "title": 691
+  },
+  "number": "LAYER 3:",
+  "sourceHeadingParagraphs": [
+    690,
+    691
+  ]
+}

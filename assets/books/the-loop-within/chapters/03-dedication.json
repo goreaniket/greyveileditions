@@ -1,0 +1,94 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "Dedication",
+  "file": "chapters/03-dedication.json",
+  "index": 3,
+  "sourceRange": [
+    71,
+    80
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is dedicated to those who do not escape their thoughts… "
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but keep returning to them, trying to understand why they never fully end. "
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To those who have mistaken repetition for attachment… "
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and silence for loss. "
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to those who are slowly realizing that the most complex thing they will ever "
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "face… "
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is not the world outside… "
+        }
+      ],
+      "sourceParagraph": 78
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but the patterns inside their own mind. "
+        }
+      ],
+      "sourceParagraph": 79
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 71
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    71
+  ]
+}

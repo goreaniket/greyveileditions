@@ -1,0 +1,637 @@
+{
+  "id": "chapter-04",
+  "kind": "chapter",
+  "label": "Chapter 4",
+  "title": "When You Confuse Missing with Meaning:",
+  "shortTitle": "When You Confuse Missing with Meaning",
+  "file": "chapters/12-chapter-04.json",
+  "index": 12,
+  "sourceRange": [
+    439,
+    513
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai ki jo tum feel kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf feeling nahi hai. "
+        }
+      ],
+      "sourceParagraph": 442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo kuch zyada hai. "
+        }
+      ],
+      "sourceParagraph": 443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tumhe lagta hai ki "
+        }
+      ],
+      "sourceParagraph": 444
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar tum kisi ko miss kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 445
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh uska matlab hai ki wo cheez important thi. "
+        }
+      ],
+      "sourceParagraph": 446
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se ek silent assumption start hota hai… "
+        }
+      ],
+      "sourceParagraph": 447
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“jo cheez mujhe affect karti hai… wo meaningful hogi” "
+        }
+      ],
+      "sourceParagraph": 448
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda observe karo… "
+        }
+      ],
+      "sourceParagraph": 449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe samajh aata hai ki "
+        }
+      ],
+      "sourceParagraph": 450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum missing ko observe nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum usko interpret kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interpretation kabhi neutral nahi hoti. "
+        }
+      ],
+      "sourceParagraph": 453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo meaning create karti hai. "
+        }
+      ],
+      "sourceParagraph": 454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tum ek simple cheez ko "
+        }
+      ],
+      "sourceParagraph": 455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dheere dheere complex bana dete ho. "
+        }
+      ],
+      "sourceParagraph": 456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek memory → feeling ban jati hai "
+        }
+      ],
+      "sourceParagraph": 457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feeling → story ban jati hai "
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "story → truth lagne lagti hai "
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum notice bhi nahi karte kab ye shift hua. "
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind intensity ko truth samajhne lagta hai. "
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar kuch cheez zyada feel hoti hai… "
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe lagta hai wo zyada real hai. "
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par reality mein… "
+        }
+      ],
+      "sourceParagraph": 464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feeling intensity ≠ truth clarity "
+        }
+      ],
+      "sourceParagraph": 465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe distortion quietly enter karta hai. "
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kisi ko miss karte ho… "
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par dheere dheere tum sirf insaan ko nahi miss karte… "
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us emotional state ko miss karne lagte ho "
+        }
+      ],
+      "sourceParagraph": 469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo us insaan ke saath linked tha. "
+        }
+      ],
+      "sourceParagraph": 470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye difference tum start mein catch nahi karte. "
+        }
+      ],
+      "sourceParagraph": 471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind dono ko merge kar deta hai. "
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Person + Emotion = One Identity "
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab identity ban jati hai… "
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh release mushkil lagta hai. "
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki tum sochte ho tum kisi ko chhod rahe ho… "
+        }
+      ],
+      "sourceParagraph": 476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tum ek feeling ko lose karne se dar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting observation ye hai… "
+        }
+      ],
+      "sourceParagraph": 478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jitna zyada missing feel karte ho… "
+        }
+      ],
+      "sourceParagraph": 479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna zyada tum usko meaning bana dete ho. "
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jitna zyada meaning banta hai… "
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna zyada wo cheez “important reality” lagne lagti hai. "
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek loop create hota hai: "
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "missing → meaning → stronger missing → deeper meaning → emotional "
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "attachment "
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is loop ka sabse tricky part ye hai… "
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye loud nahi hota. "
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye logic se bhi support le leta hai… "
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“agar main itna miss kar raha hoon… toh kuch toh tha” "
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda aur deeply observe karo… "
+        }
+      ],
+      "sourceParagraph": 490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek aur layer dikhne lagti hai. "
+        }
+      ],
+      "sourceParagraph": 491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum kisi insaan ko miss nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas apne mind ke banaye hue version ko revisit kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo version jo perfect nahi hota… "
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par complete lagta hai. "
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur present us comparison mein hamesha weak lagta hai. "
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye present dull ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur past sharp. "
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek quiet realization start hota hai… "
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad tum jo meaning bana rahe ho… "
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo reality se nahi aa raha… "
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo repetition se aa raha hai. "
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye thought thoda sa settle hota hai… "
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh pehli baar missing heavy nahi lagta… "
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas ek signal lagta hai. "
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na truth… "
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na sign… "
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek mental echo."
+        }
+      ],
+      "sourceParagraph": 508
+    }
+  ],
+  "phase": "Part 1 - The Trap",
+  "headerSourceParagraphs": {
+    "number": 439,
+    "title": 440
+  },
+  "number": "CHAPTER 4:",
+  "sourceHeadingParagraphs": [
+    439,
+    440
+  ]
+}

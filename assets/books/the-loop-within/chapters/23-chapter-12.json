@@ -1,0 +1,527 @@
+{
+  "id": "chapter-12",
+  "kind": "chapter",
+  "label": "Chapter 12",
+  "title": "When New People Feel Like Old Pain :",
+  "shortTitle": "When New People Feel Like Old Pain",
+  "file": "chapters/23-chapter-12.json",
+  "index": 23,
+  "sourceRange": [
+    1039,
+    1097
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum kisi naye insaan se milte ho… "
+        }
+      ],
+      "sourceParagraph": 1041
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur sab kuch normal lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1042
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Baat start hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1043
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda curiosity hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1044
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda interest bhi… "
+        }
+      ],
+      "sourceParagraph": 1045
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par phir ek invisible sa moment aata hai… "
+        }
+      ],
+      "sourceParagraph": 1046
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab wo naya insaan… "
+        }
+      ],
+      "sourceParagraph": 1047
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "naya lagta hi nahi. "
+        }
+      ],
+      "sourceParagraph": 1048
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo kisi purani yaad jaisa feel hone lagta hai… "
+        }
+      ],
+      "sourceParagraph": 1049
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kisi aise pain jaisa… "
+        }
+      ],
+      "sourceParagraph": 1050
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumne pehle kabhi feel kiya ho — directly nahi, par internally. "
+        }
+      ],
+      "sourceParagraph": 1051
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum confuse ho jaate ho… "
+        }
+      ],
+      "sourceParagraph": 1052
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki ye feeling aa kahan se rahi hai. "
+        }
+      ],
+      "sourceParagraph": 1053
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki saamne wala insaan kuch galat nahi kar raha hota… "
+        }
+      ],
+      "sourceParagraph": 1054
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas apni normal presence mein hota hai. "
+        }
+      ],
+      "sourceParagraph": 1055
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par tumhara mind us presence ko present nahi dekhta… "
+        }
+      ],
+      "sourceParagraph": 1056
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo usko past ke filter se read karta hai. "
+        }
+      ],
+      "sourceParagraph": 1057
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek silent distortion start hota hai… "
+        }
+      ],
+      "sourceParagraph": 1058
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan naya hota hai "
+        }
+      ],
+      "sourceParagraph": 1059
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reaction purana hota hai "
+        }
+      ],
+      "sourceParagraph": 1060
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagta hai ki tum “observe” kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 1061
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tum reactive memory mode mein hote ho. "
+        }
+      ],
+      "sourceParagraph": 1062
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise kisi naye chehre pe purani film chal rahi ho… "
+        }
+      ],
+      "sourceParagraph": 1063
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur tum us film ko reality samajh lete ho. "
+        }
+      ],
+      "sourceParagraph": 1064
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda aur honestly dekho… "
+        }
+      ],
+      "sourceParagraph": 1065
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo insaan trigger nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1066
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf ek mirror ban jata hai… "
+        }
+      ],
+      "sourceParagraph": 1067
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jisme tum apna unresolved past reflect kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1068
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse interesting cheez ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1069
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum naye insaan se door nahi hote… "
+        }
+      ],
+      "sourceParagraph": 1070
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us feeling se door hote ho jo tumhe andar se alert karti hai. "
+        }
+      ],
+      "sourceParagraph": 1071
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab bhi alert aati hai… "
+        }
+      ],
+      "sourceParagraph": 1072
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind usko “danger” label kar deta hai… "
+        }
+      ],
+      "sourceParagraph": 1073
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jabki wo sirf “old data recall” hota hai. "
+        }
+      ],
+      "sourceParagraph": 1074
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek loop banta hai: "
+        }
+      ],
+      "sourceParagraph": 1075
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "naye log directly unsafe” "
+        }
+      ],
+      "sourceParagraph": 1076
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "distance  directly safe” "
+        }
+      ],
+      "sourceParagraph": 1077
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ye equation reality nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 1078
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye sirf memory ka overgeneralization hota hai. "
+        }
+      ],
+      "sourceParagraph": 1079
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye pattern repeat hota hai… "
+        }
+      ],
+      "sourceParagraph": 1080
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum naye connections ko full chance dene se pehle hi half-close ho jaate "
+        }
+      ],
+      "sourceParagraph": 1081
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ho. "
+        }
+      ],
+      "sourceParagraph": 1082
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar ek moment ke liye ruk ke observe karo… "
+        }
+      ],
+      "sourceParagraph": 1083
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina judgement ke… "
+        }
+      ],
+      "sourceParagraph": 1084
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek subtle truth dikhega: "
+        }
+      ],
+      "sourceParagraph": 1085
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har insaan same nahi hota "
+        }
+      ],
+      "sourceParagraph": 1086
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har feeling signal nahi hoti "
+        }
+      ],
+      "sourceParagraph": 1087
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har memory prediction nahi hoti "
+        }
+      ],
+      "sourceParagraph": 1088
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum is pattern ko sirf notice karte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1090
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usko change karne ki koshish nahi… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1091
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas dekhte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1092
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek chhota sa gap create hota hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1093
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan tum reaction ko pause kar paate ho. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1094
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us pause mein ek possibility aati hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1095
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad ye insaan waise nahi hai jaisa mai ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1096
+    }
+  ],
+  "phase": "Part 4 - The Weight",
+  "headerSourceParagraphs": {
+    "number": 1039,
+    "title": 1040
+  },
+  "number": "CHAPTER 12:",
+  "sourceHeadingParagraphs": [
+    1039,
+    1040
+  ]
+}

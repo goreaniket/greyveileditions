@@ -1,0 +1,537 @@
+{
+  "id": "prologue",
+  "kind": "prologue",
+  "label": "Prologue",
+  "title": "( Don’t read this to understand it. Read it to notice what it does to you).",
+  "shortTitle": "Prologue",
+  "file": "chapters/06-prologue.json",
+  "index": 6,
+  "sourceRange": [
+    125,
+    184
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya tum kabhi kisi insaan ko miss karte ho… "
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya tum bas apne us version ko miss kar rahe hote ho jo us insaan ke saamne "
+        }
+      ],
+      "sourceParagraph": 128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "zinda feel karta tha? "
+        }
+      ],
+      "sourceParagraph": 129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya ho sakta hai ki tum jis “move on” ko failure samajh rahe ho… "
+        }
+      ],
+      "sourceParagraph": 130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo failure nahi… "
+        }
+      ],
+      "sourceParagraph": 131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara mind ka refusal to let a pattern die ho? "
+        }
+      ],
+      "sourceParagraph": 132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek aur uncomfortable sawal… "
+        }
+      ],
+      "sourceParagraph": 133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kya tum sach mein kisi insaan se stuck ho… "
+        }
+      ],
+      "sourceParagraph": 134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya tum ek aise emotional loop se addicted ho… "
+        }
+      ],
+      "sourceParagraph": 135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumhe lagta hai tum hi ho? "
+        }
+      ],
+      "sourceParagraph": 136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab thoda aur andar jao… "
+        }
+      ],
+      "sourceParagraph": 137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki yahan se cheezein personal nahi lagengi… "
+        }
+      ],
+      "sourceParagraph": 138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "cheezein pehli baar mechanical lagengi… "
+        }
+      ],
+      "sourceParagraph": 139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaise tum apne hi thoughts ko observe kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na ki unhe live kar rahe ho. "
+        }
+      ],
+      "sourceParagraph": 141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe danger start hota hai… "
+        }
+      ],
+      "sourceParagraph": 142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki jab tum apne thoughts ko live nahi karte… "
+        }
+      ],
+      "sourceParagraph": 143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf dekhte ho… "
+        }
+      ],
+      "sourceParagraph": 144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh pehli baar tumhe samajh aata hai: "
+        }
+      ],
+      "sourceParagraph": 145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch bhi “naturally real” nahi chal raha tha "
+        }
+      ],
+      "sourceParagraph": 146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sab kuch repeat ho raha tha "
+        }
+      ],
+      "sourceParagraph": 147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind is realization ko accept nahi karta… "
+        }
+      ],
+      "sourceParagraph": 148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo turant label lagata hai: "
+        }
+      ],
+      "sourceParagraph": 149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "overthinking” "
+        }
+      ],
+      "sourceParagraph": 150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "emotional phase” "
+        }
+      ],
+      "sourceParagraph": 151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "normal attachment” "
+        }
+      ],
+      "sourceParagraph": 152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ek second ke liye ruk jao… "
+        }
+      ],
+      "sourceParagraph": 153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya tum notice kar sakte ho… "
+        }
+      ],
+      "sourceParagraph": 154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhara dard bhi structured hai? "
+        }
+      ],
+      "sourceParagraph": 155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same type of thoughts "
+        }
+      ],
+      "sourceParagraph": 156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same time pe triggers "
+        }
+      ],
+      "sourceParagraph": 157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same imagination patterns "
+        }
+      ],
+      "sourceParagraph": 158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same emotional spikes "
+        }
+      ],
+      "sourceParagraph": 159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo cheez structured hoti hai… "
+        }
+      ],
+      "sourceParagraph": 160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo accident nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo pattern hoti hai. "
+        }
+      ],
+      "sourceParagraph": 162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pattern ka matlab hota hai… "
+        }
+      ],
+      "sourceParagraph": 163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jo feel kar rahe ho… wo random nahi hai "
+        }
+      ],
+      "sourceParagraph": 164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi sabse uncomfortable realization hota hai… "
+        }
+      ],
+      "sourceParagraph": 165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki ab tumhe koi “insaan” villain nahi lagta… "
+        }
+      ],
+      "sourceParagraph": 166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na hi koi “loss” primary reason lagta hai… "
+        }
+      ],
+      "sourceParagraph": 167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe sirf ek cheez dikhti hai: "
+        }
+      ],
+      "sourceParagraph": 168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara mind ek unfinished loop ko protect kar raha hai "
+        }
+      ],
+      "sourceParagraph": 169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wo loop tumhe kabhi clearly end nahi hone deta… "
+        }
+      ],
+      "sourceParagraph": 170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo hamesha ek line chhod deta hai: "
+        }
+      ],
+      "sourceParagraph": 171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad…” "
+        }
+      ],
+      "sourceParagraph": 172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur “shayad” hi wo jagah hai jahan tum atke ho… "
+        }
+      ],
+      "sourceParagraph": 173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na past mein… na present mein… "
+        }
+      ],
+      "sourceParagraph": 174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek endless in-between state mein. "
+        }
+      ],
+      "sourceParagraph": 175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse dangerous part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum is state ko “feelings” samajh lete ho… "
+        }
+      ],
+      "sourceParagraph": 177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jabki ye ek repeatable mental process hota hai. "
+        }
+      ],
+      "sourceParagraph": 178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar tum ye padh rahe ho… toh shayad tumhe jawab nahi chahiye… "
+        }
+      ],
+      "sourceParagraph": 179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe apna pattern pehli baar clearly dikh raha hai. "
+        }
+      ],
+      "sourceParagraph": 180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin se ye book shuru hoti hai… "
+        }
+      ],
+      "sourceParagraph": 181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan kuch bhi tumhe bataya nahi ja raha… "
+        }
+      ],
+      "sourceParagraph": 182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf expose kiya ja raha hai… tumhe, tumse."
+        }
+      ],
+      "sourceParagraph": 183
+    }
+  ],
+  "headerSourceParagraphs": {
+    "number": 125,
+    "title": 126
+  },
+  "number": "PROLOGUE",
+  "sourceHeadingParagraphs": [
+    125,
+    126
+  ]
+}

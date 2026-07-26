@@ -1,0 +1,1491 @@
+{
+  "id": "prologue",
+  "kind": "prologue",
+  "label": "Prologue",
+  "title": "Before You Decide You Already Know Yourself",
+  "shortTitle": "Prologue",
+  "file": "chapters/06-prologue.json",
+  "index": 6,
+  "sourceRange": [
+    83,
+    248
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Before you read another sentence..."
+        }
+      ],
+      "sourceParagraph": 85
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pause."
+        }
+      ],
+      "sourceParagraph": 86
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because this book demands your attention."
+        }
+      ],
+      "sourceParagraph": 87
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because your mind has already started judging it."
+        }
+      ],
+      "sourceParagraph": 88
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without realizing it, you have already begun asking questions."
+        }
+      ],
+      "sourceParagraph": 89
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Will this book be worth my time?\""
+        }
+      ],
+      "sourceParagraph": 90
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Will I agree with it?\""
+        }
+      ],
+      "sourceParagraph": 91
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Can it teach me something I don't already know?\""
+        }
+      ],
+      "sourceParagraph": 92
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Notice something strange."
+        }
+      ],
+      "sourceParagraph": 93
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You haven't even entered the book..."
+        }
+      ],
+      "sourceParagraph": 94
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yet your mind has already created an opinion."
+        }
+      ],
+      "sourceParagraph": 95
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That is what the human mind does."
+        }
+      ],
+      "sourceParagraph": 96
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It predicts before it observes."
+        }
+      ],
+      "sourceParagraph": 97
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It concludes before it understands."
+        }
+      ],
+      "sourceParagraph": 98
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It protects before it questions."
+        }
+      ],
+      "sourceParagraph": 99
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And after enough years..."
+        }
+      ],
+      "sourceParagraph": 100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "we stop calling this conditioning."
+        }
+      ],
+      "sourceParagraph": 101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We call it our personality."
+        }
+      ],
+      "sourceParagraph": 102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Every human being believes they are becoming someone."
+        }
+      ],
+      "sourceParagraph": 103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A better version."
+        }
+      ],
+      "sourceParagraph": 104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A stronger version."
+        }
+      ],
+      "sourceParagraph": 105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A wiser version."
+        }
+      ],
+      "sourceParagraph": 106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A happier version."
+        }
+      ],
+      "sourceParagraph": 107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We spend our entire lives chasing a future version of ourselves..."
+        }
+      ],
+      "sourceParagraph": 108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without ever asking a terrifying question."
+        }
+      ],
+      "sourceParagraph": 109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Who told me that the person I am today is incomplete?"
+        }
+      ],
+      "sourceParagraph": 110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Think carefully."
+        }
+      ],
+      "sourceParagraph": 111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not emotionally."
+        }
+      ],
+      "sourceParagraph": 112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Logically."
+        }
+      ],
+      "sourceParagraph": 113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Before you knew language..."
+        }
+      ],
+      "sourceParagraph": 114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you had no identity."
+        }
+      ],
+      "sourceParagraph": 115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Before you knew your name..."
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you weren't trying to become anyone."
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Before society described success..."
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you never felt behind."
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Before comparison..."
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "there was simply experience."
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Then slowly..."
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "people handed you definitions."
+        }
+      ],
+      "sourceParagraph": 123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is success."
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is failure."
+        }
+      ],
+      "sourceParagraph": 125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is beauty."
+        }
+      ],
+      "sourceParagraph": 126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is intelligence."
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is masculinity."
+        }
+      ],
+      "sourceParagraph": 128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is femininity."
+        }
+      ],
+      "sourceParagraph": 129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is achievement."
+        }
+      ],
+      "sourceParagraph": 130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is respect."
+        }
+      ],
+      "sourceParagraph": 131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is God."
+        }
+      ],
+      "sourceParagraph": 132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is purpose."
+        }
+      ],
+      "sourceParagraph": 133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is love."
+        }
+      ],
+      "sourceParagraph": 134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And because you were too young to question them..."
+        }
+      ],
+      "sourceParagraph": 135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you accepted them."
+        }
+      ],
+      "sourceParagraph": 136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because they were true."
+        }
+      ],
+      "sourceParagraph": 137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because they arrived before doubt did."
+        }
+      ],
+      "sourceParagraph": 138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Years passed."
+        }
+      ],
+      "sourceParagraph": 139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Those borrowed ideas became your beliefs."
+        }
+      ],
+      "sourceParagraph": 140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Those beliefs became your decisions."
+        }
+      ],
+      "sourceParagraph": 141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Those decisions became your habits."
+        }
+      ],
+      "sourceParagraph": 142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Those habits became your identity."
+        }
+      ],
+      "sourceParagraph": 143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And one day..."
+        }
+      ],
+      "sourceParagraph": 144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you looked into a mirror..."
+        }
+      ],
+      "sourceParagraph": 145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and called all of it"
+        }
+      ],
+      "sourceParagraph": 146
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Me.\""
+        }
+      ],
+      "sourceParagraph": 147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The most dangerous prison has no walls."
+        }
+      ],
+      "sourceParagraph": 148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It has certainty."
+        }
+      ],
+      "sourceParagraph": 149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Once you become certain about who you are..."
+        }
+      ],
+      "sourceParagraph": 150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "growth quietly dies."
+        }
+      ],
+      "sourceParagraph": 151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because truth disappeared..."
+        }
+      ],
+      "sourceParagraph": 152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because questions did."
+        }
+      ],
+      "sourceParagraph": 153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Human beings rarely fear death."
+        }
+      ],
+      "sourceParagraph": 154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We fear discovering that the person we spent our entire lives protecting..."
+        }
+      ],
+      "sourceParagraph": 155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "never truly existed."
+        }
+      ],
+      "sourceParagraph": 156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Imagine spending decades defending an identity..."
+        }
+      ],
+      "sourceParagraph": 157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "only to realize it was built from fear..."
+        }
+      ],
+      "sourceParagraph": 158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "comparison..."
+        }
+      ],
+      "sourceParagraph": 159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "approval..."
+        }
+      ],
+      "sourceParagraph": 160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "memory..."
+        }
+      ],
+      "sourceParagraph": 161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and survival."
+        }
+      ],
+      "sourceParagraph": 162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Would you call that freedom?"
+        }
+      ],
+      "sourceParagraph": 163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Or would you call it a beautifully decorated cage?"
+        }
+      ],
+      "sourceParagraph": 164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Your memories feel real."
+        }
+      ],
+      "sourceParagraph": 165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Your emotions feel undeniable."
+        }
+      ],
+      "sourceParagraph": 166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Your opinions feel original."
+        }
+      ],
+      "sourceParagraph": 167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But have you ever wondered why millions of people are equally convinced of completely opposite truths?"
+        }
+      ],
+      "sourceParagraph": 168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "How can certainty exist on both sides?"
+        }
+      ],
+      "sourceParagraph": 169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because certainty does not prove truth."
+        }
+      ],
+      "sourceParagraph": 170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It proves attachment."
+        }
+      ],
+      "sourceParagraph": 171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The mind does not seek reality."
+        }
+      ],
+      "sourceParagraph": 172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It seeks stability."
+        }
+      ],
+      "sourceParagraph": 173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If reality threatens stability..."
+        }
+      ],
+      "sourceParagraph": 174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the mind rewrites reality."
+        }
+      ],
+      "sourceParagraph": 175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That is why two people can experience the same moment..."
+        }
+      ],
+      "sourceParagraph": 176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and remember entirely different stories."
+        }
+      ],
+      "sourceParagraph": 177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because memory records life."
+        }
+      ],
+      "sourceParagraph": 178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because memory edits it."
+        }
+      ],
+      "sourceParagraph": 179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perhaps the greatest illusion is not that we lie to others."
+        }
+      ],
+      "sourceParagraph": 180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is that we mistake our explanations for reality."
+        }
+      ],
+      "sourceParagraph": 181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Every time life hurts us..."
+        }
+      ],
+      "sourceParagraph": 182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the mind rushes to create a story."
+        }
+      ],
+      "sourceParagraph": 183
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"They never loved me.\""
+        }
+      ],
+      "sourceParagraph": 184
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"I'm not enough.\""
+        }
+      ],
+      "sourceParagraph": 185
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"People always leave.\""
+        }
+      ],
+      "sourceParagraph": 186
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"I deserve this.\""
+        }
+      ],
+      "sourceParagraph": 187
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"I'm different.\""
+        }
+      ],
+      "sourceParagraph": 188
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"I'm broken.\""
+        }
+      ],
+      "sourceParagraph": 189
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"They're wrong.\""
+        }
+      ],
+      "sourceParagraph": 190
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"I'm right.\""
+        }
+      ],
+      "sourceParagraph": 191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Stories."
+        }
+      ],
+      "sourceParagraph": 192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nothing more."
+        }
+      ],
+      "sourceParagraph": 193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yet entire lives are built upon them."
+        }
+      ],
+      "sourceParagraph": 194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Careers."
+        }
+      ],
+      "sourceParagraph": 195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Relationships."
+        }
+      ],
+      "sourceParagraph": 196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wars."
+        }
+      ],
+      "sourceParagraph": 197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Religions."
+        }
+      ],
+      "sourceParagraph": 198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dreams."
+        }
+      ],
+      "sourceParagraph": 199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Regrets."
+        }
+      ],
+      "sourceParagraph": 200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because the stories were true..."
+        }
+      ],
+      "sourceParagraph": 201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because they were repeated until they became familiar."
+        }
+      ],
+      "sourceParagraph": 202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And familiarity has always disguised itself as truth."
+        }
+      ],
+      "sourceParagraph": 203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not asking you to believe anything written inside it."
+        }
+      ],
+      "sourceParagraph": 204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Belief is easy."
+        }
+      ],
+      "sourceParagraph": 205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questioning is rare."
+        }
+      ],
+      "sourceParagraph": 206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Instead..."
+        }
+      ],
+      "sourceParagraph": 207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I invite you into something far more uncomfortable."
+        }
+      ],
+      "sourceParagraph": 208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observe your own mind while reading."
+        }
+      ],
+      "sourceParagraph": 209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Notice the sentences that make you defensive."
+        }
+      ],
+      "sourceParagraph": 210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Notice the paragraphs you immediately reject."
+        }
+      ],
+      "sourceParagraph": 211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Notice the ideas you desperately want to argue against."
+        }
+      ],
+      "sourceParagraph": 212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Those reactions matter more than my words."
+        }
+      ],
+      "sourceParagraph": 213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because books never reveal who the author is."
+        }
+      ],
+      "sourceParagraph": 214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They reveal who the reader is."
+        }
+      ],
+      "sourceParagraph": 215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Every page becomes a mirror."
+        }
+      ],
+      "sourceParagraph": 216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Some people will only see ink."
+        }
+      ],
+      "sourceParagraph": 217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Some will see themselves."
+        }
+      ],
+      "sourceParagraph": 218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Do not read this book looking for motivation."
+        }
+      ],
+      "sourceParagraph": 219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Motivation fades."
+        }
+      ],
+      "sourceParagraph": 220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Do not read it looking for answers."
+        }
+      ],
+      "sourceParagraph": 221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Answers become new beliefs."
+        }
+      ],
+      "sourceParagraph": 222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Read it as someone willing to lose certainty."
+        }
+      ],
+      "sourceParagraph": 223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because sometimes..."
+        }
+      ],
+      "sourceParagraph": 224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the greatest act of intelligence..."
+        }
+      ],
+      "sourceParagraph": 225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is not learning something new."
+        }
+      ],
+      "sourceParagraph": 226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is realizing that what you have always called yourself..."
+        }
+      ],
+      "sourceParagraph": 227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "may only be a story that survived long enough to become believable."
+        }
+      ],
+      "sourceParagraph": 228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And if that possibility frightens you..."
+        }
+      ],
+      "sourceParagraph": 229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "good."
+        }
+      ],
+      "sourceParagraph": 230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Truth has never been responsible for comfort."
+        }
+      ],
+      "sourceParagraph": 231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only illusion has."
+        }
+      ],
+      "sourceParagraph": 232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So before you turn the page..."
+        }
+      ],
+      "sourceParagraph": 233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "leave one thing behind."
+        }
+      ],
+      "sourceParagraph": 234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The person you are absolutely certain you are."
+        }
+      ],
+      "sourceParagraph": 235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because if you cannot question your identity..."
+        }
+      ],
+      "sourceParagraph": 236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you will only use this book to strengthen it."
+        }
+      ],
+      "sourceParagraph": 237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And that would be the greatest misunderstanding of all."
+        }
+      ],
+      "sourceParagraph": 238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The pages ahead are not trying to change your life."
+        }
+      ],
+      "sourceParagraph": 239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They are trying to introduce you..."
+        }
+      ],
+      "sourceParagraph": 240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to the possibility..."
+        }
+      ],
+      "sourceParagraph": 241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that your life has been narrated by a voice you never chose."
+        }
+      ],
+      "sourceParagraph": 242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Read slowly."
+        }
+      ],
+      "sourceParagraph": 243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Question relentlessly."
+        }
+      ],
+      "sourceParagraph": 244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Believe nothing too quickly."
+        }
+      ],
+      "sourceParagraph": 245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not even this."
+        }
+      ],
+      "sourceParagraph": 246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Especially this."
+        }
+      ],
+      "sourceParagraph": 247
+    }
+  ],
+  "headerSourceParagraphs": {
+    "number": 83,
+    "title": 84
+  },
+  "number": "PROLOGUE",
+  "sourceHeadingParagraphs": [
+    83,
+    84
+  ]
+}

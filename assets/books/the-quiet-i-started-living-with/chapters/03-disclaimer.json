@@ -1,0 +1,58 @@
+{
+  "id": "disclaimer",
+  "kind": "frontmatter",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "Disclaimer",
+  "file": "chapters/03-disclaimer.json",
+  "index": 3,
+  "sourceRange": [
+    61,
+    69
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The Quiet I Started Living With is a reflective work, not professional psychological or medical advice. "
+        }
+      ],
+      "sourceParagraph": 62
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experiences, characters, and conversations may be fictionalized for literary purposes. Any resemblance to real people or events is coincidental. "
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book offers no definitive answers. It invites you to observe your own experiences with honesty and curiosity. "
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Read slowly. Question gently. Meaning is personal. "
+        }
+      ],
+      "sourceParagraph": 68
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 61
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    61
+  ]
+}

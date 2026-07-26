@@ -1,0 +1,828 @@
+{
+  "id": "the-quiet-i-started-living-with",
+  "slug": "the-quiet-i-started-living-with",
+  "title": "The Quiet I Started Living With",
+  "subtitle": "A Psychological Reflection on Silence, Identity, Overthinking, and the Invisible Distance Between Who We Are and Who We Slowly Become",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Mind",
+  "seriesDisplay": "The Human Mind Series",
+  "bookNumber": "Book III",
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-mind/assets/covers/the%20quiet%20i%20started%20living%20with%20.jpeg",
+  "cover": {
+    "web": "/assets/books/the-quiet-i-started-living-with/cover/front-cover.webp",
+    "print": "/assets/books/the-quiet-i-started-living-with/cover/front-cover-print.png",
+    "source": "/assets/books/the-quiet-i-started-living-with/cover/cover-source.png",
+    "alt": "The Quiet I Started Living With book cover"
+  },
+  "readerRoute": "/projects/human-mind/books/the-quiet-i-started-living-with/reader/",
+  "readerExitUrl": "/projects/human-mind/books/the-quiet-i-started-living-with.html",
+  "storageKey": "greyveil:the-quiet-i-started-living-with:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Mind",
+    "book": "The Quiet I Started Living With",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-quiet-living",
+    "variables": {
+      "light": {
+        "--reader-bg": "#E2E6E8",
+        "--reader-paper": "#F6F0E7",
+        "--reader-paper-soft": "#EDE5DB",
+        "--reader-text": "#26313A",
+        "--reader-heading": "#18212B",
+        "--reader-muted": "color-mix(in srgb, #26313A 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #26313A 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #26313A 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #6D748F 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #26313A 20%, transparent)",
+        "--reader-accent": "#6D748F",
+        "--reader-accent-strong": "#464E6D",
+        "--reader-accent-soft": "color-mix(in srgb, #6D748F 12%, transparent)",
+        "--reader-warm": "#927B62",
+        "--reader-focus": "#464E6D",
+        "--reader-control-bg": "#EDE5DB",
+        "--reader-control-border": "color-mix(in srgb, #26313A 18%, transparent)",
+        "--reader-input-bg": "#F6F0E7",
+        "--reader-input-text": "#26313A",
+        "--reader-placeholder": "color-mix(in srgb, #26313A 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #6D748F 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(25, 34, 39, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#E2D6C8",
+        "--reader-paper": "#F2E5D4",
+        "--reader-paper-soft": "#E7D8C4",
+        "--reader-text": "#332E29",
+        "--reader-heading": "#251F1C",
+        "--reader-muted": "color-mix(in srgb, #332E29 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #332E29 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #332E29 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #686076 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #332E29 20%, transparent)",
+        "--reader-accent": "#686076",
+        "--reader-accent-strong": "#4D465F",
+        "--reader-accent-soft": "color-mix(in srgb, #686076 12%, transparent)",
+        "--reader-warm": "#8D7156",
+        "--reader-focus": "#4D465F",
+        "--reader-control-bg": "#E7D8C4",
+        "--reader-control-border": "color-mix(in srgb, #332E29 18%, transparent)",
+        "--reader-input-bg": "#F2E5D4",
+        "--reader-input-text": "#332E29",
+        "--reader-placeholder": "color-mix(in srgb, #332E29 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #686076 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(25, 34, 39, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#0F141B",
+        "--reader-paper": "#171D27",
+        "--reader-paper-soft": "#202733",
+        "--reader-text": "#EEE7DD",
+        "--reader-heading": "#F7F1E9",
+        "--reader-muted": "color-mix(in srgb, #EEE7DD 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EEE7DD 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EEE7DD 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #AEB4CC 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EEE7DD 20%, transparent)",
+        "--reader-accent": "#AEB4CC",
+        "--reader-accent-strong": "#D0D3E8",
+        "--reader-accent-soft": "color-mix(in srgb, #AEB4CC 12%, transparent)",
+        "--reader-warm": "#C1A77D",
+        "--reader-focus": "#D0D3E8",
+        "--reader-control-bg": "#202733",
+        "--reader-control-border": "color-mix(in srgb, #EEE7DD 18%, transparent)",
+        "--reader-input-bg": "#171D27",
+        "--reader-input-text": "#F2ECE4",
+        "--reader-placeholder": "color-mix(in srgb, #EEE7DD 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #AEB4CC 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .48)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-mind/chapters/WORD/THE QUIET I STARTED LIVING WITH.docx",
+    "pdfVerification": "/projects/human-mind/chapters/PDF/the quiet i started living with lrm.pdf",
+    "sourceParagraphsTotal": 2105,
+    "sourceParagraphsNonEmpty": 2047,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Quiet I Started Living With",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        15
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "TABLE OF CONTENTS",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        16,
+        50
+      ],
+      "headerSourceParagraphs": {
+        "title": 16
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        16
+      ]
+    },
+    {
+      "id": "copyright",
+      "kind": "frontmatter",
+      "label": "Copyright",
+      "title": "COPYRIGHT",
+      "shortTitle": "Copyright",
+      "file": "chapters/02-copyright.json",
+      "index": 2,
+      "sourceRange": [
+        51,
+        60
+      ],
+      "headerSourceParagraphs": {
+        "title": 51
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        51
+      ]
+    },
+    {
+      "id": "disclaimer",
+      "kind": "frontmatter",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "Disclaimer",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        61,
+        69
+      ],
+      "headerSourceParagraphs": {
+        "title": 61
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        61
+      ]
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "Dedication",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        70,
+        79
+      ],
+      "headerSourceParagraphs": {
+        "title": 70
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        70
+      ]
+    },
+    {
+      "id": "authors-note",
+      "kind": "frontmatter",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "Authors Note",
+      "file": "chapters/05-authors-note.json",
+      "index": 5,
+      "sourceRange": [
+        80,
+        97
+      ],
+      "headerSourceParagraphs": {
+        "title": 80
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        80
+      ]
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "The Quiet I Started Living With",
+      "shortTitle": "Prologue",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        98,
+        200
+      ],
+      "headerSourceParagraphs": {
+        "number": 98,
+        "title": 99
+      },
+      "number": "PROLOGUE",
+      "sourceHeadingParagraphs": [
+        98,
+        99
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "INTRODUCTION",
+      "shortTitle": "Introduction",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        201,
+        294
+      ],
+      "headerSourceParagraphs": {
+        "title": 201
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        201
+      ]
+    },
+    {
+      "id": "phase-i",
+      "kind": "part",
+      "label": "Phase I",
+      "title": "THE MIND THAT NEVER STOPPED SPEAKING",
+      "shortTitle": "Phase I",
+      "file": "chapters/08-phase-i.json",
+      "index": 8,
+      "sourceRange": [
+        295,
+        298
+      ],
+      "headerSourceParagraphs": {
+        "number": 295,
+        "title": 296
+      },
+      "number": "PHASE I",
+      "sourceHeadingParagraphs": [
+        295,
+        296
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "Chapter 1",
+      "title": "WHEN YOUR MIND BECOMES THE ONLY PLACE YOU LIVE",
+      "shortTitle": "WHEN YOUR MIND BECOMES THE ONLY PLACE YOU LIVE",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        299,
+        412
+      ],
+      "phase": "Phase I - The Mind That Never Stopped Speaking",
+      "headerSourceParagraphs": {
+        "number": 299,
+        "title": 300
+      },
+      "number": "CHAPTER 1",
+      "sourceHeadingParagraphs": [
+        299,
+        300
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "Chapter 2",
+      "title": "WHY I STOPPED TALKING",
+      "shortTitle": "WHY I STOPPED TALKING",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        413,
+        522
+      ],
+      "phase": "Phase I - The Mind That Never Stopped Speaking",
+      "headerSourceParagraphs": {
+        "number": 413,
+        "title": 414
+      },
+      "number": "CHAPTER 2",
+      "sourceHeadingParagraphs": [
+        413,
+        414
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "Chapter 3",
+      "title": "THE THINGS I COULD NEVER EXPLAIN",
+      "shortTitle": "THE THINGS I COULD NEVER EXPLAIN",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        523,
+        605
+      ],
+      "phase": "Phase I - The Mind That Never Stopped Speaking",
+      "headerSourceParagraphs": {
+        "number": 523,
+        "title": 524
+      },
+      "number": "CHAPTER 3",
+      "sourceHeadingParagraphs": [
+        523,
+        524
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "Chapter 4",
+      "title": "THE CONVERSATIONS THAT NEVER HAPPENED",
+      "shortTitle": "THE CONVERSATIONS THAT NEVER HAPPENED",
+      "file": "chapters/12-chapter-04.json",
+      "index": 12,
+      "sourceRange": [
+        606,
+        689
+      ],
+      "phase": "Phase I - The Mind That Never Stopped Speaking",
+      "headerSourceParagraphs": {
+        "number": 606,
+        "title": 607
+      },
+      "number": "CHAPTER 4",
+      "sourceHeadingParagraphs": [
+        606,
+        607
+      ]
+    },
+    {
+      "id": "phase-ii",
+      "kind": "part",
+      "label": "Phase II",
+      "title": "WHEN SILENCE BECOMES YOUR LANGUAGE",
+      "shortTitle": "Phase II",
+      "file": "chapters/13-phase-ii.json",
+      "index": 13,
+      "sourceRange": [
+        690,
+        693
+      ],
+      "headerSourceParagraphs": {
+        "number": 690,
+        "title": 691
+      },
+      "number": "PHASE II",
+      "sourceHeadingParagraphs": [
+        690,
+        691
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "Chapter 5",
+      "title": "WHEN YOU STOP RECOGNIZING YOURSELF",
+      "shortTitle": "WHEN YOU STOP RECOGNIZING YOURSELF",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        694,
+        769
+      ],
+      "phase": "Phase II - When Silence Becomes Your Language",
+      "headerSourceParagraphs": {
+        "number": 694,
+        "title": 695
+      },
+      "number": "CHAPTER 5",
+      "sourceHeadingParagraphs": [
+        694,
+        695
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "Chapter 6",
+      "title": "THE VERSION OF ME NOBODY EVER KNEW",
+      "shortTitle": "THE VERSION OF ME NOBODY EVER KNEW",
+      "file": "chapters/15-chapter-06.json",
+      "index": 15,
+      "sourceRange": [
+        770,
+        867
+      ],
+      "phase": "Phase II - When Silence Becomes Your Language",
+      "headerSourceParagraphs": {
+        "number": 770,
+        "title": 771
+      },
+      "number": "CHAPTER 6",
+      "sourceHeadingParagraphs": [
+        770,
+        771
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "Chapter 7",
+      "title": "I DON'T KNOW WHAT I'M WAITING FOR",
+      "shortTitle": "I DONT KNOW WHAT IM WAITING FOR",
+      "file": "chapters/16-chapter-07.json",
+      "index": 16,
+      "sourceRange": [
+        868,
+        999
+      ],
+      "phase": "Phase II - When Silence Becomes Your Language",
+      "headerSourceParagraphs": {
+        "number": 868,
+        "title": 869
+      },
+      "number": "CHAPTER-7",
+      "sourceHeadingParagraphs": [
+        868,
+        869
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "Chapter 8",
+      "title": "AFTER I STOPPED WAITING",
+      "shortTitle": "AFTER I STOPPED WAITING",
+      "file": "chapters/17-chapter-08.json",
+      "index": 17,
+      "sourceRange": [
+        1000,
+        1114
+      ],
+      "phase": "Phase II - When Silence Becomes Your Language",
+      "headerSourceParagraphs": {
+        "number": 1000,
+        "title": 1001
+      },
+      "number": "CHAPTER 8",
+      "sourceHeadingParagraphs": [
+        1000,
+        1001
+      ]
+    },
+    {
+      "id": "phase-iii",
+      "kind": "part",
+      "label": "Phase III",
+      "title": "THE WEIGHT OF THE UNSEEN",
+      "shortTitle": "Phase III",
+      "file": "chapters/18-phase-iii.json",
+      "index": 18,
+      "sourceRange": [
+        1115,
+        1118
+      ],
+      "headerSourceParagraphs": {
+        "number": 1115,
+        "title": 1116
+      },
+      "number": "PHASE III",
+      "sourceHeadingParagraphs": [
+        1115,
+        1116
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "Chapter 9",
+      "title": "I DIDN'T KNOW WHO TO BECOME",
+      "shortTitle": "I DIDNT KNOW WHO TO BECOME",
+      "file": "chapters/19-chapter-09.json",
+      "index": 19,
+      "sourceRange": [
+        1119,
+        1232
+      ],
+      "phase": "Phase III - The Weight of the Unseen",
+      "headerSourceParagraphs": {
+        "number": 1119,
+        "title": 1120
+      },
+      "number": "CHAPTER 9",
+      "sourceHeadingParagraphs": [
+        1119,
+        1120
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "kind": "chapter",
+      "label": "Chapter 10",
+      "title": "THE PERSON I PRETENDED TO BE",
+      "shortTitle": "THE PERSON I PRETENDED TO BE",
+      "file": "chapters/20-chapter-10.json",
+      "index": 20,
+      "sourceRange": [
+        1233,
+        1342
+      ],
+      "phase": "Phase III - The Weight of the Unseen",
+      "headerSourceParagraphs": {
+        "number": 1233,
+        "title": 1234
+      },
+      "number": "CHAPTER 10",
+      "sourceHeadingParagraphs": [
+        1233,
+        1234
+      ]
+    },
+    {
+      "id": "chapter-11",
+      "kind": "chapter",
+      "label": "Chapter 11",
+      "title": "THE DAY I STOPPED FEELING SORRY FOR MYSELF",
+      "shortTitle": "THE DAY I STOPPED FEELING SORRY FOR MYSELF",
+      "file": "chapters/21-chapter-11.json",
+      "index": 21,
+      "sourceRange": [
+        1343,
+        1464
+      ],
+      "phase": "Phase III - The Weight of the Unseen",
+      "headerSourceParagraphs": {
+        "number": 1343,
+        "title": 1344
+      },
+      "number": "CHAPTER 11",
+      "sourceHeadingParagraphs": [
+        1343,
+        1344
+      ]
+    },
+    {
+      "id": "chapter-12",
+      "kind": "chapter",
+      "label": "Chapter 12",
+      "title": "THE QUIET I",
+      "shortTitle": "THE QUIET I",
+      "file": "chapters/22-chapter-12.json",
+      "index": 22,
+      "sourceRange": [
+        1465,
+        1557
+      ],
+      "phase": "Phase III - The Weight of the Unseen",
+      "headerSourceParagraphs": {
+        "number": 1465,
+        "title": 1466,
+        "subtitle": 1467
+      },
+      "number": "CHAPTER 12",
+      "subtitle": "STARTED LIVING WITH",
+      "sourceHeadingParagraphs": [
+        1465,
+        1466,
+        1467
+      ]
+    },
+    {
+      "id": "phase-iv",
+      "kind": "part",
+      "label": "Phase IV",
+      "title": "BECOMING SOMEONE THE SILENCE COULD NO LONGER HIDE",
+      "shortTitle": "Phase IV",
+      "file": "chapters/23-phase-iv.json",
+      "index": 23,
+      "sourceRange": [
+        1558,
+        1561
+      ],
+      "headerSourceParagraphs": {
+        "number": 1558,
+        "title": 1559
+      },
+      "number": "PHASE IV",
+      "sourceHeadingParagraphs": [
+        1558,
+        1559
+      ]
+    },
+    {
+      "id": "chapter-13",
+      "kind": "chapter",
+      "label": "Chapter 13",
+      "title": "THE DISTANCE",
+      "shortTitle": "THE DISTANCE",
+      "file": "chapters/24-chapter-13.json",
+      "index": 24,
+      "sourceRange": [
+        1562,
+        1644
+      ],
+      "phase": "Phase IV - Becoming Someone the Silence Could No Longer Hide",
+      "headerSourceParagraphs": {
+        "number": 1562,
+        "title": 1563,
+        "subtitle": 1564
+      },
+      "number": "CHAPTER 13",
+      "subtitle": "I DIDN’T NOTICE GROWING",
+      "sourceHeadingParagraphs": [
+        1562,
+        1563,
+        1564
+      ]
+    },
+    {
+      "id": "chapter-14",
+      "kind": "chapter",
+      "label": "Chapter 14",
+      "title": "WHEN EVEN MY SILENCE STARTED",
+      "shortTitle": "WHEN EVEN MY SILENCE STARTED",
+      "file": "chapters/25-chapter-14.json",
+      "index": 25,
+      "sourceRange": [
+        1645,
+        1713
+      ],
+      "phase": "Phase IV - Becoming Someone the Silence Could No Longer Hide",
+      "headerSourceParagraphs": {
+        "number": 1645,
+        "title": 1646,
+        "subtitle": 1647
+      },
+      "number": "CHAPTER 14",
+      "subtitle": "SOUNDING FAKE",
+      "sourceHeadingParagraphs": [
+        1645,
+        1646,
+        1647
+      ]
+    },
+    {
+      "id": "chapter-15",
+      "kind": "chapter",
+      "label": "Chapter 15",
+      "title": "THE VERSION OF ME THAT DOESN’T FIT ANYMORE",
+      "shortTitle": "THE VERSION OF ME THAT DOESNT FIT ANYMORE",
+      "file": "chapters/26-chapter-15.json",
+      "index": 26,
+      "sourceRange": [
+        1714,
+        1805
+      ],
+      "phase": "Phase IV - Becoming Someone the Silence Could No Longer Hide",
+      "headerSourceParagraphs": {
+        "number": 1714,
+        "title": 1715
+      },
+      "number": "CHAPTER 15",
+      "sourceHeadingParagraphs": [
+        1714,
+        1715
+      ]
+    },
+    {
+      "id": "chapter-16",
+      "kind": "chapter",
+      "label": "Chapter 16",
+      "title": "I DON’T KNOW IF THIS EVER ENDED",
+      "shortTitle": "I DONT KNOW IF THIS EVER ENDED",
+      "file": "chapters/27-chapter-16.json",
+      "index": 27,
+      "sourceRange": [
+        1806,
+        1922
+      ],
+      "phase": "Phase IV - Becoming Someone the Silence Could No Longer Hide",
+      "headerSourceParagraphs": {
+        "number": 1806,
+        "title": 1807
+      },
+      "number": "CHAPTER 16",
+      "sourceHeadingParagraphs": [
+        1806,
+        1807
+      ]
+    },
+    {
+      "id": "end-realization",
+      "kind": "ending",
+      "label": "End Realization",
+      "title": "Simply Inside It",
+      "shortTitle": "End Realization",
+      "file": "chapters/28-end-realization.json",
+      "index": 28,
+      "sourceRange": [
+        1923,
+        2017
+      ],
+      "headerSourceParagraphs": {
+        "number": 1923,
+        "title": 1924
+      },
+      "number": "END REALIZATION",
+      "sourceHeadingParagraphs": [
+        1923,
+        1924
+      ]
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "What Remained After the Noise",
+      "shortTitle": "Epilogue",
+      "file": "chapters/29-epilogue.json",
+      "index": 29,
+      "sourceRange": [
+        2018,
+        2096
+      ],
+      "headerSourceParagraphs": {
+        "number": 2018,
+        "title": 2019
+      },
+      "number": "EPILOGUE",
+      "sourceHeadingParagraphs": [
+        2018,
+        2019
+      ]
+    },
+    {
+      "id": "about-author",
+      "kind": "ending",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "About the Author",
+      "file": "chapters/30-about-author.json",
+      "index": 30,
+      "sourceRange": [
+        2097,
+        2105
+      ],
+      "headerSourceParagraphs": {
+        "title": 2097
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        2097
+      ]
+    }
+  ]
+}

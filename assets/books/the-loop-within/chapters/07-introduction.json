@@ -1,0 +1,528 @@
+{
+  "id": "introduction",
+  "kind": "introduction",
+  "label": "Introduction",
+  "title": "(Before you call this a story… understand what is actually happening",
+  "shortTitle": "Introduction",
+  "file": "chapters/07-introduction.json",
+  "index": 7,
+  "sourceRange": [
+    185,
+    247
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "inside you) "
+        }
+      ],
+      "sourceParagraph": 187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book love ke baare mein nahi hai. "
+        }
+      ],
+      "sourceParagraph": 188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book loss ke baare mein bhi nahi hai. "
+        }
+      ],
+      "sourceParagraph": 189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye bilkul bhi “move on ka guide” nahi hai. "
+        }
+      ],
+      "sourceParagraph": 190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar tum yahan comfort dhoondhne aaye ho… "
+        }
+      ],
+      "sourceParagraph": 191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad wo tumhe us tarah na mile jaisa tum expect kar rahe ho. "
+        }
+      ],
+      "sourceParagraph": 192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ye book tumhare emotions ko soothe karne ke liye nahi bani. "
+        }
+      ],
+      "sourceParagraph": 193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book isliye bani hai ki tum samajh sako ki emotions bante kaise hain. "
+        }
+      ],
+      "sourceParagraph": 194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Zyada tar log sochte hain ki unke saath jo hota hai, wahi unka dard hai. "
+        }
+      ],
+      "sourceParagraph": 195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par asal mein jo unhe control karta hai… "
+        }
+      ],
+      "sourceParagraph": 196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo event nahi hota. "
+        }
+      ],
+      "sourceParagraph": 197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo hota hai mind ka us event ko baar-baar replay karna "
+        }
+      ],
+      "sourceParagraph": 198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek baar nahi… do baar nahi… "
+        }
+      ],
+      "sourceParagraph": 199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par continuously… jab tak wo cheez “reality” jaisi feel na hone lage. "
+        }
+      ],
+      "sourceParagraph": 200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe real shift start hota hai: "
+        }
+      ],
+      "sourceParagraph": 201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum stuck isliye nahi ho kyuki kuch hua. "
+        }
+      ],
+      "sourceParagraph": 202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum stuck isliye ho kyuki tumhara mind usi cheez ko unfinished meaning "
+        }
+      ],
+      "sourceParagraph": 203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bana ke repeat kar raha hai. "
+        }
+      ],
+      "sourceParagraph": 204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memory problem nahi hai. "
+        }
+      ],
+      "sourceParagraph": 205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thought problem nahi hai. "
+        }
+      ],
+      "sourceParagraph": 206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotion bhi problem nahi hai. "
+        }
+      ],
+      "sourceParagraph": 207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem hai automatic repetition without awareness. "
+        }
+      ],
+      "sourceParagraph": 208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye repetition unnoticed hota hai… "
+        }
+      ],
+      "sourceParagraph": 209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dheere dheere ek system ban jata hai: "
+        }
+      ],
+      "sourceParagraph": 210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "past present ban jata hai "
+        }
+      ],
+      "sourceParagraph": 211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "imagination memory lagne lagti hai "
+        }
+      ],
+      "sourceParagraph": 212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpretation truth ban jati hai "
+        }
+      ],
+      "sourceParagraph": 213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur truth identity ban jati hai "
+        }
+      ],
+      "sourceParagraph": 214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is process ko hi ye book “loop” kehti hai. "
+        }
+      ],
+      "sourceParagraph": 215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na emotional sense mein… "
+        }
+      ],
+      "sourceParagraph": 216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na poetic sense mein… "
+        }
+      ],
+      "sourceParagraph": 217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par ek psychological structure ke roop mein. "
+        }
+      ],
+      "sourceParagraph": 218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh agar tum soch rahe ho ki ye kisi insaan ke baare mein hai… "
+        }
+      ],
+      "sourceParagraph": 219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek second ruk jao. "
+        }
+      ],
+      "sourceParagraph": 220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ye book kisi ko point nahi kar rahi. "
+        }
+      ],
+      "sourceParagraph": 221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye us process ko point kar rahi hai jisse tumhare andar log, memories aur "
+        }
+      ],
+      "sourceParagraph": 222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "meanings create hote hain. "
+        }
+      ],
+      "sourceParagraph": 223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yahan koi steps nahi hain. "
+        }
+      ],
+      "sourceParagraph": 224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na “move on ka tareeka”. "
+        }
+      ],
+      "sourceParagraph": 225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na motivational escape. "
+        }
+      ],
+      "sourceParagraph": 226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na forced healing. "
+        }
+      ],
+      "sourceParagraph": 227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki real change instruction se nahi aata. "
+        }
+      ],
+      "sourceParagraph": 228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo aata hai clear seeing se. "
+        }
+      ],
+      "sourceParagraph": 229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum clearly dekhna start karte ho… "
+        }
+      ],
+      "sourceParagraph": 230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek dangerous cheez hoti hai: "
+        }
+      ],
+      "sourceParagraph": 231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Familiar patterns apni authority kho dete hain. "
+        }
+      ],
+      "sourceParagraph": 232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fight ki wajah se nahi… "
+        }
+      ],
+      "sourceParagraph": 233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par isliye kyuki wo ab chhup nahi paate. "
+        }
+      ],
+      "sourceParagraph": 234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh ise dhyan se padhna. "
+        }
+      ],
+      "sourceParagraph": 235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotion se nahi. "
+        }
+      ],
+      "sourceParagraph": 236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observation se. "
+        }
+      ],
+      "sourceParagraph": 237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki agar tum ise sahi tarah padh liya… "
+        }
+      ],
+      "sourceParagraph": 238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe guide feel nahi hoga. "
+        }
+      ],
+      "sourceParagraph": 239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe apna hi mind expose hota hua feel hoga. "
+        }
+      ],
+      "sourceParagraph": 240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab kuch clearly dikh jata hai… "
+        }
+      ],
+      "sourceParagraph": 241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo pehle jaisa control nahi kar pata. "
+        }
+      ],
+      "sourceParagraph": 242
+    }
+  ],
+  "headerSourceParagraphs": {
+    "number": 185,
+    "title": 186
+  },
+  "number": "INTRODUCTION",
+  "sourceHeadingParagraphs": [
+    185,
+    186
+  ]
+}

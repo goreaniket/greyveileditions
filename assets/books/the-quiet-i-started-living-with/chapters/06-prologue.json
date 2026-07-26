@@ -1,0 +1,924 @@
+{
+  "id": "prologue",
+  "kind": "prologue",
+  "label": "Prologue",
+  "title": "The Quiet I Started Living With",
+  "shortTitle": "Prologue",
+  "file": "chapters/06-prologue.json",
+  "index": 6,
+  "sourceRange": [
+    98,
+    200
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is a moment in every life that almost no one remembers."
+        }
+      ],
+      "sourceParagraph": 100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because it is dramatic."
+        }
+      ],
+      "sourceParagraph": 101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because nothing seems to happen."
+        }
+      ],
+      "sourceParagraph": 102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No tragedy announces it."
+        }
+      ],
+      "sourceParagraph": 103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No celebration marks it."
+        }
+      ],
+      "sourceParagraph": 104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The world continues unchanged."
+        }
+      ],
+      "sourceParagraph": 105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Morning still arrives on time."
+        }
+      ],
+      "sourceParagraph": 106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Messages still get read."
+        }
+      ],
+      "sourceParagraph": 107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "People still ask how you are—and you still answer automatically."
+        }
+      ],
+      "sourceParagraph": 108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "From the outside, nothing shifts."
+        }
+      ],
+      "sourceParagraph": 109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But somewhere beneath that continuity, something quietly turns inward."
+        }
+      ],
+      "sourceParagraph": 110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not the body."
+        }
+      ],
+      "sourceParagraph": 111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not the circumstances."
+        }
+      ],
+      "sourceParagraph": 112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But attention itself."
+        }
+      ],
+      "sourceParagraph": 113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without noticing, you begin spending more time inside your mind than inside your life."
+        }
+      ],
+      "sourceParagraph": 114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At first, it looks harmless."
+        }
+      ],
+      "sourceParagraph": 115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You replay a conversation from earlier in the day."
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You recheck a tone, a pause, a word you shouldn’t have said."
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You imagine alternative endings to things that already ended."
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It feels ordinary. Almost responsible. Like understanding."
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Everyone does it."
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But the mind does not treat repetition neutrally."
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It rewards it."
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And what is rewarded is returned to."
+        }
+      ],
+      "sourceParagraph": 123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Again."
+        }
+      ],
+      "sourceParagraph": 124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And again."
+        }
+      ],
+      "sourceParagraph": 125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Until what was once a passing thought becomes a familiar place."
+        }
+      ],
+      "sourceParagraph": 126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And familiarity slowly changes its meaning."
+        }
+      ],
+      "sourceParagraph": 127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It starts convincing you that repetition is clarity."
+        }
+      ],
+      "sourceParagraph": 128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That revisiting something is the same as understanding it."
+        }
+      ],
+      "sourceParagraph": 129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That was the illusion I never questioned."
+        }
+      ],
+      "sourceParagraph": 130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I believed I was remembering my life."
+        }
+      ],
+      "sourceParagraph": 131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "In truth, I was reconstructing it—each time slightly differently."
+        }
+      ],
+      "sourceParagraph": 132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A memory belongs to what happened."
+        }
+      ],
+      "sourceParagraph": 133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But interpretation survives in the present."
+        }
+      ],
+      "sourceParagraph": 134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It adjusts itself quietly—according to fear, regret, pride, and expectation."
+        }
+      ],
+      "sourceParagraph": 135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Until eventually, you are no longer carrying the event itself."
+        }
+      ],
+      "sourceParagraph": 136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You are carrying the version of it your mind refused to stop editing."
+        }
+      ],
+      "sourceParagraph": 137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There was a night I remember clearly—not because it was important, but because it wasn’t."
+        }
+      ],
+      "sourceParagraph": 138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I was sitting in my room, lights off, phone face down, replaying a conversation that had ended hours ago. Nothing had gone wrong in any visible sense. And yet my mind kept trying to “fix” what could no longer be changed."
+        }
+      ],
+      "sourceParagraph": 139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That was when I first noticed something strange."
+        }
+      ],
+      "sourceParagraph": 140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The silence around me was not silent at all."
+        }
+      ],
+      "sourceParagraph": 141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was filled."
+        }
+      ],
+      "sourceParagraph": 142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not with sound—but with commentary."
+        }
+      ],
+      "sourceParagraph": 143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Questions without answers."
+        }
+      ],
+      "sourceParagraph": 144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Replies I should have given."
+        }
+      ],
+      "sourceParagraph": 145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Explanations no one had asked for."
+        }
+      ],
+      "sourceParagraph": 146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I used to think silence was outside me."
+        }
+      ],
+      "sourceParagraph": 147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "An empty room."
+        }
+      ],
+      "sourceParagraph": 148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A late-night street."
+        }
+      ],
+      "sourceParagraph": 149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A paused world."
+        }
+      ],
+      "sourceParagraph": 150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I was wrong."
+        }
+      ],
+      "sourceParagraph": 151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The loudest place I had ever been was inside my own head."
+        }
+      ],
+      "sourceParagraph": 152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And it wasn’t trying to harm me."
+        }
+      ],
+      "sourceParagraph": 153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was trying to resolve uncertainty."
+        }
+      ],
+      "sourceParagraph": 154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because uncertainty feels unfinished."
+        }
+      ],
+      "sourceParagraph": 155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the mind prefers a painful explanation over no explanation at all."
+        }
+      ],
+      "sourceParagraph": 156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So it keeps building stories."
+        }
+      ],
+      "sourceParagraph": 157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because it wants suffering—but because it cannot tolerate gaps."
+        }
+      ],
+      "sourceParagraph": 158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What is unfinished becomes replayed."
+        }
+      ],
+      "sourceParagraph": 159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What is replayed becomes familiar."
+        }
+      ],
+      "sourceParagraph": 160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What is familiar becomes identity."
+        }
+      ],
+      "sourceParagraph": 161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That is how quietly it happens."
+        }
+      ],
+      "sourceParagraph": 162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You don’t notice the transition."
+        }
+      ],
+      "sourceParagraph": 163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "One day you are thinking."
+        }
+      ],
+      "sourceParagraph": 164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And one day you are being thought through."
+        }
+      ],
+      "sourceParagraph": 165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "For years, I mistook this for awareness."
+        }
+      ],
+      "sourceParagraph": 166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But awareness expands life."
+        }
+      ],
+      "sourceParagraph": 167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This only refined my inner patterns."
+        }
+      ],
+      "sourceParagraph": 168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is a kind of comfort hidden inside mental noise."
+        }
+      ],
+      "sourceParagraph": 169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because it feels good—but because it is predictable."
+        }
+      ],
+      "sourceParagraph": 170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And predictable pain often feels safer than unfamiliar peace."
+        }
+      ],
+      "sourceParagraph": 171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I did not realize I was choosing familiarity over experience."
+        }
+      ],
+      "sourceParagraph": 172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Every day."
+        }
+      ],
+      "sourceParagraph": 173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without deciding."
+        }
+      ],
+      "sourceParagraph": 174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without resistance."
+        }
+      ],
+      "sourceParagraph": 175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is not a story about something that broke."
+        }
+      ],
+      "sourceParagraph": 176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is about something that slowly replaced everything else."
+        }
+      ],
+      "sourceParagraph": 177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Presence replaced by interpretation."
+        }
+      ],
+      "sourceParagraph": 178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Living replaced by replaying."
+        }
+      ],
+      "sourceParagraph": 179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Experience replaced by explanation."
+        }
+      ],
+      "sourceParagraph": 180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And the gap between them never felt like a gap."
+        }
+      ],
+      "sourceParagraph": 181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It felt like thinking."
+        }
+      ],
+      "sourceParagraph": 182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not an attempt to define silence."
+        }
+      ],
+      "sourceParagraph": 183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence does not need interpretation."
+        }
+      ],
+      "sourceParagraph": 184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is an attempt to observe what happens when a person becomes more fluent in their thoughts than in their own life."
+        }
+      ],
+      "sourceParagraph": 185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "When explanation becomes easier than experience."
+        }
+      ],
+      "sourceParagraph": 186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "When surviving thoughts becomes so normal that living quietly stops feeling necessary."
+        }
+      ],
+      "sourceParagraph": 187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If these pages resemble you in any way, do not rush to find conclusions."
+        }
+      ],
+      "sourceParagraph": 188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Conclusions end movement."
+        }
+      ],
+      "sourceParagraph": 189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And this story is not meant to end anything."
+        }
+      ],
+      "sourceParagraph": 190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only to notice what has been happening for a long time without being noticed."
+        }
+      ],
+      "sourceParagraph": 191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perhaps silence was never the absence of sound."
+        }
+      ],
+      "sourceParagraph": 192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Perhaps it was the gradual disappearance of the person who once experienced life before translating it."
+        }
+      ],
+      "sourceParagraph": 193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And perhaps that is why it was so difficult to recognize."
+        }
+      ],
+      "sourceParagraph": 194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence did not arrive."
+        }
+      ],
+      "sourceParagraph": 195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It was learned."
+        }
+      ],
+      "sourceParagraph": 196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Slowly."
+        }
+      ],
+      "sourceParagraph": 197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And eventually… it was lived."
+        }
+      ],
+      "sourceParagraph": 198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And maybe that is where the story actually begins."
+        }
+      ],
+      "sourceParagraph": 199
+    }
+  ],
+  "headerSourceParagraphs": {
+    "number": 98,
+    "title": 99
+  },
+  "number": "PROLOGUE",
+  "sourceHeadingParagraphs": [
+    98,
+    99
+  ]
+}

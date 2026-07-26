@@ -1,0 +1,601 @@
+{
+  "id": "chapter-03",
+  "kind": "chapter",
+  "label": "Chapter 3",
+  "title": "HOW MISUNDERSTANDING STARTS EARLY",
+  "shortTitle": "HOW MISUNDERSTANDING STARTS EARLY",
+  "file": "chapters/11-chapter-03.json",
+  "index": 11,
+  "sourceRange": [
+    446,
+    516
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shuruaat yaha se hoti hai… "
+        }
+      ],
+      "sourceParagraph": 448
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "misunderstanding kabhi ekdum se nahi hoti "
+        }
+      ],
+      "sourceParagraph": 449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye dheere dheere build hoti hai "
+        }
+      ],
+      "sourceParagraph": 450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek choti si baat se "
+        }
+      ],
+      "sourceParagraph": 451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hum ignore kar dete hai "
+        }
+      ],
+      "sourceParagraph": 452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek “no” "
+        }
+      ],
+      "sourceParagraph": 453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek daant "
+        }
+      ],
+      "sourceParagraph": 454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek chhoti si baat "
+        }
+      ],
+      "sourceParagraph": 455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek ignored feeling "
+        }
+      ],
+      "sourceParagraph": 456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur hum sochte hai: "
+        }
+      ],
+      "sourceParagraph": 457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“chhoti baat hai” "
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar kuch aur hota rehta hai "
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur fir dheere dheere… "
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har choti baat ek thought ban jati hai "
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har thought ek perception ban jata hai "
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur har perception ek belief ban jata hai "
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur woh belief hota hai: "
+        }
+      ],
+      "sourceParagraph": 464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“mujhe samjha nahi jata” "
+        }
+      ],
+      "sourceParagraph": 465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but ab ek aur important baat samajhni hai… "
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "misunderstanding se aaj har relation mai hum problem dekh rahe hai "
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kahi baap bete mai "
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kahi maa baap aur bachho mai "
+        }
+      ],
+      "sourceParagraph": 469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kahi do bhai mai "
+        }
+      ],
+      "sourceParagraph": 470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kahi bhai behan mai "
+        }
+      ],
+      "sourceParagraph": 471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur etc "
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par jo misunderstanding ko samajh gaya na is point ko "
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo har situation handle kar sakta hai "
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mai ab bhi jo likh raha hu yaha se bhi na jaane kitne log misunderstanding "
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "create karenge "
+        }
+      ],
+      "sourceParagraph": 476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kitne log isse padh ke heal hoke samjhenge feel karke aage badhenge "
+        }
+      ],
+      "sourceParagraph": 477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par actual point aur ek bada reason ye bhi hai… "
+        }
+      ],
+      "sourceParagraph": 478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum time ke according change ho rahe hai "
+        }
+      ],
+      "sourceParagraph": 479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo ki really good hai "
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par saath hi… "
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hume humare parents ko bhi samajhna hai "
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "itna time ke saath change hona hi sab kuch nahi hota "
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hume unko bhi treat aise karna chahiye ki unko feel ho "
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki koi ho na ho "
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unke apni aulaad hai "
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo unko samajhne ki koshish kar rahi hai "
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na ki unhe judge kar rahi hai "
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jese hum overthink karte hai "
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "panic aata hai "
+        }
+      ],
+      "sourceParagraph": 490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "flashbacks aate hai "
+        }
+      ],
+      "sourceParagraph": 491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "confusion hota hai "
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "waise hi… "
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "parents bhi human hai "
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bhale parents hai to kya? "
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "human nahi hai kya? "
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo bhi in sab cheezon se guzarte hai "
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par society ne ek thought bana diya hai: "
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“parents hai na, unko sab pata hota hai” "
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par reality ye hai… "
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unke paas bhi feelings hoti hai "
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unke paas bhi fear hota hai "
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unke paas bhi confusion hota hai "
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur agar hum unhe thoda samajhne lage… "
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh relation sirf survive nahi karega "
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh grow karega "
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki jab dono side judge kam karti hai "
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur samajhne zyada lagti hai "
+        }
+      ],
+      "sourceParagraph": 508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh waha bond strong ho jata hai "
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“shayad problem generation gap nahi hai… shayad problem ek dusre ko "
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "human na samajhna hai” "
+        }
+      ],
+      "sourceParagraph": 511
+    }
+  ],
+  "phase": "Layer 1 - The Human Mask",
+  "headerSourceParagraphs": {
+    "number": 446,
+    "title": 447
+  },
+  "number": "CHAPTER 3:",
+  "sourceHeadingParagraphs": [
+    446,
+    447
+  ]
+}

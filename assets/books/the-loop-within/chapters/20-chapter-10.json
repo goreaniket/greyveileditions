@@ -1,0 +1,663 @@
+{
+  "id": "chapter-10",
+  "kind": "chapter",
+  "label": "Chapter 10",
+  "title": "When You Don’t Let the Story End :",
+  "shortTitle": "When You Dont Let the Story End",
+  "file": "chapters/20-chapter-10.json",
+  "index": 20,
+  "sourceRange": [
+    882,
+    959
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai ki sab kuch khatam ho gaya hai… "
+        }
+      ],
+      "sourceParagraph": 884
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda aur quietly observe karo… "
+        }
+      ],
+      "sourceParagraph": 885
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh samajh aata hai ki kuch khatam nahi hua hota… "
+        }
+      ],
+      "sourceParagraph": 886
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas tumne usko release nahi kiya hota. "
+        }
+      ],
+      "sourceParagraph": 887
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye release na karna hamesha intentional nahi hota… "
+        }
+      ],
+      "sourceParagraph": 888
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi ye ek habit hoti hai… "
+        }
+      ],
+      "sourceParagraph": 889
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek invisible attachment jo tumhe pata bhi nahi hota. "
+        }
+      ],
+      "sourceParagraph": 890
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise ek story hoti hai… "
+        }
+      ],
+      "sourceParagraph": 891
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo physically toh finish ho chuki hoti hai… "
+        }
+      ],
+      "sourceParagraph": 892
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par mind usko mentally close nahi karta. "
+        }
+      ],
+      "sourceParagraph": 893
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab story close nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 894
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo “past” nahi rehti… "
+        }
+      ],
+      "sourceParagraph": 895
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo present repetition ban jati hai. "
+        }
+      ],
+      "sourceParagraph": 896
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum aage chal rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 897
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar wahi scene repeat hota rehta hai… "
+        }
+      ],
+      "sourceParagraph": 898
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda different angle se… "
+        }
+      ],
+      "sourceParagraph": 899
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda different emotion ke saath… "
+        }
+      ],
+      "sourceParagraph": 900
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par content same hota hai. "
+        }
+      ],
+      "sourceParagraph": 901
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting cheez ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 902
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum clarity dhoond rahe ho… "
+        }
+      ],
+      "sourceParagraph": 903
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tum actually clarity ko delay kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 904
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind ko end accept karna uncomfortable lagta hai. "
+        }
+      ],
+      "sourceParagraph": 905
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "End ka matlab hota hai: "
+        }
+      ],
+      "sourceParagraph": 906
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ab kuch change nahi hoga” "
+        }
+      ],
+      "sourceParagraph": 907
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur ye sentence mind ko heavy lagta hai. "
+        }
+      ],
+      "sourceParagraph": 908
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye mind ek alternative banata hai… "
+        }
+      ],
+      "sourceParagraph": 909
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“shayad agar main aur sochun toh kuch samajh aa jaye” "
+        }
+      ],
+      "sourceParagraph": 910
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par yahi pe loop start hota hai. "
+        }
+      ],
+      "sourceParagraph": 911
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki “aur sochna” kabhi final answer nahi deta… "
+        }
+      ],
+      "sourceParagraph": 912
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf usi question ko aur strong bana deta hai. "
+        }
+      ],
+      "sourceParagraph": 913
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye pattern long time chal jata hai… "
+        }
+      ],
+      "sourceParagraph": 914
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh story ek external memory nahi rehti… "
+        }
+      ],
+      "sourceParagraph": 915
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek internal environment ban jati hai. "
+        }
+      ],
+      "sourceParagraph": 916
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan tum physically kisi aur moment mein hote ho… "
+        }
+      ],
+      "sourceParagraph": 917
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par mentally wahi scene baar baar run ho raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 918
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse subtle part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 919
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum us story ko yaad kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 920
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tum us story ko phir se jee rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 921
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har baar thoda differently… "
+        }
+      ],
+      "sourceParagraph": 922
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har baar thoda emotionally changed… "
+        }
+      ],
+      "sourceParagraph": 923
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par essence same hota hai. "
+        }
+      ],
+      "sourceParagraph": 924
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum baar baar us moment ko revisit karte ho… "
+        }
+      ],
+      "sourceParagraph": 925
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo moment “past” nahi rehta… "
+        }
+      ],
+      "sourceParagraph": 926
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek open loop ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 927
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur open loop ka nature hota hai… "
+        }
+      ],
+      "sourceParagraph": 928
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo closure maangta rehta hai… "
+        }
+      ],
+      "sourceParagraph": 929
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par closure usi loop ke andar nahi milta. "
+        }
+      ],
+      "sourceParagraph": 930
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tum jitna andar jaate ho… "
+        }
+      ],
+      "sourceParagraph": 931
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna hi aur stuck feel hota hai. "
+        }
+      ],
+      "sourceParagraph": 932
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek silent realization aata hai… "
+        }
+      ],
+      "sourceParagraph": 933
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad problem story nahi hai… "
+        }
+      ],
+      "sourceParagraph": 934
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem ye hai ki tum us story ko “complete” accept hi nahi kar pa rahe ho. "
+        }
+      ],
+      "sourceParagraph": 935
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye samajh aata hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 937
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch forcefully break nahi hota… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 938
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek gentle loosening hoti hai andar. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 939
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na memories disappear hoti hain… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 940
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na feelings suddenly gayab hoti hain… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 941
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unka hold thoda halka ho jata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 942
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehli baar tum ye notice karte ho: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 943
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe har story ko solve karne ki zarurat nahi ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 944
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe har emotion ko finish karne ki zarurat nahi ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 945
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi bas itna kaafi hota hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 946
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum maan lo: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 947
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye moment ab yahan complete hai” ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 948
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum “complete” maan lete ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 949
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh mind dheere dheere us loop ko release kar deta hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 950
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina force ke… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 951
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina fight ke… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 952
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina effort ke.",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 953
+    }
+  ],
+  "phase": "Part 3 - The Loop",
+  "headerSourceParagraphs": {
+    "number": 882,
+    "title": 883
+  },
+  "number": "CHAPTER 10:",
+  "sourceHeadingParagraphs": [
+    882,
+    883
+  ]
+}

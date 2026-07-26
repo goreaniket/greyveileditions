@@ -1,0 +1,748 @@
+{
+  "id": "chapter-13",
+  "kind": "chapter",
+  "label": "Chapter 13",
+  "title": "THE DISTANCE",
+  "shortTitle": "THE DISTANCE",
+  "file": "chapters/24-chapter-13.json",
+  "index": 24,
+  "sourceRange": [
+    1562,
+    1644
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai… main apni hi "
+        }
+      ],
+      "sourceParagraph": 1565
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "zindagi se thoda peeche ho gaya hu.     "
+        }
+      ],
+      "sourceParagraph": 1566
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise main ab uska part nahi… sirf "
+        }
+      ],
+      "sourceParagraph": 1567
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek observer ho.   "
+        }
+      ],
+      "sourceParagraph": 1568
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle main har cheez ke beech hota tha.   "
+        }
+      ],
+      "sourceParagraph": 1569
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har emotion ke andar.   "
+        }
+      ],
+      "sourceParagraph": 1570
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har situation ke center mein.   "
+        }
+      ],
+      "sourceParagraph": 1571
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab main bas side se dekh raha hu.     "
+        }
+      ],
+      "sourceParagraph": 1572
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log baat karte hain.   "
+        }
+      ],
+      "sourceParagraph": 1573
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main sunta hu.     "
+        }
+      ],
+      "sourceParagraph": 1574
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log react karte hain.   "
+        }
+      ],
+      "sourceParagraph": 1575
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main notice karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin andar se kuch trigger nahi hota.   "
+        }
+      ],
+      "sourceParagraph": 1577
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh baat mujhe pehle ajeeb lagti thi.   "
+        }
+      ],
+      "sourceParagraph": 1578
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab normal lagne lagi hai.     "
+        }
+      ],
+      "sourceParagraph": 1579
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi ko log control bolte hain.   "
+        }
+      ],
+      "sourceParagraph": 1580
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya shayad disconnect.     "
+        }
+      ],
+      "sourceParagraph": 1581
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe khud bhi clear nahi.   "
+        }
+      ],
+      "sourceParagraph": 1582
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main kisi cheez par react karna chahta hu…   "
+        }
+      ],
+      "sourceParagraph": 1583
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin reaction aata hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 1584
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise beech mein koi invisible gap aa gaya ho… mere "
+        }
+      ],
+      "sourceParagraph": 1585
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur life ke beech.   "
+        }
+      ],
+      "sourceParagraph": 1586
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main us gap ko explain nahi kar sakta.   "
+        }
+      ],
+      "sourceParagraph": 1587
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas feel kar sakta hu.   "
+        }
+      ],
+      "sourceParagraph": 1588
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur woh feeling bhi half hi hoti hai.   "
+        }
+      ],
+      "sourceParagraph": 1589
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main purane version ko yaad karta hu…  toh "
+        }
+      ],
+      "sourceParagraph": 1590
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh mujhe real lagta hai.    "
+        }
+      ],
+      "sourceParagraph": 1591
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur main jo ab hu… woh temporary "
+        }
+      ],
+      "sourceParagraph": 1592
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lagta hai.    "
+        }
+      ],
+      "sourceParagraph": 1593
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise main kisi transition phase mein atak gaya hu.   "
+        }
+      ],
+      "sourceParagraph": 1594
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na pura wahan.   "
+        }
+      ],
+      "sourceParagraph": 1595
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na pura yahan.    "
+        }
+      ],
+      "sourceParagraph": 1596
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai… main apne emotions ko door  "
+        }
+      ],
+      "sourceParagraph": 1597
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "se observe karna seekh gaya hu.     "
+        }
+      ],
+      "sourceParagraph": 1598
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise woh kisi aur ke hon.   "
+        }
+      ],
+      "sourceParagraph": 1599
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yeh hi survival hai.   "
+        }
+      ],
+      "sourceParagraph": 1600
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki agar main har cheez ko pehle jaisa feel karu… toh "
+        }
+      ],
+      "sourceParagraph": 1601
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad main handle hi na kar paun.   "
+        }
+      ],
+      "sourceParagraph": 1602
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ek sawaal kabhi kabhi aata hai.   "
+        }
+      ],
+      "sourceParagraph": 1603
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar main itna door ho gaya hu…  toh main ab “main” kitna hu?   "
+        }
+      ],
+      "sourceParagraph": 1604
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya main sirf ek habit hu… jo chal "
+        }
+      ],
+      "sourceParagraph": 1605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "rahi hai bina full presence ke.     "
+        }
+      ],
+      "sourceParagraph": 1606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main khud ko test karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi purani memory yaad karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dekhta hu reaction aata hai ya nahi.   "
+        }
+      ],
+      "sourceParagraph": 1609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi aata hai… kabhi "
+        }
+      ],
+      "sourceParagraph": 1610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "nahi aata.   "
+        }
+      ],
+      "sourceParagraph": 1611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dono hi cheezein mujhe confuse karti hain.    "
+        }
+      ],
+      "sourceParagraph": 1612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reaction aana bhi strange lagta hai.     "
+        }
+      ],
+      "sourceParagraph": 1613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reaction na aana bhi.   "
+        }
+      ],
+      "sourceParagraph": 1614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise main apne hi system ko samajh nahi paa raha.   "
+        }
+      ],
+      "sourceParagraph": 1615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log kehte hain “you’ve changed.”   "
+        }
+      ],
+      "sourceParagraph": 1616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main kehta hu “haan shayad.”    "
+        }
+      ],
+      "sourceParagraph": 1617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin sach yeh hai… main nahi jaanta change hua hu ya "
+        }
+      ],
+      "sourceParagraph": 1618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf distant ho gaya hu.     "
+        }
+      ],
+      "sourceParagraph": 1619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh difference mujhe darata bhi nahi… bas "
+        }
+      ],
+      "sourceParagraph": 1620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thaka deta hai.   "
+        }
+      ],
+      "sourceParagraph": 1621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main sochta hu… ki agar main kisi din "
+        }
+      ],
+      "sourceParagraph": 1622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "completely feel karna shuru kar du… toh kya main wapas wahi "
+        }
+      ],
+      "sourceParagraph": 1623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ho jaunga jo main tha?   "
+        }
+      ],
+      "sourceParagraph": 1624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya phir main itna door aa chuka hu… ki "
+        }
+      ],
+      "sourceParagraph": 1625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wapas jaana possible hi nahi hai.   "
+        }
+      ],
+      "sourceParagraph": 1626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main jawab nahi jaanta.   "
+        }
+      ],
+      "sourceParagraph": 1627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye main questions kam poochne laga hu.     "
+        }
+      ],
+      "sourceParagraph": 1628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki har question ek aur layer khol deta hai… jahan "
+        }
+      ],
+      "sourceParagraph": 1629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main already thoda lost hu.   "
+        }
+      ],
+      "sourceParagraph": 1630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab main zyada zindagi ko explain nahi karta.   "
+        }
+      ],
+      "sourceParagraph": 1631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main bas usko observe karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi cheez jo mere saath ho rahi hai… lekin mere andar nahi.   "
+        }
+      ],
+      "sourceParagraph": 1633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi mujhe lagta hai…  "
+        }
+      ],
+      "sourceParagraph": 1634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh peace nahi hai.   "
+        }
+      ],
+      "sourceParagraph": 1635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh distance hai.  "
+        }
+      ],
+      "sourceParagraph": 1636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur distance hamesha visible nahi hota.    "
+        }
+      ],
+      "sourceParagraph": 1637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh slowly build hota hai.   "
+        }
+      ],
+      "sourceParagraph": 1638
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina noise ke.   "
+        }
+      ],
+      "sourceParagraph": 1639
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina warning ke.   "
+        }
+      ],
+      "sourceParagraph": 1640
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek din tum realize karte ho… ki "
+        }
+      ],
+      "sourceParagraph": 1641
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum wahan nahi ho jahan pehle the.   "
+        }
+      ],
+      "sourceParagraph": 1642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad wahi din…  sabse "
+        }
+      ],
+      "sourceParagraph": 1643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "confusing hota hai.   "
+        }
+      ],
+      "sourceParagraph": 1644
+    }
+  ],
+  "phase": "Phase IV - Becoming Someone the Silence Could No Longer Hide",
+  "headerSourceParagraphs": {
+    "number": 1562,
+    "title": 1563,
+    "subtitle": 1564
+  },
+  "number": "CHAPTER 13",
+  "subtitle": "I DIDN’T NOTICE GROWING",
+  "sourceHeadingParagraphs": [
+    1562,
+    1563,
+    1564
+  ]
+}

@@ -1,0 +1,511 @@
+{
+  "id": "chapter-17",
+  "kind": "chapter",
+  "label": "Chapter 17",
+  "title": "When You Realize Nothing Is Coming Back :",
+  "shortTitle": "When You Realize Nothing Is Coming Back",
+  "file": "chapters/30-chapter-17.json",
+  "index": 30,
+  "sourceRange": [
+    1375,
+    1431
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi ek din aata hai… "
+        }
+      ],
+      "sourceParagraph": 1377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum kisi cheez ko “wait” karna band nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tumhe samajh aa jata hai ki wait ka koi endpoint nahi hai. "
+        }
+      ],
+      "sourceParagraph": 1379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi message aata hai… "
+        }
+      ],
+      "sourceParagraph": 1380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi sign… "
+        }
+      ],
+      "sourceParagraph": 1381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi sudden reversal… "
+        }
+      ],
+      "sourceParagraph": 1382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas silence same rehta hai. "
+        }
+      ],
+      "sourceParagraph": 1383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehle tum is silence ko interpret karte the… "
+        }
+      ],
+      "sourceParagraph": 1384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad abhi time nahi aaya” "
+        }
+      ],
+      "sourceParagraph": 1385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad abhi kuch baaki hai” "
+        }
+      ],
+      "sourceParagraph": 1386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“shayad abhi return possible hai” "
+        }
+      ],
+      "sourceParagraph": 1387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par dheere dheere ek cheez change hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "interpretation ruk jata hai. "
+        }
+      ],
+      "sourceParagraph": 1389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab interpretation rukta hai… "
+        }
+      ],
+      "sourceParagraph": 1390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh reality first time direct lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye wapas nahi aayega” "
+        }
+      ],
+      "sourceParagraph": 1392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye line dard jaisi nahi lagti… "
+        }
+      ],
+      "sourceParagraph": 1393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek factual silence lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise andar koi purani recording band ho jaati hai… "
+        }
+      ],
+      "sourceParagraph": 1395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo baar baar same hope play karti thi. "
+        }
+      ],
+      "sourceParagraph": 1396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse strange part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum toot nahi rahe hote… "
+        }
+      ],
+      "sourceParagraph": 1398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas repeat karna band kar dete ho. "
+        }
+      ],
+      "sourceParagraph": 1399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur repetition band hote hi… "
+        }
+      ],
+      "sourceParagraph": 1400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "emotion ka volume bhi thoda shift ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jo cheez baar baar replay hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo hi sabse zyada alive lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab replay band hota hai… "
+        }
+      ],
+      "sourceParagraph": 1404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo cheez slowly past banne lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par mind is shift ko immediately accept nahi karta… "
+        }
+      ],
+      "sourceParagraph": 1406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo pehle resist karta hai. "
+        }
+      ],
+      "sourceParagraph": 1407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad abhi bhi kuch ho sakta hai” "
+        }
+      ],
+      "sourceParagraph": 1408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye “shayad” hi last thread hota hai… "
+        }
+      ],
+      "sourceParagraph": 1409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumhe loop mein rakhta hai. "
+        }
+      ],
+      "sourceParagraph": 1410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par ek din… "
+        }
+      ],
+      "sourceParagraph": 1411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye “shayad” bhi thoda weak pad jata hai. "
+        }
+      ],
+      "sourceParagraph": 1412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe pehli baar clarity nahi… "
+        }
+      ],
+      "sourceParagraph": 1413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par exhaustion clarity jaisa feel hota hai. "
+        }
+      ],
+      "sourceParagraph": 1414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise andar koi energy hi nahi bachi ho argument karne ki. "
+        }
+      ],
+      "sourceParagraph": 1415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wahi pe realization hit karta hai: "
+        }
+      ],
+      "sourceParagraph": 1416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo cheez tum rok rahe the… wo already ruk chuki thi "
+        }
+      ],
+      "sourceParagraph": 1417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum is realization ko force nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas notice karte ho… "
+        }
+      ],
+      "sourceParagraph": 1419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki haan, ye ho raha hai… "
+        }
+      ],
+      "sourceParagraph": 1420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek chhota sa gap banta hai. "
+        }
+      ],
+      "sourceParagraph": 1421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na relief turant aata hai… "
+        }
+      ],
+      "sourceParagraph": 1422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na sadness aur badhta hai… "
+        }
+      ],
+      "sourceParagraph": 1423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek neutral silence aata hai. "
+        }
+      ],
+      "sourceParagraph": 1424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us silence mein tumhe pehli baar ye feel hota hai: "
+        }
+      ],
+      "sourceParagraph": 1425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "expectation ab pressure nahi hai "
+        }
+      ],
+      "sourceParagraph": 1426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab expectation drop hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh andar space create hota hai. "
+        }
+      ],
+      "sourceParagraph": 1428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur space dangerous nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "space possibility hota hai. "
+        }
+      ],
+      "sourceParagraph": 1430
+    }
+  ],
+  "phase": "Part 6 - The Shift",
+  "headerSourceParagraphs": {
+    "number": 1375,
+    "title": 1376
+  },
+  "number": "CHAPTER 17:",
+  "sourceHeadingParagraphs": [
+    1375,
+    1376
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "about-author",
+  "kind": "ending",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "About the Author",
+  "file": "chapters/36-about-author.json",
+  "index": 36,
+  "sourceRange": [
+    1753,
+    1769
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "LALIT R MISHRA writes from the space between thought and observation. "
+        }
+      ],
+      "sourceParagraph": 1754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work explores the psychological patterns that shape human emotion — "
+        }
+      ],
+      "sourceParagraph": 1755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "especially the silent loops of memory, attachment, and meaning-making that "
+        }
+      ],
+      "sourceParagraph": 1756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "people often live inside without realizing. "
+        }
+      ],
+      "sourceParagraph": 1757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Rather than focusing on events or stories, his writing focuses on the internal "
+        }
+      ],
+      "sourceParagraph": 1758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "structure of experience itself — how the mind repeats, distorts, and "
+        }
+      ],
+      "sourceParagraph": 1759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reconstructs reality until it begins to feel personal. "
+        }
+      ],
+      "sourceParagraph": 1760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not offer answers or instruction. "
+        }
+      ],
+      "sourceParagraph": 1761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Instead, his perspective is built on a simple belief:  "
+        }
+      ],
+      "sourceParagraph": 1762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Until you understand your own mind, the world will always feel like something "
+        }
+      ],
+      "sourceParagraph": 1763
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "happening to you, not something you are part of understanding.” "
+        }
+      ],
+      "sourceParagraph": 1764
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His writing encourages awareness over reaction, observation over assumption, "
+        }
+      ],
+      "sourceParagraph": 1765
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and self-recognition over external dependence. "
+        }
+      ],
+      "sourceParagraph": 1766
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book continues that approach — not as guidance, but as a mirror to what "
+        }
+      ],
+      "sourceParagraph": 1767
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "already exists within thought. "
+        }
+      ],
+      "sourceParagraph": 1768
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— LALIT R MISHRA"
+        }
+      ],
+      "sourceParagraph": 1769,
+      "role": "chapter-end"
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 1753
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    1753
+  ]
+}

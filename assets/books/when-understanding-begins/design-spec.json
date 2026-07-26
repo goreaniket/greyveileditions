@@ -1,0 +1,166 @@
+{
+  "bookSlug": "when-understanding-begins",
+  "title": "When Understanding Begins",
+  "collection": "The Human Paradox Collection",
+  "series": "Human Mind",
+  "visualThemeName": "Threshold Clarity",
+  "designPurpose": "A soft threshold identity for perspective arriving without triumph.",
+  "emotionalKeywords": [
+    "understanding",
+    "perspective",
+    "family distance",
+    "emotional translation",
+    "awareness",
+    "closure without force"
+  ],
+  "colorSystem": {
+    "light": {
+      "outerCanvas": "#E1E4DE",
+      "paper": "#F7F0E4",
+      "paperSoft": "#ECE5D8",
+      "text": "#2B302B",
+      "heading": "#1F241F",
+      "accent": "#7C7651",
+      "accentStrong": "#555B43",
+      "warm": "#9A704E"
+    },
+    "sepia": {
+      "outerCanvas": "#E2D8C9",
+      "paper": "#F3E6D1",
+      "paperSoft": "#E8DAC4",
+      "text": "#352F27",
+      "heading": "#251F19",
+      "accent": "#7F694B",
+      "accentStrong": "#5F503C",
+      "warm": "#92704D"
+    },
+    "dark": {
+      "outerCanvas": "#10140F",
+      "paper": "#1A1D18",
+      "paperSoft": "#24271F",
+      "text": "#EFE8DB",
+      "heading": "#F8F1E8",
+      "accent": "#C4BD8C",
+      "accentStrong": "#E0D9A8",
+      "warm": "#C6A174"
+    }
+  },
+  "fonts": {
+    "display": "Cormorant Garamond, Georgia, serif",
+    "body": "Georgia, Times New Roman, serif",
+    "interface": "Inter, Arial, sans-serif"
+  },
+  "typography": {
+    "bodyFontSizeDesktop": "18px",
+    "bodyFontSizeTablet": "17.5px minimum",
+    "bodyFontSizeMobile": "17px minimum",
+    "lineHeight": 1.72,
+    "paragraphIndent": "1.02em",
+    "paragraphSpacing": "0.35em",
+    "chapterTitleDesktop": "40px to 52px depending on length",
+    "chapterTitleMobile": "30px to 38px",
+    "quoteTreatment": "Display serif italic in the book accent color."
+  },
+  "pageGeometry": {
+    "desktop": {
+      "pageWidth": "664px",
+      "pageHeight": "1026px",
+      "pagePadding": "82px 70px",
+      "pageGap": "58px",
+      "measure": "60-72 characters per line",
+      "tradeBookReference": "close to 5.5 x 8.5 portrait"
+    },
+    "tablet": {
+      "pageWidth": "min(642px, calc(100vw - 56px))",
+      "pageHeight": "940px",
+      "pagePadding": "64px 56px"
+    },
+    "mobile": {
+      "pageWidth": "calc(100vw - 20px)",
+      "pageHeight": "min(900px, calc(100svh - 118px))",
+      "safePadding": "18-22px horizontal",
+      "bodyFontFloor": "17px",
+      "toolbar": "compact shared toolbar with touch-friendly controls"
+    }
+  },
+  "semanticPageTypes": {
+    "frontCover": "Official image appears once as first unnumbered page, object-fit contain, no crop, no theme filter.",
+    "titlePage": "Source-driven title page preserves manuscript title-page roles.",
+    "contents": "Source table of contents rendered as unboxed literary contents.",
+    "chapterOpening": "Fresh page for every chapter with threshold rules and small dawn-side markers.",
+    "normalContinuation": "Warm paper, readable deep text, measured literary spacing, first-line indent after adjacent paragraphs.",
+    "sectionBreak": "Subtle threshold rules and small dawn-side markers reduced to quiet marks.",
+    "pageNumbers": "Small bottom folio with cover/front matter unnumbered where required.",
+    "finalManuscriptPage": "Ending, epilogue, and about-author pages receive a softer closing surface.",
+    "feedbackSurface": "Whole-book feedback page inherits book palette and natural-height mobile behavior."
+  },
+  "coverSpecification": {
+    "sourceAsset": {
+      "originalRepositoryFile": "/projects/human-mind/assets/covers/when understanding begins .jpeg",
+      "preservedAsset": "/assets/books/when-understanding-begins/cover/cover-source.png",
+      "format": "JPEG original preserved as PNG reference",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytesOriginal": 111125,
+      "containsCompleteFrontCover": true,
+      "containsPublisherBranding": true
+    },
+    "websiteAsset": {
+      "path": "/assets/books/when-understanding-begins/cover/front-cover.webp",
+      "format": "WEBP",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytes": 91528,
+      "optimization": "Converted from official JPEG at WebP quality 88 with complete artwork preserved."
+    },
+    "printAsset": {
+      "path": "/assets/books/when-understanding-begins/cover/front-cover-print.png",
+      "format": "PNG",
+      "pixelDimensions": "1023 x 1537",
+      "fileSizeBytes": 805412,
+      "printReadiness": "Best available full-resolution reference, not genuine 300 DPI production print art for a 5.5in x 8.5in trim."
+    },
+    "referenceTrimSize": "5.5in x 8.5in portrait",
+    "availableEffectiveDpiAtReferenceTrim": "approximately 186 DPI by width and 181 DPI by height, below 300 DPI target",
+    "imageFitBehavior": "Use object-fit: contain. Do not recolor, filter, stretch, crop, darken, or apply theme overlays."
+  },
+  "responsiveAdaptations": {
+    "mobile": "Nearly full-width page, 18-22px safe padding, simplified motifs, body text no smaller than 17px, no horizontal overflow, natural-height feedback.",
+    "tablet": "Centered page with balanced page proportions and clear chapter hierarchy.",
+    "desktop": "664px x 1026px page target, subtle edge/shadow, literary spacing, 60-72 character measure."
+  },
+  "futureWordMapping": {
+    "trimSize": "5.5in x 8.5in",
+    "bodyFont": "Georgia 11.5pt",
+    "lineSpacing": "18.6pt exact",
+    "firstLineIndent": "0.18in",
+    "chapterTitle": "Cormorant Garamond 28-31pt",
+    "pageNumber": "Inter/Arial 8pt bottom folio",
+    "sectionBreak": "threshold rules and small dawn-side markers",
+    "coverOrder": [
+      "Front cover",
+      "Optional blank verso",
+      "Title page",
+      "Copyright/front matter",
+      "Contents",
+      "Main manuscript"
+    ]
+  },
+  "futurePdfMapping": {
+    "fixedPageTheme": "light theme only",
+    "coverFit": "contain first page",
+    "digitalOnly": [
+      "toolbar",
+      "theme switcher",
+      "contents drawer",
+      "progress bar",
+      "feedback form"
+    ],
+    "printEquivalent": "warm ivory stock with book-specific muted accent motif"
+  },
+  "printLimitations": "The available cover is suitable for digital and reference use but should be replaced with a higher-resolution bleed-ready cover for paperback production.",
+  "sourceCounts": {
+    "sourceParagraphsTotal": 1071,
+    "sourceParagraphsNonEmpty": 1005,
+    "semanticUnits": 24,
+    "chapters": 8
+  }
+}

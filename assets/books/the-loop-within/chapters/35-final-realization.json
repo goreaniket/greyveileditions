@@ -1,0 +1,267 @@
+{
+  "id": "final-realization",
+  "kind": "ending",
+  "label": "Final Realization",
+  "title": "(when everything stops feeling like emotion”)",
+  "shortTitle": "Final Realization",
+  "file": "chapters/35-final-realization.json",
+  "index": 35,
+  "sourceRange": [
+    1723,
+    1752
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad tum kabhi kisi insaan ke andar stuck the hi nahi… "
+        }
+      ],
+      "sourceParagraph": 1725
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas apne hi mind ke ek repeating system ke andar the… "
+        }
+      ],
+      "sourceParagraph": 1726
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo har memory ko incomplete bana ke usse alive rakhta hai. "
+        }
+      ],
+      "sourceParagraph": 1727
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse strange part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum observe karna start karte ho… "
+        }
+      ],
+      "sourceParagraph": 1729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh jo cheez pehle “emotion” lagti thi… "
+        }
+      ],
+      "sourceParagraph": 1730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek mechanical repetition pattern ban jaati hai. "
+        }
+      ],
+      "sourceParagraph": 1731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same triggers… "
+        }
+      ],
+      "sourceParagraph": 1732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same thoughts… "
+        }
+      ],
+      "sourceParagraph": 1733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same interpretations… "
+        }
+      ],
+      "sourceParagraph": 1734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "different intensity… but identical structure. "
+        }
+      ],
+      "sourceParagraph": 1735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab structure dikh jata hai… "
+        }
+      ],
+      "sourceParagraph": 1736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh illusion break ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1737
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki illusion tab tak hi real lagta hai… "
+        }
+      ],
+      "sourceParagraph": 1738
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tak wo invisible hota hai. "
+        }
+      ],
+      "sourceParagraph": 1739
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum move on nahi karte "
+        }
+      ],
+      "sourceParagraph": 1740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas us process ko dekh lete ho jo tumhe move hone hi nahi deta tha "
+        }
+      ],
+      "sourceParagraph": 1741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye realization soft nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye unsettling hota hai… "
+        }
+      ],
+      "sourceParagraph": 1743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki pehli baar tumhe lagta hai: "
+        }
+      ],
+      "sourceParagraph": 1744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye main nahi tha… ye ek loop tha jo main samajh raha tha main hoon” "
+        }
+      ],
+      "sourceParagraph": 1745
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye gap dikhta hai… "
+        }
+      ],
+      "sourceParagraph": 1746
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh attachment apni authority kho deta hai. "
+        }
+      ],
+      "sourceParagraph": 1747
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi closure milta hai…  "
+        }
+      ],
+      "sourceParagraph": 1748
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi final answer… "
+        }
+      ],
+      "sourceParagraph": 1749
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek clarity aati hai: "
+        }
+      ],
+      "sourceParagraph": 1750
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tum chase kar rahe the… wo kabhi external tha hi nahi….  "
+        }
+      ],
+      "sourceParagraph": 1751
+    }
+  ],
+  "headerSourceParagraphs": {
+    "number": 1723,
+    "title": 1724
+  },
+  "number": "FINAL REALIZATION",
+  "sourceHeadingParagraphs": [
+    1723,
+    1724
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "id": "chapter-11",
+  "kind": "chapter",
+  "label": "Chapter 11",
+  "title": "When Everything Feels Heavy Without Any",
+  "shortTitle": "When Everything Feels Heavy Without Any",
+  "file": "chapters/22-chapter-11.json",
+  "index": 22,
+  "sourceRange": [
+    962,
+    1038
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reason:  ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 964
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum apni hi life mein hote ho… "
+        }
+      ],
+      "sourceParagraph": 965
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par feel aisa hota hai jaise tum usmein fully present nahi ho. "
+        }
+      ],
+      "sourceParagraph": 966
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch normal hota hai… "
+        }
+      ],
+      "sourceParagraph": 967
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir bhi andar kuch “normal” nahi lagta. "
+        }
+      ],
+      "sourceParagraph": 968
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi bada incident hota hai… "
+        }
+      ],
+      "sourceParagraph": 969
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi clear pain trigger hota hai… "
+        }
+      ],
+      "sourceParagraph": 970
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par phir bhi ek weight hota hai… "
+        }
+      ],
+      "sourceParagraph": 971
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo explain nahi hota. "
+        }
+      ],
+      "sourceParagraph": 972
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse confusing part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 973
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai ki tumhe “kuch samajh nahi aa raha”… "
+        }
+      ],
+      "sourceParagraph": 974
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tumhe sab kuch feel ho raha hota hai… bas naam nahi mil raha "
+        }
+      ],
+      "sourceParagraph": 975
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hota. "
+        }
+      ],
+      "sourceParagraph": 976
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab cheezon ko naam nahi milta… "
+        }
+      ],
+      "sourceParagraph": 977
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo aur heavy lagti hain. "
+        }
+      ],
+      "sourceParagraph": 978
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind jisko define nahi kar pata… "
+        }
+      ],
+      "sourceParagraph": 979
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usko solve bhi nahi kar pata… "
+        }
+      ],
+      "sourceParagraph": 980
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo solve nahi hota… "
+        }
+      ],
+      "sourceParagraph": 981
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo loop ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 982
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye loop thoughts ka nahi hota… "
+        }
+      ],
+      "sourceParagraph": 983
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek background state hota hai. "
+        }
+      ],
+      "sourceParagraph": 984
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tum chal rahe ho… "
+        }
+      ],
+      "sourceParagraph": 985
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baat kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 986
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "has bhi rahe ho… "
+        }
+      ],
+      "sourceParagraph": 987
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar ek layer continuously chal rahi hoti hai: "
+        }
+      ],
+      "sourceParagraph": 988
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“kuch sahi nahi lag raha” "
+        }
+      ],
+      "sourceParagraph": 989
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum us layer ko ignore karte ho… "
+        }
+      ],
+      "sourceParagraph": 990
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki koi reason visible nahi hota. "
+        }
+      ],
+      "sourceParagraph": 991
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par jo cheez visible nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 992
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sabse zyada impact karti hai. "
+        }
+      ],
+      "sourceParagraph": 993
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere tum ek strange pattern notice karte ho… "
+        }
+      ],
+      "sourceParagraph": 994
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum har cheez ko thoda zyada effort se kar rahe ho. "
+        }
+      ],
+      "sourceParagraph": 995
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Simple cheezein bhi heavy lagti hain… "
+        }
+      ],
+      "sourceParagraph": 996
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reply karna… "
+        }
+      ],
+      "sourceParagraph": 997
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sochna… "
+        }
+      ],
+      "sourceParagraph": 998
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya even bas “theek hoon” kehna. "
+        }
+      ],
+      "sourceParagraph": 999
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye heaviness emotion nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 1000
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye emotional saturation hoti hai. "
+        }
+      ],
+      "sourceParagraph": 1001
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise andar already bahut kuch bhara hua ho… "
+        }
+      ],
+      "sourceParagraph": 1002
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par koi spill nahi hua ho. "
+        }
+      ],
+      "sourceParagraph": 1003
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab spill nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1004
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh pressure andar hi rehta hai. "
+        }
+      ],
+      "sourceParagraph": 1005
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting observation ye hai… "
+        }
+      ],
+      "sourceParagraph": 1006
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jab is state mein hote ho… "
+        }
+      ],
+      "sourceParagraph": 1007
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum “problem” dhoondhne lagte ho. "
+        }
+      ],
+      "sourceParagraph": 1008
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind ko lagta hai: "
+        }
+      ],
+      "sourceParagraph": 1009
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar reason mil gaya toh solve ho jayega "
+        }
+      ],
+      "sourceParagraph": 1010
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par kabhi kabhi reason hota hi nahi… "
+        }
+      ],
+      "sourceParagraph": 1011
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf accumulation hota hai. "
+        }
+      ],
+      "sourceParagraph": 1012
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chhoti chhoti cheezein: "
+        }
+      ],
+      "sourceParagraph": 1013
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumne avoid ki "
+        }
+      ],
+      "sourceParagraph": 1014
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumne feel karke suppress ki "
+        }
+      ],
+      "sourceParagraph": 1015
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumne ignore ki "
+        }
+      ],
+      "sourceParagraph": 1016
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumne “later” pe chhod di "
+        }
+      ],
+      "sourceParagraph": 1017
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo sab milke ek invisible weight ban jaati hain. "
+        }
+      ],
+      "sourceParagraph": 1018
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse subtle part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1019
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum khud ko weak samajhne lagte ho… "
+        }
+      ],
+      "sourceParagraph": 1020
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jabki tum overloaded hote ho. "
+        }
+      ],
+      "sourceParagraph": 1021
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur overloaded hona weakness nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1022
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas capacity ka full ho jana hota hai. "
+        }
+      ],
+      "sourceParagraph": 1023
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum is heaviness ko fight karna band kar dete ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1025
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur sirf notice karte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1026
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange sa silence aata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1027
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na sudden relief… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1028
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na sudden change… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1029
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek soft breathing space. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1030
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise andar thoda sa room ban jata hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1031
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan pehle pressure tha. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1032
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe samajh aata hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1033
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har heaviness problem nahi hoti ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1034
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi wo bas “loaded silence” hoti hai ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1035
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur silence ko fix nahi karna hota… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1036
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "use sirf allow karna hota hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1037
+    }
+  ],
+  "phase": "Part 4 - The Weight",
+  "headerSourceParagraphs": {
+    "number": 962,
+    "title": 963
+  },
+  "number": "CHAPTER 11:",
+  "sourceHeadingParagraphs": [
+    962,
+    963
+  ]
+}

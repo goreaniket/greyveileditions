@@ -1,0 +1,85 @@
+{
+  "id": "copyright",
+  "kind": "frontmatter",
+  "label": "Copyright",
+  "title": "COPYRIGHT NOTICE",
+  "shortTitle": "Copyright",
+  "file": "chapters/02-copyright.json",
+  "index": 2,
+  "sourceRange": [
+    62,
+    70
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© LALIT R MISHRA. All rights reserved. "
+        }
+      ],
+      "sourceParagraph": 63
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not a reproduction of any known life, person, or experience — "
+        }
+      ],
+      "sourceParagraph": 64
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "because what it describes is not outside you. "
+        }
+      ],
+      "sourceParagraph": 65
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It exists in the way thoughts repeat, in the way memory reconstructs meaning, "
+        }
+      ],
+      "sourceParagraph": 66
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and in the way the mind quietly turns patterns into reality. "
+        }
+      ],
+      "sourceParagraph": 67
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No part of this book may be copied, reproduced, stored, or transmitted in any "
+        }
+      ],
+      "sourceParagraph": 68
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "form without prior written permission from the author."
+        }
+      ],
+      "sourceParagraph": 69
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 62
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    62
+  ]
+}

@@ -1,0 +1,610 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "label": "Chapter 2",
+  "title": "When Memory Starts Feeling More Real Than",
+  "shortTitle": "When Memory Starts Feeling More Real Than",
+  "file": "chapters/10-chapter-02.json",
+  "index": 10,
+  "sourceRange": [
+    307,
+    374
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Present : "
+        }
+      ],
+      "sourceParagraph": 309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai ki tum aage badh chuke ho… "
+        }
+      ],
+      "sourceParagraph": 310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par sach mein kuch bhi move nahi hota… "
+        }
+      ],
+      "sourceParagraph": 311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas situation change ho jaati hai. "
+        }
+      ],
+      "sourceParagraph": 312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum present mein hote ho… "
+        }
+      ],
+      "sourceParagraph": 313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par present fully “present” feel nahi hota. "
+        }
+      ],
+      "sourceParagraph": 314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tum yahan ho… "
+        }
+      ],
+      "sourceParagraph": 315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tumhara attention kahin aur already shift ho chuka hota hai. "
+        }
+      ],
+      "sourceParagraph": 316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye shift tum notice bhi nahi karte. "
+        }
+      ],
+      "sourceParagraph": 317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ye loud nahi hota… "
+        }
+      ],
+      "sourceParagraph": 318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye slow hota hai. "
+        }
+      ],
+      "sourceParagraph": 319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek normal moment hota hai… "
+        }
+      ],
+      "sourceParagraph": 320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur usi ke beech mein achanak ek memory aa jati hai. "
+        }
+      ],
+      "sourceParagraph": 321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting cheez ye hai… "
+        }
+      ],
+      "sourceParagraph": 322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo memory puri nahi hoti. "
+        }
+      ],
+      "sourceParagraph": 323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek fragment hota hai. "
+        }
+      ],
+      "sourceParagraph": 324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek expression "
+        }
+      ],
+      "sourceParagraph": 325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek word "
+        }
+      ],
+      "sourceParagraph": 326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek situation ka chhota sa part "
+        }
+      ],
+      "sourceParagraph": 327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par us ek chhote se fragment ka effect poore present moment pe pad jata hai. "
+        }
+      ],
+      "sourceParagraph": 328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Present thoda sa dull ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur past thoda sa sharp. "
+        }
+      ],
+      "sourceParagraph": 330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagta hai ki tum bas “yaad” kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par reality thodi different hoti hai. "
+        }
+      ],
+      "sourceParagraph": 332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum observe karoge toh samajh aata hai ki "
+        }
+      ],
+      "sourceParagraph": 333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum yaad nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us cheez ko dubara experience kar rahe hote ho "
+        }
+      ],
+      "sourceParagraph": 335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but without the real situation. "
+        }
+      ],
+      "sourceParagraph": 336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe mind ka pattern interesting ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo memory ko memory ki tarah nahi rakhta… "
+        }
+      ],
+      "sourceParagraph": 338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo usko present ke saath merge kar deta hai. "
+        }
+      ],
+      "sourceParagraph": 339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye confusion start hota hai. "
+        }
+      ],
+      "sourceParagraph": 340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jo ab ho raha hota hai "
+        }
+      ],
+      "sourceParagraph": 341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo fully real nahi lagta… "
+        }
+      ],
+      "sourceParagraph": 342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo ho chuka hota hai "
+        }
+      ],
+      "sourceParagraph": 343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo oddly real lagne lagta hai. "
+        }
+      ],
+      "sourceParagraph": 344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye shift itni subtle hoti hai ki "
+        }
+      ],
+      "sourceParagraph": 345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum identify hi nahi kar pate kab hua. "
+        }
+      ],
+      "sourceParagraph": 346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek din tum notice karte ho ki "
+        }
+      ],
+      "sourceParagraph": 347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara dimag present mein kam… "
+        }
+      ],
+      "sourceParagraph": 348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "past mein zyada rehta hai. "
+        }
+      ],
+      "sourceParagraph": 349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek aur cheez hoti hai… "
+        }
+      ],
+      "sourceParagraph": 350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum situation ko logically samajh rahe hote ho "
+        }
+      ],
+      "sourceParagraph": 351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par reaction emotional level pe already decided hota hai. "
+        }
+      ],
+      "sourceParagraph": 352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum sochte ho: “ye toh past hai…” "
+        }
+      ],
+      "sourceParagraph": 353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par body aur mind react aise karte hain "
+        }
+      ],
+      "sourceParagraph": 354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaise ye abhi bhi ho raha ho. "
+        }
+      ],
+      "sourceParagraph": 355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek invisible distortion ban jata hai… "
+        }
+      ],
+      "sourceParagraph": 356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present background ban jata hai "
+        }
+      ],
+      "sourceParagraph": 357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur past foreground ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum isko normal life samajhne lagte ho… "
+        }
+      ],
+      "sourceParagraph": 359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki ye disruption loud nahi hota. "
+        }
+      ],
+      "sourceParagraph": 360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye quietly chalta hai. "
+        }
+      ],
+      "sourceParagraph": 361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse interesting observation ye hai… "
+        }
+      ],
+      "sourceParagraph": 362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum move kar rahe ho "
+        }
+      ],
+      "sourceParagraph": 363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tum actually circular motion mein hote ho. "
+        }
+      ],
+      "sourceParagraph": 364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same emotional route… "
+        }
+      ],
+      "sourceParagraph": 365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "different days… "
+        }
+      ],
+      "sourceParagraph": 366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same internal feeling. "
+        }
+      ],
+      "sourceParagraph": 367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is loop mein ek point aata hai… "
+        }
+      ],
+      "sourceParagraph": 368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum khud ko observe karte ho aur sochte ho: "
+        }
+      ],
+      "sourceParagraph": 369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye memory itni real kyun lag rahi hai jabki ye ab exist hi nahi karti?” "
+        }
+      ],
+      "sourceParagraph": 370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us question ke andar hi pehli baar clarity aati hai… "
+        }
+      ],
+      "sourceParagraph": 371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki problem memory nahi hai… "
+        }
+      ],
+      "sourceParagraph": 372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem us weight ka hai jo memory carry kar rahi hai."
+        }
+      ],
+      "sourceParagraph": 373
+    }
+  ],
+  "phase": "Part 1 - The Trap",
+  "headerSourceParagraphs": {
+    "number": 307,
+    "title": 308
+  },
+  "number": "CHAPTER 2:",
+  "sourceHeadingParagraphs": [
+    307,
+    308
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "id": "chapter-01",
+  "kind": "chapter",
+  "label": "Chapter 1",
+  "title": "WHY WE ONLY SEE RULES, NOT EMOTIONS",
+  "shortTitle": "WHY WE ONLY SEE RULES NOT EMOTIONS",
+  "file": "chapters/09-chapter-01.json",
+  "index": 9,
+  "sourceRange": [
+    288,
+    353
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi socha hai… "
+        }
+      ],
+      "sourceParagraph": 290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hume rokte hai "
+        }
+      ],
+      "sourceParagraph": 291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hume tokte hai "
+        }
+      ],
+      "sourceParagraph": 292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hume “ye karo, vo mat karo” kehte hai… "
+        }
+      ],
+      "sourceParagraph": 293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad woh humare against nahi hote… "
+        }
+      ],
+      "sourceParagraph": 294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad woh bas humare future se dar rahe hote haihum har ek student ko "
+        }
+      ],
+      "sourceParagraph": 295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lagta hai ki humare parents hume humesha rokte hai tokte hai padhai karo ye "
+        }
+      ],
+      "sourceParagraph": 296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "karo vo karo aur hume lagta hai ki humesha hum hi kyu kare sab aapke man "
+        }
+      ],
+      "sourceParagraph": 297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ka kare hum bade hogaye hai ab hum samjh sakte hai "
+        }
+      ],
+      "sourceParagraph": 298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mtlb haan tum mai sab bade hogaye ho but just think once they are our "
+        }
+      ],
+      "sourceParagraph": 299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "parents unhe humse jyada humari parwah hai "
+        }
+      ],
+      "sourceParagraph": 300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ik kuch jagah rules regulations hote hai ye karo vo mat karo but kabhi socha "
+        }
+      ],
+      "sourceParagraph": 301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hai ki aaj jo bahar tumhara name hai market mai kyu "
+        }
+      ],
+      "sourceParagraph": 302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vahi parents ke rules regulations se vo jo image hai vo kyu hai "
+        }
+      ],
+      "sourceParagraph": 303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jo dekhte hai humesha vo yehi hai rules datna ye vo but uske piche ka "
+        }
+      ],
+      "sourceParagraph": 304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reason kabhi puchle to ki papa ye esa kyu "
+        }
+      ],
+      "sourceParagraph": 305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "haan datenge ho sakta hai daten but tum ek baar baat to karke dekh sakte ho "
+        }
+      ],
+      "sourceParagraph": 306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na "
+        }
+      ],
+      "sourceParagraph": 307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hota hai kabhi kabhi ghar ka pressure hota hai padhai ko leke life ko leke "
+        }
+      ],
+      "sourceParagraph": 308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but just think once "
+        }
+      ],
+      "sourceParagraph": 309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur imagine karo jinke parents nahi hai unka kya "
+        }
+      ],
+      "sourceParagraph": 310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "atleast humare pass koi ek track to hai ki ye karna hai life mai "
+        }
+      ],
+      "sourceParagraph": 311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "humara mind esa hai ki lakh positive hua hoga aur 1 negative hua hoga na to "
+        }
+      ],
+      "sourceParagraph": 312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo 1 negative ki taraf jaldi jayega aur 1 se fir purane mistakes sab kuch khich "
+        }
+      ],
+      "sourceParagraph": 313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lega "
+        }
+      ],
+      "sourceParagraph": 314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur hum fir sochte hai ki jab dekho ye vo daat padhai ye karo "
+        }
+      ],
+      "sourceParagraph": 315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but if hum dekhne ka pov change kar de na "
+        }
+      ],
+      "sourceParagraph": 316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo maa baap aaj bojh lagte hai na vahi maa baap bhagwan lagne lagenge "
+        }
+      ],
+      "sourceParagraph": 317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye sab gyan lag raha hoga "
+        }
+      ],
+      "sourceParagraph": 318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but actually the realisation is very simple bas humne apne aap ke andar "
+        }
+      ],
+      "sourceParagraph": 319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kachra bhar diya hai "
+        }
+      ],
+      "sourceParagraph": 320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kahi kahi i think parents ko bhi thoda change hona chahiye like they "
+        }
+      ],
+      "sourceParagraph": 321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "should be freely jisse bachcha share kar paye cheeze use dono mai bond rehta "
+        }
+      ],
+      "sourceParagraph": 322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hai misunderstanding kam rehti hai "
+        }
+      ],
+      "sourceParagraph": 323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jaha misunderstanding kam waha relation strong "
+        }
+      ],
+      "sourceParagraph": 324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi dimag itna disturb hota hai ki vo imaginary world mai vo sab "
+        }
+      ],
+      "sourceParagraph": 325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "easily bana leta hai hume lagta hai vo sab dekhne ke baad ki life akele best hai "
+        }
+      ],
+      "sourceParagraph": 326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "peace hai healing hai "
+        }
+      ],
+      "sourceParagraph": 327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reality hit karegi hard ik "
+        }
+      ],
+      "sourceParagraph": 328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but still mera kaam hai kehna "
+        }
+      ],
+      "sourceParagraph": 329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "real life mai bina parents ke hum kar to lenge "
+        }
+      ],
+      "sourceParagraph": 330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but na jaane kitne laat kha ke kitne pain face karke pressure overthinking no "
+        }
+      ],
+      "sourceParagraph": 331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "track of life kya karna hai aage kuch bhi sab khokhla ho jayega "
+        }
+      ],
+      "sourceParagraph": 332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jab ye sab hoga na "
+        }
+      ],
+      "sourceParagraph": 333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab samajh aayega ki jo aaj hume bojh lagta hai "
+        }
+      ],
+      "sourceParagraph": 334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo kal absence ban jata hai "
+        }
+      ],
+      "sourceParagraph": 335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur absence sabse bada bojh hota hai "
+        }
+      ],
+      "sourceParagraph": 336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "atleast abhi ek path hai hum sabke samne "
+        }
+      ],
+      "sourceParagraph": 337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "haan hume bas khud ko aur thoda sa parents ka nature change karne ki try "
+        }
+      ],
+      "sourceParagraph": 338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "karni hai "
+        }
+      ],
+      "sourceParagraph": 339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kuch nahi "
+        }
+      ],
+      "sourceParagraph": 340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fir sabki life best hogi "
+        }
+      ],
+      "sourceParagraph": 341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har ek relation baap bete ka pyar hi kuch esa hai vo dikhate hai strictness se "
+        }
+      ],
+      "sourceParagraph": 342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but andar kitna pyar hai sirf unhe pata hai hum imagine bhi nahi kar sakte "
+        }
+      ],
+      "sourceParagraph": 343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bachpan mai wahi parents jo aaj hume bojh lagte hai "
+        }
+      ],
+      "sourceParagraph": 344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ghar vo unko chhod ke jane ka man karta hai "
+        }
+      ],
+      "sourceParagraph": 345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wahi parents ke bina hum reh nahi paate the "
+        }
+      ],
+      "sourceParagraph": 346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "rote the khelte the kudte the masti karte the padhte the "
+        }
+      ],
+      "sourceParagraph": 347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur aaj jab humari baari aayi hai unhe hum ese pov se dekh rahe hai "
+        }
+      ],
+      "sourceParagraph": 348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hume abhi to realize nahi ho raha "
+        }
+      ],
+      "sourceParagraph": 349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but after a death bahut regret hoga "
+        }
+      ],
+      "sourceParagraph": 350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur i damn sure "
+        }
+      ],
+      "sourceParagraph": 351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye har ek teenage ko shayad kharab bhi lage "
+        }
+      ],
+      "sourceParagraph": 352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but ye reality hai "
+        }
+      ],
+      "sourceParagraph": 353
+    }
+  ],
+  "phase": "Layer 1 - The Human Mask",
+  "headerSourceParagraphs": {
+    "number": 288,
+    "title": 289
+  },
+  "number": "CHAPTER 1:",
+  "sourceHeadingParagraphs": [
+    288,
+    289
+  ]
+}

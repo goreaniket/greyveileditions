@@ -1,0 +1,23 @@
+{
+  "id": "layer-5",
+  "kind": "part",
+  "label": "Layer 5",
+  "title": "THE REAL WORLD SHIFT",
+  "shortTitle": "Layer 5",
+  "file": "chapters/19-layer-5.json",
+  "index": 19,
+  "sourceRange": [
+    819,
+    821
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 819,
+    "title": 820
+  },
+  "number": "LAYER 5:",
+  "sourceHeadingParagraphs": [
+    819,
+    820
+  ]
+}

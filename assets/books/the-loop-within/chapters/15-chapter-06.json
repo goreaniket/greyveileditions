@@ -1,0 +1,573 @@
+{
+  "id": "chapter-06",
+  "kind": "chapter",
+  "label": "Chapter 6",
+  "title": "When You Fall in Love With a Version That No",
+  "shortTitle": "When You Fall in Love With a Version That No",
+  "file": "chapters/15-chapter-06.json",
+  "index": 15,
+  "sourceRange": [
+    584,
+    647
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Longer Exists:  ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 586
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai ki tum kisi insaan ko miss kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 587
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda aur quietly observe karo… "
+        }
+      ],
+      "sourceParagraph": 588
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh samajh aata hai ki tum actually kisi “insaan” ko nahi… "
+        }
+      ],
+      "sourceParagraph": 589
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum ek version ko hold kiye hue ho. "
+        }
+      ],
+      "sourceParagraph": 590
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo version jo ek time pe real lagta tha… "
+        }
+      ],
+      "sourceParagraph": 591
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par ab sirf memory ke andar live karta hai. "
+        }
+      ],
+      "sourceParagraph": 592
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting cheez ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 593
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum present insaan ko dekh rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 594
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tumhara reaction kisi aur cheez pe chal raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 595
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise ek invisible mismatch ho: "
+        }
+      ],
+      "sourceParagraph": 596
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo saamne hai "
+        }
+      ],
+      "sourceParagraph": 597
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo andar stored hai "
+        }
+      ],
+      "sourceParagraph": 598
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum is mismatch ko start mein catch nahi karte… "
+        }
+      ],
+      "sourceParagraph": 599
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki mind dono ko merge kar deta hai. "
+        }
+      ],
+      "sourceParagraph": 600
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Person + Feeling + Memory = One illusioned identity "
+        }
+      ],
+      "sourceParagraph": 601
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere tum us insaan ko “present reality” se nahi dekhte… "
+        }
+      ],
+      "sourceParagraph": 602
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum usko “past emotional frame” se dekhte ho. "
+        }
+      ],
+      "sourceParagraph": 603
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab bhi present kuch alag behave karta hai… "
+        }
+      ],
+      "sourceParagraph": 604
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum confuse ho jate ho. "
+        }
+      ],
+      "sourceParagraph": 605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye pehle aisa nahi tha…” "
+        }
+      ],
+      "sourceParagraph": 606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par reality ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo kabhi waise tha hi nahi — "
+        }
+      ],
+      "sourceParagraph": 608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf us time ka interpretation tha. "
+        }
+      ],
+      "sourceParagraph": 609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek deep observation aata hai… "
+        }
+      ],
+      "sourceParagraph": 610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum kisi insaan ko nahi samajh rahe hote… "
+        }
+      ],
+      "sourceParagraph": 611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum apne mind ke banaye hue version ko defend kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab present us version ko break karta hai… "
+        }
+      ],
+      "sourceParagraph": 613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dard insaan se nahi hota… "
+        }
+      ],
+      "sourceParagraph": 614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dard illusion collapse se hota hai. "
+        }
+      ],
+      "sourceParagraph": 615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting cheez ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jitna zyada kisi version ko idealize karte ho… "
+        }
+      ],
+      "sourceParagraph": 617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "utna hi present uske against weak lagta hai. "
+        }
+      ],
+      "sourceParagraph": 618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda aur deeply dekho… "
+        }
+      ],
+      "sourceParagraph": 619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh samajh aata hai ki: "
+        }
+      ],
+      "sourceParagraph": 620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na present galat hai… "
+        }
+      ],
+      "sourceParagraph": 621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na past correct tha… "
+        }
+      ],
+      "sourceParagraph": 622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dono bas different states the mind ke. "
+        }
+      ],
+      "sourceParagraph": 623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind ka kaam hi ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo states ko freeze karke identity bana deta hai. "
+        }
+      ],
+      "sourceParagraph": 625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tum kisi insaan se attach nahi hote… "
+        }
+      ],
+      "sourceParagraph": 626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum ek frozen emotional frame se attach ho jate ho. "
+        }
+      ],
+      "sourceParagraph": 627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab wo frame crack hota hai… "
+        }
+      ],
+      "sourceParagraph": 628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh confusion hota hai ki “kya change ho gaya?” "
+        }
+      ],
+      "sourceParagraph": 629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par change bahar nahi hota… "
+        }
+      ],
+      "sourceParagraph": 630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "change perception ke andar hota hai. "
+        }
+      ],
+      "sourceParagraph": 631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek silent realization build hota hai… "
+        }
+      ],
+      "sourceParagraph": 632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad tum jo “loss” feel kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo insaan ka loss nahi hai… "
+        }
+      ],
+      "sourceParagraph": 634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo version ka loss hai jo tumne apne andar bana rakha tha. "
+        }
+      ],
+      "sourceParagraph": 635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye realization thoda settle hota hai… "
+        }
+      ],
+      "sourceParagraph": 636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh memory thodi light ho jati hai… "
+        }
+      ],
+      "sourceParagraph": 637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur present thoda visible. "
+        }
+      ],
+      "sourceParagraph": 638
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum ye observe karte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 640
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange sa calm aata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 641
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na forcefully move on… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na forcibly forget… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek understanding: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 644
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo tha… wo waise hi complete tha ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 645
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo hai… wo waise hi real hai.  ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 646
+    }
+  ],
+  "phase": "Part 2 - The Distortion",
+  "headerSourceParagraphs": {
+    "number": 584,
+    "title": 585
+  },
+  "number": "CHAPTER 6:",
+  "sourceHeadingParagraphs": [
+    584,
+    585
+  ]
+}

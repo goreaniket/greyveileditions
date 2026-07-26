@@ -1,0 +1,21 @@
+{
+  "id": "part-5",
+  "kind": "part",
+  "label": "Part 5",
+  "title": "PART 5: THE BREAK (WHY LETTING GO IS HARD)",
+  "shortTitle": "Part 5",
+  "file": "chapters/25-part-5.json",
+  "index": 25,
+  "sourceRange": [
+    1164,
+    1165
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "title": 1164
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    1164
+  ]
+}

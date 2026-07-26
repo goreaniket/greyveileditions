@@ -1,0 +1,76 @@
+{
+  "id": "copyright",
+  "kind": "frontmatter",
+  "label": "Copyright",
+  "title": "COPYRIGHT",
+  "shortTitle": "Copyright",
+  "file": "chapters/02-copyright.json",
+  "index": 2,
+  "sourceRange": [
+    45,
+    52
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© 2026 by Lalit R Mishra "
+        }
+      ],
+      "sourceParagraph": 46
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All rights reserved. "
+        }
+      ],
+      "sourceParagraph": 47
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book and its content are the intellectual property of the author. No part of "
+        }
+      ],
+      "sourceParagraph": 48
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "this book may be reproduced, distributed, or transmitted in any form without "
+        }
+      ],
+      "sourceParagraph": 49
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "prior written permission from the author, except for brief quotations used in "
+        }
+      ],
+      "sourceParagraph": 50
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reviews or educational references."
+        }
+      ],
+      "sourceParagraph": 51
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 45
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    45
+  ]
+}

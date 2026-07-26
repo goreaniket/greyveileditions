@@ -1,0 +1,502 @@
+{
+  "id": "chapter-01",
+  "kind": "chapter",
+  "label": "Chapter 1",
+  "title": "When It Doesn’t End, It Just Repeats in Your Mind:",
+  "shortTitle": "When It Doesnt End It Just Repeats in Your Mind",
+  "file": "chapters/09-chapter-01.json",
+  "index": 9,
+  "sourceRange": [
+    251,
+    306
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi problem ye nahi hoti ki kuch hua hai… "
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem ye hoti hai ki kuch ho hi nahi raha hota… "
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par phir bhi mind mein sab kuch chal raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum physically present hote ho… "
+        }
+      ],
+      "sourceParagraph": 256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par mentally fully present nahi hote. "
+        }
+      ],
+      "sourceParagraph": 257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye cheez tum notice bhi nahi karte hamesha. "
+        }
+      ],
+      "sourceParagraph": 258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki tum kaam kar rahe hote ho, baat kar rahe hote ho, normal behave kar "
+        }
+      ],
+      "sourceParagraph": 259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par uske peeche ek aur layer chal rahi hoti hai. "
+        }
+      ],
+      "sourceParagraph": 261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi memory "
+        }
+      ],
+      "sourceParagraph": 262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek hi moment "
+        }
+      ],
+      "sourceParagraph": 263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek hi thought "
+        }
+      ],
+      "sourceParagraph": 264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baar baar… repeat hota rehta hai. "
+        }
+      ],
+      "sourceParagraph": 265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi tumhe khud bhi samajh nahi aata ki "
+        }
+      ],
+      "sourceParagraph": 266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye soch rahe ho ya bas chal raha hai. "
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur honestly… ye clear bhi nahi hota pehle. "
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek strange sa background hota hai dimag mein… "
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kabhi fully band nahi hota. "
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum us cheez ko “soch” nahi rahe hote… "
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum uske andar thode se phase hue hote ho. "
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye difference start mein samajh nahi aata. "
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe lagta hai tum control mein ho… "
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda observe karo toh pata chalta hai ki "
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "control present ka nahi hota… "
+        }
+      ],
+      "sourceParagraph": 276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "control kisi purani cheez ke paas hota hai. "
+        }
+      ],
+      "sourceParagraph": 277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek aur cheez hoti hai… "
+        }
+      ],
+      "sourceParagraph": 278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum ignore karne ki koshish karte ho… "
+        }
+      ],
+      "sourceParagraph": 279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par wo ignore nahi hota. "
+        }
+      ],
+      "sourceParagraph": 280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas aur quiet ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par jata nahi. "
+        }
+      ],
+      "sourceParagraph": 282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tumhe lagta hai ki tum aage badh gaye ho… "
+        }
+      ],
+      "sourceParagraph": 283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar kuch same hi chal raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same triggers "
+        }
+      ],
+      "sourceParagraph": 285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same reactions "
+        }
+      ],
+      "sourceParagraph": 286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same thoughts… bas silently. "
+        }
+      ],
+      "sourceParagraph": 287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi tum sochte ho: "
+        }
+      ],
+      "sourceParagraph": 288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye itna important bhi nahi hai…” "
+        }
+      ],
+      "sourceParagraph": 289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par phir bhi dimag usi cheez ko importance de raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye contradiction hi trap hota hai. "
+        }
+      ],
+      "sourceParagraph": 291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse ajeeb part ye hai… "
+        }
+      ],
+      "sourceParagraph": 292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us cheez mein nahi hote… "
+        }
+      ],
+      "sourceParagraph": 293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par us cheez se bahar bhi nahi hote. "
+        }
+      ],
+      "sourceParagraph": 294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek beech ka state hota hai… "
+        }
+      ],
+      "sourceParagraph": 295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan clear kuch bhi nahi hota. "
+        }
+      ],
+      "sourceParagraph": 296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ye normal lagne lagta hai. "
+        }
+      ],
+      "sourceParagraph": 297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum isko problem bhi nahi bolte… "
+        }
+      ],
+      "sourceParagraph": 298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum isko “main aisa hi hoon” maan lete ho. "
+        }
+      ],
+      "sourceParagraph": 299
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad wahi point hota hai… "
+        }
+      ],
+      "sourceParagraph": 300
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum notice karte ho: "
+        }
+      ],
+      "sourceParagraph": 301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main yahan hoon… par main yahan ho hi nahi raha.” "
+        }
+      ],
+      "sourceParagraph": 302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us moment pe pehli baar thoda sa clarity aata hai… "
+        }
+      ],
+      "sourceParagraph": 303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad issue cheez ka nahi tha… "
+        }
+      ],
+      "sourceParagraph": 304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "issue us repetition ka tha jo quietly chal raha tha."
+        }
+      ],
+      "sourceParagraph": 305
+    }
+  ],
+  "phase": "Part 1 - The Trap",
+  "headerSourceParagraphs": {
+    "number": 251,
+    "title": 252
+  },
+  "number": "CHAPTER 1:",
+  "sourceHeadingParagraphs": [
+    251,
+    252
+  ]
+}

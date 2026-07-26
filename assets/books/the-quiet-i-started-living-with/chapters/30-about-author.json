@@ -1,0 +1,94 @@
+{
+  "id": "about-author",
+  "kind": "ending",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "About the Author",
+  "file": "chapters/30-about-author.json",
+  "index": 30,
+  "sourceRange": [
+    2097,
+    2105
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R. Mishra is a student who began writing out of curiosity rather than ambition.  "
+        }
+      ],
+      "sourceParagraph": 2098
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "What started as scattered notes, unfinished thoughts, and observations gradually turned into stories "
+        }
+      ],
+      "sourceParagraph": 2099
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that explored experiences difficult to capture in ordinary conversations.  "
+        }
+      ],
+      "sourceParagraph": 2100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is less interested in giving answers and more interested in paying attention to the questions "
+        }
+      ],
+      "sourceParagraph": 2101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "people carry with them.  "
+        }
+      ],
+      "sourceParagraph": 2102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His work is influenced by everyday moments, long periods of reflection, and the belief that some "
+        }
+      ],
+      "sourceParagraph": 2103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "of the most meaningful experiences in life are often the hardest to describe.  "
+        }
+      ],
+      "sourceParagraph": 2104
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"The Quiet I Started Living With\" is his second book."
+        }
+      ],
+      "sourceParagraph": 2105
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 2097
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    2097
+  ]
+}

@@ -1,0 +1,814 @@
+{
+  "id": "introduction",
+  "kind": "introduction",
+  "label": "Introduction",
+  "title": "INTRODUCTION",
+  "shortTitle": "Introduction",
+  "file": "chapters/07-introduction.json",
+  "index": 7,
+  "sourceRange": [
+    201,
+    294
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi notice kiya hai..."
+        }
+      ],
+      "sourceParagraph": 202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki life hamesha problems ki wajah se heavy nahi lagti."
+        }
+      ],
+      "sourceParagraph": 203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi sab kuch theek hota hai."
+        }
+      ],
+      "sourceParagraph": 204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log hote hain."
+        }
+      ],
+      "sourceParagraph": 205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kaam chalta rehta hai."
+        }
+      ],
+      "sourceParagraph": 206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Routine bhi wahi hoti hai."
+        }
+      ],
+      "sourceParagraph": 207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir bhi..."
+        }
+      ],
+      "sourceParagraph": 208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "andar ek ajeeb sa noise rehta hai."
+        }
+      ],
+      "sourceParagraph": 209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisi awaaz jo bahar kisi ko sunai nahi deti."
+        }
+      ],
+      "sourceParagraph": 210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par tum uske saath roz uthte ho."
+        }
+      ],
+      "sourceParagraph": 211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Roz sote ho."
+        }
+      ],
+      "sourceParagraph": 212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere..."
+        }
+      ],
+      "sourceParagraph": 213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "use normal maan lete ho."
+        }
+      ],
+      "sourceParagraph": 214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum aksar sochte hain ki hum life experience kar rahe hain."
+        }
+      ],
+      "sourceParagraph": 215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda aur honestly dekho..."
+        }
+      ],
+      "sourceParagraph": 216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad hum life se zyada apne thoughts experience kar rahe hote hain."
+        }
+      ],
+      "sourceParagraph": 217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi conversation ko baar baar replay karna."
+        }
+      ],
+      "sourceParagraph": 218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek hi memory ko naye angles se dekhna."
+        }
+      ],
+      "sourceParagraph": 219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Future ke imaginary scenes banana."
+        }
+      ],
+      "sourceParagraph": 220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir unhi scenes par emotional reaction dena."
+        }
+      ],
+      "sourceParagraph": 221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise mind sirf reality nahi jeeta..."
+        }
+      ],
+      "sourceParagraph": 222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo reality ke andar ek aur reality create karta rehta hai."
+        }
+      ],
+      "sourceParagraph": 223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse dangerous baat?"
+        }
+      ],
+      "sourceParagraph": 224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye sab itna gradually hota hai..."
+        }
+      ],
+      "sourceParagraph": 225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hume pata bhi nahi chalta kab hum present se zyada apni interpretation ke saath rehne lage."
+        }
+      ],
+      "sourceParagraph": 226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kab humne moments ko jeena kam..."
+        }
+      ],
+      "sourceParagraph": 227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur unhe explain karna zyada start kar diya."
+        }
+      ],
+      "sourceParagraph": 228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi liye hum itne mentally exhausted rehte hain."
+        }
+      ],
+      "sourceParagraph": 229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ki wajah se nahi."
+        }
+      ],
+      "sourceParagraph": 230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us version ki wajah se..."
+        }
+      ],
+      "sourceParagraph": 231
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo humne apne dimaag ke andar bana rakhi hoti hai."
+        }
+      ],
+      "sourceParagraph": 232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book tumhe positive banna nahi sikhayegi."
+        }
+      ],
+      "sourceParagraph": 233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na hi ye bolegi ki overthinking bas stop kar do."
+        }
+      ],
+      "sourceParagraph": 234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind kisi switch ki tarah kaam nahi karta."
+        }
+      ],
+      "sourceParagraph": 235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur healing kisi motivational quote se nahi aati."
+        }
+      ],
+      "sourceParagraph": 236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book sirf ek invitation hai."
+        }
+      ],
+      "sourceParagraph": 237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Observe karne ka."
+        }
+      ],
+      "sourceParagraph": 238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina immediately judge kiye."
+        }
+      ],
+      "sourceParagraph": 239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina har feeling ko fix karne ki koshish kiye."
+        }
+      ],
+      "sourceParagraph": 240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bina har silence ko bharne ki zarurat mehsoos kiye."
+        }
+      ],
+      "sourceParagraph": 241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem thought nahi hota."
+        }
+      ],
+      "sourceParagraph": 243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Problem ye hota hai..."
+        }
+      ],
+      "sourceParagraph": 244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki hum har thought ko apni identity bana lete hain."
+        }
+      ],
+      "sourceParagraph": 245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab identity thought ke saath attach ho jaati hai..."
+        }
+      ],
+      "sourceParagraph": 246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh har memory personal lagti hai."
+        }
+      ],
+      "sourceParagraph": 247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har rejection permanent lagta hai."
+        }
+      ],
+      "sourceParagraph": 248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har uncertainty dangerous lagti hai."
+        }
+      ],
+      "sourceParagraph": 249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin..."
+        }
+      ],
+      "sourceParagraph": 250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar tum ek pal ke liye ruk jao..."
+        }
+      ],
+      "sourceParagraph": 251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur sirf notice karo..."
+        }
+      ],
+      "sourceParagraph": 252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhare andar kya chal raha hai..."
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad tumhe ek aur cheez dikhe."
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts aa rahe hain."
+        }
+      ],
+      "sourceParagraph": 255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ja rahe hain."
+        }
+      ],
+      "sourceParagraph": 256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotions bhi aa rahe hain."
+        }
+      ],
+      "sourceParagraph": 257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ja rahe hain."
+        }
+      ],
+      "sourceParagraph": 258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memories bhi badal rahi hain."
+        }
+      ],
+      "sourceParagraph": 259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir bhi..."
+        }
+      ],
+      "sourceParagraph": 260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch hai jo in sab ke beech kabhi change nahi hota."
+        }
+      ],
+      "sourceParagraph": 261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book usi cheez ke baare mein hai."
+        }
+      ],
+      "sourceParagraph": 262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Silence ke baare mein nahi."
+        }
+      ],
+      "sourceParagraph": 263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us distance ke baare mein..."
+        }
+      ],
+      "sourceParagraph": 264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo dheere dheere tum aur tumhari real experience ke beech ban jaata hai."
+        }
+      ],
+      "sourceParagraph": 265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us possibility ke baare mein..."
+        }
+      ],
+      "sourceParagraph": 266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad us distance ko force se nahi..."
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf awareness se dekha ja sakta hai."
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ho sakta hai is book mein tumhe answers na mile."
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad wahi iska purpose bhi hai."
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki kuch questions solve nahi kiye jaate."
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unke saath baithna seekha jaata hai."
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi..."
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum unhe solve karna chhod dete ho..."
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab woh khud dissolve hone lagte hain."
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye is book ko jaldi mat padhna."
+        }
+      ],
+      "sourceParagraph": 276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har page ko consume mat karna."
+        }
+      ],
+      "sourceParagraph": 277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uske saath thoda rukna."
+        }
+      ],
+      "sourceParagraph": 278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoda observe karna."
+        }
+      ],
+      "sourceParagraph": 279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar kisi line par tumhe lage..."
+        }
+      ],
+      "sourceParagraph": 280
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Ye toh mere saath bhi hota hai...\""
+        }
+      ],
+      "sourceParagraph": 281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh us line ko bas feel karna."
+        }
+      ],
+      "sourceParagraph": 282
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Uska answer dhoondhne ki zarurat nahi."
+        }
+      ],
+      "sourceParagraph": 283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki shayad..."
+        }
+      ],
+      "sourceParagraph": 284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye book tumhe kuch naya sikhane nahi aayi."
+        }
+      ],
+      "sourceParagraph": 285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad ye sirf tumhe woh dikhane aayi hai..."
+        }
+      ],
+      "sourceParagraph": 286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumhare andar hamesha se tha..."
+        }
+      ],
+      "sourceParagraph": 287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tum itne busy the usse explain karne mein..."
+        }
+      ],
+      "sourceParagraph": 288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki kabhi dekh hi nahi paaye."
+        }
+      ],
+      "sourceParagraph": 289
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 201
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    201
+  ]
+}

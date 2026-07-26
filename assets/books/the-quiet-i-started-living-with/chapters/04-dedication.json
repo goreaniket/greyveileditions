@@ -1,0 +1,94 @@
+{
+  "id": "dedication",
+  "kind": "dedication",
+  "label": "Dedication",
+  "title": "DEDICATION",
+  "shortTitle": "Dedication",
+  "file": "chapters/04-dedication.json",
+  "index": 4,
+  "sourceRange": [
+    70,
+    79
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the version of me that kept going without "
+        }
+      ],
+      "sourceParagraph": 71
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "understanding anything… and still never stopped showing "
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "up.   "
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "To the silence that stayed with me when I "
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "couldn’t explain myself to anyone.   "
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And to the part of me that  "
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "didn’t break loudly… just slowly "
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "became quiet.    "
+        }
+      ],
+      "sourceParagraph": 78
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 70
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    70
+  ]
+}

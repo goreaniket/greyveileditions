@@ -1,0 +1,953 @@
+{
+  "id": "the-loop-within",
+  "slug": "the-loop-within",
+  "title": "The Loop Within",
+  "subtitle": "The Mind Always Returns to What It Never Finished",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Mind",
+  "seriesDisplay": "The Human Mind Series",
+  "bookNumber": "Book IV",
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-mind/assets/covers/the%20loop%20within.jpeg",
+  "cover": {
+    "web": "/assets/books/the-loop-within/cover/front-cover.webp",
+    "print": "/assets/books/the-loop-within/cover/front-cover-print.png",
+    "source": "/assets/books/the-loop-within/cover/cover-source.png",
+    "alt": "The Loop Within book cover"
+  },
+  "readerRoute": "/projects/human-mind/books/the-loop-within/reader/",
+  "readerExitUrl": "/projects/human-mind/books/the-loop-within.html",
+  "storageKey": "greyveil:the-loop-within:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Mind",
+    "book": "The Loop Within",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-loop-within",
+    "variables": {
+      "light": {
+        "--reader-bg": "#D9E2DF",
+        "--reader-paper": "#F4EDDF",
+        "--reader-paper-soft": "#E9E0D2",
+        "--reader-text": "#23342F",
+        "--reader-heading": "#132620",
+        "--reader-muted": "color-mix(in srgb, #23342F 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #23342F 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #23342F 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #446B62 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #23342F 20%, transparent)",
+        "--reader-accent": "#446B62",
+        "--reader-accent-strong": "#244B43",
+        "--reader-accent-soft": "color-mix(in srgb, #446B62 12%, transparent)",
+        "--reader-warm": "#8A7354",
+        "--reader-focus": "#244B43",
+        "--reader-control-bg": "#E9E0D2",
+        "--reader-control-border": "color-mix(in srgb, #23342F 18%, transparent)",
+        "--reader-input-bg": "#F4EDDF",
+        "--reader-input-text": "#23342F",
+        "--reader-placeholder": "color-mix(in srgb, #23342F 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #446B62 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(25, 34, 39, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#DED7C9",
+        "--reader-paper": "#F1E5D2",
+        "--reader-paper-soft": "#E7D9C4",
+        "--reader-text": "#332F28",
+        "--reader-heading": "#211F1A",
+        "--reader-muted": "color-mix(in srgb, #332F28 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #332F28 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #332F28 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #4F6655 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #332F28 20%, transparent)",
+        "--reader-accent": "#4F6655",
+        "--reader-accent-strong": "#374D3F",
+        "--reader-accent-soft": "color-mix(in srgb, #4F6655 12%, transparent)",
+        "--reader-warm": "#8A6D4D",
+        "--reader-focus": "#374D3F",
+        "--reader-control-bg": "#E7D9C4",
+        "--reader-control-border": "color-mix(in srgb, #332F28 18%, transparent)",
+        "--reader-input-bg": "#F1E5D2",
+        "--reader-input-text": "#332F28",
+        "--reader-placeholder": "color-mix(in srgb, #332F28 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #4F6655 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(25, 34, 39, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#0B1514",
+        "--reader-paper": "#14201E",
+        "--reader-paper-soft": "#1C2A27",
+        "--reader-text": "#ECE7DC",
+        "--reader-heading": "#F5F0E7",
+        "--reader-muted": "color-mix(in srgb, #ECE7DC 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #ECE7DC 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #ECE7DC 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #85AB9E 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #ECE7DC 20%, transparent)",
+        "--reader-accent": "#85AB9E",
+        "--reader-accent-strong": "#B5D3C7",
+        "--reader-accent-soft": "color-mix(in srgb, #85AB9E 12%, transparent)",
+        "--reader-warm": "#C2A678",
+        "--reader-focus": "#B5D3C7",
+        "--reader-control-bg": "#1C2A27",
+        "--reader-control-border": "color-mix(in srgb, #ECE7DC 18%, transparent)",
+        "--reader-input-bg": "#14201E",
+        "--reader-input-text": "#F2ECE4",
+        "--reader-placeholder": "color-mix(in srgb, #ECE7DC 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #85AB9E 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .48)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-mind/chapters/WORD/THE LOOP WITHIN.docx",
+    "pdfVerification": "/projects/human-mind/chapters/PDF/the loop within.pdf",
+    "sourceParagraphsTotal": 1769,
+    "sourceParagraphsNonEmpty": 1685,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "The Loop Within",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        22
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Index",
+      "title": "INDEX",
+      "shortTitle": "Index",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        23,
+        61
+      ],
+      "headerSourceParagraphs": {
+        "title": 23
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        23
+      ]
+    },
+    {
+      "id": "copyright",
+      "kind": "frontmatter",
+      "label": "Copyright",
+      "title": "COPYRIGHT NOTICE",
+      "shortTitle": "Copyright",
+      "file": "chapters/02-copyright.json",
+      "index": 2,
+      "sourceRange": [
+        62,
+        70
+      ],
+      "headerSourceParagraphs": {
+        "title": 62
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        62
+      ]
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "Dedication",
+      "file": "chapters/03-dedication.json",
+      "index": 3,
+      "sourceRange": [
+        71,
+        80
+      ],
+      "headerSourceParagraphs": {
+        "title": 71
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        71
+      ]
+    },
+    {
+      "id": "disclaimer",
+      "kind": "frontmatter",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "Disclaimer",
+      "file": "chapters/04-disclaimer.json",
+      "index": 4,
+      "sourceRange": [
+        81,
+        90
+      ],
+      "headerSourceParagraphs": {
+        "title": 81
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        81
+      ]
+    },
+    {
+      "id": "authors-note",
+      "kind": "frontmatter",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "Authors Note",
+      "file": "chapters/05-authors-note.json",
+      "index": 5,
+      "sourceRange": [
+        91,
+        124
+      ],
+      "headerSourceParagraphs": {
+        "title": 91
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        91
+      ]
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "( Don’t read this to understand it. Read it to notice what it does to you).",
+      "shortTitle": "Prologue",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        125,
+        184
+      ],
+      "headerSourceParagraphs": {
+        "number": 125,
+        "title": 126
+      },
+      "number": "PROLOGUE",
+      "sourceHeadingParagraphs": [
+        125,
+        126
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "(Before you call this a story… understand what is actually happening",
+      "shortTitle": "Introduction",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        185,
+        247
+      ],
+      "headerSourceParagraphs": {
+        "number": 185,
+        "title": 186
+      },
+      "number": "INTRODUCTION",
+      "sourceHeadingParagraphs": [
+        185,
+        186
+      ]
+    },
+    {
+      "id": "part-1",
+      "kind": "part",
+      "label": "Part 1",
+      "title": "THE TRAP (WHY YOU GET STUCK)",
+      "shortTitle": "Part 1",
+      "file": "chapters/08-part-1.json",
+      "index": 8,
+      "sourceRange": [
+        248,
+        250
+      ],
+      "headerSourceParagraphs": {
+        "number": 248,
+        "title": 249
+      },
+      "number": "PART 1:",
+      "sourceHeadingParagraphs": [
+        248,
+        249
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "Chapter 1",
+      "title": "When It Doesn’t End, It Just Repeats in Your Mind:",
+      "shortTitle": "When It Doesnt End It Just Repeats in Your Mind",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        251,
+        306
+      ],
+      "phase": "Part 1 - The Trap",
+      "headerSourceParagraphs": {
+        "number": 251,
+        "title": 252
+      },
+      "number": "CHAPTER 1:",
+      "sourceHeadingParagraphs": [
+        251,
+        252
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "Chapter 2",
+      "title": "When Memory Starts Feeling More Real Than",
+      "shortTitle": "When Memory Starts Feeling More Real Than",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        307,
+        374
+      ],
+      "phase": "Part 1 - The Trap",
+      "headerSourceParagraphs": {
+        "number": 307,
+        "title": 308
+      },
+      "number": "CHAPTER 2:",
+      "sourceHeadingParagraphs": [
+        307,
+        308
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "Chapter 3",
+      "title": "When Silence Becomes a Place You Visit Too",
+      "shortTitle": "When Silence Becomes a Place You Visit Too",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        375,
+        438
+      ],
+      "phase": "Part 1 - The Trap",
+      "headerSourceParagraphs": {
+        "number": 375,
+        "title": 376
+      },
+      "number": "CHAPTER 3:",
+      "sourceHeadingParagraphs": [
+        375,
+        376
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "Chapter 4",
+      "title": "When You Confuse Missing with Meaning:",
+      "shortTitle": "When You Confuse Missing with Meaning",
+      "file": "chapters/12-chapter-04.json",
+      "index": 12,
+      "sourceRange": [
+        439,
+        513
+      ],
+      "phase": "Part 1 - The Trap",
+      "headerSourceParagraphs": {
+        "number": 439,
+        "title": 440
+      },
+      "number": "CHAPTER 4:",
+      "sourceHeadingParagraphs": [
+        439,
+        440
+      ]
+    },
+    {
+      "id": "part-2",
+      "kind": "part",
+      "label": "Part 2",
+      "title": "THE DISTORTION (WHY IT FEELS SO REAL)",
+      "shortTitle": "Part 2",
+      "file": "chapters/13-part-2.json",
+      "index": 13,
+      "sourceRange": [
+        514,
+        517
+      ],
+      "headerSourceParagraphs": {
+        "number": 514,
+        "title": 515
+      },
+      "number": "PART 2:",
+      "sourceHeadingParagraphs": [
+        514,
+        515
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "Chapter 5",
+      "title": "When Memory Becomes Stronger Than Reality:",
+      "shortTitle": "When Memory Becomes Stronger Than Reality",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        518,
+        583
+      ],
+      "phase": "Part 2 - The Distortion",
+      "headerSourceParagraphs": {
+        "number": 518,
+        "title": 519
+      },
+      "number": "CHAPTER 5:",
+      "sourceHeadingParagraphs": [
+        518,
+        519
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "Chapter 6",
+      "title": "When You Fall in Love With a Version That No",
+      "shortTitle": "When You Fall in Love With a Version That No",
+      "file": "chapters/15-chapter-06.json",
+      "index": 15,
+      "sourceRange": [
+        584,
+        647
+      ],
+      "phase": "Part 2 - The Distortion",
+      "headerSourceParagraphs": {
+        "number": 584,
+        "title": 585
+      },
+      "number": "CHAPTER 6:",
+      "sourceHeadingParagraphs": [
+        584,
+        585
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "Chapter 7",
+      "title": "When Your Mind Starts Editing the Truth :",
+      "shortTitle": "When Your Mind Starts Editing the Truth",
+      "file": "chapters/16-chapter-07.json",
+      "index": 16,
+      "sourceRange": [
+        648,
+        722
+      ],
+      "phase": "Part 2 - The Distortion",
+      "headerSourceParagraphs": {
+        "number": 648,
+        "title": 649
+      },
+      "number": "CHAPTER 7:",
+      "sourceHeadingParagraphs": [
+        648,
+        649
+      ]
+    },
+    {
+      "id": "part-3",
+      "kind": "part",
+      "label": "Part 3",
+      "title": "THE LOOP (WHY YOU CAN’T LEAVE IT)",
+      "shortTitle": "Part 3",
+      "file": "chapters/17-part-3.json",
+      "index": 17,
+      "sourceRange": [
+        723,
+        725
+      ],
+      "headerSourceParagraphs": {
+        "number": 723,
+        "title": 724
+      },
+      "number": "PART 3:",
+      "sourceHeadingParagraphs": [
+        723,
+        724
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "Chapter 8",
+      "title": "When Overthinking Becomes a Habit, Not Emotion:",
+      "shortTitle": "When Overthinking Becomes a Habit Not Emotion",
+      "file": "chapters/18-chapter-08.json",
+      "index": 18,
+      "sourceRange": [
+        726,
+        806
+      ],
+      "phase": "Part 3 - The Loop",
+      "headerSourceParagraphs": {
+        "number": 726,
+        "title": 727
+      },
+      "number": "CHAPTER 8:",
+      "sourceHeadingParagraphs": [
+        726,
+        727
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "kind": "chapter",
+      "label": "Chapter 9",
+      "title": "When You Keep Replaying Conversations That Never Happened:",
+      "shortTitle": "When You Keep Replaying Conversations That Never Hap",
+      "file": "chapters/19-chapter-09.json",
+      "index": 19,
+      "sourceRange": [
+        807,
+        881
+      ],
+      "phase": "Part 3 - The Loop",
+      "headerSourceParagraphs": {
+        "number": 807,
+        "title": 808
+      },
+      "number": "CHAPTER 9:",
+      "sourceHeadingParagraphs": [
+        807,
+        808
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "kind": "chapter",
+      "label": "Chapter 10",
+      "title": "When You Don’t Let the Story End :",
+      "shortTitle": "When You Dont Let the Story End",
+      "file": "chapters/20-chapter-10.json",
+      "index": 20,
+      "sourceRange": [
+        882,
+        959
+      ],
+      "phase": "Part 3 - The Loop",
+      "headerSourceParagraphs": {
+        "number": 882,
+        "title": 883
+      },
+      "number": "CHAPTER 10:",
+      "sourceHeadingParagraphs": [
+        882,
+        883
+      ]
+    },
+    {
+      "id": "part-4",
+      "kind": "part",
+      "label": "Part 4",
+      "title": "PART 4: THE WEIGHT (WHY LIFE FEELS HEAVY)",
+      "shortTitle": "Part 4",
+      "file": "chapters/21-part-4.json",
+      "index": 21,
+      "sourceRange": [
+        960,
+        961
+      ],
+      "headerSourceParagraphs": {
+        "title": 960
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        960
+      ]
+    },
+    {
+      "id": "chapter-11",
+      "kind": "chapter",
+      "label": "Chapter 11",
+      "title": "When Everything Feels Heavy Without Any",
+      "shortTitle": "When Everything Feels Heavy Without Any",
+      "file": "chapters/22-chapter-11.json",
+      "index": 22,
+      "sourceRange": [
+        962,
+        1038
+      ],
+      "phase": "Part 4 - The Weight",
+      "headerSourceParagraphs": {
+        "number": 962,
+        "title": 963
+      },
+      "number": "CHAPTER 11:",
+      "sourceHeadingParagraphs": [
+        962,
+        963
+      ]
+    },
+    {
+      "id": "chapter-12",
+      "kind": "chapter",
+      "label": "Chapter 12",
+      "title": "When New People Feel Like Old Pain :",
+      "shortTitle": "When New People Feel Like Old Pain",
+      "file": "chapters/23-chapter-12.json",
+      "index": 23,
+      "sourceRange": [
+        1039,
+        1097
+      ],
+      "phase": "Part 4 - The Weight",
+      "headerSourceParagraphs": {
+        "number": 1039,
+        "title": 1040
+      },
+      "number": "CHAPTER 12:",
+      "sourceHeadingParagraphs": [
+        1039,
+        1040
+      ]
+    },
+    {
+      "id": "chapter-13",
+      "kind": "chapter",
+      "label": "Chapter 13",
+      "title": "When You Stop Knowing How to Feel Normal:",
+      "shortTitle": "When You Stop Knowing How to Feel Normal",
+      "file": "chapters/24-chapter-13.json",
+      "index": 24,
+      "sourceRange": [
+        1098,
+        1163
+      ],
+      "phase": "Part 4 - The Weight",
+      "headerSourceParagraphs": {
+        "number": 1098,
+        "title": 1099
+      },
+      "number": "CHAPTER 13:",
+      "sourceHeadingParagraphs": [
+        1098,
+        1099
+      ]
+    },
+    {
+      "id": "part-5",
+      "kind": "part",
+      "label": "Part 5",
+      "title": "PART 5: THE BREAK (WHY LETTING GO IS HARD)",
+      "shortTitle": "Part 5",
+      "file": "chapters/25-part-5.json",
+      "index": 25,
+      "sourceRange": [
+        1164,
+        1165
+      ],
+      "headerSourceParagraphs": {
+        "title": 1164
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        1164
+      ]
+    },
+    {
+      "id": "chapter-14",
+      "kind": "chapter",
+      "label": "Chapter 14",
+      "title": "When Holding On Feels Safer Than Starting Again:",
+      "shortTitle": "When Holding On Feels Safer Than Starting Again",
+      "file": "chapters/26-chapter-14.json",
+      "index": 26,
+      "sourceRange": [
+        1166,
+        1229
+      ],
+      "phase": "Part 5 - The Break",
+      "headerSourceParagraphs": {
+        "number": 1166,
+        "title": 1167
+      },
+      "number": "CHAPTER 14:",
+      "sourceHeadingParagraphs": [
+        1166,
+        1167
+      ]
+    },
+    {
+      "id": "chapter-15",
+      "kind": "chapter",
+      "label": "Chapter 15",
+      "title": "When Ego and Pain Become",
+      "shortTitle": "When Ego and Pain Become",
+      "file": "chapters/27-chapter-15.json",
+      "index": 27,
+      "sourceRange": [
+        1230,
+        1300
+      ],
+      "phase": "Part 5 - The Break",
+      "headerSourceParagraphs": {
+        "number": 1230,
+        "title": 1231
+      },
+      "number": "CHAPTER 15:",
+      "sourceHeadingParagraphs": [
+        1230,
+        1231
+      ]
+    },
+    {
+      "id": "chapter-16",
+      "kind": "chapter",
+      "label": "Chapter 16",
+      "title": "When You Are Afraid to Lose the Feeling, Not the Person :",
+      "shortTitle": "When You Are Afraid to Lose the Feeling Not the Pers",
+      "file": "chapters/28-chapter-16.json",
+      "index": 28,
+      "sourceRange": [
+        1301,
+        1371
+      ],
+      "phase": "Part 5 - The Break",
+      "headerSourceParagraphs": {
+        "number": 1301,
+        "title": 1302
+      },
+      "number": "CHAPTER 16:",
+      "sourceHeadingParagraphs": [
+        1301,
+        1302
+      ]
+    },
+    {
+      "id": "part-6",
+      "kind": "part",
+      "label": "Part 6",
+      "title": "THE SHIFT (WHY YOU CAN MOVE ON)",
+      "shortTitle": "Part 6",
+      "file": "chapters/29-part-6.json",
+      "index": 29,
+      "sourceRange": [
+        1372,
+        1374
+      ],
+      "headerSourceParagraphs": {
+        "number": 1372,
+        "title": 1373
+      },
+      "number": "PART 6:",
+      "sourceHeadingParagraphs": [
+        1372,
+        1373
+      ]
+    },
+    {
+      "id": "chapter-17",
+      "kind": "chapter",
+      "label": "Chapter 17",
+      "title": "When You Realize Nothing Is Coming Back :",
+      "shortTitle": "When You Realize Nothing Is Coming Back",
+      "file": "chapters/30-chapter-17.json",
+      "index": 30,
+      "sourceRange": [
+        1375,
+        1431
+      ],
+      "phase": "Part 6 - The Shift",
+      "headerSourceParagraphs": {
+        "number": 1375,
+        "title": 1376
+      },
+      "number": "CHAPTER 17:",
+      "sourceHeadingParagraphs": [
+        1375,
+        1376
+      ]
+    },
+    {
+      "id": "chapter-18",
+      "kind": "chapter",
+      "label": "Chapter 18",
+      "title": "When Acceptance Starts Feeling Like Peace :",
+      "shortTitle": "When Acceptance Starts Feeling Like Peace",
+      "file": "chapters/31-chapter-18.json",
+      "index": 31,
+      "sourceRange": [
+        1432,
+        1505
+      ],
+      "phase": "Part 6 - The Shift",
+      "headerSourceParagraphs": {
+        "number": 1432,
+        "title": 1433
+      },
+      "number": "CHAPTER 18:",
+      "sourceHeadingParagraphs": [
+        1432,
+        1433
+      ]
+    },
+    {
+      "id": "chapter-19",
+      "kind": "chapter",
+      "label": "Chapter 19",
+      "title": "When You Finally Choose Yourself Without Realizing:",
+      "shortTitle": "When You Finally Choose Yourself Without Realizing",
+      "file": "chapters/32-chapter-19.json",
+      "index": 32,
+      "sourceRange": [
+        1506,
+        1580
+      ],
+      "phase": "Part 6 - The Shift",
+      "headerSourceParagraphs": {
+        "number": 1506,
+        "title": 1507
+      },
+      "number": "CHAPTER 19:",
+      "sourceHeadingParagraphs": [
+        1506,
+        1507
+      ]
+    },
+    {
+      "id": "chapter-20",
+      "kind": "chapter",
+      "label": "Chapter 20",
+      "title": "When You Realize the Loop Was Never Meant to Be a Home:",
+      "shortTitle": "When You Realize the Loop Was Never Meant to Be a Ho",
+      "file": "chapters/33-chapter-20.json",
+      "index": 33,
+      "sourceRange": [
+        1581,
+        1639
+      ],
+      "phase": "Part 6 - The Shift",
+      "headerSourceParagraphs": {
+        "number": 1581,
+        "title": 1582
+      },
+      "number": "CHAPTER 20",
+      "sourceHeadingParagraphs": [
+        1581,
+        1582
+      ]
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "After everything ends… but nothing is forced to end inside you.",
+      "shortTitle": "Epilogue",
+      "file": "chapters/34-epilogue.json",
+      "index": 34,
+      "sourceRange": [
+        1640,
+        1722
+      ],
+      "headerSourceParagraphs": {
+        "number": 1640,
+        "title": 1641
+      },
+      "number": "EPILOGUE :",
+      "sourceHeadingParagraphs": [
+        1640,
+        1641
+      ]
+    },
+    {
+      "id": "final-realization",
+      "kind": "ending",
+      "label": "Final Realization",
+      "title": "(when everything stops feeling like emotion”)",
+      "shortTitle": "Final Realization",
+      "file": "chapters/35-final-realization.json",
+      "index": 35,
+      "sourceRange": [
+        1723,
+        1752
+      ],
+      "headerSourceParagraphs": {
+        "number": 1723,
+        "title": 1724
+      },
+      "number": "FINAL REALIZATION",
+      "sourceHeadingParagraphs": [
+        1723,
+        1724
+      ]
+    },
+    {
+      "id": "about-author",
+      "kind": "ending",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "About the Author",
+      "file": "chapters/36-about-author.json",
+      "index": 36,
+      "sourceRange": [
+        1753,
+        1769
+      ],
+      "headerSourceParagraphs": {
+        "title": 1753
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        1753
+      ]
+    }
+  ]
+}

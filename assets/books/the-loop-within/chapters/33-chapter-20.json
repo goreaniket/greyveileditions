@@ -1,0 +1,530 @@
+{
+  "id": "chapter-20",
+  "kind": "chapter",
+  "label": "Chapter 20",
+  "title": "When You Realize the Loop Was Never Meant to Be a Home:",
+  "shortTitle": "When You Realize the Loop Was Never Meant to Be a Ho",
+  "file": "chapters/33-chapter-20.json",
+  "index": 33,
+  "sourceRange": [
+    1581,
+    1639
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "So… yahan tak aa gaya tu. "
+        }
+      ],
+      "sourceParagraph": 1583
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab ek baat clear ho jani chahiye: "
+        }
+      ],
+      "sourceParagraph": 1584
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye jo tu ab tak “story” samajh raha tha… "
+        }
+      ],
+      "sourceParagraph": 1585
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo actually story thi hi nahi. "
+        }
+      ],
+      "sourceParagraph": 1586
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tu kisi insaan ke andar stuck nahi tha. "
+        }
+      ],
+      "sourceParagraph": 1587
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tu apne hi mind ke ek repeating process ke andar stuck tha… "
+        }
+      ],
+      "sourceParagraph": 1588
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo har memory ko incomplete bana ke usse baar-baar zinda karta raha. "
+        }
+      ],
+      "sourceParagraph": 1589
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dhyan se dekh… "
+        }
+      ],
+      "sourceParagraph": 1590
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har baar jab tu kehta hai: "
+        }
+      ],
+      "sourceParagraph": 1591
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main move on nahi kar paa raha” "
+        }
+      ],
+      "sourceParagraph": 1592
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "actually tu ye nahi keh raha hota… "
+        }
+      ],
+      "sourceParagraph": 1593
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tu bas ek repeat ho rahe thought pattern ko language de raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 1594
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki reality simple hai: "
+        }
+      ],
+      "sourceParagraph": 1595
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo beet chuka hai… wo wapas nahi aa raha "
+        }
+      ],
+      "sourceParagraph": 1596
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo chal raha hai… wo sirf present moment hai "
+        }
+      ],
+      "sourceParagraph": 1597
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo repeat ho raha hai… wo sirf mind ka playback hai "
+        }
+      ],
+      "sourceParagraph": 1598
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse dangerous illusion yahi hota hai: "
+        }
+      ],
+      "sourceParagraph": 1599
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum past mein ho "
+        }
+      ],
+      "sourceParagraph": 1600
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jabki tum sirf present mein ek thought ko replay kar rahe hote ho "
+        }
+      ],
+      "sourceParagraph": 1601
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye clearly dikhta hai… "
+        }
+      ],
+      "sourceParagraph": 1602
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh “pain” ka structure change ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1603
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pain kam nahi hota pehle… "
+        }
+      ],
+      "sourceParagraph": 1604
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pain transparent ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1605
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo cheez transparent ho jaati hai… "
+        }
+      ],
+      "sourceParagraph": 1606
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo tumhe control nahi kar sakti. "
+        }
+      ],
+      "sourceParagraph": 1607
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab ek aur truth: "
+        }
+      ],
+      "sourceParagraph": 1608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pyaar hota toh chala kyu jata?” "
+        }
+      ],
+      "sourceParagraph": 1609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality ye nahi hai. "
+        }
+      ],
+      "sourceParagraph": 1610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality ye hai: "
+        }
+      ],
+      "sourceParagraph": 1611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo cheez time ke saath badalti nahi… wo ya toh truth hoti hai "
+        }
+      ],
+      "sourceParagraph": 1612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya phir sirf mind ki repeat ki hui image hoti hai. "
+        }
+      ],
+      "sourceParagraph": 1613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind images ko truth bana deta hai… "
+        }
+      ],
+      "sourceParagraph": 1614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki repetition usse familiar lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur familiar cheez safe lagti hai… "
+        }
+      ],
+      "sourceParagraph": 1616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chahe wo painful hi kyun na ho. "
+        }
+      ],
+      "sourceParagraph": 1617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tu “pain” ko chhod nahi pata… "
+        }
+      ],
+      "sourceParagraph": 1618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki tu pain ko nahi chhod raha hota… "
+        }
+      ],
+      "sourceParagraph": 1619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tu familiarity ko chhod raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 1620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi sabse real shift hai: "
+        }
+      ],
+      "sourceParagraph": 1621
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tu kisi insaan se nahi lad raha "
+        }
+      ],
+      "sourceParagraph": 1622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tu apne hi mind ke pattern se lad raha tha "
+        }
+      ],
+      "sourceParagraph": 1623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye samajh aata hai… "
+        }
+      ],
+      "sourceParagraph": 1624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek cheez automatic hoti hai: "
+        }
+      ],
+      "sourceParagraph": 1625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "control kam hota hai "
+        }
+      ],
+      "sourceParagraph": 1626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur clarity badhti hai "
+        }
+      ],
+      "sourceParagraph": 1627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur clarity koi emotion nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 1628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek simple recognition hoti hai: "
+        }
+      ],
+      "sourceParagraph": 1629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye main nahi hoon… ye sirf ek process hai” "
+        }
+      ],
+      "sourceParagraph": 1630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us moment pe… "
+        }
+      ],
+      "sourceParagraph": 1631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“move on” ek goal nahi rehta. "
+        }
+      ],
+      "sourceParagraph": 1632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas ek side-effect ban jata hai… "
+        }
+      ],
+      "sourceParagraph": 1633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tu repetition ko feed karna band kar deta hai. "
+        }
+      ],
+      "sourceParagraph": 1634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tu stuck kisi insaan mein kabhi tha hi nahi… "
+        }
+      ],
+      "sourceParagraph": 1635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tu stuck tha us meaning mein… "
+        }
+      ],
+      "sourceParagraph": 1636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tu har baar us insaan ko de raha tha. "
+        }
+      ],
+      "sourceParagraph": 1637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— LALIT R MISHRA"
+        }
+      ],
+      "sourceParagraph": 1638,
+      "role": "chapter-end"
+    }
+  ],
+  "phase": "Part 6 - The Shift",
+  "headerSourceParagraphs": {
+    "number": 1581,
+    "title": 1582
+  },
+  "number": "CHAPTER 20",
+  "sourceHeadingParagraphs": [
+    1581,
+    1582
+  ]
+}

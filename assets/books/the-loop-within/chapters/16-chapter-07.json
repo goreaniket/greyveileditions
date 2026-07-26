@@ -1,0 +1,639 @@
+{
+  "id": "chapter-07",
+  "kind": "chapter",
+  "label": "Chapter 7",
+  "title": "When Your Mind Starts Editing the Truth :",
+  "shortTitle": "When Your Mind Starts Editing the Truth",
+  "file": "chapters/16-chapter-07.json",
+  "index": 16,
+  "sourceRange": [
+    648,
+    722
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai ki tumhe sab kuch clearly yaad hai… "
+        }
+      ],
+      "sourceParagraph": 650
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda ruk ke observe karo… "
+        }
+      ],
+      "sourceParagraph": 651
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange realization aata hai… "
+        }
+      ],
+      "sourceParagraph": 652
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum yaad nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 653
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum edit kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 654
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye editing jaan-bujhkar nahi hoti. "
+        }
+      ],
+      "sourceParagraph": 655
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye mind ka ek natural process hota hai… "
+        }
+      ],
+      "sourceParagraph": 656
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo har baar memory ko thoda sa reshape karta rehta hai. "
+        }
+      ],
+      "sourceParagraph": 657
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shuruaat mein ek moment hota hai… "
+        }
+      ],
+      "sourceParagraph": 658
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaise wo ek simple memory ho. "
+        }
+      ],
+      "sourceParagraph": 659
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek scene… ek feeling… ek baat. "
+        }
+      ],
+      "sourceParagraph": 660
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par jab wahi memory baar baar repeat hoti hai… "
+        }
+      ],
+      "sourceParagraph": 661
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo same nahi rehti. "
+        }
+      ],
+      "sourceParagraph": 662
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo har baar thodi si change ho jati hai… "
+        }
+      ],
+      "sourceParagraph": 663
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi emotion zyada strong… "
+        }
+      ],
+      "sourceParagraph": 664
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi meaning zyada heavy… "
+        }
+      ],
+      "sourceParagraph": 665
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi tumhara interpretation thoda different. "
+        }
+      ],
+      "sourceParagraph": 666
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum notice bhi nahi karte… "
+        }
+      ],
+      "sourceParagraph": 667
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki ye changes bahut subtle hote hain. "
+        }
+      ],
+      "sourceParagraph": 668
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind subtle cheezon ko ignore kar deta hai. "
+        }
+      ],
+      "sourceParagraph": 669
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par dheere dheere ek transformation hota hai… "
+        }
+      ],
+      "sourceParagraph": 670
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "original memory kam ho jati hai… "
+        }
+      ],
+      "sourceParagraph": 671
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur ek emotional version ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 672
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting cheez ye hai… "
+        }
+      ],
+      "sourceParagraph": 673
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us emotional version ko truth samajhne lagte ho. "
+        }
+      ],
+      "sourceParagraph": 674
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar honestly dekho… "
+        }
+      ],
+      "sourceParagraph": 675
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe realize hoga ki: "
+        }
+      ],
+      "sourceParagraph": 676
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us cheez ko yaad nahi kar rahe "
+        }
+      ],
+      "sourceParagraph": 677
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us cheez ko recreate kar rahe ho "
+        }
+      ],
+      "sourceParagraph": 678
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur recreation kabhi neutral nahi hota… "
+        }
+      ],
+      "sourceParagraph": 679
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo hamesha present emotions se color hota hai. "
+        }
+      ],
+      "sourceParagraph": 680
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye ek hi memory… "
+        }
+      ],
+      "sourceParagraph": 681
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "alag-alag din pe alag-alag lagti hai. "
+        }
+      ],
+      "sourceParagraph": 682
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi strong… "
+        }
+      ],
+      "sourceParagraph": 683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi painful… "
+        }
+      ],
+      "sourceParagraph": 684
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi confusing… "
+        }
+      ],
+      "sourceParagraph": 685
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi meaningful. "
+        }
+      ],
+      "sourceParagraph": 686
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par asal memory change nahi ho rahi hoti… "
+        }
+      ],
+      "sourceParagraph": 687
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara perception change ho raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 688
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek soft realization aata hai… "
+        }
+      ],
+      "sourceParagraph": 689
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo tum “truth” samajh rahe the… "
+        }
+      ],
+      "sourceParagraph": 690
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo actually ek repeated interpretation tha. "
+        }
+      ],
+      "sourceParagraph": 691
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye samajh aata hai… "
+        }
+      ],
+      "sourceParagraph": 692
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange sa moment hota hai… "
+        }
+      ],
+      "sourceParagraph": 693
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaise mind thoda sa relax ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 694
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ab tumhe fight nahi karni padti memory se… "
+        }
+      ],
+      "sourceParagraph": 695
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na usko prove karna hota hai… "
+        }
+      ],
+      "sourceParagraph": 696
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na usko delete karna hota hai… "
+        }
+      ],
+      "sourceParagraph": 697
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas usko dekhna hota hai as it is. "
+        }
+      ],
+      "sourceParagraph": 698
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum dekhte ho bina judgement ke… "
+        }
+      ],
+      "sourceParagraph": 699
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh memory apni intensity lose karne lagti hai. "
+        }
+      ],
+      "sourceParagraph": 700
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kyuki wo gayab hoti hai… "
+        }
+      ],
+      "sourceParagraph": 701
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par kyuki tum usme phasna band kar dete ho. "
+        }
+      ],
+      "sourceParagraph": 702
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe healing quietly start hoti hai… "
+        }
+      ],
+      "sourceParagraph": 703
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "not by forgetting… "
+        }
+      ],
+      "sourceParagraph": 704
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but by not re-editing it again and again. "
+        }
+      ],
+      "sourceParagraph": 705
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye realization settle hota hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 707
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek halka sa space banta hai andar. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 708
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na dard complete disappear hota hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 709
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na yaadein gayab hoti hain… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 710
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unka hold thoda loose ho jata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 711
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us space mein ek simple clarity aati hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 712
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hua tha… wo already complete ho chuka hai ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 713
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo yaad aa raha hai… wo sirf mind ka replay hai ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 714
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is realization ke saath… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 715
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pehli baar memory enemy nahi lagti… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek old file lagti hai.",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 717
+    }
+  ],
+  "phase": "Part 2 - The Distortion",
+  "headerSourceParagraphs": {
+    "number": 648,
+    "title": 649
+  },
+  "number": "CHAPTER 7:",
+  "sourceHeadingParagraphs": [
+    648,
+    649
+  ]
+}

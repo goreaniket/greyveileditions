@@ -1,0 +1,726 @@
+{
+  "id": "chapter-08",
+  "kind": "chapter",
+  "label": "Chapter 8",
+  "title": "When Overthinking Becomes a Habit, Not Emotion:",
+  "shortTitle": "When Overthinking Becomes a Habit Not Emotion",
+  "file": "chapters/18-chapter-08.json",
+  "index": 18,
+  "sourceRange": [
+    726,
+    806
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai ki tum soch rahe ho… "
+        }
+      ],
+      "sourceParagraph": 728
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda aur honestly observe karo… "
+        }
+      ],
+      "sourceParagraph": 729
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek aur layer saamne aati hai… "
+        }
+      ],
+      "sourceParagraph": 730
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum soch nahi rahe hote… "
+        }
+      ],
+      "sourceParagraph": 731
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum ek already-chal rahe pattern ko continue kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 732
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye pattern shuruaat mein emotion hota hai… "
+        }
+      ],
+      "sourceParagraph": 733
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kisi hurt ka… kisi confusion ka… kisi loss ka… "
+        }
+      ],
+      "sourceParagraph": 734
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par time ke saath emotion fade ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 735
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur reh jata hai sirf mental repetition mechanism. "
+        }
+      ],
+      "sourceParagraph": 736
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise ek track ban gaya ho mind ke andar… "
+        }
+      ],
+      "sourceParagraph": 737
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur thoughts us track pe automatically chal rahe ho… "
+        }
+      ],
+      "sourceParagraph": 738
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina tumse pooche. "
+        }
+      ],
+      "sourceParagraph": 739
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagta hai tum control mein ho… "
+        }
+      ],
+      "sourceParagraph": 740
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki thoughts tumhare hi dimaag mein aa rahe hain… "
+        }
+      ],
+      "sourceParagraph": 741
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par reality ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 742
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aana control mein hota hai "
+        }
+      ],
+      "sourceParagraph": 743
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par rukna pattern decide karta hai "
+        }
+      ],
+      "sourceParagraph": 744
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek subtle deception hota hai… "
+        }
+      ],
+      "sourceParagraph": 745
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum sochte ho: "
+        }
+      ],
+      "sourceParagraph": 746
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main is baare mein soch raha hoon” "
+        }
+      ],
+      "sourceParagraph": 747
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein: "
+        }
+      ],
+      "sourceParagraph": 748
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye baat tumhe sochne par majboor kar rahi hai” "
+        }
+      ],
+      "sourceParagraph": 749
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur difference chhota lagta hai… "
+        }
+      ],
+      "sourceParagraph": 750
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par yahi difference poora loop banata hai. "
+        }
+      ],
+      "sourceParagraph": 751
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting observation ye hai… "
+        }
+      ],
+      "sourceParagraph": 752
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jab overthink karte ho… "
+        }
+      ],
+      "sourceParagraph": 753
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum actually solution nahi dhoond rahe hote… "
+        }
+      ],
+      "sourceParagraph": 754
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum closure feel recreate karne ki koshish kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 755
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par closure memory se nahi milta… "
+        }
+      ],
+      "sourceParagraph": 756
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "closure acceptance se aata hai… "
+        }
+      ],
+      "sourceParagraph": 757
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur mind acceptance avoid karta hai kyuki wo unknown hota hai. "
+        }
+      ],
+      "sourceParagraph": 758
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye mind wahi safe route choose karta hai: "
+        }
+      ],
+      "sourceParagraph": 759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "repeat "
+        }
+      ],
+      "sourceParagraph": 760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "replay "
+        }
+      ],
+      "sourceParagraph": 761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "re-analyze "
+        }
+      ],
+      "sourceParagraph": 762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "re-imagine "
+        }
+      ],
+      "sourceParagraph": 763
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har repetition ke saath ek illusion build hota hai… "
+        }
+      ],
+      "sourceParagraph": 764
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad ab kuch naya samajh aayega… "
+        }
+      ],
+      "sourceParagraph": 765
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par mostly kuch naya samajh nahi aata… "
+        }
+      ],
+      "sourceParagraph": 766
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf purana aur heavy ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 767
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye loop long enough chal jata hai… "
+        }
+      ],
+      "sourceParagraph": 768
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange situation aati hai… "
+        }
+      ],
+      "sourceParagraph": 769
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum same thought soch rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 770
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par us thought ka emotion ab original nahi hota… "
+        }
+      ],
+      "sourceParagraph": 771
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo sirf echo emotion hota hai. "
+        }
+      ],
+      "sourceParagraph": 772
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise kisi purani recording ko baar baar sunna… "
+        }
+      ],
+      "sourceParagraph": 773
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur har baar lagta hai ki live ho raha hai. "
+        }
+      ],
+      "sourceParagraph": 774
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum is echo ko reality samajhne lagte ho. "
+        }
+      ],
+      "sourceParagraph": 775
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe overthinking emotion nahi rehta… "
+        }
+      ],
+      "sourceParagraph": 776
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek identity habit ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 777
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum kisi problem ke baare mein soch nahi rahe hote "
+        }
+      ],
+      "sourceParagraph": 778
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum “sochne wale person” ban chuke hote ho "
+        }
+      ],
+      "sourceParagraph": 779
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab identity ban jati hai… "
+        }
+      ],
+      "sourceParagraph": 780
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh break karna mushkil lagta hai… "
+        }
+      ],
+      "sourceParagraph": 781
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki tumhe lagta hai: "
+        }
+      ],
+      "sourceParagraph": 782
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“agar main nahi sochunga toh main kuch miss kar dunga” "
+        }
+      ],
+      "sourceParagraph": 783
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par reality ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 784
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum kuch miss nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 785
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas loop ko continue kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 786
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab pehli baar tum sirf observe karte ho:ye thought aa gaya” "
+        }
+      ],
+      "sourceParagraph": 787
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without going inside it… "
+        }
+      ],
+      "sourceParagraph": 788
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without solving it… "
+        }
+      ],
+      "sourceParagraph": 789
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without feeding it… "
+        }
+      ],
+      "sourceParagraph": 790
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek chhota sa gap open hota hai. "
+        }
+      ],
+      "sourceParagraph": 791
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us gap mein ek soft clarity aati hai… "
+        }
+      ],
+      "sourceParagraph": 792
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki: "
+        }
+      ],
+      "sourceParagraph": 793
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoughts aate hain… par zaruri nahi ki follow bhi karein "
+        }
+      ],
+      "sourceParagraph": 794
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye realization loud nahi hota… "
+        }
+      ],
+      "sourceParagraph": 795
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye bas ek silent loosening hota hai andar. "
+        }
+      ],
+      "sourceParagraph": 796
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye samajh aata hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 798
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh kuch toot ta nahi hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 799
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek heavy grip dheere dheere halka ho jata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 800
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na thoughts band hote hain… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 801
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na memories vanish hoti hain… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 802
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tum unme phasna kam kar dete ho. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 803
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wahi se ek simple freedom start hoti hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 804
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“main har thought ka passenger nahi hoon” ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 805
+    }
+  ],
+  "phase": "Part 3 - The Loop",
+  "headerSourceParagraphs": {
+    "number": 726,
+    "title": 727
+  },
+  "number": "CHAPTER 8:",
+  "sourceHeadingParagraphs": [
+    726,
+    727
+  ]
+}

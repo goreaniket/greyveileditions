@@ -1,0 +1,520 @@
+{
+  "id": "chapter-07",
+  "kind": "chapter",
+  "label": "Chapter 7",
+  "title": "WHEN YOU FINALLY UNDERSTAND EVERYTHING",
+  "shortTitle": "WHEN YOU FINALLY UNDERSTAND EVERYTHING",
+  "file": "chapters/18-chapter-07.json",
+  "index": 18,
+  "sourceRange": [
+    757,
+    818
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jb hum jb sb smjh jaate haii "
+        }
+      ],
+      "sourceParagraph": 759
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tb vaha see sbb kuch start hota haii "
+        }
+      ],
+      "sourceParagraph": 760
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "achha hona time lgega ik "
+        }
+      ],
+      "sourceParagraph": 761
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but hoga just trust mee "
+        }
+      ],
+      "sourceParagraph": 762
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jbtk sikhte h tbkt der ho jaati haiii "
+        }
+      ],
+      "sourceParagraph": 763
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "isliyee mene ye book likha haii chhoti sii "
+        }
+      ],
+      "sourceParagraph": 764
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jisse shyd tum sb smjh paao "
+        }
+      ],
+      "sourceParagraph": 765
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "i'm a too teenage boy "
+        }
+      ],
+      "sourceParagraph": 766
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but still i'm writing this book "
+        }
+      ],
+      "sourceParagraph": 767
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "so kuch to soch smjh ke likha hunga "
+        }
+      ],
+      "sourceParagraph": 768
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe esa lgta h jaha tk mene dekha haiii "
+        }
+      ],
+      "sourceParagraph": 769
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "logon hr koi yehi kehta hai "
+        }
+      ],
+      "sourceParagraph": 770
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ghr ka presurre h ye h vo h "
+        }
+      ],
+      "sourceParagraph": 771
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "smjhte nhi "
+        }
+      ],
+      "sourceParagraph": 772
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sucicide kr lu "
+        }
+      ],
+      "sourceParagraph": 773
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but probelum kuch nhi tha "
+        }
+      ],
+      "sourceParagraph": 774
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "smjh ki baat thi bss "
+        }
+      ],
+      "sourceParagraph": 775
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhare ek glt decicion se "
+        }
+      ],
+      "sourceParagraph": 776
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ghr vale or ghr vale ke vjh se "
+        }
+      ],
+      "sourceParagraph": 777
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bacche dono ki future barbaad ho sktiii haii "
+        }
+      ],
+      "sourceParagraph": 778
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "isliye humee soch smjh kee kadam lena chiyee "
+        }
+      ],
+      "sourceParagraph": 779
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "we are young "
+        }
+      ],
+      "sourceParagraph": 780
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "we have to face the thingss "
+        }
+      ],
+      "sourceParagraph": 781
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jb hum sb kuch sikh jaate hai na "
+        }
+      ],
+      "sourceParagraph": 782
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fr bhi kuch nhi krte "
+        }
+      ],
+      "sourceParagraph": 783
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye sochte hai ki yaha ye book kaam ni kregi "
+        }
+      ],
+      "sourceParagraph": 784
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum try hi nhi kroge to kuch nhi hogaaa "
+        }
+      ],
+      "sourceParagraph": 785
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek baar try to kro "
+        }
+      ],
+      "sourceParagraph": 786
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya to shi hoga ya nhi hoga "
+        }
+      ],
+      "sourceParagraph": 787
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but tum ko regret khayega nhi "
+        }
+      ],
+      "sourceParagraph": 788
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tune try hi nhi kiyaa "
+        }
+      ],
+      "sourceParagraph": 789
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "or kuch log ese bhi honge jo padh ke ignore krenege "
+        }
+      ],
+      "sourceParagraph": 790
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but jinko frq pdta hai "
+        }
+      ],
+      "sourceParagraph": 791
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo banda seriously hota h "
+        }
+      ],
+      "sourceParagraph": 792
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo ye chiz smjhega or kregaa "
+        }
+      ],
+      "sourceParagraph": 793
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "or mai bs ese log ke liye hi likh rha huu "
+        }
+      ],
+      "sourceParagraph": 794
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye daat ye silence woh strictness "
+        }
+      ],
+      "sourceParagraph": 795
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye sbb haii tarika hai sbka apna apna pov hota h jatane ka "
+        }
+      ],
+      "sourceParagraph": 796
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ho sta hai kahi parents ko shyd "
+        }
+      ],
+      "sourceParagraph": 797
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "due to unka past vo na jata paye "
+        }
+      ],
+      "sourceParagraph": 798
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kahi student ka hota h "
+        }
+      ],
+      "sourceParagraph": 799
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "see hume bs dekhne ka pov badalna haiii "
+        }
+      ],
+      "sourceParagraph": 800
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bakii duniya mai har ek chiz khubsurt h "
+        }
+      ],
+      "sourceParagraph": 801
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye nature ye log hr ek chizz "
+        }
+      ],
+      "sourceParagraph": 802
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bs we all have to change is mindset and pov "
+        }
+      ],
+      "sourceParagraph": 803
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum kis perspective se dekh rhe h ye minay rkhta haiii "
+        }
+      ],
+      "sourceParagraph": 804
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "if log ye dekh kr smjhe age badhenge sochenge "
+        }
+      ],
+      "sourceParagraph": 805
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thik h jo hua so hua ab try krte h "
+        }
+      ],
+      "sourceParagraph": 806
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo ek side "
+        }
+      ],
+      "sourceParagraph": 807
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch honge ye demotivate kr rha ya nhi smjh rhaa "
+        }
+      ],
+      "sourceParagraph": 808
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo ek side "
+        }
+      ],
+      "sourceParagraph": 809
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "so its depend on you "
+        }
+      ],
+      "sourceParagraph": 810
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mene try kiya ki mai ek life cycle ko smjhane ka try kru "
+        }
+      ],
+      "sourceParagraph": 811
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chizen smjhau "
+        }
+      ],
+      "sourceParagraph": 812
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo mene kiyaa "
+        }
+      ],
+      "sourceParagraph": 813
+    }
+  ],
+  "phase": "Layer 4 - The Closure",
+  "headerSourceParagraphs": {
+    "number": 757,
+    "title": 758
+  },
+  "number": "CHAPTER 7:",
+  "sourceHeadingParagraphs": [
+    757,
+    758
+  ]
+}

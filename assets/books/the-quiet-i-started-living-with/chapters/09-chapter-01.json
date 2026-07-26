@@ -1,0 +1,1024 @@
+{
+  "id": "chapter-01",
+  "kind": "chapter",
+  "label": "Chapter 1",
+  "title": "WHEN YOUR MIND BECOMES THE ONLY PLACE YOU LIVE",
+  "shortTitle": "WHEN YOUR MIND BECOMES THE ONLY PLACE YOU LIVE",
+  "file": "chapters/09-chapter-01.json",
+  "index": 9,
+  "sourceRange": [
+    299,
+    412
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi dimaag mein itni baatein chal rahi hoti hain... ki "
+        }
+      ],
+      "sourceParagraph": 301
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lagta hai agar abhi koi pooch le,  \"Kya hua?\" toh shayad "
+        }
+      ],
+      "sourceParagraph": 302
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main chup ho jaunga.   "
+        }
+      ],
+      "sourceParagraph": 303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye nahi ki mujhe pata nahi kya hua.   "
+        }
+      ],
+      "sourceParagraph": 304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye kyunki mujhe pata hai.   "
+        }
+      ],
+      "sourceParagraph": 305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahut kuch pata hai.   "
+        }
+      ],
+      "sourceParagraph": 306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itna ki shuruaat kahan se karni hai, yeh nahi pata. Aur "
+        }
+      ],
+      "sourceParagraph": 307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad isi liye kuch log bolna kam nahi karte... woh explain "
+        }
+      ],
+      "sourceParagraph": 308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "karna chhod dete hain.   "
+        }
+      ],
+      "sourceParagraph": 309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maine kabhi notice nahi kiya tha ki insaan dheere dheere apne andar shift bhi ho sakta hai.   "
+        }
+      ],
+      "sourceParagraph": 310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi ghar badalta hai.   "
+        }
+      ],
+      "sourceParagraph": 311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas fark itna hai... mera naya address "
+        }
+      ],
+      "sourceParagraph": 312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mera dimaag ban gaya.   "
+        }
+      ],
+      "sourceParagraph": 313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ajeeb baat?   "
+        }
+      ],
+      "sourceParagraph": 314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi ko pata bhi nahi chala.   "
+        }
+      ],
+      "sourceParagraph": 315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main hasta bhi raha.   "
+        }
+      ],
+      "sourceParagraph": 316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Baat bhi karta raha.   "
+        }
+      ],
+      "sourceParagraph": 317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Normal bhi dikhta raha.   "
+        }
+      ],
+      "sourceParagraph": 318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin andar kuch aur hi chal raha tha.   "
+        }
+      ],
+      "sourceParagraph": 319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main sochta hu...   "
+        }
+      ],
+      "sourceParagraph": 320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aakhri baar maine kisi ko apna real version      "
+        }
+      ],
+      "sourceParagraph": 321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kab dikhaya tha? Aur phir realise hota hai...  mujhe yaad hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad bahut saal pehle.  "
+        }
+      ],
+      "sourceParagraph": 323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad kabhi nahi. Kyunki "
+        }
+      ],
+      "sourceParagraph": 324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sach bolun...   "
+        }
+      ],
+      "sourceParagraph": 325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe khud nahi pata mera real version hai kaun.   "
+        }
+      ],
+      "sourceParagraph": 326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo logon ke saath hota hai?   "
+        }
+      ],
+      "sourceParagraph": 327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya jo raat ko akela hota hai?   "
+        }
+      ],
+      "sourceParagraph": 328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai main logon ko nahi chhupa raha.   "
+        }
+      ],
+      "sourceParagraph": 329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main khud se chhupa hua hu.   "
+        }
+      ],
+      "sourceParagraph": 330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh thought mujhe uncomfortable karta hai.   "
+        }
+      ],
+      "sourceParagraph": 331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki agar main khud ko hi nahi jaanta...   "
+        }
+      ],
+      "sourceParagraph": 332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh phir main expect kis se kar raha hu ki woh mujhe samjhe?   "
+        }
+      ],
+      "sourceParagraph": 333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maine apne dimaag mein hazaar conversations ki hain.   "
+        }
+      ],
+      "sourceParagraph": 334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hazaar.   "
+        }
+      ],
+      "sourceParagraph": 335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch arguments.   "
+        }
+      ],
+      "sourceParagraph": 336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch apologies.   "
+        }
+      ],
+      "sourceParagraph": 337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch confessions.   "
+        }
+      ],
+      "sourceParagraph": 338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch explanations.   "
+        }
+      ],
+      "sourceParagraph": 339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itni baar...   "
+        }
+      ],
+      "sourceParagraph": 340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki kabhi kabhi mujhe genuinely lagta hai ki woh baatein ho chuki hain.   "
+        }
+      ],
+      "sourceParagraph": 341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir yaad aata hai.   "
+        }
+      ],
+      "sourceParagraph": 342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Nahi.   "
+        }
+      ],
+      "sourceParagraph": 343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main toh kabhi bola hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch mere andar hua tha.   "
+        }
+      ],
+      "sourceParagraph": 345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek aur thought aata hai.   "
+        }
+      ],
+      "sourceParagraph": 346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar meri zindagi ke saare unsaid words likh diye jaayein... toh "
+        }
+      ],
+      "sourceParagraph": 347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kya woh mere spoken words se zyada honge?   "
+        }
+      ],
+      "sourceParagraph": 348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe lagta hai haan.   "
+        }
+      ],
+      "sourceParagraph": 349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahut zyada.   "
+        }
+      ],
+      "sourceParagraph": 350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main kisi insaan ko yaad nahi karta.   "
+        }
+      ],
+      "sourceParagraph": 351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main us version ko yaad karta hu jo main uske saath tha.   "
+        }
+      ],
+      "sourceParagraph": 352
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh realise karne mein mujhe bahut time laga.   "
+        }
+      ],
+      "sourceParagraph": 353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mujhe lagta tha main logon ko miss karta hu.  "
+        }
+      ],
+      "sourceParagraph": 354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad main un moments ko miss karta hu... "
+        }
+      ],
+      "sourceParagraph": 355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan mujhe lagta tha ki main samjha ja raha hu.  Ya "
+        }
+      ],
+      "sourceParagraph": 356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kam se kam... akele nahi hu.   "
+        }
+      ],
+      "sourceParagraph": 357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main sochta hu...   "
+        }
+      ],
+      "sourceParagraph": 358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar kal subah uthkar mere saare thoughts gayab ho jaayein... toh "
+        }
+      ],
+      "sourceParagraph": 359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kya main halka feel karunga?   "
+        }
+      ],
+      "sourceParagraph": 360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya khaali?   "
+        }
+      ],
+      "sourceParagraph": 361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki insaan ajeeb hai.   "
+        }
+      ],
+      "sourceParagraph": 362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheez usse sabse zyada hurt karti hai...   "
+        }
+      ],
+      "sourceParagraph": 363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi woh ussi cheez se apni pehchaan bhi bana leta hai.   "
+        }
+      ],
+      "sourceParagraph": 364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir usse chhodne se darr lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe lagta tha meri problem loneliness "
+        }
+      ],
+      "sourceParagraph": 366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hai.  Phir ek din realise hua... main akela "
+        }
+      ],
+      "sourceParagraph": 367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main overloaded tha.   "
+        }
+      ],
+      "sourceParagraph": 369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har memory ko carry karte karte.   "
+        }
+      ],
+      "sourceParagraph": 370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har unsaid baat ko carry karte karte.   "
+        }
+      ],
+      "sourceParagraph": 371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har what if ko carry karte karte.   "
+        }
+      ],
+      "sourceParagraph": 372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse zyada...   "
+        }
+      ],
+      "sourceParagraph": 373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "khud ko carry karte karte.   "
+        }
+      ],
+      "sourceParagraph": 374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch log kaam se thakte hain.   "
+        }
+      ],
+      "sourceParagraph": 375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch log logon se thakte hain.   "
+        }
+      ],
+      "sourceParagraph": 376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kuch log...   "
+        }
+      ],
+      "sourceParagraph": 377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "apne hi dimaag se thak jaate hain.   "
+        }
+      ],
+      "sourceParagraph": 378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main shayad teesri category mein tha.   "
+        }
+      ],
+      "sourceParagraph": 379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya hu.   "
+        }
+      ],
+      "sourceParagraph": 380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pata nahi.   "
+        }
+      ],
+      "sourceParagraph": 381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main sochta hu ki agar koi sach mein meri help karna chahe... toh main "
+        }
+      ],
+      "sourceParagraph": 382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usse bolunga bhi kya?   "
+        }
+      ],
+      "sourceParagraph": 383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahan se start karunga?   "
+        }
+      ],
+      "sourceParagraph": 384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kaunsi memory pehle bataunga?   "
+        }
+      ],
+      "sourceParagraph": 385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kaunsa thought explain karunga?   "
+        }
+      ],
+      "sourceParagraph": 386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kaunsi raat?   "
+        }
+      ],
+      "sourceParagraph": 387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kaunsa regret?   "
+        }
+      ],
+      "sourceParagraph": 388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kaunsa version?   "
+        }
+      ],
+      "sourceParagraph": 389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir mujhe samajh aata hai... main "
+        }
+      ],
+      "sourceParagraph": 390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "answers nahi dhoondh raha.   "
+        }
+      ],
+      "sourceParagraph": 391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main witness dhoondh raha hu.   "
+        }
+      ],
+      "sourceParagraph": 392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi jo solve na kare.   "
+        }
+      ],
+      "sourceParagraph": 393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi jo judge na kare.   "
+        }
+      ],
+      "sourceParagraph": 394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi jo bas ek baar kahe:   "
+        }
+      ],
+      "sourceParagraph": 395
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Haan. Main samajh raha hu.\"   "
+        }
+      ],
+      "sourceParagraph": 396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye kuch log tootne ke baad nahi rote.   "
+        }
+      ],
+      "sourceParagraph": 397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh bas chup ho jaate hain.   "
+        }
+      ],
+      "sourceParagraph": 398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki emotions khatam nahi hote.   "
+        }
+      ],
+      "sourceParagraph": 399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas unhe explain karne ki energy khatam ho jaati hai.   "
+        }
+      ],
+      "sourceParagraph": 400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek din...   "
+        }
+      ],
+      "sourceParagraph": 401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan apne hi dimaag mein itna andar chala jaata hai...  ki "
+        }
+      ],
+      "sourceParagraph": 402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bahar ki duniya real lagna band ho jaati hai.   "
+        }
+      ],
+      "sourceParagraph": 403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log dikhte hain.   "
+        }
+      ],
+      "sourceParagraph": 404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Awaazein sunai deti hain.   "
+        }
+      ],
+      "sourceParagraph": 405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Din nikalte hain.   "
+        }
+      ],
+      "sourceParagraph": 406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin andar...   "
+        }
+      ],
+      "sourceParagraph": 407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "andar sirf thoughts rehte hain.   "
+        }
+      ],
+      "sourceParagraph": 408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab dimaag hi woh jagah ban jaaye jahan tum sabse zyada rehte ho... toh "
+        }
+      ],
+      "sourceParagraph": 409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dheere dheere woh ghar nahi rehta.   "
+        }
+      ],
+      "sourceParagraph": 410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh qaid ban jaata hai.   "
+        }
+      ],
+      "sourceParagraph": 411
+    }
+  ],
+  "phase": "Phase I - The Mind That Never Stopped Speaking",
+  "headerSourceParagraphs": {
+    "number": 299,
+    "title": 300
+  },
+  "number": "CHAPTER 1",
+  "sourceHeadingParagraphs": [
+    299,
+    300
+  ]
+}

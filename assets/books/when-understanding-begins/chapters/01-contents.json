@@ -1,0 +1,137 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "TABLE OF CONTENTS",
+  "shortTitle": "Contents",
+  "file": "chapters/01-contents.json",
+  "index": 1,
+  "sourceRange": [
+    20,
+    44
+  ],
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright ............................................. vii",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ............................................ vi",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication .......................................... ii",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author ............................ iii",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Prologue",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Introduction ........................................ ix",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-heading",
+      "text": "LAYER 1: THE HUMAN MASK (WHAT WE SEE)",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1: When Love Starts Feeling Like Rules ............................. 1",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2: When Silence Starts Feeling Like Distance ....................... 7",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3: When Expectations Start Turning Into Pressure ............... 13",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-heading",
+      "text": "LAYER 2: THE HUMAN HEART (WHAT THEY FEEL)",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4: When Parents Speak Through Fear ................................ 19",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5: When Children Speak Through Emotion .......................... 25",
+      "sourceParagraph": 33
+    },
+    {
+      "type": "toc-heading",
+      "text": "LAYER 3: HEALING PHASE",
+      "sourceParagraph": 34
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6: When Understanding Starts Replacing Reaction .............. 31",
+      "sourceParagraph": 35
+    },
+    {
+      "type": "toc-heading",
+      "text": "LAYER 4: THE CLOSURE",
+      "sourceParagraph": 36
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7: When You Stop Choosing Sides ..................................... 37",
+      "sourceParagraph": 37
+    },
+    {
+      "type": "toc-heading",
+      "text": "LAYER 5: THE REAL WORLD SHIFT",
+      "sourceParagraph": 38
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8: When Understanding Turns Into Action ......................... 43",
+      "sourceParagraph": 39
+    },
+    {
+      "type": "toc-heading",
+      "text": "CLOSING",
+      "sourceParagraph": 40
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Final Reflection ................................................................. 49",
+      "sourceParagraph": 41
+    },
+    {
+      "type": "toc-chapter",
+      "text": "About This Realization .......................................................... 51",
+      "sourceParagraph": 42
+    },
+    {
+      "type": "toc-line",
+      "text": "Back Cover Blurb .............................................................. 53",
+      "sourceParagraph": 43
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 20
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    20
+  ]
+}

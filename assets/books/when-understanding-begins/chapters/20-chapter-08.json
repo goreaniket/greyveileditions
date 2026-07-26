@@ -1,0 +1,709 @@
+{
+  "id": "chapter-08",
+  "kind": "chapter",
+  "label": "Chapter 8",
+  "title": "WHAT DO YOU DO AFTER UNDERSTANDING EVERYTHING",
+  "shortTitle": "WHAT DO YOU DO AFTER UNDERSTANDING EVERYTHING",
+  "file": "chapters/20-chapter-08.json",
+  "index": 20,
+  "sourceRange": [
+    822,
+    900
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "depends on youu "
+        }
+      ],
+      "sourceParagraph": 824
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "iff tumhare andr ye question aaya ki "
+        }
+      ],
+      "sourceParagraph": 825
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hnn mene glt kiya ya mai smjh ni paa rha thaa krkee "
+        }
+      ],
+      "sourceParagraph": 826
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh hn tumne book padhaa haii shiddhat see "
+        }
+      ],
+      "sourceParagraph": 827
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "or if tum padh ke chhodte ho "
+        }
+      ],
+      "sourceParagraph": 828
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to tumhari mistake h "
+        }
+      ],
+      "sourceParagraph": 829
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur agr change krna hai "
+        }
+      ],
+      "sourceParagraph": 830
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to turant nhi hogaa "
+        }
+      ],
+      "sourceParagraph": 831
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "starting kro chhoti chizeon se "
+        }
+      ],
+      "sourceParagraph": 832
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jese baat krna start kro "
+        }
+      ],
+      "sourceParagraph": 833
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unko smjho "
+        }
+      ],
+      "sourceParagraph": 834
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pucho "
+        }
+      ],
+      "sourceParagraph": 835
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unko ek challenege banao "
+        }
+      ],
+      "sourceParagraph": 836
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajh lena easy hai "
+        }
+      ],
+      "sourceParagraph": 837
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par change karna mushkil hota hai "
+        }
+      ],
+      "sourceParagraph": 838
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur yahi gap decide karta hai "
+        }
+      ],
+      "sourceParagraph": 839
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki insaan grow karega ya sirf sochta rahega "
+        }
+      ],
+      "sourceParagraph": 840
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum ye sab padh lo… "
+        }
+      ],
+      "sourceParagraph": 841
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek question bachta hai: "
+        }
+      ],
+      "sourceParagraph": 842
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ab main karunga kya?” "
+        }
+      ],
+      "sourceParagraph": 843
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf realize kar lena life change nahi karta "
+        }
+      ],
+      "sourceParagraph": 844
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajhna easy hai "
+        }
+      ],
+      "sourceParagraph": 845
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "react na karna hard hai "
+        }
+      ],
+      "sourceParagraph": 846
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "forgive karna harder hai "
+        }
+      ],
+      "sourceParagraph": 847
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur change rehna sabse hard hai "
+        }
+      ],
+      "sourceParagraph": 848
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar tum chahte ho relation better ho: "
+        }
+      ],
+      "sourceParagraph": 849
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reply dene se pehle 3 sec rukna "
+        }
+      ],
+      "sourceParagraph": 850
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "gusse mein answer na dena "
+        }
+      ],
+      "sourceParagraph": 851
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“kyun” puchhne se pehle “kaise feel ho raha hoga” sochna "
+        }
+      ],
+      "sourceParagraph": 852
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi bas itna karna hota hai: "
+        }
+      ],
+      "sourceParagraph": 853
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek din bina argument ke sun lena "
+        }
+      ],
+      "sourceParagraph": 854
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek baar khud se baat start karna "
+        }
+      ],
+      "sourceParagraph": 855
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek chhoti si appreciation bol dena "
+        }
+      ],
+      "sourceParagraph": 856
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "change loud nahi hota "
+        }
+      ],
+      "sourceParagraph": 857
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh chhoti chhoti cheezon mein hota hai: "
+        }
+      ],
+      "sourceParagraph": 858
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tone soft hona "
+        }
+      ],
+      "sourceParagraph": 859
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ego kam hona "
+        }
+      ],
+      "sourceParagraph": 860
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajhne ka effort badhna "
+        }
+      ],
+      "sourceParagraph": 861
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum react kam karte ho "
+        }
+      ],
+      "sourceParagraph": 862
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh samne wala automatically soften hone lagta hai "
+        }
+      ],
+      "sourceParagraph": 863
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki relation war nahi hota "
+        }
+      ],
+      "sourceParagraph": 864
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "relation response hota hai "
+        }
+      ],
+      "sourceParagraph": 865
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har din ek chhota question pucho: "
+        }
+      ],
+      "sourceParagraph": 866
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“aaj maine samajhne ki koshish ki ya judge karne ki?” "
+        }
+      ],
+      "sourceParagraph": 867
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar tum galti karte ho… "
+        }
+      ],
+      "sourceParagraph": 868
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it’s okay "
+        }
+      ],
+      "sourceParagraph": 869
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki healing perfect nahi hoti "
+        }
+      ],
+      "sourceParagraph": 870
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "healing consistent hoti hai "
+        }
+      ],
+      "sourceParagraph": 871
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara past tum define nahi karta "
+        }
+      ],
+      "sourceParagraph": 872
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara next response karta hai "
+        }
+      ],
+      "sourceParagraph": 873
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jb hum jb sb smjh jaate haii "
+        }
+      ],
+      "sourceParagraph": 874
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tb vaha see sbb kuch start hota haii "
+        }
+      ],
+      "sourceParagraph": 875
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "achha hona time lgega "
+        }
+      ],
+      "sourceParagraph": 876
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but hoga trust mee "
+        }
+      ],
+      "sourceParagraph": 877
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jbtk sikhte h tbkt der ho jaati haiii "
+        }
+      ],
+      "sourceParagraph": 878
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "isliyee mene ye book likha haii "
+        }
+      ],
+      "sourceParagraph": 879
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main bhi ek teenage boy hu "
+        }
+      ],
+      "sourceParagraph": 880
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par socha kuch to reason hoga jo ye likh raha hu "
+        }
+      ],
+      "sourceParagraph": 881
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "log kehte hai pressure hai "
+        }
+      ],
+      "sourceParagraph": 882
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "suicide karna hai "
+        }
+      ],
+      "sourceParagraph": 883
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par problem zyada complex nahi hoti "
+        }
+      ],
+      "sourceParagraph": 884
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem sirf misunderstanding hoti hai "
+        }
+      ],
+      "sourceParagraph": 885
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar hum samajh le "
+        }
+      ],
+      "sourceParagraph": 886
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to sab change ho sakta hai "
+        }
+      ],
+      "sourceParagraph": 887
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "change instant nahi hota "
+        }
+      ],
+      "sourceParagraph": 888
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "start chhoti cheezon se hota hai "
+        }
+      ],
+      "sourceParagraph": 889
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baat karna "
+        }
+      ],
+      "sourceParagraph": 890
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sunna "
+        }
+      ],
+      "sourceParagraph": 891
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajhna "
+        }
+      ],
+      "sourceParagraph": 892
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "react kam karna "
+        }
+      ],
+      "sourceParagraph": 893
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur agar tum ye sab ignore kar dete ho "
+        }
+      ],
+      "sourceParagraph": 894
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to change kabhi nahi aata "
+        }
+      ],
+      "sourceParagraph": 895
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar tum try karte ho "
+        }
+      ],
+      "sourceParagraph": 896
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "to ya toh improve hoga ya seekh milegi "
+        }
+      ],
+      "sourceParagraph": 897
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par regret nahi rahega "
+        }
+      ],
+      "sourceParagraph": 898
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“kabhi kabhi life hume todne nahi aati… hume samajhne aati hai”"
+        }
+      ],
+      "sourceParagraph": 899
+    }
+  ],
+  "phase": "Layer 5 - The Real World Shift",
+  "headerSourceParagraphs": {
+    "number": 822,
+    "title": 823
+  },
+  "number": "CHAPTER 8:",
+  "sourceHeadingParagraphs": [
+    822,
+    823
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "disclaimer",
+  "kind": "frontmatter",
+  "label": "Disclaimer",
+  "title": "DISCLAIMER",
+  "shortTitle": "Disclaimer",
+  "file": "chapters/03-disclaimer.json",
+  "index": 3,
+  "sourceRange": [
+    53,
+    61
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is a work of personal reflection and observation. "
+        }
+      ],
+      "sourceParagraph": 54
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It does not intend to criticize, target, or define any individual, parent, child, or "
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "relationship. "
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All ideas expressed are subjective and based on personal perspective and "
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "understanding. "
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Readers are encouraged to interpret the content through their own experiences "
+        }
+      ],
+      "sourceParagraph": 59
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and understanding."
+        }
+      ],
+      "sourceParagraph": 60
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 53
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    53
+  ]
+}

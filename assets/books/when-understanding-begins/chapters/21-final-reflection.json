@@ -1,0 +1,139 @@
+{
+  "id": "final-reflection",
+  "kind": "ending",
+  "label": "Final Reflection",
+  "title": "FINAL REFLECTION",
+  "shortTitle": "Final Reflection",
+  "file": "chapters/21-final-reflection.json",
+  "index": 21,
+  "sourceRange": [
+    901,
+    915
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "At some point in life, every child will feel misunderstood. "
+        }
+      ],
+      "sourceParagraph": 902
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And every parent will feel unappreciated. "
+        }
+      ],
+      "sourceParagraph": 903
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But most people never realize — both are happening at the same time, inside "
+        }
+      ],
+      "sourceParagraph": 904
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "the same home. "
+        }
+      ],
+      "sourceParagraph": 905
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "We keep waiting for the other side to understand first… "
+        }
+      ],
+      "sourceParagraph": 906
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and in that waiting, years quietly pass. "
+        }
+      ],
+      "sourceParagraph": 907
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maybe understanding was never about agreeing. "
+        }
+      ],
+      "sourceParagraph": 908
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Maybe it was always about seeing the other person without reducing them to "
+        }
+      ],
+      "sourceParagraph": 909
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "their reaction. "
+        }
+      ],
+      "sourceParagraph": 910
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And if you ever look back and feel “they never understood me” or “I was never "
+        }
+      ],
+      "sourceParagraph": 911
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "understood” — "
+        }
+      ],
+      "sourceParagraph": 912
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pause and ask one thing: "
+        }
+      ],
+      "sourceParagraph": 913
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Did I ever try to understand before expecting to be understood?"
+        }
+      ],
+      "sourceParagraph": 914
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 901
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    901
+  ]
+}

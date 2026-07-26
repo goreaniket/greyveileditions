@@ -1,0 +1,988 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "label": "Chapter 2",
+  "title": "WHY I STOPPED TALKING",
+  "shortTitle": "WHY I STOPPED TALKING",
+  "file": "chapters/10-chapter-02.json",
+  "index": 10,
+  "sourceRange": [
+    413,
+    522
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe yaad nahi main kab chup hona shuru hua.   "
+        }
+      ],
+      "sourceParagraph": 415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sach kahu toh mujhe yeh bhi yaad nahi ki maine kab decide kiya tha ki ab baatein apne andar hi "
+        }
+      ],
+      "sourceParagraph": 416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "rakhni hain.   "
+        }
+      ],
+      "sourceParagraph": 417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek waqt ke baad...   "
+        }
+      ],
+      "sourceParagraph": 418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "maine batana kam kar diya.   "
+        }
+      ],
+      "sourceParagraph": 419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle jab kuch bura lagta tha toh mann karta tha kisi ko bataun.   "
+        }
+      ],
+      "sourceParagraph": 420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi ko call karun.   "
+        }
+      ],
+      "sourceParagraph": 421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi ko message karun.   "
+        }
+      ],
+      "sourceParagraph": 422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya bas kisi ke saamne baith kar bol du:  "
+        }
+      ],
+      "sourceParagraph": 423
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Yaar, pata nahi kya ho raha hai.\" Lekin "
+        }
+      ],
+      "sourceParagraph": 424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dheere dheere maine notice kiya... har baat "
+        }
+      ],
+      "sourceParagraph": 425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "explain nahi hoti.   "
+        }
+      ],
+      "sourceParagraph": 426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har insaan samajhta bhi nahi.  "
+        }
+      ],
+      "sourceParagraph": 427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi log sunte the... par "
+        }
+      ],
+      "sourceParagraph": 428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajhte nahi the.  Kabhi "
+        }
+      ],
+      "sourceParagraph": 429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajhte the... par rukte nahi the.  "
+        }
+      ],
+      "sourceParagraph": 430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi rukte the...   "
+        }
+      ],
+      "sourceParagraph": 431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unke paas woh words nahi hote the jo us waqt chahiye hote hain.   "
+        }
+      ],
+      "sourceParagraph": 432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek din maine khud se kaha:   "
+        }
+      ],
+      "sourceParagraph": 433
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Chhod.\"   "
+        }
+      ],
+      "sourceParagraph": 434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad wahi se shuruaat hui thi.   "
+        }
+      ],
+      "sourceParagraph": 435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ajeeb baat hai...   "
+        }
+      ],
+      "sourceParagraph": 436
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan ek baar mein silent nahi hota.   "
+        }
+      ],
+      "sourceParagraph": 437
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh thoda thoda silent hota hai.   "
+        }
+      ],
+      "sourceParagraph": 438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj ek baat nahi batata.  Kal ek "
+        }
+      ],
+      "sourceParagraph": 439
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feeling nahi batata. Phir ek din poora "
+        }
+      ],
+      "sourceParagraph": 440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "din guzar jaata hai...   "
+        }
+      ],
+      "sourceParagraph": 441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur usne kisi ko apne baare mein kuch nahi bataya hota.   "
+        }
+      ],
+      "sourceParagraph": 442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mere saath bhi shayad aisa hi hua.   "
+        }
+      ],
+      "sourceParagraph": 443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log poochte the:   "
+        }
+      ],
+      "sourceParagraph": 444
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Sab theek?\"   "
+        }
+      ],
+      "sourceParagraph": 445
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mere paas jawab hota tha.   "
+        }
+      ],
+      "sourceParagraph": 446
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahut lamba jawab.   "
+        }
+      ],
+      "sourceParagraph": 447
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin muh se sirf ek word nikalta tha.   "
+        }
+      ],
+      "sourceParagraph": 448
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Haan.\"   "
+        }
+      ],
+      "sourceParagraph": 449
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us ek word ke peeche kitni cheezein chhupi hoti thi...  "
+        }
+      ],
+      "sourceParagraph": 450
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh kisi ko nahi pata tha. Kabhi kabhi mujhe lagta tha... agar "
+        }
+      ],
+      "sourceParagraph": 451
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main sach bolna shuru kar du... toh shayad mujhe khud "
+        }
+      ],
+      "sourceParagraph": 452
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "samajh nahi aayega kahan rukna hai.   "
+        }
+      ],
+      "sourceParagraph": 453
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itni baatein jama ho gayi thi.   "
+        }
+      ],
+      "sourceParagraph": 454
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itne sawaal.   "
+        }
+      ],
+      "sourceParagraph": 455
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itni frustrations.   "
+        }
+      ],
+      "sourceParagraph": 456
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itni cheezein jo maine kabhi kisi ko batayi hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 457
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir dheere dheere ek aur cheez "
+        }
+      ],
+      "sourceParagraph": 458
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hui.  Main logon se baat karta tha... par "
+        }
+      ],
+      "sourceParagraph": 459
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "apne baare mein nahi.   "
+        }
+      ],
+      "sourceParagraph": 460
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main hasta tha...   "
+        }
+      ],
+      "sourceParagraph": 461
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar kya chal raha hai woh nahi batata tha.   "
+        }
+      ],
+      "sourceParagraph": 462
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main conversations mein hota tha...   "
+        }
+      ],
+      "sourceParagraph": 463
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par present nahi hota tha.   "
+        }
+      ],
+      "sourceParagraph": 464
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise mera asli version kahin aur reh gaya ho.   "
+        }
+      ],
+      "sourceParagraph": 465
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta tha ki main kisi ko disturb nahi karna chahta.   "
+        }
+      ],
+      "sourceParagraph": 466
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi lagta tha ki koi samjhega nahi.   "
+        }
+      ],
+      "sourceParagraph": 467
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi lagta tha ki shayad meri problems utni important hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin sach kya tha?   "
+        }
+      ],
+      "sourceParagraph": 469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe nahi pata.   "
+        }
+      ],
+      "sourceParagraph": 470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad wahi problem thi.   "
+        }
+      ],
+      "sourceParagraph": 471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main khud nahi samajh pa raha tha ki mere andar chal kya raha "
+        }
+      ],
+      "sourceParagraph": 472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hai.  Bas itna pata tha... ki main thak gaya hu.   "
+        }
+      ],
+      "sourceParagraph": 473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kis cheez se?   "
+        }
+      ],
+      "sourceParagraph": 474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pata nahi.   "
+        }
+      ],
+      "sourceParagraph": 475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main udaas hu.   "
+        }
+      ],
+      "sourceParagraph": 476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin kyun?   "
+        }
+      ],
+      "sourceParagraph": 477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pata nahi.   "
+        }
+      ],
+      "sourceParagraph": 478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main theek nahi hu.   "
+        }
+      ],
+      "sourceParagraph": 479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin problem kya hai?   "
+        }
+      ],
+      "sourceParagraph": 480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pata nahi.   "
+        }
+      ],
+      "sourceParagraph": 481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab insaan apni hi feelings explain nahi kar paata... toh "
+        }
+      ],
+      "sourceParagraph": 482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh dusron ko explain karna bhi chhod deta hai.   "
+        }
+      ],
+      "sourceParagraph": 483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir silence comfortable lagne lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dangerous hota hai.   "
+        }
+      ],
+      "sourceParagraph": 485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin comfortable.   "
+        }
+      ],
+      "sourceParagraph": 486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki silence mein explain nahi karna padta.   "
+        }
+      ],
+      "sourceParagraph": 487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pretend karna padta hai.   "
+        }
+      ],
+      "sourceParagraph": 488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pretend karna...   "
+        }
+      ],
+      "sourceParagraph": 489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "explain karne se aasaan lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kam se kam shuru mein.   "
+        }
+      ],
+      "sourceParagraph": 491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin phir ek waqt aata hai...   "
+        }
+      ],
+      "sourceParagraph": 492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum realise karte ho ki tumne sirf baatein chhupayi nahi.   "
+        }
+      ],
+      "sourceParagraph": 493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumne khud ko chhupa diya.   "
+        }
+      ],
+      "sourceParagraph": 494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheezein tum feel karte ho.   "
+        }
+      ],
+      "sourceParagraph": 495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheezein tum sochte ho.   "
+        }
+      ],
+      "sourceParagraph": 496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheezein tumhe raat ko jagaye rakhti hain.   "
+        }
+      ],
+      "sourceParagraph": 497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch.   "
+        }
+      ],
+      "sourceParagraph": 498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse buri baat?   "
+        }
+      ],
+      "sourceParagraph": 499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kisi ko pata bhi nahi chalta.   "
+        }
+      ],
+      "sourceParagraph": 500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log sochte hain tum strong ho.   "
+        }
+      ],
+      "sourceParagraph": 501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mature ho.   "
+        }
+      ],
+      "sourceParagraph": 502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Handle kar lete ho. Lekin reality mein...  tum bas aadat "
+        }
+      ],
+      "sourceParagraph": 503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "daal chuke hote ho akela handle karne ki.   "
+        }
+      ],
+      "sourceParagraph": 504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur aadat aur strength mein bahut farq hota hai.   "
+        }
+      ],
+      "sourceParagraph": 505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahut zyada.   "
+        }
+      ],
+      "sourceParagraph": 506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi raat ko lagta tha...   "
+        }
+      ],
+      "sourceParagraph": 507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kaash koi hota.   "
+        }
+      ],
+      "sourceParagraph": 508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aisa nahi jo solution deta.   "
+        }
+      ],
+      "sourceParagraph": 509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas koi jo sun leta.   "
+        }
+      ],
+      "sourceParagraph": 510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Beech mein roke bina.   "
+        }
+      ],
+      "sourceParagraph": 511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Judge kiye bina.   "
+        }
+      ],
+      "sourceParagraph": 512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas sun leta.   "
+        }
+      ],
+      "sourceParagraph": 513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin phir wahi thought aata:   "
+        }
+      ],
+      "sourceParagraph": 514
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Chhod.\"   "
+        }
+      ],
+      "sourceParagraph": 515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur main phir chup ho jaata.  "
+        }
+      ],
+      "sourceParagraph": 516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi tarah... dheere "
+        }
+      ],
+      "sourceParagraph": 517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "dheere... maine bolna nahi "
+        }
+      ],
+      "sourceParagraph": 518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chhoda. Maine umeed karna "
+        }
+      ],
+      "sourceParagraph": 519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chhod diya... ki koi waqai samajh "
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "payega.   "
+        }
+      ],
+      "sourceParagraph": 521
+    }
+  ],
+  "phase": "Phase I - The Mind That Never Stopped Speaking",
+  "headerSourceParagraphs": {
+    "number": 413,
+    "title": 414
+  },
+  "number": "CHAPTER 2",
+  "sourceHeadingParagraphs": [
+    413,
+    414
+  ]
+}

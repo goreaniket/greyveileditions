@@ -1,0 +1,166 @@
+{
+  "id": "authors-note",
+  "kind": "frontmatter",
+  "label": "Author's Note",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "Authors Note",
+  "file": "chapters/05-authors-note.json",
+  "index": 5,
+  "sourceRange": [
+    80,
+    97
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not written to explain life.   "
+        }
+      ],
+      "sourceParagraph": 81
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is written to document what happens when thoughts stay longer than emotions, and "
+        }
+      ],
+      "sourceParagraph": 82
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "silence slowly replaces reaction.   "
+        }
+      ],
+      "sourceParagraph": 83
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There are no fixed meanings hidden between these pages.   "
+        }
+      ],
+      "sourceParagraph": 84
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No advice.   "
+        }
+      ],
+      "sourceParagraph": 85
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "No conclusions.   "
+        }
+      ],
+      "sourceParagraph": 86
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only observations.   "
+        }
+      ],
+      "sourceParagraph": 87
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Only inner shifts that were too subtle to notice in real time.   "
+        }
+      ],
+      "sourceParagraph": 88
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is not a story of healing.   "
+        }
+      ],
+      "sourceParagraph": 89
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is a story of states.   "
+        }
+      ],
+      "sourceParagraph": 90
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Of phases where you stop recognizing your own patterns, but "
+        }
+      ],
+      "sourceParagraph": 91
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "still continue living inside them.   "
+        }
+      ],
+      "sourceParagraph": 92
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you find yourself somewhere in these pages, it "
+        }
+      ],
+      "sourceParagraph": 93
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is not because the book is about you.   "
+        }
+      ],
+      "sourceParagraph": 94
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is because these states are more common than we admit… just rarely "
+        }
+      ],
+      "sourceParagraph": 95
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "spoken in words."
+        }
+      ],
+      "sourceParagraph": 96
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 80
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    80
+  ]
+}

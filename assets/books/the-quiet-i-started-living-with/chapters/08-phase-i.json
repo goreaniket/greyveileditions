@@ -1,0 +1,23 @@
+{
+  "id": "phase-i",
+  "kind": "part",
+  "label": "Phase I",
+  "title": "THE MIND THAT NEVER STOPPED SPEAKING",
+  "shortTitle": "Phase I",
+  "file": "chapters/08-phase-i.json",
+  "index": 8,
+  "sourceRange": [
+    295,
+    298
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 295,
+    "title": 296
+  },
+  "number": "PHASE I",
+  "sourceHeadingParagraphs": [
+    295,
+    296
+  ]
+}

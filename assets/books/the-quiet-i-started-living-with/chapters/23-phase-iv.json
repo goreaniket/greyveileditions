@@ -1,0 +1,23 @@
+{
+  "id": "phase-iv",
+  "kind": "part",
+  "label": "Phase IV",
+  "title": "BECOMING SOMEONE THE SILENCE COULD NO LONGER HIDE",
+  "shortTitle": "Phase IV",
+  "file": "chapters/23-phase-iv.json",
+  "index": 23,
+  "sourceRange": [
+    1558,
+    1561
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 1558,
+    "title": 1559
+  },
+  "number": "PHASE IV",
+  "sourceHeadingParagraphs": [
+    1558,
+    1559
+  ]
+}

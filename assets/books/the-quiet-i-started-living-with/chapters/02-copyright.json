@@ -1,0 +1,85 @@
+{
+  "id": "copyright",
+  "kind": "frontmatter",
+  "label": "Copyright",
+  "title": "COPYRIGHT",
+  "shortTitle": "Copyright",
+  "file": "chapters/02-copyright.json",
+  "index": 2,
+  "sourceRange": [
+    51,
+    60
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "© 2026 by Lalit R. Mishra  "
+        }
+      ],
+      "sourceParagraph": 52
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All Rights Reserved.  "
+        }
+      ],
+      "sourceParagraph": 53
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "First Edition, 2026    "
+        }
+      ],
+      "sourceParagraph": 55
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "All thoughts in this book are personal reflections.   "
+        }
+      ],
+      "sourceParagraph": 56
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Any resemblance to real events is unintentional and subjective.   "
+        }
+      ],
+      "sourceParagraph": 57
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is not a guide.   "
+        }
+      ],
+      "sourceParagraph": 58
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is an experience. "
+        }
+      ],
+      "sourceParagraph": 59
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 51
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    51
+  ]
+}

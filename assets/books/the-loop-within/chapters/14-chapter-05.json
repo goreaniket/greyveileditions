@@ -1,0 +1,594 @@
+{
+  "id": "chapter-05",
+  "kind": "chapter",
+  "label": "Chapter 5",
+  "title": "When Memory Becomes Stronger Than Reality:",
+  "shortTitle": "When Memory Becomes Stronger Than Reality",
+  "file": "chapters/14-chapter-05.json",
+  "index": 14,
+  "sourceRange": [
+    518,
+    583
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai ki tum present mein ho… "
+        }
+      ],
+      "sourceParagraph": 520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda deeply observe karo… "
+        }
+      ],
+      "sourceParagraph": 521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe pata chalega ki present sirf ek layer hai. "
+        }
+      ],
+      "sourceParagraph": 522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aur layer uske upar chal rahi hoti hai… "
+        }
+      ],
+      "sourceParagraph": 523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo quietly sab kuch influence kar rahi hoti hai. "
+        }
+      ],
+      "sourceParagraph": 524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kisi normal moment mein hote ho… "
+        }
+      ],
+      "sourceParagraph": 525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch khaas nahi ho raha hota… "
+        }
+      ],
+      "sourceParagraph": 526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par achanak ek memory shift hoti hai andar. "
+        }
+      ],
+      "sourceParagraph": 527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye shift visible nahi hota. "
+        }
+      ],
+      "sourceParagraph": 528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi sound change nahi hota… "
+        }
+      ],
+      "sourceParagraph": 529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi scene break nahi hota… "
+        }
+      ],
+      "sourceParagraph": 530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tumhara internal state change ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting cheez ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo memory sirf recall nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo reconstruction hoti hai. "
+        }
+      ],
+      "sourceParagraph": 534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mind us moment ko waise nahi rakhta jaise wo tha… "
+        }
+      ],
+      "sourceParagraph": 535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mind us moment ko waise recreate karta hai jaise wo feel hota tha. "
+        }
+      ],
+      "sourceParagraph": 536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tumhe lagta hai ki tum “yaad” kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tum us experience ko dubara build kar rahe hote ho "
+        }
+      ],
+      "sourceParagraph": 538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present ke context ke bina. "
+        }
+      ],
+      "sourceParagraph": 539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab koi cheez bina context ke repeat hoti hai… "
+        }
+      ],
+      "sourceParagraph": 540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo reality se zyada strong feel hone lagti hai. "
+        }
+      ],
+      "sourceParagraph": 541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki reality change hoti rehti hai… "
+        }
+      ],
+      "sourceParagraph": 542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par memory fixed lagti hai. "
+        }
+      ],
+      "sourceParagraph": 543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind fixed cheez ko anchor bana leta hai. "
+        }
+      ],
+      "sourceParagraph": 544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek subtle distortion start hota hai: "
+        }
+      ],
+      "sourceParagraph": 545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present unstable lagta hai "
+        }
+      ],
+      "sourceParagraph": 546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "past stable lagta hai "
+        }
+      ],
+      "sourceParagraph": 547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur stability ka illusion mind ko attract karta hai. "
+        }
+      ],
+      "sourceParagraph": 548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tum present ko underestimate kar dete ho… "
+        }
+      ],
+      "sourceParagraph": 549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur past ko overvalue. "
+        }
+      ],
+      "sourceParagraph": 550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek strange shift hota hai… "
+        }
+      ],
+      "sourceParagraph": 551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum physically yahan hote ho… "
+        }
+      ],
+      "sourceParagraph": 552
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par emotionally tum kahin aur anchored hote ho. "
+        }
+      ],
+      "sourceParagraph": 553
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye anchoring tum consciously nahi karte… "
+        }
+      ],
+      "sourceParagraph": 554
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye automatic hoti hai. "
+        }
+      ],
+      "sourceParagraph": 555
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki mind repetition ko safety samajhta hai. "
+        }
+      ],
+      "sourceParagraph": 556
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab koi memory baar baar replay hoti hai… "
+        }
+      ],
+      "sourceParagraph": 557
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo sirf memory nahi rehti… "
+        }
+      ],
+      "sourceParagraph": 558
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo reference point ban jati hai. "
+        }
+      ],
+      "sourceParagraph": 559
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur har present moment us reference ke against compare hone lagta hai. "
+        }
+      ],
+      "sourceParagraph": 560
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye present kabhi fully satisfy nahi karta… "
+        }
+      ],
+      "sourceParagraph": 561
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki wo past jaisa “constructed perfection” nahi hota. "
+        }
+      ],
+      "sourceParagraph": 562
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab comparison continuous ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 563
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh present lose hone lagta hai importance. "
+        }
+      ],
+      "sourceParagraph": 564
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum notice bhi nahi karte ki kab tum reality se thoda shift ho gaye ho… "
+        }
+      ],
+      "sourceParagraph": 565
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki tum function kar rahe hote ho normally. "
+        }
+      ],
+      "sourceParagraph": 566
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par andar ek silent substitution hoti rehti hai: "
+        }
+      ],
+      "sourceParagraph": 567
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reality → memory "
+        }
+      ],
+      "sourceParagraph": 568
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "present → replay "
+        }
+      ],
+      "sourceParagraph": 569
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "moment → interpretation "
+        }
+      ],
+      "sourceParagraph": 570
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse interesting observation ye hota hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 572
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum apni life jee rahe ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 573
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tum apni memory ke through life ko filter kar rahe hote ho. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 574
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab filter strong ho jata hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 575
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh asli reality soft ho jati hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab ek moment aata hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 577
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tum khud se puchte ho: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 578
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“ye jo main feel kar raha hoon… kya ye abhi ka hai ya purana echo ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 579
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hai?” ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 580
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us question ka answer loud nahi hota… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 581
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas thoda sa silence create karta hai.",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 582
+    }
+  ],
+  "phase": "Part 2 - The Distortion",
+  "headerSourceParagraphs": {
+    "number": 518,
+    "title": 519
+  },
+  "number": "CHAPTER 5:",
+  "sourceHeadingParagraphs": [
+    518,
+    519
+  ]
+}

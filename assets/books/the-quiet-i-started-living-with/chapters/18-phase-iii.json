@@ -1,0 +1,23 @@
+{
+  "id": "phase-iii",
+  "kind": "part",
+  "label": "Phase III",
+  "title": "THE WEIGHT OF THE UNSEEN",
+  "shortTitle": "Phase III",
+  "file": "chapters/18-phase-iii.json",
+  "index": 18,
+  "sourceRange": [
+    1115,
+    1118
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 1115,
+    "title": 1116
+  },
+  "number": "PHASE III",
+  "sourceHeadingParagraphs": [
+    1115,
+    1116
+  ]
+}

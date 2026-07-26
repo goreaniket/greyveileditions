@@ -1,0 +1,26 @@
+{
+  "id": "layer-2",
+  "kind": "part",
+  "label": "Layer 2",
+  "title": "THE HUMAN HEART",
+  "shortTitle": "Layer 2",
+  "file": "chapters/12-layer-2.json",
+  "index": 12,
+  "sourceRange": [
+    517,
+    521
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 517,
+    "title": 518,
+    "subtitle": 519
+  },
+  "number": "LAYER 2:",
+  "subtitle": "(WHAT THEY FEEL)",
+  "sourceHeadingParagraphs": [
+    517,
+    518,
+    519
+  ]
+}

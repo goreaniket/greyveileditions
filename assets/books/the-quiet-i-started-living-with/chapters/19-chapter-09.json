@@ -1,0 +1,1024 @@
+{
+  "id": "chapter-09",
+  "kind": "chapter",
+  "label": "Chapter 9",
+  "title": "I DIDN'T KNOW WHO TO BECOME",
+  "shortTitle": "I DIDNT KNOW WHO TO BECOME",
+  "file": "chapters/19-chapter-09.json",
+  "index": 19,
+  "sourceRange": [
+    1119,
+    1232
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab main peeche dekhna band kar raha tha... tab mujhe "
+        }
+      ],
+      "sourceParagraph": 1121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "laga tha life thodi easy ho jayegi.     "
+        }
+      ],
+      "sourceParagraph": 1122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe lagta tha sabse difficult part wait karna tha.   "
+        }
+      ],
+      "sourceParagraph": 1123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir wait khatam ho gaya.   "
+        }
+      ],
+      "sourceParagraph": 1124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mujhe samajh aaya...   "
+        }
+      ],
+      "sourceParagraph": 1125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main galat problem solve kar raha tha.   "
+        }
+      ],
+      "sourceParagraph": 1126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki ab mere paas ek aur sawaal khada tha.     "
+        }
+      ],
+      "sourceParagraph": 1127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab kya?   "
+        }
+      ],
+      "sourceParagraph": 1128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh bahut simple lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 1129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad meri life ke sabse uncomfortable questions mein se ek tha.   "
+        }
+      ],
+      "sourceParagraph": 1130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab kya?   "
+        }
+      ],
+      "sourceParagraph": 1131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kahan jaana hai?   "
+        }
+      ],
+      "sourceParagraph": 1132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya karna hai?   "
+        }
+      ],
+      "sourceParagraph": 1133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kya banna hai?   "
+        }
+      ],
+      "sourceParagraph": 1134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse honest answer yeh tha...   "
+        }
+      ],
+      "sourceParagraph": 1135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe nahi pata tha.     "
+        }
+      ],
+      "sourceParagraph": 1136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main bahut time tak survival mode mein tha.   "
+        }
+      ],
+      "sourceParagraph": 1137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas din nikal rahe the.   "
+        }
+      ],
+      "sourceParagraph": 1138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Thoughts handle ho rahe the.   "
+        }
+      ],
+      "sourceParagraph": 1139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Memories handle ho rahi thi.   "
+        }
+      ],
+      "sourceParagraph": 1140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Emotions handle ho rahe the.   "
+        }
+      ],
+      "sourceParagraph": 1141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur itna sab handle karte karte...   "
+        }
+      ],
+      "sourceParagraph": 1142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "maine future ke baare mein sochna hi band kar diya tha.   "
+        }
+      ],
+      "sourceParagraph": 1143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki future imagine karne ke liye energy chahiye hoti hai.   "
+        }
+      ],
+      "sourceParagraph": 1144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mere paas us waqt bas energy bach rahi thi.   "
+        }
+      ],
+      "sourceParagraph": 1145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dreams nahi.   "
+        }
+      ],
+      "sourceParagraph": 1146
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi log poochte the:   "
+        }
+      ],
+      "sourceParagraph": 1147
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Five years baad khud ko kahan dekhte ho?\"   "
+        }
+      ],
+      "sourceParagraph": 1148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur main hasta tha.   "
+        }
+      ],
+      "sourceParagraph": 1149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye nahi ki question funny tha.     "
+        }
+      ],
+      "sourceParagraph": 1150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye kyunki mujhe next month bhi clear nahi dikhta tha.   "
+        }
+      ],
+      "sourceParagraph": 1151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Five years bahut door ki baat thi.   "
+        }
+      ],
+      "sourceParagraph": 1152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe lagta tha har kisi ke paas koi direction hoti hai.     "
+        }
+      ],
+      "sourceParagraph": 1153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi version hota hai...   "
+        }
+      ],
+      "sourceParagraph": 1154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jaisa woh banna chahta hai.   "
+        }
+      ],
+      "sourceParagraph": 1155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mere paas nahi tha.     "
+        }
+      ],
+      "sourceParagraph": 1156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya shayad tha.     "
+        }
+      ],
+      "sourceParagraph": 1157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin main usse dekh nahi pa raha tha.   "
+        }
+      ],
+      "sourceParagraph": 1158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki main itne time tak yeh sochta raha ki mujhe kya lose hua... "
+        }
+      ],
+      "sourceParagraph": 1159
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki maine yeh sochna hi band kar diya ki mujhe kya create karna hai.   "
+        }
+      ],
+      "sourceParagraph": 1160
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dono cheezein alag hoti hain.   "
+        }
+      ],
+      "sourceParagraph": 1161
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lose karna past ka question hai.   "
+        }
+      ],
+      "sourceParagraph": 1162
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Create karna future ka.     "
+        }
+      ],
+      "sourceParagraph": 1163
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main pehle wale mein atka hua tha.   "
+        }
+      ],
+      "sourceParagraph": 1164
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta tha...   "
+        }
+      ],
+      "sourceParagraph": 1165
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main change ho gaya hu.   "
+        }
+      ],
+      "sourceParagraph": 1166
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir main sochta tha...   "
+        }
+      ],
+      "sourceParagraph": 1167
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "nahi.   "
+        }
+      ],
+      "sourceParagraph": 1168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad main sirf thak gaya hu.     "
+        }
+      ],
+      "sourceParagraph": 1169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir lagta tha...   "
+        }
+      ],
+      "sourceParagraph": 1170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "nahi.     "
+        }
+      ],
+      "sourceParagraph": 1171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad main grow hua hu.     "
+        }
+      ],
+      "sourceParagraph": 1172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir kuch din baad...   "
+        }
+      ],
+      "sourceParagraph": 1173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sab wapas confusing lagne lagta tha.   "
+        }
+      ],
+      "sourceParagraph": 1174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main decide hi nahi kar paata tha...   "
+        }
+      ],
+      "sourceParagraph": 1175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo insaan aaj mirror mein dikh raha hai... woh "
+        }
+      ],
+      "sourceParagraph": 1176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "healing kar raha hai...   "
+        }
+      ],
+      "sourceParagraph": 1177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya bas adapt kar raha hai.   "
+        }
+      ],
+      "sourceParagraph": 1178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki dono bahar se same dikhte hain.   "
+        }
+      ],
+      "sourceParagraph": 1179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye main itna lost feel karta tha.   "
+        }
+      ],
+      "sourceParagraph": 1180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe pata nahi tha main kaun hu.     "
+        }
+      ],
+      "sourceParagraph": 1181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur usse bhi zyada dangerous baat...   "
+        }
+      ],
+      "sourceParagraph": 1182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe pata nahi tha main kaun banna chahta hu.   "
+        }
+      ],
+      "sourceParagraph": 1183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek waqt tha jab mujhe lagta tha life choices ki problem hai.   "
+        }
+      ],
+      "sourceParagraph": 1184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj lagta hai...   "
+        }
+      ],
+      "sourceParagraph": 1185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "clarity ki problem thi.   "
+        }
+      ],
+      "sourceParagraph": 1186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kuch choose kaise karoge...   "
+        }
+      ],
+      "sourceParagraph": 1187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab tumhe khud nahi pata tum kis direction mein dekh rahe ho?     "
+        }
+      ],
+      "sourceParagraph": 1188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main logon ko dekhta tha.   "
+        }
+      ],
+      "sourceParagraph": 1189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unke plans.   "
+        }
+      ],
+      "sourceParagraph": 1190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unke goals.   "
+        }
+      ],
+      "sourceParagraph": 1191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unka confidence.   "
+        }
+      ],
+      "sourceParagraph": 1192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mujhe genuinely curiosity hoti thi.   "
+        }
+      ],
+      "sourceParagraph": 1193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh log itne sure kaise hain?   "
+        }
+      ],
+      "sourceParagraph": 1194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main toh apne thoughts ke baare mein sure nahi tha.     "
+        }
+      ],
+      "sourceParagraph": 1195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apne emotions ke baare mein sure nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 1196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apne future ke baare mein kaise ho jaata?   "
+        }
+      ],
+      "sourceParagraph": 1197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir dheere dheere ek realization aaya.    "
+        }
+      ],
+      "sourceParagraph": 1198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem yeh nahi thi ki mujhe answer nahi pata.   "
+        }
+      ],
+      "sourceParagraph": 1199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad problem yeh thi ki main answer aane ka wait kar raha tha.   "
+        }
+      ],
+      "sourceParagraph": 1200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise ek din uthunga...   "
+        }
+      ],
+      "sourceParagraph": 1201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur achanak sab clear ho jayega.   "
+        }
+      ],
+      "sourceParagraph": 1202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise identity koi notification hai... jo "
+        }
+      ],
+      "sourceParagraph": 1203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek din phone screen par aa jayegi.   "
+        }
+      ],
+      "sourceParagraph": 1204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin aisa nahi hota.     "
+        }
+      ],
+      "sourceParagraph": 1205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahut saari cheezein clarity se nahi...   "
+        }
+      ],
+      "sourceParagraph": 1206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "movement se milti hain.   "
+        }
+      ],
+      "sourceParagraph": 1207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle chalna padta hai.   "
+        }
+      ],
+      "sourceParagraph": 1208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Baad mein samajh aata hai ki kahan ja rahe the.     "
+        }
+      ],
+      "sourceParagraph": 1209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mujhe lagta hai...   "
+        }
+      ],
+      "sourceParagraph": 1210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yeh baat accept karne mein mujhe bahut time laga.   "
+        }
+      ],
+      "sourceParagraph": 1211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki main certainty chahta tha.   "
+        }
+      ],
+      "sourceParagraph": 1212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main guarantee chahta tha.   "
+        }
+      ],
+      "sourceParagraph": 1213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main pehle answer chahta tha.   "
+        }
+      ],
+      "sourceParagraph": 1214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir action.   "
+        }
+      ],
+      "sourceParagraph": 1215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Life ulta kaam karti hai.   "
+        }
+      ],
+      "sourceParagraph": 1216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle action.   "
+        }
+      ],
+      "sourceParagraph": 1217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir answer.   "
+        }
+      ],
+      "sourceParagraph": 1218
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye main itne time tak wahi khada raha.   "
+        }
+      ],
+      "sourceParagraph": 1219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe perfect direction chahiye thi.   "
+        }
+      ],
+      "sourceParagraph": 1220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jabki mujhe bas pehla step lena tha.     "
+        }
+      ],
+      "sourceParagraph": 1221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj bhi mere paas saare answers nahi hain.   "
+        }
+      ],
+      "sourceParagraph": 1222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj bhi mujhe exact nahi pata main kaun banunga.   "
+        }
+      ],
+      "sourceParagraph": 1223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin pehli baar...   "
+        }
+      ],
+      "sourceParagraph": 1224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe yeh nahi lagta ki mujhe pehle sab pata hona chahiye.   "
+        }
+      ],
+      "sourceParagraph": 1225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad kuch cheezein raste mein samajh aati hain.   "
+        }
+      ],
+      "sourceParagraph": 1226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad identity bhi unmein se ek hai.   "
+        }
+      ],
+      "sourceParagraph": 1227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki kabhi kabhi.. "
+        }
+      ],
+      "sourceParagraph": 1228
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum khud ko dhoondhte nahi "
+        }
+      ],
+      "sourceParagraph": 1229
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum khud ko banate ho.   "
+        }
+      ],
+      "sourceParagraph": 1230
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": ".   "
+        }
+      ],
+      "sourceParagraph": 1231
+    }
+  ],
+  "phase": "Phase III - The Weight of the Unseen",
+  "headerSourceParagraphs": {
+    "number": 1119,
+    "title": 1120
+  },
+  "number": "CHAPTER 9",
+  "sourceHeadingParagraphs": [
+    1119,
+    1120
+  ]
+}

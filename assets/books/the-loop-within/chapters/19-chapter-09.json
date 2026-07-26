@@ -1,0 +1,678 @@
+{
+  "id": "chapter-09",
+  "kind": "chapter",
+  "label": "Chapter 9",
+  "title": "When You Keep Replaying Conversations That Never Happened:",
+  "shortTitle": "When You Keep Replaying Conversations That Never Hap",
+  "file": "chapters/19-chapter-09.json",
+  "index": 19,
+  "sourceRange": [
+    807,
+    881
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum apni hi silence mein itne loud ho jaate ho… "
+        }
+      ],
+      "sourceParagraph": 809
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki bahar ki duniya normal lagti hai… "
+        }
+      ],
+      "sourceParagraph": 810
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar ek poora scene chal raha hota hai. "
+        }
+      ],
+      "sourceParagraph": 811
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kisi se baat nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 812
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tumhara mind already us baat ko start kar chuka hota hai. "
+        }
+      ],
+      "sourceParagraph": 813
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye start tum control nahi karte… "
+        }
+      ],
+      "sourceParagraph": 814
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye bas ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 815
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek line tum bolte ho apne dimaag mein… "
+        }
+      ],
+      "sourceParagraph": 816
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir saamne se reply aata hai… "
+        }
+      ],
+      "sourceParagraph": 817
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir tum us reply ka response sochte ho… "
+        }
+      ],
+      "sourceParagraph": 818
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur bina kisi real insaan ke… "
+        }
+      ],
+      "sourceParagraph": 819
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "poori conversation complete ho jati hai. "
+        }
+      ],
+      "sourceParagraph": 820
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse strange cheez ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 821
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum isko “sochna” nahi kehte… "
+        }
+      ],
+      "sourceParagraph": 822
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum isko normal maan lete ho. "
+        }
+      ],
+      "sourceParagraph": 823
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda aur observe karo… "
+        }
+      ],
+      "sourceParagraph": 824
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh samajh aata hai ki ye thinking nahi hai… "
+        }
+      ],
+      "sourceParagraph": 825
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek simulation hai. "
+        }
+      ],
+      "sourceParagraph": 826
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisa simulation jisme tum dono side ho… "
+        }
+      ],
+      "sourceParagraph": 827
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur dono side tum hi ho. "
+        }
+      ],
+      "sourceParagraph": 828
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye tab zyada hota hai jab kuch cheez incomplete reh jati hai… "
+        }
+      ],
+      "sourceParagraph": 829
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch baatein jo bolni thi… "
+        }
+      ],
+      "sourceParagraph": 830
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par bol nahi paaye… "
+        }
+      ],
+      "sourceParagraph": 831
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya bolke bhi pura feel nahi hua. "
+        }
+      ],
+      "sourceParagraph": 832
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind us incompleteness ko tolerate nahi karta… "
+        }
+      ],
+      "sourceParagraph": 833
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo usko fill karne lagta hai. "
+        }
+      ],
+      "sourceParagraph": 834
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par fill jo hota hai… "
+        }
+      ],
+      "sourceParagraph": 835
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo real nahi hota. "
+        }
+      ],
+      "sourceParagraph": 836
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo sirf imagination hota hai… "
+        }
+      ],
+      "sourceParagraph": 837
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par imagination ko tum repetition se truth bana dete ho. "
+        }
+      ],
+      "sourceParagraph": 838
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye repetition baar baar hota hai… "
+        }
+      ],
+      "sourceParagraph": 839
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek illusion create hota hai… "
+        }
+      ],
+      "sourceParagraph": 840
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad ye baat kabhi hui hi thi. "
+        }
+      ],
+      "sourceParagraph": 841
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar sach mein dekho… "
+        }
+      ],
+      "sourceParagraph": 842
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo sirf tumhare mind ke andar ka echo hota hai. "
+        }
+      ],
+      "sourceParagraph": 843
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting cheez ye hai… "
+        }
+      ],
+      "sourceParagraph": 844
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har baar jab tum us conversation mein wapas jaate ho… "
+        }
+      ],
+      "sourceParagraph": 845
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo thodi si change ho jati hai. "
+        }
+      ],
+      "sourceParagraph": 846
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi tum zyada strong reply dete ho… "
+        }
+      ],
+      "sourceParagraph": 847
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi tum chup rehte ho… "
+        }
+      ],
+      "sourceParagraph": 848
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi tum jeet jaate ho… "
+        }
+      ],
+      "sourceParagraph": 849
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi tum explain karte ho… "
+        }
+      ],
+      "sourceParagraph": 850
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek parallel reality ban jati hai… "
+        }
+      ],
+      "sourceParagraph": 851
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jisme tumhe lagta hai ki tum closure paa rahe ho… "
+        }
+      ],
+      "sourceParagraph": 852
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tum closure ko postpone kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 853
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi loop sabse silent hota hai… "
+        }
+      ],
+      "sourceParagraph": 854
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki bahar se kuch dikhai nahi deta. "
+        }
+      ],
+      "sourceParagraph": 855
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum bas khade hote ho… "
+        }
+      ],
+      "sourceParagraph": 856
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baithte ho… "
+        }
+      ],
+      "sourceParagraph": 857
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chal rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 858
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar ek ongoing conversation chalti rehti hai. "
+        }
+      ],
+      "sourceParagraph": 859
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye long enough chal jata hai… "
+        }
+      ],
+      "sourceParagraph": 860
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek feeling aati hai… "
+        }
+      ],
+      "sourceParagraph": 861
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki “kuch adhura hai” "
+        }
+      ],
+      "sourceParagraph": 862
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda aur honestly dekho… "
+        }
+      ],
+      "sourceParagraph": 863
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh adhura kuch hota hi nahi… "
+        }
+      ],
+      "sourceParagraph": 864
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas mind usko baar baar chalu rakhta hai. "
+        }
+      ],
+      "sourceParagraph": 865
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum ye notice karte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 867
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh pehli baar kuch forcefully break nahi hota… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 868
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek chhota sa gap aata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 869
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us gap mein tum kuch change karne ki koshish nahi karte… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 870
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas dekhte ho ki ye chal raha hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 871
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab dekhna shuru hota hai bina react kiye… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 872
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh conversation apne aap dheemi ho jaati hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 873
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na tum usko rok rahe hote ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 874
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na tum usko chase kar rahe hote ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 875
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas tum uske witness ban jaate ho. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 876
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi se ek soft release start hota hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 877
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na bhoolna ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 878
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na pakadna ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 879
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas dheere dheere halka hona ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 880
+    }
+  ],
+  "phase": "Part 3 - The Loop",
+  "headerSourceParagraphs": {
+    "number": 807,
+    "title": 808
+  },
+  "number": "CHAPTER 9:",
+  "sourceHeadingParagraphs": [
+    807,
+    808
+  ]
+}

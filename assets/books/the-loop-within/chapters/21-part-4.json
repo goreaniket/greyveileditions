@@ -1,0 +1,21 @@
+{
+  "id": "part-4",
+  "kind": "part",
+  "label": "Part 4",
+  "title": "PART 4: THE WEIGHT (WHY LIFE FEELS HEAVY)",
+  "shortTitle": "Part 4",
+  "file": "chapters/21-part-4.json",
+  "index": 21,
+  "sourceRange": [
+    960,
+    961
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "title": 960
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    960
+  ]
+}

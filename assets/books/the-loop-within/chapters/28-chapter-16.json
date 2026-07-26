@@ -1,0 +1,596 @@
+{
+  "id": "chapter-16",
+  "kind": "chapter",
+  "label": "Chapter 16",
+  "title": "When You Are Afraid to Lose the Feeling, Not the Person :",
+  "shortTitle": "When You Are Afraid to Lose the Feeling Not the Pers",
+  "file": "chapters/28-chapter-16.json",
+  "index": 28,
+  "sourceRange": [
+    1301,
+    1371
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai tum kisi insaan ko yaad kar rahe ho… "
+        }
+      ],
+      "sourceParagraph": 1303
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda aur andar jaake dekho…+ "
+        }
+      ],
+      "sourceParagraph": 1304
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo yaad actually insaan ki nahi hoti. "
+        }
+      ],
+      "sourceParagraph": 1305
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo ek state hoti hai. "
+        }
+      ],
+      "sourceParagraph": 1306
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisa emotional phase jahan tum: "
+        }
+      ],
+      "sourceParagraph": 1307
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "zyada alive feel karte the "
+        }
+      ],
+      "sourceParagraph": 1308
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "zyada connected lagte the "
+        }
+      ],
+      "sourceParagraph": 1309
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chhoti chhoti cheezein meaningful lagti thi "
+        }
+      ],
+      "sourceParagraph": 1310
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "silence bhi heavy nahi, “full” lagta tha "
+        }
+      ],
+      "sourceParagraph": 1311
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab wo phase chala jata hai… "
+        }
+      ],
+      "sourceParagraph": 1312
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe lagta hai insaan chala gaya. "
+        }
+      ],
+      "sourceParagraph": 1313
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par sach thoda aur subtle hota hai… "
+        }
+      ],
+      "sourceParagraph": 1314
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan nahi gaya hota "
+        }
+      ],
+      "sourceParagraph": 1315
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhara andar ka emotional environment change ho gaya hota hai "
+        }
+      ],
+      "sourceParagraph": 1316
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mind ko environment ka loss insaan ka loss lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1317
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tum baar baar usi insaan ko recall karte ho… "
+        }
+      ],
+      "sourceParagraph": 1318
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par har recall actually ek feeling ko activate karta hai… "
+        }
+      ],
+      "sourceParagraph": 1319
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na ki presence ko. "
+        }
+      ],
+      "sourceParagraph": 1320
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek invisible confusion start hota hai… "
+        }
+      ],
+      "sourceParagraph": 1321
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum relationship ko miss nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 1322
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us version of yourself ko miss kar rahe hote ho jo us relationship mein "
+        }
+      ],
+      "sourceParagraph": 1323
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "exist karta tha. "
+        }
+      ],
+      "sourceParagraph": 1324
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wo version: "
+        }
+      ],
+      "sourceParagraph": 1325
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda softer tha "
+        }
+      ],
+      "sourceParagraph": 1326
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda more open tha "
+        }
+      ],
+      "sourceParagraph": 1327
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda more hopeful tha "
+        }
+      ],
+      "sourceParagraph": 1328
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda more emotionally alive tha "
+        }
+      ],
+      "sourceParagraph": 1329
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab wo version fade hota hai… "
+        }
+      ],
+      "sourceParagraph": 1330
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe lagta hai ki “kuch important kho gaya”. "
+        }
+      ],
+      "sourceParagraph": 1331
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par asal mein tum ek emotional configuration ko miss kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1332
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse deep part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1333
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us configuration ko wapas lane ke liye insaan ko yaad karte ho… "
+        }
+      ],
+      "sourceParagraph": 1334
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par wo configuration kisi insaan ke paas stored nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1335
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo tumhare andar recreate hota hai. "
+        }
+      ],
+      "sourceParagraph": 1336
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum ye difference nahi dekh paate… "
+        }
+      ],
+      "sourceParagraph": 1337
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum ek loop bana lete ho: "
+        }
+      ],
+      "sourceParagraph": 1338
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar wo insaan wapas aaya toh feeling wapas aayegi” "
+        }
+      ],
+      "sourceParagraph": 1339
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par reality yeh hoti hai: "
+        }
+      ],
+      "sourceParagraph": 1340
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feelings repeat nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 1341
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf triggers repeat hote hain. "
+        }
+      ],
+      "sourceParagraph": 1342
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum is loop mein rehte ho… "
+        }
+      ],
+      "sourceParagraph": 1343
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh present life thodi dull lagne lagti hai… "
+        }
+      ],
+      "sourceParagraph": 1344
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki ek purana emotional reference constantly active hota hai. "
+        }
+      ],
+      "sourceParagraph": 1345
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum compare karte rehte ho: "
+        }
+      ],
+      "sourceParagraph": 1346
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pehle jaisa kuch feel nahi hota "
+        }
+      ],
+      "sourceParagraph": 1347
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pehle jaisa connection nahi banta "
+        }
+      ],
+      "sourceParagraph": 1348
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pehle jaisa intensity nahi aati "
+        }
+      ],
+      "sourceParagraph": 1349
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par tum “pehle” ko present ke against measure kar rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 1350
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo naturally mismatch create karta hai. "
+        }
+      ],
+      "sourceParagraph": 1351
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum is distinction ko fight nahi karte… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1353
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas dekhte ho ki ye pattern ho raha hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1354
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek subtle shift aata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1355
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tumhe pehli baar samajh aata hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo feeling thi wo tumhari thi ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "insaan sirf usko activate kar raha tha ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ownership clarity aati hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dependency thodi si loosen ho jati hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe space milta hai ye samajhne ka: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo feeling kisi ek insaan tak limited nahi thi ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi realization slowly ek naya opening create karta hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan tum purani feeling ko “loss” nahi… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“experience” ki tarah dekh paate ho.",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1365
+    }
+  ],
+  "phase": "Part 5 - The Break",
+  "headerSourceParagraphs": {
+    "number": 1301,
+    "title": 1302
+  },
+  "number": "CHAPTER 16:",
+  "sourceHeadingParagraphs": [
+    1301,
+    1302
+  ]
+}

@@ -1,0 +1,575 @@
+{
+  "id": "chapter-14",
+  "kind": "chapter",
+  "label": "Chapter 14",
+  "title": "When Holding On Feels Safer Than Starting Again:",
+  "shortTitle": "When Holding On Feels Safer Than Starting Again",
+  "file": "chapters/26-chapter-14.json",
+  "index": 26,
+  "sourceRange": [
+    1166,
+    1229
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum samajh jaate ho ki cheez tumhe tod rahi hai… "
+        }
+      ],
+      "sourceParagraph": 1168
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "phir bhi tum usse chhod nahi paate. "
+        }
+      ],
+      "sourceParagraph": 1169
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye contradiction simple nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1170
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek silent internal conflict hota hai jo explain nahi hota. "
+        }
+      ],
+      "sourceParagraph": 1171
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bahaar se sab log sochte hain: "
+        }
+      ],
+      "sourceParagraph": 1172
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“bas chhod de na” "
+        }
+      ],
+      "sourceParagraph": 1173
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par andar se itna simple kuch hota hi nahi. "
+        }
+      ],
+      "sourceParagraph": 1174
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki tum sirf cheez ko hold nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 1175
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum us cheez ke saath judi hui purani version of self ko hold kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1176
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo version jisme tumne kuch feel kiya tha… "
+        }
+      ],
+      "sourceParagraph": 1177
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch expect kiya tha… "
+        }
+      ],
+      "sourceParagraph": 1178
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch imagine kiya tha… "
+        }
+      ],
+      "sourceParagraph": 1179
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch “meaning” attach kar diya tha. "
+        }
+      ],
+      "sourceParagraph": 1180
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum us cheez ko chhodne ki sochte ho… "
+        }
+      ],
+      "sourceParagraph": 1181
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dimaag sirf object nahi dekhta… "
+        }
+      ],
+      "sourceParagraph": 1182
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo pura emotional ecosystem dekh leta hai. "
+        }
+      ],
+      "sourceParagraph": 1183
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“agar ye gaya toh main kaun rahunga?” "
+        }
+      ],
+      "sourceParagraph": 1184
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi question tumhe rok deta hai. "
+        }
+      ],
+      "sourceParagraph": 1185
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki insaan aksar logon ko nahi chhodta… "
+        }
+      ],
+      "sourceParagraph": 1186
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo un logon ke saath attached apni identity ko chhodne se darta hai. "
+        }
+      ],
+      "sourceParagraph": 1187
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur identity koi fixed cheez nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 1188
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo experiences ka accumulation hoti hai. "
+        }
+      ],
+      "sourceParagraph": 1189
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab experience painful ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 1190
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par familiar ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 1191
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh mind usko safe label kar deta hai. "
+        }
+      ],
+      "sourceParagraph": 1192
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chahe wo safety tumhe continuously disturb hi kyun na kar rahi ho. "
+        }
+      ],
+      "sourceParagraph": 1193
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur isliye tum naya start karte hue bhi hesitate karte ho… "
+        }
+      ],
+      "sourceParagraph": 1194
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki naya start ka matlab hota hai: "
+        }
+      ],
+      "sourceParagraph": 1195
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unknown version of self "
+        }
+      ],
+      "sourceParagraph": 1196
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur unknown cheez ko mind “risk” samajhta hai… "
+        }
+      ],
+      "sourceParagraph": 1197
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chahe wo actually growth hi kyun na ho. "
+        }
+      ],
+      "sourceParagraph": 1198
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse subtle part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1199
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum daily life mein move kar rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 1200
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par internally tum ek invisible negotiation mein hote ho: "
+        }
+      ],
+      "sourceParagraph": 1201
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "thoda aur ruk jao” vs “ab chhod do” "
+        }
+      ],
+      "sourceParagraph": 1202
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye negotiation kabhi end nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1203
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas repeat hota rehta hai. "
+        }
+      ],
+      "sourceParagraph": 1204
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye long enough chalta hai… "
+        }
+      ],
+      "sourceParagraph": 1205
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum ek strange state mein aa jaate ho… "
+        }
+      ],
+      "sourceParagraph": 1206
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan pain bhi familiar lagta hai… "
+        }
+      ],
+      "sourceParagraph": 1207
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur change bhi uncomfortable lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1208
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur is point pe tum confuse ho jaate ho… "
+        }
+      ],
+      "sourceParagraph": 1209
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki problem kya hai: "
+        }
+      ],
+      "sourceParagraph": 1210
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "situation "
+        }
+      ],
+      "sourceParagraph": 1211
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya attachment "
+        }
+      ],
+      "sourceParagraph": 1212
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par agar thoda aur honest observation karo… "
+        }
+      ],
+      "sourceParagraph": 1213
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh situation change ho sakti hai… "
+        }
+      ],
+      "sourceParagraph": 1214
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par attachment tum carry karte ho. "
+        }
+      ],
+      "sourceParagraph": 1215
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wahi attachment tumhe anchor karta hai… "
+        }
+      ],
+      "sourceParagraph": 1216
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "chahe wo anchor tumhe rok hi kyun na raha ho. "
+        }
+      ],
+      "sourceParagraph": 1217
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum is holding ko fight nahi karte… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1219
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf notice karte ho ki ye ho raha hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1220
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek chhota sa realization aata hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1221
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum cheez se zyada apne fear ko hold kar rahe ho ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1222
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur fear ko samajhna hi uska weight thoda kam kar deta hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1223
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere tumhe ye feel hota hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1224
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "naya start loss nahi hai ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1225
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek empty space hai jisme naya version grow ho sakta hai ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1226
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur space ko fill karne ki zarurat nahi hoti… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1227
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "space ko allow karna hota hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1228
+    }
+  ],
+  "phase": "Part 5 - The Break",
+  "headerSourceParagraphs": {
+    "number": 1166,
+    "title": 1167
+  },
+  "number": "CHAPTER 14:",
+  "sourceHeadingParagraphs": [
+    1166,
+    1167
+  ]
+}

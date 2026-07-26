@@ -1,0 +1,312 @@
+{
+  "id": "authors-note",
+  "kind": "frontmatter",
+  "label": "Author's Note",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "Authors Note",
+  "file": "chapters/05-authors-note.json",
+  "index": 5,
+  "sourceRange": [
+    91,
+    124
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "(Don’t read this for comfort — read it for recognition) ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 92
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book was never written to tell you how to move on. "
+        }
+      ],
+      "sourceParagraph": 93
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because nothing here assumes you are stuck because of a person. "
+        }
+      ],
+      "sourceParagraph": 94
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It assumes something more uncomfortable… "
+        }
+      ],
+      "sourceParagraph": 95
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "that you might be stuck because of a system inside your mind that keeps re"
+        }
+      ],
+      "sourceParagraph": 96
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "running unfinished meaning. "
+        }
+      ],
+      "sourceParagraph": 97
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is no “someone” at the center of this. "
+        }
+      ],
+      "sourceParagraph": 98
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "There is a loop. "
+        }
+      ],
+      "sourceParagraph": 99
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And that loop is intelligent enough to disguise itself as love… memory… loss… "
+        }
+      ],
+      "sourceParagraph": 100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and even healing. "
+        }
+      ],
+      "sourceParagraph": 101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If you read this book casually… "
+        }
+      ],
+      "sourceParagraph": 102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you will call it emotional writing. "
+        }
+      ],
+      "sourceParagraph": 103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But if you read it completely… "
+        }
+      ],
+      "sourceParagraph": 104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you will notice something else: "
+        }
+      ],
+      "sourceParagraph": 105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "you were not living events… you were reinterpreting them again and again "
+        }
+      ],
+      "sourceParagraph": 106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "until they felt real enough to suffer from. "
+        }
+      ],
+      "sourceParagraph": 107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book does not offer closure. "
+        }
+      ],
+      "sourceParagraph": 108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because closure is just another form of continuation when the mind refuses to "
+        }
+      ],
+      "sourceParagraph": 109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "drop the pattern. "
+        }
+      ],
+      "sourceParagraph": 110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It only does one thing… "
+        }
+      ],
+      "sourceParagraph": 111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "it exposes repetition. "
+        }
+      ],
+      "sourceParagraph": 112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And repetition, once seen clearly, stops feeling like emotion… "
+        }
+      ],
+      "sourceParagraph": 113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and starts feeling like structure. "
+        }
+      ],
+      "sourceParagraph": 114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That is where everything changes. "
+        }
+      ],
+      "sourceParagraph": 115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because something ends… "
+        }
+      ],
+      "sourceParagraph": 116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but because something stops being believed in the same way. "
+        }
+      ],
+      "sourceParagraph": 117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "And at that point, two sentences stop being opposites"
+        }
+      ],
+      "sourceParagraph": 118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I can’t move on” "
+        }
+      ],
+      "sourceParagraph": 119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“I’m moving on” "
+        }
+      ],
+      "sourceParagraph": 120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Because both were never about movement. "
+        }
+      ],
+      "sourceParagraph": 121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "They were about how deeply the loop was still active. "
+        }
+      ],
+      "sourceParagraph": 122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— Lalit.R.Mishra"
+        }
+      ],
+      "sourceParagraph": 123,
+      "role": "chapter-end"
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 91
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    91
+  ]
+}

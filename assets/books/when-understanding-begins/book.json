@@ -1,0 +1,661 @@
+{
+  "id": "when-understanding-begins",
+  "slug": "when-understanding-begins",
+  "title": "When Understanding Begins",
+  "subtitle": "The greatest distance between two people was never space. It was the invisible story each believed the other could already see.",
+  "collection": "The Human Paradox Collection",
+  "volume": "Volume I",
+  "series": "Human Mind",
+  "seriesDisplay": "The Human Mind Series",
+  "bookNumber": "Book V",
+  "author": "Lalit R. Mishra",
+  "publisher": "Greyveil Editions",
+  "editionYear": "2026",
+  "coverUrl": "/projects/human-mind/assets/covers/when%20understanding%20begins%20.jpeg",
+  "cover": {
+    "web": "/assets/books/when-understanding-begins/cover/front-cover.webp",
+    "print": "/assets/books/when-understanding-begins/cover/front-cover-print.png",
+    "source": "/assets/books/when-understanding-begins/cover/cover-source.png",
+    "alt": "When Understanding Begins book cover"
+  },
+  "readerRoute": "/projects/human-mind/books/when-understanding-begins/reader/",
+  "readerExitUrl": "/projects/human-mind/books/when-understanding-begins.html",
+  "storageKey": "greyveil:when-understanding-begins:continuous-reader:v1",
+  "designSpecFile": "design-spec.json",
+  "themeStylesheet": "theme.css",
+  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
+  "feedbackContext": {
+    "collection": "The Human Paradox Collection",
+    "series": "Human Mind",
+    "book": "When Understanding Begins",
+    "feedbackType": "book"
+  },
+  "theme": {
+    "className": "reader-theme-understanding-begins",
+    "variables": {
+      "light": {
+        "--reader-bg": "#E1E4DE",
+        "--reader-paper": "#F7F0E4",
+        "--reader-paper-soft": "#ECE5D8",
+        "--reader-text": "#2B302B",
+        "--reader-heading": "#1F241F",
+        "--reader-muted": "color-mix(in srgb, #2B302B 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #2B302B 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #2B302B 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #7C7651 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #2B302B 20%, transparent)",
+        "--reader-accent": "#7C7651",
+        "--reader-accent-strong": "#555B43",
+        "--reader-accent-soft": "color-mix(in srgb, #7C7651 12%, transparent)",
+        "--reader-warm": "#9A704E",
+        "--reader-focus": "#555B43",
+        "--reader-control-bg": "#ECE5D8",
+        "--reader-control-border": "color-mix(in srgb, #2B302B 18%, transparent)",
+        "--reader-input-bg": "#F7F0E4",
+        "--reader-input-text": "#2B302B",
+        "--reader-placeholder": "color-mix(in srgb, #2B302B 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #7C7651 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(25, 34, 39, .14)"
+      },
+      "sepia": {
+        "--reader-bg": "#E2D8C9",
+        "--reader-paper": "#F3E6D1",
+        "--reader-paper-soft": "#E8DAC4",
+        "--reader-text": "#352F27",
+        "--reader-heading": "#251F19",
+        "--reader-muted": "color-mix(in srgb, #352F27 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #352F27 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #352F27 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #7F694B 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #352F27 20%, transparent)",
+        "--reader-accent": "#7F694B",
+        "--reader-accent-strong": "#5F503C",
+        "--reader-accent-soft": "color-mix(in srgb, #7F694B 12%, transparent)",
+        "--reader-warm": "#92704D",
+        "--reader-focus": "#5F503C",
+        "--reader-control-bg": "#E8DAC4",
+        "--reader-control-border": "color-mix(in srgb, #352F27 18%, transparent)",
+        "--reader-input-bg": "#F3E6D1",
+        "--reader-input-text": "#352F27",
+        "--reader-placeholder": "color-mix(in srgb, #352F27 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #7F694B 8%, transparent)",
+        "--reader-shadow": "0 22px 58px rgba(25, 34, 39, .14)"
+      },
+      "dark": {
+        "--reader-bg": "#10140F",
+        "--reader-paper": "#1A1D18",
+        "--reader-paper-soft": "#24271F",
+        "--reader-text": "#EFE8DB",
+        "--reader-heading": "#F8F1E8",
+        "--reader-muted": "color-mix(in srgb, #EFE8DB 72%, transparent)",
+        "--reader-subtle": "color-mix(in srgb, #EFE8DB 62%, transparent)",
+        "--reader-faint": "color-mix(in srgb, #EFE8DB 11%, transparent)",
+        "--reader-rule": "color-mix(in srgb, #C4BD8C 24%, transparent)",
+        "--reader-border": "color-mix(in srgb, #EFE8DB 20%, transparent)",
+        "--reader-accent": "#C4BD8C",
+        "--reader-accent-strong": "#E0D9A8",
+        "--reader-accent-soft": "color-mix(in srgb, #C4BD8C 12%, transparent)",
+        "--reader-warm": "#C6A174",
+        "--reader-focus": "#E0D9A8",
+        "--reader-control-bg": "#24271F",
+        "--reader-control-border": "color-mix(in srgb, #EFE8DB 18%, transparent)",
+        "--reader-input-bg": "#1A1D18",
+        "--reader-input-text": "#F2ECE4",
+        "--reader-placeholder": "color-mix(in srgb, #EFE8DB 56%, transparent)",
+        "--reader-success": "#4F6B4D",
+        "--reader-error-text": "#94474C",
+        "--reader-page-edge": "color-mix(in srgb, #C4BD8C 8%, transparent)",
+        "--reader-shadow": "0 24px 70px rgba(2, 5, 7, .48)"
+      }
+    }
+  },
+  "occupationOptions": [
+    "Student",
+    "Educator",
+    "Working Professional",
+    "Writer",
+    "Other"
+  ],
+  "ratingOptions": [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4",
+    "4.5",
+    "5"
+  ],
+  "sourceNotes": {
+    "wordPrimary": "/projects/human-mind/chapters/WORD/WHEN UNDERSTANDING BEGINS.docx",
+    "pdfVerification": "/projects/human-mind/chapters/PDF/when understanding begins.pdf",
+    "sourceParagraphsTotal": 1071,
+    "sourceParagraphsNonEmpty": 1005,
+    "manuscriptPolicy": "Word is the primary source. PDF is used only to verify title, order, headings, paragraph breaks, and completeness."
+  },
+  "units": [
+    {
+      "id": "opening",
+      "kind": "opening",
+      "label": "Opening",
+      "title": "When Understanding Begins",
+      "shortTitle": "Opening",
+      "file": "chapters/00-opening.json",
+      "index": 0,
+      "sourceRange": [
+        1,
+        19
+      ],
+      "openingMode": "source"
+    },
+    {
+      "id": "contents",
+      "kind": "contents",
+      "label": "Contents",
+      "title": "TABLE OF CONTENTS",
+      "shortTitle": "Contents",
+      "file": "chapters/01-contents.json",
+      "index": 1,
+      "sourceRange": [
+        20,
+        44
+      ],
+      "headerSourceParagraphs": {
+        "title": 20
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        20
+      ]
+    },
+    {
+      "id": "copyright",
+      "kind": "frontmatter",
+      "label": "Copyright",
+      "title": "COPYRIGHT",
+      "shortTitle": "Copyright",
+      "file": "chapters/02-copyright.json",
+      "index": 2,
+      "sourceRange": [
+        45,
+        52
+      ],
+      "headerSourceParagraphs": {
+        "title": 45
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        45
+      ]
+    },
+    {
+      "id": "disclaimer",
+      "kind": "frontmatter",
+      "label": "Disclaimer",
+      "title": "DISCLAIMER",
+      "shortTitle": "Disclaimer",
+      "file": "chapters/03-disclaimer.json",
+      "index": 3,
+      "sourceRange": [
+        53,
+        61
+      ],
+      "headerSourceParagraphs": {
+        "title": 53
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        53
+      ]
+    },
+    {
+      "id": "dedication",
+      "kind": "dedication",
+      "label": "Dedication",
+      "title": "DEDICATION",
+      "shortTitle": "Dedication",
+      "file": "chapters/04-dedication.json",
+      "index": 4,
+      "sourceRange": [
+        62,
+        67
+      ],
+      "headerSourceParagraphs": {
+        "title": 62
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        62
+      ]
+    },
+    {
+      "id": "authors-note",
+      "kind": "frontmatter",
+      "label": "Author's Note",
+      "title": "NOTE FROM THE AUTHOR",
+      "shortTitle": "Authors Note",
+      "file": "chapters/05-authors-note.json",
+      "index": 5,
+      "sourceRange": [
+        68,
+        82
+      ],
+      "headerSourceParagraphs": {
+        "title": 68
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        68
+      ]
+    },
+    {
+      "id": "prologue",
+      "kind": "prologue",
+      "label": "Prologue",
+      "title": "Before You Decide You Already Know Yourself",
+      "shortTitle": "Prologue",
+      "file": "chapters/06-prologue.json",
+      "index": 6,
+      "sourceRange": [
+        83,
+        248
+      ],
+      "headerSourceParagraphs": {
+        "number": 83,
+        "title": 84
+      },
+      "number": "PROLOGUE",
+      "sourceHeadingParagraphs": [
+        83,
+        84
+      ]
+    },
+    {
+      "id": "introduction",
+      "kind": "introduction",
+      "label": "Introduction",
+      "title": "INTRODUCTION",
+      "shortTitle": "Introduction",
+      "file": "chapters/07-introduction.json",
+      "index": 7,
+      "sourceRange": [
+        249,
+        282
+      ],
+      "headerSourceParagraphs": {
+        "title": 249
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        249
+      ]
+    },
+    {
+      "id": "layer-1",
+      "kind": "part",
+      "label": "Layer 1",
+      "title": "THE HUMAN MASK",
+      "shortTitle": "Layer 1",
+      "file": "chapters/08-layer-1.json",
+      "index": 8,
+      "sourceRange": [
+        283,
+        287
+      ],
+      "headerSourceParagraphs": {
+        "number": 283,
+        "title": 284,
+        "subtitle": 285
+      },
+      "number": "LAYER 1:",
+      "subtitle": "(WHAT WE SEE)",
+      "sourceHeadingParagraphs": [
+        283,
+        284,
+        285
+      ]
+    },
+    {
+      "id": "chapter-01",
+      "kind": "chapter",
+      "label": "Chapter 1",
+      "title": "WHY WE ONLY SEE RULES, NOT EMOTIONS",
+      "shortTitle": "WHY WE ONLY SEE RULES NOT EMOTIONS",
+      "file": "chapters/09-chapter-01.json",
+      "index": 9,
+      "sourceRange": [
+        288,
+        353
+      ],
+      "phase": "Layer 1 - The Human Mask",
+      "headerSourceParagraphs": {
+        "number": 288,
+        "title": 289
+      },
+      "number": "CHAPTER 1:",
+      "sourceHeadingParagraphs": [
+        288,
+        289
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "kind": "chapter",
+      "label": "Chapter 2",
+      "title": "WHY PARENTS FEEL STRICT TO US",
+      "shortTitle": "WHY PARENTS FEEL STRICT TO US",
+      "file": "chapters/10-chapter-02.json",
+      "index": 10,
+      "sourceRange": [
+        354,
+        445
+      ],
+      "phase": "Layer 1 - The Human Mask",
+      "headerSourceParagraphs": {
+        "number": 354,
+        "title": 355
+      },
+      "number": "CHAPTER 2:",
+      "sourceHeadingParagraphs": [
+        354,
+        355
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "kind": "chapter",
+      "label": "Chapter 3",
+      "title": "HOW MISUNDERSTANDING STARTS EARLY",
+      "shortTitle": "HOW MISUNDERSTANDING STARTS EARLY",
+      "file": "chapters/11-chapter-03.json",
+      "index": 11,
+      "sourceRange": [
+        446,
+        516
+      ],
+      "phase": "Layer 1 - The Human Mask",
+      "headerSourceParagraphs": {
+        "number": 446,
+        "title": 447
+      },
+      "number": "CHAPTER 3:",
+      "sourceHeadingParagraphs": [
+        446,
+        447
+      ]
+    },
+    {
+      "id": "layer-2",
+      "kind": "part",
+      "label": "Layer 2",
+      "title": "THE HUMAN HEART",
+      "shortTitle": "Layer 2",
+      "file": "chapters/12-layer-2.json",
+      "index": 12,
+      "sourceRange": [
+        517,
+        521
+      ],
+      "headerSourceParagraphs": {
+        "number": 517,
+        "title": 518,
+        "subtitle": 519
+      },
+      "number": "LAYER 2:",
+      "subtitle": "(WHAT THEY FEEL)",
+      "sourceHeadingParagraphs": [
+        517,
+        518,
+        519
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "kind": "chapter",
+      "label": "Chapter 4",
+      "title": "WHAT THEY FEEL BUT NEVER SAY",
+      "shortTitle": "WHAT THEY FEEL BUT NEVER SAY",
+      "file": "chapters/13-chapter-04.json",
+      "index": 13,
+      "sourceRange": [
+        522,
+        612
+      ],
+      "phase": "Layer 2 - The Human Heart",
+      "headerSourceParagraphs": {
+        "number": 522,
+        "title": 523
+      },
+      "number": "CHAPTER 4:",
+      "sourceHeadingParagraphs": [
+        522,
+        523
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "kind": "chapter",
+      "label": "Chapter 5",
+      "title": "THE MOMENT WE REALIZE TOO LATE",
+      "shortTitle": "THE MOMENT WE REALIZE TOO LATE",
+      "file": "chapters/14-chapter-05.json",
+      "index": 14,
+      "sourceRange": [
+        613,
+        689
+      ],
+      "phase": "Layer 2 - The Human Heart",
+      "headerSourceParagraphs": {
+        "number": 613,
+        "title": 614
+      },
+      "number": "CHAPTER 5:",
+      "sourceHeadingParagraphs": [
+        613,
+        614
+      ]
+    },
+    {
+      "id": "layer-3",
+      "kind": "part",
+      "label": "Layer 3",
+      "title": "HEALING PHASE",
+      "shortTitle": "Layer 3",
+      "file": "chapters/15-layer-3.json",
+      "index": 15,
+      "sourceRange": [
+        690,
+        693
+      ],
+      "headerSourceParagraphs": {
+        "number": 690,
+        "title": 691
+      },
+      "number": "LAYER 3:",
+      "sourceHeadingParagraphs": [
+        690,
+        691
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "kind": "chapter",
+      "label": "Chapter 6",
+      "title": "HEALING BEGINS WHEN UNDERSTANDING STARTS",
+      "shortTitle": "HEALING BEGINS WHEN UNDERSTANDING STARTS",
+      "file": "chapters/16-chapter-06.json",
+      "index": 16,
+      "sourceRange": [
+        694,
+        752
+      ],
+      "phase": "Layer 3 - Healing Phase",
+      "headerSourceParagraphs": {
+        "number": 694,
+        "title": 695
+      },
+      "number": "CHAPTER 6:",
+      "sourceHeadingParagraphs": [
+        694,
+        695
+      ]
+    },
+    {
+      "id": "layer-4",
+      "kind": "part",
+      "label": "Layer 4",
+      "title": "THE CLOSURE",
+      "shortTitle": "Layer 4",
+      "file": "chapters/17-layer-4.json",
+      "index": 17,
+      "sourceRange": [
+        753,
+        756
+      ],
+      "headerSourceParagraphs": {
+        "number": 753,
+        "title": 754
+      },
+      "number": "LAYER -4:",
+      "sourceHeadingParagraphs": [
+        753,
+        754
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "kind": "chapter",
+      "label": "Chapter 7",
+      "title": "WHEN YOU FINALLY UNDERSTAND EVERYTHING",
+      "shortTitle": "WHEN YOU FINALLY UNDERSTAND EVERYTHING",
+      "file": "chapters/18-chapter-07.json",
+      "index": 18,
+      "sourceRange": [
+        757,
+        818
+      ],
+      "phase": "Layer 4 - The Closure",
+      "headerSourceParagraphs": {
+        "number": 757,
+        "title": 758
+      },
+      "number": "CHAPTER 7:",
+      "sourceHeadingParagraphs": [
+        757,
+        758
+      ]
+    },
+    {
+      "id": "layer-5",
+      "kind": "part",
+      "label": "Layer 5",
+      "title": "THE REAL WORLD SHIFT",
+      "shortTitle": "Layer 5",
+      "file": "chapters/19-layer-5.json",
+      "index": 19,
+      "sourceRange": [
+        819,
+        821
+      ],
+      "headerSourceParagraphs": {
+        "number": 819,
+        "title": 820
+      },
+      "number": "LAYER 5:",
+      "sourceHeadingParagraphs": [
+        819,
+        820
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "kind": "chapter",
+      "label": "Chapter 8",
+      "title": "WHAT DO YOU DO AFTER UNDERSTANDING EVERYTHING",
+      "shortTitle": "WHAT DO YOU DO AFTER UNDERSTANDING EVERYTHING",
+      "file": "chapters/20-chapter-08.json",
+      "index": 20,
+      "sourceRange": [
+        822,
+        900
+      ],
+      "phase": "Layer 5 - The Real World Shift",
+      "headerSourceParagraphs": {
+        "number": 822,
+        "title": 823
+      },
+      "number": "CHAPTER 8:",
+      "sourceHeadingParagraphs": [
+        822,
+        823
+      ]
+    },
+    {
+      "id": "final-reflection",
+      "kind": "ending",
+      "label": "Final Reflection",
+      "title": "FINAL REFLECTION",
+      "shortTitle": "Final Reflection",
+      "file": "chapters/21-final-reflection.json",
+      "index": 21,
+      "sourceRange": [
+        901,
+        915
+      ],
+      "headerSourceParagraphs": {
+        "title": 901
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        901
+      ]
+    },
+    {
+      "id": "epilogue",
+      "kind": "epilogue",
+      "label": "Epilogue",
+      "title": "After the Last Illusion",
+      "shortTitle": "Epilogue",
+      "file": "chapters/22-epilogue.json",
+      "index": 22,
+      "sourceRange": [
+        916,
+        1056
+      ],
+      "headerSourceParagraphs": {
+        "number": 916,
+        "title": 917
+      },
+      "number": "EPILOGUE",
+      "sourceHeadingParagraphs": [
+        916,
+        917
+      ]
+    },
+    {
+      "id": "about-author",
+      "kind": "ending",
+      "label": "About the Author",
+      "title": "ABOUT THE AUTHOR",
+      "shortTitle": "About the Author",
+      "file": "chapters/23-about-author.json",
+      "index": 23,
+      "sourceRange": [
+        1057,
+        1071
+      ],
+      "headerSourceParagraphs": {
+        "title": 1057
+      },
+      "suppressHeaderNumber": true,
+      "sourceHeadingParagraphs": [
+        1057
+      ]
+    }
+  ]
+}

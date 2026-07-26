@@ -1,0 +1,718 @@
+{
+  "id": "chapter-04",
+  "kind": "chapter",
+  "label": "Chapter 4",
+  "title": "THE CONVERSATIONS THAT NEVER HAPPENED",
+  "shortTitle": "THE CONVERSATIONS THAT NEVER HAPPENED",
+  "file": "chapters/12-chapter-04.json",
+  "index": 12,
+  "sourceRange": [
+    606,
+    689
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai...  meri zindagi ki sabse lambi conversations "
+        }
+      ],
+      "sourceParagraph": 608
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "un logon ke saath hui hain... jinse maine asal mein kuch kaha hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 609
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch dimaag ke andar hota tha.   "
+        }
+      ],
+      "sourceParagraph": 610
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poora scene ready.   "
+        }
+      ],
+      "sourceParagraph": 611
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main.   "
+        }
+      ],
+      "sourceParagraph": 612
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh.   "
+        }
+      ],
+      "sourceParagraph": 613
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek jagah.  Aur "
+        }
+      ],
+      "sourceParagraph": 614
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "finally... main bol "
+        }
+      ],
+      "sourceParagraph": 615
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "raha hu.   "
+        }
+      ],
+      "sourceParagraph": 616
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo saalon se nahi bol paaya.   "
+        }
+      ],
+      "sourceParagraph": 617
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo har baar gale tak aakar ruk gaya.   "
+        }
+      ],
+      "sourceParagraph": 618
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo har baar \"chhod\" ke peeche dab gaya.   "
+        }
+      ],
+      "sourceParagraph": 619
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main imagine karta tha...  "
+        }
+      ],
+      "sourceParagraph": 620
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki woh pooch rahi hai:  "
+        }
+      ],
+      "sourceParagraph": 621
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Sach batao, hua kya tha?\" Aur "
+        }
+      ],
+      "sourceParagraph": 622
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "us moment mein... mere paas "
+        }
+      ],
+      "sourceParagraph": 623
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "answer hota tha.   "
+        }
+      ],
+      "sourceParagraph": 624
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehli baar.   "
+        }
+      ],
+      "sourceParagraph": 625
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na gussa.   "
+        }
+      ],
+      "sourceParagraph": 626
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na ego.   "
+        }
+      ],
+      "sourceParagraph": 627
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na explanation.   "
+        }
+      ],
+      "sourceParagraph": 628
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas sach …..   "
+        }
+      ],
+      "sourceParagraph": 629
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ajeeb baat yeh hai... real life mein kisi ne kabhi "
+        }
+      ],
+      "sourceParagraph": 630
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh sawaal poocha hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 631
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye main aaj tak jawab deta rehta hu.   "
+        }
+      ],
+      "sourceParagraph": 632
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Apne dimaag mein.   "
+        }
+      ],
+      "sourceParagraph": 633
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kuch logon ko lagta hai overthinking future ke baare mein hoti hai.   "
+        }
+      ],
+      "sourceParagraph": 634
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Meri overthinking aksar past ke baare mein thi.   "
+        }
+      ],
+      "sourceParagraph": 635
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh conversations jo ho sakti thi.   "
+        }
+      ],
+      "sourceParagraph": 636
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh moments jo bach sakte the.   "
+        }
+      ],
+      "sourceParagraph": 637
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh misunderstandings jo shayad clear ho sakti thi.   "
+        }
+      ],
+      "sourceParagraph": 638
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main baar baar wahi scene kholta "
+        }
+      ],
+      "sourceParagraph": 639
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tha.  Jaise dimaag ko umeed ho... ki "
+        }
+      ],
+      "sourceParagraph": 640
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "is baar ending badal jayegi.   "
+        }
+      ],
+      "sourceParagraph": 641
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is baar main sahi words choose karunga.   "
+        }
+      ],
+      "sourceParagraph": 642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is baar woh samajh jayegi.   "
+        }
+      ],
+      "sourceParagraph": 643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is baar koi uth kar nahi jaayega.   "
+        }
+      ],
+      "sourceParagraph": 644
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Is baar baat adhuri nahi rahegi.   "
+        }
+      ],
+      "sourceParagraph": 645
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ending har baar wahi rehti thi.   "
+        }
+      ],
+      "sourceParagraph": 646
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality har baar jeet jaati thi.   "
+        }
+      ],
+      "sourceParagraph": 647
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir mujhe samajh aaya...   "
+        }
+      ],
+      "sourceParagraph": 648
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main us insaan ko nahi pakad kar baitha tha.   "
+        }
+      ],
+      "sourceParagraph": 649
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main possibility ko pakad kar baitha tha.     "
+        }
+      ],
+      "sourceParagraph": 650
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us version ko...   "
+        }
+      ],
+      "sourceParagraph": 651
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan sab theek ho sakta tha.   "
+        }
+      ],
+      "sourceParagraph": 652
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us conversation ko...   "
+        }
+      ],
+      "sourceParagraph": 653
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan sab clear ho sakta "
+        }
+      ],
+      "sourceParagraph": 654
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tha.  Us ending ko... jo "
+        }
+      ],
+      "sourceParagraph": 655
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi mili hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 656
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe uski yaad nahi aati thi.  "
+        }
+      ],
+      "sourceParagraph": 657
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe us conversation ki yaad aati thi... jo kabhi "
+        }
+      ],
+      "sourceParagraph": 658
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hui hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 659
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh explanation...   "
+        }
+      ],
+      "sourceParagraph": 660
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo main kabhi de nahi paaya.   "
+        }
+      ],
+      "sourceParagraph": 661
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh questions...   "
+        }
+      ],
+      "sourceParagraph": 662
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo usne kabhi pooche nahi.   "
+        }
+      ],
+      "sourceParagraph": 663
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh silence...  jo hum dono ke beech itna "
+        }
+      ],
+      "sourceParagraph": 664
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bada ho gaya... ki ek din usne sab kuch kha "
+        }
+      ],
+      "sourceParagraph": 665
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "liya.   "
+        }
+      ],
+      "sourceParagraph": 666
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye kuch stories khatam nahi hoti.   "
+        }
+      ],
+      "sourceParagraph": 667
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki unka ending missing nahi hota.   "
+        }
+      ],
+      "sourceParagraph": 668
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Unki conversation missing hoti hai.   "
+        }
+      ],
+      "sourceParagraph": 669
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log closure dhoondte hain.  "
+        }
+      ],
+      "sourceParagraph": 670
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main bhi dhoondta tha. Phir ek "
+        }
+      ],
+      "sourceParagraph": 671
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "din realise hua...   "
+        }
+      ],
+      "sourceParagraph": 672
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main closure nahi dhoond raha.   "
+        }
+      ],
+      "sourceParagraph": 673
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ek mauka dhoond raha hu.   "
+        }
+      ],
+      "sourceParagraph": 674
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek last conversation.  "
+        }
+      ],
+      "sourceParagraph": 675
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek last explanation.  Ek "
+        }
+      ],
+      "sourceParagraph": 676
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "last chance ki... is baar "
+        }
+      ],
+      "sourceParagraph": 677
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi samajh le.   "
+        }
+      ],
+      "sourceParagraph": 678
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin life har kisi ko woh chance nahi deti.   "
+        }
+      ],
+      "sourceParagraph": 679
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi baat sabse zyada dard deti hai.   "
+        }
+      ],
+      "sourceParagraph": 680
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki kuch chapters isliye adhure nahi rehte... "
+        }
+      ],
+      "sourceParagraph": 681
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki humne likhna chhod diya. Kuch chapters "
+        }
+      ],
+      "sourceParagraph": 682
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "adhure rehte hain...   "
+        }
+      ],
+      "sourceParagraph": 683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki hume kabhi bolne ka mauka hi nahi mila."
+        }
+      ],
+      "sourceParagraph": 684
+    }
+  ],
+  "phase": "Phase I - The Mind That Never Stopped Speaking",
+  "headerSourceParagraphs": {
+    "number": 606,
+    "title": 607
+  },
+  "number": "CHAPTER 4",
+  "sourceHeadingParagraphs": [
+    606,
+    607
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "layer-1",
+  "kind": "part",
+  "label": "Layer 1",
+  "title": "THE HUMAN MASK",
+  "shortTitle": "Layer 1",
+  "file": "chapters/08-layer-1.json",
+  "index": 8,
+  "sourceRange": [
+    283,
+    287
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 283,
+    "title": 284,
+    "subtitle": 285
+  },
+  "number": "LAYER 1:",
+  "subtitle": "(WHAT WE SEE)",
+  "sourceHeadingParagraphs": [
+    283,
+    284,
+    285
+  ]
+}

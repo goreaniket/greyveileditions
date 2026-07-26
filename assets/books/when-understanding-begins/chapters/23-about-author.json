@@ -1,0 +1,148 @@
+{
+  "id": "about-author",
+  "kind": "ending",
+  "label": "About the Author",
+  "title": "ABOUT THE AUTHOR",
+  "shortTitle": "About the Author",
+  "file": "chapters/23-about-author.json",
+  "index": 23,
+  "sourceRange": [
+    1057,
+    1071
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lalit R Mishra is an 18-year-old student who observes life more than he speaks "
+        }
+      ],
+      "sourceParagraph": 1058
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "about it. "
+        }
+      ],
+      "sourceParagraph": 1059
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He is someone who tries to understand human behavior, emotions, and the "
+        }
+      ],
+      "sourceParagraph": 1060
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "silent problems that people often ignore or fail to express clearly. "
+        }
+      ],
+      "sourceParagraph": 1061
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Through writing, he attempts to reflect the thoughts and struggles that exist "
+        }
+      ],
+      "sourceParagraph": 1062
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "within relationships, especially those that are misunderstood or left unspoken. "
+        }
+      ],
+      "sourceParagraph": 1063
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He does not write as an expert or as someone who has all the answers. Instead, "
+        }
+      ],
+      "sourceParagraph": 1064
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "he writes as someone who is still learning — from life, from people, and from "
+        }
+      ],
+      "sourceParagraph": 1065
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "his own experiences. "
+        }
+      ],
+      "sourceParagraph": 1066
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "His intention is simple: to create awareness, encourage understanding, and "
+        }
+      ],
+      "sourceParagraph": 1067
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "help people see emotional situations from a more human perspective. "
+        }
+      ],
+      "sourceParagraph": 1068
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "He believes that most problems in life are not created by lack of love, but by "
+        }
+      ],
+      "sourceParagraph": 1069
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lack of understanding — and that healing begins when people start seeing each "
+        }
+      ],
+      "sourceParagraph": 1070
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "other clearly."
+        }
+      ],
+      "sourceParagraph": 1071
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 1057
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    1057
+  ]
+}

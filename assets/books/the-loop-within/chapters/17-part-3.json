@@ -1,0 +1,23 @@
+{
+  "id": "part-3",
+  "kind": "part",
+  "label": "Part 3",
+  "title": "THE LOOP (WHY YOU CAN’T LEAVE IT)",
+  "shortTitle": "Part 3",
+  "file": "chapters/17-part-3.json",
+  "index": 17,
+  "sourceRange": [
+    723,
+    725
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 723,
+    "title": 724
+  },
+  "number": "PART 3:",
+  "sourceHeadingParagraphs": [
+    723,
+    724
+  ]
+}

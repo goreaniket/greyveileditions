@@ -1,0 +1,673 @@
+{
+  "id": "chapter-19",
+  "kind": "chapter",
+  "label": "Chapter 19",
+  "title": "When You Finally Choose Yourself Without Realizing:",
+  "shortTitle": "When You Finally Choose Yourself Without Realizing",
+  "file": "chapters/32-chapter-19.json",
+  "index": 32,
+  "sourceRange": [
+    1506,
+    1580
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi life mein ek moment aata hai… "
+        }
+      ],
+      "sourceParagraph": 1508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kisi decision ki tarah nahi lagta… "
+        }
+      ],
+      "sourceParagraph": 1509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par baad mein tum samajh paate ho ki wahi turning point tha. "
+        }
+      ],
+      "sourceParagraph": 1510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi announcement hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi dramatic goodbye… "
+        }
+      ],
+      "sourceParagraph": 1512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi final message… "
+        }
+      ],
+      "sourceParagraph": 1513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek din tum us cheez ke baare mein utna nahi sochte… "
+        }
+      ],
+      "sourceParagraph": 1514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jitna pehle sochte the. "
+        }
+      ],
+      "sourceParagraph": 1515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye “kam sochna” intentional nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye natural exhaustion of attachment hota hai. "
+        }
+      ],
+      "sourceParagraph": 1517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise mind baar baar ek hi room mein jaa raha ho… "
+        }
+      ],
+      "sourceParagraph": 1518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur har baar same answer mil raha ho… "
+        }
+      ],
+      "sourceParagraph": 1519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dheere dheere jaana kam ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse strange cheez ye hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum kisi cheez se door ho rahe ho… "
+        }
+      ],
+      "sourceParagraph": 1522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tum kisi cheez se door nahi ja rahe… "
+        }
+      ],
+      "sourceParagraph": 1523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum apne andar wapas aa rahe ho. "
+        }
+      ],
+      "sourceParagraph": 1524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehli baar tum notice karte ho… "
+        }
+      ],
+      "sourceParagraph": 1525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhara din ab us ek cheez ke around orbit nahi karta. "
+        }
+      ],
+      "sourceParagraph": 1526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na phone check karna… "
+        }
+      ],
+      "sourceParagraph": 1527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na overthinking loops… "
+        }
+      ],
+      "sourceParagraph": 1528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na silent expectations… "
+        }
+      ],
+      "sourceParagraph": 1529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na imaginary conversations… "
+        }
+      ],
+      "sourceParagraph": 1530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch thoda slow ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 1531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par heavy nahi lagta. "
+        }
+      ],
+      "sourceParagraph": 1532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek silent shift hota hai: "
+        }
+      ],
+      "sourceParagraph": 1533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum “wait” karna band nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum wait ko importance dena band kar dete ho "
+        }
+      ],
+      "sourceParagraph": 1535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye difference sab kuch badal deta hai. "
+        }
+      ],
+      "sourceParagraph": 1536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jab importance kam hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh attachment apne aap loose hone lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab attachment loose hota hai… "
+        }
+      ],
+      "sourceParagraph": 1539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dard apni jagah pe hota hua bhi distant lagne lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi purani awaaz… "
+        }
+      ],
+      "sourceParagraph": 1541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo pehle andar loud chalti thi… "
+        }
+      ],
+      "sourceParagraph": 1542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab background mein chali gayi ho. "
+        }
+      ],
+      "sourceParagraph": 1543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe samajh aata hai: "
+        }
+      ],
+      "sourceParagraph": 1544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kuch cheezein complete nahi hoti "
+        }
+      ],
+      "sourceParagraph": 1545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo bas irrelevant ho jaati hain "
+        }
+      ],
+      "sourceParagraph": 1546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye realization pehli baar dard nahi deta… "
+        }
+      ],
+      "sourceParagraph": 1547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye clarity deta hai. "
+        }
+      ],
+      "sourceParagraph": 1548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum kisi cheez ko hold nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na force se… na decision se… "
+        }
+      ],
+      "sourceParagraph": 1550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas naturally release hone dete ho… "
+        }
+      ],
+      "sourceParagraph": 1551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek chhota sa truth visible hota hai: "
+        }
+      ],
+      "sourceParagraph": 1552
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum kabhi kisi cheez ke andar stuck the hi nahi "
+        }
+      ],
+      "sourceParagraph": 1553
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas apne hi thoughts ke loop mein the "
+        }
+      ],
+      "sourceParagraph": 1554
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab loop toot-ta hai… "
+        }
+      ],
+      "sourceParagraph": 1555
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh jo bachta hai… "
+        }
+      ],
+      "sourceParagraph": 1556
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo empty nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1557
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo simple presence hota hai. "
+        }
+      ],
+      "sourceParagraph": 1558
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kisi ka absence heavy lagta hai… "
+        }
+      ],
+      "sourceParagraph": 1559
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na kisi ka presence zaruri lagta hai… "
+        }
+      ],
+      "sourceParagraph": 1560
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas tum aur tumhari life hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1561
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "without constant comparison. "
+        }
+      ],
+      "sourceParagraph": 1562
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye point pe tum pehli baar samajhte ho: "
+        }
+      ],
+      "sourceParagraph": 1563
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“move on” ek struggle nahi tha "
+        }
+      ],
+      "sourceParagraph": 1564
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek side effect tha of letting go of resistance "
+        }
+      ],
+      "sourceParagraph": 1565
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ab tumhe kisi ko prove nahi karna padta… "
+        }
+      ],
+      "sourceParagraph": 1566
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum theek ho. "
+        }
+      ],
+      "sourceParagraph": 1567
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki theek hona ab ek state nahi… "
+        }
+      ],
+      "sourceParagraph": 1568
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek absence of noise jaisa lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1569
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe story khatam nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 1570
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par loop khatam ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1571
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab jab tum yaad karte ho… "
+        }
+      ],
+      "sourceParagraph": 1572
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo yaad tumhe todti nahi… "
+        }
+      ],
+      "sourceParagraph": 1573
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas guzar jaati hai. "
+        }
+      ],
+      "sourceParagraph": 1574
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab kuch guzar jaata hai bina rukhe… "
+        }
+      ],
+      "sourceParagraph": 1575
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh uska naam hota hai: "
+        }
+      ],
+      "sourceParagraph": 1576
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "peace "
+        }
+      ],
+      "sourceParagraph": 1577
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na loud… na dramatic… "
+        }
+      ],
+      "sourceParagraph": 1578
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas quiet. "
+        }
+      ],
+      "sourceParagraph": 1579
+    }
+  ],
+  "phase": "Part 6 - The Shift",
+  "headerSourceParagraphs": {
+    "number": 1506,
+    "title": 1507
+  },
+  "number": "CHAPTER 19:",
+  "sourceHeadingParagraphs": [
+    1506,
+    1507
+  ]
+}

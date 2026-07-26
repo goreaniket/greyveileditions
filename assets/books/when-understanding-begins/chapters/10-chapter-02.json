@@ -1,0 +1,826 @@
+{
+  "id": "chapter-02",
+  "kind": "chapter",
+  "label": "Chapter 2",
+  "title": "WHY PARENTS FEEL STRICT TO US",
+  "shortTitle": "WHY PARENTS FEEL STRICT TO US",
+  "file": "chapters/10-chapter-02.json",
+  "index": 10,
+  "sourceRange": [
+    354,
+    445
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shuruaat yaha se hoti hai… "
+        }
+      ],
+      "sourceParagraph": 356
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum jab parents ko dekhte hai na "
+        }
+      ],
+      "sourceParagraph": 357
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh hume lagta hai ki woh humesha strict hai "
+        }
+      ],
+      "sourceParagraph": 358
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har choti chiz pe rokna "
+        }
+      ],
+      "sourceParagraph": 359
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har choti galti pe tokna "
+        }
+      ],
+      "sourceParagraph": 360
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har decision pe question uthana "
+        }
+      ],
+      "sourceParagraph": 361
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur hum sochte hai: "
+        }
+      ],
+      "sourceParagraph": 362
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“kyun hamesha mujhe hi control kiya jata hai?” "
+        }
+      ],
+      "sourceParagraph": 363
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par kabhi ruk ke socha hai… "
+        }
+      ],
+      "sourceParagraph": 364
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo strictness hume pressure lagti hai "
+        }
+      ],
+      "sourceParagraph": 365
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad woh unka dar hota hai "
+        }
+      ],
+      "sourceParagraph": 366
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "parents ke andar bhi ek mind hota hai "
+        }
+      ],
+      "sourceParagraph": 367
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo hum nahi dekhte "
+        }
+      ],
+      "sourceParagraph": 368
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unke dimaag mein chalta hai: "
+        }
+      ],
+      "sourceParagraph": 369
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar mera bachcha galat raah pe chala gaya toh? "
+        }
+      ],
+      "sourceParagraph": 370
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar uska future kharab ho gaya toh? "
+        }
+      ],
+      "sourceParagraph": 371
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "agar main usko protect nahi kar paya toh? "
+        }
+      ],
+      "sourceParagraph": 372
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum sochte hai woh hume control kar rahe hai "
+        }
+      ],
+      "sourceParagraph": 373
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par unko lagta hai woh hume bachaa rahe hai "
+        }
+      ],
+      "sourceParagraph": 374
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi “no” jo hota hai na "
+        }
+      ],
+      "sourceParagraph": 375
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh rejection nahi hota "
+        }
+      ],
+      "sourceParagraph": 376
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh protection hota hai "
+        }
+      ],
+      "sourceParagraph": 377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par problem yahi hoti hai… "
+        }
+      ],
+      "sourceParagraph": 378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum intention nahi dekhte "
+        }
+      ],
+      "sourceParagraph": 379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum reaction dekhte hai "
+        }
+      ],
+      "sourceParagraph": 380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jab reaction pe focus hota hai "
+        }
+      ],
+      "sourceParagraph": 381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh intention blur ho jata hai "
+        }
+      ],
+      "sourceParagraph": 382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum kehte hai: “mujhe samjha nahi jata” "
+        }
+      ],
+      "sourceParagraph": 383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par parents bhi sochte hai: “main sahi kar raha hu ya nahi?” "
+        }
+      ],
+      "sourceParagraph": 384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye dono side ka confusion hai "
+        }
+      ],
+      "sourceParagraph": 385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par dono ko lagta hai woh akela hai is feeling mein "
+        }
+      ],
+      "sourceParagraph": 386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi kabhi woh strict isliye hote hai "
+        }
+      ],
+      "sourceParagraph": 387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki unke paas duniya experience hota hai "
+        }
+      ],
+      "sourceParagraph": 388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur hum soft isliye hote hai "
+        }
+      ],
+      "sourceParagraph": 389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki hum abhi experience bana rahe hote hai "
+        }
+      ],
+      "sourceParagraph": 390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "difference yahi hai "
+        }
+      ],
+      "sourceParagraph": 391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jab ye difference samajh nahi aata "
+        }
+      ],
+      "sourceParagraph": 392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh distance ban jata hai "
+        }
+      ],
+      "sourceParagraph": 393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par sach ye hai… "
+        }
+      ],
+      "sourceParagraph": 394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "strictness aur care ke beech gap sirf ek cheez ka hota hai: "
+        }
+      ],
+      "sourceParagraph": 395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "understanding "
+        }
+      ],
+      "sourceParagraph": 396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki jab understanding hoti hai "
+        }
+      ],
+      "sourceParagraph": 397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh “no” bhi love lagta hai "
+        }
+      ],
+      "sourceParagraph": 398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jab understanding nahi hoti "
+        }
+      ],
+      "sourceParagraph": 399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh “yes” bhi pressure lagta hai "
+        }
+      ],
+      "sourceParagraph": 400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur parents ki strictness hi unka pyaar haiii "
+        }
+      ],
+      "sourceParagraph": 401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "acha guys tumne kabhi na kabhi life mai abtak ek esa phase aaya hoga jaha ek "
+        }
+      ],
+      "sourceParagraph": 402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "koi bhi random person hai jo tumhe tumhare accordingly karne de raha hai "
+        }
+      ],
+      "sourceParagraph": 403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhare man ka na benefits na nuksaan kuch bhi nahi bas karne de raha hai "
+        }
+      ],
+      "sourceParagraph": 404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jab tumhara fayda hua if to tumhe lagta hai ki parents se acha ye hai "
+        }
+      ],
+      "sourceParagraph": 405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but jab nuksaan hua to wahi tumhe chhod ke chala jayega "
+        }
+      ],
+      "sourceParagraph": 406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab pata hai us fight mai tumhare saath kaun khada hoga "
+        }
+      ],
+      "sourceParagraph": 407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "parents "
+        }
+      ],
+      "sourceParagraph": 408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bhale thoda daate "
+        }
+      ],
+      "sourceParagraph": 409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur as a parent unka farz hai vo "
+        }
+      ],
+      "sourceParagraph": 410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but tumhe us situation se nikal lenge "
+        }
+      ],
+      "sourceParagraph": 411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur usi jagah agar parents se discuss karke tum karo to ye scene hi create "
+        }
+      ],
+      "sourceParagraph": 412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "nahi hota shayad "
+        }
+      ],
+      "sourceParagraph": 413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "they are parents they know life very well humse jyada "
+        }
+      ],
+      "sourceParagraph": 414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "infact hum aaj kuch incidents dekh ke sochte hai ki humne duniya dekh li "
+        }
+      ],
+      "sourceParagraph": 415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but this is totally wrong "
+        }
+      ],
+      "sourceParagraph": 416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "as a child as a writer i was too in this situation "
+        }
+      ],
+      "sourceParagraph": 417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kabhi life mai ese time bhi aate hai jaha tum galat nahi hote fir bhi sunte ho "
+        }
+      ],
+      "sourceParagraph": 418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "its ok as a karma usse accept kar lena chahiye "
+        }
+      ],
+      "sourceParagraph": 419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum unki strictness ko bojh kyu samjhte hai "
+        }
+      ],
+      "sourceParagraph": 420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hum ye bhi to soch sakte hai na ki haan ye galat hai they are right ya simply "
+        }
+      ],
+      "sourceParagraph": 421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usse accept karke aage chal sakte hai "
+        }
+      ],
+      "sourceParagraph": 422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "but we are teenage na "
+        }
+      ],
+      "sourceParagraph": 423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hume to uspar overthinking karke us chhoti si baat ko pahad tak banana hai "
+        }
+      ],
+      "sourceParagraph": 424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "khud hi banate hai aur khud hi dusre par blame karte hai "
+        }
+      ],
+      "sourceParagraph": 425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "if students career mai like usse arts lena hai usne science liya ghar ke kehne "
+        }
+      ],
+      "sourceParagraph": 426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par "
+        }
+      ],
+      "sourceParagraph": 427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo aage nikal gaya to kya maine nikal diya "
+        }
+      ],
+      "sourceParagraph": 428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "and by chance if he is getting fail to vo usi parents ko blame deta hai ki aap ke "
+        }
+      ],
+      "sourceParagraph": 429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kehne pe hi maine choose kiya tha "
+        }
+      ],
+      "sourceParagraph": 430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "i'm asking is it right?? "
+        }
+      ],
+      "sourceParagraph": 431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "khud ki karma hum dusre pr kyu blame kare?? "
+        }
+      ],
+      "sourceParagraph": 432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur kabhi kabhi jo “random freedom” lagti hai na "
+        }
+      ],
+      "sourceParagraph": 433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo hi sabse dangerous hoti hai "
+        }
+      ],
+      "sourceParagraph": 434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyunki jo bina soche support karta hai "
+        }
+      ],
+      "sourceParagraph": 435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo jab situation bigadti hai "
+        }
+      ],
+      "sourceParagraph": 436
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab waha hota hi nahi "
+        }
+      ],
+      "sourceParagraph": 437
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jo strict hota hai "
+        }
+      ],
+      "sourceParagraph": 438
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "vo usi situation ko pehle hi rokne ki koshish kar raha hota hai "
+        }
+      ],
+      "sourceParagraph": 439
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur shayad isi liye… "
+        }
+      ],
+      "sourceParagraph": 440
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "parents ki strictness kabhi kabhi samajh nahi aati par waqt ke saath wohi "
+        }
+      ],
+      "sourceParagraph": 441
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "cheez clarity ban jati hai "
+        }
+      ],
+      "sourceParagraph": 442
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad parents strict nahi hote… "
+        }
+      ],
+      "sourceParagraph": 443
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad hum bas unke darr ko pehle samajh nahi paate "
+        }
+      ],
+      "sourceParagraph": 444
+    }
+  ],
+  "phase": "Layer 1 - The Human Mask",
+  "headerSourceParagraphs": {
+    "number": 354,
+    "title": 355
+  },
+  "number": "CHAPTER 2:",
+  "sourceHeadingParagraphs": [
+    354,
+    355
+  ]
+}

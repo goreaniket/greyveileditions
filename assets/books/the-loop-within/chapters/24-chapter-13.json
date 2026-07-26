@@ -1,0 +1,569 @@
+{
+  "id": "chapter-13",
+  "kind": "chapter",
+  "label": "Chapter 13",
+  "title": "When You Stop Knowing How to Feel Normal:",
+  "shortTitle": "When You Stop Knowing How to Feel Normal",
+  "file": "chapters/24-chapter-13.json",
+  "index": 24,
+  "sourceRange": [
+    1098,
+    1163
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tum apne hi din ke andar hote ho… "
+        }
+      ],
+      "sourceParagraph": 1100
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tumhe lagta hai jaise tum “andar” ho hi nahi. "
+        }
+      ],
+      "sourceParagraph": 1101
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch chal raha hota hai — "
+        }
+      ],
+      "sourceParagraph": 1102
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "log, baatein, routine, noise… "
+        }
+      ],
+      "sourceParagraph": 1103
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tum us flow mein fully fit nahi ho paate. "
+        }
+      ],
+      "sourceParagraph": 1104
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye cheez dramatic nahi hoti… "
+        }
+      ],
+      "sourceParagraph": 1105
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek slow disconnect hota hai. "
+        }
+      ],
+      "sourceParagraph": 1106
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tum physically present ho… "
+        }
+      ],
+      "sourceParagraph": 1107
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par mentally kisi aur layer mein atak gaye ho. "
+        }
+      ],
+      "sourceParagraph": 1108
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse confusing part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1109
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhe yaad hi nahi hota “normal” feel kaisa hota tha. "
+        }
+      ],
+      "sourceParagraph": 1110
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Normal koi clear cheez nahi lagti… "
+        }
+      ],
+      "sourceParagraph": 1111
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek blurry sa reference ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 1112
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab reference blur ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 1113
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh har feeling thodi suspicious lagne lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1114
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye main theek feel kar raha hoon ya bas adjust kar liya hai?” "
+        }
+      ],
+      "sourceParagraph": 1115
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye khushi hai ya temporary distraction?” "
+        }
+      ],
+      "sourceParagraph": 1116
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye silence peace hai ya numbness?” "
+        }
+      ],
+      "sourceParagraph": 1117
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe mind ek strange loop bana leta hai… "
+        }
+      ],
+      "sourceParagraph": 1118
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo har state ko analyze karna start kar deta hai… "
+        }
+      ],
+      "sourceParagraph": 1119
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jabki pehle wo sirf jeeta tha. "
+        }
+      ],
+      "sourceParagraph": 1120
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere tum ek observer ban jaate ho… "
+        }
+      ],
+      "sourceParagraph": 1121
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par problem ye hai… "
+        }
+      ],
+      "sourceParagraph": 1122
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jeene ke saath observe nahi kar rahe hote… "
+        }
+      ],
+      "sourceParagraph": 1123
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum jeene ke jagah observe kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1124
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab observation overload ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 1125
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh experience thoda fade ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1126
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagta hai ki tum “lost” ho gaye ho… "
+        }
+      ],
+      "sourceParagraph": 1127
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein tum lost nahi hote… "
+        }
+      ],
+      "sourceParagraph": 1128
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas continuous comparison mode mein hote ho. "
+        }
+      ],
+      "sourceParagraph": 1129
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har feeling ko tum kisi purani feeling se compare karte ho… "
+        }
+      ],
+      "sourceParagraph": 1130
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur jab match nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1131
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo feeling “wrong” lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1132
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par truth ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1133
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "feelings ka koi fixed pattern nahi hota. "
+        }
+      ],
+      "sourceParagraph": 1134
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har din tum same version mein nahi hote… "
+        }
+      ],
+      "sourceParagraph": 1135
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "har moment thoda change hota hai. "
+        }
+      ],
+      "sourceParagraph": 1136
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par mind stability ko ideal bana deta hai… "
+        }
+      ],
+      "sourceParagraph": 1137
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur fluctuation ko problem. "
+        }
+      ],
+      "sourceParagraph": 1138
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye jab tum fluctuate karte ho… "
+        }
+      ],
+      "sourceParagraph": 1139
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum apne aap ko unstable samajhne lagte ho. "
+        }
+      ],
+      "sourceParagraph": 1140
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse subtle part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1141
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum “normal” ko ek destination bana dete ho… "
+        }
+      ],
+      "sourceParagraph": 1142
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jabki wo ek moment-to-moment state hoti hai. "
+        }
+      ],
+      "sourceParagraph": 1143
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab destination nahi milta… "
+        }
+      ],
+      "sourceParagraph": 1144
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh journey heavy lagne lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1145
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum comparison ko thoda side rakhte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1147
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sirf moment ko notice karte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1148
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina label diye… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1149
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange sa gap aata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1150
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wo gap silence jaisa nahi hota… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1151
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo clarity jaisa hota hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1152
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us clarity mein tumhe ye samajh aata hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1153
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum broken nahi ho ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1154
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas over-referencing kar rahe ho ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1155
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab referencing kam hoti hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1156
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh present thoda zyada visible ho jata hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1157
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur present ko fix nahi karna padta… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1158
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "use sirf dekha jata hai.",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1159
+    }
+  ],
+  "phase": "Part 4 - The Weight",
+  "headerSourceParagraphs": {
+    "number": 1098,
+    "title": 1099
+  },
+  "number": "CHAPTER 13:",
+  "sourceHeadingParagraphs": [
+    1098,
+    1099
+  ]
+}

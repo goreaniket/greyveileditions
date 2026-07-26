@@ -1,0 +1,793 @@
+{
+  "id": "chapter-12",
+  "kind": "chapter",
+  "label": "Chapter 12",
+  "title": "THE QUIET I",
+  "shortTitle": "THE QUIET I",
+  "file": "chapters/22-chapter-12.json",
+  "index": 22,
+  "sourceRange": [
+    1465,
+    1557
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle mujhe lagta tha main overthink karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1468
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir mujhe laga main sirf feel karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1469
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir dheere dheere mujhe samajh aaya… main "
+        }
+      ],
+      "sourceParagraph": 1470
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas chup rehna seekh gaya hu.   "
+        }
+      ],
+      "sourceParagraph": 1471
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shor kam nahi hua tha.   "
+        }
+      ],
+      "sourceParagraph": 1472
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas andar shift ho gaya tha.   "
+        }
+      ],
+      "sourceParagraph": 1473
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log sochte hain silence ka matlab peace hota hai.   "
+        }
+      ],
+      "sourceParagraph": 1474
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mere case mein aisa nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 1475
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mera silence peaceful nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 1476
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mera silence tired tha.   "
+        }
+      ],
+      "sourceParagraph": 1477
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise kisi cheez ko explain karne ki energy hi khatam ho gayi ho.   "
+        }
+      ],
+      "sourceParagraph": 1478
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle main har cheez analyze karta tha.   "
+        }
+      ],
+      "sourceParagraph": 1479
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har message.   "
+        }
+      ],
+      "sourceParagraph": 1480
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har pause.   "
+        }
+      ],
+      "sourceParagraph": 1481
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har tone.     "
+        }
+      ],
+      "sourceParagraph": 1482
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir ek point aaya… jab main analyze karna bhi "
+        }
+      ],
+      "sourceParagraph": 1483
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "postpone karne laga.   "
+        }
+      ],
+      "sourceParagraph": 1484
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not because I understood everything.   "
+        }
+      ],
+      "sourceParagraph": 1485
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "But because I stopped caring enough to solve it.   "
+        }
+      ],
+      "sourceParagraph": 1486
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yeh difference mujhe bahut der baad samajh aaya.   "
+        }
+      ],
+      "sourceParagraph": 1487
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Understanding aur numbness same nahi hote.   "
+        }
+      ],
+      "sourceParagraph": 1488
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main samajh raha tha ki main theek ho raha hu.   "
+        }
+      ],
+      "sourceParagraph": 1489
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin shayad main sirf feel karna kam kar raha tha.   "
+        }
+      ],
+      "sourceParagraph": 1490
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main apne aap ko observe karta hu.     "
+        }
+      ],
+      "sourceParagraph": 1491
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main kisi cheez ka reaction nahi deta.   "
+        }
+      ],
+      "sourceParagraph": 1492
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na khushi.   "
+        }
+      ],
+      "sourceParagraph": 1493
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na sadness.   "
+        }
+      ],
+      "sourceParagraph": 1494
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na anger.   "
+        }
+      ],
+      "sourceParagraph": 1495
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek blank response.   "
+        }
+      ],
+      "sourceParagraph": 1496
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehle mujhe lagta tha yeh maturity hai.     "
+        }
+      ],
+      "sourceParagraph": 1497
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj lagta hai yeh thakan hai.   "
+        }
+      ],
+      "sourceParagraph": 1498
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek aisi thakan jahan tumhe kuch feel karne ke liye bhi permission chahiye hoti hai.   "
+        }
+      ],
+      "sourceParagraph": 1499
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main logo se normal baat karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1500
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main smile karta hu.   "
+        }
+      ],
+      "sourceParagraph": 1501
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main reply deta hu.   "
+        }
+      ],
+      "sourceParagraph": 1502
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab kuch normal lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 1503
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin andar kuch bhi fully present nahi hota.     "
+        }
+      ],
+      "sourceParagraph": 1504
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise main life ko participate nahi kar raha.   "
+        }
+      ],
+      "sourceParagraph": 1505
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas usko observe kar raha hu.   "
+        }
+      ],
+      "sourceParagraph": 1506
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi mujhe darr lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 1507
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki main iss state mein itna comfortable na ho jaun… ki "
+        }
+      ],
+      "sourceParagraph": 1508
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wapas feel karna hi ajeeb lagne lage.   "
+        }
+      ],
+      "sourceParagraph": 1509
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki numbness bhi ek habit ban sakti hai.   "
+        }
+      ],
+      "sourceParagraph": 1510
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur habits quietly dangerous hoti hain.   "
+        }
+      ],
+      "sourceParagraph": 1511
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh tumhe todti nahi hain.   "
+        }
+      ],
+      "sourceParagraph": 1512
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh tumhe slowly change kar deti hain.   "
+        }
+      ],
+      "sourceParagraph": 1513
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe yaad hai ek din maine khud se poocha…      "
+        }
+      ],
+      "sourceParagraph": 1514
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“Main kya ban raha hu?”     "
+        }
+      ],
+      "sourceParagraph": 1515
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mere paas answer nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 1516
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf ek silence tha.   "
+        }
+      ],
+      "sourceParagraph": 1517
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin woh silence pehle jaisa nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 1518
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle silence mein sawal hote the.   "
+        }
+      ],
+      "sourceParagraph": 1519
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ab silence mein sirf space tha.   "
+        }
+      ],
+      "sourceParagraph": 1520
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Empty space.   "
+        }
+      ],
+      "sourceParagraph": 1521
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main kisi purani baat ko yaad karta hu… aur mujhe "
+        }
+      ],
+      "sourceParagraph": 1522
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lagta hai main us insaan ko jaanta hi nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 1523
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo itna feel karta tha.   "
+        }
+      ],
+      "sourceParagraph": 1524
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo itna react karta tha.   "
+        }
+      ],
+      "sourceParagraph": 1525
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo har cheez ko apne andar le leta tha.   "
+        }
+      ],
+      "sourceParagraph": 1526
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh version ab door lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 1527
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin gayab nahi.   "
+        }
+      ],
+      "sourceParagraph": 1528
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas inaccessible.   "
+        }
+      ],
+      "sourceParagraph": 1529
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise koi purani file jiska password bhool gaya ho.   "
+        }
+      ],
+      "sourceParagraph": 1530
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ab bhi zindagi jee raha hu.   "
+        }
+      ],
+      "sourceParagraph": 1531
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin ek difference ke saath.   "
+        }
+      ],
+      "sourceParagraph": 1532
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ab zindagi ke andar fully sink nahi karta.   "
+        }
+      ],
+      "sourceParagraph": 1533
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main thoda bahar hi rehta hu.     "
+        }
+      ],
+      "sourceParagraph": 1534
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad ye protection hai.    "
+        }
+      ],
+      "sourceParagraph": 1535
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya phir avoidance.   "
+        }
+      ],
+      "sourceParagraph": 1536
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe khud bhi nahi pata.   "
+        }
+      ],
+      "sourceParagraph": 1537
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main sochta hu… ki agar main apne "
+        }
+      ],
+      "sourceParagraph": 1538
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aap ko fully feel karne du… toh kya main wapas  "
+        }
+      ],
+      "sourceParagraph": 1539
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wahi chaos mein chala jaunga?   "
+        }
+      ],
+      "sourceParagraph": 1540
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya phir shayad main sirf us chaos ka darr carry kar raha hu.     "
+        }
+      ],
+      "sourceParagraph": 1541
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main sure nahi hu.   "
+        }
+      ],
+      "sourceParagraph": 1542
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad yahi problem hai.    "
+        }
+      ],
+      "sourceParagraph": 1543
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main sure hona hi chhod chuka hu.   "
+        }
+      ],
+      "sourceParagraph": 1544
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main bas exist kar raha hu.   "
+        }
+      ],
+      "sourceParagraph": 1545
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Quietly.   "
+        }
+      ],
+      "sourceParagraph": 1546
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without asking too many questions.     "
+        }
+      ],
+      "sourceParagraph": 1547
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Without expecting answers.   "
+        }
+      ],
+      "sourceParagraph": 1548
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi lagta hai… yeh "
+        }
+      ],
+      "sourceParagraph": 1549
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "peace nahi hai.   "
+        }
+      ],
+      "sourceParagraph": 1550
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh pause hai.     "
+        }
+      ],
+      "sourceParagraph": 1551
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Long pause. "
+        }
+      ],
+      "sourceParagraph": 1552
+    }
+  ],
+  "phase": "Phase III - The Weight of the Unseen",
+  "headerSourceParagraphs": {
+    "number": 1465,
+    "title": 1466,
+    "subtitle": 1467
+  },
+  "number": "CHAPTER 12",
+  "subtitle": "STARTED LIVING WITH",
+  "sourceHeadingParagraphs": [
+    1465,
+    1466,
+    1467
+  ]
+}

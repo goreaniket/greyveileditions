@@ -1,0 +1,889 @@
+{
+  "id": "chapter-06",
+  "kind": "chapter",
+  "label": "Chapter 6",
+  "title": "THE VERSION OF ME NOBODY EVER KNEW",
+  "shortTitle": "THE VERSION OF ME NOBODY EVER KNEW",
+  "file": "chapters/15-chapter-06.json",
+  "index": 15,
+  "sourceRange": [
+    770,
+    867
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe bahut time tak lagta raha ki log mujhe samajhte nahi.   "
+        }
+      ],
+      "sourceParagraph": 772
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main is baat se irritate bhi hota tha.   "
+        }
+      ],
+      "sourceParagraph": 773
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi hurt bhi.   "
+        }
+      ],
+      "sourceParagraph": 774
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur kabhi kabhi mujhe sach mein lagta tha ki shayad meri life mein koi aisa insaan hai hi nahi jo "
+        }
+      ],
+      "sourceParagraph": 775
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe poori tarah samajh sake.     "
+        }
+      ],
+      "sourceParagraph": 776
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir ek din pata nahi kyun...   "
+        }
+      ],
+      "sourceParagraph": 777
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "maine khud se ek sawaal poocha.   "
+        }
+      ],
+      "sourceParagraph": 778
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Agar koi mujhe samajhta nahi...   "
+        }
+      ],
+      "sourceParagraph": 779
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh maine kitni baar kisi ko mauka diya?     "
+        }
+      ],
+      "sourceParagraph": 780
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wahi jagah thi jahan mera poora argument toot gaya.   "
+        }
+      ],
+      "sourceParagraph": 781
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki sach yeh tha...   "
+        }
+      ],
+      "sourceParagraph": 782
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main logon ko apne baare mein batata tha.   "
+        }
+      ],
+      "sourceParagraph": 783
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin sirf utna...   "
+        }
+      ],
+      "sourceParagraph": 784
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jitna comfortable lagta tha.     "
+        }
+      ],
+      "sourceParagraph": 785
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheezein easy thi...   "
+        }
+      ],
+      "sourceParagraph": 786
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main unke baare mein bol deta tha.   "
+        }
+      ],
+      "sourceParagraph": 787
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheezein funny thi... unpar joke "
+        }
+      ],
+      "sourceParagraph": 788
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "maar deta tha.   "
+        }
+      ],
+      "sourceParagraph": 789
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jo cheezein normal thi... unhe share "
+        }
+      ],
+      "sourceParagraph": 790
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kar deta tha.   "
+        }
+      ],
+      "sourceParagraph": 791
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jo cheezein sach mein important thi...   "
+        }
+      ],
+      "sourceParagraph": 792
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unpar main chup ho jaata tha.   "
+        }
+      ],
+      "sourceParagraph": 793
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir mujhe lagta tha ki log mujhe nahi jaante.   "
+        }
+      ],
+      "sourceParagraph": 794
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj sochta hu toh ajeeb lagta hai.   "
+        }
+      ],
+      "sourceParagraph": 795
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ek locked room mein baitha tha.   "
+        }
+      ],
+      "sourceParagraph": 796
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Darwaza khud band kiya tha.   "
+        }
+      ],
+      "sourceParagraph": 797
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Chabi bhi mere paas thi.   "
+        }
+      ],
+      "sourceParagraph": 798
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir main complain kar raha tha ki koi andar kyun nahi aata.   "
+        }
+      ],
+      "sourceParagraph": 799
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai... main "
+        }
+      ],
+      "sourceParagraph": 800
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "logon se honest tha.   "
+        }
+      ],
+      "sourceParagraph": 801
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir main purani conversations yaad karta hu.   "
+        }
+      ],
+      "sourceParagraph": 802
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur realise hota hai... main "
+        }
+      ],
+      "sourceParagraph": 803
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "honest tha.   "
+        }
+      ],
+      "sourceParagraph": 804
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas complete honest nahi tha.     "
+        }
+      ],
+      "sourceParagraph": 805
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Difference bahut bada hai.   "
+        }
+      ],
+      "sourceParagraph": 806
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main bata deta tha ki main tired hu.   "
+        }
+      ],
+      "sourceParagraph": 807
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh nahi batata tha kis cheez se.   "
+        }
+      ],
+      "sourceParagraph": 808
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main bol deta tha ki sab normal hai.   "
+        }
+      ],
+      "sourceParagraph": 809
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh nahi batata tha ki normal feel karna mujhe yaad bhi nahi.   "
+        }
+      ],
+      "sourceParagraph": 810
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main kehta tha ki mujhe farq nahi padta.   "
+        }
+      ],
+      "sourceParagraph": 811
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Yeh nahi batata tha ki wahi cheez mujhe raat bhar jagaye rakhti hai.   "
+        }
+      ],
+      "sourceParagraph": 812
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere... yeh "
+        }
+      ],
+      "sourceParagraph": 813
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aadat ban gayi.     "
+        }
+      ],
+      "sourceParagraph": 814
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Itni purani aadat...   "
+        }
+      ],
+      "sourceParagraph": 815
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki mujhe khud yaad nahi raha ki main kya chhupa raha hu.   "
+        }
+      ],
+      "sourceParagraph": 816
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sab log ek version jaante the mera.   "
+        }
+      ],
+      "sourceParagraph": 817
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh jo reply karta tha.   "
+        }
+      ],
+      "sourceParagraph": 818
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh jo hasta tha.   "
+        }
+      ],
+      "sourceParagraph": 819
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh jo bolta tha:   "
+        }
+      ],
+      "sourceParagraph": 820
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Sab theek hai.\"   "
+        }
+      ],
+      "sourceParagraph": 821
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin woh poora version nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 822
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Poora version kabhi room mein aata hi nahi tha.   "
+        }
+      ],
+      "sourceParagraph": 823
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf mere saath rehta tha.   "
+        }
+      ],
+      "sourceParagraph": 824
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wahi version jo ek simple sentence ko dus baar analyse karta "
+        }
+      ],
+      "sourceParagraph": 825
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tha.  Wahi version jo kuch logon ko bhool jaana chahta tha... aur "
+        }
+      ],
+      "sourceParagraph": 826
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "unhe yaad rakhne ke reasons bhi dhoondhta rehta tha.   "
+        }
+      ],
+      "sourceParagraph": 827
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Wahi version jo move on karna chahta tha...   "
+        }
+      ],
+      "sourceParagraph": 828
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "lekin kuch cheezon ko khatam maan nahi paata tha.     "
+        }
+      ],
+      "sourceParagraph": 829
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse ajeeb baat?   "
+        }
+      ],
+      "sourceParagraph": 830
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe nahi lagta main kisi aur se jhooth bol raha tha.     "
+        }
+      ],
+      "sourceParagraph": 831
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe lagta hai main khud ko convince kar raha tha.     "
+        }
+      ],
+      "sourceParagraph": 832
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki agar main kisi thought ko loud nahi bolunga...   "
+        }
+      ],
+      "sourceParagraph": 833
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad woh itna real nahi lagega.   "
+        }
+      ],
+      "sourceParagraph": 834
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ki agar main kisi feeling ka naam nahi lunga... toh "
+        }
+      ],
+      "sourceParagraph": 835
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayad mujhe usse deal nahi karna padega.   "
+        }
+      ],
+      "sourceParagraph": 836
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin feelings naam na lene se gayab nahi hoti.   "
+        }
+      ],
+      "sourceParagraph": 837
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh bas background mein chalti rehti hain.   "
+        }
+      ],
+      "sourceParagraph": 838
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek din tum realise karte ho...   "
+        }
+      ],
+      "sourceParagraph": 839
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhari aadhi energy un cheezon ko ignore karne mein ja rahi hai...   "
+        }
+      ],
+      "sourceParagraph": 840
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jinhe tumne kabhi accept hi nahi kiya.   "
+        }
+      ],
+      "sourceParagraph": 841
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai... main "
+        }
+      ],
+      "sourceParagraph": 842
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "connection chahta tha.     "
+        }
+      ],
+      "sourceParagraph": 843
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin vulnerability nahi.   "
+        }
+      ],
+      "sourceParagraph": 844
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main chahta tha koi mujhe samjhe.   "
+        }
+      ],
+      "sourceParagraph": 845
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin main explain nahi karna chahta tha.   "
+        }
+      ],
+      "sourceParagraph": 846
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main chahta tha koi ruk jaye.     "
+        }
+      ],
+      "sourceParagraph": 847
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin main kisi ko itna paas aane nahi deta tha ki woh ruk sake.   "
+        }
+      ],
+      "sourceParagraph": 848
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir jab log door ho jaate the...   "
+        }
+      ],
+      "sourceParagraph": 849
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main sochta tha ki sab chale kyun jaate hain.     "
+        }
+      ],
+      "sourceParagraph": 850
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj yeh likhte hue...   "
+        }
+      ],
+      "sourceParagraph": 851
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe lagta hai main logon se kam...   "
+        }
+      ],
+      "sourceParagraph": 852
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "khud se zyada confuse tha.   "
+        }
+      ],
+      "sourceParagraph": 853
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main nahi jaanta tha mujhe kya chahiye.   "
+        }
+      ],
+      "sourceParagraph": 854
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas itna jaanta tha...   "
+        }
+      ],
+      "sourceParagraph": 855
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki jo mere paas hai woh nahi chahiye.   "
+        }
+      ],
+      "sourceParagraph": 856
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jo chahiye...   "
+        }
+      ],
+      "sourceParagraph": 857
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usse lene ki himmat nahi thi.   "
+        }
+      ],
+      "sourceParagraph": 858
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi liye meri life ka ek version sabne dekha.   "
+        }
+      ],
+      "sourceParagraph": 859
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ek version kisi ne nahi.   "
+        }
+      ],
+      "sourceParagraph": 860
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na doston ne.   "
+        }
+      ],
+      "sourceParagraph": 861
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na un logon ne jo mere close the.     "
+        }
+      ],
+      "sourceParagraph": 862
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad... na "
+        }
+      ],
+      "sourceParagraph": 863
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "maine khud.     "
+        }
+      ],
+      "sourceParagraph": 864
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe lagta tha meri problem yeh hai ki koi mujhe poori tarah nahi jaanta.   "
+        }
+      ],
+      "sourceParagraph": 865
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aaj lagta hai...   "
+        }
+      ],
+      "sourceParagraph": 866
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "sabse pehle mujhe khud hi mujhe jaan lena chahiye tha.   "
+        }
+      ],
+      "sourceParagraph": 867
+    }
+  ],
+  "phase": "Phase II - When Silence Becomes Your Language",
+  "headerSourceParagraphs": {
+    "number": 770,
+    "title": 771
+  },
+  "number": "CHAPTER 6",
+  "sourceHeadingParagraphs": [
+    770,
+    771
+  ]
+}

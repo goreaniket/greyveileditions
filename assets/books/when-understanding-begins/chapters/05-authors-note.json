@@ -1,0 +1,148 @@
+{
+  "id": "authors-note",
+  "kind": "frontmatter",
+  "label": "Author's Note",
+  "title": "NOTE FROM THE AUTHOR",
+  "shortTitle": "Authors Note",
+  "file": "chapters/05-authors-note.json",
+  "index": 5,
+  "sourceRange": [
+    68,
+    82
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not written to point out who is right or wrong. "
+        }
+      ],
+      "sourceParagraph": 69
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "It is simply a reflection of what I have observed, experienced, and thought "
+        }
+      ],
+      "sourceParagraph": 70
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "about while trying to understand relationships more deeply. "
+        }
+      ],
+      "sourceParagraph": 71
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "I am not speaking against parents, nor against children. In my understanding, "
+        }
+      ],
+      "sourceParagraph": 72
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "both sides are right in their own way. Both are carrying their own emotions, "
+        }
+      ],
+      "sourceParagraph": 73
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "fears, responsibilities, and perspectives. "
+        }
+      ],
+      "sourceParagraph": 74
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sometimes what I have written may feel true, and sometimes it may feel "
+        }
+      ],
+      "sourceParagraph": 75
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "incomplete — because every reader has lived a different version of the same "
+        }
+      ],
+      "sourceParagraph": 76
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "reality. "
+        }
+      ],
+      "sourceParagraph": 77
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This book is not a final truth. It is just one way of seeing things. "
+        }
+      ],
+      "sourceParagraph": 78
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "My intention is not to judge anyone, but to observe how misunderstandings are "
+        }
+      ],
+      "sourceParagraph": 79
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "created even when love exists on both sides. "
+        }
+      ],
+      "sourceParagraph": 80
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If this book helps someone pause, think, or understand a situation a little "
+        }
+      ],
+      "sourceParagraph": 81
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "differently, then its purpose is fulfilled."
+        }
+      ],
+      "sourceParagraph": 82
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 68
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    68
+  ]
+}

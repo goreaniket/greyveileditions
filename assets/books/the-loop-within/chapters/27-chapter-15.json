@@ -1,0 +1,646 @@
+{
+  "id": "chapter-15",
+  "kind": "chapter",
+  "label": "Chapter 15",
+  "title": "When Ego and Pain Become",
+  "shortTitle": "When Ego and Pain Become",
+  "file": "chapters/27-chapter-15.json",
+  "index": 27,
+  "sourceRange": [
+    1230,
+    1300
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Comfort Zones : ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1232
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi tumhe lagta hai tum aage badh rahe ho… "
+        }
+      ],
+      "sourceParagraph": 1233
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par agar thoda aur honestly dekho… "
+        }
+      ],
+      "sourceParagraph": 1234
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum actually “aage” nahi ja rahe hote… "
+        }
+      ],
+      "sourceParagraph": 1235
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum ek purani jagah ko hi naye naam de rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1236
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur wo jagah hoti hai: "
+        }
+      ],
+      "sourceParagraph": 1237
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ego + pain ka mixture "
+        }
+      ],
+      "sourceParagraph": 1238
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye mixture dheere dheere ek comfort zone bana deta hai… "
+        }
+      ],
+      "sourceParagraph": 1239
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par aisa comfort jo soft nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1240
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo familiar hota hai. "
+        }
+      ],
+      "sourceParagraph": 1241
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ego kehta hai: "
+        }
+      ],
+      "sourceParagraph": 1242
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main weak nahi hoon” "
+        }
+      ],
+      "sourceParagraph": 1243
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main samajh gaya hoon sab” "
+        }
+      ],
+      "sourceParagraph": 1244
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe farak nahi padta” "
+        }
+      ],
+      "sourceParagraph": 1245
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pain kehta hai: "
+        }
+      ],
+      "sourceParagraph": 1246
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main important tha” "
+        }
+      ],
+      "sourceParagraph": 1247
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main ignore nahi kiya ja sakta” "
+        }
+      ],
+      "sourceParagraph": 1248
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main incomplete hoon” "
+        }
+      ],
+      "sourceParagraph": 1249
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab ye dono saath chalne lagte hain… "
+        }
+      ],
+      "sourceParagraph": 1250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek strange sa internal system ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 1251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jahan tum move on nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum justify karte rehte ho apne stuck hone ko. "
+        }
+      ],
+      "sourceParagraph": 1253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye justification hi tumhara hidden comfort ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 1254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jab tum pain ko justify kar rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 1255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum usse feel karne se bach rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum ego se protect kar rahe hote ho… "
+        }
+      ],
+      "sourceParagraph": 1257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum vulnerability se bach rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dono milke ek safe loop create kar dete hain… "
+        }
+      ],
+      "sourceParagraph": 1259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jisme tum “phase” mein rehte ho… "
+        }
+      ],
+      "sourceParagraph": 1260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par us phase se bahar nahi aate. "
+        }
+      ],
+      "sourceParagraph": 1261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse subtle part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe lagta hai tum aware ho. "
+        }
+      ],
+      "sourceParagraph": 1263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par awareness bhi kabhi kabhi ek shield ban jati hai… "
+        }
+      ],
+      "sourceParagraph": 1264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jisme tum apne pain ko analyse karte ho… "
+        }
+      ],
+      "sourceParagraph": 1265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par release nahi karte. "
+        }
+      ],
+      "sourceParagraph": 1266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur analysis ek illusion deta hai: "
+        }
+      ],
+      "sourceParagraph": 1267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main heal kar raha hoon” "
+        }
+      ],
+      "sourceParagraph": 1268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par reality mein tum sirf repeat kar rahe hote ho. "
+        }
+      ],
+      "sourceParagraph": 1269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ego quietly kaam karta hai… "
+        }
+      ],
+      "sourceParagraph": 1270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo tumhe vulnerable hone se rokta hai. "
+        }
+      ],
+      "sourceParagraph": 1271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki vulnerable hona matlab hota hai: "
+        }
+      ],
+      "sourceParagraph": 1272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main admit kar raha hoon ki main affected tha” "
+        }
+      ],
+      "sourceParagraph": 1273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ego ke liye ye accept karna difficult hota hai. "
+        }
+      ],
+      "sourceParagraph": 1274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye tum pain ko hi identity bana lete ho. "
+        }
+      ],
+      "sourceParagraph": 1275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere tum ek aisi state mein aa jaate ho… "
+        }
+      ],
+      "sourceParagraph": 1276
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jahan tumhe apna pain hi familiar lagta hai… "
+        }
+      ],
+      "sourceParagraph": 1277
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur peace unknown lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1278
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi inversion sabse dangerous hota hai. "
+        }
+      ],
+      "sourceParagraph": 1279
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki ab tum heal nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1280
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum pain ko maintain karte ho, bina realize kiye. "
+        }
+      ],
+      "sourceParagraph": 1281
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab koi tumhe kehta hai “move on”… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1283
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo tumhe samajh nahi paata… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1284
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki tum already “move” ho rahe hote ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1285
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par sirf apne hi circle mein. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1286
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum is ego-pain loop ko sirf observe karte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1287
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na defend karte ho… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1288
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na justify… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1289
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek chhota sa gap create hota hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1290
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us gap mein tumhe pehli baar clearly dikhta hai: ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1291
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum apne pain nahi ho ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1292
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum apne ego nahi ho ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1293
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum sirf ek experience ke observer ho ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1294
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab identification thodi loose hoti hai… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1295
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh loop apna grip thoda chhod deta hai. ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1296
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na force se… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1297
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na effort se… ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1298
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas clarity se... ",
+          "bold": true
+        }
+      ],
+      "sourceParagraph": 1299
+    }
+  ],
+  "phase": "Part 5 - The Break",
+  "headerSourceParagraphs": {
+    "number": 1230,
+    "title": 1231
+  },
+  "number": "CHAPTER 15:",
+  "sourceHeadingParagraphs": [
+    1230,
+    1231
+  ]
+}

@@ -1,0 +1,735 @@
+{
+  "id": "epilogue",
+  "kind": "epilogue",
+  "label": "Epilogue",
+  "title": "After everything ends… but nothing is forced to end inside you.",
+  "shortTitle": "Epilogue",
+  "file": "chapters/34-epilogue.json",
+  "index": 34,
+  "sourceRange": [
+    1640,
+    1722
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi jab tum is book ko band karte ho… "
+        }
+      ],
+      "sourceParagraph": 1642
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh koi dramatic feeling nahi aati… "
+        }
+      ],
+      "sourceParagraph": 1643
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na relief jaisa burst… "
+        }
+      ],
+      "sourceParagraph": 1644
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na sadness ka weight… "
+        }
+      ],
+      "sourceParagraph": 1645
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek normal sa silence hota hai… "
+        }
+      ],
+      "sourceParagraph": 1646
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo pehle thoda unfamiliar lagta hai… "
+        }
+      ],
+      "sourceParagraph": 1647
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur phir dheere dheere normal lagne lagta hai. "
+        }
+      ],
+      "sourceParagraph": 1648
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek strange realization hota hai… "
+        }
+      ],
+      "sourceParagraph": 1649
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhe kisi cheez se “bahar nikalne” ki zarurat utni nahi thi… "
+        }
+      ],
+      "sourceParagraph": 1650
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jitni tum samajh rahe the. "
+        }
+      ],
+      "sourceParagraph": 1651
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jo tum “phase” samajh rahe the… "
+        }
+      ],
+      "sourceParagraph": 1652
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek emotional loop tha… "
+        }
+      ],
+      "sourceParagraph": 1653
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo continuously repeat ho raha tha… "
+        }
+      ],
+      "sourceParagraph": 1654
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same thoughts… same interpretations… same meaning creation. "
+        }
+      ],
+      "sourceParagraph": 1655
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum ye observe karte ho… "
+        }
+      ],
+      "sourceParagraph": 1656
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek simple si clarity aati hai: "
+        }
+      ],
+      "sourceParagraph": 1657
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo bhi tum feel kar rahe the… wo fixed truth nahi tha "
+        }
+      ],
+      "sourceParagraph": 1658
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek repeatable mental pattern tha "
+        }
+      ],
+      "sourceParagraph": 1659
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse important part ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1660
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum is cheez ko fight nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1661
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum isko “fix” nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1662
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum bas dekhna start karte ho. "
+        }
+      ],
+      "sourceParagraph": 1663
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dekhna ek silent shift hota hai… "
+        }
+      ],
+      "sourceParagraph": 1664
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "kyuki jab tum dekhte ho… "
+        }
+      ],
+      "sourceParagraph": 1665
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum andar se usme fully merge nahi hote. "
+        }
+      ],
+      "sourceParagraph": 1666
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab merge kam hota hai… "
+        }
+      ],
+      "sourceParagraph": 1667
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh intensity bhi kam ho jati hai. "
+        }
+      ],
+      "sourceParagraph": 1668
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe lagta hai: "
+        }
+      ],
+      "sourceParagraph": 1669
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main move on kar raha hoon” "
+        }
+      ],
+      "sourceParagraph": 1670
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par asal mein kuch aur ho raha hota hai… "
+        }
+      ],
+      "sourceParagraph": 1671
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum apne hi mind ke repetition se detach ho rahe hote ho "
+        }
+      ],
+      "sourceParagraph": 1672
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye detachment koi loss jaisa feel nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1673
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye ek weight drop jaisa feel hota hai… "
+        }
+      ],
+      "sourceParagraph": 1674
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo pehle pata bhi nahi tha ki carry ho raha hai. "
+        }
+      ],
+      "sourceParagraph": 1675
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tum kisi cheez ko roz uthate the… "
+        }
+      ],
+      "sourceParagraph": 1676
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur tumhe aadat ho gayi thi us weight ki… "
+        }
+      ],
+      "sourceParagraph": 1677
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par ek din wo haath se gir jata hai… "
+        }
+      ],
+      "sourceParagraph": 1678
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur tumhe pehli baar realize hota hai ki wo heavy tha. "
+        }
+      ],
+      "sourceParagraph": 1679
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe ek aur layer break hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1680
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum jo “insaan” ya “past” samajh rahe the… "
+        }
+      ],
+      "sourceParagraph": 1681
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo actually tumhare andar ka ek meaning system tha. "
+        }
+      ],
+      "sourceParagraph": 1682
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum us insaan ko nahi chah rahe the "
+        }
+      ],
+      "sourceParagraph": 1683
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum uske saath wali emotional identity ko hold kar rahe the "
+        }
+      ],
+      "sourceParagraph": 1684
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab identity loose hoti hai… "
+        }
+      ],
+      "sourceParagraph": 1685
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh dard bhi apni jagah loose ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 1686
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse real moment ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 1687
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum kuch force nahi karte… "
+        }
+      ],
+      "sourceParagraph": 1688
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na khud ko samjhate ho… "
+        }
+      ],
+      "sourceParagraph": 1689
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na khud ko convince karte ho… "
+        }
+      ],
+      "sourceParagraph": 1690
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek din tum notice karte ho: "
+        }
+      ],
+      "sourceParagraph": 1691
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab wo thought aata hai… par rukta nahi "
+        }
+      ],
+      "sourceParagraph": 1692
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi “move on” ka hidden form hota hai… "
+        }
+      ],
+      "sourceParagraph": 1693
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo actually move nahi hota… "
+        }
+      ],
+      "sourceParagraph": 1694
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas attachment ka grip loose hota hai. "
+        }
+      ],
+      "sourceParagraph": 1695
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab grip loose hota hai… "
+        }
+      ],
+      "sourceParagraph": 1696
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh life suddenly kisi “story” jaisi nahi lagti… "
+        }
+      ],
+      "sourceParagraph": 1697
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas life jaisi lagti hai. "
+        }
+      ],
+      "sourceParagraph": 1698
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na kisi ki absence heavy… "
+        }
+      ],
+      "sourceParagraph": 1699
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na kisi ki presence necessary… "
+        }
+      ],
+      "sourceParagraph": 1700
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas tum aur tumhara present moment… "
+        }
+      ],
+      "sourceParagraph": 1701
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek normal sa coexistence. "
+        }
+      ],
+      "sourceParagraph": 1702
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar tum honestly dekho… "
+        }
+      ],
+      "sourceParagraph": 1703
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tumhe realize hoga: "
+        }
+      ],
+      "sourceParagraph": 1704
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe kabhi kisi cheez se nikalna nahi tha "
+        }
+      ],
+      "sourceParagraph": 1705
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe bas apne hi loop ko dekhna tha "
+        }
+      ],
+      "sourceParagraph": 1706
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab loop dikh jata hai… "
+        }
+      ],
+      "sourceParagraph": 1707
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh wo tumhe pakad nahi pata. "
+        }
+      ],
+      "sourceParagraph": 1708
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab wo tumhe pakad nahi pata… "
+        }
+      ],
+      "sourceParagraph": 1709
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh tum automatically free ho jate ho. "
+        }
+      ],
+      "sourceParagraph": 1710
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Na koi effort… "
+        }
+      ],
+      "sourceParagraph": 1711
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi fight… "
+        }
+      ],
+      "sourceParagraph": 1712
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "na koi “move on karna”… "
+        }
+      ],
+      "sourceParagraph": 1713
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas ek simple sa change: "
+        }
+      ],
+      "sourceParagraph": 1714
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "pehle tum thought mein hote the "
+        }
+      ],
+      "sourceParagraph": 1715
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ab tum thought ko dekh rahe ho "
+        }
+      ],
+      "sourceParagraph": 1716
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahi pe sab kuch quietly change ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 1717
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bina kisi announcement ke. "
+        }
+      ],
+      "sourceParagraph": 1718
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not moving on… "
+        }
+      ],
+      "sourceParagraph": 1719
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "just no longer being moved by the same loop. "
+        }
+      ],
+      "sourceParagraph": 1720
+    }
+  ],
+  "headerSourceParagraphs": {
+    "number": 1640,
+    "title": 1641
+  },
+  "number": "EPILOGUE :",
+  "sourceHeadingParagraphs": [
+    1640,
+    1641
+  ]
+}

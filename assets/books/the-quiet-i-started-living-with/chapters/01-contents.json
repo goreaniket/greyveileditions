@@ -1,0 +1,187 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Contents",
+  "title": "TABLE OF CONTENTS",
+  "shortTitle": "Contents",
+  "file": "chapters/01-contents.json",
+  "index": 1,
+  "sourceRange": [
+    16,
+    50
+  ],
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright ...................................................... 4",
+      "sourceParagraph": 17
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ..................................................... 5",
+      "sourceParagraph": 18
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication ..................................................... 6",
+      "sourceParagraph": 19
+    },
+    {
+      "type": "toc-line",
+      "text": "A Note from the Author .......................................... 7",
+      "sourceParagraph": 20
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Prologue: When Silence Stops Feeling Familiar ................. 8",
+      "sourceParagraph": 21
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Introduction:The Quiet Before Everything Changed .................... 14",
+      "sourceParagraph": 22
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE I",
+      "sourceParagraph": 23
+    },
+    {
+      "type": "toc-heading",
+      "text": "THE MIND THAT NEVER STOPPED SPEAKING",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1:When Your Mind Becomes The Only Place You Live ................. 20",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2:Why I Stopped Talking .......................................... 26",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3:The Things I Could Never Explain ............................... 32",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4:The Conversations That Never Happened ......................... 36",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE II",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-heading",
+      "text": "WHEN SILENCE BECOMES YOUR LANGUAGE",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5:When You Stop Recognizing Yourself ............................. 41",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6:The Version Of Me Nobody Ever Knew .......................... 45",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7:I Don't Know What I'm Waiting For ............................. 50",
+      "sourceParagraph": 33
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8:After I Stopped Waiting ....................................... 57",
+      "sourceParagraph": 34
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE III",
+      "sourceParagraph": 35
+    },
+    {
+      "type": "toc-heading",
+      "text": "THE WEIGHT OF THE UNSEEN",
+      "sourceParagraph": 36
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9:The Weight Of Things I Never Said ............................. 64",
+      "sourceParagraph": 37
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 10:The Silence That Stayed Longer Than I Expected ................ 70",
+      "sourceParagraph": 38
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 11:The Day I Stopped Feeling Sorry For Myself .................... 76",
+      "sourceParagraph": 39
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 12:The Quiet I Started Living With ............................... 82",
+      "sourceParagraph": 40
+    },
+    {
+      "type": "toc-heading",
+      "text": "PHASE IV",
+      "sourceParagraph": 41
+    },
+    {
+      "type": "toc-heading",
+      "text": "BECOMING SOMEONE THE SILENCE COULD NO LONGER HIDE",
+      "sourceParagraph": 42
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 13:The Distance I Didn't Notice Growing .......................... 88",
+      "sourceParagraph": 43
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 14:When Even My Silence Started Sounding Fake .................... 92",
+      "sourceParagraph": 44
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 15:The Version Of Me That Doesn't Fit Anymore .................... 96",
+      "sourceParagraph": 45
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 16:I Don't Know If This Ever Ended ............................... 101",
+      "sourceParagraph": 46
+    },
+    {
+      "type": "toc-chapter",
+      "text": "End Realization:What The Quiet Was Trying To Teach Me ......................... 107",
+      "sourceParagraph": 47
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Epilogue:The Silence Was Never Empty ................................... 112",
+      "sourceParagraph": 48
+    },
+    {
+      "type": "toc-chapter",
+      "text": "About the Author .............................................. 116",
+      "sourceParagraph": 49
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 16
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    16
+  ]
+}

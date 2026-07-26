@@ -1,0 +1,574 @@
+{
+  "id": "chapter-03",
+  "kind": "chapter",
+  "label": "Chapter 3",
+  "title": "When Silence Becomes a Place You Visit Too",
+  "shortTitle": "When Silence Becomes a Place You Visit Too",
+  "file": "chapters/11-chapter-03.json",
+  "index": 11,
+  "sourceRange": [
+    375,
+    438
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Often:  "
+        }
+      ],
+      "sourceParagraph": 377
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi silence bas silence nahi hota… "
+        }
+      ],
+      "sourceParagraph": 378
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo ek jagah ban jata hai. "
+        }
+      ],
+      "sourceParagraph": 379
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aisi jagah jahan tum physically toh kahin bhi ho sakte ho… "
+        }
+      ],
+      "sourceParagraph": 380
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par tumhara mind baar baar wahi return karta hai. "
+        }
+      ],
+      "sourceParagraph": 381
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tumhe ye return karna notice bhi nahi hota. "
+        }
+      ],
+      "sourceParagraph": 382
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki silence empty nahi hota… "
+        }
+      ],
+      "sourceParagraph": 383
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo filled hota hai — "
+        }
+      ],
+      "sourceParagraph": 384
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas awaaz nahi hoti usmein. "
+        }
+      ],
+      "sourceParagraph": 385
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum kisi room mein ho sakte ho… "
+        }
+      ],
+      "sourceParagraph": 386
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "log ho sakte hain, sound ho sakta hai, movement ho sakta hai… "
+        }
+      ],
+      "sourceParagraph": 387
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par achanak ek moment aata hai… "
+        }
+      ],
+      "sourceParagraph": 388
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "aur sab kuch slow ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 389
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us slowdown ke andar "
+        }
+      ],
+      "sourceParagraph": 390
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe koi nayi cheez nahi milti… "
+        }
+      ],
+      "sourceParagraph": 391
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe wahi purani cheez milti hai. "
+        }
+      ],
+      "sourceParagraph": 392
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Same thought "
+        }
+      ],
+      "sourceParagraph": 393
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same memory "
+        }
+      ],
+      "sourceParagraph": 394
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "same incomplete feeling "
+        }
+      ],
+      "sourceParagraph": 395
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kabhi complete nahi hua. "
+        }
+      ],
+      "sourceParagraph": 396
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur interesting observation ye hota hai… "
+        }
+      ],
+      "sourceParagraph": 397
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum silence ko avoid nahi karte… "
+        }
+      ],
+      "sourceParagraph": 398
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tum silence mein “shift” ho jate ho. "
+        }
+      ],
+      "sourceParagraph": 399
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise dimag ke andar ek automatic route ho "
+        }
+      ],
+      "sourceParagraph": 400
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo tumhe wahi le jata hai baar baar. "
+        }
+      ],
+      "sourceParagraph": 401
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur ye route tum consciously choose nahi karte… "
+        }
+      ],
+      "sourceParagraph": 402
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ye already built hota hai. "
+        }
+      ],
+      "sourceParagraph": 403
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye lagta hai ki tum free ho… "
+        }
+      ],
+      "sourceParagraph": 404
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "par kuch cheezein already repeat mode mein chal rahi hoti hain. "
+        }
+      ],
+      "sourceParagraph": 405
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur silence ka sabse strange part ye hai… "
+        }
+      ],
+      "sourceParagraph": 406
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo tumhe disturb nahi karta… "
+        }
+      ],
+      "sourceParagraph": 407
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo tumhe expose karta hai. "
+        }
+      ],
+      "sourceParagraph": 408
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki jab sab kuch quiet ho jata hai… "
+        }
+      ],
+      "sourceParagraph": 409
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tab tumhe wo cheezein clearly dikhne lagti hain "
+        }
+      ],
+      "sourceParagraph": 410
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo din ke noise mein hide ho jaati hain. "
+        }
+      ],
+      "sourceParagraph": 411
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur us moment pe tumhe samajh aata hai… "
+        }
+      ],
+      "sourceParagraph": 412
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhara mind actually khali nahi hai… "
+        }
+      ],
+      "sourceParagraph": 413
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo overloaded hai. "
+        }
+      ],
+      "sourceParagraph": 414
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas sound band hone se overload visible ho jata hai. "
+        }
+      ],
+      "sourceParagraph": 415
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye log silence se bhagte nahi… "
+        }
+      ],
+      "sourceParagraph": 416
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "log silence ko delay karte hain. "
+        }
+      ],
+      "sourceParagraph": 417
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Busy rehkar… "
+        }
+      ],
+      "sourceParagraph": 418
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "scroll kar ke… "
+        }
+      ],
+      "sourceParagraph": 419
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "baat kar ke… "
+        }
+      ],
+      "sourceParagraph": 420
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ya kisi aur distraction se. "
+        }
+      ],
+      "sourceParagraph": 421
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Par silence apna kaam karta rehta hai… "
+        }
+      ],
+      "sourceParagraph": 422
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo disappear nahi hota… "
+        }
+      ],
+      "sourceParagraph": 423
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo wait nahi karta… "
+        }
+      ],
+      "sourceParagraph": 424
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo return hota rehta hai. "
+        }
+      ],
+      "sourceParagraph": 425
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere ek pattern clear hota hai… "
+        }
+      ],
+      "sourceParagraph": 426
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tumhe problem situation se nahi hai… "
+        }
+      ],
+      "sourceParagraph": 427
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "tumhe problem us repetition se hai jo silence mein replay hota hai. "
+        }
+      ],
+      "sourceParagraph": 428
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab tum ye observe karte ho… "
+        }
+      ],
+      "sourceParagraph": 429
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh pehli baar silence “heavy” nahi lagta… "
+        }
+      ],
+      "sourceParagraph": 430
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wo thoda light lagne lagta hai. "
+        }
+      ],
+      "sourceParagraph": 431
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jaise tum usko fight nahi kar rahe… "
+        }
+      ],
+      "sourceParagraph": 432
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "bas dekh rahe ho. "
+        }
+      ],
+      "sourceParagraph": 433
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur yahin pe ek small shift aata hai… "
+        }
+      ],
+      "sourceParagraph": 434
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad silence enemy nahi hai… "
+        }
+      ],
+      "sourceParagraph": 435
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "shayd silence bas ek mirror hai "
+        }
+      ],
+      "sourceParagraph": 436
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo wahi dikhata hai jo already andar chal raha hota hai."
+        }
+      ],
+      "sourceParagraph": 437
+    }
+  ],
+  "phase": "Part 1 - The Trap",
+  "headerSourceParagraphs": {
+    "number": 375,
+    "title": 376
+  },
+  "number": "CHAPTER 3:",
+  "sourceHeadingParagraphs": [
+    375,
+    376
+  ]
+}

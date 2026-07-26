@@ -1,0 +1,23 @@
+{
+  "id": "phase-ii",
+  "kind": "part",
+  "label": "Phase II",
+  "title": "WHEN SILENCE BECOMES YOUR LANGUAGE",
+  "shortTitle": "Phase II",
+  "file": "chapters/13-phase-ii.json",
+  "index": 13,
+  "sourceRange": [
+    690,
+    693
+  ],
+  "elements": [],
+  "headerSourceParagraphs": {
+    "number": 690,
+    "title": 691
+  },
+  "number": "PHASE II",
+  "sourceHeadingParagraphs": [
+    690,
+    691
+  ]
+}

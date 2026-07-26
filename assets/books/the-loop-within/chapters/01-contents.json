@@ -1,0 +1,197 @@
+{
+  "id": "contents",
+  "kind": "contents",
+  "label": "Index",
+  "title": "INDEX",
+  "shortTitle": "Index",
+  "file": "chapters/01-contents.json",
+  "index": 1,
+  "sourceRange": [
+    23,
+    61
+  ],
+  "elements": [
+    {
+      "type": "toc-line",
+      "text": "Copyright ......................................... 5",
+      "sourceParagraph": 24
+    },
+    {
+      "type": "toc-line",
+      "text": "Dedication........................................ 6",
+      "sourceParagraph": 25
+    },
+    {
+      "type": "toc-line",
+      "text": "Disclaimer ........................................ 7",
+      "sourceParagraph": 26
+    },
+    {
+      "type": "toc-line",
+      "text": "Note from the Author .............................. 8",
+      "sourceParagraph": 27
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Prologue ..........................................10",
+      "sourceParagraph": 28
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Introduction ...................................... 13",
+      "sourceParagraph": 29
+    },
+    {
+      "type": "toc-heading",
+      "text": "PART 1: THE TRAP (WHY YOU GET STUCK)",
+      "sourceParagraph": 30
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 1: When It Doesn’t End, It Just Repeats in Your Mind ............ 16",
+      "sourceParagraph": 31
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 2: When You Start Living in What Never Happened Again .......... 20",
+      "sourceParagraph": 32
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 3: When Silence Becomes a Place You Visit Too Often ............ 24",
+      "sourceParagraph": 33
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 4: When You Confuse Missing with Meaning ....................... 28",
+      "sourceParagraph": 34
+    },
+    {
+      "type": "toc-heading",
+      "text": "PART 2: THE DISTORTION (WHY IT FEELS SO REAL)",
+      "sourceParagraph": 35
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 5: When Memory Becomes Stronger Than Reality ................... 33",
+      "sourceParagraph": 36
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 6: When You Fall in Love With a Version That No Longer Exists .. 37",
+      "sourceParagraph": 37
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 7: When Your Mind Starts Editing the Truth ..................... 41",
+      "sourceParagraph": 38
+    },
+    {
+      "type": "toc-heading",
+      "text": "PART 3: THE LOOP (WHY YOU CAN’T LEAVE IT)",
+      "sourceParagraph": 40
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 8: When Overthinking Becomes a Habit, Not Emotion .............. 46",
+      "sourceParagraph": 41
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 9: When You Keep Replaying Conversations That Never Happened ... 50",
+      "sourceParagraph": 42
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 10: When You Don’t Let the Story End ........................... 54",
+      "sourceParagraph": 43
+    },
+    {
+      "type": "toc-heading",
+      "text": "PART 4: THE WEIGHT (WHY LIFE FEELS HEAVY)",
+      "sourceParagraph": 44
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 11: When Everything Feels Heavy Without Any Reason ............. 59",
+      "sourceParagraph": 45
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 12: When New People Feel Like Old Pain ......................... 56",
+      "sourceParagraph": 46
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 13: When You Stop Knowing How to Feel Normal ................... 63",
+      "sourceParagraph": 47
+    },
+    {
+      "type": "toc-heading",
+      "text": "PART 5: THE BREAK (WHY LETTING GO IS HARD)",
+      "sourceParagraph": 48
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 14: When Holding On Feels Safer Than Starting Again ............ 70",
+      "sourceParagraph": 49
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 15: When Ego and Pain Become Comfort Zones ..................... 74",
+      "sourceParagraph": 50
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 16: When You Are Afraid to Lose the Feeling, Not the Person .... 78",
+      "sourceParagraph": 51
+    },
+    {
+      "type": "toc-heading",
+      "text": "PART 6: THE SHIFT (WHY YOU CAN MOVE ON)",
+      "sourceParagraph": 53
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 17: When You Realize Nothing Is Coming Back .................... 83",
+      "sourceParagraph": 54
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 18: When Acceptance Starts Feeling Like Peace ................. 86",
+      "sourceParagraph": 55
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 19: When You Finally Choose Yourself Without Realizing ........ 90",
+      "sourceParagraph": 56
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Chapter 20: When You Realize the Loop Was Never Meant to Be a Home .... 94",
+      "sourceParagraph": 57
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Epilogue .......................................... 97",
+      "sourceParagraph": 58
+    },
+    {
+      "type": "toc-chapter",
+      "text": "Final Realization ................................. 101",
+      "sourceParagraph": 59
+    },
+    {
+      "type": "toc-chapter",
+      "text": "About the Author .................................. 103",
+      "sourceParagraph": 60
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 23
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    23
+  ]
+}

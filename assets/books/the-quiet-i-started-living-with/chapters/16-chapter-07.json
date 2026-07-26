@@ -1,0 +1,1168 @@
+{
+  "id": "chapter-07",
+  "kind": "chapter",
+  "label": "Chapter 7",
+  "title": "I DON'T KNOW WHAT I'M WAITING FOR",
+  "shortTitle": "I DONT KNOW WHAT IM WAITING FOR",
+  "file": "chapters/16-chapter-07.json",
+  "index": 16,
+  "sourceRange": [
+    868,
+    999
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek time tha jab mujhe lagta tha mujhe exactly pata hai main kya chahta hu.   "
+        }
+      ],
+      "sourceParagraph": 870
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main chahta tha sab theek ho jaye.   "
+        }
+      ],
+      "sourceParagraph": 871
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas.   "
+        }
+      ],
+      "sourceParagraph": 872
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek conversation.   "
+        }
+      ],
+      "sourceParagraph": 873
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek explanation.   "
+        }
+      ],
+      "sourceParagraph": 874
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek misunderstanding clear.   "
+        }
+      ],
+      "sourceParagraph": 875
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sab wapas normal ho jaye.   "
+        }
+      ],
+      "sourceParagraph": 876
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Us waqt mujhe lagta tha problem simple hai.   "
+        }
+      ],
+      "sourceParagraph": 877
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas situation kharab hai.   "
+        }
+      ],
+      "sourceParagraph": 878
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Log kharab nahi.   "
+        }
+      ],
+      "sourceParagraph": 879
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Feelings kharab nahi.   "
+        }
+      ],
+      "sourceParagraph": 880
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Connection kharab nahi.   "
+        }
+      ],
+      "sourceParagraph": 881
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas situation.   "
+        }
+      ],
+      "sourceParagraph": 882
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur main bahut time tak isi thought ko pakad ke baitha raha.   "
+        }
+      ],
+      "sourceParagraph": 883
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki agar problem situation thi... toh ek "
+        }
+      ],
+      "sourceParagraph": 884
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "din woh solve ho sakti thi.   "
+        }
+      ],
+      "sourceParagraph": 885
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur agar woh solve ho sakti thi... toh mujhe "
+        }
+      ],
+      "sourceParagraph": 886
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "wait karna chahiye tha.   "
+        }
+      ],
+      "sourceParagraph": 887
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Isliye maine wait kiya.   "
+        }
+      ],
+      "sourceParagraph": 888
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pehle har din.   "
+        }
+      ],
+      "sourceParagraph": 889
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir har week.   "
+        }
+      ],
+      "sourceParagraph": 890
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir har month.   "
+        }
+      ],
+      "sourceParagraph": 891
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur dheere dheere mujhe wait karne ki aadat ho gayi.   "
+        }
+      ],
+      "sourceParagraph": 892
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sabse ajeeb baat?   "
+        }
+      ],
+      "sourceParagraph": 893
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek point ke baad mujhe yaad bhi nahi raha...   "
+        }
+      ],
+      "sourceParagraph": 894
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main kis cheez ka wait kar raha hu.     "
+        }
+      ],
+      "sourceParagraph": 895
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi lagta tha main uska wait kar raha hu.   "
+        }
+      ],
+      "sourceParagraph": 896
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir main khud se poochta:   "
+        }
+      ],
+      "sourceParagraph": 897
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Agar woh aaj saamne aa jaye toh?\"   "
+        }
+      ],
+      "sourceParagraph": 898
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur mere paas answer nahi hota.     "
+        }
+      ],
+      "sourceParagraph": 899
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sach bolu...   "
+        }
+      ],
+      "sourceParagraph": 900
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main us insaan ke baare mein kam sochta tha.   "
+        }
+      ],
+      "sourceParagraph": 901
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main us version ke baare mein zyada sochta tha jo mere dimaag ne bana rakha tha.   "
+        }
+      ],
+      "sourceParagraph": 902
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh version jo sab samajh leta.   "
+        }
+      ],
+      "sourceParagraph": 903
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh version jo sab explain kar deta.   "
+        }
+      ],
+      "sourceParagraph": 904
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh version jahan kisi ko kuch prove nahi karna padta.   "
+        }
+      ],
+      "sourceParagraph": 905
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir mujhe realise hua...   "
+        }
+      ],
+      "sourceParagraph": 906
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main reality ko miss nahi kar raha tha.   "
+        }
+      ],
+      "sourceParagraph": 907
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ek imagination ko miss kar raha tha.   "
+        }
+      ],
+      "sourceParagraph": 908
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur imagination ki problem yeh hoti hai...   "
+        }
+      ],
+      "sourceParagraph": 909
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "usme kabhi flaws nahi hote.   "
+        }
+      ],
+      "sourceParagraph": 910
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Real log disappoint karte hain.   "
+        }
+      ],
+      "sourceParagraph": 911
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Imaginary versions nahi.   "
+        }
+      ],
+      "sourceParagraph": 912
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Real conversations awkward hoti hain.   "
+        }
+      ],
+      "sourceParagraph": 913
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Imaginary conversations perfect hoti haii "
+        }
+      ],
+      "sourceParagraph": 914
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Real endings incomplete hoti hain "
+        }
+      ],
+      "sourceParagraph": 915
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Imaginary endings hamesha satisfy karti hai "
+        }
+      ],
+      "sourceParagraph": 916
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi liye mera dimaag baar baar wahi jaata tha.   "
+        }
+      ],
+      "sourceParagraph": 917
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki imagination mein sab control mein tha.   "
+        }
+      ],
+      "sourceParagraph": 918
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Reality mein nahi.     "
+        }
+      ],
+      "sourceParagraph": 919
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi main imagine karta tha... ki "
+        }
+      ],
+      "sourceParagraph": 920
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ek din sab wapas normal ho jayega.   "
+        }
+      ],
+      "sourceParagraph": 921
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Phir ek aur thought aata tha "
+        }
+      ],
+      "sourceParagraph": 922
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Normal?   "
+        }
+      ],
+      "sourceParagraph": 923
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kaunsa normal?     "
+        }
+      ],
+      "sourceParagraph": 924
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh jo pehle tha?   "
+        }
+      ],
+      "sourceParagraph": 925
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ya woh jo maine apne dimaag mein bana liya tha?   "
+        }
+      ],
+      "sourceParagraph": 926
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki jitna zyada waqt guzra... utna zyada mujhe realise hua...  ki main sirf kisi insaan ka wait "
+        }
+      ],
+      "sourceParagraph": 927
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "nahi kar raha tha. "
+        }
+      ],
+      "sourceParagraph": 928
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main time ka wait kar raha tha.  ."
+        }
+      ],
+      "sourceParagraph": 929
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main chahta tha koi mujhe woh version wapas de de...   "
+        }
+      ],
+      "sourceParagraph": 930
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo cheezein tootne se pehle tha.   "
+        }
+      ],
+      "sourceParagraph": 931
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin waqt ek ajeeb cheez hai.   "
+        }
+      ],
+      "sourceParagraph": 932
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh logon ko wapas nahi deta.   "
+        }
+      ],
+      "sourceParagraph": 933
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Version bhi nahi.   "
+        }
+      ],
+      "sourceParagraph": 934
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh sirf aage badhta rehta hai.   "
+        }
+      ],
+      "sourceParagraph": 935
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad meri frustration ka asli reason yahi tha.   "
+        }
+      ],
+      "sourceParagraph": 936
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main future se kuch maang raha tha...   "
+        }
+      ],
+      "sourceParagraph": 937
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo sirf past de sakta tha.   "
+        }
+      ],
+      "sourceParagraph": 938
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur past ke paas dene ke liye kuch nahi bacha tha.   "
+        }
+      ],
+      "sourceParagraph": 939
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ek din maine khud se poocha:   "
+        }
+      ],
+      "sourceParagraph": 940
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Agar tujhe woh conversation mil bhi gayi toh?\"   "
+        }
+      ],
+      "sourceParagraph": 941
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Kya sab theek ho jayega?\"   "
+        }
+      ],
+      "sourceParagraph": 942
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur pehli baar...   "
+        }
+      ],
+      "sourceParagraph": 943
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main confidently \"haan\" nahi bol paaya.   "
+        }
+      ],
+      "sourceParagraph": 944
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki andar kahin mujhe pata tha... ki "
+        }
+      ],
+      "sourceParagraph": 945
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "mujhe conversation nahi chahiye.     "
+        }
+      ],
+      "sourceParagraph": 946
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe explanation nahi chahiye.   "
+        }
+      ],
+      "sourceParagraph": 947
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe closure bhi nahi chahiye.   "
+        }
+      ],
+      "sourceParagraph": 948
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe jo chahiye tha…. "
+        }
+      ],
+      "sourceParagraph": 949
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "woh kisi ke paas tha hi nahi "
+        }
+      ],
+      "sourceParagraph": 950
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe time reverse karna tha.   "
+        }
+      ],
+      "sourceParagraph": 951
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Mujhe un moments mein wapas jaana tha...   "
+        }
+      ],
+      "sourceParagraph": 952
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jab cheezein complicated nahi thi.   "
+        }
+      ],
+      "sourceParagraph": 953
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab mujhe har cheez analyse nahi karni padti thi.   "
+        }
+      ],
+      "sourceParagraph": 954
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab future itna heavy nahi lagta tha.   "
+        }
+      ],
+      "sourceParagraph": 955
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Jab kisi naam ko sunke dimaag itna loud nahi ho jaata tha.   "
+        }
+      ],
+      "sourceParagraph": 956
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tab mujhe samajh aaya...   "
+        }
+      ],
+      "sourceParagraph": 957
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki main impossible cheez ka wait kar raha thaa…. "
+        }
+      ],
+      "sourceParagraph": 958
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Shayad isi liye main itna thak gaya.     "
+        }
+      ],
+      "sourceParagraph": 959
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyunki insaan jab kisi real cheez ka wait karta hai... "
+        }
+      ],
+      "sourceParagraph": 960
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh ek din answer mil jaata hai. "
+        }
+      ],
+      "sourceParagraph": 961
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin jab insaan impossible cheez ka wait karta hai...   "
+        }
+      ],
+      "sourceParagraph": 962
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh woh sirf wait karta rehta hai.   "
+        }
+      ],
+      "sourceParagraph": 963
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kabhi kabhi mujhe lagta hai...   "
+        }
+      ],
+      "sourceParagraph": 964
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "main move on nahi kar pa raha tha.   "
+        }
+      ],
+      "sourceParagraph": 965
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Lekin agar main poori honesty se bolu...    "
+        }
+      ],
+      "sourceParagraph": 966
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "toh shayad main move on se nahi darr raha tha.   "
+        }
+      ],
+      "sourceParagraph": 967
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main accept karne se darr raha tha.   "
+        }
+      ],
+      "sourceParagraph": 968
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Accept karne se...   "
+        }
+      ],
+      "sourceParagraph": 969
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki kuch stories waise khatam hoti hain jaisa hum nahi chahte.   "
+        }
+      ],
+      "sourceParagraph": 970
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi final message nahi.   "
+        }
+      ],
+      "sourceParagraph": 971
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi perfect ending nahi.   "
+        }
+      ],
+      "sourceParagraph": 972
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Koi last explanation nahi "
+        }
+      ],
+      "sourceParagraph": 973
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas ek din sab ruk jaata hai.   "
+        }
+      ],
+      "sourceParagraph": 974
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur tum bahut der baad realise karte ho...   "
+        }
+      ],
+      "sourceParagraph": 975
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki story khatam ho chuki thi.   "
+        }
+      ],
+      "sourceParagraph": 976
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Sirf tum uske last page par baithe hue the.   "
+        }
+      ],
+      "sourceParagraph": 977
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad isi liye aaj bhi jab main khud se poochta hu:   "
+        }
+      ],
+      "sourceParagraph": 978
+    },
+    {
+      "type": "blockquote",
+      "runs": [
+        {
+          "text": "\"Tu kis cheez ka wait kar raha tha?\"   "
+        }
+      ],
+      "sourceParagraph": 979
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Toh mere paas perfect answer nahi hota.   "
+        }
+      ],
+      "sourceParagraph": 980
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bas itna pata hai...   "
+        }
+      ],
+      "sourceParagraph": 981
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki main kisi insaan ko pakad kar nahi baitha tha.   "
+        }
+      ],
+      "sourceParagraph": 982
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Main ek possibility ko pakad kar baitha tha.   "
+        }
+      ],
+      "sourceParagraph": 983
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur possibilities kabhi officially marti nahi "
+        }
+      ],
+      "sourceParagraph": 984
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh bas dheere dheere insaan ke andar ghar bana leti hain.   "
+        }
+      ],
+      "sourceParagraph": 985
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek din tum realise karte ho...   "
+        }
+      ],
+      "sourceParagraph": 986
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum zindagi nahi jee rahe.     "
+        }
+      ],
+      "sourceParagraph": 987
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum ek alternate version ka wait kar rahe ho...   "
+        }
+      ],
+      "sourceParagraph": 988
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kabhi aane wala hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 989
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": ".   "
+        }
+      ],
+      "sourceParagraph": 992
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": ".   "
+        }
+      ],
+      "sourceParagraph": 993
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Woh bas dheere dheere insaan ke andar ghar bana leti hain.   "
+        }
+      ],
+      "sourceParagraph": 994
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur phir ek din tum realise karte ho...   "
+        }
+      ],
+      "sourceParagraph": 995
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki tum zindagi nahi jee rahe.     "
+        }
+      ],
+      "sourceParagraph": 996
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Tum ek alternate version ka wait kar rahe ho...   "
+        }
+      ],
+      "sourceParagraph": 997
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "jo kabhi aane wala hi nahi.   "
+        }
+      ],
+      "sourceParagraph": 998
+    }
+  ],
+  "phase": "Phase II - When Silence Becomes Your Language",
+  "headerSourceParagraphs": {
+    "number": 868,
+    "title": 869
+  },
+  "number": "CHAPTER-7",
+  "sourceHeadingParagraphs": [
+    868,
+    869
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "id": "introduction",
+  "kind": "introduction",
+  "label": "Introduction",
+  "title": "INTRODUCTION",
+  "shortTitle": "Introduction",
+  "file": "chapters/07-introduction.json",
+  "index": 7,
+  "sourceRange": [
+    249,
+    282
+  ],
+  "elements": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum sab ek aise relation mein paida hote hain jise hum choose nahi karte, par usi ke andar hum "
+        }
+      ],
+      "sourceParagraph": 250
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "apni poori life define karne lagte hain. "
+        }
+      ],
+      "sourceParagraph": 251
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Parent aur child ka relation duniya ka sabse natural bhi hai aur sabse complex bhi — kyunki "
+        }
+      ],
+      "sourceParagraph": 252
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "yahan sirf love nahi hota, yahan fear, responsibility, expectation, ego aur silence sab ek saath "
+        }
+      ],
+      "sourceParagraph": 253
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "rehte hain. "
+        }
+      ],
+      "sourceParagraph": 254
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur sabse badi problem ye nahi hoti ki hum ek dusre se pyaar nahi karte… "
+        }
+      ],
+      "sourceParagraph": 255
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "problem ye hoti hai ki hum ek dusre ko samajhne ki koshish hi nahi karte. "
+        }
+      ],
+      "sourceParagraph": 256
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Hum roles ko dekhte hain  “parent” aur “child” "
+        }
+      ],
+      "sourceParagraph": 257
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Insaan ko nahi dekhte. "
+        }
+      ],
+      "sourceParagraph": 258
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab insaan invisible ho jata hai, tab emotions confuse ho jaate hain. "
+        }
+      ],
+      "sourceParagraph": 259
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Bachcha apne perspective se dekhta hai aur sochta hai — “mujhe samjha nahi ja raha.” "
+        }
+      ],
+      "sourceParagraph": 260
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Parent apne pressure se dekhta hai aur sochta hai — “mujhe follow nahi kiya ja raha.” "
+        }
+      ],
+      "sourceParagraph": 261
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Dono apni jagah sahi hote hain, par dono ek hi reality mein nahi hote. "
+        }
+      ],
+      "sourceParagraph": 262
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Kyuki reality common nahi hoti… reality interpreted hoti hai. "
+        }
+      ],
+      "sourceParagraph": 263
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Har parent apne past ka result hota hai, aur har child apne present ka pressure. "
+        }
+      ],
+      "sourceParagraph": 264
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur jab past aur present ek hi ghar mein collide karte hain, tab misunderstanding normal ban jati "
+        }
+      ],
+      "sourceParagraph": 265
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "hai. "
+        }
+      ],
+      "sourceParagraph": 266
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ghar mein aksar shanti hoti hai, par connection nahi hota. "
+        }
+      ],
+      "sourceParagraph": 267
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Baat hoti hai, par understanding nahi. "
+        }
+      ],
+      "sourceParagraph": 268
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Presence hoti hai, par awareness nahi. "
+        }
+      ],
+      "sourceParagraph": 269
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur hum is gap ko normal samajh lete hain — jabki yahi gap sab kuch todta hai. "
+        }
+      ],
+      "sourceParagraph": 270
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye book kisi ko defend karne ke liye nahi hai, aur kisi ko blame karne ke liye bhi nahi. "
+        }
+      ],
+      "sourceParagraph": 271
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Ye ek attempt hai us invisible truth ko observe karne ka jo hum daily ignore kar dete hain — "
+        }
+      ],
+      "sourceParagraph": 272
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "ki shayad hum ek hi ghar mein rehkar bhi ek dusre ke emotional world tak kabhi pohanch hi nahi "
+        }
+      ],
+      "sourceParagraph": 273
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "paate. "
+        }
+      ],
+      "sourceParagraph": 274
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Aur shayad sabse bada shift tab aata hai jab hum samajhna start karte hain ki — "
+        }
+      ],
+      "sourceParagraph": 275
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "“samajh na aana” bhi ek human reality hai, na ki kisi ki galti."
+        }
+      ],
+      "sourceParagraph": 276
+    }
+  ],
+  "headerSourceParagraphs": {
+    "title": 249
+  },
+  "suppressHeaderNumber": true,
+  "sourceHeadingParagraphs": [
+    249
+  ]
+}
