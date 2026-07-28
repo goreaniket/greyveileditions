@@ -26,6 +26,18 @@
   --reader-bg-line: transparent;
   --reader-page-edge: rgba(64, 86, 120, .085);
   --reader-shadow: 0 22px 56px rgba(27, 39, 51, .13);
+  --reader-stage-bg:
+    radial-gradient(circle at 17% 12%, color-mix(in srgb, var(--reader-accent) 18%, transparent), transparent 32%),
+    radial-gradient(circle at 84% 9%, color-mix(in srgb, var(--reader-warm) 13%, transparent), transparent 30%),
+    linear-gradient(120deg, rgba(64, 86, 120, .055), transparent 46%);
+  --toolbar-accent: color-mix(in srgb, var(--reader-accent) 86%, var(--reader-warm));
+  --progress-accent: var(--reader-accent-strong);
+  --drawer-accent: var(--reader-accent);
+  --chapter-accent: var(--reader-accent-strong);
+  --section-break-accent: var(--reader-warm);
+  --feedback-accent: color-mix(in srgb, var(--reader-accent) 76%, var(--reader-warm));
+  --page-shadow-color: color-mix(in srgb, var(--reader-accent) 13%, transparent);
+  --cover-glow: color-mix(in srgb, var(--reader-accent) 19%, transparent);
   --page-width: 654px;
   --page-height: 1008px;
   --page-padding-block: 82px;
@@ -90,7 +102,9 @@ html[data-reader-theme="dark"] .reader-theme-last-shift {
 
 .reader-theme-last-shift .reader-toolbar {
   border-color: var(--reader-control-border);
-  background: color-mix(in srgb, var(--reader-bg) 94%, var(--reader-paper));
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--toolbar-accent) 9%, transparent), transparent),
+    color-mix(in srgb, var(--reader-bg) 91%, var(--reader-paper));
   backdrop-filter: none;
 }
 
@@ -101,14 +115,16 @@ html[data-reader-theme="dark"] .reader-theme-last-shift {
 }
 
 .reader-theme-last-shift .reader-control:hover,
-.reader-theme-last-shift .reader-control[aria-pressed="true"] {
+.reader-theme-last-shift .reader-control[aria-pressed="true"],
+.reader-theme-last-shift .reader-theme-select:focus {
   border-color: color-mix(in srgb, var(--reader-accent) 46%, var(--reader-control-border));
   background: var(--reader-accent-soft);
   color: var(--reader-accent-strong);
 }
 
 html[data-reader-theme="dark"] .reader-theme-last-shift .reader-control:hover,
-html[data-reader-theme="dark"] .reader-theme-last-shift .reader-control[aria-pressed="true"] {
+html[data-reader-theme="dark"] .reader-theme-last-shift .reader-control[aria-pressed="true"],
+html[data-reader-theme="dark"] .reader-theme-last-shift .reader-theme-select:focus {
   color: var(--reader-accent-strong);
 }
 
@@ -117,7 +133,7 @@ html[data-reader-theme="dark"] .reader-theme-last-shift .reader-control[aria-pre
 }
 
 .reader-theme-last-shift .reader-progress__track span {
-  background: var(--reader-accent);
+  background: var(--progress-accent);
 }
 
 .reader-theme-last-shift .reader-stage {
@@ -133,6 +149,7 @@ html[data-reader-theme="dark"] .reader-theme-last-shift .reader-control[aria-pre
   background: var(--reader-paper);
   box-shadow:
     var(--reader-shadow),
+    0 0 54px var(--page-shadow-color),
     inset 11px 0 0 var(--reader-page-edge);
 }
 
@@ -189,13 +206,16 @@ html[data-reader-theme="dark"] .reader-theme-last-shift .reader-control[aria-pre
 
 .reader-theme-last-shift .reader-cover-page__frame {
   background: color-mix(in srgb, var(--reader-paper) 84%, var(--reader-paper-soft));
+  box-shadow: inset 0 0 96px var(--cover-glow);
 }
 
 .reader-theme-last-shift .reader-cover-page__image {
   max-width: 100%;
   max-height: 100%;
   border: 1px solid color-mix(in srgb, var(--reader-rule) 64%, transparent);
-  box-shadow: 0 16px 34px rgba(20, 28, 38, .16);
+  box-shadow:
+    0 16px 34px rgba(20, 28, 38, .16),
+    0 0 46px var(--cover-glow);
 }
 
 .reader-theme-last-shift .reader-paragraph,

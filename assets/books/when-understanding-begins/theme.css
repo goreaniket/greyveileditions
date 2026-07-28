@@ -7,6 +7,18 @@
   --page-padding-block: 82px;
   --page-padding-inline: 70px;
   --reader-body-size: 18px;
+  --reader-stage-bg:
+    radial-gradient(circle at 16% 10%, color-mix(in srgb, var(--reader-warm) 18%, transparent), transparent 30%),
+    radial-gradient(circle at 84% 12%, color-mix(in srgb, var(--reader-accent) 14%, transparent), transparent 31%),
+    linear-gradient(120deg, color-mix(in srgb, var(--reader-warm) 7%, transparent), transparent 42%);
+  --toolbar-accent: color-mix(in srgb, var(--reader-accent) 72%, var(--reader-warm));
+  --progress-accent: color-mix(in srgb, var(--reader-warm) 38%, var(--reader-accent-strong));
+  --drawer-accent: color-mix(in srgb, var(--reader-accent) 76%, var(--reader-warm));
+  --chapter-accent: color-mix(in srgb, var(--reader-accent-strong) 80%, var(--reader-warm));
+  --section-break-accent: var(--reader-warm);
+  --feedback-accent: color-mix(in srgb, var(--reader-warm) 62%, var(--reader-accent));
+  --page-shadow-color: color-mix(in srgb, var(--reader-warm) 12%, transparent);
+  --cover-glow: color-mix(in srgb, var(--reader-warm) 18%, transparent);
 }
 
 .reader-theme-understanding-begins .book-page {

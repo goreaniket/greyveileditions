@@ -13,6 +13,9 @@
   let bookUrl = body.dataset.bookUrl || "";
   let pagesRoot = null;
   let loading = null;
+  let brandNode = null;
+  let seriesNode = null;
+  let titleNode = null;
   let statusNode = null;
   let progressLabel = null;
   let progressBar = null;
@@ -23,6 +26,7 @@
   let contentsList = null;
   let fontDecrease = null;
   let fontIncrease = null;
+  let themeSelect = null;
   let themeButtons = [];
 
   const createNode = (tagName, attributes = {}, text = "") => {
@@ -43,7 +47,14 @@
     const skipLink = createNode("a", { class: "reader-skip-link", href: "#reader-content" }, "Skip to book content");
 
     const toolbar = createNode("header", { class: "reader-toolbar", "aria-label": "Reader controls" });
-    const primary = createNode("div", { class: "reader-toolbar__primary" });
+    const identity = createNode("div", { class: "reader-toolbar__identity", "aria-label": "Book identity" });
+    const brand = createNode("p", { class: "reader-brand", "data-reader-brand": "" }, body.dataset.readerBrand || "Greyveil Reader");
+    const series = createNode("p", { class: "reader-series", "data-reader-series": "" }, "Greyveil Editions");
+    const titleNode = createNode("p", { class: "reader-title", "data-reader-title": "" }, "Opening book");
+    const status = createNode("p", { class: "reader-status", "data-reader-status": "" }, "Opening book");
+    identity.append(brand, series, titleNode, status);
+
+    const controls = createNode("div", { class: "reader-toolbar__controls", "aria-label": "Reader tools" });
     const exitLink = createNode(
       "a",
       {
@@ -64,15 +75,12 @@
       },
       "Contents"
     );
-    const status = createNode("p", { class: "reader-status", "data-reader-status": "" }, "Opening book");
     const progress = createNode("div", { class: "reader-progress", "aria-label": "Reading progress" });
     const progressText = createNode("span", { "data-progress-label": "" }, "0%");
     const progressTrack = createNode("span", { class: "reader-progress__track", "aria-hidden": "true" });
     progressTrack.append(createNode("span", { "data-progress-bar": "" }));
     progress.append(progressText, progressTrack);
-    primary.append(exitLink, contentsButton, status, progress);
 
-    const secondary = createNode("div", { class: "reader-toolbar__secondary" });
     const fontControls = createNode("div", { class: "reader-control-group", "aria-label": "Font size" });
     fontControls.append(
       createNode(
@@ -96,23 +104,28 @@
         "A+"
       )
     );
-    const themeSwitcher = createNode("div", { class: "reader-theme-switcher", "aria-label": "Theme" });
-    ["light", "sepia", "dark"].forEach((themeName) => {
-      themeSwitcher.append(
-        createNode(
-          "button",
-          {
-            class: "reader-control",
-            type: "button",
-            "data-theme-choice": themeName,
-            "aria-pressed": String(themeName === "light"),
-          },
-          themeName.charAt(0).toUpperCase() + themeName.slice(1)
-        )
-      );
+    const themeLabel = createNode("label", { class: "reader-theme-switcher" });
+    themeLabel.append(createNode("span", { class: "reader-control-label" }, "Theme"));
+    const themeSelectNode = createNode("select", {
+      class: "reader-control reader-theme-select",
+      "data-theme-select": "",
+      "aria-label": "Reader theme",
     });
-    secondary.append(fontControls, themeSwitcher);
-    toolbar.append(primary, secondary);
+    ["light", "sepia", "dark"].forEach((themeName) => {
+      const option = createNode("option", { value: themeName }, themeName.charAt(0).toUpperCase() + themeName.slice(1));
+      themeSelectNode.append(option);
+    });
+    themeLabel.append(themeSelectNode);
+
+    const typography = createNode("details", { class: "reader-toolbar__more", "data-reader-more": "" });
+    typography.append(
+      createNode("summary", { class: "reader-control reader-toolbar__more-summary", "aria-label": "Typography controls" }, "Aa"),
+      createNode("div", { class: "reader-toolbar__more-panel" })
+    );
+    typography.querySelector(".reader-toolbar__more-panel").append(fontControls);
+
+    controls.append(contentsButton, progress, themeLabel, typography, exitLink);
+    toolbar.append(identity, controls);
 
     const main = createNode("main", { id: "reader-content", class: "reader-stage", "aria-live": "polite" });
     const loadingNode = createNode("div", { class: "reader-loading", "data-reader-loading": "" });
@@ -167,6 +180,9 @@
     bookUrl = body.dataset.bookUrl || "";
     pagesRoot = document.querySelector("[data-reader-pages]");
     loading = document.querySelector("[data-reader-loading]");
+    brandNode = document.querySelector("[data-reader-brand]");
+    seriesNode = document.querySelector("[data-reader-series]");
+    titleNode = document.querySelector("[data-reader-title]");
     statusNode = document.querySelector("[data-reader-status]");
     progressLabel = document.querySelector("[data-progress-label]");
     progressBar = document.querySelector("[data-progress-bar]");
@@ -177,6 +193,7 @@
     contentsList = document.querySelector("[data-contents-list]");
     fontDecrease = document.querySelector("[data-font-decrease]");
     fontIncrease = document.querySelector("[data-font-increase]");
+    themeSelect = document.querySelector("[data-theme-select]");
     themeButtons = Array.from(document.querySelectorAll("[data-theme-choice]"));
   };
 
@@ -190,6 +207,9 @@
     bookUrl,
     pagesRoot,
     loading,
+    brandNode,
+    seriesNode,
+    titleNode,
     statusNode,
     progressLabel,
     progressBar,
@@ -205,7 +225,7 @@
     .filter(([, node]) => !node)
     .map(([name]) => name);
 
-  if (themeButtons.length !== 3) missingNodes.push("themeButtons");
+  if (!themeSelect && themeButtons.length !== 3) missingNodes.push("themeControl");
 
   if (missingNodes.length) {
     console.error(`Reader markup is missing required controls: ${missingNodes.join(", ")}`);
@@ -233,12 +253,16 @@
   const updateReaderShellFromBook = () => {
     const publisher = book.publisher || "Greyveil Editions";
     const title = book.title || "Book";
+    const series = book.seriesDisplay || book.series || book.collection || publisher;
     const article = document.querySelector("[data-reader-pages]");
     const publisherNode = document.querySelector("[data-reader-publisher]");
     const exitLink = document.querySelector("[data-reader-exit], .reader-control--exit");
     const description = document.querySelector("meta[name='description']");
 
     if (article) article.setAttribute("aria-label", title);
+    if (brandNode) brandNode.textContent = body.dataset.readerBrand || publisher;
+    if (seriesNode) seriesNode.textContent = series;
+    if (titleNode) titleNode.textContent = title;
     if (publisherNode) publisherNode.textContent = publisher;
     if (exitLink) {
       const configuredExit = body.dataset.readerExitUrl || book.readerExitUrl || book.detailPageUrl;
@@ -995,6 +1019,7 @@
     const safeTheme = ["light", "sepia", "dark"].includes(theme) ? theme : "light";
     document.documentElement.dataset.readerTheme = safeTheme;
     applyBookTheme(safeTheme);
+    if (themeSelect) themeSelect.value = safeTheme;
     themeButtons.forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.themeChoice === safeTheme));
     });
@@ -1214,6 +1239,9 @@
   drawerBackdrop.addEventListener("click", () => closeContents());
   fontDecrease.addEventListener("click", () => applyFontSize((savedState.fontSize || DEFAULT_FONT_SIZE) - 1));
   fontIncrease.addEventListener("click", () => applyFontSize((savedState.fontSize || DEFAULT_FONT_SIZE) + 1));
+  if (themeSelect) {
+    themeSelect.addEventListener("change", () => applyTheme(themeSelect.value));
+  }
   themeButtons.forEach((button) => {
     button.addEventListener("click", () => applyTheme(button.dataset.themeChoice));
   });

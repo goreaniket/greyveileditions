@@ -7,6 +7,18 @@
   --page-padding-block: 82px;
   --page-padding-inline: 70px;
   --reader-body-size: 18px;
+  --reader-stage-bg:
+    radial-gradient(circle at 14% 14%, color-mix(in srgb, var(--reader-warm) 17%, transparent), transparent 30%),
+    radial-gradient(circle at 88% 9%, color-mix(in srgb, var(--reader-accent) 13%, transparent), transparent 28%),
+    linear-gradient(135deg, color-mix(in srgb, var(--reader-warm) 6%, transparent), transparent 44%);
+  --toolbar-accent: color-mix(in srgb, var(--reader-accent) 70%, var(--reader-warm));
+  --progress-accent: color-mix(in srgb, var(--reader-accent-strong) 82%, var(--reader-warm));
+  --drawer-accent: color-mix(in srgb, var(--reader-accent) 76%, var(--reader-warm));
+  --chapter-accent: var(--reader-accent-strong);
+  --section-break-accent: var(--reader-warm);
+  --feedback-accent: color-mix(in srgb, var(--reader-warm) 58%, var(--reader-accent));
+  --page-shadow-color: color-mix(in srgb, var(--reader-warm) 11%, transparent);
+  --cover-glow: color-mix(in srgb, var(--reader-warm) 16%, transparent);
 }
 
 .reader-theme-quiet-living .book-page {

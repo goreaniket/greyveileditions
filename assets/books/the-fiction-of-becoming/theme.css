@@ -7,6 +7,18 @@
   --page-padding-block: 80px;
   --page-padding-inline: 70px;
   --reader-body-size: 18px;
+  --reader-stage-bg:
+    radial-gradient(circle at 16% 12%, color-mix(in srgb, var(--reader-accent) 16%, transparent), transparent 30%),
+    radial-gradient(circle at 88% 14%, color-mix(in srgb, var(--reader-warm) 16%, transparent), transparent 30%),
+    linear-gradient(130deg, color-mix(in srgb, var(--reader-warm) 7%, transparent), transparent 44%);
+  --toolbar-accent: color-mix(in srgb, var(--reader-accent) 76%, var(--reader-warm));
+  --progress-accent: color-mix(in srgb, var(--reader-accent-strong) 82%, var(--reader-warm));
+  --drawer-accent: var(--reader-accent);
+  --chapter-accent: color-mix(in srgb, var(--reader-accent-strong) 84%, var(--reader-warm));
+  --section-break-accent: var(--reader-warm);
+  --feedback-accent: color-mix(in srgb, var(--reader-warm) 50%, var(--reader-accent));
+  --page-shadow-color: color-mix(in srgb, var(--reader-warm) 12%, transparent);
+  --cover-glow: color-mix(in srgb, var(--reader-warm) 18%, transparent);
 }
 .reader-theme-fiction-becoming .book-page { background: linear-gradient(90deg, var(--reader-page-edge), transparent 18px, transparent calc(100% - 18px), var(--reader-page-edge)), linear-gradient(180deg, color-mix(in srgb, var(--reader-accent) 5%, transparent), transparent 42%), var(--reader-paper); border-color: color-mix(in srgb, var(--reader-border) 82%, transparent); box-shadow: var(--reader-shadow); }
 .reader-theme-fiction-becoming .book-page::before { border-color: color-mix(in srgb, var(--reader-accent) 14%, transparent); }
