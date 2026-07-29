@@ -1721,6 +1721,31 @@ main > .home-hero ~ .section .contact-link {
   padding-block: 135px 80px;
 }
 
+.human-mind-series-book .book-detail {
+  padding-block: var(--header-offset) 64px;
+}
+
+.human-mind-series-book .book-hero {
+  align-items: start;
+  min-height: 0;
+  padding-block: 0 48px;
+}
+
+.human-mind-series-book .cover-placeholder {
+  align-self: start;
+  justify-self: start;
+  width: min(100%, clamp(340px, 54svh, 413px));
+  min-height: 0;
+  max-height: min(620px, calc(100svh - var(--header-offset) - 20px));
+  aspect-ratio: 2 / 3;
+}
+
+.human-mind-series-book .cover-placeholder .book-cover-image {
+  min-height: 0;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* Human Fiction: centered reflective text block for the long-form
    philosophical paragraphs. Reuses .copy's existing paragraph color. */
 .reflective-copy {
@@ -2113,7 +2138,7 @@ blockquote {
   }
 
   .human-mind-series-book .book-detail {
-    padding-block: calc(var(--header-offset) + 18px) 64px;
+    padding-block: var(--header-offset) 58px;
   }
 
   .human-mind-series-book .book-hero {
@@ -2141,6 +2166,19 @@ blockquote {
 
   .human-mind-series-book .contact-panel {
     gap: 18px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1040px) {
+  .human-mind-series-book .book-hero {
+    grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr);
+    gap: 42px;
+  }
+
+  .human-mind-series-book .cover-placeholder {
+    justify-self: start;
+    width: min(100%, clamp(320px, 48svh, 380px));
+    max-height: min(570px, calc(100svh - var(--header-offset) - 20px));
   }
 }
 
@@ -2723,7 +2761,7 @@ blockquote {
   }
 
   .human-mind-series-book .book-detail {
-    padding-block: calc(var(--header-offset) + 8px) 44px;
+    padding-block: var(--header-offset) 44px;
   }
 
   .human-mind-series-book .book-hero {
@@ -2733,14 +2771,14 @@ blockquote {
   }
 
   .human-mind-series-book .cover-placeholder {
-    width: min(100%, 340px);
+    width: min(100%, clamp(288px, 76vw, 312px));
     min-height: 0;
-    max-height: 510px;
+    max-height: min(468px, calc(100svh - var(--header-offset) - 20px));
     margin-inline: auto;
   }
 
   .human-mind-series-book h1 {
-    font-size: clamp(2.35rem, 13vw, 3.2rem);
+    font-size: clamp(2.15rem, 10.5vw, 3rem);
     line-height: 1.02;
   }
 
