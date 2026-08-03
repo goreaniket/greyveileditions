@@ -31,15 +31,16 @@
         "@id": "https://greyveileditions.vercel.app/#organization",
         "name": "Greyveil Editions",
         "url": "https://greyveileditions.vercel.app/",
-        "logo": "https://greyveileditions.vercel.app/assets/images/greyveil-logo.png",
-        "image": "https://greyveileditions.vercel.app/assets/images/greyveil-og-cover.jpg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://greyveileditions.vercel.app/assets/images/greyveil-logo.png"
+        },
+        "founder": {
+          "@id": "https://greyveileditions.vercel.app/founder/#person"
+        },
         "sameAs": [
           "https://www.instagram.com/greyveil_editions"
-        ],
-        "founder": {
-          "@type": "Person",
-          "name": "Lalit R. Mishra"
-        }
+        ]
       },
       {
         "@type": "WebSite",
@@ -72,14 +73,14 @@
       <div class="dropdown">
         <a class="dropdown-trigger" href="projects/index.html" aria-haspopup="true" aria-expanded="false">Projects</a>
         <div class="dropdown-menu">
-          <a href="projects/index.html">Greyveil Collection</a>
+          <a href="projects/index.html">The Human Paradox Collection</a>
           <a class="dropdown-volume" href="projects/index.html">Volume I</a>
           <a class="dropdown-series" href="projects/human-mind/index.html">The Human Mind</a>
           <a class="dropdown-series" href="projects/human-paradox/index.html">The Human Paradox</a>
           <a class="dropdown-series" href="projects/human-fiction/index.html">The Human Fiction</a>
         </div>
       </div>
-      <a href="credits/index.html">Credits</a><a href="contact/index.html">Contact</a>
+      <a href="founder/">Founder</a><a href="credits/index.html">Credits</a><a href="contact/index.html">Contact</a>
     </nav>
   </header> 
 
@@ -89,10 +90,10 @@
         <p class="eyebrow">A Literary &amp; Psychology Publishing House</p>
         <h1>Stories that explain the mind you didn&rsquo;t know you had.</h1>
         <p class="hero-text">Greyveil Editions publishes reflective fiction and philosophy on attachment, memory, silence, and the quiet architecture of being human &mdash; written to be read slowly, and felt longer.</p>
+        <p class="founder-line">Greyveil Editions was founded by <a href="founder/">Lalit Rakesh Mishra</a>.</p>
         <div class="button-row">
           <a class="button primary" href="projects/index.html">Explore the Collection</a>
         </div>
-        <a class="hero-link" href="about/index.html">Meet the Author &rarr;</a>
       </div>
       <div class="reveal delay-1 home-hero-art">
         <div class="hero-book-composition" aria-hidden="true">
@@ -115,9 +116,9 @@
     <section class="section page-shell" aria-labelledby="collection-gateway-heading">
       <div class="section-heading reveal">
         <p class="eyebrow">One Collection, Three Series</p>
-        <h2 id="collection-gateway-heading">The Human Paradox is the house. Every series is a room inside it.</h2>
+        <h2 id="collection-gateway-heading">The Human Paradox Collection gathers three connected series.</h2>
       </div>
-      <p class="section-intro reveal">A single unified exploration of the human mind &mdash; from consciousness, to contradiction, to story.</p>
+      <p class="section-intro reveal">A single unified exploration of the human mind &mdash; from consciousness, to contradiction, to story &mdash; published by Greyveil Editions.</p>
       <div class="project-grid rich-project-grid">
         <a class="project-card rich-project-card tilt-card reveal" href="projects/human-mind/index.html">
           <div class="project-image-wrap"><img src="assets/images/the human mind.jpeg" width="1024" height="1536" alt="The Human Mind series artwork" loading="lazy" decoding="async"></div>
@@ -143,7 +144,25 @@
       </div>
       <div class="button-row reveal delay-2">
         <a class="button primary" href="projects/index.html">Explore the Collection</a>
-        <a class="button ghost" href="feedback/index.html?collection=Greyveil%20Collection%20-%20Volume%20I">Leave Feedback</a>
+        <a class="button ghost" href="feedback/index.html?collection=The%20Human%20Paradox%20Collection">Leave Feedback</a>
+      </div>
+    </section>
+
+    <section class="section page-shell">
+      <div class="contact-panel">
+        <div class="contact-card reveal">
+          <p class="eyebrow">Founder</p>
+          <h2>Lalit Rakesh Mishra</h2>
+          <p class="founder-role">Founder of Greyveil Editions</p>
+          <p>Lalit Rakesh Mishra is the founder of Greyveil Editions, the independent literary and publishing initiative behind The Human Paradox Collection.</p>
+        </div>
+        <div class="contact-card reveal delay-1 founder-home-actions">
+          <p class="eyebrow">Profile</p>
+          <div class="contact-actions">
+            <a class="contact-link primary" href="founder/">Meet the Founder</a>
+            <a class="contact-link" href="about/index.html">About Greyveil Editions</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -177,9 +196,10 @@
       <nav class="footer-col" aria-label="Site navigation">
         <h3>Site</h3>
         <a href="index.html">Home</a>
-        <a href="about/index.html">About</a>
+        <a href="about/index.html">About Greyveil</a>
         <a href="projects/index.html">Projects</a>
-        <a href="credits/index.html">Credits</a>
+        <a href="founder/">Founder</a>
+        <a href="credits/index.html">Credits</a><a href="copyright/">Copyright &amp; Permissions</a>
         <a href="contact/index.html">Contact</a>
       </nav>
       <nav class="footer-col" aria-label="Connect with Greyveil Editions">
@@ -191,7 +211,7 @@
       </nav>
     </div>
     <div class="page-shell footer-bottom">
-      <p>&copy; <span id="year"></span> Greyveil Editions &mdash; Lalit R. Mishra. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Greyveil Editions. All rights reserved. &middot; Founded by <a href="founder/">Lalit Rakesh Mishra</a>.</p>
     </div>
   </footer>
   <script src="assets/js/main.js" defer></script>
