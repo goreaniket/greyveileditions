@@ -24,7 +24,6 @@
   "storageKey": "greyveil:the-paradox-of-explanation:continuous-reader:v1",
   "designSpecFile": "design-spec.json",
   "themeStylesheet": "theme.css",
-  "feedbackEndpoint": "https://script.google.com/macros/s/AKfycbwUMR4-6fG8I4JIUGhrRG6y38brSq-bG0nWAF3R_Uh1rYLKj_BGzwgUwpcooVguLHMsHA/exec",
   "feedbackContext": {
     "collection": "The Human Paradox Collection",
     "series": "Human Paradox",

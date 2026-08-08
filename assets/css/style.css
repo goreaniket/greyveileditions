@@ -1831,6 +1831,73 @@ main > .home-hero ~ .section .contact-link {
   font-weight: 700;
 }
 
+.form-status[data-status="error"] {
+  color: #8c4f4a;
+}
+
+.form-status[data-status="success"] {
+  color: var(--teal);
+}
+
+.auth-hero {
+  min-height: 46svh;
+  padding-block: calc(var(--header-offset) + 36px) 18px;
+}
+
+.auth-card {
+  width: min(100%, 560px);
+}
+
+.auth-card h2 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  line-height: 1.05;
+}
+
+.auth-card .button {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.auth-form-actions {
+  align-items: center;
+  margin-top: 6px;
+}
+
+.auth-form-actions .hero-link {
+  margin-top: 0;
+}
+
+.account-details {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+}
+
+.account-detail {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .44);
+}
+
+.account-detail strong {
+  color: var(--slate);
+  font-size: .75rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.account-detail span {
+  overflow-wrap: anywhere;
+}
+
 .instagram-icon {
   width: 18px;
   height: 18px;

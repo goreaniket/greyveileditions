@@ -4,10 +4,12 @@
   const MAX_FONT_SIZE = 22;
   const PAGINATION_DELAY = 80;
   const SCROLL_SAVE_DELAY = 120;
+  const readerScriptUrl = document.currentScript?.src || new URL("/assets/js/reader.js", window.location.href).href;
+  const loadFeedbackModule = () => import(new URL("feedback-submission.js", readerScriptUrl).href);
 
   // Minimum book.json schema: id, title, readerRoute, themeStylesheet,
-  // designSpecFile, feedbackEndpoint, feedbackContext, occupationOptions,
-  // ratingOptions, and units[] with each unit file containing ordered elements
+  // designSpecFile, feedbackContext, occupationOptions, ratingOptions, and
+  // units[] with each unit file containing ordered elements
   // and sourceParagraph anchors.
   const body = document.body;
   let bookUrl = body.dataset.bookUrl || "";
@@ -775,8 +777,6 @@
     panelHeading.id = "book-feedback-title";
     panelHeading.textContent = "Share Your Feedback";
     const form = document.createElement("form");
-    form.action = book.feedbackEndpoint;
-    form.method = "POST";
     form.dataset.bookFeedback = "";
     form.append(
       createHiddenInput("collection", context.collection),
@@ -1095,6 +1095,27 @@
     const feedbackPage = panel.closest(".book-page");
     const firstControl = panel.querySelector('input:not([type="hidden"]), textarea, select, button');
     feedbackPage?.classList.add("book-page--feedback");
+    const setFeedbackStatus = (node, message = "", state = "") => {
+      if (!node) return;
+      node.dataset.state = state;
+      node.textContent = message;
+    };
+    const setSubmitState = (button, busy) => {
+      if (!button) return;
+      if (!button.dataset.defaultLabel) button.dataset.defaultLabel = button.textContent;
+      button.disabled = busy;
+      button.textContent = busy ? "Sending feedback..." : button.dataset.defaultLabel;
+    };
+    const logFeedbackError = (error) => {
+      console.error("Reader feedback submission failed", {
+        name: error?.name,
+        message: error?.message,
+        code: error?.code,
+        details: error?.details,
+        hint: error?.hint,
+        status: error?.status,
+      });
+    };
 
     toggle.addEventListener("click", () => {
       const expanded = panel.hidden;
@@ -1124,57 +1145,30 @@
       event.preventDefault();
       const submitButton = form.querySelector("button[type='submit']");
       const status = form.querySelector("[data-feedback-status]");
-      const data = new FormData(form);
-      const feedback = (data.get("feedback") || "").toString().trim();
-      const email = (data.get("email") || "").toString().trim();
-      if (!feedback || !email) return;
+      if (form.dataset.submitting === "true") return;
 
-      const submission = {
-        name: (data.get("name") || "").toString().trim(),
-        email,
-        feedback,
-        message: feedback,
-        collection: (data.get("collection") || "").toString().trim(),
-        series: (data.get("series") || "").toString().trim(),
-        book: (data.get("book") || "").toString().trim(),
-        occupation: (data.get("occupation") || "").toString().trim(),
-        rating: (data.get("rating") || "").toString().trim(),
-        feedbackType: (data.get("feedbackType") || "").toString().trim(),
-      };
-      const payload = new FormData();
-      ["name", "email", "feedback", "message", "collection", "series", "book", "occupation", "rating", "feedbackType"].forEach((key) => {
-        payload.append(key, submission[key]);
-      });
-
-      submitButton.disabled = true;
-      status.dataset.state = "loading";
-      status.textContent = "Sending feedback...";
-
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: payload,
-          headers: { Accept: "application/json" },
-        });
-
-        if (response.ok) {
-          status.dataset.state = "success";
-          status.textContent = "Thank you. Your feedback has been sent.";
-          form.elements.name.value = "";
-          form.elements.email.value = "";
-          form.elements.feedback.value = "";
-          form.elements.occupation.value = "";
-          form.elements.rating.value = "";
-        } else {
-          status.dataset.state = "error";
-          status.textContent = "There was a problem submitting your feedback.";
-        }
-      } catch (error) {
-        status.dataset.state = "error";
-        status.textContent = "There was a network problem.";
+      if (!form.checkValidity()) {
+        setFeedbackStatus(status, "Please complete the required fields.", "error");
+        form.reportValidity();
+        return;
       }
 
-      submitButton.disabled = false;
+      form.dataset.submitting = "true";
+      setSubmitState(submitButton, true);
+      setFeedbackStatus(status, "Sending feedback...", "loading");
+
+      try {
+        const { clearFeedbackEntryFields, submitFeedback } = await loadFeedbackModule();
+        await submitFeedback(form);
+        setFeedbackStatus(status, "Thank you. Your feedback has been sent.", "success");
+        clearFeedbackEntryFields(form);
+      } catch (error) {
+        logFeedbackError(error);
+        setFeedbackStatus(status, "We could not save your feedback right now. Please try again.", "error");
+      } finally {
+        delete form.dataset.submitting;
+        setSubmitState(submitButton, false);
+      }
     });
   };
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account | Greyveil Editions</title>
+  <meta name="description" content="View your Greyveil Editions account details." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://greyveileditions.vercel.app/account/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body data-auth-page="account">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="/index.html">Greyveil Editions</a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle aria-controls="primary-navigation">Menu</button>
+    <nav id="primary-navigation" class="site-nav" data-nav aria-label="Primary">
+      <a href="/index.html">Home</a>
+      <a href="/about/index.html">About</a>
+      <div class="dropdown">
+        <a class="dropdown-trigger" href="/projects/index.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu">
+          <a href="/projects/index.html">The Human Paradox Collection</a>
+          <a class="dropdown-volume" href="/projects/index.html">Volume I</a>
+          <a class="dropdown-series" href="/projects/human-mind/index.html">The Human Mind</a>
+          <a class="dropdown-series" href="/projects/human-paradox/index.html">The Human Paradox</a>
+          <a class="dropdown-series" href="/projects/human-fiction/index.html">The Human Fiction</a>
+        </div>
+      </div>
+      <a href="/founder/">Founder</a><a href="/credits/index.html">Credits</a>
+      <a href="/contact/index.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="project-hero page-shell feedback-hero auth-hero">
+      <div class="reveal">
+        <p class="eyebrow">Your Account</p>
+        <h1>Greyveil Editions</h1>
+        <p class="hero-text">A quiet place for your reader account details.</p>
+      </div>
+    </section>
+
+    <section class="section page-shell feedback-layout">
+      <article class="contact-card feedback-form auth-card reveal" data-auth-view hidden>
+        <p class="eyebrow">Signed In</p>
+        <h2 data-account-name>Reader</h2>
+        <div class="account-details">
+          <p class="account-detail">
+            <strong>Email</strong>
+            <span data-account-email></span>
+          </p>
+          <p class="account-detail" data-account-role-row hidden>
+            <strong>Internal Role</strong>
+            <span data-account-role></span>
+          </p>
+        </div>
+        <div class="contact-actions">
+          <button class="button primary" type="button" data-logout-button>Logout</button>
+        </div>
+        <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--rich">
+    <div class="page-shell footer-grid">
+      <div class="footer-brand">
+        <p class="footer-brand-name">Greyveil Editions</p>
+        <p>A literary and psychology publishing house exploring memory, attachment, silence, and the quiet architecture of human experience.</p>
+      </div>
+      <nav class="footer-col" aria-label="Site navigation">
+        <h3>Site</h3>
+        <a href="/index.html">Home</a>
+        <a href="/about/index.html">About Greyveil</a>
+        <a href="/projects/index.html">Projects</a>
+        <a href="/founder/">Founder</a>
+        <a href="/credits/index.html">Credits</a><a href="/copyright/">Copyright &amp; Permissions</a>
+        <a href="/contact/index.html">Contact</a>
+      </nav>
+      <nav class="footer-col" aria-label="Connect with Greyveil Editions">
+        <h3>Connect</h3>
+        <a href="mailto:greyveileditions@gmail.com">Email</a>
+        <a href="tel:+917874560944">Phone</a>
+        <a href="https://wa.me/917874560944">WhatsApp</a>
+        <a href="https://www.instagram.com/greyveil_editions?utm_source=qr&igsh=bXZqcTJ6NmppYWJp">Instagram</a>
+      </nav>
+    </div>
+    <div class="page-shell footer-bottom">
+      <p>&copy; <span id="year"></span> Greyveil Editions. All rights reserved. &middot; Founded by <a href="/founder/">Lalit Rakesh Mishra</a>.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/auth.js"></script>
+</body>
+</html>

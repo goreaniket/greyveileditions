@@ -5,6 +5,7 @@ const cursorGlow = document.querySelector(".cursor-glow");
 const year = document.getElementById("year");
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const mainScriptUrl = document.currentScript?.src || new URL("/assets/js/main.js", window.location.href).href;
 
 if (year) year.textContent = new Date().getFullYear();
 
@@ -81,6 +82,7 @@ const feedbackForm = document.querySelector("[data-feedback-form]");
 
 if (feedbackForm) {
   const params = new URLSearchParams(window.location.search);
+  const loadFeedbackModule = () => import(new URL("feedback-submission.js", mainScriptUrl).href);
   const context = {
     collection: params.get("collection") || "The Human Paradox Collection",
     series: params.get("series") || "",
@@ -90,6 +92,27 @@ if (feedbackForm) {
   const contextLine = document.querySelector("[data-feedback-context]");
   const status = document.querySelector("[data-feedback-status]");
   const formatContext = (value) => value.replace(/\s+-\s+/g, " \u2014 ");
+  const setFeedbackStatus = (message = "", type = "") => {
+    if (!status) return;
+    status.textContent = message;
+    status.dataset.status = type;
+  };
+  const setSubmitState = (button, busy) => {
+    if (!button) return;
+    if (!button.dataset.defaultLabel) button.dataset.defaultLabel = button.textContent;
+    button.disabled = busy;
+    button.textContent = busy ? "Sending feedback..." : button.dataset.defaultLabel;
+  };
+  const logFeedbackError = (error) => {
+    console.error("Feedback submission failed", {
+      name: error?.name,
+      message: error?.message,
+      code: error?.code,
+      details: error?.details,
+      hint: error?.hint,
+      status: error?.status,
+    });
+  };
 
   Object.entries(context).forEach(([key, value]) => {
     const input = feedbackForm.elements[key];
@@ -111,55 +134,29 @@ if (feedbackForm) {
     event.preventDefault(); 
     
     const submitButton = feedbackForm.querySelector("button[type='submit']");
-    const status = document.querySelector("[data-feedback-status]");
-    const data = new FormData(feedbackForm);
-    const feedback = data.get("feedback")?.toString().trim();
-    const email = data.get("email")?.toString().trim();
-    const occupation = data.get("occupation")?.toString().trim();
-    const rating = data.get("rating")?.toString().trim();
-    const submission = {
-      name: data.get("name")?.toString().trim() || "",
-      email: email || "",
-      feedback: feedback || "",
-      message: feedback || "",
-      collection: data.get("collection")?.toString().trim() || "",
-      series: data.get("series")?.toString().trim() || "",
-      book: data.get("book")?.toString().trim() || "",
-      occupation: occupation || "",
-      rating: rating || "",
-    };
-    const payload = new FormData();
-    ["name", "email", "feedback", "message", "collection", "series", "book", "occupation", "rating"].forEach((key) => {
-      payload.append(key, submission[key]);
-    });
-    
-    if (!feedback || !email) return;
-    if (submitButton) submitButton.disabled = true;
-    if (status) status.textContent = "Sending feedback...";
+    if (feedbackForm.dataset.submitting === "true") return;
+
+    if (!feedbackForm.checkValidity()) {
+      setFeedbackStatus("Please complete the required fields.", "error");
+      feedbackForm.reportValidity();
+      return;
+    }
+
+    feedbackForm.dataset.submitting = "true";
+    setSubmitState(submitButton, true);
+    setFeedbackStatus("Sending feedback...", "info");
 
     try {
-      const response = await fetch(feedbackForm.action, {
-        method: 'POST',
-        body: payload,
-        headers: {
-            'Accept': 'application/json'
-        }
-      });
-      
-      if (response.ok) {
-        status.textContent = "Thank you! Your feedback has been sent.";
-        feedbackForm.elements.name.value = "";
-        feedbackForm.elements.email.value = "";
-        feedbackForm.elements.feedback.value = "";
-        feedbackForm.elements.occupation.value = "";
-        feedbackForm.elements.rating.value = "";
-      } else {
-        status.textContent = "Oops! There was a problem submitting your form.";
-      }
+      const { clearFeedbackEntryFields, submitFeedback } = await loadFeedbackModule();
+      await submitFeedback(feedbackForm);
+      setFeedbackStatus("Thank you! Your feedback has been sent.", "success");
+      clearFeedbackEntryFields(feedbackForm);
     } catch (error) {
-      status.textContent = "Oops! There was a network problem.";
+      logFeedbackError(error);
+      setFeedbackStatus("We could not save your feedback right now. Please try again.", "error");
+    } finally {
+      delete feedbackForm.dataset.submitting;
+      setSubmitState(submitButton, false);
     }
-    
-    if (submitButton) submitButton.disabled = false;
   });
 }

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Greyveil Editions</title>
+  <meta name="description" content="Protected Greyveil Editions administration dashboard." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://greyveileditions.vercel.app/admin/" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/admin.css" />
+</head>
+<body class="admin-page">
+  <a class="skip-link" href="#admin-content">Skip to dashboard</a>
+  <div class="ambient-field admin-ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <main id="admin-content">
+    <section class="admin-screen" data-admin-loading>
+      <p class="admin-eyebrow">Greyveil Editions</p>
+      <h1>Opening Admin Dashboard</h1>
+      <p>Checking your account access...</p>
+    </section>
+
+    <section class="admin-screen admin-screen--locked" data-admin-locked hidden>
+      <p class="admin-eyebrow">Protected Area</p>
+      <h1>Admin access could not be confirmed.</h1>
+      <p data-admin-locked-message>Only Greyveil admins can open this dashboard.</p>
+      <a class="admin-action admin-action--primary" href="/auth/login/">Go to Login</a>
+    </section>
+
+    <div class="admin-shell" data-admin-app hidden>
+      <aside class="admin-sidebar" data-admin-sidebar aria-label="Admin navigation">
+        <a class="admin-brand" href="/index.html">
+          <span>Greyveil</span>
+          <strong>Editions</strong>
+        </a>
+        <nav class="admin-nav" aria-label="Dashboard sections">
+          <button type="button" data-admin-tab="dashboard" aria-selected="true">Dashboard</button>
+          <button type="button" data-admin-tab="users" aria-selected="false">Users</button>
+          <button type="button" data-admin-tab="books" aria-selected="false">Books</button>
+          <button type="button" data-admin-tab="book-access" aria-selected="false">Book Access</button>
+          <button type="button" data-admin-tab="feedback" aria-selected="false">Feedback</button>
+          <button type="button" data-admin-tab="files" aria-selected="false">Files</button>
+        </nav>
+      </aside>
+
+      <div class="admin-workspace">
+        <header class="admin-topbar">
+          <button class="admin-menu-button" type="button" data-admin-menu aria-label="Open admin navigation" aria-expanded="false">Menu</button>
+          <div>
+            <p class="admin-eyebrow">Greyveil Editions</p>
+            <h1>Admin Dashboard</h1>
+          </div>
+          <div class="admin-account">
+            <div>
+              <strong data-admin-name>Admin</strong>
+              <span data-admin-role>Admin</span>
+            </div>
+            <button class="admin-action" type="button" data-admin-logout>Logout</button>
+          </div>
+        </header>
+
+        <div class="admin-alerts" data-admin-alerts aria-live="polite"></div>
+
+        <section class="admin-panel is-active" data-admin-panel="dashboard" aria-labelledby="dashboard-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Live Overview</p>
+              <h2 id="dashboard-title">Dashboard</h2>
+            </div>
+            <button class="admin-action" type="button" data-admin-refresh>Refresh</button>
+          </div>
+
+          <div class="admin-stat-grid">
+            <article class="admin-stat-card">
+              <span>Total Users</span>
+              <strong data-stat="users">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>Total Books</span>
+              <strong data-stat="books">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>Total Feedbacks</span>
+              <strong data-stat="feedbacks">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>New Feedbacks</span>
+              <strong data-stat="newFeedbacks">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>Active Access Grants</span>
+              <strong data-stat="accessGrants">-</strong>
+            </article>
+          </div>
+
+          <div class="admin-dashboard-grid">
+            <article class="admin-card">
+              <div class="admin-card-heading">
+                <h3>Recent Feedback</h3>
+                <button type="button" data-admin-tab-link="feedback">View all</button>
+              </div>
+              <div class="admin-list" data-recent-feedback></div>
+            </article>
+            <article class="admin-card">
+              <div class="admin-card-heading">
+                <h3>Recent Users</h3>
+                <button type="button" data-admin-tab-link="users">View all</button>
+              </div>
+              <div class="admin-list" data-recent-users></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="users" aria-labelledby="users-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Registered Profiles</p>
+              <h2 id="users-title">Users</h2>
+            </div>
+          </div>
+
+          <div class="admin-filters" aria-label="User filters">
+            <label>
+              <span>Search display name</span>
+              <input type="search" data-user-search placeholder="Search users" />
+            </label>
+            <label>
+              <span>Role</span>
+              <select data-user-role>
+                <option value="">All roles</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th scope="col">Display Name</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Joined</th>
+                  <th scope="col">Details</th>
+                </tr>
+              </thead>
+              <tbody data-users-table></tbody>
+            </table>
+          </div>
+          <p class="admin-empty" data-users-empty hidden>No users match the current filters.</p>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="books" aria-labelledby="books-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Global Book Controls</p>
+              <h2 id="books-title">Books</h2>
+              <p class="admin-panel-note">These switches apply to the book globally. User-specific access is managed in Book Access.</p>
+            </div>
+            <p class="admin-count" data-books-count>0 books</p>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Series</th>
+                  <th scope="col">Book Number</th>
+                  <th scope="col">Slug</th>
+                  <th scope="col">Public Visibility</th>
+                  <th scope="col">Global Active</th>
+                  <th scope="col">Controls</th>
+                </tr>
+              </thead>
+              <tbody data-books-table></tbody>
+            </table>
+          </div>
+          <p class="admin-empty" data-books-empty hidden>No books are available to display.</p>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="book-access" aria-labelledby="book-access-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Per-User Access</p>
+              <h2 id="book-access-title">Book Access</h2>
+              <p class="admin-panel-note">These controls affect one selected user and book. They do not change the global book switches.</p>
+            </div>
+          </div>
+
+          <form class="admin-card admin-access-form" data-access-form>
+            <div class="admin-card-heading">
+              <h3>Grant Book Access</h3>
+              <p data-access-status>Personal access is checked only after Supabase confirms the signed-in user's UUID.</p>
+            </div>
+
+            <div class="admin-access-grid">
+              <label>
+                <span>Search User</span>
+                <input type="search" data-access-user-search placeholder="Search display name" autocomplete="off" />
+              </label>
+              <label>
+                <span>User</span>
+                <select data-access-user required>
+                  <option value="">Select user</option>
+                </select>
+              </label>
+              <label>
+                <span>Book</span>
+                <select data-access-book required>
+                  <option value="">Select book</option>
+                </select>
+              </label>
+              <label>
+                <span>Access Type</span>
+                <select data-access-type required>
+                  <option value="manual">manual</option>
+                  <option value="promotion">promotion</option>
+                  <option value="complimentary">complimentary</option>
+                  <option value="purchase">purchase</option>
+                </select>
+              </label>
+              <label>
+                <span>Visible to User</span>
+                <select data-access-visible required>
+                  <option value="true">ON</option>
+                  <option value="false">OFF</option>
+                </select>
+              </label>
+              <label>
+                <span>Can Read</span>
+                <select data-access-can-read required>
+                  <option value="true">ON</option>
+                  <option value="false">OFF</option>
+                </select>
+              </label>
+              <label>
+                <span>Expires At</span>
+                <input type="datetime-local" data-access-expires />
+              </label>
+            </div>
+
+            <div class="admin-form-actions">
+              <button class="admin-action admin-action--primary" type="submit">Grant Access</button>
+              <p class="admin-form-status" data-access-form-status role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table admin-access-table">
+              <thead>
+                <tr>
+                  <th scope="col">User</th>
+                  <th scope="col">Book</th>
+                  <th scope="col">Series</th>
+                  <th scope="col">Visible</th>
+                  <th scope="col">Can Read</th>
+                  <th scope="col">Access Type</th>
+                  <th scope="col">Granted</th>
+                  <th scope="col">Expiration</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody data-access-table></tbody>
+            </table>
+          </div>
+          <p class="admin-empty" data-access-empty hidden>No access grants are available to display.</p>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="feedback" aria-labelledby="feedback-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Reader Responses</p>
+              <h2 id="feedback-title">Feedback</h2>
+              <p class="admin-panel-note">Cards are sorted newest first and can export a public-safe Instagram Story PNG.</p>
+            </div>
+          </div>
+
+          <div class="admin-filters admin-filters--feedback" aria-label="Feedback filters">
+            <label>
+              <span>Search</span>
+              <input type="search" data-feedback-search placeholder="Name, email, review, book" />
+            </label>
+            <label>
+              <span>Status</span>
+              <select data-feedback-status-filter>
+                <option value="">All statuses</option>
+              </select>
+            </label>
+            <label>
+              <span>Rating</span>
+              <select data-feedback-rating-filter>
+                <option value="">All ratings</option>
+              </select>
+            </label>
+            <label>
+              <span>Series</span>
+              <select data-feedback-series-filter>
+                <option value="">All series</option>
+              </select>
+            </label>
+            <label>
+              <span>Book</span>
+              <select data-feedback-book-filter>
+                <option value="">All books</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="admin-feedback-grid" data-feedback-list></div>
+          <p class="admin-empty" data-feedback-empty hidden>No feedback matches the current filters.</p>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="files" aria-labelledby="files-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Coming Later</p>
+              <h2 id="files-title">Files</h2>
+            </div>
+          </div>
+          <article class="admin-card admin-placeholder">
+            <h3>File tools are not part of Step 5.</h3>
+            <p>No upload, download, PDF, or EPUB tooling has been added.</p>
+          </article>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/admin.js"></script>
+</body>
+</html>
