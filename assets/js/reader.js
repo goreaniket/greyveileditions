@@ -4,9 +4,11 @@
   const MAX_FONT_SIZE = 22;
   const PAGINATION_DELAY = 80;
   const SCROLL_SAVE_DELAY = 120;
+  const ACCESS_RECHECK_DELAY = 60000;
   const readerScriptUrl = document.currentScript?.src || new URL("/assets/js/reader.js", window.location.href).href;
   const loadFeedbackModule = () => import(new URL("feedback-submission.js", readerScriptUrl).href);
   const loadContentAccessModule = () => import(new URL("content-access.js", readerScriptUrl).href);
+  const loadSupabaseModule = () => import(new URL("supabase-client.js", readerScriptUrl).href);
 
   // Minimum book.json schema: id, title, readerRoute, themeStylesheet,
   // designSpecFile, feedbackContext, occupationOptions, ratingOptions, and
@@ -14,6 +16,7 @@
   // and sourceParagraph anchors.
   const body = document.body;
   let bookUrl = body.dataset.bookUrl || "";
+  let readerBookSlug = "";
   let pagesRoot = null;
   let loading = null;
   let brandNode = null;
@@ -42,6 +45,28 @@
     return node;
   };
 
+  const clearNode = (node) => {
+    if (!node) return;
+    while (node.firstChild) node.firstChild.remove();
+  };
+
+  const currentReaderSlug = () => {
+    const segments = window.location.pathname.split("/").filter(Boolean);
+    const booksIndex = segments.indexOf("books");
+    const readerIndex = segments.indexOf("reader");
+    if (booksIndex < 0 || readerIndex !== booksIndex + 2) return "";
+
+    return decodeURIComponent(segments[booksIndex + 1] || "").replace(/\.html$/, "");
+  };
+
+  const setGenericDocumentMeta = () => {
+    document.title = "Greyveil Reader | Greyveil Editions";
+    const description = document.querySelector("meta[name='description']");
+    if (description) {
+      description.setAttribute("content", "A protected Greyveil Editions reader.");
+    }
+  };
+
   const createReaderShell = () => {
     body.classList.add("reader-book");
     body.dataset.readerShell = "shared";
@@ -50,11 +75,11 @@
     const skipLink = createNode("a", { class: "reader-skip-link", href: "#reader-content" }, "Skip to book content");
 
     const toolbar = createNode("header", { class: "reader-toolbar", "aria-label": "Reader controls" });
-    const identity = createNode("div", { class: "reader-toolbar__identity", "aria-label": "Book identity" });
+    const identity = createNode("div", { class: "reader-toolbar__identity", "aria-label": "Reader status" });
     const brand = createNode("p", { class: "reader-brand", "data-reader-brand": "" }, body.dataset.readerBrand || "Greyveil Reader");
     const series = createNode("p", { class: "reader-series", "data-reader-series": "" }, "Greyveil Editions");
-    const titleNode = createNode("p", { class: "reader-title", "data-reader-title": "" }, "Opening book");
-    const status = createNode("p", { class: "reader-status", "data-reader-status": "" }, "Opening book");
+    const titleNode = createNode("p", { class: "reader-title", "data-reader-title": "" }, "Checking access");
+    const status = createNode("p", { class: "reader-status", "data-reader-status": "" }, "Checking access");
     identity.append(brand, series, titleNode, status);
 
     const controls = createNode("div", { class: "reader-toolbar__controls", "aria-label": "Reader tools" });
@@ -62,7 +87,7 @@
       "a",
       {
         class: "reader-control reader-control--exit",
-        href: body.dataset.readerExitUrl || "../",
+        href: "/",
         "data-reader-exit": "",
       },
       body.dataset.readerExitLabel || "Exit Reader"
@@ -132,11 +157,11 @@
 
     const main = createNode("main", { id: "reader-content", class: "reader-stage", "aria-live": "polite" });
     const loadingNode = createNode("div", { class: "reader-loading", "data-reader-loading": "" });
-    loadingNode.append(createNode("p", {}, "Setting the pages..."));
+    loadingNode.append(createNode("p", {}, "Checking access..."));
     const article = createNode("article", {
       class: "reader-pages",
       "data-reader-pages": "",
-      "aria-label": body.dataset.readerLabel || "Book",
+      "aria-label": "Reader",
     });
     main.append(loadingNode, article);
 
@@ -200,14 +225,16 @@
     themeButtons = Array.from(document.querySelectorAll("[data-theme-choice]"));
   };
 
+  setGenericDocumentMeta();
+
   if (!document.querySelector("[data-reader-pages]")) {
     createReaderShell();
   }
 
   bindReaderNodes();
+  readerBookSlug = currentReaderSlug();
 
   const requiredNodes = {
-    bookUrl,
     pagesRoot,
     loading,
     brandNode,
@@ -235,6 +262,36 @@
     return;
   }
 
+  const setReaderControlsEnabled = (enabled) => {
+    [openContentsButton, fontDecrease, fontIncrease, themeSelect].forEach((control) => {
+      if (control) control.disabled = !enabled;
+    });
+
+    themeButtons.forEach((button) => {
+      button.disabled = !enabled;
+    });
+  };
+
+  const resetReaderIdentity = (status = "Checking access") => {
+    setGenericDocumentMeta();
+    if (brandNode) brandNode.textContent = body.dataset.readerBrand || "Greyveil Reader";
+    if (seriesNode) seriesNode.textContent = "Greyveil Editions";
+    if (titleNode) titleNode.textContent = status;
+    if (statusNode) statusNode.textContent = status;
+    if (progressLabel) progressLabel.textContent = "0%";
+    if (progressBar) progressBar.style.width = "0%";
+    document.querySelector("[data-reader-publisher]")?.replaceChildren("Greyveil Editions");
+    const article = document.querySelector("[data-reader-pages]");
+    if (article) article.setAttribute("aria-label", "Reader");
+    const exitLink = document.querySelector("[data-reader-exit], .reader-control--exit");
+    if (exitLink) {
+      exitLink.setAttribute("href", "/");
+      exitLink.textContent = body.dataset.readerExitLabel || "Exit Reader";
+    }
+  };
+
+  setReaderControlsEnabled(false);
+
   let book = null;
   let units = [];
   let sourceBlocks = [];
@@ -243,6 +300,10 @@
   let scrollSaveTimer = null;
   let resizeTimer = null;
   let paginationToken = 0;
+  let readerLoadToken = 0;
+  let readerLoaded = false;
+  let lastAccessCheck = 0;
+  let accessRecheckInFlight = false;
   let restoring = false;
   let appliedBookVariables = [];
   let coverFailed = false;
@@ -1012,6 +1073,7 @@
 
   const saveProgressDebounced = () => {
     updateProgress();
+    recheckReaderAccess();
     window.clearTimeout(scrollSaveTimer);
     scrollSaveTimer = window.setTimeout(saveProgressNow, SCROLL_SAVE_DELAY);
   };
@@ -1195,63 +1257,185 @@
     return response.json();
   };
 
-  const readerAccessError = (message) => {
-    const error = new Error(message);
+  const readerAccessCopy = (reason) => {
+    if (reason === "login_required") {
+      return {
+        title: "Log in to continue.",
+        message: "Please log in with an account that has access to this reader.",
+        actions: [
+          { href: "/auth/login/", label: "Log in" },
+          { href: "/account/", label: "My Account" },
+        ],
+      };
+    }
+
+    if (reason === "access_required") {
+      return {
+        title: "Access required.",
+        message: "This reader is not available from this account.",
+        actions: [
+          { href: "/account/", label: "My Account" },
+          { href: "/", label: "Back to Website" },
+        ],
+      };
+    }
+
+    return {
+      title: "Reader unavailable.",
+      message: "This reader is unavailable.",
+      actions: [
+        { href: "/", label: "Back to Website" },
+        { href: "/account/", label: "My Account" },
+      ],
+    };
+  };
+
+  const readerAccessError = (decision) => {
+    const copy = readerAccessCopy(decision?.reason);
+    const error = new Error(copy.message);
     error.name = "ReaderAccessError";
+    error.reason = decision?.reason || "unavailable";
+    error.copy = copy;
+    error.decision = decision;
     return error;
   };
 
-  const guardReaderAccess = async () => {
-    const access = await loadContentAccessModule();
-    const context = await access.getAccessContext();
-    const hierarchy = await access.fetchContentHierarchy();
-
-    if (hierarchy.errors.books) {
-      console.info("Reader access check is waiting on Supabase content schema/RLS.", {
-        books: hierarchy.errors.books?.message,
-        collections: hierarchy.errors.collections?.message,
-        series: hierarchy.errors.series?.message,
-      });
-      return;
-    }
-
-    const bookRecord = hierarchy.books.find((item) => item.slug === book.slug || item.slug === book.id || item.id === book.id);
-    if (!bookRecord) return;
-
-    const bookHierarchy = access.hierarchyForBook(bookRecord, hierarchy.seriesItems, hierarchy.collections);
-
-    if (!access.canDiscoverContent(bookHierarchy, context)) {
-      throw readerAccessError("This book is not currently available to this account.");
-    }
-
-    const grantsResult = await access.fetchViewerBookGrants(context.user?.id);
-    if (grantsResult.error && !access.isAdminRole(context.role)) {
-      console.info("Reader book access check was blocked by Supabase policy.", {
-        message: grantsResult.error?.message,
-        code: grantsResult.error?.code,
-      });
-    }
-
-    if (!access.canReadBook({ ...bookHierarchy, grants: grantsResult.data || [] }, context)) {
-      throw readerAccessError("Please sign in with an account that has access to this book.");
-    }
+  const logAccessDecision = (decision, label = "Reader access check did not allow rendering.") => {
+    if (decision?.allowed) return;
+    console.info(label, {
+      reason: decision?.reason,
+      role: decision?.context?.role,
+      visibility: decision?.visibility,
+      errors: decision?.errors?.map(([table, error]) => ({
+        table,
+        message: error?.message,
+        code: error?.code,
+      })),
+    });
   };
 
-  const readerAccessMarkup = (message) => `
+  const resolveCurrentReaderAccess = async () => {
+    const access = await loadContentAccessModule();
+    const decision = await access.resolveReaderAccess(readerBookSlug);
+    lastAccessCheck = Date.now();
+    if (!decision.allowed) logAccessDecision(decision);
+    return decision;
+  };
+
+  const guardReaderAccess = async () => {
+    const decision = await resolveCurrentReaderAccess();
+    if (!decision.allowed) throw readerAccessError(decision);
+    return decision;
+  };
+
+  const readerAccessMarkup = (copy) => `
     <section class="reader-access-message" aria-live="polite">
-      <p class="reader-error">${message}</p>
-      <p><a class="reader-control" href="/auth/login/">Log in</a> <a class="reader-control" href="/account/">My Account</a></p>
+      <p class="reader-error">${copy.title}</p>
+      <p>${copy.message}</p>
+      <p>${copy.actions.map((action) => `<a class="reader-control" href="${action.href}">${action.label}</a>`).join(" ")}</p>
     </section>
   `;
 
+  const removeBookStyles = () => {
+    document.querySelectorAll("link[data-reader-book-stylesheet]").forEach((link) => link.remove());
+    appliedBookVariables.forEach((name) => document.documentElement.style.removeProperty(name));
+    appliedBookVariables = [];
+  };
+
+  const clearProtectedReaderView = (decision) => {
+    readerLoadToken += 1;
+    paginationToken += 1;
+    window.clearTimeout(scrollSaveTimer);
+    window.clearTimeout(resizeTimer);
+    closeContents(false);
+    removeBookStyles();
+    body.classList.remove("is-paginating");
+    setReaderControlsEnabled(false);
+    resetReaderIdentity(decision?.reason === "login_required" ? "Login required" : "Access unavailable");
+
+    units = [];
+    sourceBlocks = [];
+    chapterMarkers = [];
+    savedState = {};
+    coverFailed = false;
+    readerLoaded = false;
+    book = null;
+
+    if (loading) loading.hidden = true;
+    if (contentsList) clearNode(contentsList);
+    if (pagesRoot) {
+      pagesRoot.removeAttribute("aria-busy");
+      pagesRoot.innerHTML = readerAccessMarkup(readerAccessCopy(decision?.reason));
+    }
+  };
+
+  const recheckReaderAccess = async ({ force = false } = {}) => {
+    if (!readerLoaded || accessRecheckInFlight) return;
+    if (!force && Date.now() - lastAccessCheck < ACCESS_RECHECK_DELAY) return;
+
+    accessRecheckInFlight = true;
+    try {
+      const decision = await resolveCurrentReaderAccess();
+      if (!decision.allowed) {
+        clearProtectedReaderView(decision);
+      }
+    } catch (error) {
+      console.info("Reader access re-check failed.", {
+        name: error?.name,
+        message: error?.message,
+        code: error?.code,
+      });
+      clearProtectedReaderView({ reason: "unavailable" });
+    } finally {
+      accessRecheckInFlight = false;
+    }
+  };
+
+  const handleReaderAuthChange = (event) => {
+    if (event === "INITIAL_SESSION") return;
+
+    window.setTimeout(() => {
+      if (readerLoaded) {
+        recheckReaderAccess({ force: true });
+      } else {
+        init();
+      }
+    }, 0);
+  };
+
+  const bindReaderAccessRefresh = async () => {
+    try {
+      const { supabase } = await loadSupabaseModule();
+      supabase.auth.onAuthStateChange(handleReaderAuthChange);
+    } catch (error) {
+      console.info("Reader auth refresh listener could not be registered.", {
+        name: error?.name,
+        message: error?.message,
+        code: error?.code,
+      });
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) recheckReaderAccess({ force: true });
+    });
+    window.addEventListener("focus", () => recheckReaderAccess());
+    window.setInterval(() => recheckReaderAccess(), ACCESS_RECHECK_DELAY);
+  };
+
   const loadBook = async () => {
+    if (!readerBookSlug) {
+      throw readerAccessError({ reason: "unavailable" });
+    }
+
+    const decision = await guardReaderAccess();
+    bookUrl = `/assets/books/${decision.book.slug}/book.json`;
     const bookResponseUrl = new URL(bookUrl, window.location.href);
     book = await fetchJson(bookResponseUrl.href);
     if (!book.id || !book.title || !Array.isArray(book.units)) {
       throw new Error("Book configuration is missing required metadata.");
     }
+    book.readerExitUrl = book.readerExitUrl || book.detailPageUrl || `/projects/${decision.bookHierarchy.series.slug}/books/${decision.book.slug}.html`;
     updateReaderShellFromBook();
-    await guardReaderAccess();
     await loadBookStylesheet(bookResponseUrl);
     book.storageKey = book.storageKey || `greyveil:${book.id}:continuous-reader:v2`;
     book.feedbackContext = { ...(book.feedbackContext || {}), feedbackType: book.feedbackContext?.feedbackType || "book" };
@@ -1259,24 +1443,42 @@
     const rootUrl = new URL(".", bookResponseUrl.href);
     normalizeBookCover(rootUrl);
     units = await Promise.all(book.units.map((unit) => fetchJson(new URL(unit.file, rootUrl).href)));
+    await guardReaderAccess();
     buildSourceBlocks();
   };
 
   const init = async () => {
+    const token = ++readerLoadToken;
     try {
+      readerLoaded = false;
+      setReaderControlsEnabled(false);
+      resetReaderIdentity("Checking access");
+      if (loading) loading.hidden = false;
+      clearNode(pagesRoot);
+      clearNode(contentsList);
       body.classList.add("is-paginating");
       await loadBook();
+      if (token !== readerLoadToken) return;
       applyTheme(savedState.theme || "light");
       const initialFont = savedState.fontSize || DEFAULT_FONT_SIZE;
       document.documentElement.style.setProperty("--reader-body-size", `${clamp(initialFont, MIN_FONT_SIZE, MAX_FONT_SIZE)}px`);
+      readerLoaded = true;
+      setReaderControlsEnabled(true);
       fontDecrease.disabled = initialFont <= MIN_FONT_SIZE;
       fontIncrease.disabled = initialFont >= MAX_FONT_SIZE;
       const hash = window.location.hash.replace("#", "");
       paginate({ restore: { hash, scrollRatio: hash ? 0 : Number(savedState.scrollRatio || 0) } });
     } catch (error) {
+      if (token !== readerLoadToken) return;
       body.classList.remove("is-paginating");
+      if (error?.name === "ReaderAccessError") {
+        clearProtectedReaderView(error.decision || { reason: error.reason });
+        return;
+      }
+      if (loading) loading.hidden = true;
+      setReaderControlsEnabled(false);
       pagesRoot.innerHTML = error?.name === "ReaderAccessError"
-        ? readerAccessMarkup(error.message)
+        ? readerAccessMarkup(error.copy || readerAccessCopy(error.reason))
         : '<p class="reader-error">The reader could not be opened. Please refresh the page.</p>';
     }
   };
@@ -1306,4 +1508,5 @@
   document.addEventListener("keydown", closeContentsOnEscape, true);
 
   init();
+  bindReaderAccessRefresh();
 })();

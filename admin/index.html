@@ -62,6 +62,7 @@
               <strong data-admin-name>Admin</strong>
               <span data-admin-role>Admin</span>
             </div>
+            <a class="admin-action" href="/">Back to Website</a>
             <button class="admin-action" type="button" data-admin-logout>Logout</button>
           </div>
         </header>
@@ -159,7 +160,7 @@
           <div class="admin-panel-heading">
             <div>
               <p class="admin-eyebrow">Content Management</p>
-              <h2 id="content-title">Collections &amp; Series</h2>
+              <h2 id="content-title">Collections, Volumes &amp; Series</h2>
               <p class="admin-panel-note">GLOBAL ACTIVE controls whether content is enabled. VISIBILITY controls who can discover it. USER ACCESS controls which customer may read protected books.</p>
             </div>
           </div>
@@ -171,11 +172,11 @@
             </article>
             <article class="admin-card">
               <h3>Visibility</h3>
-              <p>Public and paid items can be discovered. Private items are absent from guest and customer listings.</p>
+              <p>Public and paid items can be discovered. Private collections, volumes, series, or books are absent from guest and customer listings.</p>
             </article>
             <article class="admin-card">
               <h3>User Access</h3>
-              <p>Paid reading is granted per user in Book Access. Admins and super admins read active books automatically.</p>
+              <p>Paid reading is granted per user in Book Access. Admins and super admins read active collection, volume, series, and book chains automatically.</p>
             </article>
           </div>
 
@@ -224,6 +225,56 @@
               </div>
             </form>
 
+            <form class="admin-card admin-content-form" data-volume-form>
+              <div class="admin-card-heading">
+                <h3>Add Volume</h3>
+                <p class="admin-count" data-volumes-count>0 volumes</p>
+              </div>
+              <div class="admin-access-grid">
+                <label>
+                  <span>Collection</span>
+                  <select name="collection_id" data-volume-collection-select required>
+                    <option value="">Select collection</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Title</span>
+                  <input name="title" type="text" required />
+                </label>
+                <label>
+                  <span>Slug</span>
+                  <input name="slug" type="text" required />
+                </label>
+                <label>
+                  <span>Visibility</span>
+                  <select name="visibility" required>
+                    <option value="public">public</option>
+                    <option value="paid">paid</option>
+                    <option value="private">private</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Active</span>
+                  <select name="is_active" required>
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Sort Order</span>
+                  <input name="sort_order" type="number" value="0" />
+                </label>
+                <label>
+                  <span>Description</span>
+                  <input name="description" type="text" />
+                </label>
+              </div>
+              <div class="admin-form-actions">
+                <button class="admin-action admin-action--primary" type="submit">Create Volume</button>
+                <p class="admin-form-status" data-volume-status role="status" aria-live="polite"></p>
+              </div>
+            </form>
+
             <form class="admin-card admin-content-form" data-series-form>
               <div class="admin-card-heading">
                 <h3>Add Series</h3>
@@ -234,6 +285,12 @@
                   <span>Collection</span>
                   <select name="collection_id" data-series-collection-select required>
                     <option value="">Select collection</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Volume</span>
+                  <select name="volume_id" data-series-volume-select required>
+                    <option value="">Select volume</option>
                   </select>
                 </label>
                 <label>
@@ -300,7 +357,7 @@
 
             <article>
               <div class="admin-card-heading">
-                <h3>Series</h3>
+                <h3>Volumes</h3>
               </div>
               <div class="admin-table-wrap">
                 <table class="admin-table">
@@ -315,6 +372,30 @@
                       <th scope="col">Controls</th>
                     </tr>
                   </thead>
+                  <tbody data-volumes-table></tbody>
+                </table>
+              </div>
+              <p class="admin-empty" data-volumes-empty hidden>No volumes are available to display.</p>
+            </article>
+
+            <article>
+              <div class="admin-card-heading">
+                <h3>Series</h3>
+              </div>
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Title</th>
+                      <th scope="col">Collection</th>
+                      <th scope="col">Volume</th>
+                      <th scope="col">Slug</th>
+                      <th scope="col">Visibility</th>
+                      <th scope="col">Active</th>
+                      <th scope="col">Sort</th>
+                      <th scope="col">Controls</th>
+                    </tr>
+                  </thead>
                   <tbody data-series-table></tbody>
                 </table>
               </div>
@@ -322,9 +403,17 @@
             </article>
           </div>
 
+          <article class="admin-card">
+            <div class="admin-card-heading">
+              <h3>Hierarchy</h3>
+            </div>
+            <div class="admin-hierarchy" data-content-hierarchy></div>
+            <p class="admin-empty" data-hierarchy-empty hidden>No content hierarchy is available to display.</p>
+          </article>
+
           <article class="admin-card admin-placeholder">
             <h3>Book visibility lives in Books.</h3>
-            <p>Use the Books section for Public / Paid / Private book visibility and the separate Global Active switch.</p>
+            <p>Use the Books section for book-level visibility and active controls inside the Collection / Volume / Series hierarchy.</p>
             <button class="admin-action" type="button" data-admin-tab-link="books">Open Books</button>
           </article>
         </section>

@@ -1,6 +1,6 @@
 import { supabase } from './supabase-client.js'
 import { getCurrentUser, signOut } from './auth.js'
-import { hierarchyForBook, hierarchyIsActive, normalizeVisibility, VISIBILITY_STATES } from './content-access.js'
+import { effectiveVisibility, hierarchyForBook, hierarchyIsActive, hierarchyIsComplete, normalizeVisibility, VISIBILITY_STATES } from './content-access.js'
 
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const STATUS_OPTIONS = ['new', 'reviewed', 'archived']
@@ -31,12 +31,21 @@ const selectors = {
   collectionsTable: '[data-collections-table]',
   collectionsEmpty: '[data-collections-empty]',
   collectionsCount: '[data-collections-count]',
+  volumeForm: '[data-volume-form]',
+  volumeStatus: '[data-volume-status]',
+  volumeCollectionSelect: '[data-volume-collection-select]',
+  volumesTable: '[data-volumes-table]',
+  volumesEmpty: '[data-volumes-empty]',
+  volumesCount: '[data-volumes-count]',
   seriesForm: '[data-series-form]',
   seriesStatus: '[data-series-status]',
   seriesCollectionSelect: '[data-series-collection-select]',
+  seriesVolumeSelect: '[data-series-volume-select]',
   seriesTable: '[data-series-table]',
   seriesEmpty: '[data-series-empty]',
   seriesCount: '[data-series-count]',
+  hierarchyTree: '[data-content-hierarchy]',
+  hierarchyEmpty: '[data-hierarchy-empty]',
   booksTable: '[data-books-table]',
   booksEmpty: '[data-books-empty]',
   booksCount: '[data-books-count]',
@@ -68,6 +77,7 @@ const state = {
   profile: null,
   users: [],
   collections: [],
+  volumes: [],
   seriesItems: [],
   books: [],
   feedbacks: [],
@@ -104,12 +114,21 @@ const singleNodes = {
   collectionsTable: $(selectors.collectionsTable),
   collectionsEmpty: $(selectors.collectionsEmpty),
   collectionsCount: $(selectors.collectionsCount),
+  volumeForm: $(selectors.volumeForm),
+  volumeStatus: $(selectors.volumeStatus),
+  volumeCollectionSelect: $(selectors.volumeCollectionSelect),
+  volumesTable: $(selectors.volumesTable),
+  volumesEmpty: $(selectors.volumesEmpty),
+  volumesCount: $(selectors.volumesCount),
   seriesForm: $(selectors.seriesForm),
   seriesStatus: $(selectors.seriesStatus),
   seriesCollectionSelect: $(selectors.seriesCollectionSelect),
+  seriesVolumeSelect: $(selectors.seriesVolumeSelect),
   seriesTable: $(selectors.seriesTable),
   seriesEmpty: $(selectors.seriesEmpty),
   seriesCount: $(selectors.seriesCount),
+  hierarchyTree: $(selectors.hierarchyTree),
+  hierarchyEmpty: $(selectors.hierarchyEmpty),
   booksTable: $(selectors.booksTable),
   booksEmpty: $(selectors.booksEmpty),
   booksCount: $(selectors.booksCount),
@@ -298,7 +317,14 @@ const bookForGrant = (grant) => state.books.find((book) => book.id === grant.boo
 const accessGrantStatus = (grant) => {
   const book = bookForGrant(grant)
 
-  if (book && !hierarchyIsActive(hierarchyForBook(book, state.seriesItems, state.collections))) {
+  if (book) {
+    const hierarchy = hierarchyForBook(book, state.seriesItems, state.collections, state.volumes)
+    if (!hierarchyIsComplete(hierarchy) || !hierarchyIsActive(hierarchy)) {
+      return { label: 'BOOK DISABLED', className: 'admin-badge--disabled' }
+    }
+  }
+
+  if (!book && grant.book_id) {
     return { label: 'BOOK DISABLED', className: 'admin-badge--disabled' }
   }
 
@@ -469,7 +495,9 @@ const bindControls = () => {
   singleNodes.refresh?.addEventListener('click', () => loadAdminData())
   singleNodes.logout?.addEventListener('click', handleLogout)
   singleNodes.collectionForm?.addEventListener('submit', handleCreateCollection)
+  singleNodes.volumeForm?.addEventListener('submit', handleCreateVolume)
   singleNodes.seriesForm?.addEventListener('submit', handleCreateSeries)
+  singleNodes.seriesCollectionSelect?.addEventListener('change', renderSeriesVolumeOptions)
   singleNodes.accessForm?.addEventListener('submit', handleGrantAccess)
   singleNodes.accessUserSearch?.addEventListener('input', renderAccessUserOptions)
 
@@ -590,10 +618,31 @@ const fetchCollections = async () => {
   }
 }
 
+const fetchVolumes = async () => {
+  const { data, error, count } = await supabase
+    .from('volumes')
+    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at', { count: 'exact' })
+    .order('sort_order', { ascending: true })
+    .order('title', { ascending: true })
+
+  if (error) {
+    state.volumes = []
+    setTableError('volumes', error)
+    return
+  }
+
+  state.volumes = data || []
+  clearTableError('volumes')
+  if (singleNodes.volumesCount) {
+    const total = count ?? state.volumes.length
+    singleNodes.volumesCount.textContent = `${total} ${total === 1 ? 'volume' : 'volumes'}`
+  }
+}
+
 const fetchSeries = async () => {
   const { data, error, count } = await supabase
     .from('series')
-    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at', { count: 'exact' })
+    .select('id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at', { count: 'exact' })
     .order('sort_order', { ascending: true })
     .order('title', { ascending: true })
 
@@ -693,6 +742,7 @@ const loadAdminData = async () => {
   await Promise.all([
     fetchProfiles(),
     fetchCollections(),
+    fetchVolumes(),
     fetchSeries(),
     fetchBooks(),
     fetchFeedbacks(),
@@ -735,9 +785,21 @@ const populateFilters = () => {
     'All books'
   )
 
+  renderVolumeCollectionOptions()
   renderSeriesCollectionOptions()
+  renderSeriesVolumeOptions()
   renderAccessUserOptions()
   renderAccessBookOptions()
+}
+
+const renderVolumeCollectionOptions = () => {
+  setItemOptions(
+    singleNodes.volumeCollectionSelect,
+    state.collections,
+    'Select collection',
+    (collection) => collection.id,
+    (collection) => getText(collection.title)
+  )
 }
 
 const renderSeriesCollectionOptions = () => {
@@ -747,6 +809,19 @@ const renderSeriesCollectionOptions = () => {
     'Select collection',
     (collection) => collection.id,
     (collection) => getText(collection.title)
+  )
+}
+
+const renderSeriesVolumeOptions = () => {
+  const selectedCollectionId = singleNodes.seriesCollectionSelect?.value || ''
+  const volumes = state.volumes.filter((volume) => !selectedCollectionId || volume.collection_id === selectedCollectionId)
+
+  setItemOptions(
+    singleNodes.seriesVolumeSelect,
+    volumes,
+    'Select volume',
+    (volume) => volume.id,
+    (volume) => getText(volume.title)
   )
 }
 
@@ -837,7 +912,9 @@ const renderRecentFeedback = () => {
 const renderFilteredSections = () => {
   renderUsers()
   renderCollections()
+  renderVolumes()
   renderSeries()
+  renderHierarchy()
   renderBooks()
   renderAccessGrants()
   renderFeedback()
@@ -901,6 +978,26 @@ const collectionOptionsSelect = (selectedId = '') => {
   return select
 }
 
+const volumeOptionsSelect = (selectedId = '', collectionId = '') => {
+  const select = document.createElement('select')
+  select.className = 'admin-compact-control'
+  populateVolumeOptions(select, selectedId, collectionId)
+  return select
+}
+
+const populateVolumeOptions = (select, selectedId = '', collectionId = '') => {
+  clearNode(select)
+  const volumes = state.volumes.filter((volume) => !collectionId || volume.collection_id === collectionId)
+  volumes.forEach((volume) => {
+    const option = document.createElement('option')
+    option.value = volume.id
+    option.textContent = getText(volume.title)
+    select.append(option)
+  })
+
+  select.value = selectedId
+}
+
 const contentSaveButton = (label = 'Save') => {
   const button = createNode('button', 'admin-inline-action', label)
   button.type = 'button'
@@ -920,7 +1017,7 @@ const confirmContentChange = (name, previous, next, kind) => {
   return window.confirm(`Update ${kind} "${name}"? ${messages.join(' and ')}.`)
 }
 
-const contentPayloadFromForm = (form, includeCollection = false) => {
+const contentPayloadFromForm = (form, { includeCollection = false, includeVolume = false } = {}) => {
   const formData = new FormData(form)
   const payload = {
     title: formValue(formData, 'title'),
@@ -932,6 +1029,7 @@ const contentPayloadFromForm = (form, includeCollection = false) => {
   }
 
   if (includeCollection) payload.collection_id = formValue(formData, 'collection_id')
+  if (includeVolume) payload.volume_id = formValue(formData, 'volume_id')
   return payload
 }
 
@@ -980,13 +1078,13 @@ const handleCreateCollection = async (event) => {
   renderFilteredSections()
 }
 
-const handleCreateSeries = async (event) => {
+const handleCreateVolume = async (event) => {
   event.preventDefault()
   const form = event.currentTarget
   if (!ADMIN_ROLES.has(state.profile?.role)) return
 
   if (!form.checkValidity()) {
-    setFormStatus(singleNodes.seriesStatus, 'Please complete the series fields.', 'error')
+    setFormStatus(singleNodes.volumeStatus, 'Please complete the volume fields.', 'error')
     form.reportValidity()
     return
   }
@@ -998,11 +1096,62 @@ const handleCreateSeries = async (event) => {
     submitButton.textContent = 'Creating...'
   }
 
-  const payload = contentPayloadFromForm(form, true)
+  const payload = contentPayloadFromForm(form, { includeCollection: true })
+  const { data, error } = await supabase
+    .from('volumes')
+    .insert(payload)
+    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .maybeSingle()
+
+  if (submitButton) {
+    submitButton.disabled = false
+    submitButton.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(singleNodes.volumeStatus, 'Volume could not be created. Check the dashboard alert for details.', 'error')
+    setTableError('volumes', error, 'INSERT')
+    return
+  }
+
+  state.volumes.push(data || payload)
+  state.volumes.sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
+  clearTableError('volumes')
+  setFormStatus(singleNodes.volumeStatus, 'Volume created.', 'success')
+  form.reset()
+  populateFilters()
+  renderFilteredSections()
+}
+
+const handleCreateSeries = async (event) => {
+  event.preventDefault()
+  const form = event.currentTarget
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  if (!form.checkValidity()) {
+    setFormStatus(singleNodes.seriesStatus, 'Please complete the series fields.', 'error')
+    form.reportValidity()
+    return
+  }
+
+  const payload = contentPayloadFromForm(form, { includeCollection: true, includeVolume: true })
+  const selectedVolume = state.volumes.find((volume) => volume.id === payload.volume_id)
+  if (selectedVolume?.collection_id !== payload.collection_id) {
+    setFormStatus(singleNodes.seriesStatus, 'The selected volume must belong to the selected collection.', 'error')
+    return
+  }
+
+  const submitButton = form.querySelector('button[type="submit"]')
+  const previousLabel = submitButton?.textContent
+  if (submitButton) {
+    submitButton.disabled = true
+    submitButton.textContent = 'Creating...'
+  }
+
   const { data, error } = await supabase
     .from('series')
     .insert(payload)
-    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .select('id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
     .maybeSingle()
 
   if (submitButton) {
@@ -1069,6 +1218,49 @@ const renderCollections = () => {
   }
 }
 
+const renderVolumes = () => {
+  const table = singleNodes.volumesTable
+  clearNode(table)
+  if (!table) return
+
+  const collectionsById = new Map(state.collections.map((collection) => [collection.id, collection]))
+
+  state.volumes.forEach((volume) => {
+    const visibility = visibilitySelect(volume.visibility)
+    const active = activeSelect(volume.is_active)
+    const sortOrder = compactInput('number', toSortOrder(volume.sort_order))
+    const save = contentSaveButton()
+
+    save.addEventListener('click', () => updateVolume(volume, {
+      visibility,
+      active,
+      sortOrder,
+      save,
+    }))
+
+    const row = document.createElement('tr')
+    row.append(
+      tableCell(getText(volume.title)),
+      tableCell(getText(collectionsById.get(volume.collection_id)?.title, 'Unassigned collection')),
+      tableCell(getText(volume.slug)),
+      controlCell(visibility),
+      controlCell(active),
+      controlCell(sortOrder),
+      controlCell(save)
+    )
+    table.append(row)
+  })
+
+  if (singleNodes.volumesCount) {
+    const total = state.volumes.length
+    singleNodes.volumesCount.textContent = `${total} ${total === 1 ? 'volume' : 'volumes'}`
+  }
+
+  if (singleNodes.volumesEmpty) {
+    singleNodes.volumesEmpty.hidden = Boolean(state.volumes.length) || Boolean(state.errors.volumes)
+  }
+}
+
 const renderSeries = () => {
   const table = singleNodes.seriesTable
   clearNode(table)
@@ -1077,15 +1269,19 @@ const renderSeries = () => {
   state.seriesItems.forEach((series) => {
     const titleInput = compactInput('text', series.title)
     const collectionSelect = collectionOptionsSelect(series.collection_id)
+    const volumeSelect = volumeOptionsSelect(series.volume_id, series.collection_id)
     const slugInput = compactInput('text', series.slug)
     const visibility = visibilitySelect(series.visibility)
     const active = activeSelect(series.is_active)
     const sortOrder = compactInput('number', toSortOrder(series.sort_order))
     const save = contentSaveButton()
 
+    collectionSelect.addEventListener('change', () => populateVolumeOptions(volumeSelect, '', collectionSelect.value))
+
     save.addEventListener('click', () => updateSeries(series, {
       titleInput,
       collectionSelect,
+      volumeSelect,
       slugInput,
       visibility,
       active,
@@ -1097,6 +1293,7 @@ const renderSeries = () => {
     row.append(
       controlCell(titleInput),
       controlCell(collectionSelect),
+      controlCell(volumeSelect),
       controlCell(slugInput),
       controlCell(visibility),
       controlCell(active),
@@ -1113,6 +1310,168 @@ const renderSeries = () => {
 
   if (singleNodes.seriesEmpty) {
     singleNodes.seriesEmpty.hidden = Boolean(state.seriesItems.length) || Boolean(state.errors.series)
+  }
+}
+
+const hierarchyBadge = (text, className = '') => createNode('span', `admin-badge ${className}`.trim(), text)
+
+const contentMetaBadges = (hierarchy) => {
+  const wrap = createNode('div', 'admin-hierarchy__badges')
+  const available = hierarchyIsActive(hierarchy)
+  const visibility = effectiveVisibility(hierarchy)
+
+  wrap.append(
+    hierarchyBadge(available ? 'Active' : 'Inactive', available ? 'admin-badge--active' : 'admin-badge--disabled'),
+    hierarchyBadge(visibilityLabel(visibility))
+  )
+
+  return wrap
+}
+
+const booksForSeries = (series) => {
+  return state.books
+    .filter((book) => book.series_id === series.id)
+    .sort((a, b) => toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title)))
+}
+
+const renderBookList = (series) => {
+  const books = booksForSeries(series)
+  const list = createNode('ul', 'admin-hierarchy__books')
+
+  books.forEach((book) => {
+    const item = createNode('li')
+    item.append(
+      createNode('span', '', getText(book.title)),
+      hierarchyBadge(visibilityLabel(bookVisibility(book))),
+      hierarchyBadge(boolValueLabel(book.is_active), book.is_active === false ? 'admin-badge--disabled' : 'admin-badge--active')
+    )
+    list.append(item)
+  })
+
+  if (!books.length) {
+    list.append(createNode('li', 'admin-hierarchy__empty', 'No books linked yet.'))
+  }
+
+  return list
+}
+
+const renderSeriesBranch = (series, collection, volume) => {
+  const branch = createNode('details', 'admin-hierarchy__series')
+  branch.open = true
+
+  const summary = createNode('summary')
+  const title = createNode('strong', '', getText(series.title, 'Untitled series'))
+  const count = booksForSeries(series).length
+  summary.append(
+    title,
+    createNode('span', 'admin-hierarchy__count', `${count} ${count === 1 ? 'Book' : 'Books'}`),
+    contentMetaBadges({ collection, volume, series })
+  )
+
+  branch.append(summary, renderBookList(series))
+  return branch
+}
+
+const renderVolumeBranch = (volume, collection) => {
+  const branch = createNode('article', 'admin-hierarchy__volume')
+  const heading = createNode('div', 'admin-hierarchy__heading')
+  heading.append(
+    createNode('h4', '', getText(volume.title, 'Untitled volume')),
+    contentMetaBadges({ collection, volume })
+  )
+  branch.append(heading)
+
+  const seriesItems = state.seriesItems
+    .filter((series) => series.volume_id === volume.id)
+    .sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
+
+  if (!seriesItems.length) {
+    branch.append(createNode('p', 'admin-hierarchy__empty', 'No series linked yet.'))
+    return branch
+  }
+
+  seriesItems.forEach((series) => branch.append(renderSeriesBranch(series, collection, volume)))
+  return branch
+}
+
+const renderUnassignedSeries = (collection) => {
+  const assignedVolumeIds = new Set(state.volumes.map((volume) => volume.id))
+  const seriesItems = state.seriesItems.filter((series) => {
+    return series.collection_id === collection.id && (!series.volume_id || !assignedVolumeIds.has(series.volume_id))
+  })
+
+  if (!seriesItems.length) return null
+
+  const branch = createNode('article', 'admin-hierarchy__volume admin-hierarchy__volume--unassigned')
+  const heading = createNode('div', 'admin-hierarchy__heading')
+  heading.append(createNode('h4', '', 'Series without Volume'), hierarchyBadge('Needs parent volume', 'admin-badge--restricted'))
+  branch.append(heading)
+  seriesItems.forEach((series) => branch.append(renderSeriesBranch(series, collection, null)))
+  return branch
+}
+
+const renderHierarchy = () => {
+  const tree = singleNodes.hierarchyTree
+  clearNode(tree)
+  if (!tree) return
+
+  const hasHierarchy = Boolean(state.collections.length || state.volumes.length || state.seriesItems.length || state.books.length)
+  if (singleNodes.hierarchyEmpty) singleNodes.hierarchyEmpty.hidden = hasHierarchy
+  if (!hasHierarchy) return
+
+  state.collections.forEach((collection) => {
+    const collectionBranch = createNode('article', 'admin-hierarchy__collection')
+    const heading = createNode('div', 'admin-hierarchy__heading')
+    heading.append(
+      createNode('h3', '', getText(collection.title, 'Untitled collection')),
+      contentMetaBadges({ collection })
+    )
+    collectionBranch.append(heading)
+
+    const volumes = state.volumes
+      .filter((volume) => volume.collection_id === collection.id)
+      .sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
+
+    if (!volumes.length) {
+      collectionBranch.append(createNode('p', 'admin-hierarchy__empty', 'No volumes linked yet.'))
+    } else {
+      volumes.forEach((volume) => collectionBranch.append(renderVolumeBranch(volume, collection)))
+    }
+
+    const unassigned = renderUnassignedSeries(collection)
+    if (unassigned) collectionBranch.append(unassigned)
+
+    tree.append(collectionBranch)
+  })
+
+  const collectionIds = new Set(state.collections.map((collection) => collection.id))
+  const orphanVolumes = state.volumes.filter((volume) => !volume.collection_id || !collectionIds.has(volume.collection_id))
+  if (orphanVolumes.length) {
+    const orphanBranch = createNode('article', 'admin-hierarchy__collection admin-hierarchy__collection--orphan')
+    const heading = createNode('div', 'admin-hierarchy__heading')
+    heading.append(createNode('h3', '', 'Volumes without Collection'), hierarchyBadge('Needs collection', 'admin-badge--restricted'))
+    orphanBranch.append(heading)
+    orphanVolumes.forEach((volume) => orphanBranch.append(renderVolumeBranch(volume, null)))
+    tree.append(orphanBranch)
+  }
+
+  const seriesIds = new Set(state.seriesItems.map((series) => series.id))
+  const orphanBooks = state.books.filter((book) => !book.series_id || !seriesIds.has(book.series_id))
+  if (orphanBooks.length) {
+    const orphanBranch = createNode('article', 'admin-hierarchy__collection admin-hierarchy__collection--orphan')
+    const heading = createNode('div', 'admin-hierarchy__heading')
+    heading.append(
+      createNode('h3', '', 'Books without Series'),
+      hierarchyBadge(`${orphanBooks.length} ${orphanBooks.length === 1 ? 'Book' : 'Books'}`, 'admin-badge--restricted')
+    )
+    const list = createNode('ul', 'admin-hierarchy__books')
+    orphanBooks.forEach((book) => {
+      const item = createNode('li')
+      item.append(createNode('span', '', getText(book.title)), hierarchyBadge(visibilityLabel(bookVisibility(book))))
+      list.append(item)
+    })
+    orphanBranch.append(heading, list)
+    tree.append(orphanBranch)
   }
 }
 
@@ -1159,11 +1518,48 @@ const updateCollection = async (collection, controls) => {
   renderFilteredSections()
 }
 
+const updateVolume = async (volume, controls) => {
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  const updates = {
+    visibility: normalizeVisibility(controls.visibility.value),
+    is_active: boolFromSelect(controls.active.value),
+    sort_order: toSortOrder(controls.sortOrder.value),
+  }
+
+  if (!confirmContentChange(getText(volume.title, 'volume'), volume, updates, 'volume')) return
+
+  const previousLabel = controls.save.textContent
+  controls.save.disabled = true
+  controls.save.textContent = 'Saving...'
+
+  const { data, error } = await supabase
+    .from('volumes')
+    .update(updates)
+    .eq('id', volume.id)
+    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .maybeSingle()
+
+  controls.save.disabled = false
+  controls.save.textContent = previousLabel
+
+  if (error) {
+    setTableError('volumes', error, 'UPDATE')
+    return
+  }
+
+  Object.assign(volume, data || updates)
+  clearTableError('volumes')
+  populateFilters()
+  renderFilteredSections()
+}
+
 const updateSeries = async (series, controls) => {
   if (!ADMIN_ROLES.has(state.profile?.role)) return
 
   const updates = {
     collection_id: controls.collectionSelect.value,
+    volume_id: controls.volumeSelect.value,
     title: controls.titleInput.value.trim(),
     slug: controls.slugInput.value.trim(),
     visibility: normalizeVisibility(controls.visibility.value),
@@ -1171,8 +1567,14 @@ const updateSeries = async (series, controls) => {
     sort_order: toSortOrder(controls.sortOrder.value),
   }
 
-  if (!updates.collection_id || !updates.title || !updates.slug) {
-    setTableError('series', new Error('Series collection, title, and slug are required.'), 'UPDATE')
+  if (!updates.collection_id || !updates.volume_id || !updates.title || !updates.slug) {
+    setTableError('series', new Error('Series collection, volume, title, and slug are required.'), 'UPDATE')
+    return
+  }
+
+  const selectedVolume = state.volumes.find((volume) => volume.id === updates.volume_id)
+  if (selectedVolume?.collection_id !== updates.collection_id) {
+    setTableError('series', new Error('The selected volume must belong to the selected collection.'), 'UPDATE')
     return
   }
 
@@ -1186,7 +1588,7 @@ const updateSeries = async (series, controls) => {
     .from('series')
     .update(updates)
     .eq('id', series.id)
-    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .select('id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
     .maybeSingle()
 
   controls.save.disabled = false
@@ -1297,6 +1699,9 @@ const updateBookContentControls = async (book, controls) => {
 
   Object.assign(book, data || updates)
   clearTableError('books')
+  renderDashboard()
+  renderHierarchy()
+  renderAccessGrants()
   renderBooks()
 }
 

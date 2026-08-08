@@ -64,9 +64,24 @@
           </p>
         </div>
         <div class="contact-actions">
+          <a class="button ghost" href="/admin/" data-account-admin hidden>Admin Portal</a>
           <button class="button primary" type="button" data-logout-button>Logout</button>
         </div>
         <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
+      </article>
+    </section>
+
+    <section class="section page-shell account-library" data-account-library hidden>
+      <div class="section-heading">
+        <p class="eyebrow" data-library-eyebrow>My Library</p>
+        <h2 data-library-title>My Library</h2>
+        <p data-library-note>Your available Greyveil readers appear here.</p>
+      </div>
+      <p class="form-status account-library-status" data-library-status role="status" aria-live="polite">Checking your library...</p>
+      <div class="library-grid" data-library-grid></div>
+      <article class="library-empty" data-library-empty hidden>
+        <h3>Your library is currently empty.</h3>
+        <p>Readable books will appear here after access is added to your account.</p>
       </article>
     </section>
   </main>

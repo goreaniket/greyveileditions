@@ -627,6 +627,124 @@
   color: rgba(42, 52, 64, .72);
 }
 
+.admin-hierarchy {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-hierarchy__collection,
+.admin-hierarchy__volume,
+.admin-hierarchy__series {
+  min-width: 0;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .36);
+}
+
+.admin-hierarchy__collection {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.admin-hierarchy__volume {
+  display: grid;
+  gap: 10px;
+  margin-left: 18px;
+  padding: 14px;
+  border-left: 4px solid rgba(140, 106, 74, .32);
+}
+
+.admin-hierarchy__series {
+  margin-left: 18px;
+  padding: 0;
+  border-left: 4px solid rgba(108, 154, 139, .3);
+  overflow: hidden;
+}
+
+.admin-hierarchy__heading,
+.admin-hierarchy__series summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-hierarchy__heading h3,
+.admin-hierarchy__heading h4 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+.admin-hierarchy__heading h3 {
+  font-size: 1.5rem;
+}
+
+.admin-hierarchy__heading h4 {
+  font-size: 1.28rem;
+}
+
+.admin-hierarchy__series summary {
+  cursor: pointer;
+  padding: 12px;
+  color: var(--slate);
+}
+
+.admin-hierarchy__series summary::marker {
+  color: var(--bronze);
+}
+
+.admin-hierarchy__badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.admin-hierarchy__count {
+  margin-left: auto;
+  color: rgba(42, 52, 64, .62);
+  font-size: .78rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.admin-hierarchy__books {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0 12px 12px 30px;
+}
+
+.admin-hierarchy__books li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: rgba(42, 52, 64, .76);
+}
+
+.admin-hierarchy__books span:first-child {
+  min-width: min(260px, 100%);
+  color: var(--slate);
+  font-weight: 750;
+}
+
+.admin-hierarchy__empty {
+  margin: 0;
+  color: rgba(42, 52, 64, .58);
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+.admin-hierarchy__collection--orphan,
+.admin-hierarchy__volume--unassigned {
+  border-color: rgba(140, 106, 74, .22);
+  background: rgba(140, 106, 74, .08);
+}
+
 .admin-feedback-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
@@ -857,6 +975,21 @@
   .admin-inline-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .admin-hierarchy__volume,
+  .admin-hierarchy__series {
+    margin-left: 0;
+  }
+
+  .admin-hierarchy__heading,
+  .admin-hierarchy__series summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-hierarchy__count {
+    margin-left: 0;
   }
 
   .admin-stat-card {

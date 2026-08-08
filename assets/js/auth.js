@@ -61,6 +61,262 @@ const displayNameFor = (user, profile) => {
     || 'Reader'
 }
 
+let accountLibraryRun = 0
+
+const getText = (value, fallback = '') => {
+  const text = value == null ? '' : String(value).trim()
+  return text || fallback
+}
+
+const formatDate = (value) => {
+  if (!value) return ''
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return ''
+
+  return new Intl.DateTimeFormat(undefined, {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  }).format(date)
+}
+
+const formatAccessType = (value) => {
+  const label = getText(value, 'manual')
+    .replace(/[_-]+/g, ' ')
+    .toLowerCase()
+
+  return label.replace(/\b\w/g, (letter) => letter.toUpperCase())
+}
+
+const libraryNodes = () => ({
+  section: document.querySelector('[data-account-library]'),
+  eyebrow: document.querySelector('[data-library-eyebrow]'),
+  title: document.querySelector('[data-library-title]'),
+  note: document.querySelector('[data-library-note]'),
+  status: document.querySelector('[data-library-status]'),
+  grid: document.querySelector('[data-library-grid]'),
+  empty: document.querySelector('[data-library-empty]'),
+})
+
+const clearNode = (node) => {
+  if (!node) return
+  while (node.firstChild) node.firstChild.remove()
+}
+
+const bookReaderPath = (book, series) => {
+  if (!book?.slug || !series?.slug) return ''
+  return `/projects/${series.slug}/books/${book.slug}/reader/`
+}
+
+const bookCoverPath = (book) => {
+  if (!book?.slug) return ''
+  return `/assets/books/${book.slug}/cover/front-cover.webp`
+}
+
+const sortLibraryItems = (items) => {
+  return [...items].sort((a, b) => {
+    const seriesCompare = getText(a.series?.title, a.book?.series).localeCompare(getText(b.series?.title, b.book?.series))
+    if (seriesCompare) return seriesCompare
+
+    const aNumber = Number(a.book?.book_number)
+    const bNumber = Number(b.book?.book_number)
+    if (Number.isFinite(aNumber) && Number.isFinite(bNumber) && aNumber !== bNumber) return aNumber - bNumber
+
+    return getText(a.book?.title).localeCompare(getText(b.book?.title))
+  })
+}
+
+const currentGrantMap = (grants = [], access) => {
+  const map = new Map()
+  grants
+    .filter((grant) => access.isGrantCurrent(grant))
+    .forEach((grant) => {
+      if (!map.has(grant.book_id)) map.set(grant.book_id, grant)
+    })
+  return map
+}
+
+const libraryHierarchyReady = (hierarchy, access) => {
+  return access.hierarchyIsComplete(hierarchy) && access.hierarchyIsActive(hierarchy)
+}
+
+const configureLibraryCopy = (nodes, role) => {
+  const admin = isAdminRole(role)
+  if (nodes.eyebrow) nodes.eyebrow.textContent = admin ? 'Admin Library' : 'My Library'
+  if (nodes.title) nodes.title.textContent = admin ? 'Full Catalogue Access' : 'My Library'
+  if (nodes.note) {
+    nodes.note.textContent = admin
+      ? 'All active Greyveil books are available from this account.'
+      : 'Your available Greyveil readers appear here.'
+  }
+}
+
+const libraryAccessCopy = (item, role) => {
+  if (isAdminRole(role)) {
+    return {
+      label: 'Full Access',
+      detail: 'Admin Access',
+    }
+  }
+
+  return {
+    label: `${formatAccessType(item.grant?.access_type)} Access`,
+    detail: item.grant?.expires_at
+      ? `Expires ${formatDate(item.grant.expires_at)}`
+      : 'Lifetime Access',
+  }
+}
+
+const libraryCard = (item, role) => {
+  const { book, collection, volume, series } = item
+  const card = document.createElement('article')
+  card.className = 'library-card'
+
+  const cover = document.createElement('figure')
+  cover.className = 'library-card__cover'
+  const coverPath = bookCoverPath(book)
+  if (coverPath) {
+    const image = document.createElement('img')
+    image.src = coverPath
+    image.alt = `${getText(book.title, 'Book')} cover`
+    image.loading = 'lazy'
+    image.addEventListener('error', () => {
+      image.remove()
+      card.classList.add('library-card--no-cover')
+    }, { once: true })
+    cover.append(image)
+  } else {
+    card.classList.add('library-card--no-cover')
+  }
+
+  const body = document.createElement('div')
+  body.className = 'library-card__body'
+
+  const title = document.createElement('h3')
+  title.textContent = getText(book.title, 'Untitled Book')
+
+  const meta = document.createElement('p')
+  meta.className = 'library-card__meta'
+  ;[
+    getText(collection?.title),
+    getText(volume?.title),
+    getText(series?.title, book.series),
+  ].filter(Boolean).forEach((value) => {
+    const line = document.createElement('span')
+    line.textContent = value
+    meta.append(line)
+  })
+
+  const accessCopy = libraryAccessCopy(item, role)
+  const accessNode = document.createElement('p')
+  accessNode.className = 'library-card__access'
+  const accessLabel = document.createElement('strong')
+  const accessDetail = document.createElement('span')
+  accessLabel.textContent = accessCopy.label
+  accessDetail.textContent = accessCopy.detail
+  accessNode.append(accessLabel, accessDetail)
+
+  const readLink = document.createElement('a')
+  readLink.className = 'button primary'
+  readLink.href = bookReaderPath(book, series)
+  readLink.textContent = 'Read Book'
+
+  body.append(title, meta, accessNode, readLink)
+  card.append(cover, body)
+  return card
+}
+
+const buildCustomerLibraryItems = (hierarchy, grants, access) => {
+  const grantsByBook = currentGrantMap(grants, access)
+
+  return hierarchy.books
+    .map((book) => {
+      const itemHierarchy = access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes)
+      const grant = grantsByBook.get(book.id)
+      return { ...itemHierarchy, grant }
+    })
+    .filter((item) => {
+      if (!item.grant) return false
+      if (!libraryHierarchyReady(item, access)) return false
+      if (access.effectiveVisibilityForBookHierarchy(item) === 'private') return false
+      return Boolean(bookReaderPath(item.book, item.series))
+    })
+}
+
+const buildAdminLibraryItems = (hierarchy, access) => {
+  return hierarchy.books
+    .map((book) => access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes))
+    .filter((item) => {
+      return libraryHierarchyReady(item, access) && Boolean(bookReaderPath(item.book, item.series))
+    })
+}
+
+const renderAccountLibrary = async (user, profile, role) => {
+  const nodes = libraryNodes()
+  if (!nodes.section || !nodes.grid) return
+
+  const runId = ++accountLibraryRun
+  nodes.section.hidden = false
+  clearNode(nodes.grid)
+  if (nodes.empty) nodes.empty.hidden = true
+  configureLibraryCopy(nodes, role)
+  setStatus(nodes.status, 'Checking your library...', 'info')
+
+  try {
+    const access = await import('./content-access.js')
+    let hierarchy = null
+    let grants = []
+
+    if (isAdminRole(role)) {
+      hierarchy = await access.fetchContentHierarchy()
+    } else {
+      const grantsResult = await access.fetchViewerBookGrants(user.id)
+      if (grantsResult.error) {
+        const libraryError = new Error(grantsResult.error.message || 'Book access could not be read.')
+        libraryError.table = 'book_access'
+        libraryError.code = grantsResult.error.code
+        throw libraryError
+      }
+
+      grants = (grantsResult.data || []).filter((grant) => access.isGrantCurrent(grant))
+      hierarchy = await access.fetchHierarchyForBooks(grants.map((grant) => grant.book_id))
+    }
+
+    const hierarchyErrors = Object.entries(hierarchy.errors || {}).filter(([, error]) => error)
+
+    if (runId !== accountLibraryRun) return
+
+    if (hierarchyErrors.length) {
+      const [table, error] = hierarchyErrors[0]
+      const libraryError = new Error(error?.message || 'Content hierarchy could not be read.')
+      libraryError.table = table
+      libraryError.code = error?.code
+      throw libraryError
+    }
+
+    const items = isAdminRole(role)
+      ? buildAdminLibraryItems(hierarchy, access)
+      : buildCustomerLibraryItems(hierarchy, grants, access)
+
+    if (runId !== accountLibraryRun) return
+
+    const sortedItems = sortLibraryItems(items)
+    sortedItems.forEach((item) => nodes.grid.append(libraryCard(item, role)))
+
+    if (nodes.empty) nodes.empty.hidden = Boolean(sortedItems.length)
+    setStatus(nodes.status, '', '')
+  } catch (error) {
+    console.info('Account library could not be loaded.', {
+      table: error?.table,
+      name: error?.name,
+      message: error?.message,
+      code: error?.code,
+    })
+    clearNode(nodes.grid)
+    if (nodes.empty) nodes.empty.hidden = true
+    setStatus(nodes.status, 'We could not load your library right now. Please refresh and try again.', 'error')
+  }
+}
+
 export async function getCurrentUser() {
   const { data, error } = await supabase.auth.getUser()
   if (error || !data?.user) return null
@@ -91,9 +347,8 @@ export async function signOut() {
   if (error) throw error
 }
 
-export async function redirectByRole(user = null) {
-  const role = await getUserRole(user)
-  window.location.assign(isAdminRole(role) ? ADMIN_PATH : ACCOUNT_PATH)
+export async function redirectByRole() {
+  window.location.assign(ACCOUNT_PATH)
 }
 
 const showAuthView = (view) => {
@@ -225,6 +480,7 @@ const initAccountPage = async () => {
   const emailNode = document.querySelector('[data-account-email]')
   const roleRow = document.querySelector('[data-account-role-row]')
   const roleNode = document.querySelector('[data-account-role]')
+  const adminPortal = document.querySelector('[data-account-admin]')
 
   const user = await getCurrentUser()
   if (!user) {
@@ -232,18 +488,39 @@ const initAccountPage = async () => {
     return
   }
 
-  const profile = await getCurrentProfile(user)
-  const role = profile?.role || 'customer'
+  const renderCurrentAccount = async (currentUser) => {
+    const profile = await getCurrentProfile(currentUser)
+    const role = profile?.role || 'customer'
 
-  if (nameNode) nameNode.textContent = displayNameFor(user, profile)
-  if (emailNode) emailNode.textContent = user.email || ''
+    if (nameNode) nameNode.textContent = displayNameFor(currentUser, profile)
+    if (emailNode) emailNode.textContent = currentUser.email || ''
 
-  if (roleRow && roleNode && isAdminRole(role)) {
-    roleNode.textContent = formatRole(role)
-    roleRow.hidden = false
+    if (roleRow && roleNode) {
+      roleNode.textContent = formatRole(role)
+      roleRow.hidden = !isAdminRole(role)
+    }
+
+    if (adminPortal) {
+      adminPortal.hidden = !isAdminRole(role)
+    }
+
+    showAuthView(view)
+    await renderAccountLibrary(currentUser, profile, role)
   }
 
-  showAuthView(view)
+  await renderCurrentAccount(user)
+
+  supabase.auth.onAuthStateChange((_event, session) => {
+    window.setTimeout(async () => {
+      const nextUser = session?.user || await getCurrentUser()
+      if (!nextUser) {
+        window.location.replace(LOGIN_PATH)
+        return
+      }
+
+      await renderCurrentAccount(nextUser)
+    }, 0)
+  })
 
   logoutButton?.addEventListener('click', async () => {
     setBusy(logoutButton, true, 'Signing out...')

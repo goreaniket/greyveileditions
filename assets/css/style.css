@@ -866,6 +866,17 @@ h3 {
   color: rgba(42, 52, 64, .7);
 }
 
+.content-unavailable {
+  min-height: 78svh;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+}
+
+.content-unavailable h1 {
+  max-width: 9ch;
+}
+
 .founder-line,
 .entity-links {
   max-width: 680px;
@@ -1967,6 +1978,146 @@ main > .home-hero ~ .section .contact-link {
 
 .account-detail span {
   overflow-wrap: anywhere;
+}
+
+.account-library {
+  padding-block-start: 18px;
+}
+
+.account-library .section-heading {
+  align-items: flex-start;
+}
+
+.account-library .section-heading p:not(.eyebrow) {
+  max-width: 58ch;
+  margin: 10px 0 0;
+  color: rgba(58, 58, 58, .7);
+}
+
+.account-library-status {
+  margin: -12px 0 20px;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 20px;
+}
+
+.library-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .54);
+  box-shadow: 0 16px 44px rgba(42, 52, 64, .08);
+}
+
+.library-card__cover {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  margin: 0;
+  background:
+    linear-gradient(145deg, rgba(140, 106, 74, .18), rgba(108, 154, 139, .12)),
+    rgba(255, 255, 255, .48);
+}
+
+.library-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.library-card--no-cover .library-card__cover::after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: rgba(42, 52, 64, .62);
+  content: "Greyveil Editions";
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.library-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+}
+
+.library-card__body h3 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.05;
+}
+
+.library-card__meta {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  color: rgba(58, 58, 58, .72);
+  font-size: .92rem;
+}
+
+.library-card__meta span,
+.library-card__access span {
+  display: block;
+}
+
+.library-card__access {
+  display: grid;
+  gap: 5px;
+  margin: auto 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(42, 52, 64, .09);
+}
+
+.library-card__access strong {
+  color: var(--bronze);
+  font-size: .76rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.library-card__access span {
+  color: rgba(42, 52, 64, .7);
+  font-weight: 700;
+}
+
+.library-card .button {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.library-empty {
+  max-width: 680px;
+  padding: 28px;
+  border: 1px dashed rgba(42, 52, 64, .18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .38);
+}
+
+.library-empty h3 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.05;
+}
+
+.library-empty p {
+  margin: 10px 0 0;
+  color: rgba(58, 58, 58, .7);
 }
 
 .instagram-icon {
@@ -3619,6 +3770,52 @@ blockquote {
 
   .cursor-glow {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .account-library {
+    padding-block-start: 0;
+  }
+
+  .account-library .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .library-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .library-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .library-card__cover {
+    min-height: 100%;
+  }
+
+  .library-card--no-cover .library-card__cover::after {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .library-card__body {
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .library-card__body h3 {
+    font-size: 1.38rem;
+  }
+
+  .library-card__meta {
+    font-size: .84rem;
+  }
+
+  .library-card__access {
+    padding-top: 9px;
   }
 }
 

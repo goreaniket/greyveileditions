@@ -119,81 +119,434 @@ const initAuthNavigation = async () => {
   }
 };
 
-const slugFromHref = (href, kind) => {
+let contentSurfaceRecords = null;
+let contentVisibilityRun = 0;
+let authRefreshTimer = 0;
+
+const directContentState = {
+  target: null,
+  main: null,
+  footer: null,
+  title: document.title,
+  descriptionNode: document.querySelector("meta[name='description']"),
+  description: document.querySelector("meta[name='description']")?.getAttribute("content") || "",
+  mainNodes: null,
+  footerHidden: false,
+  unavailable: false,
+};
+
+const slugifyContent = (value) => String(value || "")
+  .trim()
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-+|-+$/g, "");
+
+const parseContentTarget = (href) => {
   if (!href) return "";
 
   const url = new URL(href, window.location.href);
   const segments = url.pathname.split("/").filter(Boolean);
+  const projectIndex = segments.indexOf("projects");
+  if (projectIndex < 0) return { kind: "", slug: "" };
 
-  if (kind === "book") {
-    const file = segments.at(-1) || "";
-    return file.endsWith(".html") ? file.replace(/\.html$/, "") : "";
+  const booksIndex = segments.indexOf("books");
+  if (booksIndex >= 0) {
+    const rawSlug = segments[booksIndex + 1] || "";
+    const slug = rawSlug.endsWith(".html") ? rawSlug.replace(/\.html$/, "") : rawSlug;
+    return { kind: slug ? "book" : "", slug };
   }
 
-  if (kind === "series") {
-    const projectIndex = segments.indexOf("projects");
-    return projectIndex >= 0 ? segments[projectIndex + 1] || "" : "";
-  }
-
-  return "";
-};
-
-const contentCardInfo = (card) => {
-  if (card.matches(".book-card")) {
-    const href = card.querySelector("a[href*='books/']")?.getAttribute("href") || "";
-    return { kind: "book", slug: slugFromHref(href, "book") };
-  }
-
-  if (card.matches(".project-card")) {
-    const href = card.getAttribute("href") || card.querySelector("a[href]")?.getAttribute("href") || "";
-    return { kind: "series", slug: slugFromHref(href, "series") };
+  const seriesSlug = segments[projectIndex + 1] || "";
+  if (seriesSlug && seriesSlug !== "index.html") {
+    return { kind: "series", slug: seriesSlug };
   }
 
   return { kind: "", slug: "" };
 };
 
-const initContentVisibilityFiltering = async () => {
-  const cards = Array.from(document.querySelectorAll(".project-card, .book-card"));
-  if (!cards.length) return;
+const targetFromLink = (link) => {
+  const target = parseContentTarget(link.getAttribute("href"));
+  if (hasContentTarget(target)) return target;
+
+  const url = new URL(link.getAttribute("href") || "", window.location.href);
+  const segments = url.pathname.split("/").filter(Boolean);
+  const isProjectsRoot = segments[0] === "projects" && (segments.length === 1 || segments[1] === "index.html");
+  const label = link.textContent.trim();
+
+  if (isProjectsRoot && /collection/i.test(label)) {
+    return { kind: "collection", slug: slugifyContent(label), title: label };
+  }
+
+  return { kind: "", slug: "" };
+};
+
+const contentCardInfo = (card) => {
+  if (card.matches(".book-card")) {
+    const href = card.querySelector("a[href*='books/']")?.getAttribute("href") || "";
+    return parseContentTarget(href);
+  }
+
+  if (card.matches(".project-card")) {
+    const href = card.getAttribute("href") || card.querySelector("a[href]")?.getAttribute("href") || "";
+    return parseContentTarget(href);
+  }
+
+  return { kind: "", slug: "" };
+};
+
+const currentPageTarget = () => {
+  const main = document.querySelector("main");
+  const target = parseContentTarget(window.location.href);
+  if (target.kind === "book" && main?.classList.contains("book-detail")) return target;
+  if (target.kind === "series" && document.body.classList.contains("series-landing")) return target;
+
+  const segments = window.location.pathname.split("/").filter(Boolean);
+  const isProjectsRoot = segments[0] === "projects" && (segments.length === 1 || segments[1] === "index.html");
+  const heading = isProjectsRoot ? document.querySelector("main h1")?.textContent.trim() : "";
+  if (heading && /collection/i.test(heading)) {
+    return { kind: "collection", slug: slugifyContent(heading), title: heading };
+  }
+
+  return { kind: "", slug: "" };
+};
+
+const hasContentTarget = (target) => Boolean(target?.kind && target?.slug);
+
+const collectContentSurfaceRecords = () => {
+  if (contentSurfaceRecords) return contentSurfaceRecords;
+
+  const records = [];
+  const seen = new Set();
+  const addRecord = (node, target) => {
+    if (!node || !hasContentTarget(target) || seen.has(node)) return;
+    seen.add(node);
+    records.push({
+      node,
+      target,
+      placeholder: null,
+      detached: false,
+    });
+  };
+
+  document.querySelectorAll(".project-card, .book-card").forEach((card) => {
+    addRecord(card, contentCardInfo(card));
+  });
+
+  document.querySelectorAll("a[href]").forEach((link) => {
+    if (link.closest(".project-card, .book-card")) return;
+    const target = targetFromLink(link);
+    if (!hasContentTarget(target)) return;
+    addRecord(link, target);
+  });
+
+  contentSurfaceRecords = records;
+  return records;
+};
+
+const suspendNode = (node) => {
+  if (!node?.isConnected) return;
+  node.hidden = true;
+  if ("inert" in node) node.inert = true;
+};
+
+const revealNode = (node) => {
+  if (!node) return;
+  node.hidden = false;
+  if ("inert" in node) node.inert = false;
+};
+
+const detachRecord = (record) => {
+  if (!record.placeholder) {
+    record.placeholder = document.createComment("greyveil-filtered-content");
+  }
+
+  if (record.node.isConnected && !record.placeholder.isConnected) {
+    record.node.before(record.placeholder);
+  }
+
+  record.node.remove();
+  record.detached = true;
+};
+
+const attachRecord = (record) => {
+  if (record.detached && record.placeholder?.parentNode) {
+    record.placeholder.parentNode.insertBefore(record.node, record.placeholder);
+  }
+
+  record.detached = false;
+  revealNode(record.node);
+};
+
+const suspendRecord = (record) => {
+  if (!record.detached) suspendNode(record.node);
+};
+
+const suspendDirectContent = () => {
+  const target = currentPageTarget();
+  if (!hasContentTarget(target)) return null;
+
+  const main = document.querySelector("main");
+  if (!main) return target;
+
+  directContentState.target = target;
+  directContentState.main = main;
+  directContentState.footer = document.querySelector(".site-footer");
+  directContentState.title = directContentState.title || document.title;
+  directContentState.descriptionNode = directContentState.descriptionNode || document.querySelector("meta[name='description']");
+  directContentState.description = directContentState.description || directContentState.descriptionNode?.getAttribute("content") || "";
+  if (!directContentState.mainNodes) {
+    directContentState.mainNodes = Array.from(main.childNodes);
+  }
+
+  suspendNode(main);
+  if (directContentState.footer) {
+    directContentState.footerHidden = directContentState.footer.hidden;
+    suspendNode(directContentState.footer);
+  }
+
+  return target;
+};
+
+const restoreDirectContent = () => {
+  const { main, footer } = directContentState;
+  if (!main) return;
+
+  if (directContentState.unavailable && directContentState.mainNodes) {
+    main.replaceChildren(...directContentState.mainNodes);
+  }
+
+  document.title = directContentState.title || document.title;
+  if (directContentState.descriptionNode) {
+    directContentState.descriptionNode.setAttribute("content", directContentState.description || "");
+  }
+
+  directContentState.unavailable = false;
+  revealNode(main);
+  if (footer) {
+    footer.hidden = directContentState.footerHidden;
+    if ("inert" in footer) footer.inert = false;
+  }
+};
+
+const showUnavailableContent = () => {
+  const main = directContentState.main || document.querySelector("main");
+  if (!main) return;
+
+  const section = document.createElement("section");
+  section.className = "section page-shell content-unavailable";
+
+  const eyebrow = document.createElement("p");
+  eyebrow.className = "eyebrow";
+  eyebrow.textContent = "Greyveil Editions";
+
+  const heading = document.createElement("h1");
+  heading.textContent = "This page is unavailable.";
+
+  const copy = document.createElement("p");
+  copy.className = "hero-text";
+  copy.textContent = "The requested content is not available from this account.";
+
+  const actions = document.createElement("div");
+  actions.className = "button-row";
+  actions.append(
+    createAuthLink("/", "Back to Home", "button primary"),
+    createAuthLink(accountPath, "My Account", "button ghost")
+  );
+
+  section.append(eyebrow, heading, copy, actions);
+  main.replaceChildren(section);
+  document.title = "Unavailable | Greyveil Editions";
+  if (directContentState.descriptionNode) {
+    directContentState.descriptionNode.setAttribute("content", "This Greyveil Editions page is unavailable.");
+  }
+
+  directContentState.unavailable = true;
+  revealNode(main);
+  if (directContentState.footer) {
+    directContentState.footer.hidden = true;
+    if ("inert" in directContentState.footer) directContentState.footer.inert = true;
+  }
+};
+
+const restoreLink = (link) => {
+  if (link.dataset.originalHref) link.setAttribute("href", link.dataset.originalHref);
+  if (link.dataset.originalText) link.textContent = link.dataset.originalText;
+  link.removeAttribute("aria-disabled");
+};
+
+const lockReaderLink = (link, user) => {
+  if (!link.dataset.originalHref) link.dataset.originalHref = link.getAttribute("href") || "";
+  if (!link.dataset.originalText) link.dataset.originalText = link.textContent;
+
+  link.href = user ? accountPath : loginPath;
+  link.textContent = user ? "Access required" : "Log in to read";
+  link.setAttribute("aria-disabled", "true");
+};
+
+const updateBookSurfaceState = (node, decision, access, context) => {
+  if (!node || decision.target.kind !== "book" || !decision.book) return;
+
+  const visibility = access.effectiveVisibilityForBookHierarchy(decision.hierarchy);
+  const locked = visibility === "paid" && !decision.canRead;
+  const readerLinks = [];
+
+  if (node.matches?.("a[href*='/reader/']")) readerLinks.push(node);
+  node.querySelectorAll?.("a[href*='/reader/']").forEach((link) => readerLinks.push(link));
+
+  readerLinks.forEach((link) => {
+    if (locked) {
+      lockReaderLink(link, context.user);
+    } else {
+      restoreLink(link);
+    }
+  });
+
+  if (node.matches?.(".book-card")) {
+    const status = node.querySelector("span");
+    if (status) {
+      if (!status.dataset.originalText) status.dataset.originalText = status.textContent;
+      status.textContent = locked ? "Access required" : status.dataset.originalText;
+    }
+  }
+};
+
+const contentDecision = (target, hierarchy, access, context, grants) => {
+  const seriesBySlug = new Map(hierarchy.seriesItems.map((item) => [item.slug, item]));
+  const booksBySlug = new Map(hierarchy.books.map((item) => [item.slug, item]));
+  const collectionsBySlug = new Map(hierarchy.collections.map((item) => [item.slug, item]));
+
+  if (target.kind === "collection") {
+    const collection = collectionsBySlug.get(target.slug)
+      || hierarchy.collections.find((item) => slugifyContent(item.title) === target.slug);
+    const itemHierarchy = { collection };
+
+    return {
+      target,
+      allowed: access.canDiscoverContent(itemHierarchy, context),
+      collection,
+      hierarchy: itemHierarchy,
+    };
+  }
+
+  if (target.kind === "series") {
+    const series = seriesBySlug.get(target.slug);
+    const volume = access.volumeForSeries(series, hierarchy.volumes);
+    const itemHierarchy = {
+      collection: access.collectionForSeries(series, hierarchy.collections),
+      volume,
+      series,
+    };
+
+    return {
+      target,
+      allowed: access.canDiscoverContent(itemHierarchy, context),
+      series,
+      hierarchy: itemHierarchy,
+    };
+  }
+
+  if (target.kind === "book") {
+    const book = booksBySlug.get(target.slug);
+    const itemHierarchy = access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes);
+    const allowed = access.canDiscoverContent(itemHierarchy, context);
+    const canRead = allowed
+      ? access.canReadBook({ ...itemHierarchy, grants }, context)
+      : false;
+
+    return {
+      target,
+      allowed,
+      canRead,
+      book,
+      hierarchy: itemHierarchy,
+    };
+  }
+
+  return { target, allowed: false };
+};
+
+const initContentVisibilityFiltering = async (runId = contentVisibilityRun) => {
+  const directTarget = suspendDirectContent();
+  const records = collectContentSurfaceRecords();
+  records.forEach(suspendRecord);
 
   try {
     const access = await import(new URL("content-access.js", mainScriptUrl).href);
     const context = await access.getAccessContext();
-
-    if (access.isAdminRole(context.role)) return;
-
     const hierarchy = await access.fetchContentHierarchy();
-    const blockingError = hierarchy.errors.collections || hierarchy.errors.series || hierarchy.errors.books;
+    const blockingError = hierarchy.errors.collections || hierarchy.errors.volumes || hierarchy.errors.series || hierarchy.errors.books;
+
+    if (runId !== contentVisibilityRun) return;
 
     if (blockingError) {
       console.info("Content visibility filtering is waiting on Supabase hierarchy schema/RLS.", {
         collections: hierarchy.errors.collections?.message,
+        volumes: hierarchy.errors.volumes?.message,
         series: hierarchy.errors.series?.message,
         books: hierarchy.errors.books?.message,
       });
+      if (access.isAdminRole(context.role)) {
+        records.forEach(attachRecord);
+        restoreDirectContent();
+      } else {
+        records.forEach(detachRecord);
+        if (directTarget) showUnavailableContent();
+      }
       return;
     }
 
-    const seriesBySlug = new Map(hierarchy.seriesItems.map((item) => [item.slug, item]));
-    const booksBySlug = new Map(hierarchy.books.map((item) => [item.slug, item]));
+    const grantsResult = await access.fetchViewerBookGrants(context.user?.id);
+    const grants = grantsResult.data || [];
 
-    cards.forEach((card) => {
-      const { kind, slug } = contentCardInfo(card);
-      if (!kind || !slug) return;
+    if (runId !== contentVisibilityRun) return;
 
-      const hierarchyItem = kind === "book"
-        ? access.hierarchyForBook(booksBySlug.get(slug), hierarchy.seriesItems, hierarchy.collections)
-        : {
-            collection: access.collectionForSeries(seriesBySlug.get(slug), hierarchy.collections),
-            series: seriesBySlug.get(slug),
-          };
+    records.forEach((record) => {
+      const decision = contentDecision(record.target, hierarchy, access, context, grants);
 
-      if (!access.canDiscoverContent(hierarchyItem, context)) {
-        card.remove();
+      if (decision.allowed) {
+        attachRecord(record);
+        updateBookSurfaceState(record.node, decision, access, context);
+      } else {
+        detachRecord(record);
       }
     });
+
+    if (directTarget) {
+      const decision = contentDecision(directTarget, hierarchy, access, context, grants);
+      if (decision.allowed) {
+        restoreDirectContent();
+        updateBookSurfaceState(directContentState.main, decision, access, context);
+      } else {
+        showUnavailableContent();
+      }
+    }
   } catch (error) {
     console.info("Content visibility filtering could not run.", {
+      name: error?.name,
+      message: error?.message,
+      code: error?.code,
+    });
+    records.forEach(detachRecord);
+    if (directTarget) showUnavailableContent();
+  }
+};
+
+const refreshAuthAndContentVisibility = async () => {
+  contentVisibilityRun += 1;
+  const runId = contentVisibilityRun;
+  await initAuthNavigation();
+  await initContentVisibilityFiltering(runId);
+};
+
+const bindAuthStateRefresh = async () => {
+  try {
+    const { supabase } = await import(new URL("supabase-client.js", mainScriptUrl).href);
+    supabase.auth.onAuthStateChange(() => {
+      window.clearTimeout(authRefreshTimer);
+      authRefreshTimer = window.setTimeout(refreshAuthAndContentVisibility, 0);
+    });
+  } catch (error) {
+    console.info("Auth state listener could not be registered.", {
       name: error?.name,
       message: error?.message,
       code: error?.code,
@@ -201,8 +554,8 @@ const initContentVisibilityFiltering = async () => {
   }
 };
 
-initAuthNavigation();
-initContentVisibilityFiltering();
+refreshAuthAndContentVisibility();
+bindAuthStateRefresh();
 
 document.querySelectorAll(".dropdown").forEach((dropdown) => {
   const trigger = dropdown.querySelector(".dropdown-trigger");
