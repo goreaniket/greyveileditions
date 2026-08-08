@@ -457,6 +457,26 @@ body.is-paginating .reader-loading {
   text-align: center;
 }
 
+.reader-access-message {
+  width: min(100%, 620px);
+  display: grid;
+  gap: 14px;
+  margin: 90px auto;
+  padding: 28px;
+  border: 1px solid var(--reader-border);
+  border-radius: 8px;
+  background: var(--reader-paper);
+  box-shadow: var(--reader-shadow);
+  font-family: var(--reader-sans);
+  text-align: center;
+}
+
+.reader-access-message .reader-error,
+.reader-access-message p {
+  width: auto;
+  margin: 0;
+}
+
 .book-page {
   position: relative;
   width: min(100%, var(--page-width));

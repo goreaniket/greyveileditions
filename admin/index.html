@@ -42,6 +42,7 @@
         <nav class="admin-nav" aria-label="Dashboard sections">
           <button type="button" data-admin-tab="dashboard" aria-selected="true">Dashboard</button>
           <button type="button" data-admin-tab="users" aria-selected="false">Users</button>
+          <button type="button" data-admin-tab="content" aria-selected="false">Content</button>
           <button type="button" data-admin-tab="books" aria-selected="false">Books</button>
           <button type="button" data-admin-tab="book-access" aria-selected="false">Book Access</button>
           <button type="button" data-admin-tab="feedback" aria-selected="false">Feedback</button>
@@ -154,12 +155,186 @@
           <p class="admin-empty" data-users-empty hidden>No users match the current filters.</p>
         </section>
 
+        <section class="admin-panel" data-admin-panel="content" aria-labelledby="content-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Content Management</p>
+              <h2 id="content-title">Collections &amp; Series</h2>
+              <p class="admin-panel-note">GLOBAL ACTIVE controls whether content is enabled. VISIBILITY controls who can discover it. USER ACCESS controls which customer may read protected books.</p>
+            </div>
+          </div>
+
+          <div class="admin-content-principles" aria-label="Content access model">
+            <article class="admin-card">
+              <h3>Global Active</h3>
+              <p>Inactive content is disabled for customers even if a customer has book access. Admins still see it for management.</p>
+            </article>
+            <article class="admin-card">
+              <h3>Visibility</h3>
+              <p>Public and paid items can be discovered. Private items are absent from guest and customer listings.</p>
+            </article>
+            <article class="admin-card">
+              <h3>User Access</h3>
+              <p>Paid reading is granted per user in Book Access. Admins and super admins read active books automatically.</p>
+            </article>
+          </div>
+
+          <div class="admin-content-grid">
+            <form class="admin-card admin-content-form" data-collection-form>
+              <div class="admin-card-heading">
+                <h3>Add Collection</h3>
+                <p class="admin-count" data-collections-count>0 collections</p>
+              </div>
+              <div class="admin-access-grid">
+                <label>
+                  <span>Title</span>
+                  <input name="title" type="text" required />
+                </label>
+                <label>
+                  <span>Slug</span>
+                  <input name="slug" type="text" required />
+                </label>
+                <label>
+                  <span>Visibility</span>
+                  <select name="visibility" required>
+                    <option value="public">public</option>
+                    <option value="paid">paid</option>
+                    <option value="private">private</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Active</span>
+                  <select name="is_active" required>
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Sort Order</span>
+                  <input name="sort_order" type="number" value="0" />
+                </label>
+                <label>
+                  <span>Description</span>
+                  <input name="description" type="text" />
+                </label>
+              </div>
+              <div class="admin-form-actions">
+                <button class="admin-action admin-action--primary" type="submit">Create Collection</button>
+                <p class="admin-form-status" data-collection-status role="status" aria-live="polite"></p>
+              </div>
+            </form>
+
+            <form class="admin-card admin-content-form" data-series-form>
+              <div class="admin-card-heading">
+                <h3>Add Series</h3>
+                <p class="admin-count" data-series-count>0 series</p>
+              </div>
+              <div class="admin-access-grid">
+                <label>
+                  <span>Collection</span>
+                  <select name="collection_id" data-series-collection-select required>
+                    <option value="">Select collection</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Title</span>
+                  <input name="title" type="text" required />
+                </label>
+                <label>
+                  <span>Slug</span>
+                  <input name="slug" type="text" required />
+                </label>
+                <label>
+                  <span>Visibility</span>
+                  <select name="visibility" required>
+                    <option value="public">public</option>
+                    <option value="paid">paid</option>
+                    <option value="private">private</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Active</span>
+                  <select name="is_active" required>
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Sort Order</span>
+                  <input name="sort_order" type="number" value="0" />
+                </label>
+                <label>
+                  <span>Description</span>
+                  <input name="description" type="text" />
+                </label>
+              </div>
+              <div class="admin-form-actions">
+                <button class="admin-action admin-action--primary" type="submit">Create Series</button>
+                <p class="admin-form-status" data-series-status role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+
+          <div class="admin-content-grid">
+            <article>
+              <div class="admin-card-heading">
+                <h3>Collections</h3>
+              </div>
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Title</th>
+                      <th scope="col">Slug</th>
+                      <th scope="col">Visibility</th>
+                      <th scope="col">Active</th>
+                      <th scope="col">Sort</th>
+                      <th scope="col">Controls</th>
+                    </tr>
+                  </thead>
+                  <tbody data-collections-table></tbody>
+                </table>
+              </div>
+              <p class="admin-empty" data-collections-empty hidden>No collections are available to display.</p>
+            </article>
+
+            <article>
+              <div class="admin-card-heading">
+                <h3>Series</h3>
+              </div>
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Title</th>
+                      <th scope="col">Collection</th>
+                      <th scope="col">Slug</th>
+                      <th scope="col">Visibility</th>
+                      <th scope="col">Active</th>
+                      <th scope="col">Sort</th>
+                      <th scope="col">Controls</th>
+                    </tr>
+                  </thead>
+                  <tbody data-series-table></tbody>
+                </table>
+              </div>
+              <p class="admin-empty" data-series-empty hidden>No series are available to display.</p>
+            </article>
+          </div>
+
+          <article class="admin-card admin-placeholder">
+            <h3>Book visibility lives in Books.</h3>
+            <p>Use the Books section for Public / Paid / Private book visibility and the separate Global Active switch.</p>
+            <button class="admin-action" type="button" data-admin-tab-link="books">Open Books</button>
+          </article>
+        </section>
+
         <section class="admin-panel" data-admin-panel="books" aria-labelledby="books-title">
           <div class="admin-panel-heading">
             <div>
               <p class="admin-eyebrow">Global Book Controls</p>
               <h2 id="books-title">Books</h2>
-              <p class="admin-panel-note">These switches apply to the book globally. User-specific access is managed in Book Access.</p>
+              <p class="admin-panel-note">Visibility controls discovery. Global Active controls whether the book is enabled. User Access controls customer reading entitlement.</p>
             </div>
             <p class="admin-count" data-books-count>0 books</p>
           </div>
@@ -172,7 +347,7 @@
                   <th scope="col">Series</th>
                   <th scope="col">Book Number</th>
                   <th scope="col">Slug</th>
-                  <th scope="col">Public Visibility</th>
+                  <th scope="col">Visibility</th>
                   <th scope="col">Global Active</th>
                   <th scope="col">Controls</th>
                 </tr>

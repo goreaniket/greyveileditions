@@ -1,5 +1,6 @@
 import { supabase } from './supabase-client.js'
 import { getCurrentUser, signOut } from './auth.js'
+import { hierarchyForBook, hierarchyIsActive, normalizeVisibility, VISIBILITY_STATES } from './content-access.js'
 
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const STATUS_OPTIONS = ['new', 'reviewed', 'archived']
@@ -25,6 +26,17 @@ const selectors = {
   userRole: '[data-user-role]',
   usersTable: '[data-users-table]',
   usersEmpty: '[data-users-empty]',
+  collectionForm: '[data-collection-form]',
+  collectionStatus: '[data-collection-status]',
+  collectionsTable: '[data-collections-table]',
+  collectionsEmpty: '[data-collections-empty]',
+  collectionsCount: '[data-collections-count]',
+  seriesForm: '[data-series-form]',
+  seriesStatus: '[data-series-status]',
+  seriesCollectionSelect: '[data-series-collection-select]',
+  seriesTable: '[data-series-table]',
+  seriesEmpty: '[data-series-empty]',
+  seriesCount: '[data-series-count]',
   booksTable: '[data-books-table]',
   booksEmpty: '[data-books-empty]',
   booksCount: '[data-books-count]',
@@ -55,6 +67,8 @@ const state = {
   user: null,
   profile: null,
   users: [],
+  collections: [],
+  seriesItems: [],
   books: [],
   feedbacks: [],
   accessGrants: [],
@@ -85,6 +99,17 @@ const singleNodes = {
   userRole: $(selectors.userRole),
   usersTable: $(selectors.usersTable),
   usersEmpty: $(selectors.usersEmpty),
+  collectionForm: $(selectors.collectionForm),
+  collectionStatus: $(selectors.collectionStatus),
+  collectionsTable: $(selectors.collectionsTable),
+  collectionsEmpty: $(selectors.collectionsEmpty),
+  collectionsCount: $(selectors.collectionsCount),
+  seriesForm: $(selectors.seriesForm),
+  seriesStatus: $(selectors.seriesStatus),
+  seriesCollectionSelect: $(selectors.seriesCollectionSelect),
+  seriesTable: $(selectors.seriesTable),
+  seriesEmpty: $(selectors.seriesEmpty),
+  seriesCount: $(selectors.seriesCount),
   booksTable: $(selectors.booksTable),
   booksEmpty: $(selectors.booksEmpty),
   booksCount: $(selectors.booksCount),
@@ -187,6 +212,60 @@ const boolLabel = (value) => {
   return '-'
 }
 
+const boolValueLabel = (value) => value === false ? 'Inactive' : 'Active'
+
+const visibilityLabel = (value, fallback = 'paid') => {
+  const visibility = normalizeVisibility(value, fallback)
+  return visibility.charAt(0).toUpperCase() + visibility.slice(1)
+}
+
+const bookVisibility = (book) => {
+  return normalizeVisibility(book?.visibility, book?.is_public === true ? 'public' : 'paid')
+}
+
+const toSortOrder = (value) => {
+  const number = Number(value)
+  return Number.isFinite(number) ? number : 0
+}
+
+const formValue = (formData, name) => String(formData.get(name) || '').trim()
+
+const visibilitySelect = (value, dataset = {}) => {
+  const select = document.createElement('select')
+  select.className = 'admin-compact-control'
+  Object.entries(dataset).forEach(([key, dataValue]) => {
+    select.dataset[key] = dataValue
+  })
+
+  VISIBILITY_STATES.forEach((visibility) => {
+    const option = document.createElement('option')
+    option.value = visibility
+    option.textContent = visibilityLabel(visibility)
+    select.append(option)
+  })
+
+  select.value = normalizeVisibility(value)
+  return select
+}
+
+const activeSelect = (value) => {
+  const select = document.createElement('select')
+  select.className = 'admin-compact-control'
+
+  ;[
+    ['true', 'Active'],
+    ['false', 'Inactive'],
+  ].forEach(([optionValue, label]) => {
+    const option = document.createElement('option')
+    option.value = optionValue
+    option.textContent = label
+    select.append(option)
+  })
+
+  select.value = value === false ? 'false' : 'true'
+  return select
+}
+
 const toDateTimeLocal = (value) => {
   if (!value) return ''
   const date = new Date(value)
@@ -219,7 +298,7 @@ const bookForGrant = (grant) => state.books.find((book) => book.id === grant.boo
 const accessGrantStatus = (grant) => {
   const book = bookForGrant(grant)
 
-  if (book?.is_active === false) {
+  if (book && !hierarchyIsActive(hierarchyForBook(book, state.seriesItems, state.collections))) {
     return { label: 'BOOK DISABLED', className: 'admin-badge--disabled' }
   }
 
@@ -247,6 +326,17 @@ const isPolicyError = (error) => {
   return error?.code === '42501'
     || message.includes('row-level security')
     || message.includes('permission denied')
+}
+
+const isSchemaError = (error) => {
+  const message = normalize(error?.message)
+  return error?.code === '42703'
+    || error?.code === '42P01'
+    || error?.code === 'PGRST205'
+    || message.includes('could not find the table')
+    || message.includes('could not find')
+    || message.includes('does not exist')
+    || message.includes('schema cache')
 }
 
 const describeError = (table, error, action = 'read') => {
@@ -378,6 +468,8 @@ const bindControls = () => {
 
   singleNodes.refresh?.addEventListener('click', () => loadAdminData())
   singleNodes.logout?.addEventListener('click', handleLogout)
+  singleNodes.collectionForm?.addEventListener('submit', handleCreateCollection)
+  singleNodes.seriesForm?.addEventListener('submit', handleCreateSeries)
   singleNodes.accessForm?.addEventListener('submit', handleGrantAccess)
   singleNodes.accessUserSearch?.addEventListener('input', renderAccessUserOptions)
 
@@ -477,14 +569,71 @@ const fetchProfiles = async () => {
   clearTableError('profiles')
 }
 
+const fetchCollections = async () => {
+  const { data, error, count } = await supabase
+    .from('collections')
+    .select('id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at', { count: 'exact' })
+    .order('sort_order', { ascending: true })
+    .order('title', { ascending: true })
+
+  if (error) {
+    state.collections = []
+    setTableError('collections', error)
+    return
+  }
+
+  state.collections = data || []
+  clearTableError('collections')
+  if (singleNodes.collectionsCount) {
+    const total = count ?? state.collections.length
+    singleNodes.collectionsCount.textContent = `${total} ${total === 1 ? 'collection' : 'collections'}`
+  }
+}
+
+const fetchSeries = async () => {
+  const { data, error, count } = await supabase
+    .from('series')
+    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at', { count: 'exact' })
+    .order('sort_order', { ascending: true })
+    .order('title', { ascending: true })
+
+  if (error) {
+    state.seriesItems = []
+    setTableError('series', error)
+    return
+  }
+
+  state.seriesItems = data || []
+  clearTableError('series')
+  if (singleNodes.seriesCount) {
+    const total = count ?? state.seriesItems.length
+    singleNodes.seriesCount.textContent = `${total} ${total === 1 ? 'series' : 'series'}`
+  }
+}
+
 const fetchBooks = async () => {
   const { data, error, count } = await supabase
     .from('books')
-    .select('id, title, series, book_number, slug, is_public, is_active', { count: 'exact' })
+    .select('id, title, series, book_number, slug, visibility, series_id, is_public, is_active', { count: 'exact' })
     .order('series', { ascending: true })
     .order('book_number', { ascending: true })
 
   if (error) {
+    if (isSchemaError(error)) {
+      const fallback = await supabase
+        .from('books')
+        .select('id, title, series, book_number, slug, is_public, is_active', { count: 'exact' })
+        .order('series', { ascending: true })
+        .order('book_number', { ascending: true })
+
+      if (!fallback.error) {
+        state.books = fallback.data || []
+        state.counts.books = fallback.count ?? state.books.length
+        setTableError('books_visibility_schema', error, 'visibility/series_id migration check')
+        return
+      }
+    }
+
     state.books = []
     state.counts.books = null
     setTableError('books', error)
@@ -494,6 +643,7 @@ const fetchBooks = async () => {
   state.books = data || []
   state.counts.books = count ?? state.books.length
   clearTableError('books')
+  clearTableError('books_visibility_schema')
 }
 
 const fetchFeedbacks = async () => {
@@ -542,6 +692,8 @@ const loadAdminData = async () => {
 
   await Promise.all([
     fetchProfiles(),
+    fetchCollections(),
+    fetchSeries(),
     fetchBooks(),
     fetchFeedbacks(),
     fetchAccessGrants(),
@@ -583,8 +735,19 @@ const populateFilters = () => {
     'All books'
   )
 
+  renderSeriesCollectionOptions()
   renderAccessUserOptions()
   renderAccessBookOptions()
+}
+
+const renderSeriesCollectionOptions = () => {
+  setItemOptions(
+    singleNodes.seriesCollectionSelect,
+    state.collections,
+    'Select collection',
+    (collection) => collection.id,
+    (collection) => getText(collection.title)
+  )
 }
 
 const renderAccessUserOptions = () => {
@@ -673,6 +836,8 @@ const renderRecentFeedback = () => {
 
 const renderFilteredSections = () => {
   renderUsers()
+  renderCollections()
+  renderSeries()
   renderBooks()
   renderAccessGrants()
   renderFeedback()
@@ -707,6 +872,337 @@ const renderUsers = () => {
   }
 }
 
+const compactInput = (type, value) => {
+  const input = document.createElement('input')
+  input.className = 'admin-compact-control'
+  input.type = type
+  input.value = value ?? ''
+  return input
+}
+
+const controlCell = (...nodes) => {
+  const cell = document.createElement('td')
+  nodes.forEach((node) => cell.append(node))
+  return cell
+}
+
+const collectionOptionsSelect = (selectedId = '') => {
+  const select = document.createElement('select')
+  select.className = 'admin-compact-control'
+
+  state.collections.forEach((collection) => {
+    const option = document.createElement('option')
+    option.value = collection.id
+    option.textContent = getText(collection.title)
+    select.append(option)
+  })
+
+  select.value = selectedId
+  return select
+}
+
+const contentSaveButton = (label = 'Save') => {
+  const button = createNode('button', 'admin-inline-action', label)
+  button.type = 'button'
+  return button
+}
+
+const confirmContentChange = (name, previous, next, kind) => {
+  const riskyVisibility = previous.visibility !== next.visibility && next.visibility === 'private'
+  const riskyActive = previous.is_active !== next.is_active && next.is_active === false
+
+  if (!riskyVisibility && !riskyActive) return true
+
+  const messages = []
+  if (riskyVisibility) messages.push('private items are hidden from guests and customers')
+  if (riskyActive) messages.push('inactive items are disabled for customers')
+
+  return window.confirm(`Update ${kind} "${name}"? ${messages.join(' and ')}.`)
+}
+
+const contentPayloadFromForm = (form, includeCollection = false) => {
+  const formData = new FormData(form)
+  const payload = {
+    title: formValue(formData, 'title'),
+    slug: formValue(formData, 'slug'),
+    description: formValue(formData, 'description') || null,
+    visibility: normalizeVisibility(formValue(formData, 'visibility')),
+    is_active: boolFromSelect(formValue(formData, 'is_active') || 'true'),
+    sort_order: toSortOrder(formValue(formData, 'sort_order')),
+  }
+
+  if (includeCollection) payload.collection_id = formValue(formData, 'collection_id')
+  return payload
+}
+
+const handleCreateCollection = async (event) => {
+  event.preventDefault()
+  const form = event.currentTarget
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  if (!form.checkValidity()) {
+    setFormStatus(singleNodes.collectionStatus, 'Please complete the collection fields.', 'error')
+    form.reportValidity()
+    return
+  }
+
+  const submitButton = form.querySelector('button[type="submit"]')
+  const previousLabel = submitButton?.textContent
+  if (submitButton) {
+    submitButton.disabled = true
+    submitButton.textContent = 'Creating...'
+  }
+
+  const payload = contentPayloadFromForm(form)
+  const { data, error } = await supabase
+    .from('collections')
+    .insert(payload)
+    .select('id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .maybeSingle()
+
+  if (submitButton) {
+    submitButton.disabled = false
+    submitButton.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(singleNodes.collectionStatus, 'Collection could not be created. Check the dashboard alert for details.', 'error')
+    setTableError('collections', error, 'INSERT')
+    return
+  }
+
+  state.collections.push(data || payload)
+  state.collections.sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
+  clearTableError('collections')
+  setFormStatus(singleNodes.collectionStatus, 'Collection created.', 'success')
+  form.reset()
+  populateFilters()
+  renderFilteredSections()
+}
+
+const handleCreateSeries = async (event) => {
+  event.preventDefault()
+  const form = event.currentTarget
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  if (!form.checkValidity()) {
+    setFormStatus(singleNodes.seriesStatus, 'Please complete the series fields.', 'error')
+    form.reportValidity()
+    return
+  }
+
+  const submitButton = form.querySelector('button[type="submit"]')
+  const previousLabel = submitButton?.textContent
+  if (submitButton) {
+    submitButton.disabled = true
+    submitButton.textContent = 'Creating...'
+  }
+
+  const payload = contentPayloadFromForm(form, true)
+  const { data, error } = await supabase
+    .from('series')
+    .insert(payload)
+    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .maybeSingle()
+
+  if (submitButton) {
+    submitButton.disabled = false
+    submitButton.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(singleNodes.seriesStatus, 'Series could not be created. Check the dashboard alert for details.', 'error')
+    setTableError('series', error, 'INSERT')
+    return
+  }
+
+  state.seriesItems.push(data || payload)
+  state.seriesItems.sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
+  clearTableError('series')
+  setFormStatus(singleNodes.seriesStatus, 'Series created.', 'success')
+  form.reset()
+  populateFilters()
+  renderFilteredSections()
+}
+
+const renderCollections = () => {
+  const table = singleNodes.collectionsTable
+  clearNode(table)
+  if (!table) return
+
+  state.collections.forEach((collection) => {
+    const titleInput = compactInput('text', collection.title)
+    const slugInput = compactInput('text', collection.slug)
+    const visibility = visibilitySelect(collection.visibility)
+    const active = activeSelect(collection.is_active)
+    const sortOrder = compactInput('number', toSortOrder(collection.sort_order))
+    const save = contentSaveButton()
+
+    save.addEventListener('click', () => updateCollection(collection, {
+      titleInput,
+      slugInput,
+      visibility,
+      active,
+      sortOrder,
+      save,
+    }))
+
+    const row = document.createElement('tr')
+    row.append(
+      controlCell(titleInput),
+      controlCell(slugInput),
+      controlCell(visibility),
+      controlCell(active),
+      controlCell(sortOrder),
+      controlCell(save)
+    )
+    table.append(row)
+  })
+
+  if (singleNodes.collectionsCount) {
+    const total = state.collections.length
+    singleNodes.collectionsCount.textContent = `${total} ${total === 1 ? 'collection' : 'collections'}`
+  }
+
+  if (singleNodes.collectionsEmpty) {
+    singleNodes.collectionsEmpty.hidden = Boolean(state.collections.length) || Boolean(state.errors.collections)
+  }
+}
+
+const renderSeries = () => {
+  const table = singleNodes.seriesTable
+  clearNode(table)
+  if (!table) return
+
+  state.seriesItems.forEach((series) => {
+    const titleInput = compactInput('text', series.title)
+    const collectionSelect = collectionOptionsSelect(series.collection_id)
+    const slugInput = compactInput('text', series.slug)
+    const visibility = visibilitySelect(series.visibility)
+    const active = activeSelect(series.is_active)
+    const sortOrder = compactInput('number', toSortOrder(series.sort_order))
+    const save = contentSaveButton()
+
+    save.addEventListener('click', () => updateSeries(series, {
+      titleInput,
+      collectionSelect,
+      slugInput,
+      visibility,
+      active,
+      sortOrder,
+      save,
+    }))
+
+    const row = document.createElement('tr')
+    row.append(
+      controlCell(titleInput),
+      controlCell(collectionSelect),
+      controlCell(slugInput),
+      controlCell(visibility),
+      controlCell(active),
+      controlCell(sortOrder),
+      controlCell(save)
+    )
+    table.append(row)
+  })
+
+  if (singleNodes.seriesCount) {
+    const total = state.seriesItems.length
+    singleNodes.seriesCount.textContent = `${total} ${total === 1 ? 'series' : 'series'}`
+  }
+
+  if (singleNodes.seriesEmpty) {
+    singleNodes.seriesEmpty.hidden = Boolean(state.seriesItems.length) || Boolean(state.errors.series)
+  }
+}
+
+const updateCollection = async (collection, controls) => {
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  const updates = {
+    title: controls.titleInput.value.trim(),
+    slug: controls.slugInput.value.trim(),
+    visibility: normalizeVisibility(controls.visibility.value),
+    is_active: boolFromSelect(controls.active.value),
+    sort_order: toSortOrder(controls.sortOrder.value),
+  }
+
+  if (!updates.title || !updates.slug) {
+    setTableError('collections', new Error('Collection title and slug are required.'), 'UPDATE')
+    return
+  }
+
+  if (!confirmContentChange(getText(collection.title, 'collection'), collection, updates, 'collection')) return
+
+  const previousLabel = controls.save.textContent
+  controls.save.disabled = true
+  controls.save.textContent = 'Saving...'
+
+  const { data, error } = await supabase
+    .from('collections')
+    .update(updates)
+    .eq('id', collection.id)
+    .select('id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .maybeSingle()
+
+  controls.save.disabled = false
+  controls.save.textContent = previousLabel
+
+  if (error) {
+    setTableError('collections', error, 'UPDATE')
+    return
+  }
+
+  Object.assign(collection, data || updates)
+  clearTableError('collections')
+  populateFilters()
+  renderFilteredSections()
+}
+
+const updateSeries = async (series, controls) => {
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  const updates = {
+    collection_id: controls.collectionSelect.value,
+    title: controls.titleInput.value.trim(),
+    slug: controls.slugInput.value.trim(),
+    visibility: normalizeVisibility(controls.visibility.value),
+    is_active: boolFromSelect(controls.active.value),
+    sort_order: toSortOrder(controls.sortOrder.value),
+  }
+
+  if (!updates.collection_id || !updates.title || !updates.slug) {
+    setTableError('series', new Error('Series collection, title, and slug are required.'), 'UPDATE')
+    return
+  }
+
+  if (!confirmContentChange(getText(series.title, 'series'), series, updates, 'series')) return
+
+  const previousLabel = controls.save.textContent
+  controls.save.disabled = true
+  controls.save.textContent = 'Saving...'
+
+  const { data, error } = await supabase
+    .from('series')
+    .update(updates)
+    .eq('id', series.id)
+    .select('id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at')
+    .maybeSingle()
+
+  controls.save.disabled = false
+  controls.save.textContent = previousLabel
+
+  if (error) {
+    setTableError('series', error, 'UPDATE')
+    return
+  }
+
+  Object.assign(series, data || updates)
+  clearTableError('series')
+  populateFilters()
+  renderFilteredSections()
+}
+
 const renderBooks = () => {
   const table = singleNodes.booksTable
   clearNode(table)
@@ -719,8 +1215,8 @@ const renderBooks = () => {
       tableCell(getText(book.series)),
       tableCell(getText(book.book_number)),
       tableCell(getText(book.slug)),
-      tableCell(boolLabel(book.is_public)),
-      tableCell(boolLabel(book.is_active)),
+      badgeCell(visibilityLabel(bookVisibility(book))),
+      badgeCell(boolValueLabel(book.is_active)),
       bookControlsCell(book)
     )
     table.append(row)
@@ -739,58 +1235,67 @@ const renderBooks = () => {
 const bookControlsCell = (book) => {
   const cell = document.createElement('td')
   const actions = createNode('div', 'admin-inline-actions')
-  const publicButton = createNode('button', 'admin-inline-action', book.is_public ? 'Public Visibility: Off' : 'Public Visibility: On')
-  const activeButton = createNode('button', 'admin-inline-action', book.is_active ? 'Global Active: Off' : 'Global Active: On')
+  const visibility = visibilitySelect(bookVisibility(book))
+  const active = activeSelect(book.is_active)
+  const saveButton = createNode('button', 'admin-inline-action', 'Save')
 
-  publicButton.type = 'button'
-  activeButton.type = 'button'
-  publicButton.addEventListener('click', () => updateBookFlag(book, 'is_public', !book.is_public, publicButton))
-  activeButton.addEventListener('click', () => updateBookFlag(book, 'is_active', !book.is_active, activeButton))
+  saveButton.type = 'button'
+  saveButton.addEventListener('click', () => updateBookContentControls(book, {
+    visibility,
+    active,
+    saveButton,
+  }))
 
-  actions.append(publicButton, activeButton)
+  actions.append(
+    createNode('span', 'admin-field-hint', 'Visibility'),
+    visibility,
+    createNode('span', 'admin-field-hint', 'Global Active'),
+    active,
+    saveButton
+  )
   cell.append(actions)
   return cell
 }
 
-const updateBookFlag = async (book, field, nextValue, button) => {
+const updateBookContentControls = async (book, controls) => {
   if (!ADMIN_ROLES.has(state.profile?.role)) return
   if (!book?.id) return
 
   const label = getText(book.title, 'this book')
-  const messages = {
-    is_public: nextValue
-      ? `Turn Public Visibility ON for "${label}"? This is a global catalogue setting.`
-      : `Turn Public Visibility OFF for "${label}"? This is a global catalogue setting.`,
-    is_active: nextValue
-      ? `Turn Global Active ON for "${label}"?`
-      : `Turn Global Active OFF for "${label}"? This disables the book for everyone, including users with access.`,
+  const updates = {
+    visibility: normalizeVisibility(controls.visibility.value),
+    is_active: boolFromSelect(controls.active.value),
+  }
+  const previous = {
+    visibility: bookVisibility(book),
+    is_active: book.is_active !== false,
   }
 
-  if (!window.confirm(messages[field])) return
+  if (!confirmContentChange(label, previous, updates, 'book')) return
 
-  const previousLabel = button?.textContent
-  if (button) {
-    button.disabled = true
-    button.textContent = 'Saving...'
+  const previousLabel = controls.saveButton?.textContent
+  if (controls.saveButton) {
+    controls.saveButton.disabled = true
+    controls.saveButton.textContent = 'Saving...'
   }
 
   const { data, error } = await supabase
     .from('books')
-    .update({ [field]: nextValue })
+    .update(updates)
     .eq('id', book.id)
-    .select('id, title, series, book_number, slug, is_public, is_active')
+    .select('id, title, series, book_number, slug, visibility, series_id, is_public, is_active')
     .maybeSingle()
 
   if (error) {
-    if (button) {
-      button.disabled = false
-      button.textContent = previousLabel
+    if (controls.saveButton) {
+      controls.saveButton.disabled = false
+      controls.saveButton.textContent = previousLabel
     }
     setTableError('books', error, 'UPDATE')
     return
   }
 
-  Object.assign(book, data || { [field]: nextValue })
+  Object.assign(book, data || updates)
   clearTableError('books')
   renderBooks()
 }

@@ -6,6 +6,7 @@
   const SCROLL_SAVE_DELAY = 120;
   const readerScriptUrl = document.currentScript?.src || new URL("/assets/js/reader.js", window.location.href).href;
   const loadFeedbackModule = () => import(new URL("feedback-submission.js", readerScriptUrl).href);
+  const loadContentAccessModule = () => import(new URL("content-access.js", readerScriptUrl).href);
 
   // Minimum book.json schema: id, title, readerRoute, themeStylesheet,
   // designSpecFile, feedbackContext, occupationOptions, ratingOptions, and
@@ -1194,6 +1195,55 @@
     return response.json();
   };
 
+  const readerAccessError = (message) => {
+    const error = new Error(message);
+    error.name = "ReaderAccessError";
+    return error;
+  };
+
+  const guardReaderAccess = async () => {
+    const access = await loadContentAccessModule();
+    const context = await access.getAccessContext();
+    const hierarchy = await access.fetchContentHierarchy();
+
+    if (hierarchy.errors.books) {
+      console.info("Reader access check is waiting on Supabase content schema/RLS.", {
+        books: hierarchy.errors.books?.message,
+        collections: hierarchy.errors.collections?.message,
+        series: hierarchy.errors.series?.message,
+      });
+      return;
+    }
+
+    const bookRecord = hierarchy.books.find((item) => item.slug === book.slug || item.slug === book.id || item.id === book.id);
+    if (!bookRecord) return;
+
+    const bookHierarchy = access.hierarchyForBook(bookRecord, hierarchy.seriesItems, hierarchy.collections);
+
+    if (!access.canDiscoverContent(bookHierarchy, context)) {
+      throw readerAccessError("This book is not currently available to this account.");
+    }
+
+    const grantsResult = await access.fetchViewerBookGrants(context.user?.id);
+    if (grantsResult.error && !access.isAdminRole(context.role)) {
+      console.info("Reader book access check was blocked by Supabase policy.", {
+        message: grantsResult.error?.message,
+        code: grantsResult.error?.code,
+      });
+    }
+
+    if (!access.canReadBook({ ...bookHierarchy, grants: grantsResult.data || [] }, context)) {
+      throw readerAccessError("Please sign in with an account that has access to this book.");
+    }
+  };
+
+  const readerAccessMarkup = (message) => `
+    <section class="reader-access-message" aria-live="polite">
+      <p class="reader-error">${message}</p>
+      <p><a class="reader-control" href="/auth/login/">Log in</a> <a class="reader-control" href="/account/">My Account</a></p>
+    </section>
+  `;
+
   const loadBook = async () => {
     const bookResponseUrl = new URL(bookUrl, window.location.href);
     book = await fetchJson(bookResponseUrl.href);
@@ -1201,6 +1251,7 @@
       throw new Error("Book configuration is missing required metadata.");
     }
     updateReaderShellFromBook();
+    await guardReaderAccess();
     await loadBookStylesheet(bookResponseUrl);
     book.storageKey = book.storageKey || `greyveil:${book.id}:continuous-reader:v2`;
     book.feedbackContext = { ...(book.feedbackContext || {}), feedbackType: book.feedbackContext?.feedbackType || "book" };
@@ -1224,7 +1275,9 @@
       paginate({ restore: { hash, scrollRatio: hash ? 0 : Number(savedState.scrollRatio || 0) } });
     } catch (error) {
       body.classList.remove("is-paginating");
-      pagesRoot.innerHTML = '<p class="reader-error">The reader could not be opened. Please refresh the page.</p>';
+      pagesRoot.innerHTML = error?.name === "ReaderAccessError"
+        ? readerAccessMarkup(error.message)
+        : '<p class="reader-error">The reader could not be opened. Please refresh the page.</p>';
     }
   };
 

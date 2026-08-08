@@ -6,6 +6,10 @@ const year = document.getElementById("year");
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const mainScriptUrl = document.currentScript?.src || new URL("/assets/js/main.js", window.location.href).href;
+const loginPath = "/auth/login/";
+const accountPath = "/account/";
+const adminPath = "/admin/";
+const adminRoles = new Set(["admin", "super_admin"]);
 
 if (year) year.textContent = new Date().getFullYear();
 
@@ -20,6 +24,185 @@ navToggle?.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", String(open));
   navToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
 });
+
+const createAuthLink = (href, text, className = "") => {
+  const link = document.createElement("a");
+  link.href = href;
+  if (className) link.className = className;
+  link.textContent = text;
+  return link;
+};
+
+const renderLoginNav = (slot) => {
+  slot.replaceChildren(createAuthLink(loginPath, "Log in", "auth-nav__login"));
+};
+
+const renderProfileNav = (slot, user, profile, authModule) => {
+  const role = profile?.role || "customer";
+  const details = document.createElement("details");
+  details.className = "auth-menu";
+
+  const summary = document.createElement("summary");
+  summary.textContent = profile?.display_name
+    || user?.user_metadata?.display_name
+    || user?.email?.split("@")[0]
+    || "My Account";
+
+  const panel = document.createElement("div");
+  panel.className = "auth-menu__panel";
+  panel.append(createAuthLink(accountPath, "My Account"));
+
+  if (adminRoles.has(role)) {
+    panel.append(createAuthLink(adminPath, "Admin Portal"));
+  }
+
+  const logout = document.createElement("button");
+  logout.type = "button";
+  logout.textContent = "Logout";
+  logout.addEventListener("click", async () => {
+    logout.disabled = true;
+    logout.textContent = "Logging out...";
+    try {
+      await authModule.signOut();
+      window.location.assign(loginPath);
+    } catch (error) {
+      console.error("Navigation logout failed", {
+        name: error?.name,
+        message: error?.message,
+        code: error?.code,
+      });
+      logout.disabled = false;
+      logout.textContent = "Logout";
+    }
+  });
+
+  panel.append(logout);
+  details.append(summary, panel);
+  slot.replaceChildren(details);
+};
+
+const initAuthNavigation = async () => {
+  const navs = Array.from(document.querySelectorAll("[data-nav]"));
+  if (!navs.length) return;
+
+  const slots = navs.map((navNode) => {
+    const existing = navNode.querySelector("[data-auth-nav]");
+    if (existing) return existing;
+
+    const slot = document.createElement("div");
+    slot.className = "auth-nav";
+    slot.dataset.authNav = "";
+    slot.setAttribute("aria-live", "polite");
+    renderLoginNav(slot);
+    navNode.append(slot);
+    return slot;
+  });
+
+  try {
+    const authModule = await import(new URL("auth.js", mainScriptUrl).href);
+    const user = await authModule.getCurrentUser();
+
+    if (!user) {
+      slots.forEach(renderLoginNav);
+      return;
+    }
+
+    const profile = await authModule.getCurrentProfile(user);
+    slots.forEach((slot) => renderProfileNav(slot, user, profile, authModule));
+  } catch (error) {
+    console.info("Navigation auth state could not be loaded.", {
+      name: error?.name,
+      message: error?.message,
+      code: error?.code,
+    });
+    slots.forEach(renderLoginNav);
+  }
+};
+
+const slugFromHref = (href, kind) => {
+  if (!href) return "";
+
+  const url = new URL(href, window.location.href);
+  const segments = url.pathname.split("/").filter(Boolean);
+
+  if (kind === "book") {
+    const file = segments.at(-1) || "";
+    return file.endsWith(".html") ? file.replace(/\.html$/, "") : "";
+  }
+
+  if (kind === "series") {
+    const projectIndex = segments.indexOf("projects");
+    return projectIndex >= 0 ? segments[projectIndex + 1] || "" : "";
+  }
+
+  return "";
+};
+
+const contentCardInfo = (card) => {
+  if (card.matches(".book-card")) {
+    const href = card.querySelector("a[href*='books/']")?.getAttribute("href") || "";
+    return { kind: "book", slug: slugFromHref(href, "book") };
+  }
+
+  if (card.matches(".project-card")) {
+    const href = card.getAttribute("href") || card.querySelector("a[href]")?.getAttribute("href") || "";
+    return { kind: "series", slug: slugFromHref(href, "series") };
+  }
+
+  return { kind: "", slug: "" };
+};
+
+const initContentVisibilityFiltering = async () => {
+  const cards = Array.from(document.querySelectorAll(".project-card, .book-card"));
+  if (!cards.length) return;
+
+  try {
+    const access = await import(new URL("content-access.js", mainScriptUrl).href);
+    const context = await access.getAccessContext();
+
+    if (access.isAdminRole(context.role)) return;
+
+    const hierarchy = await access.fetchContentHierarchy();
+    const blockingError = hierarchy.errors.collections || hierarchy.errors.series || hierarchy.errors.books;
+
+    if (blockingError) {
+      console.info("Content visibility filtering is waiting on Supabase hierarchy schema/RLS.", {
+        collections: hierarchy.errors.collections?.message,
+        series: hierarchy.errors.series?.message,
+        books: hierarchy.errors.books?.message,
+      });
+      return;
+    }
+
+    const seriesBySlug = new Map(hierarchy.seriesItems.map((item) => [item.slug, item]));
+    const booksBySlug = new Map(hierarchy.books.map((item) => [item.slug, item]));
+
+    cards.forEach((card) => {
+      const { kind, slug } = contentCardInfo(card);
+      if (!kind || !slug) return;
+
+      const hierarchyItem = kind === "book"
+        ? access.hierarchyForBook(booksBySlug.get(slug), hierarchy.seriesItems, hierarchy.collections)
+        : {
+            collection: access.collectionForSeries(seriesBySlug.get(slug), hierarchy.collections),
+            series: seriesBySlug.get(slug),
+          };
+
+      if (!access.canDiscoverContent(hierarchyItem, context)) {
+        card.remove();
+      }
+    });
+  } catch (error) {
+    console.info("Content visibility filtering could not run.", {
+      name: error?.name,
+      message: error?.message,
+      code: error?.code,
+    });
+  }
+};
+
+initAuthNavigation();
+initContentVisibilityFiltering();
 
 document.querySelectorAll(".dropdown").forEach((dropdown) => {
   const trigger = dropdown.querySelector(".dropdown-trigger");
