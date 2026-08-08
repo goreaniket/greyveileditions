@@ -44,6 +44,8 @@ const selectors = {
   seriesTable: '[data-series-table]',
   seriesEmpty: '[data-series-empty]',
   seriesCount: '[data-series-count]',
+  contentNavigator: '[data-content-navigator]',
+  contentDetail: '[data-content-detail]',
   hierarchyTree: '[data-content-hierarchy]',
   hierarchyEmpty: '[data-hierarchy-empty]',
   booksTable: '[data-books-table]',
@@ -60,6 +62,17 @@ const selectors = {
   accessFormStatus: '[data-access-form-status]',
   accessTable: '[data-access-table]',
   accessEmpty: '[data-access-empty]',
+  accessModeButtons: '[data-access-mode-tab]',
+  accessModePanels: '[data-access-mode-panel]',
+  seriesAccessForm: '[data-series-access-form]',
+  seriesAccessCollection: '[data-series-access-collection]',
+  seriesAccessVolume: '[data-series-access-volume]',
+  seriesAccessSeries: '[data-series-access-series]',
+  seriesAccessType: '[data-series-access-type]',
+  seriesAccessExpires: '[data-series-access-expires]',
+  seriesAccessStatus: '[data-series-access-status]',
+  seriesAccessSummary: '[data-series-access-summary]',
+  seriesAccessRevoke: '[data-series-access-revoke]',
   feedbackSearch: '[data-feedback-search]',
   feedbackStatus: '[data-feedback-status-filter]',
   feedbackRating: '[data-feedback-rating-filter]',
@@ -82,6 +95,10 @@ const state = {
   books: [],
   feedbacks: [],
   accessGrants: [],
+  contentSelection: {
+    kind: '',
+    id: '',
+  },
   counts: {
     users: null,
     books: null,
@@ -127,6 +144,8 @@ const singleNodes = {
   seriesTable: $(selectors.seriesTable),
   seriesEmpty: $(selectors.seriesEmpty),
   seriesCount: $(selectors.seriesCount),
+  contentNavigator: $(selectors.contentNavigator),
+  contentDetail: $(selectors.contentDetail),
   hierarchyTree: $(selectors.hierarchyTree),
   hierarchyEmpty: $(selectors.hierarchyEmpty),
   booksTable: $(selectors.booksTable),
@@ -143,6 +162,15 @@ const singleNodes = {
   accessFormStatus: $(selectors.accessFormStatus),
   accessTable: $(selectors.accessTable),
   accessEmpty: $(selectors.accessEmpty),
+  seriesAccessForm: $(selectors.seriesAccessForm),
+  seriesAccessCollection: $(selectors.seriesAccessCollection),
+  seriesAccessVolume: $(selectors.seriesAccessVolume),
+  seriesAccessSeries: $(selectors.seriesAccessSeries),
+  seriesAccessType: $(selectors.seriesAccessType),
+  seriesAccessExpires: $(selectors.seriesAccessExpires),
+  seriesAccessStatus: $(selectors.seriesAccessStatus),
+  seriesAccessSummary: $(selectors.seriesAccessSummary),
+  seriesAccessRevoke: $(selectors.seriesAccessRevoke),
   feedbackSearch: $(selectors.feedbackSearch),
   feedbackStatus: $(selectors.feedbackStatus),
   feedbackRating: $(selectors.feedbackRating),
@@ -467,8 +495,7 @@ const setItemOptions = (select, items, defaultLabel, getValue, getLabel) => {
 
 const profileLabel = (profile) => {
   const displayName = getText(profile.display_name, 'Unnamed reader')
-  const id = getText(profile.id)
-  return `${displayName} - ${id}`
+  return `${displayName} (${formatRole(profile.role)})`
 }
 
 const bookLabel = (book) => {
@@ -490,6 +517,20 @@ const showPanel = (name) => {
   singleNodes.menu?.setAttribute('aria-expanded', 'false')
 }
 
+const showAccessMode = (mode = 'book') => {
+  const activeMode = mode === 'series' ? 'series' : 'book'
+
+  $$(selectors.accessModeButtons).forEach((button) => {
+    button.setAttribute('aria-selected', String(button.dataset.accessModeTab === activeMode))
+  })
+
+  $$(selectors.accessModePanels).forEach((panel) => {
+    panel.hidden = panel.dataset.accessModePanel !== activeMode
+  })
+
+  if (activeMode === 'series') renderSeriesAccessStatus()
+}
+
 const bindControls = () => {
   $$(selectors.navButtons).forEach((button) => {
     button.addEventListener('click', () => showPanel(button.dataset.adminTab))
@@ -497,6 +538,12 @@ const bindControls = () => {
 
   $$(selectors.tabLinks).forEach((button) => {
     button.addEventListener('click', () => showPanel(button.dataset.adminTabLink))
+  })
+
+  singleNodes.contentNavigator?.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-content-select-kind]')
+    if (!button) return
+    selectContentItem(button.dataset.contentSelectKind, button.dataset.contentSelectId)
   })
 
   singleNodes.menu?.addEventListener('click', () => {
@@ -511,7 +558,27 @@ const bindControls = () => {
   singleNodes.seriesForm?.addEventListener('submit', handleCreateSeries)
   singleNodes.seriesCollectionSelect?.addEventListener('change', renderSeriesVolumeOptions)
   singleNodes.accessForm?.addEventListener('submit', handleGrantAccess)
-  singleNodes.accessUserSearch?.addEventListener('input', renderAccessUserOptions)
+  singleNodes.accessUserSearch?.addEventListener('input', () => {
+    renderAccessUserOptions()
+    renderSeriesAccessStatus()
+  })
+  singleNodes.accessUser?.addEventListener('change', renderSeriesAccessStatus)
+  singleNodes.seriesAccessForm?.addEventListener('submit', handleGrantSeriesAccess)
+  singleNodes.seriesAccessRevoke?.addEventListener('click', handleRevokeSeriesAccess)
+  singleNodes.seriesAccessCollection?.addEventListener('change', () => {
+    renderSeriesAccessVolumeOptions()
+    renderSeriesAccessSeriesOptions()
+    renderSeriesAccessStatus()
+  })
+  singleNodes.seriesAccessVolume?.addEventListener('change', () => {
+    renderSeriesAccessSeriesOptions()
+    renderSeriesAccessStatus()
+  })
+  singleNodes.seriesAccessSeries?.addEventListener('change', renderSeriesAccessStatus)
+
+  $$(selectors.accessModeButtons).forEach((button) => {
+    button.addEventListener('click', () => showAccessMode(button.dataset.accessModeTab))
+  })
 
   ;[
     singleNodes.userSearch,
@@ -808,6 +875,9 @@ const populateFilters = () => {
   renderSeriesVolumeOptions()
   renderAccessUserOptions()
   renderAccessBookOptions()
+  renderSeriesAccessCollectionOptions()
+  renderSeriesAccessVolumeOptions()
+  renderSeriesAccessSeriesOptions()
 }
 
 const renderVolumeCollectionOptions = () => {
@@ -846,13 +916,14 @@ const renderSeriesVolumeOptions = () => {
 const renderAccessUserOptions = () => {
   const query = normalize(singleNodes.accessUserSearch?.value)
   const users = state.users
+    .filter((profile) => profile.role === 'customer')
     .filter((profile) => !query || normalize(profile.display_name).includes(query))
     .sort((a, b) => getText(a.display_name).localeCompare(getText(b.display_name)))
 
   setItemOptions(
     singleNodes.accessUser,
     users,
-    'Select user',
+    'Select customer',
     (profile) => profile.id,
     profileLabel
   )
@@ -867,6 +938,48 @@ const renderAccessBookOptions = () => {
     'Select book',
     (book) => book.id,
     bookLabel
+  )
+}
+
+const renderSeriesAccessCollectionOptions = () => {
+  setItemOptions(
+    singleNodes.seriesAccessCollection,
+    state.collections,
+    'Select collection',
+    (collection) => collection.id,
+    (collection) => getText(collection.title)
+  )
+}
+
+const renderSeriesAccessVolumeOptions = () => {
+  const selectedCollectionId = singleNodes.seriesAccessCollection?.value || ''
+  const volumes = state.volumes
+    .filter((volume) => !selectedCollectionId || volume.collection_id === selectedCollectionId)
+    .sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
+
+  setItemOptions(
+    singleNodes.seriesAccessVolume,
+    volumes,
+    'Select volume',
+    (volume) => volume.id,
+    (volume) => getText(volume.title)
+  )
+}
+
+const renderSeriesAccessSeriesOptions = () => {
+  const selectedCollectionId = singleNodes.seriesAccessCollection?.value || ''
+  const selectedVolumeId = singleNodes.seriesAccessVolume?.value || ''
+  const seriesItems = state.seriesItems
+    .filter((series) => !selectedCollectionId || series.collection_id === selectedCollectionId)
+    .filter((series) => !selectedVolumeId || series.volume_id === selectedVolumeId)
+    .sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
+
+  setItemOptions(
+    singleNodes.seriesAccessSeries,
+    seriesItems,
+    'Select series',
+    (series) => series.id,
+    (series) => getText(series.title)
   )
 }
 
@@ -929,12 +1042,10 @@ const renderRecentFeedback = () => {
 
 const renderFilteredSections = () => {
   renderUsers()
-  renderCollections()
-  renderVolumes()
-  renderSeries()
-  renderHierarchy()
+  renderContentManagement()
   renderBooks()
   renderAccessGrants()
+  renderSeriesAccessStatus()
   renderFeedback()
 }
 
@@ -987,7 +1098,7 @@ const collectionOptionsSelect = (selectedId = '') => {
   const select = document.createElement('select')
   select.className = 'admin-compact-control'
 
-  state.collections.forEach((collection) => {
+  sortByOrderTitle(state.collections).forEach((collection) => {
     const option = document.createElement('option')
     option.value = collection.id
     option.textContent = getText(collection.title)
@@ -1090,6 +1201,7 @@ const handleCreateCollection = async (event) => {
   }
 
   state.collections.push(data || payload)
+  if (data?.id) state.contentSelection = { kind: 'collection', id: data.id }
   state.collections.sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
   clearTableError('collections')
   setFormStatus(singleNodes.collectionStatus, 'Collection created.', 'success')
@@ -1135,6 +1247,7 @@ const handleCreateVolume = async (event) => {
   }
 
   state.volumes.push(data || payload)
+  if (data?.id) state.contentSelection = { kind: 'volume', id: data.id }
   state.volumes.sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
   clearTableError('volumes')
   setFormStatus(singleNodes.volumeStatus, 'Volume created.', 'success')
@@ -1186,6 +1299,7 @@ const handleCreateSeries = async (event) => {
   }
 
   state.seriesItems.push(data || payload)
+  if (data?.id) state.contentSelection = { kind: 'series', id: data.id }
   state.seriesItems.sort((a, b) => toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title)))
   clearTableError('series')
   setFormStatus(singleNodes.seriesStatus, 'Series created.', 'success')
@@ -1337,6 +1451,467 @@ const renderSeries = () => {
   if (singleNodes.seriesEmpty) {
     singleNodes.seriesEmpty.hidden = Boolean(state.seriesItems.length) || Boolean(state.errors.series)
   }
+}
+
+const collectionMap = () => new Map(state.collections.map((collection) => [collection.id, collection]))
+
+const volumeMap = () => new Map(state.volumes.map((volume) => [volume.id, volume]))
+
+const seriesMap = () => new Map(state.seriesItems.map((series) => [series.id, series]))
+
+const contentItemExists = (kind, id) => {
+  if (kind === 'collection') return collectionMap().has(id)
+  if (kind === 'volume') return volumeMap().has(id)
+  if (kind === 'series') return seriesMap().has(id)
+  if (kind === 'book') return bookMap().has(id)
+  return false
+}
+
+const ensureContentSelection = () => {
+  if (contentItemExists(state.contentSelection.kind, state.contentSelection.id)) return
+
+  const firstCollection = state.collections[0]
+  const firstVolume = state.volumes[0]
+  const firstSeries = state.seriesItems[0]
+  const firstBook = state.books[0]
+
+  if (firstCollection) {
+    state.contentSelection = { kind: 'collection', id: firstCollection.id }
+  } else if (firstVolume) {
+    state.contentSelection = { kind: 'volume', id: firstVolume.id }
+  } else if (firstSeries) {
+    state.contentSelection = { kind: 'series', id: firstSeries.id }
+  } else if (firstBook) {
+    state.contentSelection = { kind: 'book', id: firstBook.id }
+  } else {
+    state.contentSelection = { kind: '', id: '' }
+  }
+}
+
+const selectContentItem = (kind, id) => {
+  if (!contentItemExists(kind, id)) return
+  state.contentSelection = { kind, id }
+  renderContentManagement()
+}
+
+const selectedContentClass = (kind, id) => {
+  return state.contentSelection.kind === kind && state.contentSelection.id === id ? ' is-selected' : ''
+}
+
+const contentSelectButton = (kind, id, title, meta = '', level = 0) => {
+  const button = createNode('button', `admin-tree-button admin-tree-button--level-${level}${selectedContentClass(kind, id)}`)
+  button.type = 'button'
+  button.dataset.contentSelectKind = kind
+  button.dataset.contentSelectId = id
+
+  const label = createNode('span', 'admin-tree-button__label')
+  label.append(
+    createNode('strong', '', getText(title, `Untitled ${kind}`)),
+    createNode('small', '', meta)
+  )
+  button.append(label)
+  return button
+}
+
+const renderContentNavigator = () => {
+  const root = singleNodes.contentNavigator
+  clearNode(root)
+  if (!root) return
+
+  const collectionIds = new Set(state.collections.map((collection) => collection.id))
+  const volumeIds = new Set(state.volumes.map((volume) => volume.id))
+  const seriesIds = new Set(state.seriesItems.map((series) => series.id))
+  const volumesByCollection = new Map()
+  const seriesByVolume = new Map()
+  const booksBySeries = new Map()
+
+  state.volumes.forEach((volume) => {
+    if (!volumesByCollection.has(volume.collection_id)) volumesByCollection.set(volume.collection_id, [])
+    volumesByCollection.get(volume.collection_id).push(volume)
+  })
+
+  state.seriesItems.forEach((series) => {
+    if (!seriesByVolume.has(series.volume_id)) seriesByVolume.set(series.volume_id, [])
+    seriesByVolume.get(series.volume_id).push(series)
+  })
+
+  state.books.forEach((book) => {
+    if (!booksBySeries.has(book.series_id)) booksBySeries.set(book.series_id, [])
+    booksBySeries.get(book.series_id).push(book)
+  })
+
+  const sortByOrderTitle = (items) => [...items].sort((a, b) => {
+    return toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title))
+  })
+
+  state.collections.forEach((collection) => {
+    const collectionBranch = createNode('section', 'admin-tree-branch')
+    collectionBranch.append(contentSelectButton('collection', collection.id, collection.title, visibilityLabel(collection.visibility), 0))
+
+    sortByOrderTitle(volumesByCollection.get(collection.id) || []).forEach((volume) => {
+      collectionBranch.append(contentSelectButton('volume', volume.id, volume.title, visibilityLabel(volume.visibility), 1))
+
+      sortByOrderTitle(seriesByVolume.get(volume.id) || []).forEach((series) => {
+        const books = (booksBySeries.get(series.id) || []).sort((a, b) => {
+          return toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title))
+        })
+        collectionBranch.append(contentSelectButton('series', series.id, series.title, `${books.length} ${books.length === 1 ? 'book' : 'books'}`, 2))
+        books.forEach((book) => {
+          collectionBranch.append(contentSelectButton('book', book.id, book.title, `${visibilityLabel(bookVisibility(book))} / ${boolValueLabel(book.is_active)}`, 3))
+        })
+      })
+    })
+
+    root.append(collectionBranch)
+  })
+
+  const orphanVolumes = sortByOrderTitle(state.volumes.filter((volume) => !collectionIds.has(volume.collection_id)))
+  if (orphanVolumes.length) {
+    const orphanBranch = createNode('section', 'admin-tree-branch admin-tree-branch--orphan')
+    orphanBranch.append(createNode('p', 'admin-tree-group-label', 'Unassigned Volumes'))
+    orphanVolumes.forEach((volume) => {
+      orphanBranch.append(contentSelectButton('volume', volume.id, volume.title, visibilityLabel(volume.visibility), 1))
+      sortByOrderTitle(seriesByVolume.get(volume.id) || []).forEach((series) => {
+        const books = (booksBySeries.get(series.id) || []).sort((a, b) => {
+          return toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title))
+        })
+        orphanBranch.append(contentSelectButton('series', series.id, series.title, `${books.length} ${books.length === 1 ? 'book' : 'books'}`, 2))
+        books.forEach((book) => {
+          orphanBranch.append(contentSelectButton('book', book.id, book.title, `${visibilityLabel(bookVisibility(book))} / ${boolValueLabel(book.is_active)}`, 3))
+        })
+      })
+    })
+    root.append(orphanBranch)
+  }
+
+  const orphanSeries = sortByOrderTitle(state.seriesItems.filter((series) => !volumeIds.has(series.volume_id)))
+  if (orphanSeries.length) {
+    const orphanBranch = createNode('section', 'admin-tree-branch admin-tree-branch--orphan')
+    orphanBranch.append(createNode('p', 'admin-tree-group-label', 'Series Without Volume'))
+    orphanSeries.forEach((series) => {
+      const books = (booksBySeries.get(series.id) || []).sort((a, b) => {
+        return toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title))
+      })
+      orphanBranch.append(contentSelectButton('series', series.id, series.title, `${books.length} ${books.length === 1 ? 'book' : 'books'}`, 2))
+      books.forEach((book) => {
+        orphanBranch.append(contentSelectButton('book', book.id, book.title, `${visibilityLabel(bookVisibility(book))} / ${boolValueLabel(book.is_active)}`, 3))
+      })
+    })
+    root.append(orphanBranch)
+  }
+
+  const orphanBooks = state.books
+    .filter((book) => !seriesIds.has(book.series_id))
+    .sort((a, b) => toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title)))
+  if (orphanBooks.length) {
+    const orphanBranch = createNode('section', 'admin-tree-branch admin-tree-branch--orphan')
+    orphanBranch.append(createNode('p', 'admin-tree-group-label', 'Books Without Series'))
+    orphanBooks.forEach((book) => {
+      orphanBranch.append(contentSelectButton('book', book.id, book.title, `${visibilityLabel(bookVisibility(book))} / ${boolValueLabel(book.is_active)}`, 3))
+    })
+    root.append(orphanBranch)
+  }
+
+  const hasContent = Boolean(state.collections.length || state.volumes.length || state.seriesItems.length || state.books.length)
+  if (singleNodes.hierarchyEmpty) singleNodes.hierarchyEmpty.hidden = hasContent
+}
+
+const labeledControl = (label, control) => {
+  const wrapper = createNode('label')
+  wrapper.append(createNode('span', '', label), control)
+  return wrapper
+}
+
+const detailHeader = (kind, title, meta = '') => {
+  const header = createNode('div', 'admin-content-detail__header')
+  header.append(
+    createNode('p', 'admin-eyebrow', kind),
+    createNode('h3', '', getText(title, `Untitled ${kind}`))
+  )
+  if (meta) header.append(createNode('p', 'admin-panel-note', meta))
+  return header
+}
+
+const detailGrid = (...nodes) => {
+  const grid = createNode('div', 'admin-access-grid admin-detail-grid')
+  nodes.forEach((node) => grid.append(node))
+  return grid
+}
+
+const detailActions = (save, extra = null) => {
+  const actions = createNode('div', 'admin-form-actions')
+  actions.append(save)
+  if (extra) actions.append(extra)
+  return actions
+}
+
+const renderCollectionDetail = (collection) => {
+  const titleInput = compactInput('text', collection.title)
+  const slugInput = compactInput('text', collection.slug)
+  const visibility = visibilitySelect(collection.visibility)
+  const active = activeSelect(collection.is_active)
+  const sortOrder = compactInput('number', toSortOrder(collection.sort_order))
+  const save = contentSaveButton('Save Collection')
+
+  save.addEventListener('click', () => updateCollection(collection, {
+    titleInput,
+    slugInput,
+    visibility,
+    active,
+    sortOrder,
+    save,
+  }))
+
+  const childVolumes = state.volumes.filter((volume) => volume.collection_id === collection.id)
+  const children = contentChildrenList(
+    'Volumes',
+    childVolumes,
+    (volume) => selectContentItem('volume', volume.id)
+  )
+
+  return [
+    detailHeader('Collection', collection.title, `${childVolumes.length} ${childVolumes.length === 1 ? 'volume' : 'volumes'}`),
+    detailGrid(
+      labeledControl('Title', titleInput),
+      labeledControl('Slug', slugInput),
+      labeledControl('Visibility', visibility),
+      labeledControl('Global Active', active),
+      labeledControl('Sort Order', sortOrder)
+    ),
+    detailActions(save),
+    children,
+  ]
+}
+
+const renderVolumeDetail = (volume) => {
+  const collectionsById = collectionMap()
+  const titleInput = compactInput('text', volume.title)
+  const slugInput = compactInput('text', volume.slug)
+  const collectionSelect = collectionOptionsSelect(volume.collection_id)
+  const visibility = visibilitySelect(volume.visibility)
+  const active = activeSelect(volume.is_active)
+  const sortOrder = compactInput('number', toSortOrder(volume.sort_order))
+  const save = contentSaveButton('Save Volume')
+
+  save.addEventListener('click', () => updateVolume(volume, {
+    titleInput,
+    slugInput,
+    collectionSelect,
+    visibility,
+    active,
+    sortOrder,
+    save,
+  }))
+
+  const childSeries = state.seriesItems.filter((series) => series.volume_id === volume.id)
+  const children = contentChildrenList(
+    'Series',
+    childSeries,
+    (series) => selectContentItem('series', series.id)
+  )
+
+  return [
+    detailHeader('Volume', volume.title, `Parent: ${getText(collectionsById.get(volume.collection_id)?.title, 'Unassigned collection')}`),
+    detailGrid(
+      labeledControl('Title', titleInput),
+      labeledControl('Slug', slugInput),
+      labeledControl('Parent Collection', collectionSelect),
+      labeledControl('Visibility', visibility),
+      labeledControl('Global Active', active),
+      labeledControl('Sort Order', sortOrder)
+    ),
+    detailActions(save),
+    children,
+  ]
+}
+
+const renderSeriesDetail = (series) => {
+  const collectionsById = collectionMap()
+  const volumesById = volumeMap()
+  const titleInput = compactInput('text', series.title)
+  const collectionSelect = collectionOptionsSelect(series.collection_id)
+  const volumeSelect = volumeOptionsSelect(series.volume_id, series.collection_id)
+  const slugInput = compactInput('text', series.slug)
+  const visibility = visibilitySelect(series.visibility)
+  const active = activeSelect(series.is_active)
+  const sortOrder = compactInput('number', toSortOrder(series.sort_order))
+  const save = contentSaveButton('Save Series')
+
+  collectionSelect.addEventListener('change', () => populateVolumeOptions(volumeSelect, '', collectionSelect.value))
+  save.addEventListener('click', () => updateSeries(series, {
+    titleInput,
+    collectionSelect,
+    volumeSelect,
+    slugInput,
+    visibility,
+    active,
+    sortOrder,
+    save,
+  }))
+
+  const books = booksForSeries(series)
+  const bookList = renderSeriesBooksDetail(series, books)
+
+  return [
+    detailHeader(
+      'Series',
+      series.title,
+      `${getText(collectionsById.get(series.collection_id)?.title, 'Unassigned collection')} / ${getText(volumesById.get(series.volume_id)?.title, 'Unassigned volume')}`
+    ),
+    detailGrid(
+      labeledControl('Title', titleInput),
+      labeledControl('Slug', slugInput),
+      labeledControl('Parent Collection', collectionSelect),
+      labeledControl('Parent Volume', volumeSelect),
+      labeledControl('Visibility', visibility),
+      labeledControl('Global Active', active),
+      labeledControl('Sort Order', sortOrder)
+    ),
+    detailActions(save),
+    bookList,
+  ]
+}
+
+const renderBookDetail = (book) => {
+  const seriesById = seriesMap()
+  const series = seriesById.get(book.series_id)
+  const hierarchy = hierarchyForBook(book, state.seriesItems, state.collections, state.volumes)
+  const visibility = visibilitySelect(bookVisibility(book))
+  const active = activeSelect(book.is_active)
+  const save = contentSaveButton('Save Book')
+
+  save.addEventListener('click', () => updateBookContentControls(book, {
+    visibility,
+    active,
+    saveButton: save,
+  }))
+
+  return [
+    detailHeader('Book', book.title, `Series: ${getText(series?.title, book.series)}`),
+    detailGrid(
+      contentReadOnlyField('Book Number', getText(book.book_number)),
+      contentReadOnlyField('Slug', getText(book.slug)),
+      contentReadOnlyField('Effective Hierarchy', hierarchyIsComplete(hierarchy) ? 'Complete' : 'Needs parent links'),
+      labeledControl('Visibility', visibility),
+      labeledControl('Global Active', active)
+    ),
+    detailActions(save),
+  ]
+}
+
+const contentReadOnlyField = (label, value) => {
+  const field = createNode('div', 'admin-readonly-field')
+  field.append(createNode('span', '', label), createNode('strong', '', getText(value)))
+  return field
+}
+
+const contentChildrenList = (title, items, onSelect) => {
+  const wrap = createNode('section', 'admin-content-children')
+  wrap.append(createNode('h4', '', `${title} (${items.length})`))
+
+  if (!items.length) {
+    wrap.append(createNode('p', 'admin-empty', `No ${title.toLowerCase()} linked yet.`))
+    return wrap
+  }
+
+  const list = createNode('div', 'admin-content-child-list')
+  items.forEach((item) => {
+    const button = createNode('button', 'admin-content-child')
+    button.type = 'button'
+    button.append(
+      createNode('strong', '', getText(item.title)),
+      createNode('span', '', `${visibilityLabel(item.visibility)} / ${boolValueLabel(item.is_active)}`)
+    )
+    button.addEventListener('click', () => onSelect(item))
+    list.append(button)
+  })
+  wrap.append(list)
+  return wrap
+}
+
+const renderSeriesBooksDetail = (series, books) => {
+  const wrap = createNode('section', 'admin-content-children')
+  wrap.append(createNode('h4', '', `Books (${books.length})`))
+
+  if (!books.length) {
+    wrap.append(createNode('p', 'admin-empty', 'No books linked to this series yet.'))
+    return wrap
+  }
+
+  const list = createNode('div', 'admin-series-book-list')
+  books.forEach((book) => {
+    const card = createNode('article', 'admin-series-book-card')
+    const visibility = visibilitySelect(bookVisibility(book))
+    const active = activeSelect(book.is_active)
+    const save = contentSaveButton('Save')
+    save.addEventListener('click', () => updateBookContentControls(book, {
+      visibility,
+      active,
+      saveButton: save,
+    }))
+
+    const title = createNode('div', 'admin-series-book-card__title')
+    title.append(
+      createNode('strong', '', getText(book.title)),
+      createNode('span', '', `Book ${getText(book.book_number)} / ${getText(book.slug)}`)
+    )
+
+    const controls = createNode('div', 'admin-inline-actions')
+    controls.append(
+      createNode('span', 'admin-field-hint', 'Visibility'),
+      visibility,
+      createNode('span', 'admin-field-hint', 'Active'),
+      active,
+      save
+    )
+
+    card.append(title, controls)
+    list.append(card)
+  })
+  wrap.append(list)
+  return wrap
+}
+
+const renderContentDetail = () => {
+  const detail = singleNodes.contentDetail
+  clearNode(detail)
+  if (!detail) return
+
+  const { kind, id } = state.contentSelection
+  let nodes = []
+
+  if (kind === 'collection') nodes = renderCollectionDetail(collectionMap().get(id))
+  if (kind === 'volume') nodes = renderVolumeDetail(volumeMap().get(id))
+  if (kind === 'series') nodes = renderSeriesDetail(seriesMap().get(id))
+  if (kind === 'book') nodes = renderBookDetail(bookMap().get(id))
+
+  if (!nodes.length) {
+    detail.append(
+      createNode('h3', '', 'Select a content item.'),
+      createNode('p', 'admin-panel-note', 'Choose a Collection, Volume, Series, or Book from the navigator to edit its settings.')
+    )
+    return
+  }
+
+  nodes.forEach((node) => detail.append(node))
+}
+
+const renderContentManagement = () => {
+  ensureContentSelection()
+  if (singleNodes.collectionsCount) {
+    const total = state.collections.length
+    singleNodes.collectionsCount.textContent = `${total} ${total === 1 ? 'collection' : 'collections'}`
+  }
+  if (singleNodes.volumesCount) {
+    const total = state.volumes.length
+    singleNodes.volumesCount.textContent = `${total} ${total === 1 ? 'volume' : 'volumes'}`
+  }
+  if (singleNodes.seriesCount) {
+    const total = state.seriesItems.length
+    singleNodes.seriesCount.textContent = `${total} ${total === 1 ? 'series' : 'series'}`
+  }
+  renderContentNavigator()
+  renderContentDetail()
 }
 
 const hierarchyBadge = (text, className = '') => createNode('span', `admin-badge ${className}`.trim(), text)
@@ -1548,9 +2123,17 @@ const updateVolume = async (volume, controls) => {
   if (!ADMIN_ROLES.has(state.profile?.role)) return
 
   const updates = {
+    collection_id: controls.collectionSelect?.value || volume.collection_id,
+    title: controls.titleInput?.value.trim() || volume.title,
+    slug: controls.slugInput?.value.trim() || volume.slug,
     visibility: normalizeVisibility(controls.visibility.value),
     is_active: boolFromSelect(controls.active.value),
     sort_order: toSortOrder(controls.sortOrder.value),
+  }
+
+  if (!updates.collection_id || !updates.title || !updates.slug) {
+    setTableError('volumes', new Error('Volume collection, title, and slug are required.'), 'UPDATE')
+    return
   }
 
   if (!confirmContentChange(getText(volume.title, 'volume'), volume, updates, 'volume')) return
@@ -1728,7 +2311,7 @@ const updateBookContentControls = async (book, controls) => {
   Object.assign(book, data || updates)
   clearTableError('books')
   renderDashboard()
-  renderHierarchy()
+  renderContentManagement()
   renderAccessGrants()
   renderBooks()
 }
@@ -1736,6 +2319,219 @@ const updateBookContentControls = async (book, controls) => {
 const profileMap = () => new Map(state.users.map((profile) => [profile.id, profile]))
 
 const bookMap = () => new Map(state.books.map((book) => [book.id, book]))
+
+const effectiveBookHierarchyVisibility = (hierarchy) => {
+  return effectiveVisibility({
+    collection: hierarchy.collection,
+    volume: hierarchy.volume,
+    series: hierarchy.series,
+    book: hierarchy.book ? { ...hierarchy.book, visibility: bookVisibility(hierarchy.book) } : null,
+  })
+}
+
+const customerEligibleBooksForSeries = (series) => {
+  if (!series?.id) return []
+
+  return booksForSeries(series).filter((book) => {
+    const hierarchy = hierarchyForBook(book, state.seriesItems, state.collections, state.volumes)
+    return book.is_active === true
+      && hierarchyIsComplete(hierarchy)
+      && hierarchyIsActive(hierarchy)
+      && effectiveBookHierarchyVisibility(hierarchy) !== 'private'
+  })
+}
+
+const grantIsReadableNow = (grant) => {
+  return grant?.is_visible === true
+    && grant?.can_read === true
+    && isAccessActive(grant)
+}
+
+const selectedSeriesAccessContext = () => {
+  const userId = singleNodes.accessUser?.value || ''
+  const seriesId = singleNodes.seriesAccessSeries?.value || ''
+  const profile = profileMap().get(userId)
+  const series = seriesMap().get(seriesId)
+  const books = series ? booksForSeries(series) : []
+  const eligibleBooks = series ? customerEligibleBooksForSeries(series) : []
+  const eligibleIds = new Set(eligibleBooks.map((book) => book.id))
+  const currentCount = state.accessGrants.filter((grant) => {
+    return grant.user_id === userId
+      && eligibleIds.has(grant.book_id)
+      && grantIsReadableNow(grant)
+  }).length
+
+  return {
+    userId,
+    profile,
+    seriesId,
+    series,
+    books,
+    eligibleBooks,
+    currentCount,
+  }
+}
+
+const seriesAccessStateLabel = (current, total) => {
+  if (!total || current === 0) return 'No Access'
+  if (current >= total) return 'Full Series Access'
+  return 'Partial Access'
+}
+
+const renderSeriesAccessStatus = () => {
+  const summary = singleNodes.seriesAccessSummary
+  if (!summary) return
+
+  clearNode(summary)
+  const context = selectedSeriesAccessContext()
+
+  if (!context.userId || !context.series) {
+    summary.append(
+      createNode('strong', '', 'No Access'),
+      createNode('span', '', 'Select a customer and series to calculate access.')
+    )
+    return
+  }
+
+  const label = seriesAccessStateLabel(context.currentCount, context.eligibleBooks.length)
+  const excluded = Math.max(0, context.books.length - context.eligibleBooks.length)
+  const detailParts = [
+    `${context.currentCount} / ${context.eligibleBooks.length} eligible books`,
+  ]
+  if (excluded) detailParts.push(`${excluded} inactive or private book${excluded === 1 ? '' : 's'} excluded`)
+
+  summary.append(
+    createNode('strong', '', label),
+    createNode('span', '', detailParts.join(' - '))
+  )
+}
+
+const handleGrantSeriesAccess = async (event) => {
+  event.preventDefault()
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  const context = selectedSeriesAccessContext()
+  if (!context.userId || !context.series) {
+    setFormStatus(singleNodes.seriesAccessStatus, 'Select a customer and series first.', 'error')
+    return
+  }
+
+  if (!context.eligibleBooks.length) {
+    setFormStatus(singleNodes.seriesAccessStatus, 'No eligible active public/paid books are available in this series.', 'error')
+    return
+  }
+
+  const button = event.submitter || singleNodes.seriesAccessForm?.querySelector('[data-series-access-grant]')
+  const previousLabel = button?.textContent
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Granting...'
+  }
+
+  const grantedAt = new Date().toISOString()
+  const expiresAt = fromDateTimeLocal(singleNodes.seriesAccessExpires?.value)
+  const payloads = context.eligibleBooks.map((book) => ({
+    user_id: context.userId,
+    book_id: book.id,
+    granted_by: state.user.id,
+    access_type: singleNodes.seriesAccessType?.value || 'manual',
+    granted_at: grantedAt,
+    expires_at: expiresAt,
+    is_visible: true,
+    can_read: true,
+  }))
+
+  const { data, error } = await supabase
+    .from('book_access')
+    .upsert(payloads, { onConflict: 'user_id,book_id' })
+    .select('user_id, book_id, granted_by, access_type, granted_at, expires_at, is_visible, can_read')
+
+  if (button) {
+    button.disabled = false
+    button.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(singleNodes.seriesAccessStatus, 'Series access could not be granted. Check the dashboard alert for details.', 'error')
+    setTableError('book_access', error, 'UPSERT')
+    return
+  }
+
+  const updatedRows = data?.length ? data : payloads
+  const updatedKeys = new Set(payloads.map(accessKey))
+  state.accessGrants = [
+    ...updatedRows,
+    ...state.accessGrants.filter((grant) => !updatedKeys.has(accessKey(grant))),
+  ]
+  state.counts.accessGrants = activeAccessGrantCount()
+  clearTableError('book_access')
+  setFormStatus(
+    singleNodes.seriesAccessStatus,
+    `${getText(context.series.title)} granted to ${getText(context.profile?.display_name, 'selected customer')} - ${payloads.length} books updated.`,
+    'success'
+  )
+  renderDashboard()
+  renderAccessGrants()
+  renderSeriesAccessStatus()
+}
+
+const handleRevokeSeriesAccess = async () => {
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+
+  const context = selectedSeriesAccessContext()
+  if (!context.userId || !context.series) {
+    setFormStatus(singleNodes.seriesAccessStatus, 'Select a customer and series first.', 'error')
+    return
+  }
+
+  const bookIds = context.books.map((book) => book.id).filter(Boolean)
+  if (!bookIds.length) {
+    setFormStatus(singleNodes.seriesAccessStatus, 'This series has no books to revoke.', 'error')
+    return
+  }
+
+  const profileName = getText(context.profile?.display_name, 'selected customer')
+  if (!window.confirm(`Revoke access to all ${bookIds.length} books in ${getText(context.series.title)} for ${profileName}?`)) return
+
+  const button = singleNodes.seriesAccessRevoke
+  const previousLabel = button?.textContent
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Revoking...'
+  }
+
+  const { error } = await supabase
+    .from('book_access')
+    .delete()
+    .eq('user_id', context.userId)
+    .in('book_id', bookIds)
+
+  if (button) {
+    button.disabled = false
+    button.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(singleNodes.seriesAccessStatus, 'Series access could not be revoked. Check the dashboard alert for details.', 'error')
+    setTableError('book_access', error, 'DELETE')
+    return
+  }
+
+  const revokedIds = new Set(bookIds)
+  state.accessGrants = state.accessGrants.filter((grant) => {
+    return grant.user_id !== context.userId || !revokedIds.has(grant.book_id)
+  })
+  state.counts.accessGrants = activeAccessGrantCount()
+  clearTableError('book_access')
+  setFormStatus(
+    singleNodes.seriesAccessStatus,
+    `${getText(context.series.title)} access revoked for ${profileName}.`,
+    'success'
+  )
+  renderDashboard()
+  renderAccessGrants()
+  renderSeriesAccessStatus()
+}
 
 const renderAccessGrants = () => {
   const table = singleNodes.accessTable
@@ -1775,8 +2571,13 @@ const renderAccessGrants = () => {
 const accessUserCell = (profile, userId) => {
   const cell = document.createElement('td')
   const name = createNode('strong', '', getText(profile?.display_name, 'Unnamed reader'))
-  const id = createNode('code', 'admin-id', getText(userId))
-  cell.append(name, id)
+  const details = document.createElement('details')
+  details.className = 'admin-advanced-details'
+  details.append(
+    createNode('summary', '', 'Details'),
+    createNode('code', 'admin-id', `User ID: ${getText(userId)}`)
+  )
+  cell.append(name, details)
   return cell
 }
 
@@ -1862,14 +2663,20 @@ const handleGrantAccess = async (event) => {
   const form = event.currentTarget
   if (!ADMIN_ROLES.has(state.profile?.role)) return
 
+  const userId = singleNodes.accessUser?.value || ''
+  const bookId = singleNodes.accessBook?.value || ''
+
+  if (!userId || !bookId) {
+    setFormStatus(singleNodes.accessFormStatus, 'Please select a customer and a book.', 'error')
+    return
+  }
+
   if (!form.checkValidity()) {
     setFormStatus(singleNodes.accessFormStatus, 'Please select a user and a book.', 'error')
     form.reportValidity()
     return
   }
 
-  const userId = singleNodes.accessUser?.value || ''
-  const bookId = singleNodes.accessBook?.value || ''
   const accessType = singleNodes.accessType?.value || 'manual'
   const isVisible = boolFromSelect(singleNodes.accessVisible?.value || 'true')
   const canRead = boolFromSelect(singleNodes.accessCanRead?.value || 'true')
@@ -1928,6 +2735,7 @@ const handleGrantAccess = async (event) => {
   if (singleNodes.accessCanRead) singleNodes.accessCanRead.value = 'true'
   renderDashboard()
   renderAccessGrants()
+  renderSeriesAccessStatus()
 }
 
 const updateAccessGrant = async (grant, button) => {
@@ -1973,6 +2781,7 @@ const updateAccessGrant = async (grant, button) => {
   clearTableError('book_access')
   renderDashboard()
   renderAccessGrants()
+  renderSeriesAccessStatus()
 }
 
 const revokeAccessGrant = async (grant, button) => {
@@ -2010,6 +2819,7 @@ const revokeAccessGrant = async (grant, button) => {
   clearTableError('book_access')
   renderDashboard()
   renderAccessGrants()
+  renderSeriesAccessStatus()
 }
 
 const renderFeedback = () => {
@@ -2097,6 +2907,12 @@ const feedbackMetaField = (label, value, className = '') => {
   return field
 }
 
+const feedbackSection = (label, ...children) => {
+  const section = createNode('div', 'feedback-card__section')
+  section.append(createNode('span', 'feedback-card__section-label', label), ...children)
+  return section
+}
+
 const feedbackCard = (feedback) => {
   const card = createNode('article', 'feedback-card')
   const rating = createNode('div', 'feedback-card__rating')
@@ -2134,18 +2950,27 @@ const feedbackCard = (feedback) => {
   statusLabel.append(labelText, statusSelect)
 
   const actions = createNode('div', 'feedback-card__actions')
-  const storyButton = createNode('button', 'admin-action feedback-story-button', 'Download Story PNG')
+  const previewButton = createNode('button', 'admin-action feedback-story-button', 'Preview Story')
+  const storyButton = createNode('button', 'admin-action admin-action--primary feedback-story-button', 'Download Story PNG')
+  previewButton.type = 'button'
   storyButton.type = 'button'
+  previewButton.addEventListener('click', () => previewFeedbackStory(feedback, previewButton))
   storyButton.addEventListener('click', () => downloadFeedbackStory(feedback, storyButton))
 
   if (!feedback.id) {
     const warning = createNode('p', 'admin-empty', 'Status update needs a feedback row id.')
-    actions.append(statusBadge(feedback.status), statusLabel, storyButton, warning)
+    actions.append(statusBadge(feedback.status), statusLabel, previewButton, storyButton, warning)
   } else {
-    actions.append(statusBadge(feedback.status), statusLabel, storyButton)
+    actions.append(statusBadge(feedback.status), statusLabel, previewButton, storyButton)
   }
 
-  card.append(rating, review, reviewer, meta, actions)
+  card.append(
+    feedbackSection('Rating', rating),
+    feedbackSection('Review', review),
+    feedbackSection('Reviewer', reviewer),
+    meta,
+    actions
+  )
   return card
 }
 
@@ -2183,30 +3008,43 @@ const fitCanvasLine = (context, text, maxWidth) => {
   return `${fitted || text.slice(0, 1)}...`
 }
 
-const wrapCanvasText = (context, text, maxWidth, maxLines) => {
+const wrapCanvasTextDetailed = (context, text, maxWidth, maxLines = Number.POSITIVE_INFINITY) => {
   const words = getText(text, '').split(/\s+/).filter(Boolean)
   const lines = []
   let currentLine = ''
   let truncated = false
 
-  words.forEach((word) => {
-    if (truncated) return
+  for (const word of words) {
     const candidate = currentLine ? `${currentLine} ${word}` : word
 
     if (context.measureText(candidate).width <= maxWidth) {
       currentLine = candidate
-      return
+      continue
     }
 
-    if (currentLine) lines.push(currentLine)
-    currentLine = word
+    if (currentLine) {
+      lines.push(currentLine)
+      currentLine = word
+    } else {
+      lines.push(fitCanvasLine(context, word, maxWidth))
+      currentLine = ''
+    }
 
     if (lines.length >= maxLines) {
       truncated = true
+      currentLine = ''
+      break
     }
-  })
+  }
 
-  if (!truncated && currentLine) lines.push(currentLine)
+  if (!truncated && currentLine) {
+    if (lines.length < maxLines) {
+      lines.push(currentLine)
+    } else {
+      truncated = true
+    }
+  }
+
   if (lines.length > maxLines) {
     lines.length = maxLines
     truncated = true
@@ -2220,7 +3058,14 @@ const wrapCanvasText = (context, text, maxWidth, maxLines) => {
     lines[lines.length - 1] = `${lastLine || '...'}...`
   }
 
-  return lines.map((line) => fitCanvasLine(context, line, maxWidth))
+  return {
+    lines: lines.map((line) => fitCanvasLine(context, line, maxWidth)),
+    truncated,
+  }
+}
+
+const wrapCanvasText = (context, text, maxWidth, maxLines) => {
+  return wrapCanvasTextDetailed(context, text, maxWidth, maxLines).lines
 }
 
 const drawWrappedText = (context, lines, x, y, lineHeight) => {
@@ -2229,13 +3074,139 @@ const drawWrappedText = (context, lines, x, y, lineHeight) => {
   })
 }
 
-const drawStoryMeta = (context, label, value, x, y) => {
-  context.font = '700 24px Inter, Arial, sans-serif'
-  context.fillStyle = '#8c6a4a'
-  context.fillText(label.toUpperCase(), x, y)
-  context.font = '600 34px Inter, Arial, sans-serif'
-  context.fillStyle = '#2a3440'
-  drawWrappedText(context, wrapCanvasText(context, getText(value), 820, 2), x, y + 42, 40)
+const drawSpacedText = (context, text, x, y, spacing = 4) => {
+  let cursor = x
+  Array.from(text).forEach((character) => {
+    context.fillText(character, cursor, y)
+    cursor += context.measureText(character).width + spacing
+  })
+}
+
+const storyThemeForFeedback = (feedback) => {
+  const source = normalize(`${feedback.Series || ''} ${feedback.Book || ''}`)
+
+  if (source.includes('mind') || source.includes('paradox') || source.includes('human')) {
+    return {
+      paper: '#f6f4ef',
+      ink: '#253544',
+      muted: 'rgba(37, 53, 68, 0.64)',
+      panel: 'rgba(255, 255, 255, 0.78)',
+      accent: '#6c9a8b',
+      accentDeep: '#2f5f61',
+      accentSoft: 'rgba(108, 154, 139, 0.18)',
+      warm: '#9d704b',
+    }
+  }
+
+  if (source.includes('shift') || source.includes('veil') || source.includes('night')) {
+    return {
+      paper: '#f7f3ed',
+      ink: '#26313d',
+      muted: 'rgba(38, 49, 61, 0.64)',
+      panel: 'rgba(255, 255, 255, 0.76)',
+      accent: '#8c6a4a',
+      accentDeep: '#6d4b34',
+      accentSoft: 'rgba(140, 106, 74, 0.17)',
+      warm: '#6c9a8b',
+    }
+  }
+
+  if (source.includes('fiction') || source.includes('dream') || source.includes('echo')) {
+    return {
+      paper: '#f8f5f1',
+      ink: '#2f3541',
+      muted: 'rgba(47, 53, 65, 0.64)',
+      panel: 'rgba(255, 255, 255, 0.77)',
+      accent: '#a7725f',
+      accentDeep: '#774e45',
+      accentSoft: 'rgba(167, 114, 95, 0.16)',
+      warm: '#6f927e',
+    }
+  }
+
+  return {
+    paper: '#f8f7f4',
+    ink: '#2a3440',
+    muted: 'rgba(42, 52, 64, 0.64)',
+    panel: 'rgba(255, 255, 255, 0.76)',
+    accent: '#8c6a4a',
+    accentDeep: '#6d4b34',
+    accentSoft: 'rgba(140, 106, 74, 0.16)',
+    warm: '#6c9a8b',
+  }
+}
+
+const ratingStars = (value) => {
+  const rating = Math.max(0, Math.min(5, Math.round(Number(value) || 0)))
+  return `${'\u2605'.repeat(rating)}${'\u2606'.repeat(5 - rating)}`
+}
+
+const fitStoryReview = (context, review, maxWidth, maxHeight) => {
+  let fallback = {
+    fontSize: 38,
+    lineHeight: 48,
+    lines: [],
+  }
+
+  for (let fontSize = 70; fontSize >= 38; fontSize -= 4) {
+    const lineHeight = Math.round(fontSize * 1.18)
+    const maxLines = Math.max(4, Math.floor(maxHeight / lineHeight))
+    context.font = `600 ${fontSize}px Cormorant Garamond, Georgia, serif`
+    const result = wrapCanvasTextDetailed(context, review, maxWidth, maxLines)
+    fallback = {
+      fontSize,
+      lineHeight,
+      lines: result.lines,
+    }
+    if (!result.truncated) return fallback
+  }
+
+  return fallback
+}
+
+const drawStoryTexture = (context, theme) => {
+  context.save()
+  context.fillStyle = theme.ink
+  for (let index = 0; index < 140; index += 1) {
+    const x = (index * 79) % 1080
+    const y = (index * 149) % 1920
+    const alpha = 0.018 + ((index % 5) * 0.004)
+    context.globalAlpha = alpha
+    context.fillRect(x, y, 2, 2)
+  }
+  context.restore()
+}
+
+const drawStoryMeta = (context, label, value, x, y, maxWidth, theme, size = 48) => {
+  context.font = '800 22px Inter, Arial, sans-serif'
+  context.fillStyle = theme.accentDeep
+  drawSpacedText(context, label.toUpperCase(), x, y, 2.5)
+  context.font = `700 ${size}px Cormorant Garamond, Georgia, serif`
+  context.fillStyle = theme.ink
+  const lines = wrapCanvasText(context, getText(value, 'Untitled'), maxWidth, 2)
+  drawWrappedText(context, lines, x, y + 62, Math.round(size * 1.02))
+  return y + 62 + lines.length * Math.round(size * 1.02)
+}
+
+const createFeedbackStoryCanvas = (feedback) => {
+  const canvas = document.createElement('canvas')
+  canvas.width = 1080
+  canvas.height = 1920
+  const context = canvas.getContext('2d')
+  if (!context) throw new Error('Canvas export is not available in this browser.')
+  drawFeedbackStory(context, feedback)
+  return canvas
+}
+
+const storyDownloadName = (feedback) => {
+  return `greyveil-feedback-${slugify(feedback.Book)}-${slugify(feedback.Name)}.png`
+}
+
+const triggerStoryDownload = (canvas, feedback) => {
+  const link = document.createElement('a')
+  link.download = storyDownloadName(feedback)
+  link.href = canvas.toDataURL('image/png')
+  link.click()
 }
 
 const downloadFeedbackStory = async (feedback, button) => {
@@ -2246,17 +3217,7 @@ const downloadFeedbackStory = async (feedback, button) => {
   }
 
   try {
-    const canvas = document.createElement('canvas')
-    canvas.width = 1080
-    canvas.height = 1920
-    const context = canvas.getContext('2d')
-    if (!context) throw new Error('Canvas export is not available in this browser.')
-    drawFeedbackStory(context, feedback)
-
-    const link = document.createElement('a')
-    link.download = `greyveil-feedback-${slugify(feedback.Book)}-${slugify(feedback.Name)}.png`
-    link.href = canvas.toDataURL('image/png')
-    link.click()
+    triggerStoryDownload(createFeedbackStoryCanvas(feedback), feedback)
   } catch (error) {
     setTableError('feedback_story_export', error, 'PNG export')
   } finally {
@@ -2267,67 +3228,154 @@ const downloadFeedbackStory = async (feedback, button) => {
   }
 }
 
+const previewFeedbackStory = async (feedback, button) => {
+  const previousLabel = button?.textContent
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Preparing...'
+  }
+
+  try {
+    const canvas = createFeedbackStoryCanvas(feedback)
+    const overlay = createNode('div', 'story-preview-modal')
+    overlay.setAttribute('role', 'dialog')
+    overlay.setAttribute('aria-modal', 'true')
+    overlay.setAttribute('aria-label', 'Feedback story preview')
+
+    const dialog = createNode('div', 'story-preview-dialog')
+    const header = createNode('div', 'story-preview-dialog__header')
+    const title = createNode('div')
+    title.append(
+      createNode('p', 'admin-eyebrow', 'Story Preview'),
+      createNode('h3', '', getText(feedback.Book, 'Greyveil Feedback'))
+    )
+
+    const closeButton = createNode('button', 'admin-action', 'Close')
+    closeButton.type = 'button'
+    header.append(title, closeButton)
+
+    const image = document.createElement('img')
+    image.className = 'story-preview-image'
+    image.alt = 'Instagram Story preview for reader feedback'
+    image.src = canvas.toDataURL('image/png')
+
+    const actions = createNode('div', 'story-preview-actions')
+    const downloadButton = createNode('button', 'admin-action admin-action--primary', 'Download PNG')
+    downloadButton.type = 'button'
+    downloadButton.addEventListener('click', () => triggerStoryDownload(canvas, feedback))
+    actions.append(downloadButton)
+
+    const closePreview = () => {
+      document.removeEventListener('keydown', handlePreviewKeydown)
+      overlay.remove()
+    }
+    const handlePreviewKeydown = (event) => {
+      if (event.key === 'Escape') closePreview()
+    }
+
+    closeButton.addEventListener('click', closePreview)
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) closePreview()
+    })
+    document.addEventListener('keydown', handlePreviewKeydown)
+
+    dialog.append(header, image, actions)
+    overlay.append(dialog)
+    document.body.append(overlay)
+    closeButton.focus({ preventScroll: true })
+  } catch (error) {
+    setTableError('feedback_story_export', error, 'PNG preview')
+  } finally {
+    if (button) {
+      button.disabled = false
+      button.textContent = previousLabel
+    }
+  }
+}
+
 const drawFeedbackStory = (context, feedback) => {
-  context.fillStyle = '#f8f7f4'
+  const theme = storyThemeForFeedback(feedback)
+  context.fillStyle = theme.paper
   context.fillRect(0, 0, 1080, 1920)
 
   const gradient = context.createLinearGradient(0, 0, 1080, 1920)
-  gradient.addColorStop(0, 'rgba(140, 106, 74, 0.18)')
-  gradient.addColorStop(0.52, 'rgba(248, 247, 244, 0)')
-  gradient.addColorStop(1, 'rgba(108, 154, 139, 0.18)')
+  gradient.addColorStop(0, theme.accentSoft)
+  gradient.addColorStop(0.48, 'rgba(255, 255, 255, 0)')
+  gradient.addColorStop(1, 'rgba(108, 154, 139, 0.16)')
   context.fillStyle = gradient
   context.fillRect(0, 0, 1080, 1920)
+  drawStoryTexture(context, theme)
 
-  context.fillStyle = '#2a3440'
-  context.font = '800 34px Inter, Arial, sans-serif'
-  context.letterSpacing = '4px'
-  context.fillText('GREYVEIL EDITIONS', 96, 132)
-  context.letterSpacing = '0px'
-
-  context.fillStyle = '#8c6a4a'
-  context.font = '700 26px Inter, Arial, sans-serif'
-  context.fillText('READER FEEDBACK', 96, 178)
-
-  roundedRect(context, 78, 260, 924, 1110, 52)
-  context.fillStyle = 'rgba(255, 255, 255, 0.76)'
-  context.fill()
-  context.strokeStyle = 'rgba(42, 52, 64, 0.14)'
+  roundedRect(context, 62, 62, 956, 1796, 44)
+  context.strokeStyle = 'rgba(42, 52, 64, 0.13)'
   context.lineWidth = 3
   context.stroke()
 
-  context.fillStyle = '#8c6a4a'
-  context.font = '800 92px Cormorant Garamond, Georgia, serif'
-  context.fillText(`${formatRating(feedback.Rate)} / 5`, 132, 402)
-  context.font = '700 24px Inter, Arial, sans-serif'
-  context.fillText('RATING', 136, 452)
+  context.fillStyle = theme.ink
+  context.font = '800 30px Inter, Arial, sans-serif'
+  drawSpacedText(context, 'GREYVEIL EDITIONS', 94, 132, 4)
+
+  context.font = '800 22px Inter, Arial, sans-serif'
+  context.fillStyle = theme.accentDeep
+  context.fillText('READER FEEDBACK', 96, 184)
+
+  const contextText = [feedback.Series, feedback.Book].map((value) => getText(value, '')).filter(Boolean).join(' / ')
+  context.font = '600 30px Inter, Arial, sans-serif'
+  context.fillStyle = theme.muted
+  drawWrappedText(context, wrapCanvasText(context, contextText || 'Greyveil Editions', 880, 2), 96, 238, 38)
+
+  roundedRect(context, 84, 324, 912, 994, 56)
+  context.fillStyle = theme.panel
+  context.fill()
+  context.strokeStyle = 'rgba(42, 52, 64, 0.11)'
+  context.lineWidth = 3
+  context.stroke()
+
+  context.fillStyle = theme.accent
+  context.font = '700 52px Inter, Arial, sans-serif'
+  context.fillText(ratingStars(feedback.Rate), 136, 446)
+  context.font = '800 24px Inter, Arial, sans-serif'
+  context.fillStyle = theme.accentDeep
+  context.fillText(`${formatRating(feedback.Rate)} / 5`, 140, 494)
+
+  context.strokeStyle = 'rgba(42, 52, 64, 0.11)'
+  context.lineWidth = 2
+  context.beginPath()
+  context.moveTo(136, 538)
+  context.lineTo(944, 538)
+  context.stroke()
 
   const review = getText(feedback['Reviews '], 'No review text provided.')
-  let reviewFontSize = 58
-  let reviewLines = []
-  do {
-    context.font = `600 ${reviewFontSize}px Cormorant Garamond, Georgia, serif`
-    reviewLines = wrapCanvasText(context, `"${review}"`, 800, 10)
-    reviewFontSize -= 4
-  } while (reviewLines.length >= 10 && reviewFontSize >= 42)
+  const reviewLayout = fitStoryReview(context, review, 760, 575)
+  context.fillStyle = 'rgba(140, 106, 74, 0.20)'
+  context.font = '700 156px Cormorant Garamond, Georgia, serif'
+  context.fillText('\u201C', 126, 654)
+  context.fillStyle = theme.ink
+  context.font = `600 ${reviewLayout.fontSize}px Cormorant Garamond, Georgia, serif`
+  drawWrappedText(context, reviewLayout.lines, 158, 642, reviewLayout.lineHeight)
 
-  context.fillStyle = '#2a3440'
-  context.font = `600 ${reviewFontSize + 4}px Cormorant Garamond, Georgia, serif`
-  drawWrappedText(context, reviewLines, 132, 558, reviewFontSize + 20)
+  const reviewerY = Math.min(1240, 672 + reviewLayout.lines.length * reviewLayout.lineHeight + 46)
+  context.font = '800 34px Inter, Arial, sans-serif'
+  context.fillStyle = theme.ink
+  context.fillText(`- ${getText(feedback.Name, 'Anonymous')}`, 158, reviewerY)
 
-  const reviewerY = Math.min(1320, 578 + reviewLines.length * (reviewFontSize + 20) + 20)
-  context.font = '700 42px Inter, Arial, sans-serif'
-  context.fillStyle = '#3a3a3a'
-  context.fillText(`- ${getText(feedback.Name, 'Anonymous')}`, 132, reviewerY)
+  roundedRect(context, 84, 1398, 912, 304, 34)
+  context.fillStyle = 'rgba(255, 255, 255, 0.42)'
+  context.fill()
+  context.strokeStyle = 'rgba(42, 52, 64, 0.09)'
+  context.lineWidth = 2
+  context.stroke()
 
-  drawStoryMeta(context, 'Book', feedback.Book, 132, 1450)
-  drawStoryMeta(context, 'Series', feedback.Series, 132, 1548)
+  let metaY = drawStoryMeta(context, 'Book Title', feedback.Book, 132, 1480, 816, theme, 52)
+  metaY = Math.min(metaY + 34, 1606)
+  drawStoryMeta(context, 'Series', feedback.Series, 132, metaY, 816, theme, 40)
 
-  context.font = '600 26px Inter, Arial, sans-serif'
-  context.fillStyle = 'rgba(42, 52, 64, 0.64)'
-  context.fillText('Shared from Greyveil Editions reader feedback.', 96, 1764)
+  context.font = '700 24px Inter, Arial, sans-serif'
+  context.fillStyle = theme.muted
+  context.fillText('Shared from Greyveil Editions reader feedback.', 96, 1780)
   context.font = '800 30px Inter, Arial, sans-serif'
-  context.fillStyle = '#2a3440'
-  context.fillText('greyveileditions.vercel.app', 96, 1812)
+  context.fillStyle = theme.ink
+  drawSpacedText(context, 'GREYVEIL EDITIONS', 96, 1830, 3)
 }
 
 const updateFeedbackStatus = async (feedback, select) => {

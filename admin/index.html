@@ -160,262 +160,95 @@
           <div class="admin-panel-heading">
             <div>
               <p class="admin-eyebrow">Content Management</p>
-              <h2 id="content-title">Collections, Volumes &amp; Series</h2>
-              <p class="admin-panel-note">GLOBAL ACTIVE controls whether content is enabled. VISIBILITY controls who can discover it. USER ACCESS controls which customer may read protected books.</p>
+              <h2 id="content-title">Hierarchy</h2>
+              <p class="admin-panel-note">Manage Collections -> Volumes -> Series -> Books from one focused detail panel. Private hierarchy stays hidden from guests and customers.</p>
             </div>
           </div>
 
-          <div class="admin-content-principles" aria-label="Content access model">
-            <article class="admin-card">
-              <h3>Global Active</h3>
-              <p>Inactive content is disabled for customers even if a customer has book access. Admins still see it for management.</p>
+          <div class="admin-create-strip" aria-label="Create content">
+            <details class="admin-create-drawer">
+              <summary>+ New Collection</summary>
+              <form class="admin-content-form" data-collection-form>
+                <div class="admin-access-grid">
+                  <label><span>Title</span><input name="title" type="text" required /></label>
+                  <label><span>Slug</span><input name="slug" type="text" required /></label>
+                  <label><span>Visibility</span><select name="visibility" required><option value="public">public</option><option value="paid">paid</option><option value="private">private</option></select></label>
+                  <label><span>Active</span><select name="is_active" required><option value="true">Active</option><option value="false">Inactive</option></select></label>
+                  <label><span>Sort Order</span><input name="sort_order" type="number" value="0" /></label>
+                  <label><span>Description</span><input name="description" type="text" /></label>
+                </div>
+                <div class="admin-form-actions">
+                  <button class="admin-action admin-action--primary" type="submit">Create Collection</button>
+                  <p class="admin-form-status" data-collection-status role="status" aria-live="polite"></p>
+                </div>
+              </form>
+            </details>
+
+            <details class="admin-create-drawer">
+              <summary>+ New Volume</summary>
+              <form class="admin-content-form" data-volume-form>
+                <div class="admin-access-grid">
+                  <label><span>Collection</span><select name="collection_id" data-volume-collection-select required><option value="">Select collection</option></select></label>
+                  <label><span>Title</span><input name="title" type="text" required /></label>
+                  <label><span>Slug</span><input name="slug" type="text" required /></label>
+                  <label><span>Visibility</span><select name="visibility" required><option value="public">public</option><option value="paid">paid</option><option value="private">private</option></select></label>
+                  <label><span>Active</span><select name="is_active" required><option value="true">Active</option><option value="false">Inactive</option></select></label>
+                  <label><span>Sort Order</span><input name="sort_order" type="number" value="0" /></label>
+                  <label><span>Description</span><input name="description" type="text" /></label>
+                </div>
+                <div class="admin-form-actions">
+                  <button class="admin-action admin-action--primary" type="submit">Create Volume</button>
+                  <p class="admin-form-status" data-volume-status role="status" aria-live="polite"></p>
+                </div>
+              </form>
+            </details>
+
+            <details class="admin-create-drawer">
+              <summary>+ New Series</summary>
+              <form class="admin-content-form" data-series-form>
+                <div class="admin-access-grid">
+                  <label><span>Collection</span><select name="collection_id" data-series-collection-select required><option value="">Select collection</option></select></label>
+                  <label><span>Volume</span><select name="volume_id" data-series-volume-select required><option value="">Select volume</option></select></label>
+                  <label><span>Title</span><input name="title" type="text" required /></label>
+                  <label><span>Slug</span><input name="slug" type="text" required /></label>
+                  <label><span>Visibility</span><select name="visibility" required><option value="public">public</option><option value="paid">paid</option><option value="private">private</option></select></label>
+                  <label><span>Active</span><select name="is_active" required><option value="true">Active</option><option value="false">Inactive</option></select></label>
+                  <label><span>Sort Order</span><input name="sort_order" type="number" value="0" /></label>
+                  <label><span>Description</span><input name="description" type="text" /></label>
+                </div>
+                <div class="admin-form-actions">
+                  <button class="admin-action admin-action--primary" type="submit">Create Series</button>
+                  <p class="admin-form-status" data-series-status role="status" aria-live="polite"></p>
+                </div>
+              </form>
+            </details>
+          </div>
+
+          <div class="admin-content-workspace">
+            <article class="admin-card admin-content-navigator-card">
+              <div class="admin-card-heading">
+                <h3>Navigator</h3>
+                <p class="admin-count"><span data-collections-count>0 collections</span> / <span data-volumes-count>0 volumes</span> / <span data-series-count>0 series</span></p>
+              </div>
+              <div class="admin-content-navigator" data-content-navigator></div>
+              <p class="admin-empty" data-hierarchy-empty hidden>No content hierarchy is available to display.</p>
             </article>
-            <article class="admin-card">
-              <h3>Visibility</h3>
-              <p>Public and paid items can be discovered. Private collections, volumes, series, or books are absent from guest and customer listings.</p>
-            </article>
-            <article class="admin-card">
-              <h3>User Access</h3>
-              <p>Paid reading is granted per user in Book Access. Admins and super admins read active collection, volume, series, and book chains automatically.</p>
+
+            <article class="admin-card admin-content-detail-card" data-content-detail>
+              <h3>Select a content item.</h3>
+              <p class="admin-panel-note">Choose a Collection, Volume, Series, or Book from the navigator to edit its settings.</p>
             </article>
           </div>
 
-          <div class="admin-content-grid">
-            <form class="admin-card admin-content-form" data-collection-form>
-              <div class="admin-card-heading">
-                <h3>Add Collection</h3>
-                <p class="admin-count" data-collections-count>0 collections</p>
-              </div>
-              <div class="admin-access-grid">
-                <label>
-                  <span>Title</span>
-                  <input name="title" type="text" required />
-                </label>
-                <label>
-                  <span>Slug</span>
-                  <input name="slug" type="text" required />
-                </label>
-                <label>
-                  <span>Visibility</span>
-                  <select name="visibility" required>
-                    <option value="public">public</option>
-                    <option value="paid">paid</option>
-                    <option value="private">private</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Active</span>
-                  <select name="is_active" required>
-                    <option value="true">Active</option>
-                    <option value="false">Inactive</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Sort Order</span>
-                  <input name="sort_order" type="number" value="0" />
-                </label>
-                <label>
-                  <span>Description</span>
-                  <input name="description" type="text" />
-                </label>
-              </div>
-              <div class="admin-form-actions">
-                <button class="admin-action admin-action--primary" type="submit">Create Collection</button>
-                <p class="admin-form-status" data-collection-status role="status" aria-live="polite"></p>
-              </div>
-            </form>
-
-            <form class="admin-card admin-content-form" data-volume-form>
-              <div class="admin-card-heading">
-                <h3>Add Volume</h3>
-                <p class="admin-count" data-volumes-count>0 volumes</p>
-              </div>
-              <div class="admin-access-grid">
-                <label>
-                  <span>Collection</span>
-                  <select name="collection_id" data-volume-collection-select required>
-                    <option value="">Select collection</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Title</span>
-                  <input name="title" type="text" required />
-                </label>
-                <label>
-                  <span>Slug</span>
-                  <input name="slug" type="text" required />
-                </label>
-                <label>
-                  <span>Visibility</span>
-                  <select name="visibility" required>
-                    <option value="public">public</option>
-                    <option value="paid">paid</option>
-                    <option value="private">private</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Active</span>
-                  <select name="is_active" required>
-                    <option value="true">Active</option>
-                    <option value="false">Inactive</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Sort Order</span>
-                  <input name="sort_order" type="number" value="0" />
-                </label>
-                <label>
-                  <span>Description</span>
-                  <input name="description" type="text" />
-                </label>
-              </div>
-              <div class="admin-form-actions">
-                <button class="admin-action admin-action--primary" type="submit">Create Volume</button>
-                <p class="admin-form-status" data-volume-status role="status" aria-live="polite"></p>
-              </div>
-            </form>
-
-            <form class="admin-card admin-content-form" data-series-form>
-              <div class="admin-card-heading">
-                <h3>Add Series</h3>
-                <p class="admin-count" data-series-count>0 series</p>
-              </div>
-              <div class="admin-access-grid">
-                <label>
-                  <span>Collection</span>
-                  <select name="collection_id" data-series-collection-select required>
-                    <option value="">Select collection</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Volume</span>
-                  <select name="volume_id" data-series-volume-select required>
-                    <option value="">Select volume</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Title</span>
-                  <input name="title" type="text" required />
-                </label>
-                <label>
-                  <span>Slug</span>
-                  <input name="slug" type="text" required />
-                </label>
-                <label>
-                  <span>Visibility</span>
-                  <select name="visibility" required>
-                    <option value="public">public</option>
-                    <option value="paid">paid</option>
-                    <option value="private">private</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Active</span>
-                  <select name="is_active" required>
-                    <option value="true">Active</option>
-                    <option value="false">Inactive</option>
-                  </select>
-                </label>
-                <label>
-                  <span>Sort Order</span>
-                  <input name="sort_order" type="number" value="0" />
-                </label>
-                <label>
-                  <span>Description</span>
-                  <input name="description" type="text" />
-                </label>
-              </div>
-              <div class="admin-form-actions">
-                <button class="admin-action admin-action--primary" type="submit">Create Series</button>
-                <p class="admin-form-status" data-series-status role="status" aria-live="polite"></p>
-              </div>
-            </form>
+          <div hidden>
+            <table><tbody data-collections-table></tbody></table>
+            <table><tbody data-volumes-table></tbody></table>
+            <table><tbody data-series-table></tbody></table>
+            <div data-content-hierarchy></div>
+            <p data-collections-empty hidden></p>
+            <p data-volumes-empty hidden></p>
+            <p data-series-empty hidden></p>
           </div>
-
-          <div class="admin-content-grid">
-            <article>
-              <div class="admin-card-heading">
-                <h3>Collections</h3>
-              </div>
-              <div class="admin-table-wrap">
-                <table class="admin-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Title</th>
-                      <th scope="col">Slug</th>
-                      <th scope="col">Visibility</th>
-                      <th scope="col">Active</th>
-                      <th scope="col">Sort</th>
-                      <th scope="col">Controls</th>
-                    </tr>
-                  </thead>
-                  <tbody data-collections-table></tbody>
-                </table>
-              </div>
-              <p class="admin-empty" data-collections-empty hidden>No collections are available to display.</p>
-            </article>
-
-            <article>
-              <div class="admin-card-heading">
-                <h3>Volumes</h3>
-              </div>
-              <div class="admin-table-wrap">
-                <table class="admin-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Title</th>
-                      <th scope="col">Collection</th>
-                      <th scope="col">Slug</th>
-                      <th scope="col">Visibility</th>
-                      <th scope="col">Active</th>
-                      <th scope="col">Sort</th>
-                      <th scope="col">Controls</th>
-                    </tr>
-                  </thead>
-                  <tbody data-volumes-table></tbody>
-                </table>
-              </div>
-              <p class="admin-empty" data-volumes-empty hidden>No volumes are available to display.</p>
-            </article>
-
-            <article>
-              <div class="admin-card-heading">
-                <h3>Series</h3>
-              </div>
-              <div class="admin-table-wrap">
-                <table class="admin-table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Title</th>
-                      <th scope="col">Collection</th>
-                      <th scope="col">Volume</th>
-                      <th scope="col">Slug</th>
-                      <th scope="col">Visibility</th>
-                      <th scope="col">Active</th>
-                      <th scope="col">Sort</th>
-                      <th scope="col">Controls</th>
-                    </tr>
-                  </thead>
-                  <tbody data-series-table></tbody>
-                </table>
-              </div>
-              <p class="admin-empty" data-series-empty hidden>No series are available to display.</p>
-            </article>
-          </div>
-
-          <article class="admin-card">
-            <div class="admin-card-heading">
-              <h3>Hierarchy</h3>
-            </div>
-            <div class="admin-hierarchy" data-content-hierarchy></div>
-            <p class="admin-empty" data-hierarchy-empty hidden>No content hierarchy is available to display.</p>
-          </article>
-
-          <article class="admin-card admin-placeholder">
-            <h3>Book visibility lives in Books.</h3>
-            <p>Use the Books section for book-level visibility and active controls inside the Collection / Volume / Series hierarchy.</p>
-            <button class="admin-action" type="button" data-admin-tab-link="books">Open Books</button>
-          </article>
         </section>
 
         <section class="admin-panel" data-admin-panel="books" aria-labelledby="books-title">
@@ -451,18 +284,17 @@
           <div class="admin-panel-heading">
             <div>
               <p class="admin-eyebrow">Per-User Access</p>
-              <h2 id="book-access-title">Book Access</h2>
-              <p class="admin-panel-note">These controls affect one selected user and book. They do not change the global book switches.</p>
+              <h2 id="book-access-title">Access Management</h2>
+              <p class="admin-panel-note">Grant individual books or update an entire eligible series using the existing book_access rows.</p>
             </div>
           </div>
 
-          <form class="admin-card admin-access-form" data-access-form>
+          <article class="admin-card admin-access-customer-card">
             <div class="admin-card-heading">
-              <h3>Grant Book Access</h3>
+              <h3>Customer</h3>
               <p data-access-status>Personal access is checked only after Supabase confirms the signed-in user's UUID.</p>
             </div>
-
-            <div class="admin-access-grid">
+            <div class="admin-access-grid admin-access-grid--customer">
               <label>
                 <span>Search User</span>
                 <input type="search" data-access-user-search placeholder="Search display name" autocomplete="off" />
@@ -470,70 +302,141 @@
               <label>
                 <span>User</span>
                 <select data-access-user required>
-                  <option value="">Select user</option>
+                  <option value="">Select customer</option>
                 </select>
-              </label>
-              <label>
-                <span>Book</span>
-                <select data-access-book required>
-                  <option value="">Select book</option>
-                </select>
-              </label>
-              <label>
-                <span>Access Type</span>
-                <select data-access-type required>
-                  <option value="manual">manual</option>
-                  <option value="promotion">promotion</option>
-                  <option value="complimentary">complimentary</option>
-                  <option value="purchase">purchase</option>
-                </select>
-              </label>
-              <label>
-                <span>Visible to User</span>
-                <select data-access-visible required>
-                  <option value="true">ON</option>
-                  <option value="false">OFF</option>
-                </select>
-              </label>
-              <label>
-                <span>Can Read</span>
-                <select data-access-can-read required>
-                  <option value="true">ON</option>
-                  <option value="false">OFF</option>
-                </select>
-              </label>
-              <label>
-                <span>Expires At</span>
-                <input type="datetime-local" data-access-expires />
               </label>
             </div>
+          </article>
 
-            <div class="admin-form-actions">
-              <button class="admin-action admin-action--primary" type="submit">Grant Access</button>
-              <p class="admin-form-status" data-access-form-status role="status" aria-live="polite"></p>
-            </div>
-          </form>
-
-          <div class="admin-table-wrap">
-            <table class="admin-table admin-access-table">
-              <thead>
-                <tr>
-                  <th scope="col">User</th>
-                  <th scope="col">Book</th>
-                  <th scope="col">Series</th>
-                  <th scope="col">Visible</th>
-                  <th scope="col">Can Read</th>
-                  <th scope="col">Access Type</th>
-                  <th scope="col">Granted</th>
-                  <th scope="col">Expiration</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </thead>
-              <tbody data-access-table></tbody>
-            </table>
+          <div class="admin-access-mode-tabs" role="tablist" aria-label="Access management mode">
+            <button type="button" data-access-mode-tab="book" aria-selected="true">Book Access</button>
+            <button type="button" data-access-mode-tab="series" aria-selected="false">Series Access</button>
           </div>
-          <p class="admin-empty" data-access-empty hidden>No access grants are available to display.</p>
+
+          <div data-access-mode-panel="book">
+            <form class="admin-card admin-access-form" data-access-form>
+              <div class="admin-card-heading">
+                <h3>Grant Book Access</h3>
+                <p>Use this for exceptions and one-off access edits.</p>
+              </div>
+
+              <div class="admin-access-grid">
+                <label>
+                  <span>Book</span>
+                  <select data-access-book required>
+                    <option value="">Select book</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Access Type</span>
+                  <select data-access-type required>
+                    <option value="manual">manual</option>
+                    <option value="promotion">promotion</option>
+                    <option value="complimentary">complimentary</option>
+                    <option value="purchase">purchase</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Visible to User</span>
+                  <select data-access-visible required>
+                    <option value="true">ON</option>
+                    <option value="false">OFF</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Can Read</span>
+                  <select data-access-can-read required>
+                    <option value="true">ON</option>
+                    <option value="false">OFF</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Expires At</span>
+                  <input type="datetime-local" data-access-expires />
+                </label>
+              </div>
+
+              <div class="admin-form-actions">
+                <button class="admin-action admin-action--primary" type="submit">Grant Access</button>
+                <p class="admin-form-status" data-access-form-status role="status" aria-live="polite"></p>
+              </div>
+            </form>
+
+            <div class="admin-table-wrap">
+              <table class="admin-table admin-access-table">
+                <thead>
+                  <tr>
+                    <th scope="col">User</th>
+                    <th scope="col">Book</th>
+                    <th scope="col">Series</th>
+                    <th scope="col">Visible</th>
+                    <th scope="col">Can Read</th>
+                    <th scope="col">Access Type</th>
+                    <th scope="col">Granted</th>
+                    <th scope="col">Expiration</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody data-access-table></tbody>
+              </table>
+            </div>
+            <p class="admin-empty" data-access-empty hidden>No access grants are available to display.</p>
+          </div>
+
+          <div data-access-mode-panel="series" hidden>
+            <form class="admin-card admin-access-form" data-series-access-form>
+              <div class="admin-card-heading">
+                <h3>Series Access</h3>
+                <p>Bulk grant or revoke access for every eligible book in the selected series.</p>
+              </div>
+
+              <div class="admin-access-grid">
+                <label>
+                  <span>Collection</span>
+                  <select data-series-access-collection required>
+                    <option value="">Select collection</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Volume</span>
+                  <select data-series-access-volume required>
+                    <option value="">Select volume</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Series</span>
+                  <select data-series-access-series required>
+                    <option value="">Select series</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Access Type</span>
+                  <select data-series-access-type required>
+                    <option value="manual">manual</option>
+                    <option value="promotion">promotion</option>
+                    <option value="complimentary">complimentary</option>
+                    <option value="purchase">purchase</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Expiration</span>
+                  <input type="datetime-local" data-series-access-expires />
+                </label>
+              </div>
+
+              <div class="admin-series-access-summary" data-series-access-summary>
+                <strong>No Access</strong>
+                <span>Select a customer and series to calculate access.</span>
+              </div>
+
+              <div class="admin-form-actions">
+                <button class="admin-action admin-action--primary" type="submit" data-series-access-grant>Grant Entire Series</button>
+                <button class="admin-action admin-action--danger" type="button" data-series-access-revoke>Revoke Entire Series</button>
+                <p class="admin-form-status" data-series-access-status role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
         </section>
 
         <section class="admin-panel" data-admin-panel="feedback" aria-labelledby="feedback-title">
