@@ -62,6 +62,7 @@ const displayNameFor = (user, profile) => {
 }
 
 let accountLibraryRun = 0
+let accountLibraryRefreshTimer = 0
 
 const getText = (value, fallback = '') => {
   const text = value == null ? '' : String(value).trim()
@@ -95,6 +96,7 @@ const libraryNodes = () => ({
   status: document.querySelector('[data-library-status]'),
   grid: document.querySelector('[data-library-grid]'),
   empty: document.querySelector('[data-library-empty]'),
+  refresh: document.querySelector('[data-library-refresh]'),
 })
 
 const clearNode = (node) => {
@@ -242,6 +244,63 @@ const buildCustomerLibraryItems = (hierarchy, grants, access) => {
     })
 }
 
+const logCustomerLibraryDiagnostics = (hierarchy, grants, items, access) => {
+  if (!grants.length) return
+
+  const visibleBookIds = new Set(items.map((item) => item.book?.id).filter(Boolean))
+  const booksById = new Map((hierarchy.books || []).map((book) => [book.id, book]))
+  const hidden = grants
+    .filter((grant) => !visibleBookIds.has(grant.book_id))
+    .map((grant) => {
+      const book = booksById.get(grant.book_id)
+      if (!book) {
+        return {
+          book_id: grant.book_id,
+          reason: 'book row was not readable or no longer exists',
+        }
+      }
+
+      const item = access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes)
+      if (!libraryHierarchyReady(item, access)) {
+        return {
+          book_id: grant.book_id,
+          title: book.title,
+          reason: 'inactive or incomplete hierarchy',
+        }
+      }
+
+      if (access.effectiveVisibilityForBookHierarchy(item) === 'private') {
+        return {
+          book_id: grant.book_id,
+          title: book.title,
+          reason: 'private hierarchy',
+        }
+      }
+
+      if (!bookReaderPath(item.book, item.series)) {
+        return {
+          book_id: grant.book_id,
+          title: book.title,
+          reason: 'missing reader route',
+        }
+      }
+
+      return {
+        book_id: grant.book_id,
+        title: book.title,
+        reason: 'filtered after access rules',
+      }
+    })
+
+  if (!hidden.length) return
+
+  console.info('Some current book access grants are hidden from My Library.', {
+    currentGrantCount: grants.length,
+    visibleBookCount: items.length,
+    hidden,
+  })
+}
+
 const buildAdminLibraryItems = (hierarchy, access) => {
   return hierarchy.books
     .map((book) => access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes))
@@ -259,6 +318,7 @@ const renderAccountLibrary = async (user, profile, role) => {
   clearNode(nodes.grid)
   if (nodes.empty) nodes.empty.hidden = true
   configureLibraryCopy(nodes, role)
+  setBusy(nodes.refresh, true, 'Refreshing...')
   setStatus(nodes.status, 'Checking your library...', 'info')
 
   try {
@@ -297,6 +357,8 @@ const renderAccountLibrary = async (user, profile, role) => {
       ? buildAdminLibraryItems(hierarchy, access)
       : buildCustomerLibraryItems(hierarchy, grants, access)
 
+    if (!isAdminRole(role)) logCustomerLibraryDiagnostics(hierarchy, grants, items, access)
+
     if (runId !== accountLibraryRun) return
 
     const sortedItems = sortLibraryItems(items)
@@ -314,6 +376,8 @@ const renderAccountLibrary = async (user, profile, role) => {
     clearNode(nodes.grid)
     if (nodes.empty) nodes.empty.hidden = true
     setStatus(nodes.status, 'We could not load your library right now. Please refresh and try again.', 'error')
+  } finally {
+    if (runId === accountLibraryRun) setBusy(nodes.refresh, false)
   }
 }
 
@@ -364,6 +428,30 @@ const guardAuthPage = async (view) => {
 
   showAuthView(view)
   return true
+}
+
+const clearAccountAdminAction = (accountActions) => {
+  accountActions
+    ?.querySelectorAll('[data-account-admin]')
+    .forEach((node) => node.remove())
+}
+
+const renderAccountAdminAction = (accountActions, logoutButton, role) => {
+  clearAccountAdminAction(accountActions)
+  if (!accountActions || !isAdminRole(role)) return
+
+  const link = document.createElement('a')
+  link.className = 'button ghost'
+  link.href = ADMIN_PATH
+  link.dataset.accountAdmin = ''
+  link.textContent = 'Admin Portal'
+
+  if (logoutButton?.parentElement === accountActions) {
+    accountActions.insertBefore(link, logoutButton)
+    return
+  }
+
+  accountActions.prepend(link)
 }
 
 const initSignupPage = async () => {
@@ -480,7 +568,22 @@ const initAccountPage = async () => {
   const emailNode = document.querySelector('[data-account-email]')
   const roleRow = document.querySelector('[data-account-role-row]')
   const roleNode = document.querySelector('[data-account-role]')
-  const adminPortal = document.querySelector('[data-account-admin]')
+  const accountActions = document.querySelector('[data-account-actions]')
+  const libraryRefreshButton = document.querySelector('[data-library-refresh]')
+  let activeUser = null
+  let activeProfile = null
+  let activeRole = 'customer'
+
+  const refreshCurrentLibrary = () => {
+    if (!activeUser) return
+
+    window.clearTimeout(accountLibraryRefreshTimer)
+    accountLibraryRefreshTimer = window.setTimeout(() => {
+      renderAccountLibrary(activeUser, activeProfile, activeRole)
+    }, 150)
+  }
+
+  clearAccountAdminAction(accountActions)
 
   const user = await getCurrentUser()
   if (!user) {
@@ -489,8 +592,12 @@ const initAccountPage = async () => {
   }
 
   const renderCurrentAccount = async (currentUser) => {
+    clearAccountAdminAction(accountActions)
     const profile = await getCurrentProfile(currentUser)
     const role = profile?.role || 'customer'
+    activeUser = currentUser
+    activeProfile = profile
+    activeRole = role
 
     if (nameNode) nameNode.textContent = displayNameFor(currentUser, profile)
     if (emailNode) emailNode.textContent = currentUser.email || ''
@@ -500,9 +607,7 @@ const initAccountPage = async () => {
       roleRow.hidden = !isAdminRole(role)
     }
 
-    if (adminPortal) {
-      adminPortal.hidden = !isAdminRole(role)
-    }
+    renderAccountAdminAction(accountActions, logoutButton, role)
 
     showAuthView(view)
     await renderAccountLibrary(currentUser, profile, role)
@@ -514,6 +619,10 @@ const initAccountPage = async () => {
     window.setTimeout(async () => {
       const nextUser = session?.user || await getCurrentUser()
       if (!nextUser) {
+        activeUser = null
+        activeProfile = null
+        activeRole = 'customer'
+        clearAccountAdminAction(accountActions)
         window.location.replace(LOGIN_PATH)
         return
       }
@@ -522,7 +631,15 @@ const initAccountPage = async () => {
     }, 0)
   })
 
+  libraryRefreshButton?.addEventListener('click', refreshCurrentLibrary)
+  window.addEventListener('focus', refreshCurrentLibrary)
+  window.addEventListener('pageshow', refreshCurrentLibrary)
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) refreshCurrentLibrary()
+  })
+
   logoutButton?.addEventListener('click', async () => {
+    clearAccountAdminAction(accountActions)
     setBusy(logoutButton, true, 'Signing out...')
     setStatus(status, 'Signing out...', 'info')
 
@@ -532,6 +649,7 @@ const initAccountPage = async () => {
     } catch (error) {
       setBusy(logoutButton, false)
       setStatus(status, friendlyAuthMessage(error, 'We could not sign you out. Please try again.'), 'error')
+      renderAccountAdminAction(accountActions, logoutButton, activeRole)
     }
   })
 }

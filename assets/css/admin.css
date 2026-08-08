@@ -908,6 +908,23 @@
     transform: translateX(0);
   }
 
+  .admin-page.is-admin-nav-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 24;
+    background: rgba(42, 52, 64, .26);
+  }
+
+  .admin-brand {
+    padding-block: 10px;
+  }
+
+  .admin-nav button {
+    min-height: 48px;
+    padding: 12px 14px;
+  }
+
   .admin-workspace {
     padding: 16px;
   }
@@ -942,6 +959,94 @@
   .feedback-card {
     grid-template-columns: 1fr;
   }
+
+  .admin-table-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .admin-table,
+  .admin-table thead,
+  .admin-table tbody,
+  .admin-table tr,
+  .admin-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .admin-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .admin-table tbody {
+    display: grid;
+    gap: 14px;
+  }
+
+  .admin-table tr {
+    padding: 14px;
+    border: 1px solid rgba(42, 52, 64, .1);
+    border-radius: 8px;
+    background: rgba(248, 247, 244, .72);
+    box-shadow: 0 14px 34px rgba(42, 52, 64, .07);
+  }
+
+  .admin-table td {
+    display: grid;
+    grid-template-columns: minmax(96px, .34fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(42, 52, 64, .08);
+  }
+
+  .admin-table td:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .admin-table td::before {
+    content: attr(data-label);
+    color: var(--bronze);
+    font-size: .68rem;
+    font-weight: 950;
+    letter-spacing: .1em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .admin-table td > * {
+    min-width: 0;
+  }
+
+  .admin-compact-control,
+  .admin-inline-action,
+  .feedback-status-select,
+  .admin-access-form input,
+  .admin-access-form select {
+    min-height: 46px;
+  }
+
+  .admin-compact-control {
+    min-width: 0;
+  }
+
+  .admin-inline-actions {
+    align-items: stretch;
+  }
+
+  .admin-inline-action {
+    padding: 10px 12px;
+    font-size: .84rem;
+  }
 }
 
 @media (max-width: 560px) {
@@ -975,6 +1080,11 @@
   .admin-inline-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .admin-table td {
+    grid-template-columns: 1fr;
+    gap: 7px;
   }
 
   .admin-hierarchy__volume,

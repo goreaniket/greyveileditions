@@ -167,6 +167,18 @@ const clearNode = (node) => {
   while (node.firstChild) node.firstChild.remove()
 }
 
+const applyResponsiveTableLabels = (tableBody) => {
+  const table = tableBody?.closest('table')
+  if (!table) return
+
+  const labels = Array.from(table.querySelectorAll('thead th')).map((heading) => heading.textContent.trim())
+  Array.from(tableBody.querySelectorAll('tr')).forEach((row) => {
+    Array.from(row.children).forEach((cell, index) => {
+      cell.dataset.label = labels[index] || ''
+    })
+  })
+}
+
 const getText = (value, fallback = '-') => {
   const text = value == null ? '' : String(value).trim()
   return text || fallback
@@ -504,14 +516,20 @@ const bindControls = () => {
   ;[
     singleNodes.userSearch,
     singleNodes.userRole,
+  ].forEach((control) => {
+    control?.addEventListener('input', renderUsers)
+    control?.addEventListener('change', renderUsers)
+  })
+
+  ;[
     singleNodes.feedbackSearch,
     singleNodes.feedbackStatus,
     singleNodes.feedbackRating,
     singleNodes.feedbackSeries,
     singleNodes.feedbackBook,
   ].forEach((control) => {
-    control?.addEventListener('input', renderFilteredSections)
-    control?.addEventListener('change', renderFilteredSections)
+    control?.addEventListener('input', renderFeedback)
+    control?.addEventListener('change', renderFeedback)
   })
 }
 
@@ -944,6 +962,8 @@ const renderUsers = () => {
     table.append(row)
   })
 
+  applyResponsiveTableLabels(table)
+
   if (singleNodes.usersEmpty) {
     singleNodes.usersEmpty.hidden = Boolean(users.length) || Boolean(state.errors.profiles)
   }
@@ -1208,6 +1228,8 @@ const renderCollections = () => {
     table.append(row)
   })
 
+  applyResponsiveTableLabels(table)
+
   if (singleNodes.collectionsCount) {
     const total = state.collections.length
     singleNodes.collectionsCount.textContent = `${total} ${total === 1 ? 'collection' : 'collections'}`
@@ -1250,6 +1272,8 @@ const renderVolumes = () => {
     )
     table.append(row)
   })
+
+  applyResponsiveTableLabels(table)
 
   if (singleNodes.volumesCount) {
     const total = state.volumes.length
@@ -1302,6 +1326,8 @@ const renderSeries = () => {
     )
     table.append(row)
   })
+
+  applyResponsiveTableLabels(table)
 
   if (singleNodes.seriesCount) {
     const total = state.seriesItems.length
@@ -1624,6 +1650,8 @@ const renderBooks = () => {
     table.append(row)
   })
 
+  applyResponsiveTableLabels(table)
+
   if (singleNodes.booksCount) {
     const count = state.counts.books ?? 0
     singleNodes.booksCount.textContent = `${count} ${count === 1 ? 'book' : 'books'}`
@@ -1736,6 +1764,8 @@ const renderAccessGrants = () => {
     )
     table.append(row)
   })
+
+  applyResponsiveTableLabels(table)
 
   if (singleNodes.accessEmpty) {
     singleNodes.accessEmpty.hidden = Boolean(state.accessGrants.length) || Boolean(state.errors.book_access)

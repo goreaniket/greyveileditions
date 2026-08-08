@@ -113,7 +113,7 @@ export const canDiscoverContent = ({
 
 export const isGrantCurrent = (grant) => {
   if (!grant) return false
-  if (grant.is_visible === false || grant.can_read === false) return false
+  if (grant.is_visible !== true || grant.can_read !== true) return false
   if (!grant.expires_at) return true
 
   const expiresAt = Date.parse(grant.expires_at)
@@ -197,6 +197,7 @@ export const fetchViewerBookGrants = async (userId) => {
     .from('book_access')
     .select('user_id, book_id, access_type, granted_at, expires_at, is_visible, can_read')
     .eq('user_id', userId)
+    .order('granted_at', { ascending: false })
 
   return { data: data || [], error }
 }

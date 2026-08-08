@@ -11,6 +11,8 @@ const accountPath = "/account/";
 const adminPath = "/admin/";
 const adminRoles = new Set(["admin", "super_admin"]);
 
+document.body.dataset.accessState = "resolving";
+
 if (year) year.textContent = new Date().getFullYear();
 
 const updateHeader = () => header?.classList.toggle("scrolled", window.scrollY > 24);
@@ -35,6 +37,14 @@ const createAuthLink = (href, text, className = "") => {
 
 const renderLoginNav = (slot) => {
   slot.replaceChildren(createAuthLink(loginPath, "Log in", "auth-nav__login"));
+};
+
+const renderPendingNav = (slot) => {
+  const pending = document.createElement("span");
+  pending.className = "auth-nav__login";
+  pending.textContent = "Account";
+  pending.setAttribute("aria-busy", "true");
+  slot.replaceChildren(pending);
 };
 
 const renderProfileNav = (slot, user, profile, authModule) => {
@@ -62,6 +72,7 @@ const renderProfileNav = (slot, user, profile, authModule) => {
   logout.addEventListener("click", async () => {
     logout.disabled = true;
     logout.textContent = "Logging out...";
+    renderLoginNav(slot);
     try {
       await authModule.signOut();
       window.location.assign(loginPath);
@@ -73,6 +84,7 @@ const renderProfileNav = (slot, user, profile, authModule) => {
       });
       logout.disabled = false;
       logout.textContent = "Logout";
+      renderProfileNav(slot, user, profile, authModule);
     }
   });
 
@@ -98,17 +110,28 @@ const initAuthNavigation = async () => {
     return slot;
   });
 
+  slots.forEach(renderPendingNav);
+
   try {
     const authModule = await import(new URL("auth.js", mainScriptUrl).href);
     const user = await authModule.getCurrentUser();
 
     if (!user) {
       slots.forEach(renderLoginNav);
-      return;
+      return {
+        user: null,
+        profile: null,
+        role: "guest",
+      };
     }
 
     const profile = await authModule.getCurrentProfile(user);
     slots.forEach((slot) => renderProfileNav(slot, user, profile, authModule));
+    return {
+      user,
+      profile,
+      role: profile?.role || "customer",
+    };
   } catch (error) {
     console.info("Navigation auth state could not be loaded.", {
       name: error?.name,
@@ -116,12 +139,27 @@ const initAuthNavigation = async () => {
       code: error?.code,
     });
     slots.forEach(renderLoginNav);
+    return {
+      user: null,
+      profile: null,
+      role: "guest",
+    };
   }
 };
 
 let contentSurfaceRecords = null;
 let contentVisibilityRun = 0;
 let authRefreshTimer = 0;
+
+const setAccessPending = () => {
+  document.body.dataset.accessState = "resolving";
+};
+
+const setAccessResolved = (runId) => {
+  if (runId === contentVisibilityRun) {
+    document.body.dataset.accessState = "resolved";
+  }
+};
 
 const directContentState = {
   target: null,
@@ -132,6 +170,7 @@ const directContentState = {
   description: document.querySelector("meta[name='description']")?.getAttribute("content") || "",
   mainNodes: null,
   footerHidden: false,
+  footerCaptured: false,
   unavailable: false,
 };
 
@@ -249,9 +288,18 @@ const suspendNode = (node) => {
   if ("inert" in node) node.inert = true;
 };
 
+const suspendDirectNode = (node) => {
+  if (!node?.isConnected) return;
+  node.dataset.accessPending = "";
+  node.setAttribute("aria-busy", "true");
+  if ("inert" in node) node.inert = true;
+};
+
 const revealNode = (node) => {
   if (!node) return;
   node.hidden = false;
+  delete node.dataset.accessPending;
+  node.removeAttribute("aria-busy");
   if ("inert" in node) node.inert = false;
 };
 
@@ -298,9 +346,12 @@ const suspendDirectContent = () => {
     directContentState.mainNodes = Array.from(main.childNodes);
   }
 
-  suspendNode(main);
+  suspendDirectNode(main);
   if (directContentState.footer) {
-    directContentState.footerHidden = directContentState.footer.hidden;
+    if (!directContentState.footerCaptured) {
+      directContentState.footerHidden = directContentState.footer.hidden;
+      directContentState.footerCaptured = true;
+    }
     suspendNode(directContentState.footer);
   }
 
@@ -410,14 +461,41 @@ const updateBookSurfaceState = (node, decision, access, context) => {
   }
 };
 
-const contentDecision = (target, hierarchy, access, context, grants) => {
-  const seriesBySlug = new Map(hierarchy.seriesItems.map((item) => [item.slug, item]));
-  const booksBySlug = new Map(hierarchy.books.map((item) => [item.slug, item]));
-  const collectionsBySlug = new Map(hierarchy.collections.map((item) => [item.slug, item]));
+const createContentLookup = (hierarchy, access, grants = []) => {
+  const currentGrantsByBookId = new Map();
+  grants
+    .filter((grant) => access.isGrantCurrent(grant))
+    .forEach((grant) => {
+      if (!currentGrantsByBookId.has(grant.book_id)) {
+        currentGrantsByBookId.set(grant.book_id, grant);
+      }
+    });
 
+  return {
+    seriesBySlug: new Map(hierarchy.seriesItems.map((item) => [item.slug, item])),
+    booksBySlug: new Map(hierarchy.books.map((item) => [item.slug, item])),
+    collectionsBySlug: new Map(hierarchy.collections.map((item) => [item.slug, item])),
+    collectionsByTitleSlug: new Map(hierarchy.collections.map((item) => [slugifyContent(item.title), item])),
+    currentGrantsByBookId,
+  };
+};
+
+const contextFromAuthState = (access, authState) => {
+  if (!authState) return null;
+
+  return {
+    user: authState.user,
+    profile: authState.profile,
+    role: authState.role || (authState.user ? "customer" : "guest"),
+    isAdmin: access.isAdminRole(authState.role),
+    displayName: access.displayNameFor(authState.user, authState.profile),
+  };
+};
+
+const contentDecision = (target, hierarchy, access, context, lookup) => {
   if (target.kind === "collection") {
-    const collection = collectionsBySlug.get(target.slug)
-      || hierarchy.collections.find((item) => slugifyContent(item.title) === target.slug);
+    const collection = lookup.collectionsBySlug.get(target.slug)
+      || lookup.collectionsByTitleSlug.get(target.slug);
     const itemHierarchy = { collection };
 
     return {
@@ -429,7 +507,7 @@ const contentDecision = (target, hierarchy, access, context, grants) => {
   }
 
   if (target.kind === "series") {
-    const series = seriesBySlug.get(target.slug);
+    const series = lookup.seriesBySlug.get(target.slug);
     const volume = access.volumeForSeries(series, hierarchy.volumes);
     const itemHierarchy = {
       collection: access.collectionForSeries(series, hierarchy.collections),
@@ -446,11 +524,12 @@ const contentDecision = (target, hierarchy, access, context, grants) => {
   }
 
   if (target.kind === "book") {
-    const book = booksBySlug.get(target.slug);
+    const book = lookup.booksBySlug.get(target.slug);
     const itemHierarchy = access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes);
     const allowed = access.canDiscoverContent(itemHierarchy, context);
+    const currentGrant = book?.id ? lookup.currentGrantsByBookId.get(book.id) : null;
     const canRead = allowed
-      ? access.canReadBook({ ...itemHierarchy, grants }, context)
+      ? access.canReadBook({ ...itemHierarchy, grants: currentGrant ? [currentGrant] : [] }, context)
       : false;
 
     return {
@@ -465,14 +544,15 @@ const contentDecision = (target, hierarchy, access, context, grants) => {
   return { target, allowed: false };
 };
 
-const initContentVisibilityFiltering = async (runId = contentVisibilityRun) => {
+const initContentVisibilityFiltering = async (runId = contentVisibilityRun, authState = null) => {
+  setAccessPending();
   const directTarget = suspendDirectContent();
   const records = collectContentSurfaceRecords();
   records.forEach(suspendRecord);
 
   try {
     const access = await import(new URL("content-access.js", mainScriptUrl).href);
-    const context = await access.getAccessContext();
+    const context = contextFromAuthState(access, authState) || await access.getAccessContext();
     const hierarchy = await access.fetchContentHierarchy();
     const blockingError = hierarchy.errors.collections || hierarchy.errors.volumes || hierarchy.errors.series || hierarchy.errors.books;
 
@@ -492,16 +572,18 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun) => {
         records.forEach(detachRecord);
         if (directTarget) showUnavailableContent();
       }
+      setAccessResolved(runId);
       return;
     }
 
     const grantsResult = await access.fetchViewerBookGrants(context.user?.id);
     const grants = grantsResult.data || [];
+    const lookup = createContentLookup(hierarchy, access, grants);
 
     if (runId !== contentVisibilityRun) return;
 
     records.forEach((record) => {
-      const decision = contentDecision(record.target, hierarchy, access, context, grants);
+      const decision = contentDecision(record.target, hierarchy, access, context, lookup);
 
       if (decision.allowed) {
         attachRecord(record);
@@ -512,7 +594,7 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun) => {
     });
 
     if (directTarget) {
-      const decision = contentDecision(directTarget, hierarchy, access, context, grants);
+      const decision = contentDecision(directTarget, hierarchy, access, context, lookup);
       if (decision.allowed) {
         restoreDirectContent();
         updateBookSurfaceState(directContentState.main, decision, access, context);
@@ -520,6 +602,8 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun) => {
         showUnavailableContent();
       }
     }
+
+    setAccessResolved(runId);
   } catch (error) {
     console.info("Content visibility filtering could not run.", {
       name: error?.name,
@@ -528,20 +612,23 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun) => {
     });
     records.forEach(detachRecord);
     if (directTarget) showUnavailableContent();
+    setAccessResolved(runId);
   }
 };
 
 const refreshAuthAndContentVisibility = async () => {
   contentVisibilityRun += 1;
   const runId = contentVisibilityRun;
-  await initAuthNavigation();
-  await initContentVisibilityFiltering(runId);
+  setAccessPending();
+  const authState = await initAuthNavigation();
+  await initContentVisibilityFiltering(runId, authState);
 };
 
 const bindAuthStateRefresh = async () => {
   try {
     const { supabase } = await import(new URL("supabase-client.js", mainScriptUrl).href);
     supabase.auth.onAuthStateChange(() => {
+      setAccessPending();
       window.clearTimeout(authRefreshTimer);
       authRefreshTimer = window.setTimeout(refreshAuthAndContentVisibility, 0);
     });

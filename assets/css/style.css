@@ -877,6 +877,43 @@ h3 {
   max-width: 9ch;
 }
 
+body:not([data-access-state="resolved"]) .dropdown-menu,
+body:not([data-access-state="resolved"]) .project-card,
+body:not([data-access-state="resolved"]) .book-card,
+body:not([data-access-state="resolved"]) main.book-detail > *,
+body.series-landing:not([data-access-state="resolved"]) main > *,
+body:not([data-access-state="resolved"]) .projects-collection-hero,
+body:not([data-access-state="resolved"]) .projects-collection-hero ~ .section {
+  visibility: hidden;
+}
+
+body:not([data-access-state="resolved"]) main.book-detail,
+body.series-landing:not([data-access-state="resolved"]) main,
+body:not([data-access-state="resolved"]) main:has(.projects-collection-hero) {
+  position: relative;
+  min-height: 72svh;
+}
+
+body:not([data-access-state="resolved"]) main.book-detail::before,
+body.series-landing:not([data-access-state="resolved"]) main::before,
+body:not([data-access-state="resolved"]) main:has(.projects-collection-hero)::before {
+  content: "Checking access...";
+  position: absolute;
+  top: calc(var(--header-offset) + 34px);
+  left: 50%;
+  z-index: 2;
+  width: min(420px, calc(100% - 40px));
+  padding: 18px 20px;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  background: rgba(248, 247, 244, .82);
+  box-shadow: 0 18px 44px rgba(42, 52, 64, .08);
+  color: rgba(42, 52, 64, .68);
+  font-weight: 800;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
 .founder-line,
 .entity-links {
   max-width: 680px;
@@ -1994,20 +2031,33 @@ main > .home-hero ~ .section .contact-link {
   color: rgba(58, 58, 58, .7);
 }
 
+.account-library-refresh {
+  flex: 0 0 auto;
+  margin-top: 8px;
+}
+
+.account-library-refresh:disabled {
+  cursor: wait;
+  opacity: .62;
+  transform: none;
+}
+
 .account-library-status {
   margin: -12px 0 20px;
 }
 
 .library-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
   gap: 20px;
+  align-items: start;
 }
 
 .library-card {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: minmax(132px, 190px) minmax(0, 1fr);
   min-width: 0;
+  max-width: 680px;
   overflow: hidden;
   border: 1px solid rgba(42, 52, 64, .1);
   border-radius: 8px;
@@ -2017,6 +2067,8 @@ main > .home-hero ~ .section .contact-link {
 
 .library-card__cover {
   position: relative;
+  align-self: start;
+  width: min(100%, 190px);
   aspect-ratio: 2 / 3;
   overflow: hidden;
   margin: 0;
@@ -2028,6 +2080,7 @@ main > .home-hero ~ .section .contact-link {
 .library-card__cover img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -2056,7 +2109,7 @@ main > .home-hero ~ .section .contact-link {
   margin: 0;
   color: var(--slate);
   font-family: var(--serif);
-  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 2vw, 1.95rem);
   line-height: 1.05;
 }
 
@@ -3782,18 +3835,23 @@ blockquote {
     margin-bottom: 20px;
   }
 
+  .account-library-refresh {
+    width: 100%;
+  }
+
   .library-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .library-card {
-    grid-template-columns: 96px minmax(0, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: minmax(108px, 132px) minmax(0, 1fr);
+    max-width: none;
   }
 
   .library-card__cover {
-    min-height: 100%;
+    width: 100%;
+    max-width: 132px;
   }
 
   .library-card--no-cover .library-card__cover::after {
