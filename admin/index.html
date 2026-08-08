@@ -256,12 +256,36 @@
             <div>
               <p class="admin-eyebrow">Global Book Controls</p>
               <h2 id="books-title">Books</h2>
-              <p class="admin-panel-note">Visibility controls discovery. Global Active controls whether the book is enabled. User Access controls customer reading entitlement.</p>
+              <p class="admin-panel-note">Filter by Collection, Volume, or Series, then update book visibility and Global Active without leaving this grouped view.</p>
             </div>
             <p class="admin-count" data-books-count>0 books</p>
           </div>
 
-          <div class="admin-table-wrap">
+          <div class="admin-filters admin-filters--books" aria-label="Book filters">
+            <label>
+              <span>Collection</span>
+              <select data-book-filter-collection>
+                <option value="">All collections</option>
+              </select>
+            </label>
+            <label>
+              <span>Volume</span>
+              <select data-book-filter-volume>
+                <option value="">All volumes</option>
+              </select>
+            </label>
+            <label>
+              <span>Series</span>
+              <select data-book-filter-series>
+                <option value="">All series</option>
+              </select>
+            </label>
+            <button class="admin-action" type="button" data-book-filters-reset>Show All</button>
+          </div>
+
+          <div class="admin-books-groups" data-books-group-list></div>
+
+          <div hidden>
             <table class="admin-table">
               <thead>
                 <tr>
@@ -277,7 +301,7 @@
               <tbody data-books-table></tbody>
             </table>
           </div>
-          <p class="admin-empty" data-books-empty hidden>No books are available to display.</p>
+          <p class="admin-empty" data-books-empty hidden>No books match the current filters.</p>
         </section>
 
         <section class="admin-panel" data-admin-panel="book-access" aria-labelledby="book-access-title">

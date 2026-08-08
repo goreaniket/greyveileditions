@@ -600,6 +600,99 @@
   font-weight: 750;
 }
 
+.admin-filters--books {
+  grid-template-columns: repeat(3, minmax(170px, 1fr)) auto;
+  align-items: end;
+  max-width: 1240px;
+}
+
+.admin-books-groups {
+  display: grid;
+  gap: 16px;
+  max-width: 1240px;
+}
+
+.admin-book-group {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  background: rgba(248, 247, 244, .72);
+  box-shadow: 0 18px 44px rgba(42, 52, 64, .07);
+}
+
+.admin-book-group__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(42, 52, 64, .08);
+}
+
+.admin-book-group__header h3 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 3vw, 2.3rem);
+  line-height: 1;
+}
+
+.admin-book-group__header p {
+  margin: 6px 0 0;
+  color: rgba(42, 52, 64, .62);
+  font-weight: 750;
+}
+
+.admin-book-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  gap: 10px;
+}
+
+.admin-book-card {
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 14px;
+  border: 1px solid rgba(42, 52, 64, .09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .36);
+}
+
+.admin-book-card__details {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.admin-book-card__details strong {
+  overflow-wrap: anywhere;
+  color: var(--slate);
+  font-size: 1rem;
+}
+
+.admin-book-card__details span {
+  color: rgba(42, 52, 64, .62);
+  font-size: .83rem;
+  font-weight: 750;
+}
+
+.admin-book-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.admin-book-card .admin-inline-actions {
+  display: grid;
+  grid-template-columns: auto minmax(116px, 1fr) auto minmax(116px, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+
 .admin-card {
   min-width: 0;
   padding: 18px;
@@ -1372,6 +1465,17 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-book-group__header,
+  .admin-book-card .admin-inline-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-book-card .admin-inline-actions {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .admin-table-wrap {

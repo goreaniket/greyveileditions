@@ -51,6 +51,11 @@ const selectors = {
   booksTable: '[data-books-table]',
   booksEmpty: '[data-books-empty]',
   booksCount: '[data-books-count]',
+  booksGroupList: '[data-books-group-list]',
+  bookFilterCollection: '[data-book-filter-collection]',
+  bookFilterVolume: '[data-book-filter-volume]',
+  bookFilterSeries: '[data-book-filter-series]',
+  bookFiltersReset: '[data-book-filters-reset]',
   accessForm: '[data-access-form]',
   accessUserSearch: '[data-access-user-search]',
   accessUser: '[data-access-user]',
@@ -151,6 +156,11 @@ const singleNodes = {
   booksTable: $(selectors.booksTable),
   booksEmpty: $(selectors.booksEmpty),
   booksCount: $(selectors.booksCount),
+  booksGroupList: $(selectors.booksGroupList),
+  bookFilterCollection: $(selectors.bookFilterCollection),
+  bookFilterVolume: $(selectors.bookFilterVolume),
+  bookFilterSeries: $(selectors.bookFilterSeries),
+  bookFiltersReset: $(selectors.bookFiltersReset),
   accessForm: $(selectors.accessForm),
   accessUserSearch: $(selectors.accessUserSearch),
   accessUser: $(selectors.accessUser),
@@ -575,6 +585,24 @@ const bindControls = () => {
     renderSeriesAccessStatus()
   })
   singleNodes.seriesAccessSeries?.addEventListener('change', renderSeriesAccessStatus)
+  singleNodes.bookFilterCollection?.addEventListener('change', () => {
+    renderBookVolumeFilterOptions()
+    renderBookSeriesFilterOptions()
+    renderBooks()
+  })
+  singleNodes.bookFilterVolume?.addEventListener('change', () => {
+    renderBookSeriesFilterOptions()
+    renderBooks()
+  })
+  singleNodes.bookFilterSeries?.addEventListener('change', renderBooks)
+  singleNodes.bookFiltersReset?.addEventListener('click', () => {
+    if (singleNodes.bookFilterCollection) singleNodes.bookFilterCollection.value = ''
+    if (singleNodes.bookFilterVolume) singleNodes.bookFilterVolume.value = ''
+    if (singleNodes.bookFilterSeries) singleNodes.bookFilterSeries.value = ''
+    renderBookVolumeFilterOptions()
+    renderBookSeriesFilterOptions()
+    renderBooks()
+  })
 
   $$(selectors.accessModeButtons).forEach((button) => {
     button.addEventListener('click', () => showAccessMode(button.dataset.accessModeTab))
@@ -878,6 +906,9 @@ const populateFilters = () => {
   renderSeriesAccessCollectionOptions()
   renderSeriesAccessVolumeOptions()
   renderSeriesAccessSeriesOptions()
+  renderBookCollectionFilterOptions()
+  renderBookVolumeFilterOptions()
+  renderBookSeriesFilterOptions()
 }
 
 const renderVolumeCollectionOptions = () => {
@@ -983,6 +1014,55 @@ const renderSeriesAccessSeriesOptions = () => {
   )
 }
 
+const renderBookCollectionFilterOptions = () => {
+  setItemOptions(
+    singleNodes.bookFilterCollection,
+    sortByOrderTitle(state.collections),
+    'All collections',
+    (collection) => collection.id,
+    (collection) => getText(collection.title)
+  )
+}
+
+const renderBookVolumeFilterOptions = () => {
+  const selectedCollectionId = singleNodes.bookFilterCollection?.value || ''
+  const volumes = sortByOrderTitle(
+    state.volumes.filter((volume) => !selectedCollectionId || volume.collection_id === selectedCollectionId)
+  )
+
+  setItemOptions(
+    singleNodes.bookFilterVolume,
+    volumes,
+    'All volumes',
+    (volume) => volume.id,
+    (volume) => getText(volume.title)
+  )
+}
+
+const renderBookSeriesFilterOptions = () => {
+  const selectedCollectionId = singleNodes.bookFilterCollection?.value || ''
+  const selectedVolumeId = singleNodes.bookFilterVolume?.value || ''
+  const lookups = buildHierarchyLookups()
+  const seriesItems = sortByOrderTitle(
+    state.seriesItems
+      .filter((series) => {
+        const parentVolume = lookups.volumesById.get(series.volume_id)
+        return !selectedCollectionId
+          || series.collection_id === selectedCollectionId
+          || parentVolume?.collection_id === selectedCollectionId
+      })
+      .filter((series) => !selectedVolumeId || series.volume_id === selectedVolumeId)
+  )
+
+  setItemOptions(
+    singleNodes.bookFilterSeries,
+    seriesItems,
+    'All series',
+    (series) => series.id,
+    (series) => getText(series.title)
+  )
+}
+
 const renderDashboard = () => {
   const newFeedbacks = state.feedbacks.filter((feedback) => normalize(feedback.status || 'new') === 'new').length
   if (state.counts.accessGrants != null) state.counts.accessGrants = activeAccessGrantCount()
@@ -1047,6 +1127,14 @@ const renderFilteredSections = () => {
   renderAccessGrants()
   renderSeriesAccessStatus()
   renderFeedback()
+}
+
+const renderHierarchyDependentSections = () => {
+  renderDashboard()
+  renderContentManagement()
+  renderBooks()
+  renderAccessGrants()
+  renderSeriesAccessStatus()
 }
 
 const renderUsers = () => {
@@ -1207,7 +1295,7 @@ const handleCreateCollection = async (event) => {
   setFormStatus(singleNodes.collectionStatus, 'Collection created.', 'success')
   form.reset()
   populateFilters()
-  renderFilteredSections()
+  renderHierarchyDependentSections()
 }
 
 const handleCreateVolume = async (event) => {
@@ -1253,7 +1341,7 @@ const handleCreateVolume = async (event) => {
   setFormStatus(singleNodes.volumeStatus, 'Volume created.', 'success')
   form.reset()
   populateFilters()
-  renderFilteredSections()
+  renderHierarchyDependentSections()
 }
 
 const handleCreateSeries = async (event) => {
@@ -1305,7 +1393,7 @@ const handleCreateSeries = async (event) => {
   setFormStatus(singleNodes.seriesStatus, 'Series created.', 'success')
   form.reset()
   populateFilters()
-  renderFilteredSections()
+  renderHierarchyDependentSections()
 }
 
 const renderCollections = () => {
@@ -1459,6 +1547,85 @@ const volumeMap = () => new Map(state.volumes.map((volume) => [volume.id, volume
 
 const seriesMap = () => new Map(state.seriesItems.map((series) => [series.id, series]))
 
+const sortByOrderTitle = (items = []) => [...items].sort((a, b) => {
+  return toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title))
+})
+
+const sortBooksByNumberTitle = (books = []) => [...books].sort((a, b) => {
+  return toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title))
+})
+
+const groupBy = (items = [], getKey) => {
+  const groups = new Map()
+  items.forEach((item) => {
+    const key = getKey(item) || ''
+    if (!groups.has(key)) groups.set(key, [])
+    groups.get(key).push(item)
+  })
+  return groups
+}
+
+const buildHierarchyLookups = () => {
+  const collectionsById = collectionMap()
+  const volumesById = volumeMap()
+  const seriesById = seriesMap()
+  const booksById = bookMap()
+  const volumesByCollection = groupBy(state.volumes, (volume) => volume.collection_id)
+  const seriesByVolume = groupBy(state.seriesItems, (series) => series.volume_id)
+  const booksBySeries = groupBy(state.books, (book) => book.series_id)
+
+  return {
+    collectionsById,
+    volumesById,
+    seriesById,
+    booksById,
+    volumesByCollection,
+    seriesByVolume,
+    booksBySeries,
+  }
+}
+
+const hierarchyFromLookups = (book, lookups = buildHierarchyLookups()) => {
+  const series = lookups.seriesById.get(book?.series_id) || null
+  const volume = series ? lookups.volumesById.get(series.volume_id) || null : null
+  const collection = series
+    ? lookups.collectionsById.get(series.collection_id) || lookups.collectionsById.get(volume?.collection_id) || null
+    : null
+
+  return { collection, volume, series, book }
+}
+
+const collectionContentCounts = (collection, lookups = buildHierarchyLookups()) => {
+  if (!collection?.id) return { volumes: 0, series: 0, books: 0 }
+
+  const volumes = lookups.volumesByCollection.get(collection.id) || []
+  const volumeIds = new Set(volumes.map((volume) => volume.id))
+  const seriesItems = state.seriesItems.filter((series) => {
+    return series.collection_id === collection.id || volumeIds.has(series.volume_id)
+  })
+  const seriesIds = new Set(seriesItems.map((series) => series.id))
+  const books = state.books.filter((book) => seriesIds.has(book.series_id))
+
+  return {
+    volumes: volumes.length,
+    series: seriesItems.length,
+    books: books.length,
+  }
+}
+
+const volumeContentCounts = (volume, lookups = buildHierarchyLookups()) => {
+  if (!volume?.id) return { series: 0, books: 0 }
+
+  const seriesItems = lookups.seriesByVolume.get(volume.id) || []
+  const seriesIds = new Set(seriesItems.map((series) => series.id))
+  const books = state.books.filter((book) => seriesIds.has(book.series_id))
+
+  return {
+    series: seriesItems.length,
+    books: books.length,
+  }
+}
+
 const contentItemExists = (kind, id) => {
   if (kind === 'collection') return collectionMap().has(id)
   if (kind === 'volume') return volumeMap().has(id)
@@ -1518,43 +1685,38 @@ const renderContentNavigator = () => {
   clearNode(root)
   if (!root) return
 
-  const collectionIds = new Set(state.collections.map((collection) => collection.id))
-  const volumeIds = new Set(state.volumes.map((volume) => volume.id))
-  const seriesIds = new Set(state.seriesItems.map((series) => series.id))
-  const volumesByCollection = new Map()
-  const seriesByVolume = new Map()
-  const booksBySeries = new Map()
+  const lookups = buildHierarchyLookups()
+  const collectionIds = new Set(lookups.collectionsById.keys())
+  const volumeIds = new Set(lookups.volumesById.keys())
+  const seriesIds = new Set(lookups.seriesById.keys())
 
-  state.volumes.forEach((volume) => {
-    if (!volumesByCollection.has(volume.collection_id)) volumesByCollection.set(volume.collection_id, [])
-    volumesByCollection.get(volume.collection_id).push(volume)
-  })
-
-  state.seriesItems.forEach((series) => {
-    if (!seriesByVolume.has(series.volume_id)) seriesByVolume.set(series.volume_id, [])
-    seriesByVolume.get(series.volume_id).push(series)
-  })
-
-  state.books.forEach((book) => {
-    if (!booksBySeries.has(book.series_id)) booksBySeries.set(book.series_id, [])
-    booksBySeries.get(book.series_id).push(book)
-  })
-
-  const sortByOrderTitle = (items) => [...items].sort((a, b) => {
-    return toSortOrder(a.sort_order) - toSortOrder(b.sort_order) || getText(a.title).localeCompare(getText(b.title))
-  })
-
-  state.collections.forEach((collection) => {
+  sortByOrderTitle(state.collections).forEach((collection) => {
     const collectionBranch = createNode('section', 'admin-tree-branch')
-    collectionBranch.append(contentSelectButton('collection', collection.id, collection.title, visibilityLabel(collection.visibility), 0))
+    const counts = collectionContentCounts(collection, lookups)
+    collectionBranch.append(
+      contentSelectButton(
+        'collection',
+        collection.id,
+        collection.title,
+        `${counts.volumes} volumes / ${counts.series} series / ${counts.books} books`,
+        0
+      )
+    )
 
-    sortByOrderTitle(volumesByCollection.get(collection.id) || []).forEach((volume) => {
-      collectionBranch.append(contentSelectButton('volume', volume.id, volume.title, visibilityLabel(volume.visibility), 1))
+    sortByOrderTitle(lookups.volumesByCollection.get(collection.id) || []).forEach((volume) => {
+      const volumeCounts = volumeContentCounts(volume, lookups)
+      collectionBranch.append(
+        contentSelectButton(
+          'volume',
+          volume.id,
+          volume.title,
+          `${volumeCounts.series} series / ${volumeCounts.books} books`,
+          1
+        )
+      )
 
-      sortByOrderTitle(seriesByVolume.get(volume.id) || []).forEach((series) => {
-        const books = (booksBySeries.get(series.id) || []).sort((a, b) => {
-          return toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title))
-        })
+      sortByOrderTitle(lookups.seriesByVolume.get(volume.id) || []).forEach((series) => {
+        const books = sortBooksByNumberTitle(lookups.booksBySeries.get(series.id) || [])
         collectionBranch.append(contentSelectButton('series', series.id, series.title, `${books.length} ${books.length === 1 ? 'book' : 'books'}`, 2))
         books.forEach((book) => {
           collectionBranch.append(contentSelectButton('book', book.id, book.title, `${visibilityLabel(bookVisibility(book))} / ${boolValueLabel(book.is_active)}`, 3))
@@ -1571,10 +1733,8 @@ const renderContentNavigator = () => {
     orphanBranch.append(createNode('p', 'admin-tree-group-label', 'Unassigned Volumes'))
     orphanVolumes.forEach((volume) => {
       orphanBranch.append(contentSelectButton('volume', volume.id, volume.title, visibilityLabel(volume.visibility), 1))
-      sortByOrderTitle(seriesByVolume.get(volume.id) || []).forEach((series) => {
-        const books = (booksBySeries.get(series.id) || []).sort((a, b) => {
-          return toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title))
-        })
+      sortByOrderTitle(lookups.seriesByVolume.get(volume.id) || []).forEach((series) => {
+        const books = sortBooksByNumberTitle(lookups.booksBySeries.get(series.id) || [])
         orphanBranch.append(contentSelectButton('series', series.id, series.title, `${books.length} ${books.length === 1 ? 'book' : 'books'}`, 2))
         books.forEach((book) => {
           orphanBranch.append(contentSelectButton('book', book.id, book.title, `${visibilityLabel(bookVisibility(book))} / ${boolValueLabel(book.is_active)}`, 3))
@@ -1589,9 +1749,7 @@ const renderContentNavigator = () => {
     const orphanBranch = createNode('section', 'admin-tree-branch admin-tree-branch--orphan')
     orphanBranch.append(createNode('p', 'admin-tree-group-label', 'Series Without Volume'))
     orphanSeries.forEach((series) => {
-      const books = (booksBySeries.get(series.id) || []).sort((a, b) => {
-        return toSortOrder(a.book_number) - toSortOrder(b.book_number) || getText(a.title).localeCompare(getText(b.title))
-      })
+      const books = sortBooksByNumberTitle(lookups.booksBySeries.get(series.id) || [])
       orphanBranch.append(contentSelectButton('series', series.id, series.title, `${books.length} ${books.length === 1 ? 'book' : 'books'}`, 2))
       books.forEach((book) => {
         orphanBranch.append(contentSelectButton('book', book.id, book.title, `${visibilityLabel(bookVisibility(book))} / ${boolValueLabel(book.is_active)}`, 3))
@@ -1645,7 +1803,9 @@ const detailActions = (save, extra = null) => {
   return actions
 }
 
-const renderCollectionDetail = (collection) => {
+const renderCollectionDetail = (collection, lookups = buildHierarchyLookups()) => {
+  if (!collection?.id) return []
+
   const titleInput = compactInput('text', collection.title)
   const slugInput = compactInput('text', collection.slug)
   const visibility = visibilitySelect(collection.visibility)
@@ -1662,7 +1822,8 @@ const renderCollectionDetail = (collection) => {
     save,
   }))
 
-  const childVolumes = state.volumes.filter((volume) => volume.collection_id === collection.id)
+  const counts = collectionContentCounts(collection, lookups)
+  const childVolumes = sortByOrderTitle(lookups.volumesByCollection.get(collection.id) || [])
   const children = contentChildrenList(
     'Volumes',
     childVolumes,
@@ -1670,21 +1831,26 @@ const renderCollectionDetail = (collection) => {
   )
 
   return [
-    detailHeader('Collection', collection.title, `${childVolumes.length} ${childVolumes.length === 1 ? 'volume' : 'volumes'}`),
+    detailHeader('Collection', collection.title, `${counts.volumes} volumes / ${counts.series} series / ${counts.books} books`),
     detailGrid(
       labeledControl('Title', titleInput),
       labeledControl('Slug', slugInput),
       labeledControl('Visibility', visibility),
       labeledControl('Global Active', active),
-      labeledControl('Sort Order', sortOrder)
+      labeledControl('Sort Order', sortOrder),
+      contentReadOnlyField('Volume Count', counts.volumes),
+      contentReadOnlyField('Series Count', counts.series),
+      contentReadOnlyField('Book Count', counts.books)
     ),
     detailActions(save),
     children,
   ]
 }
 
-const renderVolumeDetail = (volume) => {
-  const collectionsById = collectionMap()
+const renderVolumeDetail = (volume, lookups = buildHierarchyLookups()) => {
+  if (!volume?.id) return []
+
+  const collectionsById = lookups.collectionsById
   const titleInput = compactInput('text', volume.title)
   const slugInput = compactInput('text', volume.slug)
   const collectionSelect = collectionOptionsSelect(volume.collection_id)
@@ -1703,7 +1869,8 @@ const renderVolumeDetail = (volume) => {
     save,
   }))
 
-  const childSeries = state.seriesItems.filter((series) => series.volume_id === volume.id)
+  const counts = volumeContentCounts(volume, lookups)
+  const childSeries = sortByOrderTitle(lookups.seriesByVolume.get(volume.id) || [])
   const children = contentChildrenList(
     'Series',
     childSeries,
@@ -1718,16 +1885,20 @@ const renderVolumeDetail = (volume) => {
       labeledControl('Parent Collection', collectionSelect),
       labeledControl('Visibility', visibility),
       labeledControl('Global Active', active),
-      labeledControl('Sort Order', sortOrder)
+      labeledControl('Sort Order', sortOrder),
+      contentReadOnlyField('Series Count', counts.series),
+      contentReadOnlyField('Book Count', counts.books)
     ),
     detailActions(save),
     children,
   ]
 }
 
-const renderSeriesDetail = (series) => {
-  const collectionsById = collectionMap()
-  const volumesById = volumeMap()
+const renderSeriesDetail = (series, lookups = buildHierarchyLookups()) => {
+  if (!series?.id) return []
+
+  const collectionsById = lookups.collectionsById
+  const volumesById = lookups.volumesById
   const titleInput = compactInput('text', series.title)
   const collectionSelect = collectionOptionsSelect(series.collection_id)
   const volumeSelect = volumeOptionsSelect(series.volume_id, series.collection_id)
@@ -1749,14 +1920,14 @@ const renderSeriesDetail = (series) => {
     save,
   }))
 
-  const books = booksForSeries(series)
+  const books = sortBooksByNumberTitle(lookups.booksBySeries.get(series.id) || [])
   const bookList = renderSeriesBooksDetail(series, books)
 
   return [
     detailHeader(
       'Series',
       series.title,
-      `${getText(collectionsById.get(series.collection_id)?.title, 'Unassigned collection')} / ${getText(volumesById.get(series.volume_id)?.title, 'Unassigned volume')}`
+      `${getText(collectionsById.get(series.collection_id)?.title, 'Unassigned collection')} / ${getText(volumesById.get(series.volume_id)?.title, 'Unassigned volume')} / ${books.length} books`
     ),
     detailGrid(
       labeledControl('Title', titleInput),
@@ -1765,17 +1936,19 @@ const renderSeriesDetail = (series) => {
       labeledControl('Parent Volume', volumeSelect),
       labeledControl('Visibility', visibility),
       labeledControl('Global Active', active),
-      labeledControl('Sort Order', sortOrder)
+      labeledControl('Sort Order', sortOrder),
+      contentReadOnlyField('Book Count', books.length)
     ),
     detailActions(save),
     bookList,
   ]
 }
 
-const renderBookDetail = (book) => {
-  const seriesById = seriesMap()
-  const series = seriesById.get(book.series_id)
-  const hierarchy = hierarchyForBook(book, state.seriesItems, state.collections, state.volumes)
+const renderBookDetail = (book, lookups = buildHierarchyLookups()) => {
+  if (!book?.id) return []
+
+  const hierarchy = hierarchyFromLookups(book, lookups)
+  const { collection, volume, series } = hierarchy
   const visibility = visibilitySelect(bookVisibility(book))
   const active = activeSelect(book.is_active)
   const save = contentSaveButton('Save Book')
@@ -1789,6 +1962,10 @@ const renderBookDetail = (book) => {
   return [
     detailHeader('Book', book.title, `Series: ${getText(series?.title, book.series)}`),
     detailGrid(
+      contentReadOnlyField('Title', getText(book.title)),
+      contentReadOnlyField('Collection', getText(collection?.title, 'Unassigned collection')),
+      contentReadOnlyField('Volume', getText(volume?.title, 'Unassigned volume')),
+      contentReadOnlyField('Series', getText(series?.title, book.series)),
       contentReadOnlyField('Book Number', getText(book.book_number)),
       contentReadOnlyField('Slug', getText(book.slug)),
       contentReadOnlyField('Effective Hierarchy', hierarchyIsComplete(hierarchy) ? 'Complete' : 'Needs parent links'),
@@ -1874,25 +2051,38 @@ const renderSeriesBooksDetail = (series, books) => {
 
 const renderContentDetail = () => {
   const detail = singleNodes.contentDetail
-  clearNode(detail)
   if (!detail) return
 
   const { kind, id } = state.contentSelection
   let nodes = []
 
-  if (kind === 'collection') nodes = renderCollectionDetail(collectionMap().get(id))
-  if (kind === 'volume') nodes = renderVolumeDetail(volumeMap().get(id))
-  if (kind === 'series') nodes = renderSeriesDetail(seriesMap().get(id))
-  if (kind === 'book') nodes = renderBookDetail(bookMap().get(id))
-
-  if (!nodes.length) {
-    detail.append(
-      createNode('h3', '', 'Select a content item.'),
-      createNode('p', 'admin-panel-note', 'Choose a Collection, Volume, Series, or Book from the navigator to edit its settings.')
-    )
-    return
+  try {
+    const lookups = buildHierarchyLookups()
+    if (kind === 'collection') nodes = renderCollectionDetail(lookups.collectionsById.get(id), lookups)
+    if (kind === 'volume') nodes = renderVolumeDetail(lookups.volumesById.get(id), lookups)
+    if (kind === 'series') nodes = renderSeriesDetail(lookups.seriesById.get(id), lookups)
+    if (kind === 'book') nodes = renderBookDetail(lookups.booksById.get(id), lookups)
+  } catch (error) {
+    console.error('Greyveil admin content detail render failed:', error)
+    nodes = [
+      createNode('h3', '', 'Content detail could not be rendered.'),
+      createNode('p', 'admin-panel-note', 'Refresh the dashboard and try selecting the item again. Supabase row-level security and missing parent rows are reported in the alerts above when available.'),
+    ]
   }
 
+  if (!nodes.length) {
+    nodes = kind && id
+      ? [
+          createNode('h3', '', 'Selected content is unavailable.'),
+          createNode('p', 'admin-panel-note', 'This row may have been removed, blocked by Supabase policy, or missing required hierarchy data. Refresh the dashboard or choose another item.'),
+        ]
+      : [
+          createNode('h3', '', 'Select a content item.'),
+          createNode('p', 'admin-panel-note', 'Choose a Collection, Volume, Series, or Book from the navigator to edit its settings.'),
+        ]
+  }
+
+  clearNode(detail)
   nodes.forEach((node) => detail.append(node))
 }
 
@@ -2116,7 +2306,7 @@ const updateCollection = async (collection, controls) => {
   Object.assign(collection, data || updates)
   clearTableError('collections')
   populateFilters()
-  renderFilteredSections()
+  renderHierarchyDependentSections()
 }
 
 const updateVolume = async (volume, controls) => {
@@ -2160,7 +2350,7 @@ const updateVolume = async (volume, controls) => {
   Object.assign(volume, data || updates)
   clearTableError('volumes')
   populateFilters()
-  renderFilteredSections()
+  renderHierarchyDependentSections()
 }
 
 const updateSeries = async (series, controls) => {
@@ -2211,15 +2401,63 @@ const updateSeries = async (series, controls) => {
   Object.assign(series, data || updates)
   clearTableError('series')
   populateFilters()
-  renderFilteredSections()
+  renderHierarchyDependentSections()
 }
 
-const renderBooks = () => {
+const selectedBookFilters = () => ({
+  collectionId: singleNodes.bookFilterCollection?.value || '',
+  volumeId: singleNodes.bookFilterVolume?.value || '',
+  seriesId: singleNodes.bookFilterSeries?.value || '',
+})
+
+const filteredBooksForAdmin = (lookups = buildHierarchyLookups()) => {
+  const filters = selectedBookFilters()
+
+  return sortBooksByNumberTitle(state.books.filter((book) => {
+    const hierarchy = hierarchyFromLookups(book, lookups)
+    return (!filters.collectionId || hierarchy.collection?.id === filters.collectionId)
+      && (!filters.volumeId || hierarchy.volume?.id === filters.volumeId)
+      && (!filters.seriesId || hierarchy.series?.id === filters.seriesId)
+  }))
+}
+
+const groupedBooksBySeries = (books, lookups = buildHierarchyLookups()) => {
+  const groupsByKey = new Map()
+
+  books.forEach((book) => {
+    const hierarchy = hierarchyFromLookups(book, lookups)
+    const groupKey = hierarchy.series?.id || `unassigned::${getText(book.series, 'books')}`
+
+    if (!groupsByKey.has(groupKey)) {
+      groupsByKey.set(groupKey, {
+        key: groupKey,
+        collection: hierarchy.collection,
+        volume: hierarchy.volume,
+        series: hierarchy.series,
+        seriesLabel: getText(hierarchy.series?.title, getText(book.series, 'Books Without Series')),
+        books: [],
+      })
+    }
+
+    groupsByKey.get(groupKey).books.push(book)
+  })
+
+  return Array.from(groupsByKey.values()).sort((a, b) => {
+    return getText(a.collection?.title, '').localeCompare(getText(b.collection?.title, ''))
+      || toSortOrder(a.volume?.sort_order) - toSortOrder(b.volume?.sort_order)
+      || getText(a.volume?.title, '').localeCompare(getText(b.volume?.title, ''))
+      || toSortOrder(a.series?.sort_order) - toSortOrder(b.series?.sort_order)
+      || a.seriesLabel.localeCompare(b.seriesLabel)
+  })
+}
+
+const renderBooksTableFallback = (books) => {
   const table = singleNodes.booksTable
   clearNode(table)
   if (!table) return
+  if (table.closest('[hidden]')) return
 
-  state.books.forEach((book) => {
+  books.forEach((book) => {
     const row = document.createElement('tr')
     row.append(
       tableCell(getText(book.title)),
@@ -2234,19 +2472,77 @@ const renderBooks = () => {
   })
 
   applyResponsiveTableLabels(table)
+}
+
+const renderBookGroups = (books, lookups = buildHierarchyLookups()) => {
+  const list = singleNodes.booksGroupList
+  clearNode(list)
+  if (!list) return
+
+  const groups = groupedBooksBySeries(books, lookups)
+  groups.forEach((group) => {
+    const section = createNode('section', 'admin-book-group')
+    const header = createNode('div', 'admin-book-group__header')
+    const title = createNode('div')
+    const parentLine = [
+      getText(group.collection?.title, 'Unassigned collection'),
+      getText(group.volume?.title, 'Unassigned volume'),
+    ].join(' / ')
+
+    title.append(
+      createNode('h3', '', group.seriesLabel),
+      createNode('p', '', parentLine)
+    )
+    header.append(
+      title,
+      createNode('span', 'admin-badge', `${group.books.length} ${group.books.length === 1 ? 'book' : 'books'}`)
+    )
+
+    const cards = createNode('div', 'admin-book-card-grid')
+    sortBooksByNumberTitle(group.books).forEach((book) => {
+      const card = createNode('article', 'admin-book-card')
+      const details = createNode('div', 'admin-book-card__details')
+      details.append(
+        createNode('strong', '', getText(book.title)),
+        createNode('span', '', `Book ${getText(book.book_number)} / ${getText(book.slug)}`)
+      )
+
+      const badges = createNode('div', 'admin-book-card__badges')
+      badges.append(
+        hierarchyBadge(visibilityLabel(bookVisibility(book))),
+        hierarchyBadge(boolValueLabel(book.is_active), book.is_active === false ? 'admin-badge--disabled' : 'admin-badge--active')
+      )
+
+      card.append(details, badges, bookControlsPanel(book))
+      cards.append(card)
+    })
+
+    section.append(header, cards)
+    list.append(section)
+  })
+}
+
+const renderBooks = () => {
+  const lookups = buildHierarchyLookups()
+  const books = filteredBooksForAdmin(lookups)
+
+  renderBooksTableFallback(books)
+  renderBookGroups(books, lookups)
 
   if (singleNodes.booksCount) {
-    const count = state.counts.books ?? 0
-    singleNodes.booksCount.textContent = `${count} ${count === 1 ? 'book' : 'books'}`
+    const total = state.counts.books ?? state.books.length
+    const visible = books.length
+    singleNodes.booksCount.textContent = visible === total
+      ? `${total} ${total === 1 ? 'book' : 'books'}`
+      : `${visible} of ${total} books`
   }
 
   if (singleNodes.booksEmpty) {
-    singleNodes.booksEmpty.hidden = Boolean(state.books.length) || Boolean(state.errors.books)
+    singleNodes.booksEmpty.hidden = Boolean(books.length) || Boolean(state.errors.books)
   }
 }
 
-const bookControlsCell = (book) => {
-  const cell = document.createElement('td')
+const bookControlsPanel = (book) => {
   const actions = createNode('div', 'admin-inline-actions')
   const visibility = visibilitySelect(bookVisibility(book))
   const active = activeSelect(book.is_active)
@@ -2266,6 +2562,12 @@ const bookControlsCell = (book) => {
     active,
     saveButton
   )
+  return actions
+}
+
+const bookControlsCell = (book) => {
+  const cell = document.createElement('td')
+  const actions = bookControlsPanel(book)
   cell.append(actions)
   return cell
 }
@@ -2310,10 +2612,7 @@ const updateBookContentControls = async (book, controls) => {
 
   Object.assign(book, data || updates)
   clearTableError('books')
-  renderDashboard()
-  renderContentManagement()
-  renderAccessGrants()
-  renderBooks()
+  renderHierarchyDependentSections()
 }
 
 const profileMap = () => new Map(state.users.map((profile) => [profile.id, profile]))
