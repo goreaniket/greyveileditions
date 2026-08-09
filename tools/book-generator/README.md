@@ -1,0 +1,112 @@
+# Greyveil Book Generator
+
+This workspace prepares Greyveil Editions books from the same source files used
+by the website reader. The reader remains the visual source of truth; generated
+formats map from the book JSON, chapter JSON, cover assets, theme CSS, and
+`design-spec.json`.
+
+## Current source contract
+
+Book source lives in:
+
+```text
+assets/books/<slug>/
+  book.json
+  design-spec.json
+  theme.css
+  chapters/
+  cover/
+```
+
+The existing reader remains the visual source of truth. Generator code reads
+the same files the reader uses instead of introducing a separate document design
+system.
+
+## Export modes
+
+### Digital / visual mode
+
+Outputs:
+
+- PDF
+- EPUB 3 fixed layout
+
+Contract:
+
+- Keep the reader visual design as the source of truth.
+- Use full-page visual composition with warm paper color, reader typography,
+  muted Greyveil color, displaced-rule ornamentation, and reader-like
+  chapter/phase opening pages.
+- Treat the front cover as a full-bleed digital cover page.
+- Keep EPUB pre-paginated with one fixed 5.5 x 8.5 page canvas per spine item,
+  real HTML/CSS text, fixed viewport metadata, and EPUB 3 rendition metadata.
+- Derive EPUB geometry and styling from the same normalized export tokens as
+  PDF instead of creating an independent reflowable ebook theme.
+
+### Print / editable mode
+
+Output:
+
+- DOCX
+
+Contract:
+
+- Keep the Greyveil identity, typography, and restrained ornament system.
+- Use print-safe 5.5 x 8.5 page geometry.
+- Encode inside and outside margins, a binding gutter, top/bottom margins, and
+  Word mirror margins.
+- Keep the front cover out of the DOCX body; cover production is handled as a
+  separate print artifact.
+
+## Validate The Last Shift
+
+From the repository root:
+
+```bash
+python tools/book-generator/generate_book.py the-last-shift --validate
+```
+
+The command checks that the book source can be parsed and normalized. It does
+not generate final book files.
+
+## Generate outputs
+
+From the repository root:
+
+```bash
+python tools/book-generator/generate_book.py the-last-shift --pdf
+python tools/book-generator/generate_book.py the-last-shift --epub
+python tools/book-generator/generate_book.py the-last-shift --docx
+python tools/book-generator/generate_book.py the-last-shift --all
+```
+
+Default outputs are written to:
+
+```text
+output/pdf/<slug>.pdf
+output/epub/<slug>.epub
+output/docx/<slug>-print-editable.docx
+```
+
+The legacy prototype command is still available:
+
+```bash
+python tools/book-generator/generate_book.py the-last-shift --pdf-prototype
+```
+
+## Generator boundaries
+
+- Load a book by slug.
+- Validate required files and folders.
+- Parse `book.json` and `design-spec.json`.
+- Locate `theme.css`.
+- Locate cover assets.
+- Load chapter/unit JSON files in order.
+- Normalize content blocks into an in-memory model.
+- Print a validation summary.
+- Export reader-style PDF and EPUB files.
+- Export fixed-layout EPUB 3 files with preserved navigation and page-list
+  metadata.
+- Export print-safe editable DOCX files.
+
+Source ZIP export remains reserved for a later pipeline step.

@@ -357,6 +357,75 @@
       "feedback form"
     ]
   },
+  "generationContract": {
+    "contractVersion": "12A.validation-only",
+    "sourceOfTruth": "The website reader design remains authoritative; generated formats must map from this specification and existing reader theme tokens.",
+    "sourceFiles": {
+      "bookMetadata": "/assets/books/the-last-shift/book.json",
+      "designSpec": "/assets/books/the-last-shift/design-spec.json",
+      "themeStylesheet": "/assets/books/the-last-shift/theme.css",
+      "chaptersDirectory": "/assets/books/the-last-shift/chapters/",
+      "coverDirectory": "/assets/books/the-last-shift/cover/"
+    },
+    "chapterOrdering": {
+      "primary": "chapter JSON index field",
+      "fallback": "chapter filename sort order",
+      "requiredUnitFields": [
+        "id",
+        "kind",
+        "title",
+        "index",
+        "elements"
+      ]
+    },
+    "normalizedContentBlocks": {
+      "requiredBlockField": "type",
+      "supportedTypes": [
+        "paragraph",
+        "space",
+        "toc-line",
+        "toc-heading",
+        "toc-chapter",
+        "quote",
+        "section-break",
+        "divider",
+        "heading",
+        "image"
+      ],
+      "textFields": [
+        "text",
+        "content",
+        "label",
+        "html"
+      ],
+      "unknownTypeHandling": "Warn during validation and preserve the raw block for later exporter decisions."
+    },
+    "coverRules": {
+      "digitalReader": {
+        "asset": "/assets/books/the-last-shift/cover/front-cover.webp",
+        "fit": "contain",
+        "mustPreserveCompleteArtwork": true,
+        "mayCrop": false,
+        "mayStretch": false,
+        "mayRecolor": false
+      },
+      "printReference": {
+        "asset": "/assets/books/the-last-shift/cover/front-cover-print.png",
+        "fit": "contain inside trim box",
+        "minimumFinalPrintRequirement": "Replace with a true 300 DPI cover master before production print output."
+      },
+      "sourceReference": {
+        "asset": "/assets/books/the-last-shift/cover/cover-source.png",
+        "purpose": "Preserved visual reference for future cover regeneration or print preparation."
+      }
+    },
+    "formatReadiness": {
+      "pdf": "not implemented in Step 12A",
+      "epub": "not implemented in Step 12A",
+      "docx": "not implemented in Step 12A",
+      "sourceZip": "not implemented in Step 12A"
+    }
+  },
   "implementationBoundary": {
     "bookSpecificFiles": [
       "/assets/books/the-last-shift/design-spec.json",
