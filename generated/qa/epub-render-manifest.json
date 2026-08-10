@@ -1,0 +1,198 @@
+{
+  "the-end-of-interpretation": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-end-of-interpretation.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0012-arc-i-the-breakdown-of-structure.xhtml",
+      "chapter_opening": "EPUB/pages/p0019-chapter-01.xhtml",
+      "body": "EPUB/pages/p0020-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0089-about-the-author.xhtml"
+    },
+    "page_count": 92
+  },
+  "the-fiction-of-awareness": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-fiction-of-awareness.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0015-chapter-01.xhtml",
+      "chapter_opening": "EPUB/pages/p0015-chapter-01.xhtml",
+      "body": "EPUB/pages/p0016-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0054-about-the-author.xhtml"
+    },
+    "page_count": 56
+  },
+  "the-fiction-of-becoming": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-fiction-of-becoming.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0016-the-future-self-illusion.xhtml",
+      "chapter_opening": "EPUB/pages/p0017-chapter-01.xhtml",
+      "body": "EPUB/pages/p0018-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0052-about-the-author.xhtml"
+    },
+    "page_count": 53
+  },
+  "the-fiction-of-human": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-fiction-of-human.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0022-the-invention-of-the-human.xhtml",
+      "chapter_opening": "EPUB/pages/p0023-chapter-01.xhtml",
+      "body": "EPUB/pages/p0024-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0099-about-the-author.xhtml"
+    },
+    "page_count": 101
+  },
+  "the-fiction-of-meaning": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-fiction-of-meaning.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0014-the-need-for-meaning-foundation.xhtml",
+      "chapter_opening": "EPUB/pages/p0015-chapter-01.xhtml",
+      "body": "EPUB/pages/p0016-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0052-about-the-author.xhtml"
+    },
+    "page_count": 54
+  },
+  "the-last-shift": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-last-shift.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0013-chapter-01.xhtml",
+      "chapter_opening": "EPUB/pages/p0013-chapter-01.xhtml",
+      "body": "EPUB/pages/p0014-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0087-about-author.xhtml"
+    },
+    "page_count": 88
+  },
+  "the-last-shift-ii": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-last-shift-ii.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0018-arc-i.xhtml",
+      "chapter_opening": "EPUB/pages/p0019-chapter-01.xhtml",
+      "body": "EPUB/pages/p0020-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0213-about-author.xhtml"
+    },
+    "page_count": 214
+  },
+  "the-loop-within": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-loop-within.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0016-part-1.xhtml",
+      "chapter_opening": "EPUB/pages/p0017-chapter-01.xhtml",
+      "body": "EPUB/pages/p0018-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0113-about-author.xhtml"
+    },
+    "page_count": 115
+  },
+  "the-paradox-of-awareness": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-paradox-of-awareness.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0018-the-awakening-of-seeing.xhtml",
+      "chapter_opening": "EPUB/pages/p0019-chapter-01.xhtml",
+      "body": "EPUB/pages/p0020-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0125-about-the-author.xhtml"
+    },
+    "page_count": 127
+  },
+  "the-paradox-of-explanation": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-paradox-of-explanation.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0019-arc-i-the-need-to-understand.xhtml",
+      "chapter_opening": "EPUB/pages/p0020-chapter-01.xhtml",
+      "body": "EPUB/pages/p0021-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0176-about-the-author.xhtml"
+    },
+    "page_count": 178
+  },
+  "the-paradox-of-reality": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-paradox-of-reality.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0024-arc-i-the-fracture-of-seeing.xhtml",
+      "chapter_opening": "EPUB/pages/p0025-chapter-01.xhtml",
+      "body": "EPUB/pages/p0026-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0085-about-the-author.xhtml"
+    },
+    "page_count": 88
+  },
+  "the-paradox-of-stillness": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-paradox-of-stillness.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0022-arc-i-the-illusion-of-search.xhtml",
+      "chapter_opening": "EPUB/pages/p0023-chapter-01.xhtml",
+      "body": "EPUB/pages/p0024-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0094-about-the-author.xhtml"
+    },
+    "page_count": 97
+  },
+  "the-quiet-i-started-living-with": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\the-quiet-i-started-living-with.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0019-phase-i.xhtml",
+      "chapter_opening": "EPUB/pages/p0020-chapter-01.xhtml",
+      "body": "EPUB/pages/p0021-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0130-about-author.xhtml"
+    },
+    "page_count": 131
+  },
+  "when-understanding-begins": {
+    "epub": "E:\\Lalit website\\greyveil editions\\generated\\epub\\when-understanding-begins.epub",
+    "unpacked": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins",
+    "roles": {
+      "cover": "EPUB/cover.xhtml",
+      "title": "EPUB/pages/p0001-title.xhtml",
+      "contents": "EPUB/pages/p0002-contents.xhtml",
+      "phase_opening": "EPUB/pages/p0021-layer-1.xhtml",
+      "chapter_opening": "EPUB/pages/p0022-chapter-01.xhtml",
+      "body": "EPUB/pages/p0023-chapter-01-2.xhtml",
+      "end_matter": "EPUB/pages/p0072-about-author.xhtml"
+    },
+    "page_count": 74
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "the-end-of-interpretation": {
+    "metadata": "The End of Interpretation",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 24,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1649440,
+      "page_count": 89,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1121835,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 92,
+      "spine_count": 92,
+      "contents_page_count": 1,
+      "about_page_count": 3,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 59416,
+      "paragraph_count": 1366,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-fiction-of-awareness": {
+    "metadata": "The Fiction of Awareness",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 18,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1480412,
+      "page_count": 58,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 974455,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 56,
+      "spine_count": 56,
+      "contents_page_count": 1,
+      "about_page_count": 2,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 52418,
+      "paragraph_count": 862,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-fiction-of-becoming": {
+    "metadata": "The Fiction of Becoming",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 22,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1629874,
+      "page_count": 53,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1052916,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 53,
+      "spine_count": 53,
+      "contents_page_count": 1,
+      "about_page_count": 1,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 50615,
+      "paragraph_count": 783,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-fiction-of-human": {
+    "metadata": "The Fiction of the Human",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 25,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1806603,
+      "page_count": 104,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1235269,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 101,
+      "spine_count": 101,
+      "contents_page_count": 1,
+      "about_page_count": 2,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 61578,
+      "paragraph_count": 1640,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-fiction-of-meaning": {
+    "metadata": "The Fiction of Meaning",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 23,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1564511,
+      "page_count": 57,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1025337,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 54,
+      "spine_count": 54,
+      "contents_page_count": 1,
+      "about_page_count": 2,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 50870,
+      "paragraph_count": 829,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-last-shift": {
+    "metadata": "The Last Shift",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [],
+      "chapter_count": 22,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1785808,
+      "page_count": 91,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1150994,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 88,
+      "spine_count": 88,
+      "contents_page_count": 1,
+      "about_page_count": 1,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 83035,
+      "paragraph_count": 1439,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-last-shift-ii": {
+    "metadata": "The Last Shift II",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 29,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1832301,
+      "page_count": 222,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1376486,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 214,
+      "spine_count": 214,
+      "contents_page_count": 2,
+      "about_page_count": 1,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 103132,
+      "paragraph_count": 3670,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-loop-within": {
+    "metadata": "The Loop Within",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 37,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1573820,
+      "page_count": 120,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1096470,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 115,
+      "spine_count": 115,
+      "contents_page_count": 2,
+      "about_page_count": 2,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 67228,
+      "paragraph_count": 1830,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-paradox-of-awareness": {
+    "metadata": "The Paradox of Awareness",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 25,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1546986,
+      "page_count": 124,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1115706,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 127,
+      "spine_count": 127,
+      "contents_page_count": 1,
+      "about_page_count": 2,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 99479,
+      "paragraph_count": 1951,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-paradox-of-explanation": {
+    "metadata": "The Paradox of Explanation",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 25,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1522005,
+      "page_count": 163,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1200598,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 178,
+      "spine_count": 178,
+      "contents_page_count": 1,
+      "about_page_count": 2,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 80419,
+      "paragraph_count": 2742,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-paradox-of-reality": {
+    "metadata": "The Paradox of Reality",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 24,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1795647,
+      "page_count": 91,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1197613,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 88,
+      "spine_count": 88,
+      "contents_page_count": 1,
+      "about_page_count": 3,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 59060,
+      "paragraph_count": 1348,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-paradox-of-stillness": {
+    "metadata": "The Paradox of Stillness",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 23,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1451315,
+      "page_count": 98,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1017653,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 97,
+      "spine_count": 97,
+      "contents_page_count": 1,
+      "about_page_count": 3,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 61615,
+      "paragraph_count": 1535,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "the-quiet-i-started-living-with": {
+    "metadata": "The Quiet I Started Living With",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 31,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1700749,
+      "page_count": 137,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 1179264,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 131,
+      "spine_count": 131,
+      "contents_page_count": 2,
+      "about_page_count": 1,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 71351,
+      "paragraph_count": 2170,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  },
+  "when-understanding-begins": {
+    "metadata": "When Understanding Begins",
+    "validation": {
+      "pass": true,
+      "errors": [],
+      "warnings": [
+        "design-spec.json has no generationContract block yet."
+      ],
+      "chapter_count": 24,
+      "cover_present": true,
+      "design_present": true,
+      "theme_present": true
+    },
+    "pdf": {
+      "exists": true,
+      "size": 1431102,
+      "page_count": 76,
+      "trim_points": [
+        396.0,
+        612.0
+      ],
+      "title_present": true,
+      "toc_present": true,
+      "chapter_present": true,
+      "phase_present": true,
+      "end_matter_present": true,
+      "blank_text_page_count_after_cover": 0,
+      "blank_text_pages_after_cover": [],
+      "pass": true
+    },
+    "epub": {
+      "exists": true,
+      "size": 964271,
+      "bad_zip": null,
+      "mimetype_first": true,
+      "mimetype_ok": true,
+      "container_rootfile": "EPUB/package.opf",
+      "nav_present": true,
+      "fixed_layout_metadata": true,
+      "cover_image_present": true,
+      "cover_page_present": true,
+      "xhtml_page_count": 74,
+      "spine_count": 74,
+      "contents_page_count": 1,
+      "about_page_count": 2,
+      "metadata_title_present": true,
+      "pass": true
+    },
+    "docx": {
+      "exists": true,
+      "size": 57253,
+      "paragraph_count": 1098,
+      "section_count": 1,
+      "page_inches": [
+        5.5,
+        8.5
+      ],
+      "inside_margin_in": 0.72,
+      "outside_margin_in": 0.62,
+      "gutter_in": 0.14,
+      "mirror_margins": true,
+      "title_present": true,
+      "toc_present": true,
+      "heading_present": true,
+      "about_present": true,
+      "media_count": 0,
+      "cover_media_detected": false,
+      "pass": true
+    },
+    "pass": true
+  }
+}

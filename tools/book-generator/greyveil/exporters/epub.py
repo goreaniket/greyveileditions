@@ -17,6 +17,7 @@ from greyveil.exporters.common import (
     book_number_label,
     css_font_stack,
     hide_folio_for_unit,
+    is_quote_block,
     media_type_for,
     output_path,
     preferred_cover,
@@ -414,7 +415,7 @@ def measurement_block_type(block_type: str, unit: ChapterUnit) -> str:
 
 
 def fragment_html(block_type: str, unit: ChapterUnit, html_text: str) -> str:
-    if block_type == "quote":
+    if is_quote_block(block_type):
         return f'<blockquote class="reader-quote">{html_text}</blockquote>'
     if block_type == "toc-heading":
         return f'<p class="toc-line toc-heading">{html_text}</p>'
@@ -574,12 +575,12 @@ def continuation_page_capacity(geometry: FixedGeometry) -> int:
 
 def contents_first_page_capacity(geometry: FixedGeometry) -> int:
     usable_px = geometry.height_px - contents_first_frame_top_px() - geometry.bottom_px - 38
-    return max(12, math.floor(usable_px / contents_line_box_px(geometry)))
+    return max(12, math.floor(usable_px / contents_line_box_px(geometry)) - 1)
 
 
 def contents_continuation_page_capacity(geometry: FixedGeometry) -> int:
     usable_px = geometry.height_px - geometry.top_px - geometry.bottom_px - 36
-    return max(14, math.floor(usable_px / contents_line_box_px(geometry)))
+    return max(14, math.floor(usable_px / contents_line_box_px(geometry)) - 1)
 
 
 def short_page_capacity(geometry: FixedGeometry) -> int:
@@ -621,7 +622,7 @@ def chars_per_line(block_type: str, geometry: FixedGeometry) -> int:
         return max(104, math.floor((geometry.content_width_px + 34) / 3.2))
     if block_type == "short-paragraph":
         return max(62, math.floor((geometry.content_width_px + 18) / 4.8))
-    if block_type == "quote":
+    if is_quote_block(block_type):
         return max(32, math.floor(geometry.content_width_px / 6.5))
     return max(42, math.floor(geometry.content_width_px / 5.6))
 
@@ -633,7 +634,7 @@ def estimated_lines(text: str, chars: int) -> int:
 def line_cost(text: str, block_type: str, geometry: FixedGeometry, *, continued: bool) -> int:
     chars = chars_per_line(block_type, geometry)
     lines = estimated_lines(text, chars)
-    if block_type == "quote":
+    if is_quote_block(block_type):
         return lines + 3
     if block_type.startswith("toc-"):
         return lines

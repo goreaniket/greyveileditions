@@ -15,6 +15,7 @@ from greyveil.utils import first_string
 
 TRIM_WIDTH_IN = 5.5
 TRIM_HEIGHT_IN = 8.5
+QUOTE_BLOCK_TYPES = {"quote", "blockquote"}
 
 
 @dataclass(frozen=True)
@@ -220,6 +221,10 @@ def unit_subtitle(unit: ChapterUnit) -> str:
 
 def hide_folio_for_unit(unit: ChapterUnit) -> bool:
     return unit.kind in {"opening", "contents", "dedication", "feedback"}
+
+
+def is_quote_block(block_type: str) -> bool:
+    return block_type in QUOTE_BLOCK_TYPES
 
 
 def iter_text_runs(block: ChapterBlock) -> Iterator[tuple[str, bool, bool]]:

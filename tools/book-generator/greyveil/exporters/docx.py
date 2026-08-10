@@ -16,6 +16,7 @@ from greyveil.exporters.common import (
     block_plain_text,
     book_number_label,
     hex_no_hash,
+    is_quote_block,
     iter_text_runs,
     output_path,
     theme_from_model,
@@ -225,7 +226,7 @@ def add_units(doc: Document, model: BookModel, repo_root: Path, theme: ExportThe
         no_indent_next = True
         for block in unit.blocks:
             added_paragraph = add_block(doc, block, unit, model, repo_root, theme, no_indent_next)
-            if block.type in {"space", "section-break", "divider", "quote"}:
+            if block.type in {"space", "section-break", "divider"} or is_quote_block(block.type):
                 no_indent_next = True
             elif added_paragraph is not None:
                 no_indent_next = False
@@ -286,7 +287,7 @@ def add_block(
         return None
 
     style_name = "Greyveil Body"
-    if block.type == "quote":
+    if is_quote_block(block.type):
         style_name = "Greyveil Quote"
     elif block.type.startswith("toc-"):
         style_name = "Greyveil Contents"

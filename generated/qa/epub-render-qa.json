@@ -1,0 +1,3600 @@
+{
+  "the-end-of-interpretation": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-end-of-interpretation\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The End of Interpretation Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-end-of-interpretation\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The End of Interpretation Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 342.2,
+          "bottomWhitespace": 269.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-end-of-interpretation\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 434.9,
+          "bottomWhitespace": 177.1,
+          "tocLineCount": 22,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.8,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation\\EPUB\\pages\\p0012-arc-i-the-breakdown-of-structure.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-end-of-interpretation\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ARC I — THE BREAKDOWN OF STRUCTURE",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 338.3,
+          "bottomWhitespace": 273.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation\\EPUB\\pages\\p0019-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-end-of-interpretation\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHEN MEANING STOPS SURVIVING REALITY",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 483.7,
+          "bottomWhitespace": 128.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation\\EPUB\\pages\\p0020-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-end-of-interpretation\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHEN MEANING STOPS SURVIVING REALITY",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 494.1,
+          "bottomWhitespace": 117.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-end-of-interpretation\\EPUB\\pages\\p0089-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-end-of-interpretation\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 496.5,
+          "bottomWhitespace": 115.5,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-awareness": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-awareness\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of Awareness Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-awareness\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of Awareness Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-awareness\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 355.9,
+          "bottomWhitespace": 256.1,
+          "tocLineCount": 17,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.3,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness\\EPUB\\pages\\p0015-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-awareness\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Illusion of a Fixed “I”",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 471.7,
+          "bottomWhitespace": 140.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness\\EPUB\\pages\\p0015-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-awareness\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Illusion of a Fixed “I”",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 471.7,
+          "bottomWhitespace": 140.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness\\EPUB\\pages\\p0016-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-awareness\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Illusion of a Fixed “I”",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 516.8,
+          "bottomWhitespace": 95.2,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-awareness\\EPUB\\pages\\p0054-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-awareness\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 453.8,
+          "bottomWhitespace": 158.2,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-becoming": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-becoming\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of Becoming Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-becoming\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of Becoming Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-becoming\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 408.1,
+          "bottomWhitespace": 203.9,
+          "tocLineCount": 20,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.8,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming\\EPUB\\pages\\p0016-the-future-self-illusion.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-becoming\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE FUTURE SELF ILLUSION",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 279.2,
+          "bottomWhitespace": 332.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming\\EPUB\\pages\\p0017-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-becoming\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Illusion of “Who I Will Become”",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 510.4,
+          "bottomWhitespace": 101.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming\\EPUB\\pages\\p0018-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-becoming\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Illusion of “Who I Will Become”",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 502.1,
+          "bottomWhitespace": 109.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-becoming\\EPUB\\pages\\p0052-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-becoming\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first page--short-content",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 178,
+            "right": 351,
+            "bottom": 531,
+            "width": 299,
+            "height": 353
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 86,
+          "contentBottom": 458,
+          "bottomWhitespace": 154,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-human": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-human\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of the Human Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-human\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of the Human Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-human\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 448.3,
+          "bottomWhitespace": 163.7,
+          "tocLineCount": 23,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.7,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human\\EPUB\\pages\\p0022-the-invention-of-the-human.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-human\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE INVENTION OF THE HUMAN",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 308.7,
+          "bottomWhitespace": 303.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human\\EPUB\\pages\\p0023-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-human\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Story Called Human",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 456.9,
+          "bottomWhitespace": 155.1,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human\\EPUB\\pages\\p0024-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-human\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Story Called Human",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 494.1,
+          "bottomWhitespace": 117.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-human\\EPUB\\pages\\p0099-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-human\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 389.7,
+          "bottomWhitespace": 222.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-meaning": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-meaning\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of Meaning Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-meaning\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Fiction of Meaning Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-meaning\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 494,
+          "bottomWhitespace": 118,
+          "tocLineCount": 21,
+          "tocGapMax": 6,
+          "tocGapAvg": 3,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning\\EPUB\\pages\\p0014-the-need-for-meaning-foundation.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-meaning\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE NEED FOR MEANING (FOUNDATION)",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 308.7,
+          "bottomWhitespace": 303.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning\\EPUB\\pages\\p0015-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-meaning\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Illusion of Purpose",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 506.4,
+          "bottomWhitespace": 105.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning\\EPUB\\pages\\p0016-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-meaning\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Illusion of Purpose",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 456.7,
+          "bottomWhitespace": 155.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-fiction-of-meaning\\EPUB\\pages\\p0052-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-fiction-of-meaning\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 507.3,
+          "bottomWhitespace": 104.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-last-shift": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Last Shift Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Last Shift Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 342.2,
+          "bottomWhitespace": 269.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 495.2,
+          "bottomWhitespace": 116.8,
+          "tocLineCount": 25,
+          "tocGapMax": 6,
+          "tocGapAvg": 3.5,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift\\EPUB\\pages\\p0013-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Beginning of Attachment",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 475.7,
+          "bottomWhitespace": 136.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift\\EPUB\\pages\\p0013-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Beginning of Attachment",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 475.7,
+          "bottomWhitespace": 136.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift\\EPUB\\pages\\p0014-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Beginning of Attachment",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 486.1,
+          "bottomWhitespace": 125.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift\\EPUB\\pages\\p0087-about-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "About the Author",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--frontmatter page--unit-first page--short-content",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 178,
+            "right": 351,
+            "bottom": 531,
+            "width": 299,
+            "height": 353
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 86,
+          "contentBottom": 509.4,
+          "bottomWhitespace": 102.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-last-shift-ii": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift-ii\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Last Shift II Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift-ii\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Last Shift II Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 342.2,
+          "bottomWhitespace": 269.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift-ii\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 340.5,
+          "bottomWhitespace": 271.5,
+          "tocLineCount": 15,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.3,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii\\EPUB\\pages\\p0018-arc-i.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift-ii\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE DISTORTION",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 277.1,
+          "bottomWhitespace": 334.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii\\EPUB\\pages\\p0019-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift-ii\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHAT WE FEEL VS WHAT IS!",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 503.6,
+          "bottomWhitespace": 108.4,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii\\EPUB\\pages\\p0020-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift-ii\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHAT WE FEEL VS WHAT IS!",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 495.9,
+          "bottomWhitespace": 116.1,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-last-shift-ii\\EPUB\\pages\\p0213-about-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-last-shift-ii\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "About the Author",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--frontmatter page--unit-first page--short-content",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 178,
+            "right": 351,
+            "bottom": 531,
+            "width": 299,
+            "height": 353
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 86,
+          "contentBottom": 492.8,
+          "bottomWhitespace": 119.2,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-loop-within": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-loop-within\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Loop Within Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-loop-within\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Loop Within Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 342.2,
+          "bottomWhitespace": 269.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-loop-within\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "INDEX",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 377.3,
+          "bottomWhitespace": 234.7,
+          "tocLineCount": 18,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.7,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within\\EPUB\\pages\\p0016-part-1.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-loop-within\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE TRAP (WHY YOU GET STUCK)",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 305.6,
+          "bottomWhitespace": 306.4,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within\\EPUB\\pages\\p0017-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-loop-within\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "When It Doesn’t End, It Just Repeats in Your Mind:",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 505.1,
+          "bottomWhitespace": 106.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within\\EPUB\\pages\\p0018-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-loop-within\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "When It Doesn’t End, It Just Repeats in Your Mind:",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 522.5,
+          "bottomWhitespace": 89.5,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-loop-within\\EPUB\\pages\\p0113-about-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-loop-within\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--ending page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 505.5,
+          "bottomWhitespace": 106.5,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-awareness": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-awareness\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Awareness Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-awareness\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Awareness Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-awareness\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 500,
+          "bottomWhitespace": 112,
+          "tocLineCount": 26,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.6,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness\\EPUB\\pages\\p0018-the-awakening-of-seeing.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-awareness\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE AWAKENING OF SEEING",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 308.7,
+          "bottomWhitespace": 303.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness\\EPUB\\pages\\p0019-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-awareness\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE FIRST AWAKENING",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 506.4,
+          "bottomWhitespace": 105.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness\\EPUB\\pages\\p0020-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-awareness\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE FIRST AWAKENING",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 459.3,
+          "bottomWhitespace": 152.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-awareness\\EPUB\\pages\\p0125-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-awareness\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 484.5,
+          "bottomWhitespace": 127.5,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-explanation": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-explanation\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Explanation Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-explanation\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Explanation Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-explanation\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 448.3,
+          "bottomWhitespace": 163.7,
+          "tocLineCount": 23,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.7,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation\\EPUB\\pages\\p0019-arc-i-the-need-to-understand.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-explanation\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ARC I — THE NEED TO UNDERSTAND",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 308.7,
+          "bottomWhitespace": 303.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation\\EPUB\\pages\\p0020-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-explanation\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE NEED TO KNOW WHY",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 448.9,
+          "bottomWhitespace": 163.1,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation\\EPUB\\pages\\p0021-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-explanation\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE NEED TO KNOW WHY",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 66,
+          "contentBottom": 350.1,
+          "bottomWhitespace": 261.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-explanation\\EPUB\\pages\\p0176-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-explanation\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR-",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 496.5,
+          "bottomWhitespace": 115.5,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-reality": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-reality\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Reality Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-reality\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Reality Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-reality\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 448.3,
+          "bottomWhitespace": 163.7,
+          "tocLineCount": 23,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.7,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality\\EPUB\\pages\\p0024-arc-i-the-fracture-of-seeing.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-reality\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ARC I — THE FRACTURE OF SEEING",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 308.7,
+          "bottomWhitespace": 303.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality\\EPUB\\pages\\p0025-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-reality\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "CHAPTER 1 — THE FEELING THAT REALITY IS NOT STABLE",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 510.4,
+          "bottomWhitespace": 101.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality\\EPUB\\pages\\p0026-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-reality\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "CHAPTER 1 — THE FEELING THAT REALITY IS NOT STABLE",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 524.8,
+          "bottomWhitespace": 87.2,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-reality\\EPUB\\pages\\p0085-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-reality\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 491.3,
+          "bottomWhitespace": 120.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-stillness": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-stillness\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Stillness Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-stillness\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Paradox of Stillness Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 387.3,
+          "bottomWhitespace": 224.7,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-stillness\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "Contents",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 467.2,
+          "bottomWhitespace": 144.8,
+          "tocLineCount": 21,
+          "tocGapMax": 6,
+          "tocGapAvg": 2.8,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness\\EPUB\\pages\\p0022-arc-i-the-illusion-of-search.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-stillness\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ARC I — THE ILLUSION OF SEARCH",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 308.7,
+          "bottomWhitespace": 303.3,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness\\EPUB\\pages\\p0023-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-stillness\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE DAY NOTHING CHANGED",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 506.4,
+          "bottomWhitespace": 105.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness\\EPUB\\pages\\p0024-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-stillness\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE DAY NOTHING CHANGED",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 516.8,
+          "bottomWhitespace": 95.2,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-paradox-of-stillness\\EPUB\\pages\\p0094-about-the-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-paradox-of-stillness\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--epilogue page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 526,
+          "bottomWhitespace": 86,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "the-quiet-i-started-living-with": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-quiet-i-started-living-with\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Quiet I Started Living With Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-quiet-i-started-living-with\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "The Quiet I Started Living With Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 432.4,
+          "bottomWhitespace": 179.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-quiet-i-started-living-with\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "TABLE OF CONTENTS",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 367.9,
+          "bottomWhitespace": 244.1,
+          "tocLineCount": 17,
+          "tocGapMax": 6,
+          "tocGapAvg": 3,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with\\EPUB\\pages\\p0019-phase-i.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-quiet-i-started-living-with\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE MIND THAT NEVER STOPPED SPEAKING",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 334.2,
+          "bottomWhitespace": 277.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with\\EPUB\\pages\\p0020-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-quiet-i-started-living-with\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHEN YOUR MIND BECOMES THE ONLY PLACE YOU LIVE",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 455.9,
+          "bottomWhitespace": 156.1,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with\\EPUB\\pages\\p0021-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-quiet-i-started-living-with\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHEN YOUR MIND BECOMES THE ONLY PLACE YOU LIVE",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 514.5,
+          "bottomWhitespace": 97.5,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\the-quiet-i-started-living-with\\EPUB\\pages\\p0130-about-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\the-quiet-i-started-living-with\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--ending page--unit-first page--short-content",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 178,
+            "right": 351,
+            "bottom": 531,
+            "width": 299,
+            "height": 353
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 86,
+          "contentBottom": 454.4,
+          "bottomWhitespace": 157.6,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "when-understanding-begins": {
+    "roles": {
+      "cover": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins\\EPUB\\cover.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\when-understanding-begins\\cover.png",
+        "loadError": null,
+        "metrics": {
+          "title": "When Understanding Begins Cover",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--cover",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 9999,
+          "contentBottom": 0,
+          "bottomWhitespace": 612,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "title": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins\\EPUB\\pages\\p0001-title.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\when-understanding-begins\\title.png",
+        "loadError": null,
+        "metrics": {
+          "title": "When Understanding Begins Title",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--title",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": null,
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 207,
+          "contentBottom": 342.2,
+          "bottomWhitespace": 269.8,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "contents": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins\\EPUB\\pages\\p0002-contents.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\when-understanding-begins\\contents.png",
+        "loadError": null,
+        "metrics": {
+          "title": "TABLE OF CONTENTS",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--contents page--unit-first page--contents-compact",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 48,
+            "top": 126,
+            "right": 363,
+            "bottom": 521,
+            "width": 315,
+            "height": 395
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 76,
+          "contentBottom": 456.3,
+          "bottomWhitespace": 155.7,
+          "tocLineCount": 23,
+          "tocGapMax": 6,
+          "tocGapAvg": 3.1,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "phase_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins\\EPUB\\pages\\p0021-layer-1.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\when-understanding-begins\\phase_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "THE HUMAN MASK",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--part page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 306,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 231
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 204,
+          "contentBottom": 300.1,
+          "bottomWhitespace": 311.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "chapter_opening": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins\\EPUB\\pages\\p0022-chapter-01.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\when-understanding-begins\\chapter_opening.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHY WE ONLY SEE RULES, NOT EMOTIONS",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 242,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 295
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 100,
+          "contentBottom": 497.1,
+          "bottomWhitespace": 114.9,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "body": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins\\EPUB\\pages\\p0023-chapter-01-2.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\when-understanding-begins\\body.png",
+        "loadError": null,
+        "metrics": {
+          "title": "WHY WE ONLY SEE RULES, NOT EMOTIONS",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--chapter page--continuation",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 52,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 485
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 52,
+          "contentBottom": 471.9,
+          "bottomWhitespace": 140.1,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      },
+      "end_matter": {
+        "html": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-unpacked\\when-understanding-begins\\EPUB\\pages\\p0072-about-author.xhtml",
+        "screenshot": "E:\\Lalit website\\greyveil editions\\generated\\qa\\epub-rendered\\when-understanding-begins\\end_matter.png",
+        "loadError": null,
+        "metrics": {
+          "title": "ABOUT THE AUTHOR",
+          "bodyClass": "fixed-layout-body",
+          "pageClass": "page page--unit page--ending page--unit-first",
+          "pageRect": {
+            "left": 0,
+            "top": 0,
+            "right": 396,
+            "bottom": 612,
+            "width": 396,
+            "height": 612
+          },
+          "flowRect": {
+            "left": 52,
+            "top": 172,
+            "right": 351,
+            "bottom": 537,
+            "width": 299,
+            "height": 365
+          },
+          "scrollWidth": 396,
+          "scrollHeight": 612,
+          "bodyScrollWidth": 396,
+          "bodyScrollHeight": 612,
+          "contentTop": 94,
+          "contentBottom": 501.5,
+          "bottomWhitespace": 110.5,
+          "tocLineCount": 0,
+          "tocGapMax": 0,
+          "tocGapAvg": 0,
+          "overflow": []
+        },
+        "pass": true
+      }
+    },
+    "pass": true
+  }
+}

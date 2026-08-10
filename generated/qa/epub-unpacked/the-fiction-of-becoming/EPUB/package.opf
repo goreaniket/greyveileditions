@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="book-id">urn:uuid:9170b59d-b0d5-5c78-9958-f7d0bc05c12e</dc:identifier>
+    <dc:title>The Fiction of Becoming</dc:title>
+    <dc:creator>Lalit R. Mishra</dc:creator>
+    <dc:publisher>Greyveil Editions</dc:publisher>
+    <dc:language>en</dc:language>
+    <meta property="dcterms:modified">2026-08-09T00:00:00Z</meta>
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:orientation">portrait</meta>
+    <meta property="rendition:spread">none</meta>
+    <meta property="rendition:flow">paginated</meta>
+    <dc:description>The greatest illusion was never who you were. It was the belief that you would finally become someone else.</dc:description>
+    <meta property="belongs-to-collection">Human Fiction</meta>
+    <meta property="group-position">III</meta>
+    <meta name="cover" content="cover-image"/>
+  </metadata>
+  <manifest>
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="style" href="styles/greyveil-fixed.css" media-type="text/css"/>
+    <item id="cover-image" href="images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title-page" href="pages/p0001-title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contents-1" href="pages/p0002-contents.xhtml" media-type="application/xhtml+xml"/>
+    <item id="copyright-1" href="pages/p0003-copyright.xhtml" media-type="application/xhtml+xml"/>
+    <item id="disclaimer-1" href="pages/p0004-disclaimer.xhtml" media-type="application/xhtml+xml"/>
+    <item id="dedication-1" href="pages/p0005-dedication.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-1" href="pages/p0006-note-from-the-author.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-1" href="pages/p0007-prologue.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-2" href="pages/p0008-prologue-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-3" href="pages/p0009-prologue-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-4" href="pages/p0010-prologue-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-becoming-1" href="pages/p0011-the-fiction-of-becoming.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-becoming-2" href="pages/p0012-the-fiction-of-becoming-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-becoming-3" href="pages/p0013-the-fiction-of-becoming-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-becoming-4" href="pages/p0014-the-fiction-of-becoming-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-becoming-5" href="pages/p0015-the-fiction-of-becoming-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-future-self-illusion-1" href="pages/p0016-the-future-self-illusion.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-1" href="pages/p0017-chapter-01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-2" href="pages/p0018-chapter-01-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-3" href="pages/p0019-chapter-01-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-4" href="pages/p0020-chapter-01-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-1" href="pages/p0021-chapter-02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-2" href="pages/p0022-chapter-02-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-3" href="pages/p0023-chapter-02-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-4" href="pages/p0024-chapter-02-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-5" href="pages/p0025-chapter-02-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-becoming-machine-1" href="pages/p0026-the-becoming-machine.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-1" href="pages/p0027-chapter-03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-2" href="pages/p0028-chapter-03-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-3" href="pages/p0029-chapter-03-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-1" href="pages/p0030-chapter-04.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-2" href="pages/p0031-chapter-04-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-3" href="pages/p0032-chapter-04-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-4" href="pages/p0033-chapter-04-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-self-repair-narrative-1" href="pages/p0034-the-self-repair-narrative.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-1" href="pages/p0035-chapter-05.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-2" href="pages/p0036-chapter-05-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-3" href="pages/p0037-chapter-05-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-4" href="pages/p0038-chapter-05-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-1" href="pages/p0039-chapter-06.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-2" href="pages/p0040-chapter-06-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-3" href="pages/p0041-chapter-06-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-collapse-of-becoming-1" href="pages/p0042-the-collapse-of-becoming.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-1" href="pages/p0043-chapter-07.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-2" href="pages/p0044-chapter-07-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-3" href="pages/p0045-chapter-07-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-1" href="pages/p0046-end-realization.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-2" href="pages/p0047-end-realization-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-3" href="pages/p0048-end-realization-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-4" href="pages/p0049-end-realization-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogue-after-becoming-collapses-1" href="pages/p0050-epilogue-after-becoming-collapses.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogue-after-becoming-collapses-2" href="pages/p0051-epilogue-after-becoming-collapses-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-1" href="pages/p0052-about-the-author.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine page-progression-direction="ltr">
+    <itemref idref="cover"/>
+    <itemref idref="title-page"/>
+    <itemref idref="contents-1"/>
+    <itemref idref="copyright-1"/>
+    <itemref idref="disclaimer-1"/>
+    <itemref idref="dedication-1"/>
+    <itemref idref="note-from-the-author-1"/>
+    <itemref idref="prologue-1"/>
+    <itemref idref="prologue-2"/>
+    <itemref idref="prologue-3"/>
+    <itemref idref="prologue-4"/>
+    <itemref idref="the-fiction-of-becoming-1"/>
+    <itemref idref="the-fiction-of-becoming-2"/>
+    <itemref idref="the-fiction-of-becoming-3"/>
+    <itemref idref="the-fiction-of-becoming-4"/>
+    <itemref idref="the-fiction-of-becoming-5"/>
+    <itemref idref="the-future-self-illusion-1"/>
+    <itemref idref="chapter-01-1"/>
+    <itemref idref="chapter-01-2"/>
+    <itemref idref="chapter-01-3"/>
+    <itemref idref="chapter-01-4"/>
+    <itemref idref="chapter-02-1"/>
+    <itemref idref="chapter-02-2"/>
+    <itemref idref="chapter-02-3"/>
+    <itemref idref="chapter-02-4"/>
+    <itemref idref="chapter-02-5"/>
+    <itemref idref="the-becoming-machine-1"/>
+    <itemref idref="chapter-03-1"/>
+    <itemref idref="chapter-03-2"/>
+    <itemref idref="chapter-03-3"/>
+    <itemref idref="chapter-04-1"/>
+    <itemref idref="chapter-04-2"/>
+    <itemref idref="chapter-04-3"/>
+    <itemref idref="chapter-04-4"/>
+    <itemref idref="the-self-repair-narrative-1"/>
+    <itemref idref="chapter-05-1"/>
+    <itemref idref="chapter-05-2"/>
+    <itemref idref="chapter-05-3"/>
+    <itemref idref="chapter-05-4"/>
+    <itemref idref="chapter-06-1"/>
+    <itemref idref="chapter-06-2"/>
+    <itemref idref="chapter-06-3"/>
+    <itemref idref="the-collapse-of-becoming-1"/>
+    <itemref idref="chapter-07-1"/>
+    <itemref idref="chapter-07-2"/>
+    <itemref idref="chapter-07-3"/>
+    <itemref idref="end-realization-1"/>
+    <itemref idref="end-realization-2"/>
+    <itemref idref="end-realization-3"/>
+    <itemref idref="end-realization-4"/>
+    <itemref idref="epilogue-after-becoming-collapses-1"/>
+    <itemref idref="epilogue-after-becoming-collapses-2"/>
+    <itemref idref="about-the-author-1"/>
+  </spine>
+</package>

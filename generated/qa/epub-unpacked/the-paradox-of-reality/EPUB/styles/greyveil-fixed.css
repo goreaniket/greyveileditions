@@ -1,0 +1,472 @@
+@namespace epub "http://www.idpf.org/2007/ops";
+
+@page {
+  margin: 0;
+  size: 396px 612px;
+}
+
+html,
+body {
+  width: 396px;
+  height: 612px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #F7EFE2;
+  color: #29302C;
+  font-family: 'Georgia 11-11.5pt equivalent', Georgia, serif;
+  font-size: 11.0px;
+  line-height: 18.7px;
+}
+
+.page {
+  position: relative;
+  width: 396px;
+  height: 612px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #F7EFE2;
+  color: #29302C;
+}
+
+.page:not(.page--cover)::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  top: 20px;
+  bottom: 20px;
+  border-top: 1px solid rgba(41, 48, 44, 0.1);
+  border-bottom: 1px solid rgba(41, 48, 44, 0.1);
+  pointer-events: none;
+}
+
+.page:not(.page--cover)::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  bottom: 34px;
+  left: 25px;
+  width: 1px;
+  background: #687858;
+  opacity: .16;
+  pointer-events: none;
+}
+
+.page--cover {
+  background: #1D241F;
+}
+
+.cover-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.page--cover-fallback {
+  display: grid;
+  place-items: center;
+  color: #F7EFE2;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.title-block {
+  position: absolute;
+  left: 52px;
+  top: 164px;
+  width: 299px;
+}
+
+.title-rule,
+.reader-rule {
+  position: absolute;
+  height: 1px;
+  background: #687858;
+}
+
+.title-rule--a {
+  left: 52px;
+  top: 138px;
+  width: 96px;
+  opacity: .48;
+}
+
+.title-rule--b {
+  left: 66px;
+  top: 150px;
+  width: 58px;
+  opacity: .26;
+}
+
+.title-kicker,
+.unit-kicker {
+  margin: 0 0 5px;
+  color: #9B744E;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 8.5px;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: .12em;
+}
+
+.title-block h1 {
+  margin: 16px 0 10px;
+  max-width: 7.6ch;
+  color: #1D241F;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 49.0px;
+  font-weight: 700;
+  line-height: .92;
+}
+
+.title-subtitle {
+  max-width: 30ch;
+  margin: 0 0 28px;
+  color: #5D6976;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14.2px;
+  line-height: 19px;
+}
+
+.title-author,
+.title-imprint {
+  margin: 0 0 5px;
+  color: #687858;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.unit-header {
+  position: absolute;
+  left: 52px;
+  top: 66px;
+  width: 299px;
+  min-height: 138px;
+  box-sizing: border-box;
+  padding: 28px 0 18px 22px;
+}
+
+.page--chapter .unit-header {
+  min-height: 176px;
+  padding-top: 34px;
+}
+
+.page--contents .unit-header {
+  left: 48px;
+  top: 54px;
+  width: 315px;
+  min-height: 72px;
+  padding: 22px 0 8px 18px;
+}
+
+.page--contents .unit-header h1 {
+  max-width: none;
+  font-size: 27px;
+  line-height: 1;
+}
+
+.page--short-content .unit-header {
+  top: 64px;
+  min-height: 94px;
+  padding: 22px 0 10px 20px;
+}
+
+.page--part .unit-header,
+.page--dedication .unit-header {
+  top: 176px;
+  min-height: 118px;
+  text-align: center;
+  padding-left: 0;
+}
+
+.reader-rule--a {
+  left: 0;
+  top: 0;
+  width: 72px;
+  opacity: .46;
+}
+
+.reader-rule--b {
+  left: 12px;
+  top: 12px;
+  width: 42px;
+  opacity: .24;
+}
+
+.page--part .reader-rule--a,
+.page--dedication .reader-rule--a {
+  left: 50%;
+  width: 76px;
+  transform: translateX(-54px);
+}
+
+.page--part .reader-rule--b,
+.page--dedication .reader-rule--b {
+  left: 50%;
+  width: 44px;
+  transform: translateX(-10px);
+}
+
+.unit-header h1 {
+  max-width: 15ch;
+  margin: 0;
+  color: #1D241F;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 29.0px;
+  font-weight: 700;
+  line-height: 1.02;
+}
+
+.page--part .unit-header h1,
+.page--dedication .unit-header h1 {
+  max-width: 12ch;
+  margin-inline: auto;
+  color: #687858;
+  text-align: center;
+}
+
+.unit-subtitle {
+  max-width: 24ch;
+  margin: 6px 0 0;
+  color: #5D6976;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.flow-frame {
+  position: absolute;
+  left: 52px;
+  width: 299px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.page--contents .flow-frame {
+  left: 48px;
+  width: 315px;
+}
+
+.page--short-content .flow-frame,
+.page--short-tail .flow-frame {
+  left: 52px;
+  width: 299px;
+}
+
+.flow-frame--first {
+  top: 172px;
+  bottom: 75px;
+}
+
+.page--chapter .flow-frame--first {
+  top: 242px;
+}
+
+.page--contents .flow-frame--first {
+  top: 126px;
+  bottom: 91px;
+}
+
+.page--contents .flow-frame--continuation {
+  top: 62px;
+  bottom: 91px;
+}
+
+.page--short-content .flow-frame--first {
+  top: 178px;
+  bottom: 81px;
+}
+
+.page--short-tail .flow-frame--continuation {
+  top: 132px;
+  bottom: 89px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page--dedication .flow-frame--first {
+  top: 305px;
+  text-align: center;
+}
+
+.page--part .flow-frame--first {
+  top: 306px;
+  text-align: center;
+}
+
+.flow-frame--continuation {
+  top: 52px;
+  bottom: 75px;
+}
+
+.reader-paragraph {
+  margin: 0;
+  color: #29302C;
+  font-family: 'Georgia 11-11.5pt equivalent', Georgia, serif;
+  font-size: 11.0px;
+  line-height: 18.7px;
+  text-indent: 1.08em;
+}
+
+.reader-paragraph:first-child,
+.reader-section-break + .reader-paragraph,
+.reader-quote + .reader-paragraph {
+  text-indent: 0;
+}
+
+.reader-paragraph + .reader-paragraph {
+  margin-top: 4px;
+}
+
+.page--short-content .reader-paragraph,
+.page--short-tail .reader-paragraph {
+  font-size: 11.0px;
+  line-height: 15.2px;
+  text-indent: 0;
+}
+
+.page--short-content .reader-paragraph + .reader-paragraph,
+.page--short-tail .reader-paragraph + .reader-paragraph {
+  margin-top: 1.8px;
+}
+
+.page--short-content .space-break,
+.page--short-tail .space-break {
+  height: 12px;
+}
+
+.toc-line {
+  margin: 0 0 2px;
+  color: #5D6976;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 8.6px;
+  line-height: 11.399999999999999px;
+}
+
+.toc-heading {
+  margin-top: 6px;
+  color: #687858;
+  font-size: 9.4px;
+  font-weight: 700;
+}
+
+.toc-line:first-child,
+.toc-heading:first-child {
+  margin-top: 0;
+}
+
+.toc-chapter {
+  color: #29302C;
+}
+
+.reader-section-break {
+  position: relative;
+  height: 42px;
+  margin: 4px 0;
+}
+
+.reader-section-break span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  background: #687858;
+}
+
+.reader-section-break span:first-child {
+  width: 44px;
+  opacity: .50;
+  transform: translate(-6px, -4px);
+}
+
+.reader-section-break span:last-child {
+  width: 27px;
+  opacity: .28;
+  transform: translate(12px, 7px);
+}
+
+.reader-quote {
+  margin: 14px 0;
+  padding: 9px 0 9px 18px;
+  border-left: 1px solid rgba(104, 120, 88, 0.42);
+  color: #687858;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 13.3px;
+  line-height: 18px;
+}
+
+.dedication-text {
+  margin: 0 auto 10px;
+  max-width: 28ch;
+  color: #687858;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.space-break {
+  height: 16px;
+}
+
+.page-folio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  color: #7E8791;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 8px;
+  line-height: 1;
+}
+
+.page-folio span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #687858;
+  opacity: .34;
+}
+
+nav {
+  box-sizing: border-box;
+  width: 396px;
+  min-height: 612px;
+  padding: 52px 45px 53px 52px;
+  background: #F7EFE2;
+  color: #29302C;
+  font-family: Inter, Arial, sans-serif;
+}
+
+nav h1 {
+  margin: 0 0 18px;
+  color: #1D241F;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 30px;
+  line-height: 1;
+}
+
+nav ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+nav li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: #4B5B43;
+  text-decoration: none;
+}

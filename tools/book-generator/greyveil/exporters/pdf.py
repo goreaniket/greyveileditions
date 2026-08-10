@@ -32,6 +32,7 @@ from greyveil.exporters.common import (
     block_plain_text,
     book_number_label,
     hide_folio_for_unit,
+    is_quote_block,
     output_path,
     preferred_cover,
     theme_from_model,
@@ -424,7 +425,7 @@ def append_block(story: List[Flowable], block: ChapterBlock, unit: ChapterUnit, 
     if not text:
         return
 
-    if block.type == "quote":
+    if is_quote_block(block.type):
         story.append(Paragraph(text, styles["GreyveilQuote"]))
     elif block.type.startswith("toc-"):
         story.append(Paragraph(text, styles["GreyveilContents"]))

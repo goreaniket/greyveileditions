@@ -7,6 +7,50 @@ const STATUS_OPTIONS = ['new', 'reviewed', 'archived']
 const ACCESS_TYPES = ['manual', 'promotion', 'complimentary', 'purchase']
 const LOGIN_PATH = '/auth/login/'
 const ACCOUNT_PATH = '/account/'
+const BOOK_FILE_BUCKET = 'book-files'
+const BOOK_COVER_BUCKET = 'book-covers'
+const BOOK_FILE_SELECT = 'id, book_id, file_type, storage_path, file_name, mime_type, file_size, created_at, updated_at'
+const BOOK_COVER_SELECT = 'id, book_id, cover_type, storage_path, file_name, mime_type, file_size, created_at, updated_at'
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+const NUMERIC_ID_PATTERN = /^\d+$/
+const COVER_CONFIGS = {
+  front_cover: {
+    label: 'Front Cover',
+    storageName: 'front-cover',
+    accept: 'image/png,image/jpeg,image/webp',
+    allowedMimeTypes: ['image/png', 'image/jpeg', 'image/webp'],
+    maxBytes: 12 * 1024 * 1024,
+  },
+}
+const BOOK_FILE_CONFIGS = {
+  pdf: {
+    label: 'PDF',
+    storageName: 'book.pdf',
+    accept: 'application/pdf,.pdf',
+    allowedMimeTypes: ['application/pdf'],
+    allowedExtensions: ['pdf'],
+    maxBytes: 120 * 1024 * 1024,
+    superAdminOnly: false,
+  },
+  epub: {
+    label: 'EPUB',
+    storageName: 'book.epub',
+    accept: 'application/epub+zip,.epub',
+    allowedMimeTypes: ['application/epub+zip', 'application/octet-stream'],
+    allowedExtensions: ['epub'],
+    maxBytes: 120 * 1024 * 1024,
+    superAdminOnly: true,
+  },
+  docx: {
+    label: 'DOCX',
+    storageName: 'book.docx',
+    accept: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document,.docx',
+    allowedMimeTypes: ['application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/octet-stream'],
+    allowedExtensions: ['docx'],
+    maxBytes: 80 * 1024 * 1024,
+    superAdminOnly: true,
+  },
+}
 
 const selectors = {
   loading: '[data-admin-loading]',
@@ -56,6 +100,12 @@ const selectors = {
   bookFilterVolume: '[data-book-filter-volume]',
   bookFilterSeries: '[data-book-filter-series]',
   bookFiltersReset: '[data-book-filters-reset]',
+  filesCollection: '[data-files-collection]',
+  filesVolume: '[data-files-volume]',
+  filesSeries: '[data-files-series]',
+  filesBook: '[data-files-book]',
+  filesStatus: '[data-files-status]',
+  filesDetail: '[data-files-detail]',
   accessForm: '[data-access-form]',
   accessUserSearch: '[data-access-user-search]',
   accessUser: '[data-access-user]',
@@ -98,11 +148,19 @@ const state = {
   volumes: [],
   seriesItems: [],
   books: [],
+  bookFiles: [],
+  bookCovers: [],
   feedbacks: [],
   accessGrants: [],
   contentSelection: {
     kind: '',
     id: '',
+  },
+  filesSelection: {
+    collectionId: '',
+    volumeId: '',
+    seriesId: '',
+    bookId: '',
   },
   counts: {
     users: null,
@@ -161,6 +219,12 @@ const singleNodes = {
   bookFilterVolume: $(selectors.bookFilterVolume),
   bookFilterSeries: $(selectors.bookFilterSeries),
   bookFiltersReset: $(selectors.bookFiltersReset),
+  filesCollection: $(selectors.filesCollection),
+  filesVolume: $(selectors.filesVolume),
+  filesSeries: $(selectors.filesSeries),
+  filesBook: $(selectors.filesBook),
+  filesStatus: $(selectors.filesStatus),
+  filesDetail: $(selectors.filesDetail),
   accessForm: $(selectors.accessForm),
   accessUserSearch: $(selectors.accessUserSearch),
   accessUser: $(selectors.accessUser),
@@ -247,6 +311,23 @@ const formatDate = (value) => {
     dateStyle: 'medium',
     timeStyle: 'short',
   }).format(date)
+}
+
+const formatBytes = (bytes) => {
+  const value = Number(bytes)
+  if (!Number.isFinite(value) || value <= 0) return '-'
+
+  const units = ['B', 'KB', 'MB', 'GB']
+  let size = value
+  let unitIndex = 0
+
+  while (size >= 1024 && unitIndex < units.length - 1) {
+    size /= 1024
+    unitIndex += 1
+  }
+
+  const precision = size >= 10 || unitIndex === 0 ? 0 : 1
+  return `${size.toFixed(precision)} ${units[unitIndex]}`
 }
 
 const parseFeedbackDate = (value) => {
@@ -353,6 +434,59 @@ const fromDateTimeLocal = (value) => {
 const boolFromSelect = (value) => value === 'true'
 
 const accessFlagLabel = (value) => value === false ? 'OFF' : 'ON'
+
+const isSuperAdmin = () => state.profile?.role === 'super_admin'
+
+const roleCanManageBookFileType = (role, fileType) => {
+  const config = BOOK_FILE_CONFIGS[fileType]
+  if (!config) return false
+  if (role === 'super_admin') return true
+  return role === 'admin' && !config.superAdminOnly
+}
+
+const canManageBookFileType = (fileType) => {
+  return roleCanManageBookFileType(state.profile?.role, fileType)
+}
+
+const isValidBookId = (bookId) => {
+  const value = getText(bookId, '')
+  return UUID_PATTERN.test(value) || NUMERIC_ID_PATTERN.test(value)
+}
+
+const safeStorageSegment = (value, fallback = 'book') => {
+  return getText(value, fallback)
+    .toLowerCase()
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 96) || fallback
+}
+
+const fileExtension = (file) => {
+  const name = getText(file?.name, '').toLowerCase()
+  const match = name.match(/\.([a-z0-9]+)$/)
+  return match ? match[1] : ''
+}
+
+const coverExtensionForFile = (file) => {
+  const extension = fileExtension(file)
+  if (['jpg', 'jpeg', 'png', 'webp'].includes(extension)) return extension === 'jpeg' ? 'jpg' : extension
+  if (file?.type === 'image/png') return 'png'
+  if (file?.type === 'image/webp') return 'webp'
+  return 'jpg'
+}
+
+const bookStorageFolder = (book) => safeStorageSegment(book?.slug, safeStorageSegment(book?.id, 'book'))
+
+const validateManagedFile = (file, config, kind) => {
+  if (!file) return `${kind} file is required.`
+  if (file.size > config.maxBytes) return `${kind} file is too large. Limit is ${formatBytes(config.maxBytes)}.`
+
+  const extension = fileExtension(file)
+  if (config.allowedExtensions?.length && config.allowedExtensions.includes(extension)) return ''
+  if (config.allowedMimeTypes?.includes(file.type)) return ''
+
+  return `${kind} file type is not supported.`
+}
 
 const isAccessActive = (grant) => {
   if (!grant?.expires_at) return true
@@ -525,6 +659,7 @@ const showPanel = (name) => {
 
   document.body.classList.remove('is-admin-nav-open')
   singleNodes.menu?.setAttribute('aria-expanded', 'false')
+  if (name === 'files') renderFilesManager()
 }
 
 const showAccessMode = (mode = 'book') => {
@@ -602,6 +737,40 @@ const bindControls = () => {
     renderBookVolumeFilterOptions()
     renderBookSeriesFilterOptions()
     renderBooks()
+  })
+  singleNodes.filesCollection?.addEventListener('change', () => {
+    state.filesSelection.collectionId = singleNodes.filesCollection.value || ''
+    state.filesSelection.volumeId = ''
+    state.filesSelection.seriesId = ''
+    state.filesSelection.bookId = ''
+    if (singleNodes.filesVolume) singleNodes.filesVolume.value = ''
+    if (singleNodes.filesSeries) singleNodes.filesSeries.value = ''
+    if (singleNodes.filesBook) singleNodes.filesBook.value = ''
+    renderFilesVolumeOptions()
+    renderFilesSeriesOptions()
+    renderFilesBookOptions()
+    renderFilesManager()
+  })
+  singleNodes.filesVolume?.addEventListener('change', () => {
+    state.filesSelection.volumeId = singleNodes.filesVolume.value || ''
+    state.filesSelection.seriesId = ''
+    state.filesSelection.bookId = ''
+    if (singleNodes.filesSeries) singleNodes.filesSeries.value = ''
+    if (singleNodes.filesBook) singleNodes.filesBook.value = ''
+    renderFilesSeriesOptions()
+    renderFilesBookOptions()
+    renderFilesManager()
+  })
+  singleNodes.filesSeries?.addEventListener('change', () => {
+    state.filesSelection.seriesId = singleNodes.filesSeries.value || ''
+    state.filesSelection.bookId = ''
+    if (singleNodes.filesBook) singleNodes.filesBook.value = ''
+    renderFilesBookOptions()
+    renderFilesManager()
+  })
+  singleNodes.filesBook?.addEventListener('change', () => {
+    state.filesSelection.bookId = singleNodes.filesBook.value || ''
+    handleFilesBookSelection()
   })
 
   $$(selectors.accessModeButtons).forEach((button) => {
@@ -849,6 +1018,86 @@ const fetchAccessGrants = async () => {
   }
 }
 
+const fetchBookFiles = async () => {
+  const { data, error } = await supabase
+    .from('book_files')
+    .select(BOOK_FILE_SELECT)
+    .order('updated_at', { ascending: false })
+
+  if (error) {
+    state.bookFiles = []
+    const key = isSchemaError(error) ? 'book_files_schema' : 'book_files'
+    setTableError(key, error, isSchemaError(error) ? 'schema migration check' : 'read')
+    return
+  }
+
+  state.bookFiles = data || []
+  clearTableError('book_files')
+  clearTableError('book_files_schema')
+}
+
+const fetchBookCovers = async () => {
+  const { data, error } = await supabase
+    .from('book_covers')
+    .select(BOOK_COVER_SELECT)
+    .order('updated_at', { ascending: false })
+
+  if (error) {
+    state.bookCovers = []
+    const key = isSchemaError(error) ? 'book_covers_schema' : 'book_covers'
+    setTableError(key, error, isSchemaError(error) ? 'schema migration check' : 'read')
+    return
+  }
+
+  state.bookCovers = data || []
+  clearTableError('book_covers')
+  clearTableError('book_covers_schema')
+}
+
+const refreshBookPublishingMetadata = async (book) => {
+  if (!isValidBookId(book?.id)) return
+
+  const [filesResult, coversResult] = await Promise.all([
+    supabase
+      .from('book_files')
+      .select(BOOK_FILE_SELECT)
+      .eq('book_id', book.id),
+    supabase
+      .from('book_covers')
+      .select(BOOK_COVER_SELECT)
+      .eq('book_id', book.id),
+  ])
+
+  if (filesResult.error) {
+    setTableError('book_files', filesResult.error, 'selected book refresh')
+  } else {
+    state.bookFiles = [
+      ...(filesResult.data || []),
+      ...state.bookFiles.filter((record) => String(record.book_id) !== String(book.id)),
+    ]
+    clearTableError('book_files')
+  }
+
+  if (coversResult.error) {
+    setTableError('book_covers', coversResult.error, 'selected book refresh')
+  } else {
+    state.bookCovers = [
+      ...(coversResult.data || []),
+      ...state.bookCovers.filter((record) => String(record.book_id) !== String(book.id)),
+    ]
+    clearTableError('book_covers')
+  }
+}
+
+const handleFilesBookSelection = async () => {
+  const book = bookMap().get(singleNodes.filesBook?.value || '') || null
+  renderFilesManager()
+  if (!book) return
+
+  await refreshBookPublishingMetadata(book)
+  renderFilesManager()
+}
+
 const loadAdminData = async () => {
   setStatsLoading()
 
@@ -860,6 +1109,8 @@ const loadAdminData = async () => {
     fetchBooks(),
     fetchFeedbacks(),
     fetchAccessGrants(),
+    fetchBookFiles(),
+    fetchBookCovers(),
   ])
 
   populateFilters()
@@ -909,6 +1160,10 @@ const populateFilters = () => {
   renderBookCollectionFilterOptions()
   renderBookVolumeFilterOptions()
   renderBookSeriesFilterOptions()
+  renderFilesCollectionOptions()
+  renderFilesVolumeOptions()
+  renderFilesSeriesOptions()
+  renderFilesBookOptions()
 }
 
 const renderVolumeCollectionOptions = () => {
@@ -1063,6 +1318,92 @@ const renderBookSeriesFilterOptions = () => {
   )
 }
 
+const syncFilesSelectionFromControls = () => {
+  state.filesSelection = {
+    collectionId: singleNodes.filesCollection?.value || '',
+    volumeId: singleNodes.filesVolume?.value || '',
+    seriesId: singleNodes.filesSeries?.value || '',
+    bookId: singleNodes.filesBook?.value || '',
+  }
+  return state.filesSelection
+}
+
+const renderFilesCollectionOptions = () => {
+  setItemOptions(
+    singleNodes.filesCollection,
+    sortByOrderTitle(state.collections),
+    'Select collection',
+    (collection) => collection.id,
+    (collection) => getText(collection.title)
+  )
+  syncFilesSelectionFromControls()
+}
+
+const renderFilesVolumeOptions = () => {
+  const selectedCollectionId = singleNodes.filesCollection?.value || ''
+  const volumes = sortByOrderTitle(
+    state.volumes.filter((volume) => !selectedCollectionId || volume.collection_id === selectedCollectionId)
+  )
+
+  setItemOptions(
+    singleNodes.filesVolume,
+    volumes,
+    'Select volume',
+    (volume) => volume.id,
+    (volume) => getText(volume.title)
+  )
+  syncFilesSelectionFromControls()
+}
+
+const renderFilesSeriesOptions = () => {
+  const selectedCollectionId = singleNodes.filesCollection?.value || ''
+  const selectedVolumeId = singleNodes.filesVolume?.value || ''
+  const lookups = buildHierarchyLookups()
+  const seriesItems = sortByOrderTitle(
+    state.seriesItems
+      .filter((series) => {
+        const parentVolume = lookups.volumesById.get(series.volume_id)
+        return !selectedCollectionId
+          || series.collection_id === selectedCollectionId
+          || parentVolume?.collection_id === selectedCollectionId
+      })
+      .filter((series) => !selectedVolumeId || series.volume_id === selectedVolumeId)
+  )
+
+  setItemOptions(
+    singleNodes.filesSeries,
+    seriesItems,
+    'Select series',
+    (series) => series.id,
+    (series) => getText(series.title)
+  )
+  syncFilesSelectionFromControls()
+}
+
+const renderFilesBookOptions = () => {
+  const selectedCollectionId = singleNodes.filesCollection?.value || ''
+  const selectedVolumeId = singleNodes.filesVolume?.value || ''
+  const selectedSeriesId = singleNodes.filesSeries?.value || ''
+  const lookups = buildHierarchyLookups()
+  const books = sortBooksByNumberTitle(
+    state.books.filter((book) => {
+      const hierarchy = hierarchyFromLookups(book, lookups)
+      return (!selectedCollectionId || hierarchy.collection?.id === selectedCollectionId)
+        && (!selectedVolumeId || hierarchy.volume?.id === selectedVolumeId)
+        && (!selectedSeriesId || hierarchy.series?.id === selectedSeriesId)
+    })
+  )
+
+  setItemOptions(
+    singleNodes.filesBook,
+    books,
+    'Select book',
+    (book) => book.id,
+    (book) => bookLabel(book)
+  )
+  syncFilesSelectionFromControls()
+}
+
 const renderDashboard = () => {
   const newFeedbacks = state.feedbacks.filter((feedback) => normalize(feedback.status || 'new') === 'new').length
   if (state.counts.accessGrants != null) state.counts.accessGrants = activeAccessGrantCount()
@@ -1124,6 +1465,11 @@ const renderFilteredSections = () => {
   renderUsers()
   renderContentManagement()
   renderBooks()
+  renderFilesCollectionOptions()
+  renderFilesVolumeOptions()
+  renderFilesSeriesOptions()
+  renderFilesBookOptions()
+  renderFilesManager()
   renderAccessGrants()
   renderSeriesAccessStatus()
   renderFeedback()
@@ -1133,6 +1479,11 @@ const renderHierarchyDependentSections = () => {
   renderDashboard()
   renderContentManagement()
   renderBooks()
+  renderFilesCollectionOptions()
+  renderFilesVolumeOptions()
+  renderFilesSeriesOptions()
+  renderFilesBookOptions()
+  renderFilesManager()
   renderAccessGrants()
   renderSeriesAccessStatus()
 }
@@ -1844,6 +2195,7 @@ const renderCollectionDetail = (collection, lookups = buildHierarchyLookups()) =
     ),
     detailActions(save),
     children,
+    renderDangerZone('collection', collection, counts),
   ]
 }
 
@@ -1891,6 +2243,7 @@ const renderVolumeDetail = (volume, lookups = buildHierarchyLookups()) => {
     ),
     detailActions(save),
     children,
+    renderDangerZone('volume', volume, counts),
   ]
 }
 
@@ -1941,6 +2294,7 @@ const renderSeriesDetail = (series, lookups = buildHierarchyLookups()) => {
     ),
     detailActions(save),
     bookList,
+    renderDangerZone('series', series, { books: books.length }),
   ]
 }
 
@@ -1973,6 +2327,9 @@ const renderBookDetail = (book, lookups = buildHierarchyLookups()) => {
       labeledControl('Global Active', active)
     ),
     detailActions(save),
+    renderCoverManagement(book),
+    renderBookFilesManagement(book),
+    renderDangerZone('book', book),
   ]
 }
 
@@ -2018,14 +2375,6 @@ const renderSeriesBooksDetail = (series, books) => {
   const list = createNode('div', 'admin-series-book-list')
   books.forEach((book) => {
     const card = createNode('article', 'admin-series-book-card')
-    const visibility = visibilitySelect(bookVisibility(book))
-    const active = activeSelect(book.is_active)
-    const save = contentSaveButton('Save')
-    save.addEventListener('click', () => updateBookContentControls(book, {
-      visibility,
-      active,
-      saveButton: save,
-    }))
 
     const title = createNode('div', 'admin-series-book-card__title')
     title.append(
@@ -2033,20 +2382,615 @@ const renderSeriesBooksDetail = (series, books) => {
       createNode('span', '', `Book ${getText(book.book_number)} / ${getText(book.slug)}`)
     )
 
-    const controls = createNode('div', 'admin-inline-actions')
-    controls.append(
-      createNode('span', 'admin-field-hint', 'Visibility'),
-      visibility,
-      createNode('span', 'admin-field-hint', 'Active'),
-      active,
-      save
-    )
-
-    card.append(title, controls)
+    card.append(title, bookControlsPanel(book, { activeLabel: 'Active' }))
     list.append(card)
   })
   wrap.append(list)
   return wrap
+}
+
+const bookFileRecord = (book, fileType) => {
+  return state.bookFiles.find((record) => String(record.book_id) === String(book?.id) && record.file_type === fileType) || null
+}
+
+const bookCoverRecord = (book, coverType = 'front_cover') => {
+  return state.bookCovers.find((record) => String(record.book_id) === String(book?.id) && record.cover_type === coverType) || null
+}
+
+const verifyCurrentAdminRole = async () => {
+  if (!state.user?.id) return ''
+
+  const { data, error } = await supabase
+    .from('profiles')
+    .select('id, display_name, role, created_at')
+    .eq('id', state.user.id)
+    .maybeSingle()
+
+  if (error) {
+    setTableError('profiles', error, 'download role check')
+    return ''
+  }
+
+  if (!ADMIN_ROLES.has(data?.role)) return ''
+
+  state.profile = { ...state.profile, ...data }
+  renderIdentity()
+  clearTableError('profiles')
+  return data.role
+}
+
+const triggerSignedDownload = (url, fileName) => {
+  const link = document.createElement('a')
+  link.href = url
+  link.download = getText(fileName, 'greyveil-file')
+  link.target = '_blank'
+  link.rel = 'noopener'
+  document.body.append(link)
+  link.click()
+  link.remove()
+}
+
+const refreshBookFileMetadata = async (book, fileType) => {
+  const { data, error } = await supabase
+    .from('book_files')
+    .select(BOOK_FILE_SELECT)
+    .eq('book_id', book.id)
+    .eq('file_type', fileType)
+    .maybeSingle()
+
+  if (error) {
+    setTableError('book_files', error, 'download metadata check')
+    return { record: null, error }
+  }
+
+  if (data) replaceRecord(state.bookFiles, 'file_type', data)
+  return { record: data || null, error: null }
+}
+
+const handleBookFileDownload = async (book, fileType, status, button) => {
+  const config = BOOK_FILE_CONFIGS[fileType]
+  const previousLabel = button?.textContent
+
+  if (!config) return
+  if (!isValidBookId(book?.id) || !bookMap().has(book.id)) {
+    setFormStatus(status, 'Selected book id is not valid.', 'error')
+    return
+  }
+
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Downloading...'
+  }
+
+  const restoreButton = () => {
+    if (!button) return
+    button.disabled = false
+    button.textContent = previousLabel
+  }
+
+  const role = await verifyCurrentAdminRole()
+  if (!roleCanManageBookFileType(role, fileType)) {
+    restoreButton()
+    setFormStatus(status, `${config.label} download is not allowed for this admin role.`, 'error')
+    return
+  }
+
+  const { record, error: metadataError } = await refreshBookFileMetadata(book, fileType)
+  if (metadataError) {
+    restoreButton()
+    setFormStatus(status, 'File metadata could not be verified. Check the dashboard alert for details.', 'error')
+    return
+  }
+
+  if (!record?.storage_path || String(record.book_id) !== String(book.id) || record.file_type !== fileType) {
+    restoreButton()
+    setFormStatus(status, `${config.label} is missing for this book.`, 'error')
+    renderFilesManager()
+    return
+  }
+
+  const { data, error } = await supabase.storage
+    .from(BOOK_FILE_BUCKET)
+    .createSignedUrl(record.storage_path, 60)
+
+  restoreButton()
+
+  if (error || !data?.signedUrl) {
+    setFormStatus(status, 'Signed download could not be created. Check the dashboard alert for details.', 'error')
+    setTableError('book_files_storage', error || new Error('Signed URL was not returned.'), 'signed download')
+    return
+  }
+
+  clearTableError('book_files')
+  clearTableError('book_files_storage')
+  setFormStatus(status, `${config.label} download opened.`, 'success')
+  triggerSignedDownload(data.signedUrl, record.file_name || config.storageName)
+}
+
+const replaceRecord = (records, keyName, nextRecord) => {
+  const index = records.findIndex((record) => String(record.book_id) === String(nextRecord.book_id) && record[keyName] === nextRecord[keyName])
+  if (index >= 0) {
+    records[index] = nextRecord
+  } else {
+    records.unshift(nextRecord)
+  }
+}
+
+const removeReplacedStorageObject = async (bucketName, previousPath, nextPath) => {
+  if (!previousPath || previousPath === nextPath) return
+
+  const { error } = await supabase.storage
+    .from(bucketName)
+    .remove([previousPath])
+
+  if (error) setTableError(`storage_${bucketName}`, error, 'old file cleanup')
+}
+
+const renderManagedFileMeta = (record) => {
+  const meta = createNode('p', 'admin-managed-file__meta')
+  meta.textContent = record
+    ? `${getText(record.file_name)} / ${formatBytes(record.file_size)} / ${formatDate(record.updated_at || record.created_at)}`
+    : 'No uploaded file is recorded for this book.'
+  return meta
+}
+
+const refreshCoverPreview = async (record, image, status, button) => {
+  if (!record?.storage_path || !image) return
+
+  const previousLabel = button?.textContent
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Loading...'
+  }
+
+  const { data, error } = await supabase.storage
+    .from(BOOK_COVER_BUCKET)
+    .createSignedUrl(record.storage_path, 60)
+
+  if (button) {
+    button.disabled = false
+    button.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(status, 'Preview could not be opened with current storage policies.', 'error')
+    setTableError('book_covers_storage', error, 'signed preview')
+    return
+  }
+
+  image.src = data?.signedUrl || ''
+  image.hidden = !image.src
+  setFormStatus(status, 'Preview refreshed for this admin session.', 'success')
+}
+
+const handleCoverUpload = async (book, coverType, input, status, button) => {
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+  if (!isValidBookId(book?.id) || !bookMap().has(book.id)) {
+    setFormStatus(status, 'Selected book id is not valid.', 'error')
+    return
+  }
+
+  const config = COVER_CONFIGS[coverType]
+  const file = input?.files?.[0]
+  const validationError = validateManagedFile(file, config, config.label)
+  if (validationError) {
+    setFormStatus(status, validationError, 'error')
+    return
+  }
+
+  const previousRecord = bookCoverRecord(book, coverType)
+  const storagePath = `${bookStorageFolder(book)}/${config.storageName}.${coverExtensionForFile(file)}`
+  const previousLabel = button?.textContent
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Uploading...'
+  }
+
+  const uploadResult = await supabase.storage
+    .from(BOOK_COVER_BUCKET)
+    .upload(storagePath, file, {
+      cacheControl: '3600',
+      contentType: file.type || 'image/jpeg',
+      upsert: true,
+    })
+
+  if (uploadResult.error) {
+    if (button) {
+      button.disabled = false
+      button.textContent = previousLabel
+    }
+    setFormStatus(status, 'Cover upload failed. Check the dashboard alert for details.', 'error')
+    setTableError('book_covers_storage', uploadResult.error, 'UPLOAD')
+    return
+  }
+
+  const payload = {
+    book_id: book.id,
+    cover_type: coverType,
+    storage_path: storagePath,
+    file_name: file.name,
+    mime_type: file.type || 'application/octet-stream',
+    file_size: file.size,
+  }
+  const { data, error } = await supabase
+    .from('book_covers')
+    .upsert(payload, { onConflict: 'book_id,cover_type' })
+    .select(BOOK_COVER_SELECT)
+    .maybeSingle()
+
+  if (button) {
+    button.disabled = false
+    button.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(status, 'Cover uploaded, but metadata could not be saved.', 'error')
+    setTableError('book_covers', error, 'UPSERT')
+    return
+  }
+
+  const nextRecord = data || payload
+  replaceRecord(state.bookCovers, 'cover_type', nextRecord)
+  await removeReplacedStorageObject(BOOK_COVER_BUCKET, previousRecord?.storage_path, storagePath)
+  clearTableError('book_covers')
+  clearTableError('book_covers_storage')
+  setFormStatus(status, 'Front cover saved.', 'success')
+  renderContentManagement()
+  renderFilesManager()
+}
+
+const handleBookFileUpload = async (book, fileType, input, status, button) => {
+  if (!canManageBookFileType(fileType)) return
+  if (!isValidBookId(book?.id) || !bookMap().has(book.id)) {
+    setFormStatus(status, 'Selected book id is not valid.', 'error')
+    return
+  }
+
+  const config = BOOK_FILE_CONFIGS[fileType]
+  const file = input?.files?.[0]
+  const validationError = validateManagedFile(file, config, config.label)
+  if (validationError) {
+    setFormStatus(status, validationError, 'error')
+    return
+  }
+
+  const previousRecord = bookFileRecord(book, fileType)
+  const storagePath = `${bookStorageFolder(book)}/${config.storageName}`
+  const previousLabel = button?.textContent
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Uploading...'
+  }
+
+  const uploadResult = await supabase.storage
+    .from(BOOK_FILE_BUCKET)
+    .upload(storagePath, file, {
+      cacheControl: '3600',
+      contentType: file.type || 'application/octet-stream',
+      upsert: true,
+    })
+
+  if (uploadResult.error) {
+    if (button) {
+      button.disabled = false
+      button.textContent = previousLabel
+    }
+    setFormStatus(status, `${config.label} upload failed. Check the dashboard alert for details.`, 'error')
+    setTableError('book_files_storage', uploadResult.error, 'UPLOAD')
+    return
+  }
+
+  const payload = {
+    book_id: book.id,
+    file_type: fileType,
+    storage_path: storagePath,
+    file_name: file.name,
+    mime_type: file.type || 'application/octet-stream',
+    file_size: file.size,
+  }
+  const { data, error } = await supabase
+    .from('book_files')
+    .upsert(payload, { onConflict: 'book_id,file_type' })
+    .select(BOOK_FILE_SELECT)
+    .maybeSingle()
+
+  if (button) {
+    button.disabled = false
+    button.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(status, `${config.label} uploaded, but metadata could not be saved.`, 'error')
+    setTableError('book_files', error, 'UPSERT')
+    return
+  }
+
+  const nextRecord = data || payload
+  replaceRecord(state.bookFiles, 'file_type', nextRecord)
+  await removeReplacedStorageObject(BOOK_FILE_BUCKET, previousRecord?.storage_path, storagePath)
+  clearTableError('book_files')
+  clearTableError('book_files_storage')
+  setFormStatus(status, `${config.label} saved.`, 'success')
+  renderContentManagement()
+  renderFilesManager()
+}
+
+const renderCoverManagement = (book) => {
+  const section = createNode('section', 'admin-managed-section')
+  section.append(
+    createNode('p', 'admin-eyebrow', 'Cover'),
+    createNode('h4', '', 'Front Cover')
+  )
+
+  const coverType = 'front_cover'
+  const config = COVER_CONFIGS[coverType]
+  const record = bookCoverRecord(book, coverType)
+  const card = createNode('article', 'admin-managed-file')
+  const preview = createNode('figure', 'admin-cover-preview')
+  const image = document.createElement('img')
+  image.alt = `${getText(book.title, 'Book')} front cover preview`
+  image.hidden = !record
+  const missing = createNode('span', 'admin-cover-preview__missing', 'Missing')
+  missing.hidden = Boolean(record)
+  preview.append(image, missing)
+
+  const statusBadgeClass = record ? 'admin-badge--active' : 'admin-badge--restricted'
+  const header = createNode('div', 'admin-managed-file__header')
+  header.append(
+    createNode('strong', '', config.label),
+    hierarchyBadge(record ? 'Ready' : 'Missing', statusBadgeClass)
+  )
+
+  const input = document.createElement('input')
+  input.type = 'file'
+  input.accept = config.accept
+  const upload = createNode('button', 'admin-inline-action', record ? 'Replace' : 'Upload')
+  upload.type = 'button'
+  upload.disabled = true
+  const previewButton = createNode('button', 'admin-inline-action', 'Preview')
+  previewButton.type = 'button'
+  previewButton.disabled = !record
+  const status = createNode('p', 'admin-form-status')
+  status.setAttribute('role', 'status')
+  status.setAttribute('aria-live', 'polite')
+
+  input.addEventListener('change', () => {
+    upload.disabled = !input.files?.length
+    setFormStatus(status)
+  })
+  upload.addEventListener('click', () => handleCoverUpload(book, coverType, input, status, upload))
+  previewButton.addEventListener('click', () => refreshCoverPreview(bookCoverRecord(book, coverType), image, status, previewButton))
+
+  const actions = createNode('div', 'admin-managed-file__actions')
+  actions.append(previewButton, input, upload)
+  card.append(preview, createNode('div', 'admin-managed-file__body'))
+  card.lastChild.append(header, renderManagedFileMeta(record), actions, status)
+  section.append(card)
+
+  if (record) refreshCoverPreview(record, image, status, previewButton)
+  return section
+}
+
+const renderBookFilesManagement = (book) => {
+  const section = createNode('section', 'admin-managed-section')
+  section.append(
+    createNode('p', 'admin-eyebrow', 'Files'),
+    createNode('h4', '', 'Manual Uploads')
+  )
+
+  const list = createNode('div', 'admin-managed-file-list')
+  Object.entries(BOOK_FILE_CONFIGS).forEach(([fileType, config]) => {
+    const record = bookFileRecord(book, fileType)
+    const canManage = canManageBookFileType(fileType)
+    const card = createNode('article', 'admin-managed-file admin-managed-file--compact')
+    const header = createNode('div', 'admin-managed-file__header')
+    header.append(
+      createNode('strong', '', config.label),
+      hierarchyBadge(record ? 'Ready' : 'Missing', record ? 'admin-badge--active' : 'admin-badge--restricted')
+    )
+
+    const input = document.createElement('input')
+    input.type = 'file'
+    input.accept = config.accept
+    input.disabled = !canManage
+    const download = createNode('button', 'admin-inline-action', 'Download')
+    download.type = 'button'
+    download.disabled = !canManage || !record
+    const upload = createNode('button', 'admin-inline-action', record ? 'Replace' : 'Upload')
+    upload.type = 'button'
+    upload.disabled = true
+    const status = createNode('p', 'admin-form-status')
+    status.setAttribute('role', 'status')
+    status.setAttribute('aria-live', 'polite')
+
+    input.addEventListener('change', () => {
+      upload.disabled = !canManage || !input.files?.length
+      setFormStatus(status)
+    })
+    download.addEventListener('click', () => handleBookFileDownload(book, fileType, status, download))
+    upload.addEventListener('click', () => handleBookFileUpload(book, fileType, input, status, upload))
+
+    const actions = createNode('div', 'admin-managed-file__actions')
+    if (canManage) {
+      if (record) actions.append(download)
+      actions.append(input, upload)
+    }
+    const hint = config.superAdminOnly && !isSuperAdmin()
+      ? createNode('p', 'admin-field-hint', 'Super Admin only for this format.')
+      : null
+
+    card.append(header, renderManagedFileMeta(record), actions)
+    if (hint) card.append(hint)
+    card.append(status)
+    list.append(card)
+  })
+
+  section.append(list)
+  return section
+}
+
+const renderFilesManager = () => {
+  const detail = singleNodes.filesDetail
+  if (!detail) return
+
+  const selection = syncFilesSelectionFromControls()
+  const book = bookMap().get(selection.bookId) || null
+  clearNode(detail)
+  setFormStatus(singleNodes.filesStatus)
+
+  if (!book) {
+    const placeholder = createNode('article', 'admin-card admin-placeholder admin-files-placeholder')
+    placeholder.append(
+      createNode('h3', '', 'Select a book.'),
+      createNode('p', '', 'Choose a Collection, Volume, Series, and Book to manage private publishing files.')
+    )
+    detail.append(placeholder)
+    return
+  }
+
+  const hierarchy = hierarchyFromLookups(book)
+  const summary = createNode('article', 'admin-card admin-files-book-summary')
+  const title = createNode('div', 'admin-files-book-summary__title')
+  title.append(
+    createNode('p', 'admin-eyebrow', 'Selected Book'),
+    createNode('h3', '', getText(book.title)),
+    createNode('span', '', `Book ${getText(book.book_number)} / ${getText(book.slug)}`)
+  )
+  const meta = createNode('div', 'admin-book-card__badges')
+  meta.append(
+    hierarchyBadge(getText(hierarchy.collection?.title, 'Unassigned collection')),
+    hierarchyBadge(getText(hierarchy.volume?.title, 'Unassigned volume')),
+    hierarchyBadge(getText(hierarchy.series?.title, book.series)),
+    hierarchyBadge(visibilityLabel(bookVisibility(book))),
+    hierarchyBadge(boolValueLabel(book.is_active), book.is_active === false ? 'admin-badge--disabled' : 'admin-badge--active')
+  )
+  summary.append(title, meta)
+
+  const coverSection = renderCoverManagement(book)
+  const filesSection = renderBookFilesManagement(book)
+  coverSection.classList.add('admin-files-cover-section')
+  filesSection.classList.add('admin-files-files-section')
+
+  detail.append(summary, coverSection, filesSection)
+  setFormStatus(singleNodes.filesStatus, `Loaded file status for ${getText(book.title)}.`, 'success')
+}
+
+const deleteDependencyText = (kind, counts = {}) => {
+  if (kind === 'collection') return `${counts.volumes} volumes / ${counts.series} series / ${counts.books} books`
+  if (kind === 'volume') return `${counts.series} series / ${counts.books} books`
+  if (kind === 'series') return `${counts.books} books`
+  return 'Book row only. Existing foreign keys may still block deletion.'
+}
+
+const canDeleteContentItem = (kind, counts = {}) => {
+  if (kind === 'collection') return !counts.volumes && !counts.series && !counts.books
+  if (kind === 'volume') return !counts.series && !counts.books
+  if (kind === 'series') return !counts.books
+  return kind === 'book'
+}
+
+const currentDeleteCounts = (kind, item, lookups = buildHierarchyLookups()) => {
+  if (kind === 'collection') return collectionContentCounts(item, lookups)
+  if (kind === 'volume') return volumeContentCounts(item, lookups)
+  if (kind === 'series') return { books: (lookups.booksBySeries.get(item.id) || []).length }
+  return {}
+}
+
+const deleteTableForKind = (kind) => {
+  return {
+    collection: 'collections',
+    volume: 'volumes',
+    series: 'series',
+    book: 'books',
+  }[kind] || ''
+}
+
+const removeDeletedContentFromState = (kind, id) => {
+  if (kind === 'collection') state.collections = state.collections.filter((item) => item.id !== id)
+  if (kind === 'volume') state.volumes = state.volumes.filter((item) => item.id !== id)
+  if (kind === 'series') state.seriesItems = state.seriesItems.filter((item) => item.id !== id)
+  if (kind === 'book') {
+    state.books = state.books.filter((item) => item.id !== id)
+    state.bookFiles = state.bookFiles.filter((item) => String(item.book_id) !== String(id))
+    state.bookCovers = state.bookCovers.filter((item) => String(item.book_id) !== String(id))
+  }
+}
+
+const handleDeleteContent = async (kind, item, status, button) => {
+  if (!ADMIN_ROLES.has(state.profile?.role)) return
+  if (!isValidBookId(item?.id)) {
+    setFormStatus(status, 'Selected row id is not valid.', 'error')
+    return
+  }
+
+  const counts = currentDeleteCounts(kind, item)
+  if (!canDeleteContentItem(kind, counts)) {
+    setFormStatus(status, `Delete blocked: ${deleteDependencyText(kind, counts)} still linked.`, 'error')
+    return
+  }
+
+  const label = getText(item.title, `this ${kind}`)
+  const token = kind === 'book' ? 'DELETE BOOK' : 'DELETE'
+  const confirmed = window.prompt(`Type ${token} to permanently delete "${label}".`) === token
+  if (!confirmed) return
+
+  const table = deleteTableForKind(kind)
+  const previousLabel = button?.textContent
+  if (button) {
+    button.disabled = true
+    button.textContent = 'Deleting...'
+  }
+
+  const { error } = await supabase
+    .from(table)
+    .delete()
+    .eq('id', item.id)
+
+  if (button) {
+    button.disabled = false
+    button.textContent = previousLabel
+  }
+
+  if (error) {
+    setFormStatus(status, `${label} could not be deleted. Existing related rows or policy rules may be blocking it.`, 'error')
+    setTableError(table, error, 'DELETE')
+    return
+  }
+
+  removeDeletedContentFromState(kind, item.id)
+  state.contentSelection = { kind: '', id: '' }
+  clearTableError(table)
+  setFormStatus(status, `${label} deleted.`, 'success')
+  populateFilters()
+  renderHierarchyDependentSections()
+}
+
+const renderDangerZone = (kind, item, counts = {}) => {
+  const section = createNode('section', 'admin-danger-zone')
+  const status = createNode('p', 'admin-form-status')
+  status.setAttribute('role', 'status')
+  status.setAttribute('aria-live', 'polite')
+  const canDelete = canDeleteContentItem(kind, counts)
+  const button = createNode('button', 'admin-action admin-action--danger', `Delete ${kind.charAt(0).toUpperCase()}${kind.slice(1)}`)
+  button.type = 'button'
+  button.disabled = !canDelete
+  button.addEventListener('click', () => handleDeleteContent(kind, item, status, button))
+
+  section.append(
+    createNode('p', 'admin-eyebrow', 'Danger Zone'),
+    createNode('h4', '', `Delete ${kind.charAt(0).toUpperCase()}${kind.slice(1)}`),
+    createNode(
+      'p',
+      'admin-panel-note',
+      canDelete
+        ? 'Deletion is permanent and uses existing foreign keys and RLS policies. No parent hierarchy is deleted automatically.'
+        : `Delete blocked until dependencies are removed: ${deleteDependencyText(kind, counts)}.`
+    ),
+    button,
+    status
+  )
+
+  return section
 }
 
 const renderContentDetail = () => {
@@ -2542,11 +3486,18 @@ const renderBooks = () => {
   }
 }
 
-const bookControlsPanel = (book) => {
-  const actions = createNode('div', 'admin-inline-actions')
+const bookControlField = (label, control) => {
+  const field = createNode('label', 'admin-book-control')
+  field.append(createNode('span', '', label), control)
+  return field
+}
+
+const bookControlsPanel = (book, options = {}) => {
+  const actions = createNode('div', 'admin-book-controls')
   const visibility = visibilitySelect(bookVisibility(book))
   const active = activeSelect(book.is_active)
-  const saveButton = createNode('button', 'admin-inline-action', 'Save')
+  const saveButton = createNode('button', 'admin-inline-action admin-book-save', 'Save')
+  const saveWrap = createNode('div', 'admin-book-control admin-book-control--save')
 
   saveButton.type = 'button'
   saveButton.addEventListener('click', () => updateBookContentControls(book, {
@@ -2555,12 +3506,11 @@ const bookControlsPanel = (book) => {
     saveButton,
   }))
 
+  saveWrap.append(saveButton)
   actions.append(
-    createNode('span', 'admin-field-hint', 'Visibility'),
-    visibility,
-    createNode('span', 'admin-field-hint', 'Global Active'),
-    active,
-    saveButton
+    bookControlField('Visibility', visibility),
+    bookControlField(options.activeLabel || 'Global Active', active),
+    saveWrap
   )
   return actions
 }
@@ -2617,7 +3567,14 @@ const updateBookContentControls = async (book, controls) => {
 
 const profileMap = () => new Map(state.users.map((profile) => [profile.id, profile]))
 
-const bookMap = () => new Map(state.books.map((book) => [book.id, book]))
+const bookMap = () => {
+  const map = new Map()
+  state.books.forEach((book) => {
+    map.set(book.id, book)
+    map.set(String(book.id), book)
+  })
+  return map
+}
 
 const effectiveBookHierarchyVisibility = (hierarchy) => {
   return effectiveVisibility({

@@ -510,14 +510,47 @@
         <section class="admin-panel" data-admin-panel="files" aria-labelledby="files-title">
           <div class="admin-panel-heading">
             <div>
-              <p class="admin-eyebrow">Coming Later</p>
+              <p class="admin-eyebrow">Publishing Files</p>
               <h2 id="files-title">Files</h2>
+              <p class="admin-panel-note">Select any book directly, then manage its private cover and publishing files without leaving this tab.</p>
             </div>
           </div>
-          <article class="admin-card admin-placeholder">
-            <h3>File tools are not part of Step 5.</h3>
-            <p>No upload, download, PDF, or EPUB tooling has been added.</p>
-          </article>
+          <div class="admin-files-manager">
+            <article class="admin-card admin-files-selector-card">
+              <div class="admin-card-heading">
+                <h3>Book Selector</h3>
+                <p>Collection to Volume to Series to Book</p>
+              </div>
+              <div class="admin-access-grid admin-files-selector">
+                <label>
+                  <span>Collection</span>
+                  <select data-files-collection>
+                    <option value="">Select collection</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Volume</span>
+                  <select data-files-volume>
+                    <option value="">Select volume</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Series</span>
+                  <select data-files-series>
+                    <option value="">Select series</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Book</span>
+                  <select data-files-book>
+                    <option value="">Select book</option>
+                  </select>
+                </label>
+              </div>
+              <p class="admin-form-status" data-files-status role="status" aria-live="polite"></p>
+            </article>
+            <div class="admin-files-detail" data-files-detail></div>
+          </div>
         </section>
       </div>
     </div>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="book-id">urn:uuid:c82a4ba2-085e-5823-bf04-1f04fbca8d53</dc:identifier>
+    <dc:title>The End of Interpretation</dc:title>
+    <dc:creator>Lalit R. Mishra</dc:creator>
+    <dc:publisher>Greyveil Editions</dc:publisher>
+    <dc:language>en</dc:language>
+    <meta property="dcterms:modified">2026-08-09T00:00:00Z</meta>
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:orientation">portrait</meta>
+    <meta property="rendition:spread">none</meta>
+    <meta property="rendition:flow">paginated</meta>
+    <dc:description>The moment awareness no longer seeks answers, and the self begins to dissolve.</dc:description>
+    <meta property="belongs-to-collection">Human Paradox</meta>
+    <meta property="group-position">III</meta>
+    <meta name="cover" content="cover-image"/>
+  </metadata>
+  <manifest>
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="style" href="styles/greyveil-fixed.css" media-type="text/css"/>
+    <item id="cover-image" href="images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title-page" href="pages/p0001-title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contents-1" href="pages/p0002-contents.xhtml" media-type="application/xhtml+xml"/>
+    <item id="copyright-notice-1" href="pages/p0003-copyright-notice.xhtml" media-type="application/xhtml+xml"/>
+    <item id="disclaimer-1" href="pages/p0004-disclaimer.xhtml" media-type="application/xhtml+xml"/>
+    <item id="dedication-1" href="pages/p0005-dedication.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-1" href="pages/p0006-note-from-the-author.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-2" href="pages/p0007-note-from-the-author-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-3" href="pages/p0008-note-from-the-author-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-1" href="pages/p0009-prologue.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-2" href="pages/p0010-prologue-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-3" href="pages/p0011-prologue-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="arc-i-the-breakdown-of-structure-1" href="pages/p0012-arc-i-the-breakdown-of-structure.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction-1" href="pages/p0013-introduction.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction-2" href="pages/p0014-introduction-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction-3" href="pages/p0015-introduction-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction-4" href="pages/p0016-introduction-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction-5" href="pages/p0017-introduction-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction-6" href="pages/p0018-introduction-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-1" href="pages/p0019-chapter-01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-2" href="pages/p0020-chapter-01-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-3" href="pages/p0021-chapter-01-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-4" href="pages/p0022-chapter-01-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-5" href="pages/p0023-chapter-01-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-6" href="pages/p0024-chapter-01-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-7" href="pages/p0025-chapter-01-7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-1" href="pages/p0026-chapter-02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-2" href="pages/p0027-chapter-02-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-3" href="pages/p0028-chapter-02-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-4" href="pages/p0029-chapter-02-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-5" href="pages/p0030-chapter-02-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-6" href="pages/p0031-chapter-02-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-7" href="pages/p0032-chapter-02-7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-1" href="pages/p0033-chapter-03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-2" href="pages/p0034-chapter-03-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-3" href="pages/p0035-chapter-03-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-4" href="pages/p0036-chapter-03-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-5" href="pages/p0037-chapter-03-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-6" href="pages/p0038-chapter-03-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="arc-ii-the-dissolving-self-1" href="pages/p0039-arc-ii-the-dissolving-self.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-1" href="pages/p0040-chapter-04.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-2" href="pages/p0041-chapter-04-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-3" href="pages/p0042-chapter-04-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-4" href="pages/p0043-chapter-04-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-5" href="pages/p0044-chapter-04-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-6" href="pages/p0045-chapter-04-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-7" href="pages/p0046-chapter-04-7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-1" href="pages/p0047-chapter-05.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-2" href="pages/p0048-chapter-05-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-3" href="pages/p0049-chapter-05-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-4" href="pages/p0050-chapter-05-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-5" href="pages/p0051-chapter-05-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-6" href="pages/p0052-chapter-05-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-7" href="pages/p0053-chapter-05-7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-8" href="pages/p0054-chapter-05-8.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-1" href="pages/p0055-chapter-06.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-2" href="pages/p0056-chapter-06-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-3" href="pages/p0057-chapter-06-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-4" href="pages/p0058-chapter-06-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-5" href="pages/p0059-chapter-06-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-6" href="pages/p0060-chapter-06-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-7" href="pages/p0061-chapter-06-7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="arc-iii-perception-without-filter-1" href="pages/p0062-arc-iii-perception-without-filter.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-1" href="pages/p0063-chapter-07.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-2" href="pages/p0064-chapter-07-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-3" href="pages/p0065-chapter-07-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-4" href="pages/p0066-chapter-07-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-5" href="pages/p0067-chapter-07-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-08-1" href="pages/p0068-chapter-08.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-08-2" href="pages/p0069-chapter-08-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-08-3" href="pages/p0070-chapter-08-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-08-4" href="pages/p0071-chapter-08-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-08-5" href="pages/p0072-chapter-08-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-08-6" href="pages/p0073-chapter-08-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-08-7" href="pages/p0074-chapter-08-7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-09-1" href="pages/p0075-chapter-09.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-09-2" href="pages/p0076-chapter-09-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-09-3" href="pages/p0077-chapter-09-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-09-4" href="pages/p0078-chapter-09-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-09-5" href="pages/p0079-chapter-09-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-09-6" href="pages/p0080-chapter-09-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="arc-iv-the-quiet-completion-1" href="pages/p0081-arc-iv-the-quiet-completion.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-1" href="pages/p0082-end-realization.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-2" href="pages/p0083-end-realization-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-3" href="pages/p0084-end-realization-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-4" href="pages/p0085-end-realization-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-5" href="pages/p0086-end-realization-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogue-1" href="pages/p0087-epilogue.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogue-2" href="pages/p0088-epilogue-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-1" href="pages/p0089-about-the-author.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-2" href="pages/p0090-about-the-author-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-3" href="pages/p0091-about-the-author-3.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine page-progression-direction="ltr">
+    <itemref idref="cover"/>
+    <itemref idref="title-page"/>
+    <itemref idref="contents-1"/>
+    <itemref idref="copyright-notice-1"/>
+    <itemref idref="disclaimer-1"/>
+    <itemref idref="dedication-1"/>
+    <itemref idref="note-from-the-author-1"/>
+    <itemref idref="note-from-the-author-2"/>
+    <itemref idref="note-from-the-author-3"/>
+    <itemref idref="prologue-1"/>
+    <itemref idref="prologue-2"/>
+    <itemref idref="prologue-3"/>
+    <itemref idref="arc-i-the-breakdown-of-structure-1"/>
+    <itemref idref="introduction-1"/>
+    <itemref idref="introduction-2"/>
+    <itemref idref="introduction-3"/>
+    <itemref idref="introduction-4"/>
+    <itemref idref="introduction-5"/>
+    <itemref idref="introduction-6"/>
+    <itemref idref="chapter-01-1"/>
+    <itemref idref="chapter-01-2"/>
+    <itemref idref="chapter-01-3"/>
+    <itemref idref="chapter-01-4"/>
+    <itemref idref="chapter-01-5"/>
+    <itemref idref="chapter-01-6"/>
+    <itemref idref="chapter-01-7"/>
+    <itemref idref="chapter-02-1"/>
+    <itemref idref="chapter-02-2"/>
+    <itemref idref="chapter-02-3"/>
+    <itemref idref="chapter-02-4"/>
+    <itemref idref="chapter-02-5"/>
+    <itemref idref="chapter-02-6"/>
+    <itemref idref="chapter-02-7"/>
+    <itemref idref="chapter-03-1"/>
+    <itemref idref="chapter-03-2"/>
+    <itemref idref="chapter-03-3"/>
+    <itemref idref="chapter-03-4"/>
+    <itemref idref="chapter-03-5"/>
+    <itemref idref="chapter-03-6"/>
+    <itemref idref="arc-ii-the-dissolving-self-1"/>
+    <itemref idref="chapter-04-1"/>
+    <itemref idref="chapter-04-2"/>
+    <itemref idref="chapter-04-3"/>
+    <itemref idref="chapter-04-4"/>
+    <itemref idref="chapter-04-5"/>
+    <itemref idref="chapter-04-6"/>
+    <itemref idref="chapter-04-7"/>
+    <itemref idref="chapter-05-1"/>
+    <itemref idref="chapter-05-2"/>
+    <itemref idref="chapter-05-3"/>
+    <itemref idref="chapter-05-4"/>
+    <itemref idref="chapter-05-5"/>
+    <itemref idref="chapter-05-6"/>
+    <itemref idref="chapter-05-7"/>
+    <itemref idref="chapter-05-8"/>
+    <itemref idref="chapter-06-1"/>
+    <itemref idref="chapter-06-2"/>
+    <itemref idref="chapter-06-3"/>
+    <itemref idref="chapter-06-4"/>
+    <itemref idref="chapter-06-5"/>
+    <itemref idref="chapter-06-6"/>
+    <itemref idref="chapter-06-7"/>
+    <itemref idref="arc-iii-perception-without-filter-1"/>
+    <itemref idref="chapter-07-1"/>
+    <itemref idref="chapter-07-2"/>
+    <itemref idref="chapter-07-3"/>
+    <itemref idref="chapter-07-4"/>
+    <itemref idref="chapter-07-5"/>
+    <itemref idref="chapter-08-1"/>
+    <itemref idref="chapter-08-2"/>
+    <itemref idref="chapter-08-3"/>
+    <itemref idref="chapter-08-4"/>
+    <itemref idref="chapter-08-5"/>
+    <itemref idref="chapter-08-6"/>
+    <itemref idref="chapter-08-7"/>
+    <itemref idref="chapter-09-1"/>
+    <itemref idref="chapter-09-2"/>
+    <itemref idref="chapter-09-3"/>
+    <itemref idref="chapter-09-4"/>
+    <itemref idref="chapter-09-5"/>
+    <itemref idref="chapter-09-6"/>
+    <itemref idref="arc-iv-the-quiet-completion-1"/>
+    <itemref idref="end-realization-1"/>
+    <itemref idref="end-realization-2"/>
+    <itemref idref="end-realization-3"/>
+    <itemref idref="end-realization-4"/>
+    <itemref idref="end-realization-5"/>
+    <itemref idref="epilogue-1"/>
+    <itemref idref="epilogue-2"/>
+    <itemref idref="about-the-author-1"/>
+    <itemref idref="about-the-author-2"/>
+    <itemref idref="about-the-author-3"/>
+  </spine>
+</package>

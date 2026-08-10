@@ -1,0 +1,1444 @@
+{
+  "the-end-of-interpretation": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 29.43,
+        "sample_color_count": 1506,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 40.52,
+        "sample_color_count": 633,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 269.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.71,
+        "sample_color_count": 892,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 177.1,
+        "tocLineCount": 22,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 18.36,
+        "sample_color_count": 459,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 273.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 37.8,
+        "sample_color_count": 1017,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 128.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 31.86,
+        "sample_color_count": 814,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 117.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 36.43,
+        "sample_color_count": 989,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 115.5,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-fiction-of-awareness": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 24.92,
+        "sample_color_count": 1319,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 43.2,
+        "sample_color_count": 681,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 23.34,
+        "sample_color_count": 667,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 256.1,
+        "tocLineCount": 17,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 31.7,
+        "sample_color_count": 778,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 140.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 31.7,
+        "sample_color_count": 778,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 140.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 33.76,
+        "sample_color_count": 874,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 95.2,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 39.2,
+        "sample_color_count": 1065,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 158.2,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-fiction-of-becoming": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.34,
+        "sample_color_count": 1523,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 41.79,
+        "sample_color_count": 707,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 24.8,
+        "sample_color_count": 797,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 203.9,
+        "tocLineCount": 20,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 15.34,
+        "sample_color_count": 337,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 332.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 36.47,
+        "sample_color_count": 948,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 101.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 29.99,
+        "sample_color_count": 741,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 109.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 39.81,
+        "sample_color_count": 1099,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 154,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-fiction-of-human": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 25.8,
+        "sample_color_count": 1512,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 42.31,
+        "sample_color_count": 708,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.1,
+        "sample_color_count": 938,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 163.7,
+        "tocLineCount": 23,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 16.2,
+        "sample_color_count": 399,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 303.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.9,
+        "sample_color_count": 621,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 155.1,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 30.43,
+        "sample_color_count": 752,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 117.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.04,
+        "sample_color_count": 903,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 222.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-fiction-of-meaning": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 24.68,
+        "sample_color_count": 1351,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 40.97,
+        "sample_color_count": 679,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.89,
+        "sample_color_count": 972,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 118,
+        "tocLineCount": 21,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 19.42,
+        "sample_color_count": 471,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 303.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 32.76,
+        "sample_color_count": 808,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 105.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 31.43,
+        "sample_color_count": 777,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 155.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 37.51,
+        "sample_color_count": 1011,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 104.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-last-shift": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 26.85,
+        "sample_color_count": 1728,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 32.3,
+        "sample_color_count": 491,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 269.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 28.22,
+        "sample_color_count": 838,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 116.8,
+        "tocLineCount": 25,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 36.74,
+        "sample_color_count": 942,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 136.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 36.74,
+        "sample_color_count": 942,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 136.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 38.08,
+        "sample_color_count": 1026,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 125.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 39.68,
+        "sample_color_count": 1051,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 102.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-last-shift-ii": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 24.43,
+        "sample_color_count": 1598,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.43,
+        "sample_color_count": 616,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 269.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 24.35,
+        "sample_color_count": 697,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 271.5,
+        "tocLineCount": 15,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 13.64,
+        "sample_color_count": 228,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 334.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.0,
+        "sample_color_count": 952,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 108.4,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.18,
+        "sample_color_count": 938,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 116.1,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 41.02,
+        "sample_color_count": 1127,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 119.2,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-loop-within": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 29.12,
+        "sample_color_count": 1619,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 33.95,
+        "sample_color_count": 553,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 269.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.96,
+        "sample_color_count": 944,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 234.7,
+        "tocLineCount": 18,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 17.23,
+        "sample_color_count": 382,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 306.4,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 38.71,
+        "sample_color_count": 1090,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 106.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.8,
+        "sample_color_count": 975,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 89.5,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 37.74,
+        "sample_color_count": 1098,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 106.5,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-paradox-of-awareness": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 28.12,
+        "sample_color_count": 1279,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 44.98,
+        "sample_color_count": 722,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.79,
+        "sample_color_count": 908,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 112,
+        "tocLineCount": 26,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 16.22,
+        "sample_color_count": 348,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 303.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 30.71,
+        "sample_color_count": 687,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 105.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 30.22,
+        "sample_color_count": 776,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 152.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 39.13,
+        "sample_color_count": 1006,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 127.5,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-paradox-of-explanation": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 23.86,
+        "sample_color_count": 1309,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 42.94,
+        "sample_color_count": 653,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.77,
+        "sample_color_count": 913,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 163.7,
+        "tocLineCount": 23,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 18.18,
+        "sample_color_count": 420,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 303.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 30.41,
+        "sample_color_count": 732,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 163.1,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 13.03,
+        "sample_color_count": 255,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 261.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.01,
+        "sample_color_count": 950,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 115.5,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-paradox-of-reality": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 34.18,
+        "sample_color_count": 2033,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 40.39,
+        "sample_color_count": 628,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 27.31,
+        "sample_color_count": 968,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 163.7,
+        "tocLineCount": 23,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 16.32,
+        "sample_color_count": 395,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 303.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 39.9,
+        "sample_color_count": 1111,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 101.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 32.3,
+        "sample_color_count": 823,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 87.2,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 39.02,
+        "sample_color_count": 1057,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 120.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-paradox-of-stillness": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 28.56,
+        "sample_color_count": 1662,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 42.2,
+        "sample_color_count": 704,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 224.7,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 26.46,
+        "sample_color_count": 872,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 144.8,
+        "tocLineCount": 21,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 16.46,
+        "sample_color_count": 395,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 303.3,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 32.67,
+        "sample_color_count": 843,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 105.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 29.26,
+        "sample_color_count": 743,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 95.2,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 37.49,
+        "sample_color_count": 1030,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 86,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "the-quiet-i-started-living-with": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 34.66,
+        "sample_color_count": 1897,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 47.01,
+        "sample_color_count": 821,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 179.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 29.54,
+        "sample_color_count": 893,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 244.1,
+        "tocLineCount": 17,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 17.77,
+        "sample_color_count": 467,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 277.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 40.45,
+        "sample_color_count": 1165,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 156.1,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 33.4,
+        "sample_color_count": 890,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 97.5,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.48,
+        "sample_color_count": 997,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 157.6,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  },
+  "when-understanding-begins": {
+    "pass": true,
+    "roles": {
+      "cover": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.85,
+        "sample_color_count": 1782,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 612,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "title": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 42.15,
+        "sample_color_count": 760,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 269.8,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "contents": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 31.03,
+        "sample_color_count": 978,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 155.7,
+        "tocLineCount": 23,
+        "tocGapMax": 6
+      },
+      "phase_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 13.0,
+        "sample_color_count": 291,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 311.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "chapter_opening": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 38.66,
+        "sample_color_count": 1088,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 114.9,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "body": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 35.32,
+        "sample_color_count": 951,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 140.1,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      },
+      "end_matter": {
+        "size": [
+          396,
+          612
+        ],
+        "std_luma": 36.76,
+        "sample_color_count": 1029,
+        "edge_whiteish_ratio": 0.0,
+        "nonblank": true,
+        "overflow_pass": true,
+        "bottomWhitespace": 110.5,
+        "tocLineCount": 0,
+        "tocGapMax": 0
+      }
+    }
+  }
+}

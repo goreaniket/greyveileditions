@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="book-id">urn:uuid:14045d48-4d3b-5934-81d6-ce2d69fe7458</dc:identifier>
+    <dc:title>The Fiction of Awareness</dc:title>
+    <dc:creator>Lalit R. Mishra</dc:creator>
+    <dc:publisher>Greyveil Editions</dc:publisher>
+    <dc:language>en</dc:language>
+    <meta property="dcterms:modified">2026-08-09T00:00:00Z</meta>
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:orientation">portrait</meta>
+    <meta property="rendition:spread">none</meta>
+    <meta property="rendition:flow">paginated</meta>
+    <dc:description>The greatest fiction ever created was not a story. It was the one called &quot;Me.&quot;</dc:description>
+    <meta property="belongs-to-collection">Human Fiction</meta>
+    <meta property="group-position">I</meta>
+    <meta name="cover" content="cover-image"/>
+  </metadata>
+  <manifest>
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="style" href="styles/greyveil-fixed.css" media-type="text/css"/>
+    <item id="cover-image" href="images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title-page" href="pages/p0001-title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contents-1" href="pages/p0002-contents.xhtml" media-type="application/xhtml+xml"/>
+    <item id="copyright-1" href="pages/p0003-copyright.xhtml" media-type="application/xhtml+xml"/>
+    <item id="disclaimer-1" href="pages/p0004-disclaimer.xhtml" media-type="application/xhtml+xml"/>
+    <item id="dedication-1" href="pages/p0005-dedication.xhtml" media-type="application/xhtml+xml"/>
+    <item id="dedication-2" href="pages/p0006-dedication-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-1" href="pages/p0007-note-from-the-author.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-2" href="pages/p0008-note-from-the-author-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-1" href="pages/p0009-prologue.xhtml" media-type="application/xhtml+xml"/>
+    <item id="prologue-2" href="pages/p0010-prologue-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-self-1" href="pages/p0011-the-fiction-of-self.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-self-2" href="pages/p0012-the-fiction-of-self-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-self-3" href="pages/p0013-the-fiction-of-self-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-self-4" href="pages/p0014-the-fiction-of-self-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-1" href="pages/p0015-chapter-01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-2" href="pages/p0016-chapter-01-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-3" href="pages/p0017-chapter-01-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-4" href="pages/p0018-chapter-01-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-5" href="pages/p0019-chapter-01-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-6" href="pages/p0020-chapter-01-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-1" href="pages/p0021-chapter-02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-2" href="pages/p0022-chapter-02-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-3" href="pages/p0023-chapter-02-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-4" href="pages/p0024-chapter-02-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-5" href="pages/p0025-chapter-02-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-1" href="pages/p0026-chapter-03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-2" href="pages/p0027-chapter-03-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-3" href="pages/p0028-chapter-03-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-4" href="pages/p0029-chapter-03-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-5" href="pages/p0030-chapter-03-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-1" href="pages/p0031-chapter-04.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-2" href="pages/p0032-chapter-04-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-3" href="pages/p0033-chapter-04-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-4" href="pages/p0034-chapter-04-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-1" href="pages/p0035-chapter-05.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-2" href="pages/p0036-chapter-05-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-3" href="pages/p0037-chapter-05-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-4" href="pages/p0038-chapter-05-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-1" href="pages/p0039-chapter-06.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-2" href="pages/p0040-chapter-06-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-3" href="pages/p0041-chapter-06-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-4" href="pages/p0042-chapter-06-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-1" href="pages/p0043-chapter-07.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-2" href="pages/p0044-chapter-07-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-3" href="pages/p0045-chapter-07-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-4" href="pages/p0046-chapter-07-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-1" href="pages/p0047-end-realization.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-2" href="pages/p0048-end-realization-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-3" href="pages/p0049-end-realization-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-4" href="pages/p0050-end-realization-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogue-1" href="pages/p0051-epilogue.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogue-2" href="pages/p0052-epilogue-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="epilogue-3" href="pages/p0053-epilogue-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-1" href="pages/p0054-about-the-author.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-2" href="pages/p0055-about-the-author-2.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine page-progression-direction="ltr">
+    <itemref idref="cover"/>
+    <itemref idref="title-page"/>
+    <itemref idref="contents-1"/>
+    <itemref idref="copyright-1"/>
+    <itemref idref="disclaimer-1"/>
+    <itemref idref="dedication-1"/>
+    <itemref idref="dedication-2"/>
+    <itemref idref="note-from-the-author-1"/>
+    <itemref idref="note-from-the-author-2"/>
+    <itemref idref="prologue-1"/>
+    <itemref idref="prologue-2"/>
+    <itemref idref="the-fiction-of-self-1"/>
+    <itemref idref="the-fiction-of-self-2"/>
+    <itemref idref="the-fiction-of-self-3"/>
+    <itemref idref="the-fiction-of-self-4"/>
+    <itemref idref="chapter-01-1"/>
+    <itemref idref="chapter-01-2"/>
+    <itemref idref="chapter-01-3"/>
+    <itemref idref="chapter-01-4"/>
+    <itemref idref="chapter-01-5"/>
+    <itemref idref="chapter-01-6"/>
+    <itemref idref="chapter-02-1"/>
+    <itemref idref="chapter-02-2"/>
+    <itemref idref="chapter-02-3"/>
+    <itemref idref="chapter-02-4"/>
+    <itemref idref="chapter-02-5"/>
+    <itemref idref="chapter-03-1"/>
+    <itemref idref="chapter-03-2"/>
+    <itemref idref="chapter-03-3"/>
+    <itemref idref="chapter-03-4"/>
+    <itemref idref="chapter-03-5"/>
+    <itemref idref="chapter-04-1"/>
+    <itemref idref="chapter-04-2"/>
+    <itemref idref="chapter-04-3"/>
+    <itemref idref="chapter-04-4"/>
+    <itemref idref="chapter-05-1"/>
+    <itemref idref="chapter-05-2"/>
+    <itemref idref="chapter-05-3"/>
+    <itemref idref="chapter-05-4"/>
+    <itemref idref="chapter-06-1"/>
+    <itemref idref="chapter-06-2"/>
+    <itemref idref="chapter-06-3"/>
+    <itemref idref="chapter-06-4"/>
+    <itemref idref="chapter-07-1"/>
+    <itemref idref="chapter-07-2"/>
+    <itemref idref="chapter-07-3"/>
+    <itemref idref="chapter-07-4"/>
+    <itemref idref="end-realization-1"/>
+    <itemref idref="end-realization-2"/>
+    <itemref idref="end-realization-3"/>
+    <itemref idref="end-realization-4"/>
+    <itemref idref="epilogue-1"/>
+    <itemref idref="epilogue-2"/>
+    <itemref idref="epilogue-3"/>
+    <itemref idref="about-the-author-1"/>
+    <itemref idref="about-the-author-2"/>
+  </spine>
+</package>

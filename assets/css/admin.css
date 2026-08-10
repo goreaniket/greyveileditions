@@ -543,6 +543,129 @@
   font-size: 1.35rem;
 }
 
+.admin-managed-section,
+.admin-danger-zone {
+  display: grid;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(42, 52, 64, .09);
+}
+
+.admin-managed-section h4,
+.admin-danger-zone h4 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  line-height: 1.05;
+}
+
+.admin-managed-file-list {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-managed-file {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid rgba(42, 52, 64, .09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .36);
+}
+
+.admin-managed-file--compact {
+  grid-template-columns: 1fr;
+}
+
+.admin-managed-file__body,
+.admin-managed-file--compact {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-managed-file__header,
+.admin-managed-file__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-managed-file__header {
+  justify-content: space-between;
+}
+
+.admin-managed-file__header strong {
+  color: var(--slate);
+}
+
+.admin-managed-file__meta {
+  margin: 0;
+  color: rgba(42, 52, 64, .64);
+  font-size: .82rem;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.admin-managed-file input[type="file"] {
+  max-width: 100%;
+  color: rgba(42, 52, 64, .72);
+  font-size: .82rem;
+  font-weight: 750;
+}
+
+.admin-managed-file__actions input[type="file"] {
+  flex: 1 1 100%;
+  width: calc(100% - 12px);
+  max-width: calc(100% - 12px);
+  min-width: 0;
+  min-inline-size: 0;
+}
+
+.admin-managed-file__actions .admin-inline-action {
+  flex: 0 0 auto;
+}
+
+.admin-cover-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(42, 52, 64, .12);
+  border-radius: 8px;
+  background: rgba(42, 52, 64, .07);
+}
+
+.admin-cover-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.admin-cover-preview__missing {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(42, 52, 64, .58);
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.admin-danger-zone {
+  border-color: rgba(140, 79, 74, .18);
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(140, 79, 74, .06);
+}
+
 .admin-content-child-list,
 .admin-series-book-list {
   display: grid;
@@ -577,9 +700,9 @@
 
 .admin-series-book-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 12px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+  gap: 14px;
+  align-items: start;
   padding: 12px;
 }
 
@@ -647,8 +770,8 @@
 
 .admin-book-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 12px;
 }
 
 .admin-book-card {
@@ -686,11 +809,130 @@
   gap: 6px;
 }
 
-.admin-book-card .admin-inline-actions {
+.admin-book-controls {
+  min-width: 0;
   display: grid;
-  grid-template-columns: auto minmax(116px, 1fr) auto minmax(116px, 1fr) auto;
-  gap: 8px;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(132px, 1fr)) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.admin-book-card .admin-book-controls {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-series-book-card .admin-book-controls {
+  width: 100%;
+  justify-self: end;
+}
+
+.admin-book-control {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.admin-book-control span {
+  color: rgba(42, 52, 64, .68);
+  font-size: .7rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.admin-book-control .admin-compact-control {
+  width: 100%;
+  min-width: 0;
+}
+
+.admin-book-control--save {
+  align-self: end;
+}
+
+.admin-book-card .admin-book-control--save {
+  grid-column: 1 / -1;
+  justify-self: end;
+}
+
+.admin-book-save {
+  min-width: 78px;
+  min-height: 38px;
+}
+
+.admin-book-card .admin-book-save {
+  min-width: 96px;
+}
+
+.admin-files-manager {
+  display: grid;
+  gap: 16px;
+  max-width: 1240px;
+}
+
+.admin-files-selector-card {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-files-selector {
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+
+.admin-files-detail {
+  display: grid;
+  grid-template-columns: minmax(260px, .62fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.admin-files-placeholder,
+.admin-files-book-summary {
+  grid-column: 1 / -1;
+}
+
+.admin-files-book-summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.admin-files-book-summary__title {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.admin-files-book-summary__title h3 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.admin-files-book-summary__title span {
+  color: rgba(42, 52, 64, .64);
+  font-size: .84rem;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.admin-files-detail .admin-managed-section {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(42, 52, 64, .09);
+  border-radius: 8px;
+  background: rgba(248, 247, 244, .68);
+  box-shadow: 0 18px 44px rgba(42, 52, 64, .06);
+}
+
+.admin-files-cover-section {
+  grid-column: 1;
+}
+
+.admin-files-files-section {
+  grid-column: 2;
 }
 
 .admin-card {
@@ -860,8 +1102,15 @@
 }
 
 .admin-access-grid label {
+  min-width: 0;
   display: grid;
   gap: 6px;
+}
+
+.admin-access-grid input,
+.admin-access-grid select {
+  width: 100%;
+  min-width: 0;
 }
 
 .admin-access-grid span,
@@ -1442,6 +1691,9 @@
   .admin-content-workspace,
   .admin-detail-grid,
   .admin-series-book-card,
+  .admin-book-controls,
+  .admin-files-selector,
+  .admin-files-detail,
   .admin-filters,
   .admin-filters--feedback,
   .admin-access-grid,
@@ -1468,14 +1720,33 @@
   }
 
   .admin-book-group__header,
-  .admin-book-card .admin-inline-actions {
+  .admin-files-book-summary {
     align-items: stretch;
     flex-direction: column;
   }
 
-  .admin-book-card .admin-inline-actions {
-    display: grid;
-    grid-template-columns: 1fr;
+  .admin-series-book-card .admin-book-controls,
+  .admin-book-controls {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .admin-book-control--save,
+  .admin-book-card .admin-book-control--save {
+    justify-self: stretch;
+  }
+
+  .admin-book-save {
+    width: 100%;
+  }
+
+  .admin-files-cover-section,
+  .admin-files-files-section {
+    grid-column: 1;
+  }
+
+  .admin-managed-file {
+    grid-template-columns: 96px minmax(0, 1fr);
   }
 
   .admin-table-wrap {
@@ -1597,9 +1868,16 @@
   }
 
   .admin-form-actions,
-  .admin-inline-actions {
+  .admin-inline-actions,
+  .admin-managed-file__actions {
     align-items: stretch;
     flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .admin-managed-file__actions input[type="file"],
+  .admin-managed-file__actions .admin-inline-action {
+    width: 100%;
   }
 
   .admin-table td {
@@ -1610,6 +1888,14 @@
   .admin-hierarchy__volume,
   .admin-hierarchy__series {
     margin-left: 0;
+  }
+
+  .admin-managed-file {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-cover-preview {
+    width: min(150px, 100%);
   }
 
   .admin-hierarchy__heading,

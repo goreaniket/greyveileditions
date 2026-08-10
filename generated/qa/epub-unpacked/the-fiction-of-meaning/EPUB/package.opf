@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="book-id">urn:uuid:51c34231-df09-54ad-a78d-5bacab5a2625</dc:identifier>
+    <dc:title>The Fiction of Meaning</dc:title>
+    <dc:creator>Lalit R. Mishra</dc:creator>
+    <dc:publisher>Greyveil Editions</dc:publisher>
+    <dc:language>en</dc:language>
+    <meta property="dcterms:modified">2026-08-09T00:00:00Z</meta>
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:orientation">portrait</meta>
+    <meta property="rendition:spread">none</meta>
+    <meta property="rendition:flow">paginated</meta>
+    <dc:description>The mind cannot tolerate randomness. So it creates meaning... even where none exists.</dc:description>
+    <meta property="belongs-to-collection">Human Fiction</meta>
+    <meta property="group-position">II</meta>
+    <meta name="cover" content="cover-image"/>
+  </metadata>
+  <manifest>
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="style" href="styles/greyveil-fixed.css" media-type="text/css"/>
+    <item id="cover-image" href="images/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title-page" href="pages/p0001-title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contents-1" href="pages/p0002-contents.xhtml" media-type="application/xhtml+xml"/>
+    <item id="copyright-1" href="pages/p0003-copyright.xhtml" media-type="application/xhtml+xml"/>
+    <item id="disclaimer-1" href="pages/p0004-disclaimer.xhtml" media-type="application/xhtml+xml"/>
+    <item id="dedication-1" href="pages/p0005-dedication.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-1" href="pages/p0006-note-from-the-author.xhtml" media-type="application/xhtml+xml"/>
+    <item id="note-from-the-author-2" href="pages/p0007-note-from-the-author-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="before-meaning-begins-1" href="pages/p0008-before-meaning-begins.xhtml" media-type="application/xhtml+xml"/>
+    <item id="before-meaning-begins-2" href="pages/p0009-before-meaning-begins-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-meaning-1" href="pages/p0010-the-fiction-of-meaning.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-meaning-2" href="pages/p0011-the-fiction-of-meaning-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-meaning-3" href="pages/p0012-the-fiction-of-meaning-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-fiction-of-meaning-4" href="pages/p0013-the-fiction-of-meaning-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-need-for-meaning-foundation-1" href="pages/p0014-the-need-for-meaning-foundation.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-1" href="pages/p0015-chapter-01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-2" href="pages/p0016-chapter-01-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-3" href="pages/p0017-chapter-01-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-01-4" href="pages/p0018-chapter-01-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-1" href="pages/p0019-chapter-02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-2" href="pages/p0020-chapter-02-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-3" href="pages/p0021-chapter-02-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-02-4" href="pages/p0022-chapter-02-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-meaning-loop-attachment-mechanism-1" href="pages/p0023-the-meaning-loop-attachment-mechanism.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-1" href="pages/p0024-chapter-03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-2" href="pages/p0025-chapter-03-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-3" href="pages/p0026-chapter-03-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-03-4" href="pages/p0027-chapter-03-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-1" href="pages/p0028-chapter-04.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-2" href="pages/p0029-chapter-04-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-3" href="pages/p0030-chapter-04-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-04-4" href="pages/p0031-chapter-04-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-story-construction-narrative-system-1" href="pages/p0032-the-story-construction-narrative-system.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-1" href="pages/p0033-chapter-05.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-2" href="pages/p0034-chapter-05-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-3" href="pages/p0035-chapter-05-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-05-4" href="pages/p0036-chapter-05-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="the-collapse-of-meaning-breakdown-phase-1" href="pages/p0037-the-collapse-of-meaning-breakdown-phase.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-1" href="pages/p0038-chapter-06.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-2" href="pages/p0039-chapter-06-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-3" href="pages/p0040-chapter-06-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-06-4" href="pages/p0041-chapter-06-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="beyond-meaning-post-structure-silence-1" href="pages/p0042-beyond-meaning-post-structure-silence.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-1" href="pages/p0043-chapter-07.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-2" href="pages/p0044-chapter-07-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-3" href="pages/p0045-chapter-07-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter-07-4" href="pages/p0046-chapter-07-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-1" href="pages/p0047-end-realization.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-2" href="pages/p0048-end-realization-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="end-realization-3" href="pages/p0049-end-realization-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="after-meaning-disappears-1" href="pages/p0050-after-meaning-disappears.xhtml" media-type="application/xhtml+xml"/>
+    <item id="after-meaning-disappears-2" href="pages/p0051-after-meaning-disappears-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-1" href="pages/p0052-about-the-author.xhtml" media-type="application/xhtml+xml"/>
+    <item id="about-the-author-2" href="pages/p0053-about-the-author-2.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine page-progression-direction="ltr">
+    <itemref idref="cover"/>
+    <itemref idref="title-page"/>
+    <itemref idref="contents-1"/>
+    <itemref idref="copyright-1"/>
+    <itemref idref="disclaimer-1"/>
+    <itemref idref="dedication-1"/>
+    <itemref idref="note-from-the-author-1"/>
+    <itemref idref="note-from-the-author-2"/>
+    <itemref idref="before-meaning-begins-1"/>
+    <itemref idref="before-meaning-begins-2"/>
+    <itemref idref="the-fiction-of-meaning-1"/>
+    <itemref idref="the-fiction-of-meaning-2"/>
+    <itemref idref="the-fiction-of-meaning-3"/>
+    <itemref idref="the-fiction-of-meaning-4"/>
+    <itemref idref="the-need-for-meaning-foundation-1"/>
+    <itemref idref="chapter-01-1"/>
+    <itemref idref="chapter-01-2"/>
+    <itemref idref="chapter-01-3"/>
+    <itemref idref="chapter-01-4"/>
+    <itemref idref="chapter-02-1"/>
+    <itemref idref="chapter-02-2"/>
+    <itemref idref="chapter-02-3"/>
+    <itemref idref="chapter-02-4"/>
+    <itemref idref="the-meaning-loop-attachment-mechanism-1"/>
+    <itemref idref="chapter-03-1"/>
+    <itemref idref="chapter-03-2"/>
+    <itemref idref="chapter-03-3"/>
+    <itemref idref="chapter-03-4"/>
+    <itemref idref="chapter-04-1"/>
+    <itemref idref="chapter-04-2"/>
+    <itemref idref="chapter-04-3"/>
+    <itemref idref="chapter-04-4"/>
+    <itemref idref="the-story-construction-narrative-system-1"/>
+    <itemref idref="chapter-05-1"/>
+    <itemref idref="chapter-05-2"/>
+    <itemref idref="chapter-05-3"/>
+    <itemref idref="chapter-05-4"/>
+    <itemref idref="the-collapse-of-meaning-breakdown-phase-1"/>
+    <itemref idref="chapter-06-1"/>
+    <itemref idref="chapter-06-2"/>
+    <itemref idref="chapter-06-3"/>
+    <itemref idref="chapter-06-4"/>
+    <itemref idref="beyond-meaning-post-structure-silence-1"/>
+    <itemref idref="chapter-07-1"/>
+    <itemref idref="chapter-07-2"/>
+    <itemref idref="chapter-07-3"/>
+    <itemref idref="chapter-07-4"/>
+    <itemref idref="end-realization-1"/>
+    <itemref idref="end-realization-2"/>
+    <itemref idref="end-realization-3"/>
+    <itemref idref="after-meaning-disappears-1"/>
+    <itemref idref="after-meaning-disappears-2"/>
+    <itemref idref="about-the-author-1"/>
+    <itemref idref="about-the-author-2"/>
+  </spine>
+</package>

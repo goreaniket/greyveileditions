@@ -1,0 +1,2466 @@
+{
+  "the-end-of-interpretation": {
+    "page_count": 89,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 23,
+      "chapter_opening": 23,
+      "body": 24,
+      "end_matter": 87
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-end-of-interpretation\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 19.53,
+          "std_luma": 28.64,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1484,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-end-of-interpretation\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.12,
+          "std_luma": 36.9,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 532,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-end-of-interpretation\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.16,
+          "std_luma": 25.44,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 268,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 23,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-end-of-interpretation\\phase_opening-p023.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.52,
+          "std_luma": 30.58,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 347,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 23,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-end-of-interpretation\\chapter_opening-p023.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.52,
+          "std_luma": 30.58,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 347,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 24,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-end-of-interpretation\\body-p024.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.48,
+          "std_luma": 25.1,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 211,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 87,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-end-of-interpretation\\end_matter-p087.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.58,
+          "std_luma": 28.6,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 301,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-awareness": {
+    "page_count": 58,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 18,
+      "chapter_opening": 18,
+      "body": 19,
+      "end_matter": 51
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-awareness\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 16.32,
+          "std_luma": 23.95,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1303,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-awareness\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.49,
+          "std_luma": 36.25,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 549,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-awareness\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 235.89,
+          "std_luma": 21.74,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 251,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 18,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-awareness\\phase_opening-p018.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.18,
+          "std_luma": 27.44,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 307,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 18,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-awareness\\chapter_opening-p018.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.18,
+          "std_luma": 27.44,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 307,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 19,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-awareness\\body-p019.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.67,
+          "std_luma": 24.82,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 209,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 51,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-awareness\\end_matter-p051.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.33,
+          "std_luma": 27.65,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 216,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-becoming": {
+    "page_count": 53,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 20,
+      "chapter_opening": 20,
+      "body": 21,
+      "end_matter": 52
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-becoming\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 17.38,
+          "std_luma": 26.7,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1479,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-becoming\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 229.64,
+          "std_luma": 35.11,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 539,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-becoming\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.05,
+          "std_luma": 23.53,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 256,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 20,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-becoming\\phase_opening-p020.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.17,
+          "std_luma": 29.8,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 322,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 20,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-becoming\\chapter_opening-p020.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.17,
+          "std_luma": 29.8,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 322,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 21,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-becoming\\body-p021.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.39,
+          "std_luma": 22.92,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 184,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 52,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-becoming\\end_matter-p052.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.55,
+          "std_luma": 28.57,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 302,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-human": {
+    "page_count": 104,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 4,
+      "phase_opening": 29,
+      "chapter_opening": 29,
+      "body": 30,
+      "end_matter": 103
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-human\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 15.58,
+          "std_luma": 24.92,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1467,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-human\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 229.65,
+          "std_luma": 35.5,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 522,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 4,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-human\\contents-p004.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.28,
+          "std_luma": 25.2,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 263,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 29,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-human\\phase_opening-p029.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.13,
+          "std_luma": 25.35,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 315,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 29,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-human\\chapter_opening-p029.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.13,
+          "std_luma": 25.35,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 315,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 30,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-human\\body-p030.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.44,
+          "std_luma": 22.72,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 223,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 103,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-human\\end_matter-p103.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 228.43,
+          "std_luma": 32.34,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 336,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-fiction-of-meaning": {
+    "page_count": 57,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 18,
+      "chapter_opening": 18,
+      "body": 19,
+      "end_matter": 55
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-meaning\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 16.54,
+          "std_luma": 23.77,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1284,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-meaning\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.06,
+          "std_luma": 34.53,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 531,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-meaning\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.67,
+          "std_luma": 22.3,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 260,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 18,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-meaning\\phase_opening-p018.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.51,
+          "std_luma": 26.72,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 316,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 18,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-meaning\\chapter_opening-p018.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.51,
+          "std_luma": 26.72,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 316,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 19,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-meaning\\body-p019.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.28,
+          "std_luma": 25.6,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 207,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 55,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-fiction-of-meaning\\end_matter-p055.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.72,
+          "std_luma": 28.48,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 329,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-last-shift": {
+    "page_count": 91,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 16,
+      "chapter_opening": 16,
+      "body": 17,
+      "end_matter": 90
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 27.49,
+          "std_luma": 26.08,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1743,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 237.53,
+          "std_luma": 27.19,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 425,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 236.93,
+          "std_luma": 23.96,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 255,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 16,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift\\phase_opening-p016.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.21,
+          "std_luma": 31.66,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 320,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 16,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift\\chapter_opening-p016.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.21,
+          "std_luma": 31.66,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 320,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 17,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift\\body-p017.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 235.25,
+          "std_luma": 28.03,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 224,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 90,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift\\end_matter-p090.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.66,
+          "std_luma": 29.73,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 304,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-last-shift-ii": {
+    "page_count": 222,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 22,
+      "chapter_opening": 22,
+      "body": 23,
+      "end_matter": 222
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift-ii\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 24.8,
+          "std_luma": 23.56,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1588,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift-ii\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.48,
+          "std_luma": 29.78,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 462,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift-ii\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.33,
+          "std_luma": 25.05,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 277,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 22,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift-ii\\phase_opening-p022.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.89,
+          "std_luma": 28.56,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 383,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 22,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift-ii\\chapter_opening-p022.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.89,
+          "std_luma": 28.56,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 383,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 23,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift-ii\\body-p023.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.18,
+          "std_luma": 25.95,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 242,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 222,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-last-shift-ii\\end_matter-p222.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.73,
+          "std_luma": 31.18,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 327,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-loop-within": {
+    "page_count": 120,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 20,
+      "chapter_opening": 20,
+      "body": 21,
+      "end_matter": 119
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-loop-within\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 24.83,
+          "std_luma": 28.59,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1603,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-loop-within\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.22,
+          "std_luma": 28.34,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 433,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-loop-within\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.52,
+          "std_luma": 24.38,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 263,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 20,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-loop-within\\phase_opening-p020.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.13,
+          "std_luma": 30.42,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 338,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 20,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-loop-within\\chapter_opening-p020.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.13,
+          "std_luma": 30.42,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 338,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 21,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-loop-within\\body-p021.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.56,
+          "std_luma": 27.12,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 232,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 119,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-loop-within\\end_matter-p119.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.02,
+          "std_luma": 29.39,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 305,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-awareness": {
+    "page_count": 124,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 4,
+      "phase_opening": 24,
+      "chapter_opening": 24,
+      "body": 25,
+      "end_matter": 123
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-awareness\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 19.65,
+          "std_luma": 27.38,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1274,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-awareness\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.9,
+          "std_luma": 37.6,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 550,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 4,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-awareness\\contents-p004.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.82,
+          "std_luma": 24.35,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 271,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 24,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-awareness\\phase_opening-p024.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 235.84,
+          "std_luma": 24.49,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 315,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 24,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-awareness\\chapter_opening-p024.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 235.84,
+          "std_luma": 24.49,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 315,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 25,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-awareness\\body-p025.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.78,
+          "std_luma": 24.53,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 257,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 123,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-awareness\\end_matter-p123.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.48,
+          "std_luma": 30.89,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 332,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-explanation": {
+    "page_count": 163,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 23,
+      "chapter_opening": 23,
+      "body": 24,
+      "end_matter": 162
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-explanation\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 15.89,
+          "std_luma": 23.5,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1312,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-explanation\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 228.02,
+          "std_luma": 37.07,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 554,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-explanation\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.78,
+          "std_luma": 21.77,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 253,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 23,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-explanation\\phase_opening-p023.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.06,
+          "std_luma": 25.69,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 352,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 23,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-explanation\\chapter_opening-p023.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.06,
+          "std_luma": 25.69,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 352,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 24,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-explanation\\body-p024.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 230.96,
+          "std_luma": 23.69,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 233,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 162,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-explanation\\end_matter-p162.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 229.9,
+          "std_luma": 27.73,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 308,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-reality": {
+    "page_count": 91,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 29,
+      "chapter_opening": 31,
+      "body": 32,
+      "end_matter": 89
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-reality\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 24.06,
+          "std_luma": 33.58,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1996,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-reality\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.35,
+          "std_luma": 33.7,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 514,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-reality\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.2,
+          "std_luma": 25.39,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 267,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 29,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-reality\\phase_opening-p029.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 238.18,
+          "std_luma": 14.33,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 153,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 31,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-reality\\chapter_opening-p031.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.36,
+          "std_luma": 31.41,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 393,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 32,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-reality\\body-p032.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.61,
+          "std_luma": 24.69,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 208,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 89,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-reality\\end_matter-p089.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.32,
+          "std_luma": 30.67,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 334,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-paradox-of-stillness": {
+    "page_count": 98,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 4,
+      "phase_opening": 29,
+      "chapter_opening": 29,
+      "body": 30,
+      "end_matter": 96
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-stillness\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 21.51,
+          "std_luma": 27.69,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1616,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-stillness\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.6,
+          "std_luma": 35.23,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 555,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 4,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-stillness\\contents-p004.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 235.94,
+          "std_luma": 21.54,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 242,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 29,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-stillness\\phase_opening-p029.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.91,
+          "std_luma": 26.51,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 328,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 29,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-stillness\\chapter_opening-p029.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.91,
+          "std_luma": 26.51,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 328,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 30,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-stillness\\body-p030.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 235.4,
+          "std_luma": 22.8,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 214,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 96,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-paradox-of-stillness\\end_matter-p096.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.4,
+          "std_luma": 28.71,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 316,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "the-quiet-i-started-living-with": {
+    "page_count": 137,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 4,
+      "phase_opening": 25,
+      "chapter_opening": 25,
+      "body": 26,
+      "end_matter": 137
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-quiet-i-started-living-with\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 36.89,
+          "std_luma": 34.18,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1879,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-quiet-i-started-living-with\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 231.85,
+          "std_luma": 39.33,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 577,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 4,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-quiet-i-started-living-with\\contents-p004.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.86,
+          "std_luma": 27.16,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 310,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 25,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-quiet-i-started-living-with\\phase_opening-p025.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.64,
+          "std_luma": 34.0,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 421,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 25,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-quiet-i-started-living-with\\chapter_opening-p025.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.64,
+          "std_luma": 34.0,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 421,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 26,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-quiet-i-started-living-with\\body-p026.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 236.16,
+          "std_luma": 23.86,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 219,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 137,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\the-quiet-i-started-living-with\\end_matter-p137.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.21,
+          "std_luma": 29.1,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 357,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  },
+  "when-understanding-begins": {
+    "page_count": 76,
+    "representative_pages": {
+      "cover": 1,
+      "title": 2,
+      "contents": 3,
+      "phase_opening": 24,
+      "chapter_opening": 24,
+      "body": 25,
+      "end_matter": 75
+    },
+    "rendered": {
+      "cover": {
+        "page": 1,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\when-understanding-begins\\cover-p001.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 26.4,
+          "std_luma": 35.13,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 1759,
+          "nonblank": true
+        }
+      },
+      "title": {
+        "page": 2,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\when-understanding-begins\\title-p002.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 232.15,
+          "std_luma": 38.27,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 607,
+          "nonblank": true
+        }
+      },
+      "contents": {
+        "page": 3,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\when-understanding-begins\\contents-p003.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.79,
+          "std_luma": 27.28,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 286,
+          "nonblank": true
+        }
+      },
+      "phase_opening": {
+        "page": 24,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\when-understanding-begins\\phase_opening-p024.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.55,
+          "std_luma": 31.65,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 359,
+          "nonblank": true
+        }
+      },
+      "chapter_opening": {
+        "page": 24,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\when-understanding-begins\\chapter_opening-p024.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 233.55,
+          "std_luma": 31.65,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 359,
+          "nonblank": true
+        }
+      },
+      "body": {
+        "page": 25,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\when-understanding-begins\\body-p025.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.03,
+          "std_luma": 28.43,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 229,
+          "nonblank": true
+        }
+      },
+      "end_matter": {
+        "page": 75,
+        "ok": true,
+        "image": "E:\\Lalit website\\greyveil editions\\generated\\qa\\pdf-rendered\\when-understanding-begins\\end_matter-p075.png",
+        "stderr": "",
+        "metrics": {
+          "size": [
+            396,
+            612
+          ],
+          "mean_luma": 234.57,
+          "std_luma": 28.64,
+          "bbox": [
+            0,
+            0,
+            396,
+            612
+          ],
+          "edge_whiteish_ratio": 0.0,
+          "sample_color_count": 299,
+          "nonblank": true
+        }
+      }
+    },
+    "pass": true
+  }
+}

@@ -17,6 +17,7 @@ SUPPORTED_BLOCK_TYPES = {
     "toc-heading",
     "toc-chapter",
     "quote",
+    "blockquote",
     "section-break",
     "divider",
     "heading",
