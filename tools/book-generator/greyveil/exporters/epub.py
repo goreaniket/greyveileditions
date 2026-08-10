@@ -30,6 +30,7 @@ from greyveil.models import BookModel, ChapterBlock, ChapterUnit
 
 
 POINTS_PER_INCH = 72
+SHORT_PAGE_EXCLUDED_KINDS = {"chapter", "contents", "dedication", "opening", "part"}
 
 
 @dataclass(frozen=True)
@@ -231,9 +232,7 @@ def build_unit_pages(
     start_index: int,
 ) -> list[FixedPage]:
     fragments = fragments_from_blocks(unit, geometry)
-    first_capacity = first_page_capacity(unit, geometry)
-    continuation_capacity = continuation_page_capacity(geometry)
-    chunks = paginate_fragments(fragments, first_capacity, continuation_capacity, geometry)
+    chunks = chunks_for_unit(unit, fragments, geometry)
     if not chunks:
         chunks = [[]]
 
@@ -245,7 +244,12 @@ def build_unit_pages(
         if not first:
             filename += f"-{chunk_index + 1}"
         filename += ".xhtml"
-        body = unit_page_body(unit, chunk, first=first)
+        body = unit_page_body(
+            unit,
+            chunk,
+            first=first,
+            modifier_classes=page_modifier_classes(unit, chunks, chunk_index, geometry),
+        )
         pages.append(
             FixedPage(
                 id=f"{safe_xml_id(unit.id, 'unit')}-{chunk_index + 1}",
@@ -259,13 +263,69 @@ def build_unit_pages(
     return pages
 
 
-def unit_page_body(unit: ChapterUnit, fragments: list[BlockFragment], *, first: bool) -> str:
+def chunks_for_unit(unit: ChapterUnit, fragments: list[BlockFragment], geometry: FixedGeometry) -> list[list[BlockFragment]]:
+    if unit.kind == "contents":
+        return paginate_contents_fragments(fragments, geometry)
+
+    if should_use_single_short_page(unit, fragments, geometry):
+        return [fragments]
+
+    return paginate_fragments(
+        fragments,
+        first_page_capacity(unit, geometry),
+        continuation_page_capacity(geometry),
+        geometry,
+    )
+
+
+def should_use_single_short_page(unit: ChapterUnit, fragments: list[BlockFragment], geometry: FixedGeometry) -> bool:
+    return allows_short_page_balance(unit) and 0 < fragment_line_count(fragments) <= short_page_capacity(geometry)
+
+
+def allows_short_page_balance(unit: ChapterUnit) -> bool:
+    return (unit.kind or "chapter") not in SHORT_PAGE_EXCLUDED_KINDS
+
+
+def fragment_line_count(fragments: list[BlockFragment]) -> int:
+    return sum(fragment.lines for fragment in fragments)
+
+
+def page_modifier_classes(
+    unit: ChapterUnit,
+    chunks: list[list[BlockFragment]],
+    chunk_index: int,
+    geometry: FixedGeometry,
+) -> list[str]:
+    chunk = chunks[chunk_index]
+    classes: list[str] = []
+    if unit.kind == "contents":
+        classes.append("page--contents-compact")
+    if chunk_index == 0 and len(chunks) == 1 and should_use_single_short_page(unit, chunk, geometry):
+        classes.append("page--short-content")
+    elif (
+        chunk_index == len(chunks) - 1
+        and chunk_index > 0
+        and allows_short_page_balance(unit)
+        and fragment_line_count(chunk) <= short_tail_capacity(geometry)
+    ):
+        classes.append("page--short-tail")
+    return classes
+
+
+def unit_page_body(
+    unit: ChapterUnit,
+    fragments: list[BlockFragment],
+    *,
+    first: bool,
+    modifier_classes: list[str] | None = None,
+) -> str:
     classes = [
         "page",
         "page--unit",
         f"page--{safe_xml_id(unit.kind or 'chapter', 'kind')}",
         "page--unit-first" if first else "page--continuation",
     ]
+    classes.extend(modifier_classes or [])
     parts = [f'<main class="{" ".join(classes)}" data-unit-id="{html.escape(unit.id)}">']
     if first:
         parts.append(unit_fixed_header(unit))
@@ -329,7 +389,8 @@ def block_to_fragments(block: ChapterBlock, unit: ChapterUnit, geometry: FixedGe
         return []
 
     block_type = block.type
-    chars = chars_per_line(block_type, geometry)
+    measure_type = measurement_block_type(block_type, unit)
+    chars = chars_per_line(measure_type, geometry)
     max_lines = max(8, continuation_page_capacity(geometry) - 2)
     pieces = split_text_to_fit(plain, chars * max_lines) if estimated_lines(plain, chars) > max_lines else [plain]
     result: list[BlockFragment] = []
@@ -340,10 +401,16 @@ def block_to_fragments(block: ChapterBlock, unit: ChapterUnit, geometry: FixedGe
                 fragment_html(block_type, unit, html_text),
                 piece,
                 block_type,
-                line_cost(piece, block_type, geometry, continued=piece_index > 0),
+                line_cost(piece, measure_type, geometry, continued=piece_index > 0),
             )
         )
     return result
+
+
+def measurement_block_type(block_type: str, unit: ChapterUnit) -> str:
+    if block_type == "paragraph" and allows_short_page_balance(unit):
+        return "short-paragraph"
+    return block_type
 
 
 def fragment_html(block_type: str, unit: ChapterUnit, html_text: str) -> str:
@@ -399,6 +466,55 @@ def paginate_fragments(
     return pages
 
 
+def paginate_contents_fragments(fragments: list[BlockFragment], geometry: FixedGeometry) -> list[list[BlockFragment]]:
+    first_capacity = contents_first_page_capacity(geometry)
+    continuation_capacity = contents_continuation_page_capacity(geometry)
+    total_lines = fragment_line_count(fragments)
+    if total_lines <= first_capacity:
+        return [fragments] if fragments else []
+
+    page_count = max(2, math.ceil(total_lines / min(first_capacity, continuation_capacity)))
+    pages: list[list[BlockFragment]] = []
+    current: list[BlockFragment] = []
+    current_lines = 0
+    remaining_lines = total_lines
+
+    for fragment in fragments:
+        remaining_pages = page_count - len(pages)
+        capacity = first_capacity if not pages else continuation_capacity
+        target = min(capacity, max(8, math.ceil(remaining_lines / max(1, remaining_pages))))
+
+        if current and current_lines + fragment.lines > target:
+            pages.append(current)
+            remaining_lines -= current_lines
+            current = []
+            current_lines = 0
+
+        current.append(fragment)
+        current_lines += fragment.lines
+
+    if current:
+        pages.append(current)
+
+    return avoid_orphaned_toc_headings(pages, first_capacity, continuation_capacity)
+
+
+def avoid_orphaned_toc_headings(
+    pages: list[list[BlockFragment]],
+    first_capacity: int,
+    continuation_capacity: int,
+) -> list[list[BlockFragment]]:
+    for index in range(len(pages) - 1):
+        page = pages[index]
+        next_page = pages[index + 1]
+        if not page or page[-1].type != "toc-heading":
+            continue
+        next_capacity = continuation_capacity if index + 1 else first_capacity
+        if fragment_line_count(next_page) + page[-1].lines <= next_capacity:
+            next_page.insert(0, page.pop())
+    return [page for page in pages if page]
+
+
 def split_oversized_fragment(fragment: BlockFragment, capacity: int, geometry: FixedGeometry) -> list[BlockFragment]:
     chars = chars_per_line(fragment.type, geometry)
     target_chars = max(chars, chars * max(1, capacity - 1))
@@ -440,7 +556,7 @@ def first_page_capacity(unit: ChapterUnit, geometry: FixedGeometry) -> int:
     if unit.kind == "chapter":
         usable_px = geometry.height_px - 242 - geometry.bottom_px - 24
     elif unit.kind in {"contents"}:
-        usable_px = geometry.height_px - 150 - geometry.bottom_px - 24
+        usable_px = geometry.height_px - contents_first_frame_top_px() - geometry.bottom_px - 38
     elif unit.kind in {"dedication"}:
         usable_px = geometry.height_px - 258 - geometry.bottom_px - 24
     elif unit.kind in {"part"}:
@@ -456,13 +572,55 @@ def continuation_page_capacity(geometry: FixedGeometry) -> int:
     return max(8, math.floor(usable_px / line_box))
 
 
+def contents_first_page_capacity(geometry: FixedGeometry) -> int:
+    usable_px = geometry.height_px - contents_first_frame_top_px() - geometry.bottom_px - 38
+    return max(12, math.floor(usable_px / contents_line_box_px(geometry)))
+
+
+def contents_continuation_page_capacity(geometry: FixedGeometry) -> int:
+    usable_px = geometry.height_px - geometry.top_px - geometry.bottom_px - 36
+    return max(14, math.floor(usable_px / contents_line_box_px(geometry)))
+
+
+def short_page_capacity(geometry: FixedGeometry) -> int:
+    usable_px = geometry.height_px - short_first_frame_top_px() - geometry.bottom_px - 28
+    return max(10, math.floor(usable_px / short_line_box_px(geometry)))
+
+
+def short_tail_capacity(geometry: FixedGeometry) -> int:
+    usable_px = geometry.height_px - short_tail_frame_top_px() - geometry.bottom_px - 36
+    return max(7, math.floor(usable_px / short_line_box_px(geometry)) // 2)
+
+
 def effective_line_box_px(geometry: FixedGeometry) -> float:
     return geometry.line_height_px + 4
 
 
+def contents_line_box_px(geometry: FixedGeometry) -> float:
+    return max(12.4, min(14.0, geometry.body_size_px + 1.6))
+
+
+def short_line_box_px(geometry: FixedGeometry) -> float:
+    return max(15.2, min(geometry.line_height_px, geometry.body_size_px + 4.1))
+
+
+def contents_first_frame_top_px() -> int:
+    return 126
+
+
+def short_first_frame_top_px() -> int:
+    return 178
+
+
+def short_tail_frame_top_px() -> int:
+    return 132
+
+
 def chars_per_line(block_type: str, geometry: FixedGeometry) -> int:
     if block_type.startswith("toc-"):
-        return max(46, math.floor(geometry.content_width_px / 4.8))
+        return max(104, math.floor((geometry.content_width_px + 34) / 3.2))
+    if block_type == "short-paragraph":
+        return max(62, math.floor((geometry.content_width_px + 18) / 4.8))
     if block_type == "quote":
         return max(32, math.floor(geometry.content_width_px / 6.5))
     return max(42, math.floor(geometry.content_width_px / 5.6))
@@ -478,7 +636,7 @@ def line_cost(text: str, block_type: str, geometry: FixedGeometry, *, continued:
     if block_type == "quote":
         return lines + 3
     if block_type.startswith("toc-"):
-        return lines + (1 if block_type == "toc-heading" else 0)
+        return lines
     if block_type == "heading":
         return lines + 2
     return lines
@@ -603,6 +761,17 @@ def fixed_stylesheet(theme: ExportTheme, geometry: FixedGeometry) -> str:
     sans_font = css_font_stack(theme.sans_font, "Arial, sans-serif")
     rule_color = rgba(theme.accent, 0.18)
     edge_color = rgba(theme.accent, 0.085)
+    contents_left = max(36, geometry.inside_px - 4)
+    contents_right = max(30, geometry.outside_px - 12)
+    contents_width = geometry.width_px - contents_left - contents_right
+    contents_title_size = min(theme.chapter_title_size_pt, 27)
+    toc_font_size = min(theme.contents_size_pt, 8.6)
+    toc_heading_size = toc_font_size + 0.8
+    toc_line_height = max(11.2, toc_font_size + 2.8)
+    short_left = geometry.inside_px
+    short_width = geometry.content_width_px
+    short_font_size = min(geometry.body_size_px, 11.0)
+    short_line_height = max(15.2, min(geometry.line_height_px, geometry.body_size_px + 3.7))
     return f"""
 @namespace epub "http://www.idpf.org/2007/ops";
 
@@ -764,6 +933,26 @@ body {{
   padding-top: 34px;
 }}
 
+.page--contents .unit-header {{
+  left: {contents_left}px;
+  top: 54px;
+  width: {contents_width}px;
+  min-height: 72px;
+  padding: 22px 0 8px 18px;
+}}
+
+.page--contents .unit-header h1 {{
+  max-width: none;
+  font-size: {contents_title_size}px;
+  line-height: 1;
+}}
+
+.page--short-content .unit-header {{
+  top: 64px;
+  min-height: 94px;
+  padding: 22px 0 10px 20px;
+}}
+
 .page--part .unit-header,
 .page--dedication .unit-header {{
   top: 176px;
@@ -835,6 +1024,17 @@ body {{
   overflow: hidden;
 }}
 
+.page--contents .flow-frame {{
+  left: {contents_left}px;
+  width: {contents_width}px;
+}}
+
+.page--short-content .flow-frame,
+.page--short-tail .flow-frame {{
+  left: {short_left}px;
+  width: {short_width}px;
+}}
+
 .flow-frame--first {{
   top: 172px;
   bottom: {geometry.bottom_px + 22}px;
@@ -845,7 +1045,26 @@ body {{
 }}
 
 .page--contents .flow-frame--first {{
-  top: 150px;
+  top: {contents_first_frame_top_px()}px;
+  bottom: {geometry.bottom_px + 38}px;
+}}
+
+.page--contents .flow-frame--continuation {{
+  top: {geometry.top_px + 10}px;
+  bottom: {geometry.bottom_px + 38}px;
+}}
+
+.page--short-content .flow-frame--first {{
+  top: {short_first_frame_top_px()}px;
+  bottom: {geometry.bottom_px + 28}px;
+}}
+
+.page--short-tail .flow-frame--continuation {{
+  top: {short_tail_frame_top_px()}px;
+  bottom: {geometry.bottom_px + 36}px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }}
 
 .page--dedication .flow-frame--first {{
@@ -882,19 +1101,41 @@ body {{
   margin-top: 4px;
 }}
 
+.page--short-content .reader-paragraph,
+.page--short-tail .reader-paragraph {{
+  font-size: {short_font_size}px;
+  line-height: {short_line_height}px;
+  text-indent: 0;
+}}
+
+.page--short-content .reader-paragraph + .reader-paragraph,
+.page--short-tail .reader-paragraph + .reader-paragraph {{
+  margin-top: 1.8px;
+}}
+
+.page--short-content .space-break,
+.page--short-tail .space-break {{
+  height: 12px;
+}}
+
 .toc-line {{
-  margin: 0 0 4px;
+  margin: 0 0 2px;
   color: {theme.muted};
   font-family: {sans_font};
-  font-size: {theme.contents_size_pt}px;
-  line-height: 13px;
+  font-size: {toc_font_size}px;
+  line-height: {toc_line_height}px;
 }}
 
 .toc-heading {{
-  margin-top: 10px;
+  margin-top: 6px;
   color: {theme.accent};
-  font-size: 10.5px;
+  font-size: {toc_heading_size}px;
   font-weight: 700;
+}}
+
+.toc-line:first-child,
+.toc-heading:first-child {{
+  margin-top: 0;
 }}
 
 .toc-chapter {{
@@ -1015,4 +1256,3 @@ def rgba(hex_value: str, alpha: float) -> str:
     green = int(value[2:4], 16)
     blue = int(value[4:6], 16)
     return f"rgba({red}, {green}, {blue}, {alpha})"
-
