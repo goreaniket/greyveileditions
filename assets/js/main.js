@@ -3,6 +3,7 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const cursorGlow = document.querySelector(".cursor-glow");
 const year = document.getElementById("year");
+const currentCopyrightYear = "2026";
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const mainScriptUrl = document.currentScript?.src || new URL("/assets/js/main.js", window.location.href).href;
@@ -13,7 +14,7 @@ const adminRoles = new Set(["admin", "super_admin"]);
 
 document.body.dataset.accessState = "resolving";
 
-if (year) year.textContent = new Date().getFullYear();
+if (year) year.textContent = currentCopyrightYear;
 
 const updateHeader = () => header?.classList.toggle("scrolled", window.scrollY > 24);
 updateHeader();

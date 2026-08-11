@@ -76,7 +76,13 @@
     "paperbackWrapStatus": {
       "included": false,
       "status": "Front cover only. Full wrap cover, spine, and back cover are not included yet.",
-      "spineGuidance": "Spine width depends on final page count, paper stock, binding method, and printer specification."
+      "spineGuidance": "Spine width depends on final page count, paper stock, binding method, and printer specification.",
+      "identifierBlockGuidance": "Omit the retail identifier block on any generated wrap/back-cover asset until registration is complete.",
+      "backCoverReplacement": {
+        "area": "Former retail identifier area",
+        "content": "Use the short Lalit R. Mishra author blurb instead.",
+        "authorBlurbShort": "Lalit R. Mishra is a writer focused on the psychology of human behavior, attachment, self-awareness, emotional patterns, and the silent transformations that often go unnoticed within everyday life."
+      }
     }
   },
   "emotionalKeywords": [

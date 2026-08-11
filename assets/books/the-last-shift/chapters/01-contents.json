@@ -13,47 +13,47 @@
   "elements": [
     {
       "type": "toc-line",
-      "text": "Copyright Claims………………………………………………………………3",
+      "text": "Copyright Claims………………………………………………………………4",
       "sourceParagraph": 13
     },
     {
       "type": "toc-line",
-      "text": "Disclaimer……………………………………………………………………….4",
+      "text": "Disclaimer……………………………………………………………………….6",
       "sourceParagraph": 14
     },
     {
       "type": "toc-line",
-      "text": "Dedication .....................................................................................5",
+      "text": "Dedication .....................................................................................7",
       "sourceParagraph": 15
     },
     {
       "type": "toc-line",
-      "text": "Author's Note .................................................................................6",
+      "text": "Author's Note .................................................................................8",
       "sourceParagraph": 16
     },
     {
       "type": "toc-line",
-      "text": "Prologue .........................................................................................7",
+      "text": "Prologue .........................................................................................9",
       "sourceParagraph": 17
     },
     {
       "type": "toc-line",
-      "text": "Introduction ...................................................................................10",
+      "text": "Introduction ...................................................................................12",
       "sourceParagraph": 18
     },
     {
       "type": "toc-heading",
-      "text": "PHASAE I - ATTACHMENT",
+      "text": "PHASE I - ATTACHMENT",
       "sourceParagraph": 19
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 1 — The Beginning of Attachment .....................................14",
+      "text": "Chapter 1 — The Beginning of Attachment .....................................15",
       "sourceParagraph": 20
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 2 — Silent Attachment ......................................................20",
+      "text": "Chapter 2 — Silent Attachment ......................................................22",
       "sourceParagraph": 21
     },
     {
@@ -63,12 +63,12 @@
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 3 — Fear of Losing ...........................................................26",
+      "text": "Chapter 3 — Fear of Losing ...........................................................27",
       "sourceParagraph": 23
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 4 — Emotional Exhaustion ...............................................32",
+      "text": "Chapter 4 — Emotional Exhaustion ...............................................34",
       "sourceParagraph": 24
     },
     {
@@ -78,12 +78,12 @@
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 5 — Detachment (The Quiet Disappearance)…………………39",
+      "text": "Chapter 5 — Detachment (The Quiet Disappearance)…………………40",
       "sourceParagraph": 26
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 6 — Emotional Shutdown .................................................45",
+      "text": "Chapter 6 — Emotional Shutdown .................................................46",
       "sourceParagraph": 27
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 7 — Isolation (Self-Distance) .............................................51",
+      "text": "Chapter 7 — Isolation (Self-Distance) .............................................53",
       "sourceParagraph": 29
     },
     {
@@ -103,12 +103,12 @@
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 8 — The Mind Questions Itself ..........................................58",
+      "text": "Chapter 8 — The Mind Questions Itself ..........................................59",
       "sourceParagraph": 31
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 9 — The Things We Realize Too Late .................................66",
+      "text": "Chapter 9 — The Things We Realize Too Late .................................67",
       "sourceParagraph": 32
     },
     {
@@ -118,22 +118,22 @@
     },
     {
       "type": "toc-chapter",
-      "text": "Chapter 10 — The Last Shift ..........................................................72",
+      "text": "Chapter 10 — The Last Shift ..........................................................74",
       "sourceParagraph": 34
     },
     {
       "type": "toc-heading",
-      "text": "EPILOGUE.....................................................................................80",
+      "text": "EPILOGUE.....................................................................................84",
       "sourceParagraph": 35
     },
     {
       "type": "toc-heading",
-      "text": "PART II — SECOND LAYER ...........................................................83",
+      "text": "PART II — SECOND LAYER ...........................................................88",
       "sourceParagraph": 36
     },
     {
       "type": "toc-heading",
-      "text": "ABOUT THE AUTHOR ...................................................................84",
+      "text": "ABOUT THE AUTHOR ...................................................................89",
       "sourceParagraph": 37
     }
   ]

@@ -18,6 +18,10 @@
     "source": "/assets/books/the-last-shift/cover/cover-source.png",
     "alt": "The Last Shift book cover"
   },
+  "backCover": {
+    "identifierBlock": "omit",
+    "authorBlurbShort": "Lalit R. Mishra is a writer focused on the psychology of human behavior, attachment, self-awareness, emotional patterns, and the silent transformations that often go unnoticed within everyday life."
+  },
   "readerRoute": "/projects/human-mind/books/the-last-shift/reader/",
   "readerExitUrl": "/projects/human-mind/books/the-last-shift.html",
   "storageKey": "greyveil:the-last-shift:continuous-reader:v2",
@@ -489,6 +493,6 @@
     "Word manuscript is the live source for this reader.",
     "The PDF was used only as a visual and structural reference.",
     "The source contents list names Chapter 10 as The Last Shift, while the chapter opening names it What Remains When Everything Quiets Down.",
-    "The source contents spelling PHASAE I - ATTACHMENT is preserved in the contents unit."
+    "The Phase I contents heading was corrected for the final 2026 edition."
   ]
 }

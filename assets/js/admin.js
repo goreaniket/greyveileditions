@@ -169,6 +169,10 @@ const state = {
     accessGrants: null,
   },
   errors: {},
+  feedbackDrawer: {
+    feedback: null,
+    returnFocus: null,
+  },
 }
 
 const $ = (selector, root = document) => root.querySelector(selector)
@@ -4169,64 +4173,162 @@ const feedbackSection = (label, ...children) => {
   return section
 }
 
-const feedbackCard = (feedback) => {
-  const card = createNode('article', 'feedback-card')
-  const rating = createNode('div', 'feedback-card__rating')
-  const ratingValue = createNode('strong', '', formatRating(feedback.Rate))
-  const ratingLabel = createNode('span', '', '/ 5 rating')
-  const review = createNode('blockquote', 'feedback-card__review', getText(feedback['Reviews '], 'No review text provided.'))
-  const reviewer = createNode('p', 'feedback-card__reviewer', `- ${getText(feedback.Name, 'Anonymous')}`)
-  const meta = createNode('div', 'feedback-card__meta-grid')
+const feedbackStatusValue = (feedback) => {
+  return STATUS_OPTIONS.includes(feedback?.status) ? feedback.status : 'new'
+}
 
-  rating.append(ratingValue, ratingLabel)
-  meta.append(
-    feedbackMetaField('Book', feedback.Book),
-    feedbackMetaField('Series', feedback.Series),
-    feedbackMetaField('Collection', feedback.Collection),
-    feedbackMetaField('Occupation', feedback['Occupation ']),
-    feedbackMetaField('Date', formatDate(feedback['Date & time'])),
-    feedbackMetaField('Email', feedback.Email, 'feedback-meta-field--secondary')
+const feedbackStatusActionLabel = (status) => {
+  if (status === 'new') return 'Mark New'
+  if (status === 'reviewed') return 'Mark Reviewed'
+  if (status === 'archived') return 'Archive'
+  return getText(status)
+}
+
+const feedbackDetailField = (label, value, options = {}) => {
+  const field = createNode('div', `feedback-detail-field ${options.secondary ? 'feedback-detail-field--secondary' : ''}`.trim())
+  field.append(
+    createNode('span', '', label),
+    createNode(options.multiline ? 'p' : 'strong', '', getText(value))
+  )
+  return field
+}
+
+const feedbackReviewPreview = (feedback) => {
+  const review = getText(feedback['Reviews '], 'No review text provided.')
+  return review.length > 170 ? `${review.slice(0, 167).trim()}...` : review
+}
+
+const closeFeedbackDrawer = () => {
+  document.removeEventListener('keydown', handleFeedbackDrawerKeydown)
+  const drawer = document.querySelector('.feedback-detail-modal')
+  drawer?.remove()
+
+  const returnTarget = state.feedbackDrawer.returnFocus?.isConnected
+    ? state.feedbackDrawer.returnFocus
+    : singleNodes.feedbackList?.querySelector('.feedback-card__button')
+  state.feedbackDrawer.feedback = null
+  state.feedbackDrawer.returnFocus = null
+  returnTarget?.focus({ preventScroll: true })
+}
+
+const handleFeedbackDrawerKeydown = (event) => {
+  if (event.key === 'Escape') closeFeedbackDrawer()
+}
+
+const refreshFeedbackDrawer = () => {
+  const activeFeedback = state.feedbackDrawer.feedback
+  if (!activeFeedback || !document.querySelector('.feedback-detail-modal')) return
+  openFeedbackDrawer(activeFeedback, state.feedbackDrawer.returnFocus, { preserveFocus: true })
+}
+
+const openFeedbackDrawer = (feedback, trigger, options = {}) => {
+  state.feedbackDrawer.feedback = feedback
+  state.feedbackDrawer.returnFocus = trigger || state.feedbackDrawer.returnFocus || document.activeElement
+
+  document.removeEventListener('keydown', handleFeedbackDrawerKeydown)
+  document.querySelector('.feedback-detail-modal')?.remove()
+
+  const currentStatus = feedbackStatusValue(feedback)
+  const overlay = createNode('div', 'feedback-detail-modal')
+  overlay.setAttribute('role', 'presentation')
+
+  const drawer = createNode('aside', 'feedback-detail-drawer')
+  drawer.setAttribute('role', 'dialog')
+  drawer.setAttribute('aria-modal', 'true')
+  drawer.setAttribute('aria-labelledby', 'feedback-detail-title')
+
+  const header = createNode('div', 'feedback-detail-drawer__header')
+  const title = createNode('div')
+  title.append(
+    createNode('p', 'admin-eyebrow', 'Reader Response'),
+    createNode('h3', '', getText(feedback.Book, 'Greyveil Feedback'))
+  )
+  title.querySelector('h3').id = 'feedback-detail-title'
+
+  const closeButton = createNode('button', 'admin-action', 'Close')
+  closeButton.type = 'button'
+  closeButton.addEventListener('click', closeFeedbackDrawer)
+  header.append(title, closeButton)
+
+  const statusRow = createNode('div', 'feedback-detail-drawer__status')
+  statusRow.append(
+    statusBadge(currentStatus),
+    createNode('span', '', `Updated in list as ${currentStatus}`)
   )
 
-  const statusLabel = createNode('label')
-  const labelText = createNode('span', '', 'Status')
-  const statusSelect = document.createElement('select')
-  statusSelect.className = 'feedback-status-select'
-  statusSelect.disabled = !feedback.id
+  const fields = createNode('div', 'feedback-detail-grid')
+  fields.append(
+    feedbackDetailField('Name', feedback.Name),
+    feedbackDetailField('Rating', `${formatRating(feedback.Rate)} / 5`),
+    feedbackDetailField('Review', feedback['Reviews '], { multiline: true }),
+    feedbackDetailField('Book', feedback.Book),
+    feedbackDetailField('Series', feedback.Series),
+    feedbackDetailField('Collection', feedback.Collection),
+    feedbackDetailField('Occupation', feedback['Occupation ']),
+    feedbackDetailField('Date', formatDate(feedback['Date & time'])),
+    feedbackDetailField('Email', feedback.Email, { secondary: true }),
+    feedbackDetailField('Status', currentStatus)
+  )
 
+  const actions = createNode('div', 'feedback-detail-actions')
   STATUS_OPTIONS.forEach((status) => {
-    const option = document.createElement('option')
-    option.value = status
-    option.textContent = status
-    statusSelect.append(option)
+    const button = createNode('button', `admin-action ${status === 'reviewed' ? 'admin-action--primary' : ''}`.trim(), feedbackStatusActionLabel(status))
+    button.type = 'button'
+    button.disabled = !feedback.id || currentStatus === status
+    button.addEventListener('click', () => updateFeedbackStatus(feedback, status, button))
+    actions.append(button)
   })
 
-  statusSelect.value = STATUS_OPTIONS.includes(feedback.status) ? feedback.status : 'new'
-  statusSelect.addEventListener('change', () => updateFeedbackStatus(feedback, statusSelect))
-  statusLabel.append(labelText, statusSelect)
-
-  const actions = createNode('div', 'feedback-card__actions')
-  const previewButton = createNode('button', 'admin-action feedback-story-button', 'Preview Story')
-  const storyButton = createNode('button', 'admin-action admin-action--primary feedback-story-button', 'Download Story PNG')
+  const storyActions = createNode('div', 'feedback-detail-actions feedback-detail-actions--story')
+  const previewButton = createNode('button', 'admin-action', 'Preview Story')
+  const storyButton = createNode('button', 'admin-action admin-action--primary', 'Download Story PNG')
   previewButton.type = 'button'
   storyButton.type = 'button'
   previewButton.addEventListener('click', () => previewFeedbackStory(feedback, previewButton))
   storyButton.addEventListener('click', () => downloadFeedbackStory(feedback, storyButton))
+  storyActions.append(previewButton, storyButton)
 
   if (!feedback.id) {
-    const warning = createNode('p', 'admin-empty', 'Status update needs a feedback row id.')
-    actions.append(statusBadge(feedback.status), statusLabel, previewButton, storyButton, warning)
-  } else {
-    actions.append(statusBadge(feedback.status), statusLabel, previewButton, storyButton)
+    actions.append(createNode('p', 'admin-empty', 'Status update needs a feedback row id.'))
   }
 
-  card.append(
-    feedbackSection('Rating', rating),
-    feedbackSection('Review', review),
-    feedbackSection('Reviewer', reviewer),
-    meta,
-    actions
+  drawer.append(header, statusRow, fields, actions, storyActions)
+  overlay.append(drawer)
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closeFeedbackDrawer()
+  })
+  document.body.append(overlay)
+  document.addEventListener('keydown', handleFeedbackDrawerKeydown)
+
+  if (!options.preserveFocus) closeButton.focus({ preventScroll: true })
+}
+
+const feedbackCard = (feedback) => {
+  const card = createNode('article', 'feedback-card')
+  const button = createNode('button', 'feedback-card__button')
+  button.type = 'button'
+  button.setAttribute('aria-label', `Open feedback from ${getText(feedback.Name, 'Anonymous')} for ${getText(feedback.Book, 'Greyveil')}`)
+  button.addEventListener('click', () => openFeedbackDrawer(feedback, button))
+
+  const heading = createNode('div', 'feedback-card__heading')
+  const identity = createNode('div')
+  identity.append(
+    createNode('strong', '', getText(feedback.Name, 'Anonymous')),
+    createNode('span', '', getText(feedback.Book, 'General feedback'))
   )
+  const rating = createNode('span', 'feedback-card__compact-rating', `${formatRating(feedback.Rate)} / 5`)
+  heading.append(identity, rating)
+
+  const review = createNode('p', 'feedback-card__review', feedbackReviewPreview(feedback))
+  const meta = createNode('div', 'feedback-card__compact-meta')
+  meta.append(
+    createNode('span', '', getText(feedback.Series, 'No series')),
+    createNode('span', '', formatDate(feedback['Date & time'])),
+    statusBadge(feedbackStatusValue(feedback))
+  )
+
+  button.append(heading, review, meta)
+  card.append(button)
   return card
 }
 
@@ -4634,16 +4736,28 @@ const drawFeedbackStory = (context, feedback) => {
   drawSpacedText(context, 'GREYVEIL EDITIONS', 96, 1830, 3)
 }
 
-const updateFeedbackStatus = async (feedback, select) => {
-  const nextStatus = select.value
-  const previousStatus = STATUS_OPTIONS.includes(feedback.status) ? feedback.status : 'new'
+const updateFeedbackStatus = async (feedback, nextStatusOrControl, control = null) => {
+  const nextStatus = typeof nextStatusOrControl === 'string' ? nextStatusOrControl : nextStatusOrControl?.value
+  const previousStatus = feedbackStatusValue(feedback)
 
   if (!feedback.id) {
-    select.value = previousStatus
+    if (nextStatusOrControl?.value) nextStatusOrControl.value = previousStatus
     return
   }
 
-  select.disabled = true
+  if (!STATUS_OPTIONS.includes(nextStatus) || nextStatus === previousStatus) return
+
+  const activeControl = control || nextStatusOrControl
+  const previousLabel = activeControl?.textContent
+  if (activeControl) {
+    activeControl.disabled = true
+    if (activeControl.textContent) activeControl.textContent = 'Saving...'
+  }
+
+  feedback.status = nextStatus
+  renderDashboard()
+  renderFeedback()
+  refreshFeedbackDrawer()
 
   const { error } = await supabase
     .from('feedbacks')
@@ -4651,17 +4765,22 @@ const updateFeedbackStatus = async (feedback, select) => {
     .eq('id', feedback.id)
 
   if (error) {
-    select.value = previousStatus
-    select.disabled = false
+    feedback.status = previousStatus
     setTableError('feedbacks', error, 'status update')
+    renderDashboard()
+    renderFeedback()
+    refreshFeedbackDrawer()
+    if (activeControl) {
+      activeControl.disabled = false
+      if (previousLabel) activeControl.textContent = previousLabel
+    }
     return
   }
 
-  feedback.status = nextStatus
   clearTableError('feedbacks')
-  populateFilters()
   renderDashboard()
   renderFeedback()
+  refreshFeedbackDrawer()
 }
 
 const init = async () => {
