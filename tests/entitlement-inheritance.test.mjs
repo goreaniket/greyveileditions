@@ -14,7 +14,7 @@ const loadContentAccess = async () => {
   return import(url)
 }
 
-const collectionId = '10000000-0000-4000-8000-000000000001'
+const collectionId = '7b5292b0-5487-454a-a171-bfe46e3f6729'
 const volumeId = '20000000-0000-4000-8000-000000000001'
 const seriesAId = '30000000-0000-4000-8000-000000000001'
 const seriesBId = '30000000-0000-4000-8000-000000000002'
@@ -27,6 +27,7 @@ const collection = {
   slug: 'human-paradox-collection',
   title: 'The Human Paradox Collection',
   ...active,
+  visibility: 'public',
 }
 const volume = { id: volumeId, collection_id: collectionId, slug: 'volume', title: 'Volume', ...active }
 const seriesA = { id: seriesAId, volume_id: volumeId, collection_id: null, slug: 'series-a', title: 'Series A', ...active }
@@ -91,6 +92,7 @@ test('purchase CTA entitlement follows exact product ownership semantics', async
 
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [], context, []), false)
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [grant(1)], context, []), false)
+  assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [grant(1), grant(2)], context, []), false)
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [], context, [oneSeriesOrder]), false)
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [], context, twoSeriesOrders), false)
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, allBookGrants, context, []), false)
@@ -100,6 +102,12 @@ test('purchase CTA entitlement follows exact product ownership semantics', async
   assert.equal(access.hasEffectivePurchaseEntitlement(seriesTarget, hierarchy, [], context, [oneSeriesOrder]), true)
   assert.equal(access.hasEffectivePurchaseEntitlement(seriesTarget, hierarchy, [], context, [collectionOrder]), true)
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [], { user, role: 'admin' }, []), true)
+})
+
+test('site collection CTA uses the canonical live Human Paradox slug', async () => {
+  const html = await readFile(new URL('../projects/index.html', import.meta.url), 'utf8')
+  assert.match(html, /data-purchase-type="collection"[^>]+data-purchase-slug="human-paradox-collection"/)
+  assert.doesNotMatch(html, /data-purchase-slug="the-human-paradox-collection"/)
 })
 
 test('book access preserves direct-grant expiry and inherits trusted paid orders', async () => {
@@ -128,15 +136,34 @@ test('server resolver recognizes historical paid scope and rejects direct API du
   let orders = []
   let grants = []
   let profileRole = 'customer'
-  let razorpayCalled = false
+  let razorpayCallCount = 0
 
-  globalThis.fetch = async (input) => {
+  globalThis.fetch = async (input, options = {}) => {
     const url = new URL(String(input))
-    if (url.hostname === 'api.razorpay.com') razorpayCalled = true
+    if (url.hostname === 'api.razorpay.com') {
+      razorpayCallCount += 1
+      return new Response(JSON.stringify({
+        id: 'order_test_collection',
+        amount: 129900,
+        currency: 'INR',
+      }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      })
+    }
 
     let rows = []
     if (url.pathname.endsWith('/profiles')) rows = [{ id: user.id, role: profileRole }]
-    if (url.pathname.endsWith('/orders')) rows = orders
+    if (url.pathname.endsWith('/orders')) {
+      if (options.method === 'POST') {
+        const body = JSON.parse(options.body)
+        rows = [{ id: '50000000-0000-4000-8000-000000000001', ...body }]
+      } else if (options.method === 'PATCH') {
+        rows = [{ id: '50000000-0000-4000-8000-000000000001', ...JSON.parse(options.body) }]
+      } else {
+        rows = orders
+      }
+    }
     if (url.pathname.endsWith('/book_access')) rows = grants
     if (url.pathname.endsWith('/collections')) rows = [collection]
 
@@ -162,6 +189,37 @@ test('server resolver recognizes historical paid scope and rejects direct API du
     bookId: books[2].id,
     hierarchy: { collection, volume, series: seriesA, book: books[2] },
   }
+
+  orders = []
+  grants = []
+  assert.equal((await api.resolveEffectivePurchaseEntitlement(user, collectionPurchase)).entitled, false)
+  grants = [grant(books[0].id)]
+  assert.equal((await api.resolveEffectivePurchaseEntitlement(user, collectionPurchase)).entitled, false)
+  grants = [grant(books[0].id), grant(books[1].id)]
+  assert.equal((await api.resolveEffectivePurchaseEntitlement(user, collectionPurchase)).entitled, false)
+  grants = books.map((item) => grant(item.id))
+  assert.equal((await api.resolveEffectivePurchaseEntitlement(user, collectionPurchase)).entitled, false)
+  orders = [paidOrder('series', seriesAId)]
+  assert.equal((await api.resolveEffectivePurchaseEntitlement(user, collectionPurchase)).entitled, false)
+  orders = [paidOrder('series', seriesAId), paidOrder('series', seriesBId)]
+  assert.equal((await api.resolveEffectivePurchaseEntitlement(user, collectionPurchase)).entitled, false)
+
+  orders = []
+  grants = []
+  const pricing = await api.previewCheckoutPricing(user, {
+    purchase_type: 'collection',
+    collection_id: collectionId,
+  })
+  assert.equal(pricing.original_amount, 129900)
+  assert.equal(pricing.final_amount, 129900)
+
+  const createdOrder = await api.createCheckoutOrder(user, {
+    purchase_type: 'collection',
+    collection_id: collectionId,
+  })
+  assert.equal(createdOrder.amount, 129900)
+  assert.equal(createdOrder.currency, 'INR')
+  assert.equal(razorpayCallCount, 1)
 
   orders = []
   grants = []
@@ -196,10 +254,11 @@ test('server resolver recognizes historical paid scope and rejects direct API du
   assert.equal((await api.resolveEffectivePurchaseEntitlement(user, collectionPurchase)).entitled, true)
   profileRole = 'customer'
   orders = [paidOrder('collection', collectionId)]
+  const razorpayCallsBeforeDuplicate = razorpayCallCount
 
   await assert.rejects(
     api.createCheckoutOrder(user, { purchase_type: 'collection', collection_id: collectionId }),
     (error) => error?.code === 'already_entitled' && error?.statusCode === 409
   )
-  assert.equal(razorpayCalled, false)
+  assert.equal(razorpayCallCount, razorpayCallsBeforeDuplicate)
 })
