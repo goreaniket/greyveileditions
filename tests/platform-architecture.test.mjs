@@ -4,7 +4,7 @@ import test from 'node:test'
 
 const importSource = async (path, { mocks = '', before = '' } = {}) => {
   let source = await readFile(new URL(path, import.meta.url), 'utf8')
-  source = source.replace(/^import .*$/gm, '')
+  source = source.replace(/^import(?:[\s\S]*?from\s+)?['"][^'"]+['"]\s*;?\s*$/gm, '')
   if (before) source = source.split(before)[0]
   const url = `data:text/javascript;base64,${Buffer.from(`${mocks}\n${source}`).toString('base64')}`
   return import(url)
@@ -140,6 +140,46 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.match(main, /Buy Full Collection/)
   assert.match(auth, /data-account-profile-form/)
   assert.match(auth, /\.from\('profiles'\)[\s\S]+\.update\(\{ display_name/)
+})
+
+test('checkout opens Razorpay with trusted Book, Series, and Collection orders', async () => {
+  globalThis.__greyveilRazorpayOptions = []
+  const checkout = await importSource('../assets/js/checkout.js', {
+    before: 'const initCheckout',
+    mocks: `
+      const supabase = {};
+      const apiPost = async () => ({ paid: true });
+      const getText = (value, fallback = '') => String(value ?? '').trim() || fallback;
+      const loadRazorpayCheckout = async () => class RazorpayMock {
+        constructor(options) { this.options = options; globalThis.__greyveilRazorpayOptions.push(options); }
+        on() {}
+        open() { this.options.modal.ondismiss(); }
+      };
+      const getEntitlementSnapshot = async () => ({});
+      const hierarchyForBook = () => ({});
+    `,
+  })
+  const user = { id: '40000000-0000-4000-8000-000000000001', email: 'reader@example.com' }
+  for (const [index, item] of [
+    { type: 'book', amount: 14900 },
+    { type: 'series', amount: 59900 },
+    { type: 'collection', amount: 129900 },
+  ].entries()) {
+    const result = await checkout.openRazorpay({
+      user,
+      profile: { display_name: 'Reader' },
+      itemName: `Greyveil ${item.type}`,
+      order: {
+        key_id: 'rzp_test_key', order_id: `order_${item.type}`,
+        local_order_id: `local_${index}`, amount: item.amount, currency: 'INR',
+      },
+    })
+    const options = globalThis.__greyveilRazorpayOptions.at(-1)
+    assert.deepEqual(result, { dismissed: true })
+    assert.equal(options.order_id, `order_${item.type}`)
+    assert.equal(options.amount, item.amount)
+    assert.equal(options.currency, 'INR')
+  }
 })
 
 test('admin management renders real coupon and announcement tables with storage uploads', async () => {

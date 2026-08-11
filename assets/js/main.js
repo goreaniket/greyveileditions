@@ -550,7 +550,12 @@ const updateBookSurfaceState = (node, decision, access, context) => {
   readerLinks.forEach((link) => {
     if (locked) {
       lockReaderLink(link, context.user);
-      if (!directPage) ensurePurchaseAction(link, decision);
+      const pageTarget = currentPageTarget();
+      const belongsToDirectBookPage = pageTarget.kind === "book"
+        && pageTarget.slug === decision.book.slug
+        && link.closest("main") === directContentState.main;
+      if (!directPage && !belongsToDirectBookPage) ensurePurchaseAction(link, decision);
+      else removeGeneratedPurchaseAction(link, decision.book);
     } else {
       restoreLink(link);
       removeGeneratedPurchaseAction(link, decision.book);

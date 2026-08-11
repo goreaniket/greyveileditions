@@ -52,7 +52,7 @@ const includedContent = async (selection) => {
   }
 }
 
-const openRazorpay = async ({ user, profile, order, itemName }) => {
+export const openRazorpay = async ({ user, profile, order, itemName }) => {
   const Razorpay = await loadRazorpayCheckout()
   return new Promise((resolve, reject) => {
     const checkout = new Razorpay({
