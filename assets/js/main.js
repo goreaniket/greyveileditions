@@ -502,7 +502,7 @@ const updateBookSurfaceState = (node, decision, access, context) => {
   }
 };
 
-const createContentLookup = (hierarchy, access, grants = []) => {
+const createContentLookup = (hierarchy, access, grants = [], paidOrders = []) => {
   const currentGrantsByBookId = new Map();
   grants
     .filter((grant) => access.isGrantCurrent(grant))
@@ -518,6 +518,7 @@ const createContentLookup = (hierarchy, access, grants = []) => {
     collectionsBySlug: new Map(hierarchy.collections.map((item) => [item.slug, item])),
     collectionsByTitleSlug: new Map(hierarchy.collections.map((item) => [slugifyContent(item.title), item])),
     currentGrantsByBookId,
+    paidOrders,
   };
 };
 
@@ -570,7 +571,11 @@ const contentDecision = (target, hierarchy, access, context, lookup) => {
     const allowed = access.canDiscoverContent(itemHierarchy, context);
     const currentGrant = book?.id ? lookup.currentGrantsByBookId.get(book.id) : null;
     const canRead = allowed
-      ? access.canReadBook({ ...itemHierarchy, grants: currentGrant ? [currentGrant] : [] }, context)
+      ? access.canReadBook({
+          ...itemHierarchy,
+          grants: currentGrant ? [currentGrant] : [],
+          paidOrders: lookup.paidOrders,
+        }, context)
       : false;
 
     return {
@@ -617,9 +622,13 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
       return;
     }
 
-    const grantsResult = await access.fetchViewerBookGrants(context.user?.id);
+    const [grantsResult, paidOrdersResult] = await Promise.all([
+      access.fetchViewerBookGrants(context.user?.id),
+      access.fetchViewerPaidOrders(context.user?.id),
+    ]);
     const grants = grantsResult.data || [];
-    const lookup = createContentLookup(hierarchy, access, grants);
+    const paidOrders = paidOrdersResult.data || [];
+    const lookup = createContentLookup(hierarchy, access, grants, paidOrders);
 
     if (runId !== contentVisibilityRun) return;
 

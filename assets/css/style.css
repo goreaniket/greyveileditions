@@ -2193,6 +2193,45 @@ main > .home-hero ~ .section .contact-link {
   margin-top: 0;
 }
 
+.auth-forgot-link {
+  display: block;
+  width: fit-content;
+  margin: -10px 0 18px auto;
+  color: rgba(42, 52, 64, .68);
+  font-size: .84rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(140, 106, 74, .38);
+  text-underline-offset: 4px;
+}
+
+.auth-forgot-link:hover {
+  color: var(--slate);
+  text-decoration-color: var(--bronze);
+}
+
+.auth-state-card {
+  display: grid;
+  gap: 14px;
+}
+
+.auth-state-card p {
+  margin: 0;
+  color: rgba(42, 52, 64, .72);
+  line-height: 1.6;
+}
+
+.auth-state-card .form-status {
+  margin-top: 0;
+}
+
+.auth-field-note {
+  margin: -8px 0 16px;
+  color: rgba(42, 52, 64, .62);
+  font-size: .82rem;
+  font-weight: 650;
+}
+
 .account-details {
   display: grid;
   gap: 12px;

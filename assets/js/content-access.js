@@ -9,6 +9,7 @@ const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, 
 const VOLUME_SELECT = 'id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
 const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
 const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active'
+const PAID_ORDER_SELECT = 'id, user_id, purchase_type, book_id, series_id, collection_id, status, paid_at'
 
 export const isAdminRole = (role) => ADMIN_ROLES.has(role)
 
@@ -125,12 +126,49 @@ export const hasBookEntitlement = (book, grants = []) => {
   return grants.some((grant) => grant.book_id === book.id && isGrantCurrent(grant))
 }
 
+const idsMatch = (left, right) => String(left ?? '') === String(right ?? '')
+
+export const isTrustedPaidOrder = (order) => {
+  return String(order?.status || '').trim().toLowerCase() === 'paid'
+}
+
+const paidOrderType = (order) => {
+  const explicitType = String(order?.purchase_type || '').trim().toLowerCase()
+  if (['book', 'series', 'collection'].includes(explicitType)) return explicitType
+
+  const populatedTargets = ['book', 'series', 'collection']
+    .filter((type) => order?.[`${type}_id`] != null && String(order[`${type}_id`]).trim())
+  return populatedTargets.length === 1 ? populatedTargets[0] : ''
+}
+
+export const hasPaidOrderForProduct = ({ purchaseType, targetId } = {}, paidOrders = []) => {
+  const type = String(purchaseType || '').trim().toLowerCase()
+  if (!['book', 'series', 'collection'].includes(type) || !targetId) return false
+
+  return paidOrders.some((order) => {
+    return isTrustedPaidOrder(order)
+      && paidOrderType(order) === type
+      && idsMatch(order[`${type}_id`], targetId)
+  })
+}
+
+export const hasInheritedPaidOrderEntitlement = ({
+  collection = null,
+  series = null,
+  book = null,
+} = {}, paidOrders = []) => {
+  return hasPaidOrderForProduct({ purchaseType: 'book', targetId: book?.id }, paidOrders)
+    || hasPaidOrderForProduct({ purchaseType: 'series', targetId: series?.id }, paidOrders)
+    || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)
+}
+
 export const canReadBook = ({
   collection = null,
   volume = null,
   series = null,
   book = null,
   grants = [],
+  paidOrders = [],
 } = {}, context = {}) => {
   if (!book) return false
   if (isAdminRole(context.role)) {
@@ -145,6 +183,7 @@ export const canReadBook = ({
   if (!context.user?.id) return false
 
   return hasBookEntitlement(book, grants)
+    || hasInheritedPaidOrderEntitlement({ collection, series, book }, paidOrders)
 }
 
 export const mapById = (items = []) => new Map(items.map((item) => [item.id, item]))
@@ -178,8 +217,6 @@ export const hierarchyForBook = (book, seriesItems = [], collections = [], volum
   return { collection, volume, series, book }
 }
 
-const idsMatch = (left, right) => String(left ?? '') === String(right ?? '')
-
 export const eligibleBooksForPurchase = ({ purchaseType, targetId } = {}, hierarchy = {}) => {
   const type = String(purchaseType || '').trim().toLowerCase()
   if (!['book', 'series', 'collection'].includes(type) || !targetId) return []
@@ -204,15 +241,36 @@ export const hasEffectivePurchaseEntitlement = (
   purchase,
   hierarchy = {},
   grants = [],
-  context = {}
+  context = {},
+  paidOrders = []
 ) => {
   if (isAdminRole(context.role)) return true
 
-  const eligibleBooks = eligibleBooksForPurchase(purchase, hierarchy)
-  return eligibleBooks.length > 0 && eligibleBooks.every((item) => canReadBook({
-    ...item,
-    grants,
-  }, context))
+  const purchaseType = String(purchase?.purchaseType || '').trim().toLowerCase()
+  const targetId = purchase?.targetId
+  if (!['book', 'series', 'collection'].includes(purchaseType) || !targetId) return false
+
+  if (purchaseType === 'book') {
+    const [bookHierarchy] = eligibleBooksForPurchase(purchase, hierarchy)
+    return Boolean(bookHierarchy) && canReadBook({
+      ...bookHierarchy,
+      grants,
+      paidOrders,
+    }, context)
+  }
+
+  if (purchaseType === 'collection') {
+    return hasPaidOrderForProduct(purchase, paidOrders)
+  }
+
+  const series = (hierarchy.seriesItems || []).find((item) => idsMatch(item.id, targetId))
+  if (!series) return false
+  const volume = volumeForSeries(series, hierarchy.volumes || [])
+  const collection = collectionForSeries(series, hierarchy.collections || [])
+    || collectionForVolume(volume, hierarchy.collections || [])
+
+  return hasPaidOrderForProduct(purchase, paidOrders)
+    || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)
 }
 
 export const filterDiscoverableBooks = (books = [], seriesItems = [], collections = [], volumes = [], context = {}) => {
@@ -235,6 +293,19 @@ export const fetchViewerBookGrants = async (userId) => {
     .select('user_id, book_id, access_type, granted_at, expires_at, is_visible, can_read')
     .eq('user_id', userId)
     .order('granted_at', { ascending: false })
+
+  return { data: data || [], error }
+}
+
+export const fetchViewerPaidOrders = async (userId) => {
+  if (!userId) return { data: [], error: null }
+
+  const { data, error } = await supabase
+    .from('orders')
+    .select(PAID_ORDER_SELECT)
+    .eq('user_id', userId)
+    .eq('status', 'paid')
+    .order('paid_at', { ascending: false })
 
   return { data: data || [], error }
 }
@@ -506,8 +577,11 @@ export const resolveReaderAccess = async (bookSlug) => {
     }
   }
 
-  const grantsResult = await fetchViewerBookGrants(context.user.id)
-  if (grantsResult.error) {
+  const [grantsResult, paidOrdersResult] = await Promise.all([
+    fetchViewerBookGrants(context.user.id),
+    fetchViewerPaidOrders(context.user.id),
+  ])
+  if (grantsResult.error || paidOrdersResult.error) {
     return {
       allowed: false,
       reason: 'access_required',
@@ -517,20 +591,28 @@ export const resolveReaderAccess = async (bookSlug) => {
       bookHierarchy,
       visibility,
       grants: [],
-      errors: [['book_access', grantsResult.error]],
+      paidOrders: [],
+      errors: [
+        ...(grantsResult.error ? [['book_access', grantsResult.error]] : []),
+        ...(paidOrdersResult.error ? [['orders', paidOrdersResult.error]] : []),
+      ],
     }
   }
 
   const grants = grantsResult.data || []
+  const paidOrders = paidOrdersResult.data || []
+  const entitled = hasBookEntitlement(book, grants)
+    || hasInheritedPaidOrderEntitlement(bookHierarchy, paidOrders)
   return {
-    allowed: hasBookEntitlement(book, grants),
-    reason: hasBookEntitlement(book, grants) ? 'entitled' : 'access_required',
+    allowed: entitled,
+    reason: entitled ? 'entitled' : 'access_required',
     context,
     hierarchy,
     book,
     bookHierarchy,
     visibility,
     grants,
+    paidOrders,
     errors: [],
   }
 }

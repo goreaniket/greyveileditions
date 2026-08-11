@@ -1,15 +1,17 @@
 -- Greyveil Editions server-owned test coupon audit fields.
 -- Apply after supabase/razorpay-standard-checkout.sql.
 
+begin;
+
 alter table public.orders
   add column if not exists original_amount integer,
   add column if not exists coupon_code text,
-  add column if not exists discount_amount integer not null default 0;
+  add column if not exists discount_amount integer;
 
 alter table public.payments
   add column if not exists original_amount integer,
   add column if not exists coupon_code text,
-  add column if not exists discount_amount integer not null default 0;
+  add column if not exists discount_amount integer;
 
 update public.orders
 set original_amount = amount
@@ -20,6 +22,22 @@ update public.payments
 set original_amount = amount
 where original_amount is null
   and amount is not null;
+
+update public.orders
+set discount_amount = greatest(coalesce(original_amount, amount, 0) - coalesce(amount, 0), 0)
+where discount_amount is null;
+
+update public.payments
+set discount_amount = greatest(coalesce(original_amount, amount, 0) - coalesce(amount, 0), 0)
+where discount_amount is null;
+
+alter table public.orders
+  alter column discount_amount set default 0,
+  alter column discount_amount set not null;
+
+alter table public.payments
+  alter column discount_amount set default 0,
+  alter column discount_amount set not null;
 
 do $$
 begin
@@ -89,3 +107,7 @@ grant select (
   original_amount, amount, coupon_code, discount_amount, currency,
   status, method, captured, created_at, updated_at, verified_at, razorpay_created_at
 ) on public.payments to authenticated;
+
+commit;
+
+NOTIFY pgrst, 'reload schema';

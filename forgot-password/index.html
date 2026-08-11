@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | Greyveil Editions</title>
-  <meta name="description" content="Sign in to your Greyveil Editions account." />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://greyveileditions.vercel.app/auth/login/" />
+  <title>Forgot Password | Greyveil Editions</title>
+  <meta name="description" content="Request password reset instructions for your Greyveil Editions account." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://greyveileditions.vercel.app/forgot-password/" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
-<body data-auth-page="login">
+<body data-auth-page="forgot-password">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -43,26 +43,21 @@
   <main id="main-content">
     <section class="project-hero page-shell feedback-hero auth-hero">
       <div class="reveal">
-        <p class="eyebrow">Account Access</p>
-        <h1>Return to Greyveil.</h1>
-        <p class="hero-text">Sign in to continue with your reader account.</p>
+        <p class="eyebrow">Account Recovery</p>
+        <h1>Reset your password.</h1>
+        <p class="hero-text">Enter your account email to receive secure reset instructions.</p>
       </div>
     </section>
 
     <section class="section page-shell feedback-layout">
-      <form class="contact-card feedback-form auth-card reveal" data-auth-view data-login-form hidden>
+      <form class="contact-card feedback-form auth-card reveal" data-auth-view data-forgot-password-form hidden>
         <label>
           <span>Email</span>
           <input name="email" type="email" autocomplete="email" required />
         </label>
-        <label>
-          <span>Password</span>
-          <input name="password" type="password" autocomplete="current-password" required />
-        </label>
-        <a class="auth-forgot-link" href="/forgot-password/">Forgot password?</a>
         <div class="button-row auth-form-actions">
-          <button class="button primary" type="submit">Sign In</button>
-          <a class="hero-link" href="/auth/signup/">Create an account</a>
+          <button class="button primary" type="submit">Send reset link</button>
+          <a class="hero-link" href="/auth/login/">Back to sign in</a>
         </div>
         <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
       </form>
@@ -77,19 +72,14 @@
       </div>
       <nav class="footer-col" aria-label="Site navigation">
         <h3>Site</h3>
-        <a href="/index.html">Home</a>
-        <a href="/about/index.html">About Greyveil</a>
-        <a href="/projects/index.html">Projects</a>
-        <a href="/founder/">Founder</a>
-        <a href="/credits/index.html">Credits</a><a href="/copyright/">Copyright &amp; Permissions</a>
+        <a href="/index.html">Home</a><a href="/about/index.html">About Greyveil</a><a href="/projects/index.html">Projects</a>
+        <a href="/founder/">Founder</a><a href="/credits/index.html">Credits</a><a href="/copyright/">Copyright &amp; Permissions</a>
         <a href="/contact/index.html">Contact</a>
       </nav>
       <nav class="footer-col" aria-label="Connect with Greyveil Editions">
         <h3>Connect</h3>
-        <a href="mailto:greyveileditions@gmail.com">Email</a>
-        <a href="tel:+917874560944">Phone</a>
-        <a href="https://wa.me/917874560944">WhatsApp</a>
-        <a href="https://www.instagram.com/greyveil_editions?utm_source=qr&igsh=bXZqcTJ6NmppYWJp">Instagram</a>
+        <a href="mailto:greyveileditions@gmail.com">Email</a><a href="tel:+917874560944">Phone</a>
+        <a href="https://wa.me/917874560944">WhatsApp</a><a href="https://www.instagram.com/greyveil_editions">Instagram</a>
       </nav>
     </div>
     <div class="page-shell footer-bottom">

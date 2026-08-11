@@ -3,6 +3,7 @@ import { getCurrentProfile, getCurrentUser } from './auth.js'
 import {
   fetchContentHierarchy,
   fetchViewerBookGrants,
+  fetchViewerPaidOrders,
   hasEffectivePurchaseEntitlement,
   isAdminRole,
 } from './content-access.js'
@@ -250,16 +251,18 @@ const refreshPurchaseEntitlements = async () => {
       return
     }
 
-    const [hierarchy, grantsResult] = await Promise.all([
+    const [hierarchy, grantsResult, paidOrdersResult] = await Promise.all([
       fetchContentHierarchy(),
       fetchViewerBookGrants(user.id),
+      fetchViewerPaidOrders(user.id),
     ])
     if (runId !== entitlementRefreshRun) return
-    if (grantsResult.error || Object.values(hierarchy.errors || {}).some(Boolean)) {
-      throw grantsResult.error || new Error('Content access could not be resolved.')
+    if (grantsResult.error || paidOrdersResult.error || Object.values(hierarchy.errors || {}).some(Boolean)) {
+      throw grantsResult.error || paidOrdersResult.error || new Error('Content access could not be resolved.')
     }
 
     const grants = grantsResult.data || []
+    const paidOrders = paidOrdersResult.data || []
     await Promise.all(buttons.map(async (button) => {
       try {
         const payload = await purchasePayloadForButton(button)
@@ -268,7 +271,8 @@ const refreshPurchaseEntitlements = async () => {
           purchaseTargetForPayload(payload),
           hierarchy,
           grants,
-          context
+          context,
+          paidOrders
         )
         setPurchaseAccessState(button, entitled ? 'entitled' : 'available')
       } catch (_error) {
@@ -333,7 +337,7 @@ const openPurchaseDialog = ({ button, payload, pricing }) => new Promise((resolv
   couponForm.className = 'purchase-coupon-form'
   const label = document.createElement('label')
   label.setAttribute('for', 'purchase-coupon-code')
-  label.textContent = 'Coupon code'
+  label.textContent = 'Coupon code (optional)'
   const controls = document.createElement('div')
   controls.className = 'purchase-coupon-form__controls'
   const input = document.createElement('input')
@@ -366,7 +370,6 @@ const openPurchaseDialog = ({ button, payload, pricing }) => new Promise((resolv
   const continueButton = document.createElement('button')
   continueButton.type = 'button'
   continueButton.className = 'button primary'
-  continueButton.textContent = 'Continue to checkout'
   actions.append(continueButton)
 
   const renderPricing = () => {
@@ -376,6 +379,7 @@ const openPurchaseDialog = ({ button, payload, pricing }) => new Promise((resolv
       : 'Price'
     original.classList.toggle('is-discounted', discounted)
     final.textContent = formatCurrency(currentPricing.final_amount, currentPricing.currency)
+    continueButton.textContent = `Pay ${formatCurrency(currentPricing.final_amount, currentPricing.currency)}`
   }
 
   const resetCoupon = () => {
@@ -408,8 +412,8 @@ const openPurchaseDialog = ({ button, payload, pricing }) => new Promise((resolv
     const couponCode = getText(input.value)
     if (!couponCode) {
       resetCoupon()
-      couponStatus.textContent = 'Enter a coupon code.'
-      couponStatus.dataset.status = 'error'
+      couponStatus.textContent = 'Coupon is optional. You can pay the regular price.'
+      couponStatus.dataset.status = 'info'
       return
     }
 
@@ -428,7 +432,7 @@ const openPurchaseDialog = ({ button, payload, pricing }) => new Promise((resolv
 
       if (!currentPricing?.valid) {
         resetCoupon()
-        couponStatus.textContent = 'That coupon is not valid. The regular price still applies.'
+        couponStatus.textContent = 'Invalid coupon code. The regular price still applies.'
         couponStatus.dataset.status = 'error'
         return
       }

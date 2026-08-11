@@ -417,83 +417,31 @@ const resolvePurchaseFromBody = async (body) => {
 
 const idsMatch = (left, right) => String(left ?? '') === String(right ?? '')
 
-const inFilter = (values = []) => `in.(${[...new Set(values.filter(Boolean))].join(',')})`
-
-const serverBookHierarchy = (book, seriesItems = [], volumes = [], collections = []) => {
-  const series = seriesItems.find((item) => idsMatch(item.id, book?.series_id)) || null
-  const volume = volumes.find((item) => idsMatch(item.id, series?.volume_id)) || null
-  const collectionId = series?.collection_id || volume?.collection_id
-  const collection = collections.find((item) => idsMatch(item.id, collectionId)) || null
-  return { collection, volume, series, book }
-}
-
-const eligibleHierarchy = (hierarchy) => {
-  if (!hierarchyIsComplete(hierarchy) || !hierarchyIsActive(hierarchy)) return false
-  const book = hierarchy.book ? { ...hierarchy.book, visibility: visibilityForBook(hierarchy.book) } : null
-  return effectiveVisibility({ ...hierarchy, book }) !== 'private'
-}
-
-const eligibleBooksForPurchase = async (purchase) => {
-  if (purchase.purchaseType === 'book') {
-    return eligibleHierarchy(purchase.hierarchy) ? [purchase.hierarchy] : []
-  }
-
-  if (purchase.purchaseType === 'series') {
-    const books = await selectRows('books', {
-      series_id: `eq.${purchase.seriesId}`,
-      select: BOOK_SELECT,
-    })
-    return books
-      .map((book) => ({ ...purchase.hierarchy, book }))
-      .filter(eligibleHierarchy)
-  }
-
-  const collection = purchase.hierarchy.collection
-  const directSeriesPromise = selectRows('series', {
-    collection_id: `eq.${purchase.collectionId}`,
-    select: SERIES_SELECT,
-  })
-  const collectionVolumes = await selectRows('volumes', {
-    collection_id: `eq.${purchase.collectionId}`,
-    select: VOLUME_SELECT,
-  })
-  const volumeIds = collectionVolumes.map((volume) => volume.id).filter(Boolean)
-  const volumeSeriesPromise = volumeIds.length
-    ? selectRows('series', {
-      volume_id: inFilter(volumeIds),
-      select: SERIES_SELECT,
-    })
-    : Promise.resolve([])
-  const [directSeries, volumeSeries] = await Promise.all([directSeriesPromise, volumeSeriesPromise])
-  const seriesItems = [...new Map([...directSeries, ...volumeSeries].map((series) => [String(series.id), series])).values()]
-  const referencedVolumeIds = [...new Set(seriesItems.map((series) => series.volume_id).filter(Boolean))]
-  const missingVolumeIds = referencedVolumeIds.filter((id) => !collectionVolumes.some((volume) => idsMatch(volume.id, id)))
-  const extraVolumes = missingVolumeIds.length
-    ? await selectRows('volumes', {
-      id: inFilter(missingVolumeIds),
-      select: VOLUME_SELECT,
-    })
-    : []
-  const volumes = [...collectionVolumes, ...extraVolumes]
-  const seriesIds = seriesItems.map((series) => series.id).filter(Boolean)
-  const books = seriesIds.length
-    ? await selectRows('books', {
-      series_id: inFilter(seriesIds),
-      select: BOOK_SELECT,
-    })
-    : []
-
-  return books
-    .map((book) => serverBookHierarchy(book, seriesItems, volumes, [collection]))
-    .filter(eligibleHierarchy)
-    .filter((hierarchy) => idsMatch(hierarchy.collection?.id, purchase.collectionId))
-}
-
 const isCurrentGrant = (grant) => {
   if (!grant || grant.is_visible !== true || grant.can_read !== true) return false
   if (!grant.expires_at) return true
   const expiresAt = Date.parse(grant.expires_at)
   return Number.isFinite(expiresAt) && expiresAt > Date.now()
+}
+
+const paidOrderType = (order) => {
+  const explicitType = normalizeSlug(order?.purchase_type)
+  if (VALID_PURCHASE_TYPES.has(explicitType)) return explicitType
+
+  const populatedTargets = ['book', 'series', 'collection']
+    .filter((type) => getText(order?.[`${type}_id`]))
+  return populatedTargets.length === 1 ? populatedTargets[0] : ''
+}
+
+const paidOrderMatches = (order, purchaseType, targetId) => {
+  return normalizeSlug(order?.status) === 'paid'
+    && paidOrderType(order) === purchaseType
+    && idsMatch(order?.[`${purchaseType}_id`], targetId)
+}
+
+const hasPaidProductOrder = (paidOrders, purchaseType, targetId) => {
+  if (!targetId) return false
+  return paidOrders.some((order) => paidOrderMatches(order, purchaseType, targetId))
 }
 
 const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
@@ -503,40 +451,53 @@ const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
   })
   const role = normalizeSlug(profile?.role || 'customer').replace(/-/g, '_')
   if (role === 'admin' || role === 'super_admin') {
-    return { entitled: true, reason: role, eligibleBookIds: [] }
+    return { entitled: true, reason: role }
   }
 
-  const eligibleBooks = await eligibleBooksForPurchase(purchase)
-  if (!eligibleBooks.length) {
-    return { entitled: false, reason: 'not_entitled', eligibleBookIds: [] }
-  }
-
-  const paidBookIds = eligibleBooks
-    .filter((hierarchy) => {
-      const book = { ...hierarchy.book, visibility: visibilityForBook(hierarchy.book) }
-      return effectiveVisibility({ ...hierarchy, book }) !== 'public'
-    })
-    .map((hierarchy) => hierarchy.book.id)
-  const grants = paidBookIds.length
-    ? await selectRows('book_access', {
+  const [paidOrders, grants] = await Promise.all([
+    selectRows('orders', {
       user_id: `eq.${user.id}`,
-      book_id: inFilter(paidBookIds),
+      status: 'eq.paid',
+      select: 'id, user_id, purchase_type, book_id, series_id, collection_id, status, paid_at',
+    }),
+    purchase.purchaseType === 'book'
+      ? selectRows('book_access', {
+      user_id: `eq.${user.id}`,
+      book_id: `eq.${purchase.bookId}`,
       select: BOOK_ACCESS_SELECT,
     })
-    : []
-  const currentBookIds = new Set(
-    grants.filter(isCurrentGrant).map((grant) => String(grant.book_id))
-  )
-  const entitled = eligibleBooks.every((hierarchy) => {
-    const book = { ...hierarchy.book, visibility: visibilityForBook(hierarchy.book) }
-    const visibility = effectiveVisibility({ ...hierarchy, book })
-    return visibility === 'public' || currentBookIds.has(String(hierarchy.book.id))
-  })
+      : Promise.resolve([]),
+  ])
+
+  if (purchase.purchaseType === 'collection') {
+    const entitled = hasPaidProductOrder(paidOrders, 'collection', purchase.collectionId)
+    return { entitled, reason: entitled ? 'collection_order' : 'not_entitled' }
+  }
+
+  const collectionId = purchase.hierarchy.collection?.id
+  if (purchase.purchaseType === 'series') {
+    const entitled = hasPaidProductOrder(paidOrders, 'series', purchase.seriesId)
+      || hasPaidProductOrder(paidOrders, 'collection', collectionId)
+    return { entitled, reason: entitled ? 'series_or_collection_order' : 'not_entitled' }
+  }
+
+  const book = { ...purchase.hierarchy.book, visibility: visibilityForBook(purchase.hierarchy.book) }
+  const publicAccess = effectiveVisibility({ ...purchase.hierarchy, book }) === 'public'
+  const directGrant = grants.some(isCurrentGrant)
+  const paidAccess = hasPaidProductOrder(paidOrders, 'book', purchase.bookId)
+    || hasPaidProductOrder(paidOrders, 'series', purchase.hierarchy.series?.id)
+    || hasPaidProductOrder(paidOrders, 'collection', collectionId)
+  const entitled = publicAccess || directGrant || paidAccess
 
   return {
     entitled,
-    reason: entitled ? 'book_access' : 'not_entitled',
-    eligibleBookIds: eligibleBooks.map((hierarchy) => hierarchy.book.id),
+    reason: publicAccess
+      ? 'public'
+      : directGrant
+        ? 'book_access'
+        : paidAccess
+          ? 'paid_order'
+          : 'not_entitled',
   }
 }
 

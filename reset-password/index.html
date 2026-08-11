@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up | Greyveil Editions</title>
-  <meta name="description" content="Create a Greyveil Editions reader account." />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://greyveileditions.vercel.app/auth/signup/" />
+  <title>Reset Password | Greyveil Editions</title>
+  <meta name="description" content="Choose a new password for your Greyveil Editions account." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://greyveileditions.vercel.app/reset-password/" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
-<body data-auth-page="signup">
+<body data-auth-page="reset-password">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -23,56 +23,59 @@
     <a class="brand" href="/index.html">Greyveil Editions</a>
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle aria-controls="primary-navigation">Menu</button>
     <nav id="primary-navigation" class="site-nav" data-nav aria-label="Primary">
-      <a href="/index.html">Home</a>
-      <a href="/about/index.html">About</a>
-      <div class="dropdown">
-        <a class="dropdown-trigger" href="/projects/index.html" aria-haspopup="true" aria-expanded="false">Projects</a>
-        <div class="dropdown-menu">
-          <a href="/projects/index.html">The Human Paradox Collection</a>
-          <a class="dropdown-volume" href="/projects/index.html">Volume I</a>
-          <a class="dropdown-series" href="/projects/human-mind/index.html">The Human Mind</a>
-          <a class="dropdown-series" href="/projects/human-paradox/index.html">The Human Paradox</a>
-          <a class="dropdown-series" href="/projects/human-fiction/index.html">The Human Fiction</a>
-        </div>
-      </div>
-      <a href="/founder/">Founder</a><a href="/credits/index.html">Credits</a>
-      <a href="/contact/index.html">Contact</a>
+      <a href="/index.html">Home</a><a href="/about/index.html">About</a><a href="/projects/index.html">Projects</a>
+      <a href="/founder/">Founder</a><a href="/credits/index.html">Credits</a><a href="/contact/index.html">Contact</a>
     </nav>
   </header>
 
   <main id="main-content">
     <section class="project-hero page-shell feedback-hero auth-hero">
       <div class="reveal">
-        <p class="eyebrow">Reader Account</p>
-        <h1>Create your Greyveil account.</h1>
-        <p class="hero-text">Use your email and a password to begin a reader account.</p>
+        <p class="eyebrow">Account Recovery</p>
+        <h1>Choose a new password.</h1>
+        <p class="hero-text">Complete the secure recovery link to return to your Greyveil account.</p>
       </div>
     </section>
 
     <section class="section page-shell feedback-layout">
-      <form class="contact-card feedback-form auth-card reveal" data-auth-view data-signup-form hidden>
+      <article class="contact-card auth-card auth-state-card reveal" data-reset-loading>
+        <h2>Checking your reset link.</h2>
+        <p class="form-status" data-status="info" role="status" aria-live="polite">Confirming your secure recovery session...</p>
+      </article>
+
+      <form class="contact-card feedback-form auth-card reveal" data-reset-password-form hidden>
         <label>
-          <span>Display Name</span>
-          <input name="display_name" type="text" autocomplete="name" required />
-        </label>
-        <label>
-          <span>Email</span>
-          <input name="email" type="email" autocomplete="email" required />
-        </label>
-        <label>
-          <span>Password</span>
+          <span>New Password</span>
           <input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
         </label>
         <label>
-          <span>Confirm Password</span>
+          <span>Confirm New Password</span>
           <input name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
         </label>
+        <p class="auth-field-note">Use at least 8 characters.</p>
         <div class="button-row auth-form-actions">
-          <button class="button primary" type="submit">Create Account</button>
-          <a class="hero-link" href="/auth/login/">Sign in instead</a>
+          <button class="button primary" type="submit">Update password</button>
         </div>
         <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
       </form>
+
+      <article class="contact-card auth-card auth-state-card reveal" data-reset-invalid hidden>
+        <h2>Reset link unavailable.</h2>
+        <p>This password reset link is invalid or has expired.</p>
+        <div class="button-row auth-form-actions">
+          <a class="button primary" href="/forgot-password/">Request a new reset link</a>
+          <a class="hero-link" href="/auth/login/">Back to sign in</a>
+        </div>
+      </article>
+
+      <article class="contact-card auth-card auth-state-card reveal" data-reset-success hidden>
+        <h2>Password updated successfully.</h2>
+        <p>Your Greyveil account is ready with the new password.</p>
+        <div class="button-row auth-form-actions">
+          <a class="button primary" href="/account/">Continue to account</a>
+          <a class="hero-link" href="/auth/login/">Sign in</a>
+        </div>
+      </article>
     </section>
   </main>
 
@@ -84,19 +87,14 @@
       </div>
       <nav class="footer-col" aria-label="Site navigation">
         <h3>Site</h3>
-        <a href="/index.html">Home</a>
-        <a href="/about/index.html">About Greyveil</a>
-        <a href="/projects/index.html">Projects</a>
-        <a href="/founder/">Founder</a>
-        <a href="/credits/index.html">Credits</a><a href="/copyright/">Copyright &amp; Permissions</a>
+        <a href="/index.html">Home</a><a href="/about/index.html">About Greyveil</a><a href="/projects/index.html">Projects</a>
+        <a href="/founder/">Founder</a><a href="/credits/index.html">Credits</a><a href="/copyright/">Copyright &amp; Permissions</a>
         <a href="/contact/index.html">Contact</a>
       </nav>
       <nav class="footer-col" aria-label="Connect with Greyveil Editions">
         <h3>Connect</h3>
-        <a href="mailto:greyveileditions@gmail.com">Email</a>
-        <a href="tel:+917874560944">Phone</a>
-        <a href="https://wa.me/917874560944">WhatsApp</a>
-        <a href="https://www.instagram.com/greyveil_editions?utm_source=qr&igsh=bXZqcTJ6NmppYWJp">Instagram</a>
+        <a href="mailto:greyveileditions@gmail.com">Email</a><a href="tel:+917874560944">Phone</a>
+        <a href="https://wa.me/917874560944">WhatsApp</a><a href="https://www.instagram.com/greyveil_editions">Instagram</a>
       </nav>
     </div>
     <div class="page-shell footer-bottom">

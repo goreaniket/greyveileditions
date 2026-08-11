@@ -4,6 +4,9 @@ const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const LOGIN_PATH = '/auth/login/'
 const ACCOUNT_PATH = '/account/'
 const ADMIN_PATH = '/admin/'
+const RESET_PASSWORD_PATH = '/reset-password/'
+const MIN_PASSWORD_LENGTH = 8
+const MAX_PASSWORD_LENGTH = 128
 
 const getFormValue = (form, name) => form.elements[name]?.value.trim() || ''
 
@@ -44,6 +47,38 @@ const friendlyAuthMessage = (error, fallback) => {
   }
 
   return fallback
+}
+
+const validateNewPassword = (password, confirmation) => {
+  if (!password || !confirmation) return 'Please complete both password fields.'
+  if (password.length < MIN_PASSWORD_LENGTH) return `Use at least ${MIN_PASSWORD_LENGTH} characters.`
+  if (password.length > MAX_PASSWORD_LENGTH) return `Use no more than ${MAX_PASSWORD_LENGTH} characters.`
+  if (password !== confirmation) return 'Passwords do not match.'
+  return ''
+}
+
+const resetPasswordRedirectUrl = () => new URL(RESET_PASSWORD_PATH, window.location.origin).href
+
+const recoveryUrlState = () => {
+  const search = new URLSearchParams(window.location.search)
+  const hash = new URLSearchParams(window.location.hash.replace(/^#/, ''))
+  const type = search.get('type') || hash.get('type') || ''
+
+  return {
+    hasError: search.has('error') || search.has('error_code') || hash.has('error') || hash.has('error_code'),
+    hasImplicitRecovery: type === 'recovery' && hash.has('access_token'),
+    hasPkceRecovery: search.has('code'),
+    isRecovery: type === 'recovery' || search.has('code'),
+  }
+}
+
+const clearRecoveryUrl = () => {
+  window.history.replaceState({}, document.title, window.location.pathname)
+}
+
+const isNetworkError = (error) => {
+  const message = String(error?.message || '').toLowerCase()
+  return message.includes('network') || message.includes('fetch') || message.includes('offline')
 }
 
 const isAdminRole = (role) => ADMIN_ROLES.has(role)
@@ -370,13 +405,15 @@ const libraryCard = (item, role) => {
   return card
 }
 
-const buildCustomerLibraryItems = (hierarchy, grants, access) => {
+const buildCustomerLibraryItems = (hierarchy, grants, paidOrders, access) => {
   const grantsByBook = currentGrantMap(grants, access)
 
   return hierarchy.books
     .map((book) => {
       const itemHierarchy = access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes)
-      const grant = grantsByBook.get(book.id)
+      const directGrant = grantsByBook.get(book.id)
+      const inheritedPurchase = access.hasInheritedPaidOrderEntitlement(itemHierarchy, paidOrders)
+      const grant = directGrant || (inheritedPurchase ? { access_type: 'purchase', expires_at: null } : null)
       return { ...itemHierarchy, grant }
     })
     .filter((item) => {
@@ -468,20 +505,27 @@ const renderAccountLibrary = async (user, profile, role) => {
     const access = await import('./content-access.js')
     let hierarchy = null
     let grants = []
+    let paidOrders = []
 
     if (isAdminRole(role)) {
       hierarchy = await access.fetchContentHierarchy()
     } else {
-      const grantsResult = await access.fetchViewerBookGrants(user.id)
-      if (grantsResult.error) {
-        const libraryError = new Error(grantsResult.error.message || 'Book access could not be read.')
-        libraryError.table = 'book_access'
-        libraryError.code = grantsResult.error.code
+      const [grantsResult, paidOrdersResult, hierarchyResult] = await Promise.all([
+        access.fetchViewerBookGrants(user.id),
+        access.fetchViewerPaidOrders(user.id),
+        access.fetchContentHierarchy(),
+      ])
+      const accessError = grantsResult.error || paidOrdersResult.error
+      if (accessError) {
+        const libraryError = new Error(accessError.message || 'Book access could not be read.')
+        libraryError.table = grantsResult.error ? 'book_access' : 'orders'
+        libraryError.code = accessError.code
         throw libraryError
       }
 
       grants = (grantsResult.data || []).filter((grant) => access.isGrantCurrent(grant))
-      hierarchy = await access.fetchHierarchyForBooks(grants.map((grant) => grant.book_id))
+      paidOrders = paidOrdersResult.data || []
+      hierarchy = hierarchyResult
     }
 
     const hierarchyErrors = Object.entries(hierarchy.errors || {}).filter(([, error]) => error)
@@ -498,7 +542,7 @@ const renderAccountLibrary = async (user, profile, role) => {
 
     const items = isAdminRole(role)
       ? buildAdminLibraryItems(hierarchy, access)
-      : buildCustomerLibraryItems(hierarchy, grants, access)
+      : buildCustomerLibraryItems(hierarchy, grants, paidOrders, access)
 
     if (!isAdminRole(role)) logCustomerLibraryDiagnostics(hierarchy, grants, items, access)
 
@@ -628,6 +672,12 @@ const initSignupPage = async () => {
       return
     }
 
+    const passwordError = validateNewPassword(password, confirmPassword)
+    if (passwordError) {
+      setStatus(status, passwordError, 'error')
+      return
+    }
+
     setBusy(submitButton, true, 'Creating account...')
     setStatus(status, 'Creating your account...', 'info')
 
@@ -705,6 +755,167 @@ const initLoginPage = async () => {
 
     setStatus(status, 'Signed in. Redirecting...', 'success')
     await redirectByRole(user)
+  })
+}
+
+const initForgotPasswordPage = async () => {
+  const view = document.querySelector('[data-auth-view]')
+  const form = document.querySelector('[data-forgot-password-form]')
+  const status = document.querySelector('[data-auth-status]')
+  const submitButton = form?.querySelector('button[type="submit"]')
+  let completed = false
+
+  if (!form || !await guardAuthPage(view)) return
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault()
+    if (completed || submitButton?.disabled) return
+
+    const email = getFormValue(form, 'email')
+    if (!email || !form.elements.email?.validity?.valid) {
+      setStatus(status, 'Please enter a valid email address.', 'error')
+      return
+    }
+
+    setBusy(submitButton, true, 'Sending instructions...')
+    setStatus(status, 'Preparing password reset instructions...', 'info')
+
+    let error = null
+    try {
+      const result = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: resetPasswordRedirectUrl(),
+      })
+      error = result.error
+    } catch (requestError) {
+      error = requestError
+    }
+
+    form.reset()
+    if (error && isNetworkError(error)) {
+      setBusy(submitButton, false)
+      setStatus(status, 'We could not reach the account service. Please try again.', 'error')
+      return
+    }
+
+    completed = true
+    submitButton.disabled = true
+    submitButton.textContent = 'Instructions requested'
+    setStatus(status, "If an account exists for this email, we've sent password reset instructions.", 'success')
+  })
+}
+
+const initResetPasswordPage = async () => {
+  const loading = document.querySelector('[data-reset-loading]')
+  const form = document.querySelector('[data-reset-password-form]')
+  const invalid = document.querySelector('[data-reset-invalid]')
+  const success = document.querySelector('[data-reset-success]')
+  const status = form?.querySelector('[data-auth-status]')
+  const submitButton = form?.querySelector('button[type="submit"]')
+  const urlState = recoveryUrlState()
+  let recoverySession = null
+  let passwordUpdated = false
+  let resolveRecoveryEvent
+  const recoveryEvent = new Promise((resolve) => {
+    resolveRecoveryEvent = resolve
+  })
+
+  const showOnly = (active) => {
+    ;[loading, form, invalid, success].forEach((node) => {
+      if (node) node.hidden = node !== active
+    })
+  }
+
+  const showInvalid = () => {
+    recoverySession = null
+    if (form) {
+      form.elements.password.value = ''
+      form.elements.confirm_password.value = ''
+    }
+    clearRecoveryUrl()
+    showOnly(invalid)
+  }
+
+  if (!form || !loading || !invalid || !success) return
+  showOnly(loading)
+
+  const { data: listenerData } = supabase.auth.onAuthStateChange((event, session) => {
+    if (event !== 'PASSWORD_RECOVERY' || !session) return
+    recoverySession = session
+    resolveRecoveryEvent(session)
+  })
+  const subscription = listenerData?.subscription
+
+  if (urlState.hasError || !urlState.isRecovery) {
+    subscription?.unsubscribe()
+    showInvalid()
+    return
+  }
+
+  const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
+  if (!sessionError && urlState.hasImplicitRecovery && sessionData?.session) {
+    recoverySession = sessionData.session
+  }
+
+  if (!recoverySession) {
+    recoverySession = await Promise.race([
+      recoveryEvent,
+      new Promise((resolve) => window.setTimeout(() => resolve(null), 2200)),
+    ])
+  }
+
+  if (!recoverySession) {
+    subscription?.unsubscribe()
+    showInvalid()
+    return
+  }
+
+  clearRecoveryUrl()
+  showOnly(form)
+  form.elements.password.focus({ preventScroll: true })
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault()
+    if (passwordUpdated || !recoverySession || submitButton?.disabled) return
+
+    const password = form.elements.password?.value || ''
+    const confirmation = form.elements.confirm_password?.value || ''
+    const passwordError = validateNewPassword(password, confirmation)
+    if (passwordError) {
+      setStatus(status, passwordError, 'error')
+      return
+    }
+
+    setBusy(submitButton, true, 'Updating password...')
+    setStatus(status, 'Updating your password securely...', 'info')
+
+    let error = null
+    try {
+      const result = await supabase.auth.updateUser({ password })
+      error = result.error
+    } catch (updateError) {
+      error = updateError
+    }
+    form.elements.password.value = ''
+    form.elements.confirm_password.value = ''
+
+    if (error) {
+      const message = String(error.message || '').toLowerCase()
+      if (message.includes('session') || message.includes('jwt') || message.includes('expired')) {
+        subscription?.unsubscribe()
+        showInvalid()
+        return
+      }
+
+      setBusy(submitButton, false)
+      setStatus(status, friendlyAuthMessage(error, 'We could not update the password. Please request a new reset link.'), 'error')
+      return
+    }
+
+    passwordUpdated = true
+    recoverySession = null
+    submitButton.disabled = true
+    subscription?.unsubscribe()
+    showOnly(success)
   })
 }
 
@@ -811,4 +1022,6 @@ const page = document.body.dataset.authPage
 
 if (page === 'signup') initSignupPage()
 if (page === 'login') initLoginPage()
+if (page === 'forgot-password') initForgotPasswordPage()
+if (page === 'reset-password') initResetPasswordPage()
 if (page === 'account') initAccountPage()
