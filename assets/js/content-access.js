@@ -178,6 +178,43 @@ export const hierarchyForBook = (book, seriesItems = [], collections = [], volum
   return { collection, volume, series, book }
 }
 
+const idsMatch = (left, right) => String(left ?? '') === String(right ?? '')
+
+export const eligibleBooksForPurchase = ({ purchaseType, targetId } = {}, hierarchy = {}) => {
+  const type = String(purchaseType || '').trim().toLowerCase()
+  if (!['book', 'series', 'collection'].includes(type) || !targetId) return []
+
+  return (hierarchy.books || [])
+    .map((book) => hierarchyForBook(
+      book,
+      hierarchy.seriesItems || [],
+      hierarchy.collections || [],
+      hierarchy.volumes || []
+    ))
+    .filter((item) => hierarchyIsComplete(item) && hierarchyIsActive(item))
+    .filter((item) => effectiveVisibilityForBookHierarchy(item) !== 'private')
+    .filter((item) => {
+      if (type === 'book') return idsMatch(item.book?.id, targetId)
+      if (type === 'series') return idsMatch(item.series?.id, targetId)
+      return idsMatch(item.collection?.id, targetId)
+    })
+}
+
+export const hasEffectivePurchaseEntitlement = (
+  purchase,
+  hierarchy = {},
+  grants = [],
+  context = {}
+) => {
+  if (isAdminRole(context.role)) return true
+
+  const eligibleBooks = eligibleBooksForPurchase(purchase, hierarchy)
+  return eligibleBooks.length > 0 && eligibleBooks.every((item) => canReadBook({
+    ...item,
+    grants,
+  }, context))
+}
+
 export const filterDiscoverableBooks = (books = [], seriesItems = [], collections = [], volumes = [], context = {}) => {
   return books.filter((book) => canDiscoverContent(hierarchyForBook(book, seriesItems, collections, volumes), context))
 }

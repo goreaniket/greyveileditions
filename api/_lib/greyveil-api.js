@@ -4,6 +4,8 @@ const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
 const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection'])
 const UUID_OR_NUMERIC_PATTERN = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|\d+)$/i
 const INR = 'INR'
+const TEST_COUPON_CODE = 'RIZZ'
+const TEST_COUPON_AMOUNT = 100
 
 const BOOK_PRICE = 14900
 const SERIES_PRICES = {
@@ -20,6 +22,7 @@ const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, 
 const VOLUME_SELECT = 'id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
 const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
 const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active'
+const BOOK_ACCESS_SELECT = 'user_id, book_id, access_type, granted_at, expires_at, is_visible, can_read'
 const ORDER_SELECT = [
   'id',
   'user_id',
@@ -28,7 +31,10 @@ const ORDER_SELECT = [
   'series_id',
   'collection_id',
   'item_name',
+  'original_amount',
   'amount',
+  'coupon_code',
+  'discount_amount',
   'currency',
   'status',
   'razorpay_order_id',
@@ -58,6 +64,24 @@ const normalizeSlug = (value) => getText(value)
   .replace(/[_\s]+/g, '-')
   .replace(/-+/g, '-')
   .replace(/^-+|-+$/g, '')
+
+const normalizeCouponCode = (value) => getText(value).toUpperCase()
+
+const resolveCouponPricing = (purchase, couponCode) => {
+  const normalizedCode = normalizeCouponCode(couponCode)
+  const valid = normalizedCode === TEST_COUPON_CODE
+  const originalAmount = Number(purchase.amount)
+  const finalAmount = valid ? TEST_COUPON_AMOUNT : originalAmount
+
+  return {
+    ...purchase,
+    amount: finalAmount,
+    originalAmount,
+    couponCode: valid ? TEST_COUPON_CODE : null,
+    discountAmount: originalAmount - finalAmount,
+    couponValid: valid,
+  }
+}
 
 const env = (name, aliases = [], { required = true } = {}) => {
   const value = [name, ...aliases].map((key) => process.env[key]).find((item) => getText(item))
@@ -190,6 +214,11 @@ const supabaseRest = async (table, { method = 'GET', query = {}, body, headers =
 const selectOne = async (table, query) => {
   const rows = await supabaseRest(table, { query: { ...query, limit: '1' } })
   return Array.isArray(rows) ? rows[0] || null : rows
+}
+
+const selectRows = async (table, query) => {
+  const rows = await supabaseRest(table, { query })
+  return Array.isArray(rows) ? rows : []
 }
 
 const insertRows = async (table, rows) => supabaseRest(table, {
@@ -386,6 +415,139 @@ const resolvePurchaseFromBody = async (body) => {
   }
 }
 
+const idsMatch = (left, right) => String(left ?? '') === String(right ?? '')
+
+const inFilter = (values = []) => `in.(${[...new Set(values.filter(Boolean))].join(',')})`
+
+const serverBookHierarchy = (book, seriesItems = [], volumes = [], collections = []) => {
+  const series = seriesItems.find((item) => idsMatch(item.id, book?.series_id)) || null
+  const volume = volumes.find((item) => idsMatch(item.id, series?.volume_id)) || null
+  const collectionId = series?.collection_id || volume?.collection_id
+  const collection = collections.find((item) => idsMatch(item.id, collectionId)) || null
+  return { collection, volume, series, book }
+}
+
+const eligibleHierarchy = (hierarchy) => {
+  if (!hierarchyIsComplete(hierarchy) || !hierarchyIsActive(hierarchy)) return false
+  const book = hierarchy.book ? { ...hierarchy.book, visibility: visibilityForBook(hierarchy.book) } : null
+  return effectiveVisibility({ ...hierarchy, book }) !== 'private'
+}
+
+const eligibleBooksForPurchase = async (purchase) => {
+  if (purchase.purchaseType === 'book') {
+    return eligibleHierarchy(purchase.hierarchy) ? [purchase.hierarchy] : []
+  }
+
+  if (purchase.purchaseType === 'series') {
+    const books = await selectRows('books', {
+      series_id: `eq.${purchase.seriesId}`,
+      select: BOOK_SELECT,
+    })
+    return books
+      .map((book) => ({ ...purchase.hierarchy, book }))
+      .filter(eligibleHierarchy)
+  }
+
+  const collection = purchase.hierarchy.collection
+  const directSeriesPromise = selectRows('series', {
+    collection_id: `eq.${purchase.collectionId}`,
+    select: SERIES_SELECT,
+  })
+  const collectionVolumes = await selectRows('volumes', {
+    collection_id: `eq.${purchase.collectionId}`,
+    select: VOLUME_SELECT,
+  })
+  const volumeIds = collectionVolumes.map((volume) => volume.id).filter(Boolean)
+  const volumeSeriesPromise = volumeIds.length
+    ? selectRows('series', {
+      volume_id: inFilter(volumeIds),
+      select: SERIES_SELECT,
+    })
+    : Promise.resolve([])
+  const [directSeries, volumeSeries] = await Promise.all([directSeriesPromise, volumeSeriesPromise])
+  const seriesItems = [...new Map([...directSeries, ...volumeSeries].map((series) => [String(series.id), series])).values()]
+  const referencedVolumeIds = [...new Set(seriesItems.map((series) => series.volume_id).filter(Boolean))]
+  const missingVolumeIds = referencedVolumeIds.filter((id) => !collectionVolumes.some((volume) => idsMatch(volume.id, id)))
+  const extraVolumes = missingVolumeIds.length
+    ? await selectRows('volumes', {
+      id: inFilter(missingVolumeIds),
+      select: VOLUME_SELECT,
+    })
+    : []
+  const volumes = [...collectionVolumes, ...extraVolumes]
+  const seriesIds = seriesItems.map((series) => series.id).filter(Boolean)
+  const books = seriesIds.length
+    ? await selectRows('books', {
+      series_id: inFilter(seriesIds),
+      select: BOOK_SELECT,
+    })
+    : []
+
+  return books
+    .map((book) => serverBookHierarchy(book, seriesItems, volumes, [collection]))
+    .filter(eligibleHierarchy)
+    .filter((hierarchy) => idsMatch(hierarchy.collection?.id, purchase.collectionId))
+}
+
+const isCurrentGrant = (grant) => {
+  if (!grant || grant.is_visible !== true || grant.can_read !== true) return false
+  if (!grant.expires_at) return true
+  const expiresAt = Date.parse(grant.expires_at)
+  return Number.isFinite(expiresAt) && expiresAt > Date.now()
+}
+
+const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
+  const profile = await selectOne('profiles', {
+    id: `eq.${user.id}`,
+    select: 'id, role',
+  })
+  const role = normalizeSlug(profile?.role || 'customer').replace(/-/g, '_')
+  if (role === 'admin' || role === 'super_admin') {
+    return { entitled: true, reason: role, eligibleBookIds: [] }
+  }
+
+  const eligibleBooks = await eligibleBooksForPurchase(purchase)
+  if (!eligibleBooks.length) {
+    return { entitled: false, reason: 'not_entitled', eligibleBookIds: [] }
+  }
+
+  const paidBookIds = eligibleBooks
+    .filter((hierarchy) => {
+      const book = { ...hierarchy.book, visibility: visibilityForBook(hierarchy.book) }
+      return effectiveVisibility({ ...hierarchy, book }) !== 'public'
+    })
+    .map((hierarchy) => hierarchy.book.id)
+  const grants = paidBookIds.length
+    ? await selectRows('book_access', {
+      user_id: `eq.${user.id}`,
+      book_id: inFilter(paidBookIds),
+      select: BOOK_ACCESS_SELECT,
+    })
+    : []
+  const currentBookIds = new Set(
+    grants.filter(isCurrentGrant).map((grant) => String(grant.book_id))
+  )
+  const entitled = eligibleBooks.every((hierarchy) => {
+    const book = { ...hierarchy.book, visibility: visibilityForBook(hierarchy.book) }
+    const visibility = effectiveVisibility({ ...hierarchy, book })
+    return visibility === 'public' || currentBookIds.has(String(hierarchy.book.id))
+  })
+
+  return {
+    entitled,
+    reason: entitled ? 'book_access' : 'not_entitled',
+    eligibleBookIds: eligibleBooks.map((hierarchy) => hierarchy.book.id),
+  }
+}
+
+const assertPurchaseNotEntitled = async (user, purchase) => {
+  const entitlement = await resolveEffectivePurchaseEntitlement(user, purchase)
+  if (entitlement.entitled) {
+    throw new ApiError(409, 'This item is already in your library.', 'already_entitled')
+  }
+  return entitlement
+}
+
 const razorpayRequest = async (path, { method = 'GET', body } = {}) => {
   const auth = Buffer.from(`${razorpayKeyId()}:${razorpayKeySecret()}`).toString('base64')
   const response = await fetch(`https://api.razorpay.com/v1${path}`, {
@@ -418,6 +580,9 @@ const createRazorpayOrder = (purchase, localOrderId, user) => razorpayRequest('/
       purchase_type: purchase.purchaseType,
       target_id: purchase.targetId,
       item_name: purchase.itemName,
+      original_amount: String(purchase.originalAmount),
+      discount_amount: String(purchase.discountAmount),
+      ...(purchase.couponCode ? { coupon_code: purchase.couponCode } : {}),
     },
   },
 })
@@ -425,7 +590,9 @@ const createRazorpayOrder = (purchase, localOrderId, user) => razorpayRequest('/
 const fetchRazorpayPayment = (paymentId) => razorpayRequest(`/payments/${encodeURIComponent(paymentId)}`)
 
 const createCheckoutOrder = async (user, body) => {
-  const purchase = await resolvePurchaseFromBody(body)
+  const resolvedPurchase = await resolvePurchaseFromBody(body)
+  await assertPurchaseNotEntitled(user, resolvedPurchase)
+  const purchase = resolveCouponPricing(resolvedPurchase, body?.coupon_code)
   const now = new Date().toISOString()
   const orderPayload = {
     user_id: user.id,
@@ -434,7 +601,10 @@ const createCheckoutOrder = async (user, body) => {
     series_id: purchase.seriesId,
     collection_id: purchase.collectionId,
     item_name: purchase.itemName,
+    original_amount: purchase.originalAmount,
     amount: purchase.amount,
+    coupon_code: purchase.couponCode,
+    discount_amount: purchase.discountAmount,
     currency: purchase.currency,
     status: 'pending',
     created_at: now,
@@ -450,6 +620,11 @@ const createCheckoutOrder = async (user, body) => {
   let razorpayOrder
   try {
     razorpayOrder = await createRazorpayOrder(purchase, pendingOrder.id, user)
+    if (!getText(razorpayOrder?.id)
+        || toNumber(razorpayOrder?.amount) !== purchase.amount
+        || getText(razorpayOrder?.currency, INR).toUpperCase() !== purchase.currency) {
+      throw new ApiError(502, 'Razorpay returned an unexpected order.', 'razorpay_order_mismatch')
+    }
   } catch (error) {
     await updateRows('orders', { id: `eq.${pendingOrder.id}` }, {
       status: 'failed',
@@ -467,9 +642,28 @@ const createCheckoutOrder = async (user, body) => {
   return {
     order_id: razorpayOrder.id,
     amount: purchase.amount,
+    original_amount: purchase.originalAmount,
+    coupon_code: purchase.couponCode,
+    discount_amount: purchase.discountAmount,
     currency: purchase.currency,
     key_id: razorpayKeyId(),
     local_order_id: order?.id || pendingOrder.id,
+  }
+}
+
+const previewCheckoutPricing = async (user, body) => {
+  const resolvedPurchase = await resolvePurchaseFromBody(body)
+  await assertPurchaseNotEntitled(user, resolvedPurchase)
+  const purchase = resolveCouponPricing(resolvedPurchase, body?.coupon_code)
+
+  return {
+    valid: purchase.couponValid,
+    coupon_code: purchase.couponCode,
+    item_name: purchase.itemName,
+    original_amount: purchase.originalAmount,
+    final_amount: purchase.amount,
+    discount_amount: purchase.discountAmount,
+    currency: purchase.currency,
   }
 }
 
@@ -539,7 +733,10 @@ const paymentPayloadForOrder = (order, payment, { signature = null, webhookEvent
     user_id: order?.user_id || null,
     razorpay_payment_id: getText(payment?.id),
     razorpay_order_id: getText(payment?.order_id, order?.razorpay_order_id),
+    original_amount: toNumber(order?.original_amount, order?.amount),
     amount: toNumber(payment?.amount, order?.amount),
+    coupon_code: order?.coupon_code || null,
+    discount_amount: toNumber(order?.discount_amount),
     currency: getText(payment?.currency, order?.currency || INR).toUpperCase(),
     status: getText(payment?.status, 'unknown'),
     method: payment?.method || null,
@@ -609,6 +806,10 @@ const verifyCheckoutPayment = async (user, body) => {
       status: payment.status,
       local_order_id: order.id,
       payment_id: persistedPayment?.razorpay_payment_id || payment.id,
+      original_amount: toNumber(order.original_amount, order.amount),
+      amount: toNumber(order.amount),
+      coupon_code: order.coupon_code || null,
+      discount_amount: toNumber(order.discount_amount),
     }
   }
 
@@ -626,6 +827,10 @@ const verifyCheckoutPayment = async (user, body) => {
     purchase_type: order.purchase_type,
     item_name: order.item_name,
     payment_id: persistedPayment?.razorpay_payment_id || payment.id,
+    original_amount: toNumber(order.original_amount, order.amount),
+    amount: toNumber(order.amount),
+    coupon_code: order.coupon_code || null,
+    discount_amount: toNumber(order.discount_amount),
   }
 }
 
@@ -663,14 +868,6 @@ const processWebhookEvent = async (event) => {
     return { processed: true, status: 'paid', event: eventName }
   }
 
-  if (eventName === 'order.paid' && toNumber(razorpayOrder?.amount_paid) >= toNumber(order.amount)) {
-    await markOrderStatus(order, 'paid', {
-      paid_at: order.paid_at || new Date().toISOString(),
-      verified_at: new Date().toISOString(),
-    })
-    return { processed: true, status: 'paid', event: eventName }
-  }
-
   return { processed: true, status: order.status || 'pending', event: eventName }
 }
 
@@ -679,6 +876,7 @@ module.exports = {
   allowMethods,
   authenticateUser,
   createCheckoutOrder,
+  previewCheckoutPricing,
   processWebhookEvent,
   readJsonBody,
   readRawBodyBuffer,
@@ -686,4 +884,6 @@ module.exports = {
   sendJson,
   verifyCheckoutPayment,
   verifyWebhookSignature,
+  resolveCouponPricing,
+  resolveEffectivePurchaseEntitlement,
 }

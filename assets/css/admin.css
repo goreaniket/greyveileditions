@@ -1220,6 +1220,19 @@
   min-width: 820px;
 }
 
+.admin-payment-amount {
+  display: grid;
+  gap: 3px;
+  min-width: 120px;
+  font-size: .76rem;
+  white-space: nowrap;
+}
+
+.admin-payment-amount strong {
+  color: var(--slate);
+  font-size: .84rem;
+}
+
 .admin-clickable-row {
   cursor: pointer;
   transition: background-color .16s ease;

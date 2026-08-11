@@ -141,8 +141,30 @@ const paymentHistoryCard = (order, payment) => {
   heading.className = 'payment-history-card__heading'
   const title = document.createElement('h3')
   title.textContent = getText(order.item_name, 'Greyveil purchase')
-  const amount = document.createElement('strong')
-  amount.textContent = formatCurrency(order.amount, order.currency)
+  const originalAmount = Number(order.original_amount ?? payment?.original_amount ?? order.amount)
+  const paidAmount = Number(order.amount ?? payment?.amount)
+  const couponCode = getText(order.coupon_code || payment?.coupon_code)
+  const discounted = couponCode && Number.isFinite(originalAmount) && originalAmount > paidAmount
+  const amount = document.createElement('div')
+  amount.className = 'payment-history-card__amount'
+
+  if (discounted) {
+    const original = document.createElement('span')
+    const originalPrice = document.createElement('del')
+    original.append('Original: ', originalPrice)
+    originalPrice.textContent = formatCurrency(originalAmount, order.currency)
+
+    const paid = document.createElement('strong')
+    paid.textContent = `Paid: ${formatCurrency(paidAmount, order.currency)}`
+    const coupon = document.createElement('span')
+    coupon.textContent = `Coupon: ${couponCode}`
+    amount.append(original, paid, coupon)
+  } else {
+    const paid = document.createElement('strong')
+    paid.textContent = formatCurrency(paidAmount, order.currency)
+    amount.append(paid)
+  }
+
   heading.append(title, amount)
 
   const meta = document.createElement('div')
@@ -186,12 +208,12 @@ const renderAccountPayments = async (user) => {
     const [ordersResult, paymentsResult] = await Promise.all([
       supabase
         .from('orders')
-        .select('id, user_id, purchase_type, item_name, amount, currency, status, created_at, paid_at, verified_at')
+        .select('id, user_id, purchase_type, item_name, original_amount, amount, coupon_code, discount_amount, currency, status, created_at, paid_at, verified_at')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false }),
       supabase
         .from('payments')
-        .select('order_id, user_id, amount, currency, status, method, captured, created_at, verified_at, razorpay_created_at')
+        .select('order_id, user_id, original_amount, amount, coupon_code, discount_amount, currency, status, method, captured, created_at, verified_at, razorpay_created_at')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false }),
     ])

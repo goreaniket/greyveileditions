@@ -1036,7 +1036,7 @@ const fetchAccessGrants = async () => {
 const fetchOrders = async () => {
   const { data, error } = await supabase
     .from('orders')
-    .select('id, user_id, purchase_type, book_id, series_id, collection_id, item_name, amount, currency, status, razorpay_order_id, created_at, updated_at, paid_at, verified_at')
+    .select('id, user_id, purchase_type, book_id, series_id, collection_id, item_name, original_amount, amount, coupon_code, discount_amount, currency, status, razorpay_order_id, created_at, updated_at, paid_at, verified_at')
     .order('created_at', { ascending: false })
 
   if (error) {
@@ -1054,7 +1054,7 @@ const fetchOrders = async () => {
 const fetchPayments = async () => {
   const { data, error } = await supabase
     .from('payments')
-    .select('id, order_id, user_id, razorpay_payment_id, razorpay_order_id, amount, currency, status, method, captured, created_at, updated_at, verified_at, razorpay_created_at')
+    .select('id, order_id, user_id, razorpay_payment_id, razorpay_order_id, original_amount, amount, coupon_code, discount_amount, currency, status, method, captured, created_at, updated_at, verified_at, razorpay_created_at')
     .order('created_at', { ascending: false })
 
   if (error) {
@@ -1558,6 +1558,43 @@ const formatPaymentLabel = (value, fallback = '-') => {
   return text.replace(/\b\w/g, (letter) => letter.toUpperCase())
 }
 
+const paymentPricing = (order, payment = paymentForOrder(order)) => {
+  const originalAmount = Number(order?.original_amount ?? payment?.original_amount ?? order?.amount)
+  const paidAmount = Number(order?.amount ?? payment?.amount)
+  const couponCode = getText(order?.coupon_code || payment?.coupon_code)
+  const discountAmount = Number(order?.discount_amount ?? payment?.discount_amount ?? 0)
+
+  return {
+    originalAmount,
+    paidAmount,
+    couponCode,
+    discountAmount,
+    discounted: Boolean(couponCode && Number.isFinite(originalAmount) && originalAmount > paidAmount),
+  }
+}
+
+const paymentAmountCell = (order, payment) => {
+  const pricing = paymentPricing(order, payment)
+  const cell = document.createElement('td')
+  const summary = createNode('div', 'admin-payment-amount')
+
+  if (pricing.discounted) {
+    const original = createNode('span', '', 'Original: ')
+    const originalPrice = createNode('del', '', formatPaymentAmount(pricing.originalAmount, order.currency))
+    original.append(originalPrice)
+    summary.append(
+      original,
+      createNode('strong', '', `Paid: ${formatPaymentAmount(pricing.paidAmount, order.currency)}`),
+      createNode('span', '', `Coupon: ${pricing.couponCode}`)
+    )
+  } else {
+    summary.append(createNode('strong', '', formatPaymentAmount(pricing.paidAmount, order.currency)))
+  }
+
+  cell.append(summary)
+  return cell
+}
+
 const paymentForOrder = (order) => {
   const orderId = String(order?.id || '')
   return state.payments.find((payment) => String(payment.order_id || '') === orderId) || null
@@ -1625,6 +1662,7 @@ const openPaymentDrawer = (order, trigger, options = {}) => {
   const profile = profileMap().get(order.user_id)
   const customer = getText(profile?.display_name, getText(order.user_id, 'Unknown customer'))
   const status = paymentStatusValue(order, payment)
+  const pricing = paymentPricing(order, payment)
   const overlay = createNode('div', 'feedback-detail-modal payment-detail-modal')
   overlay.setAttribute('role', 'presentation')
 
@@ -1658,7 +1696,10 @@ const openPaymentDrawer = (order, trigger, options = {}) => {
     feedbackDetailField('Razorpay Order ID', order.razorpay_order_id || payment?.razorpay_order_id, { secondary: true }),
     feedbackDetailField('Item', order.item_name),
     feedbackDetailField('Purchase Type', formatPaymentLabel(order.purchase_type)),
-    feedbackDetailField('Amount', formatPaymentAmount(order.amount, order.currency)),
+    feedbackDetailField('Original Amount', formatPaymentAmount(pricing.originalAmount, order.currency)),
+    feedbackDetailField('Paid Amount', formatPaymentAmount(pricing.paidAmount, order.currency)),
+    feedbackDetailField('Coupon', pricing.couponCode || '-'),
+    feedbackDetailField('Discount', formatPaymentAmount(pricing.discountAmount, order.currency)),
     feedbackDetailField('Method', formatPaymentLabel(payment?.method)),
     feedbackDetailField('Status', formatPaymentLabel(status)),
     feedbackDetailField('Order Created', formatDate(order.created_at)),
@@ -1696,7 +1737,7 @@ const paymentRow = (order) => {
     tableCell(customer, true),
     tableCell(getText(order.item_name, 'Greyveil purchase')),
     tableCell(formatPaymentLabel(order.purchase_type)),
-    tableCell(formatPaymentAmount(order.amount, order.currency)),
+    paymentAmountCell(order, payment),
     statusCell,
     tableCell(formatDate(order.paid_at || order.created_at))
   )

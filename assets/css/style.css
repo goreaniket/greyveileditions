@@ -827,9 +827,24 @@ h3 {
   cursor: pointer;
 }
 
+[data-purchase-type]:not([data-purchase-access-state]) {
+  pointer-events: none;
+  cursor: wait;
+  opacity: .68;
+}
+
 .purchase-button:disabled {
   cursor: wait;
   opacity: .68;
+}
+
+.purchase-button--entitled:disabled {
+  border-color: rgba(42, 120, 105, .2);
+  background: rgba(42, 120, 105, .08);
+  box-shadow: none;
+  color: var(--teal);
+  cursor: default;
+  opacity: 1;
 }
 
 .purchase-status {
@@ -847,6 +862,167 @@ h3 {
 
 .purchase-status[data-status="success"] {
   color: var(--teal);
+}
+
+.purchase-checkout-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(42, 52, 64, .46);
+}
+
+.purchase-checkout-dialog {
+  width: min(460px, 100%);
+  max-height: min(680px, calc(100vh - 40px));
+  display: grid;
+  gap: 20px;
+  overflow: auto;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, .58);
+  border-radius: 8px;
+  background: #f8f7f4;
+  box-shadow: 0 28px 80px rgba(42, 52, 64, .28);
+}
+
+.purchase-checkout-dialog__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.purchase-checkout-dialog__header .eyebrow {
+  margin: 0 0 6px;
+}
+
+.purchase-checkout-dialog__header h2 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.purchase-checkout-close {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(42, 52, 64, .14);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--slate);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.purchase-checkout-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 14px;
+  border-block: 1px solid rgba(42, 52, 64, .1);
+}
+
+.purchase-checkout-price__original {
+  color: rgba(42, 52, 64, .64);
+  font-size: .9rem;
+  font-weight: 750;
+}
+
+.purchase-checkout-price__original.is-discounted {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.purchase-checkout-price__final {
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.purchase-coupon-form {
+  display: grid;
+  gap: 8px;
+}
+
+.purchase-coupon-form > label {
+  color: var(--slate);
+  font-size: .78rem;
+  font-weight: 850;
+}
+
+.purchase-coupon-form__controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.purchase-coupon-form input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(42, 52, 64, .2);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--slate);
+  font: inherit;
+}
+
+.purchase-coupon-apply {
+  min-height: 44px;
+  padding: 10px 16px;
+}
+
+.purchase-coupon-remove {
+  width: fit-content;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  color: rgba(42, 52, 64, .72);
+  cursor: pointer;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.purchase-coupon-status {
+  min-height: 1.4em;
+  margin: 0;
+  color: rgba(42, 52, 64, .64);
+  font-size: .8rem;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.purchase-coupon-status[data-status="error"] {
+  color: #8c4f4a;
+}
+
+.purchase-coupon-status[data-status="success"] {
+  color: var(--teal);
+}
+
+.purchase-checkout-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.purchase-checkout-actions .button {
+  width: 100%;
 }
 
 .button:hover,
@@ -2251,9 +2427,19 @@ main > .home-hero ~ .section .contact-link {
   line-height: 1.05;
 }
 
-.payment-history-card__heading > strong {
+.payment-history-card__amount {
+  display: grid;
+  justify-items: end;
+  gap: 3px;
   color: var(--slate);
+  font-size: .8rem;
+  font-weight: 750;
+  text-align: right;
   white-space: nowrap;
+}
+
+.payment-history-card__amount strong {
+  font-size: .98rem;
 }
 
 .payment-history-card__meta,
@@ -3951,6 +4137,26 @@ blockquote {
 }
 
 @media (max-width: 640px) {
+  .purchase-checkout-modal {
+    align-items: end;
+    padding: 40px 0 0;
+  }
+
+  .purchase-checkout-dialog {
+    width: 100%;
+    max-height: calc(100vh - 40px);
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .purchase-coupon-form__controls {
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-coupon-apply {
+    width: 100%;
+  }
+
   .account-library,
   .account-payments {
     padding-block-start: 0;
@@ -4010,6 +4216,10 @@ blockquote {
     align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
+  }
+
+  .payment-history-card__amount {
+    justify-items: end;
   }
 
   .payment-history-card__meta,
