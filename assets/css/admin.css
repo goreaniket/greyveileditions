@@ -6,6 +6,76 @@
     linear-gradient(135deg, #f8f7f4, #e7e2da);
 }
 
+.admin-platform-form {
+  margin-bottom: 24px;
+}
+
+.admin-platform-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 18px 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 6px;
+}
+
+.admin-platform-options label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.admin-platform-wide {
+  display: grid;
+  gap: 7px;
+  margin-top: 16px;
+}
+
+.admin-platform-wide textarea {
+  width: 100%;
+}
+
+.admin-platform-list,
+.admin-review-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-platform-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.admin-platform-item__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.admin-platform-item__heading > div {
+  display: grid;
+  gap: 3px;
+}
+
+.admin-platform-item__heading span,
+.admin-platform-item__meta {
+  color: var(--admin-muted);
+  font-size: .78rem;
+}
+
+.admin-review-item__text {
+  max-width: 78ch;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 760px) {
+  .admin-platform-item__heading {
+    flex-direction: column;
+  }
+}
+
 .admin-page button,
 .admin-page input,
 .admin-page select {

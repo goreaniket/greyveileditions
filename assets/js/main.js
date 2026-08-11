@@ -598,8 +598,9 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
 
   try {
     const access = await import(new URL("content-access.js", mainScriptUrl).href);
-    const context = contextFromAuthState(access, authState) || await access.getAccessContext();
-    const hierarchy = await access.fetchContentHierarchy();
+    const snapshot = await access.getEntitlementSnapshot();
+    const context = snapshot.context || contextFromAuthState(access, authState);
+    const hierarchy = snapshot.hierarchy;
     const blockingError = hierarchy.errors.collections || hierarchy.errors.volumes || hierarchy.errors.series || hierarchy.errors.books;
 
     if (runId !== contentVisibilityRun) return;
@@ -622,12 +623,8 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
       return;
     }
 
-    const [grantsResult, paidOrdersResult] = await Promise.all([
-      access.fetchViewerBookGrants(context.user?.id),
-      access.fetchViewerPaidOrders(context.user?.id),
-    ]);
-    const grants = grantsResult.data || [];
-    const paidOrders = paidOrdersResult.data || [];
+    const grants = snapshot.grants || [];
+    const paidOrders = snapshot.paidOrders || [];
     const lookup = createContentLookup(hierarchy, access, grants, paidOrders);
 
     if (runId !== contentVisibilityRun) return;
@@ -666,10 +663,14 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
   }
 };
 
-const refreshAuthAndContentVisibility = async () => {
+const refreshAuthAndContentVisibility = async (invalidateReason = '') => {
   contentVisibilityRun += 1;
   const runId = contentVisibilityRun;
   setAccessPending();
+  if (invalidateReason) {
+    const access = await import(new URL("content-access.js", mainScriptUrl).href);
+    access.invalidateEntitlementSnapshot(invalidateReason);
+  }
   const authState = await initAuthNavigation();
   await initContentVisibilityFiltering(runId, authState);
 };
@@ -680,7 +681,7 @@ const bindAuthStateRefresh = async () => {
     supabase.auth.onAuthStateChange(() => {
       setAccessPending();
       window.clearTimeout(authRefreshTimer);
-      authRefreshTimer = window.setTimeout(refreshAuthAndContentVisibility, 0);
+      authRefreshTimer = window.setTimeout(() => refreshAuthAndContentVisibility("auth-change"), 0);
     });
   } catch (error) {
     console.info("Auth state listener could not be registered.", {
@@ -693,7 +694,7 @@ const bindAuthStateRefresh = async () => {
 
 refreshAuthAndContentVisibility();
 bindAuthStateRefresh();
-window.addEventListener("greyveil:purchase-complete", refreshAuthAndContentVisibility);
+window.addEventListener("greyveil:purchase-complete", () => refreshAuthAndContentVisibility("purchase-complete"));
 import(new URL("purchases.js", mainScriptUrl).href).catch((error) => {
   console.info("Checkout controls could not be initialized.", {
     name: error?.name,
@@ -701,6 +702,12 @@ import(new URL("purchases.js", mainScriptUrl).href).catch((error) => {
     code: error?.code,
   });
 });
+import(new URL("reviews.js", mainScriptUrl).href)
+  .then((module) => module.initBookReviews())
+  .catch(() => null);
+import(new URL("announcements.js", mainScriptUrl).href)
+  .then((module) => module.initAnnouncements())
+  .catch(() => null);
 
 document.querySelectorAll(".dropdown").forEach((dropdown) => {
   const trigger = dropdown.querySelector(".dropdown-trigger");

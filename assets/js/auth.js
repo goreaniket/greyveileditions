@@ -135,6 +135,23 @@ const libraryNodes = () => ({
   refresh: document.querySelector('[data-library-refresh]'),
 })
 
+const readingProgressFor = (book) => {
+  if (!book?.slug) return { percent: 0, state: 'start' }
+  try {
+    const prefix = `greyveil:${book.slug}:continuous-reader:`
+    const key = Object.keys(localStorage).find((candidate) => candidate.startsWith(prefix))
+    if (!key) return { percent: 0, state: 'start' }
+    const saved = JSON.parse(localStorage.getItem(key) || '{}')
+    const percent = Math.max(0, Math.min(100, Math.round(Number(saved.scrollRatio || 0) * 100)))
+    return {
+      percent,
+      state: percent >= 95 ? 'completed' : percent > 1 ? 'continue' : 'start',
+    }
+  } catch (_error) {
+    return { percent: 0, state: 'start' }
+  }
+}
+
 const paymentNodes = () => ({
   section: document.querySelector('[data-account-payments]'),
   status: document.querySelector('[data-payments-status]'),
@@ -346,8 +363,21 @@ const libraryAccessCopy = (item, role) => {
   }
 }
 
-const libraryCard = (item, role) => {
+const libraryBookState = (item, access) => {
+  if (!access.hierarchyIsActive(item)) return { key: 'coming-soon', label: 'Coming Soon' }
+  if (access.effectiveVisibilityForBookHierarchy(item) === 'private') {
+    return { key: 'unavailable', label: 'Unavailable' }
+  }
+
+  const progress = readingProgressFor(item.book)
+  if (progress.state === 'completed') return { key: 'completed', label: 'Completed', progress }
+  if (progress.state === 'continue') return { key: 'continue', label: 'Continue Reading', progress }
+  return { key: 'start', label: 'Start Reading', progress }
+}
+
+const libraryCard = (item, role, access) => {
   const { book, collection, volume, series } = item
+  const readingState = libraryBookState(item, access)
   const card = document.createElement('article')
   card.className = 'library-card'
 
@@ -395,17 +425,24 @@ const libraryCard = (item, role) => {
   accessDetail.textContent = accessCopy.detail
   accessNode.append(accessLabel, accessDetail)
 
-  const readLink = document.createElement('a')
-  readLink.className = 'button primary'
-  readLink.href = bookReaderPath(book, series)
-  readLink.textContent = 'Read Book'
+  const stateNode = document.createElement('p')
+  stateNode.className = `library-card__state library-card__state--${readingState.key}`
+  stateNode.textContent = readingState.progress?.percent > 1 && readingState.key !== 'completed'
+    ? `${readingState.label} - ${readingState.progress.percent}%`
+    : readingState.label
 
-  body.append(title, meta, accessNode, readLink)
+  const readAction = document.createElement(readingState.key === 'coming-soon' || readingState.key === 'unavailable' ? 'span' : 'a')
+  readAction.className = `button ${readingState.key === 'completed' ? 'ghost' : 'primary'}`
+  readAction.textContent = readingState.label
+  if (readAction.tagName === 'A') readAction.href = bookReaderPath(book, series)
+  else readAction.setAttribute('aria-disabled', 'true')
+
+  body.append(title, meta, accessNode, stateNode, readAction)
   card.append(cover, body)
   return card
 }
 
-const buildCustomerLibraryItems = (hierarchy, grants, paidOrders, access) => {
+export const buildCustomerLibraryItems = (hierarchy, grants, paidOrders, access) => {
   const grantsByBook = currentGrantMap(grants, access)
 
   return hierarchy.books
@@ -418,8 +455,7 @@ const buildCustomerLibraryItems = (hierarchy, grants, paidOrders, access) => {
     })
     .filter((item) => {
       if (!item.grant) return false
-      if (!libraryHierarchyReady(item, access)) return false
-      if (access.effectiveVisibilityForBookHierarchy(item) === 'private') return false
+      if (!access.hierarchyIsComplete(item)) return false
       return Boolean(bookReaderPath(item.book, item.series))
     })
 }
@@ -489,7 +525,125 @@ const buildAdminLibraryItems = (hierarchy, access) => {
     })
 }
 
-const renderAccountLibrary = async (user, profile, role) => {
+export const groupLibraryItems = (items = []) => {
+  const groups = new Map()
+  items.forEach((item) => {
+    const collectionKey = String(item.collection?.id || `series:${item.series?.id || 'standalone'}`)
+    if (!groups.has(collectionKey)) {
+      groups.set(collectionKey, {
+        collection: item.collection || null,
+        label: getText(item.collection?.title, item.series ? 'Independent Series' : 'Standalone Books'),
+        series: new Map(),
+      })
+    }
+    const collectionGroup = groups.get(collectionKey)
+    const seriesKey = String(item.series?.id || 'standalone')
+    if (!collectionGroup.series.has(seriesKey)) {
+      collectionGroup.series.set(seriesKey, {
+        series: item.series || null,
+        label: getText(item.series?.title, item.book?.series || 'Standalone'),
+        items: [],
+      })
+    }
+    collectionGroup.series.get(seriesKey).items.push(item)
+  })
+  return Array.from(groups.values()).map((group) => ({
+    ...group,
+    series: Array.from(group.series.values()).map((seriesGroup) => ({
+      ...seriesGroup,
+      items: sortLibraryItems(seriesGroup.items),
+    })),
+  }))
+}
+
+const renderLibraryHierarchy = (container, items, role, access) => {
+  clearNode(container)
+  const continuing = items
+    .map((item) => ({ item, state: libraryBookState(item, access) }))
+    .filter(({ state }) => state.key === 'continue')
+    .sort((left, right) => right.state.progress.percent - left.state.progress.percent)
+    .slice(0, 4)
+  const continuingIds = new Set(continuing.map(({ item }) => String(item.book.id)))
+  const recentCutoff = Date.now() - 90 * 24 * 60 * 60 * 1000
+  const recent = items
+    .filter((item) => !continuingIds.has(String(item.book.id)))
+    .filter((item) => {
+      const createdAt = Date.parse(item.book.created_at)
+      return Number.isFinite(createdAt) && createdAt >= recentCutoff
+    })
+    .sort((left, right) => Date.parse(right.book.created_at) - Date.parse(left.book.created_at))
+    .slice(0, 4)
+
+  if (continuing.length || recent.length) {
+    const highlights = createLibraryHighlights(continuing, recent)
+    container.append(highlights)
+  }
+
+  groupLibraryItems(items).forEach((collectionGroup) => {
+    const section = document.createElement('section')
+    section.className = 'library-collection'
+    const heading = document.createElement('div')
+    heading.className = 'library-collection__heading'
+    const eyebrow = document.createElement('p')
+    eyebrow.className = 'eyebrow'
+    eyebrow.textContent = collectionGroup.collection ? 'Collection' : 'Library'
+    const title = document.createElement('h3')
+    title.textContent = collectionGroup.label
+    heading.append(eyebrow, title)
+    section.append(heading)
+
+    collectionGroup.series.forEach((seriesGroup) => {
+      const seriesSection = document.createElement('section')
+      seriesSection.className = 'library-series'
+      const seriesHeading = document.createElement('div')
+      seriesHeading.className = 'library-series__heading'
+      const seriesTitle = document.createElement('h4')
+      seriesTitle.textContent = seriesGroup.label
+      const count = document.createElement('span')
+      count.textContent = `${seriesGroup.items.length} ${seriesGroup.items.length === 1 ? 'book' : 'books'}`
+      seriesHeading.append(seriesTitle, count)
+      const grid = document.createElement('div')
+      grid.className = 'library-grid'
+      seriesGroup.items.forEach((item) => grid.append(libraryCard(item, role, access)))
+      seriesSection.append(seriesHeading, grid)
+      section.append(seriesSection)
+    })
+    container.append(section)
+  })
+}
+
+const createLibraryHighlights = (continuing, recent) => {
+  const highlights = document.createElement('div')
+  highlights.className = 'library-highlights'
+  const appendGroup = (title, records, continuingGroup = false) => {
+    if (!records.length) return
+    const section = document.createElement('section')
+    const heading = document.createElement('h3')
+    heading.textContent = title
+    const list = document.createElement('div')
+    list.className = 'library-highlight-links'
+    records.forEach((record) => {
+      const item = record.item || record
+      const link = document.createElement('a')
+      link.href = bookReaderPath(item.book, item.series)
+      const label = document.createElement('strong')
+      label.textContent = item.book.title
+      const meta = document.createElement('span')
+      meta.textContent = continuingGroup
+        ? `${record.state.progress.percent}% read`
+        : getText(item.series?.title, item.book.series)
+      link.append(label, meta)
+      list.append(link)
+    })
+    section.append(heading, list)
+    highlights.append(section)
+  }
+  appendGroup('Continue Reading', continuing, true)
+  appendGroup('Recently Added', recent)
+  return highlights
+}
+
+const renderAccountLibrary = async (user, profile, role, { force = false } = {}) => {
   const nodes = libraryNodes()
   if (!nodes.section || !nodes.grid) return
 
@@ -499,34 +653,13 @@ const renderAccountLibrary = async (user, profile, role) => {
   if (nodes.empty) nodes.empty.hidden = true
   configureLibraryCopy(nodes, role)
   setBusy(nodes.refresh, true, 'Refreshing...')
-  setStatus(nodes.status, 'Checking your library...', 'info')
+  setStatus(nodes.status, 'Loading your library...', 'info')
 
   try {
     const access = await import('./content-access.js')
-    let hierarchy = null
-    let grants = []
-    let paidOrders = []
-
-    if (isAdminRole(role)) {
-      hierarchy = await access.fetchContentHierarchy()
-    } else {
-      const [grantsResult, paidOrdersResult, hierarchyResult] = await Promise.all([
-        access.fetchViewerBookGrants(user.id),
-        access.fetchViewerPaidOrders(user.id),
-        access.fetchContentHierarchy(),
-      ])
-      const accessError = grantsResult.error || paidOrdersResult.error
-      if (accessError) {
-        const libraryError = new Error(accessError.message || 'Book access could not be read.')
-        libraryError.table = grantsResult.error ? 'book_access' : 'orders'
-        libraryError.code = accessError.code
-        throw libraryError
-      }
-
-      grants = (grantsResult.data || []).filter((grant) => access.isGrantCurrent(grant))
-      paidOrders = paidOrdersResult.data || []
-      hierarchy = hierarchyResult
-    }
+    const snapshot = await access.getEntitlementSnapshot({ force })
+    const { hierarchy, paidOrders } = snapshot
+    const grants = (snapshot.grants || []).filter((grant) => access.isGrantCurrent(grant))
 
     const hierarchyErrors = Object.entries(hierarchy.errors || {}).filter(([, error]) => error)
 
@@ -549,7 +682,7 @@ const renderAccountLibrary = async (user, profile, role) => {
     if (runId !== accountLibraryRun) return
 
     const sortedItems = sortLibraryItems(items)
-    sortedItems.forEach((item) => nodes.grid.append(libraryCard(item, role)))
+    renderLibraryHierarchy(nodes.grid, sortedItems, role, access)
 
     if (nodes.empty) nodes.empty.hidden = Boolean(sortedItems.length)
     setStatus(nodes.status, '', '')
@@ -933,12 +1066,12 @@ const initAccountPage = async () => {
   let activeProfile = null
   let activeRole = 'customer'
 
-  const refreshCurrentLibrary = () => {
+  const refreshCurrentLibrary = ({ force = false } = {}) => {
     if (!activeUser) return
 
     window.clearTimeout(accountLibraryRefreshTimer)
     accountLibraryRefreshTimer = window.setTimeout(() => {
-      renderAccountLibrary(activeUser, activeProfile, activeRole)
+      renderAccountLibrary(activeUser, activeProfile, activeRole, { force })
       renderAccountPayments(activeUser)
     }, 150)
   }
@@ -994,7 +1127,7 @@ const initAccountPage = async () => {
     }, 0)
   })
 
-  libraryRefreshButton?.addEventListener('click', refreshCurrentLibrary)
+  libraryRefreshButton?.addEventListener('click', () => refreshCurrentLibrary({ force: true }))
   window.addEventListener('focus', refreshCurrentLibrary)
   window.addEventListener('pageshow', refreshCurrentLibrary)
   window.addEventListener('greyveil:purchase-complete', refreshCurrentLibrary)

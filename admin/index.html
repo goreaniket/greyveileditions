@@ -46,6 +46,9 @@
           <button type="button" data-admin-tab="books" aria-selected="false">Books</button>
           <button type="button" data-admin-tab="book-access" aria-selected="false">Book Access</button>
           <button type="button" data-admin-tab="payments" aria-selected="false">Payments</button>
+          <button type="button" data-admin-tab="reviews" aria-selected="false">Reviews</button>
+          <button type="button" data-admin-tab="coupons" data-super-admin-only aria-selected="false">Coupons</button>
+          <button type="button" data-admin-tab="announcements" aria-selected="false">Announcements</button>
           <button type="button" data-admin-tab="feedback" aria-selected="false">Feedback</button>
           <button type="button" data-admin-tab="files" aria-selected="false">Files</button>
         </nav>
@@ -146,15 +149,89 @@
               <thead>
                 <tr>
                   <th scope="col">Display Name</th>
+                  <th scope="col">Email</th>
                   <th scope="col">Role</th>
                   <th scope="col">Joined</th>
-                  <th scope="col">Details</th>
+                  <th scope="col">Access Summary</th>
+                  <th scope="col">Role Control</th>
                 </tr>
               </thead>
               <tbody data-users-table></tbody>
             </table>
           </div>
           <p class="admin-empty" data-users-empty hidden>No users match the current filters.</p>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="reviews" aria-labelledby="reviews-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Reader Reviews</p>
+              <h2 id="reviews-title">Review Moderation</h2>
+              <p class="admin-panel-note">Only approved reviews appear publicly. Reader edits return to pending moderation.</p>
+            </div>
+          </div>
+          <div class="admin-filters">
+            <label><span>Status</span><select data-review-filter><option value="">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></label>
+          </div>
+          <div class="admin-review-list" data-admin-reviews></div>
+          <p class="admin-empty" data-admin-reviews-empty hidden>No reviews match this filter.</p>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="coupons" data-super-admin-only aria-labelledby="coupons-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Checkout Promotions</p>
+              <h2 id="coupons-title">Coupons</h2>
+              <p class="admin-panel-note">Coupon pricing and limits are enforced by the checkout server and database.</p>
+            </div>
+          </div>
+          <form class="admin-card admin-platform-form" data-coupon-form>
+            <input type="hidden" name="id" />
+            <div class="admin-access-grid">
+              <label><span>Code</span><input name="code" required maxlength="40" /></label>
+              <label><span>Internal Name</span><input name="description" /></label>
+              <label><span>Active</span><select name="active"><option value="true">Active</option><option value="false">Inactive</option></select></label>
+              <label><span>Discount Type</span><select name="discount_type"><option value="percentage">Percentage</option><option value="fixed_amount">Fixed Amount (paise)</option><option value="fixed_final_price">Fixed Final Price (paise)</option></select></label>
+              <label><span>Discount Value</span><input name="discount_value" type="number" min="0" value="0" /></label>
+              <label><span>Final Price (paise)</span><input name="fixed_final_price" type="number" min="100" /></label>
+              <label><span>Valid From</span><input name="valid_from" type="datetime-local" /></label>
+              <label><span>Valid Until</span><input name="valid_until" type="datetime-local" /></label>
+              <label><span>Maximum Uses</span><input name="maximum_total_uses" type="number" min="1" /></label>
+              <label><span>Uses Per User</span><input name="maximum_uses_per_user" type="number" min="1" /></label>
+            </div>
+            <fieldset class="admin-platform-options"><legend>Purchase Types</legend><label><input type="checkbox" name="purchase_types" value="book" checked /> Book</label><label><input type="checkbox" name="purchase_types" value="series" checked /> Series</label><label><input type="checkbox" name="purchase_types" value="collection" checked /> Collection</label></fieldset>
+            <label class="admin-platform-wide"><span>Specific Products (optional, one `type:id` per line)</span><textarea name="products" rows="3"></textarea></label>
+            <div class="admin-form-actions"><button class="admin-action admin-action--primary" type="submit">Save Coupon</button><button class="admin-action" type="reset">New Coupon</button><p class="admin-form-status" data-coupon-status></p></div>
+          </form>
+          <div class="admin-platform-list" data-admin-coupons></div>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="announcements" aria-labelledby="announcements-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Marketing</p>
+              <h2 id="announcements-title">Announcements</h2>
+              <p class="admin-panel-note">Publish restrained banners and account notices for relevant readers.</p>
+            </div>
+          </div>
+          <form class="admin-card admin-platform-form" data-announcement-form>
+            <input type="hidden" name="id" />
+            <div class="admin-access-grid">
+              <label><span>Title</span><input name="title" required maxlength="160" /></label>
+              <label><span>Placement</span><select name="placement"><option value="site-wide">Site-wide Top Banner</option><option value="home">Home</option><option value="account">Account</option><option value="library">My Library</option><option value="project">Project / Series</option></select></label>
+              <label><span>Audience</span><select name="audience"><option value="everyone">Everyone</option><option value="logged-in">Logged-in Users</option><option value="series-owner">Series Owners</option><option value="collection-owner">Collection Owners</option></select></label>
+              <label><span>Audience Target ID</span><input name="audience_target_id" /></label>
+              <label><span>CTA Label</span><input name="cta_label" /></label>
+              <label><span>CTA URL</span><input name="cta_url" type="url" /></label>
+              <label><span>Image URL</span><input name="image_url" type="url" /></label>
+              <label><span>Starts</span><input name="starts_at" type="datetime-local" /></label>
+              <label><span>Ends</span><input name="ends_at" type="datetime-local" /></label>
+              <label><span>Active</span><select name="active"><option value="true">Active</option><option value="false">Inactive</option></select></label>
+            </div>
+            <label class="admin-platform-wide"><span>Short Message</span><textarea name="message" required maxlength="600" rows="3"></textarea></label>
+            <div class="admin-form-actions"><button class="admin-action admin-action--primary" type="submit">Save Announcement</button><button class="admin-action" type="reset">New Announcement</button><p class="admin-form-status" data-announcement-status></p></div>
+          </form>
+          <div class="admin-platform-list" data-admin-announcements></div>
         </section>
 
         <section class="admin-panel" data-admin-panel="content" aria-labelledby="content-title">
@@ -608,5 +685,6 @@
   </main>
 
   <script type="module" src="/assets/js/admin.js"></script>
+  <script type="module" src="/assets/js/admin-platform.js"></script>
 </body>
 </html>

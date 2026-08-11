@@ -1,11 +1,8 @@
 import { supabase } from './supabase-client.js'
-import { getCurrentProfile, getCurrentUser } from './auth.js'
 import {
-  fetchContentHierarchy,
-  fetchViewerBookGrants,
-  fetchViewerPaidOrders,
+  getEntitlementSnapshot,
   hasEffectivePurchaseEntitlement,
-  isAdminRole,
+  invalidateEntitlementSnapshot,
 } from './content-access.js'
 
 const CHECKOUT_SCRIPT_URL = 'https://checkout.razorpay.com/v1/checkout.js'
@@ -202,11 +199,11 @@ const setPurchaseAccessState = (button, state) => {
   if (!button.dataset.purchaseDefaultLabel) button.dataset.purchaseDefaultLabel = button.textContent
   button.classList.add('purchase-button')
   button.classList.toggle('purchase-button--entitled', state === 'entitled')
+  button.classList.toggle('purchase-button--resolving', state === 'checking')
   button.dataset.purchaseAccessState = state
 
   if (state === 'checking') {
     button.disabled = true
-    button.textContent = 'Checking access...'
     button.setAttribute('aria-busy', 'true')
     return
   }
@@ -236,33 +233,19 @@ const refreshPurchaseEntitlements = async () => {
   buttons.forEach((button) => setPurchaseAccessState(button, 'checking'))
 
   try {
-    const user = await getCurrentUser()
+    const snapshot = await getEntitlementSnapshot()
+    const { context, hierarchy, grants, paidOrders } = snapshot
+    const { user } = context
     if (runId !== entitlementRefreshRun) return
     if (!user) {
       buttons.forEach((button) => setPurchaseAccessState(button, 'available'))
       return
     }
 
-    const profile = await getCurrentProfile(user)
-    const role = profile?.role || 'customer'
-    const context = { user, profile, role, isAdmin: isAdminRole(role) }
     if (context.isAdmin) {
       buttons.forEach((button) => setPurchaseAccessState(button, 'entitled'))
       return
     }
-
-    const [hierarchy, grantsResult, paidOrdersResult] = await Promise.all([
-      fetchContentHierarchy(),
-      fetchViewerBookGrants(user.id),
-      fetchViewerPaidOrders(user.id),
-    ])
-    if (runId !== entitlementRefreshRun) return
-    if (grantsResult.error || paidOrdersResult.error || Object.values(hierarchy.errors || {}).some(Boolean)) {
-      throw grantsResult.error || paidOrdersResult.error || new Error('Content access could not be resolved.')
-    }
-
-    const grants = grantsResult.data || []
-    const paidOrders = paidOrdersResult.data || []
     await Promise.all(buttons.map(async (button) => {
       try {
         const payload = await purchasePayloadForButton(button)
@@ -634,9 +617,14 @@ export const initPurchases = () => {
     refreshPurchaseEntitlements()
   })
   window.addEventListener('greyveil:purchase-complete', () => {
+    invalidateEntitlementSnapshot('purchase-complete')
+    window.setTimeout(refreshPurchaseEntitlements, 0)
+  })
+  window.addEventListener('greyveil:access-changed', () => {
     window.setTimeout(refreshPurchaseEntitlements, 0)
   })
   supabase.auth.onAuthStateChange(() => {
+    invalidateEntitlementSnapshot('auth-change')
     window.setTimeout(refreshPurchaseEntitlements, 0)
   })
 }

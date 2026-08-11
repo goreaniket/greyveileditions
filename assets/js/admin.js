@@ -1766,6 +1766,7 @@ const renderPayments = () => {
 }
 
 const renderUsers = () => {
+  if (document.body.dataset.platformUsersManaged === 'true') return
   const table = singleNodes.usersTable
   clearNode(table)
   if (!table) return
@@ -4006,6 +4007,7 @@ const handleGrantSeriesAccess = async (event) => {
   renderDashboard()
   renderAccessGrants()
   renderSeriesAccessStatus()
+  window.dispatchEvent(new CustomEvent('greyveil:access-changed', { detail: { userId: context.userId } }))
 }
 
 const handleRevokeSeriesAccess = async () => {
@@ -4064,6 +4066,7 @@ const handleRevokeSeriesAccess = async () => {
   renderDashboard()
   renderAccessGrants()
   renderSeriesAccessStatus()
+  window.dispatchEvent(new CustomEvent('greyveil:access-changed', { detail: { userId: context.userId } }))
 }
 
 const renderAccessGrants = () => {
@@ -4269,6 +4272,7 @@ const handleGrantAccess = async (event) => {
   renderDashboard()
   renderAccessGrants()
   renderSeriesAccessStatus()
+  window.dispatchEvent(new CustomEvent('greyveil:access-changed', { detail: { userId } }))
 }
 
 const updateAccessGrant = async (grant, button) => {
@@ -4315,6 +4319,7 @@ const updateAccessGrant = async (grant, button) => {
   renderDashboard()
   renderAccessGrants()
   renderSeriesAccessStatus()
+  window.dispatchEvent(new CustomEvent('greyveil:access-changed', { detail: { userId: grant.user_id } }))
 }
 
 const revokeAccessGrant = async (grant, button) => {
@@ -4353,6 +4358,7 @@ const revokeAccessGrant = async (grant, button) => {
   renderDashboard()
   renderAccessGrants()
   renderSeriesAccessStatus()
+  window.dispatchEvent(new CustomEvent('greyveil:access-changed', { detail: { userId: grant.user_id } }))
 }
 
 const renderFeedback = () => {

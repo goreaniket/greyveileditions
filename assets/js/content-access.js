@@ -8,8 +8,12 @@ const DEFAULT_VISIBILITY = 'paid'
 const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
 const VOLUME_SELECT = 'id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
 const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
-const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active'
+const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active, created_at, updated_at'
 const PAID_ORDER_SELECT = 'id, user_id, purchase_type, book_id, series_id, collection_id, status, paid_at'
+
+let entitlementSnapshot = null
+let entitlementSnapshotPromise = null
+let entitlementSnapshotVersion = 0
 
 export const isAdminRole = (role) => ADMIN_ROLES.has(role)
 
@@ -346,6 +350,106 @@ export const fetchContentHierarchy = async () => {
       books: booksResult.error,
     },
   }
+}
+
+const snapshotOwnership = (paidOrders = []) => {
+  const ownedBookIds = new Set()
+  const ownedSeriesIds = new Set()
+  const ownedCollectionIds = new Set()
+
+  paidOrders.filter(isTrustedPaidOrder).forEach((order) => {
+    const type = paidOrderType(order)
+    const targetId = order?.[`${type}_id`]
+    if (!targetId) return
+    if (type === 'book') ownedBookIds.add(String(targetId))
+    if (type === 'series') ownedSeriesIds.add(String(targetId))
+    if (type === 'collection') ownedCollectionIds.add(String(targetId))
+  })
+
+  return { ownedBookIds, ownedSeriesIds, ownedCollectionIds }
+}
+
+export const invalidateEntitlementSnapshot = (reason = 'manual') => {
+  entitlementSnapshotVersion += 1
+  entitlementSnapshot = null
+  entitlementSnapshotPromise = null
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('greyveil:entitlements-invalidated', {
+      detail: { reason, version: entitlementSnapshotVersion },
+    }))
+  }
+}
+
+export const getEntitlementSnapshot = async ({ force = false } = {}) => {
+  if (force) invalidateEntitlementSnapshot('force-refresh')
+  if (entitlementSnapshot) return entitlementSnapshot
+  if (entitlementSnapshotPromise) return entitlementSnapshotPromise
+
+  const requestedVersion = entitlementSnapshotVersion
+  entitlementSnapshotPromise = (async () => {
+    const [context, hierarchy] = await Promise.all([
+      getAccessContext(),
+      fetchContentHierarchy(),
+    ])
+    const hierarchyErrors = Object.entries(hierarchy.errors || {}).filter(([, error]) => error)
+    if (hierarchyErrors.length) {
+      const error = new Error('Content hierarchy could not be resolved.')
+      error.sources = hierarchyErrors
+      throw error
+    }
+
+    const [grantsResult, paidOrdersResult] = context.user?.id && !context.isAdmin
+      ? await Promise.all([
+        fetchViewerBookGrants(context.user.id),
+        fetchViewerPaidOrders(context.user.id),
+      ])
+      : [{ data: [], error: null }, { data: [], error: null }]
+
+    if (grantsResult.error || paidOrdersResult.error) {
+      const error = new Error('Account access could not be resolved.')
+      error.sources = [
+        ...(grantsResult.error ? [['book_access', grantsResult.error]] : []),
+        ...(paidOrdersResult.error ? [['orders', paidOrdersResult.error]] : []),
+      ]
+      throw error
+    }
+
+    const grants = grantsResult.data || []
+    const paidOrders = paidOrdersResult.data || []
+    const directBookIds = new Set(
+      grants.filter(isGrantCurrent).map((grant) => String(grant.book_id))
+    )
+    const snapshot = {
+      version: requestedVersion,
+      context,
+      hierarchy,
+      grants,
+      paidOrders,
+      directBookIds,
+      ...snapshotOwnership(paidOrders),
+    }
+
+    if (requestedVersion === entitlementSnapshotVersion) {
+      entitlementSnapshot = snapshot
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('greyveil:entitlements-ready', {
+          detail: { snapshot },
+        }))
+      }
+    }
+    return snapshot
+  })()
+
+  try {
+    return await entitlementSnapshotPromise
+  } finally {
+    if (requestedVersion === entitlementSnapshotVersion) entitlementSnapshotPromise = null
+  }
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('greyveil:access-changed', () => invalidateEntitlementSnapshot('access-change'))
+  window.addEventListener('greyveil:role-changed', () => invalidateEntitlementSnapshot('role-change'))
 }
 
 export const fetchHierarchyForBooks = async (bookIds = []) => {

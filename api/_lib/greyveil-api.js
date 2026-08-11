@@ -4,8 +4,6 @@ const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
 const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection'])
 const UUID_OR_NUMERIC_PATTERN = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|\d+)$/i
 const INR = 'INR'
-const TEST_COUPON_CODE = 'RIZZ'
-const TEST_COUPON_AMOUNT = 100
 
 const BOOK_PRICE = 14900
 const SERIES_PRICES = {
@@ -35,6 +33,7 @@ const ORDER_SELECT = [
   'amount',
   'coupon_code',
   'discount_amount',
+  'coupon_id',
   'currency',
   'status',
   'razorpay_order_id',
@@ -67,19 +66,84 @@ const normalizeSlug = (value) => getText(value)
 
 const normalizeCouponCode = (value) => getText(value).toUpperCase()
 
-const resolveCouponPricing = (purchase, couponCode) => {
+const undiscountedPricing = (purchase) => ({
+  ...purchase,
+  amount: Number(purchase.amount),
+  originalAmount: Number(purchase.amount),
+  couponId: null,
+  couponCode: null,
+  discountAmount: 0,
+  couponValid: false,
+})
+
+const resolveCouponPricing = async (purchase, couponCode, userId = null) => {
   const normalizedCode = normalizeCouponCode(couponCode)
-  const valid = normalizedCode === TEST_COUPON_CODE
+  if (!normalizedCode) return undiscountedPricing(purchase)
+
   const originalAmount = Number(purchase.amount)
-  const finalAmount = valid ? TEST_COUPON_AMOUNT : originalAmount
+  const coupon = await selectOne('coupons', {
+    code: `eq.${normalizedCode}`,
+    select: 'id, code, active, discount_type, discount_value, fixed_final_price, valid_from, valid_until, maximum_total_uses, maximum_uses_per_user, applicable_purchase_types, applies_to_all_products',
+  })
+
+  const now = Date.now()
+  const validFrom = coupon?.valid_from ? Date.parse(coupon.valid_from) : null
+  const validUntil = coupon?.valid_until ? Date.parse(coupon.valid_until) : null
+  const appliesToType = Array.isArray(coupon?.applicable_purchase_types)
+    && coupon.applicable_purchase_types.includes(purchase.purchaseType)
+
+  if (!coupon?.active
+      || !appliesToType
+      || (Number.isFinite(validFrom) && validFrom > now)
+      || (Number.isFinite(validUntil) && validUntil <= now)) {
+    return undiscountedPricing(purchase)
+  }
+
+  const productRules = await selectRows('coupon_products', {
+    coupon_id: `eq.${coupon.id}`,
+    select: 'purchase_type, target_id',
+  })
+  if (coupon.applies_to_all_products === false && !productRules.some((rule) => {
+    return rule.purchase_type === purchase.purchaseType
+      && String(rule.target_id) === String(purchase.targetId)
+  })) {
+    return undiscountedPricing(purchase)
+  }
+
+  const usages = await selectRows('coupon_usages', {
+    coupon_id: `eq.${coupon.id}`,
+    status: 'in.(pending,redeemed)',
+    select: 'user_id, status, created_at',
+  })
+  const countedUsages = usages.filter((usage) => {
+    if (usage.status === 'redeemed') return true
+    const createdAt = Date.parse(usage.created_at)
+    return Number.isFinite(createdAt) && createdAt > now - 30 * 60 * 1000
+  })
+  const userUsages = countedUsages.filter((usage) => String(usage.user_id) === String(userId))
+  if ((coupon.maximum_total_uses && countedUsages.length >= Number(coupon.maximum_total_uses))
+      || (coupon.maximum_uses_per_user && userUsages.length >= Number(coupon.maximum_uses_per_user))) {
+    return undiscountedPricing(purchase)
+  }
+
+  let finalAmount = originalAmount
+  if (coupon.discount_type === 'fixed_final_price') {
+    finalAmount = Number(coupon.fixed_final_price)
+  } else if (coupon.discount_type === 'fixed_amount') {
+    finalAmount = originalAmount - Number(coupon.discount_value || 0)
+  } else if (coupon.discount_type === 'percentage') {
+    finalAmount = Math.round(originalAmount * (100 - Number(coupon.discount_value || 0)) / 100)
+  }
+  finalAmount = Math.max(100, Math.min(originalAmount, finalAmount))
 
   return {
     ...purchase,
     amount: finalAmount,
     originalAmount,
-    couponCode: valid ? TEST_COUPON_CODE : null,
+    couponId: coupon.id,
+    couponCode: coupon.code,
     discountAmount: originalAmount - finalAmount,
-    couponValid: valid,
+    couponValid: true,
   }
 }
 
@@ -259,6 +323,76 @@ const authenticateUser = async (req) => {
   }
 
   return { user, token }
+}
+
+const requireAdminUser = async (user, { superAdmin = false } = {}) => {
+  const profile = await selectOne('profiles', {
+    id: `eq.${user.id}`,
+    select: 'id, display_name, role, created_at',
+  })
+  const allowed = superAdmin
+    ? profile?.role === 'super_admin'
+    : ['admin', 'super_admin'].includes(profile?.role)
+  if (!allowed) throw new ApiError(403, 'Admin permission is required.', 'admin_required')
+  return profile
+}
+
+const listAdminUsers = async (user) => {
+  await requireAdminUser(user)
+  const key = supabaseServiceKey()
+  const [authResponse, profiles, paidOrders, accessGrants] = await Promise.all([
+    fetch(`${supabaseUrl()}/auth/v1/admin/users?per_page=1000`, {
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+      },
+    }),
+    selectRows('profiles', {
+      select: 'id, display_name, role, created_at',
+      order: 'created_at.desc',
+    }),
+    selectRows('orders', {
+      status: 'eq.paid',
+      select: 'user_id, purchase_type, book_id, series_id, collection_id, amount',
+    }),
+    selectRows('book_access', {
+      is_visible: 'eq.true',
+      can_read: 'eq.true',
+      select: 'user_id, book_id, expires_at',
+    }),
+  ])
+  const authPayload = await parseJsonResponse(authResponse)
+  if (!authResponse.ok) {
+    throw new ApiError(authResponse.status, 'Users could not be loaded.', 'auth_admin_read_failed')
+  }
+
+  const authUsers = Array.isArray(authPayload?.users) ? authPayload.users : []
+  const authById = new Map(authUsers.map((item) => [String(item.id), item]))
+  const now = Date.now()
+  return profiles.map((profile) => {
+    const authUser = authById.get(String(profile.id))
+    const orders = paidOrders.filter((order) => String(order.user_id) === String(profile.id))
+    const grants = accessGrants.filter((grant) => {
+      if (String(grant.user_id) !== String(profile.id)) return false
+      if (!grant.expires_at) return true
+      const expiry = Date.parse(grant.expires_at)
+      return Number.isFinite(expiry) && expiry > now
+    })
+    return {
+      id: profile.id,
+      display_name: profile.display_name,
+      email: authUser?.email || '',
+      role: profile.role || 'customer',
+      created_at: authUser?.created_at || profile.created_at,
+      summary: {
+        paid_orders: orders.length,
+        books: orders.filter((order) => order.purchase_type === 'book').length,
+        series: orders.filter((order) => order.purchase_type === 'series').length,
+        collections: orders.filter((order) => order.purchase_type === 'collection').length,
+        direct_grants: grants.length,
+      },
+    }
+  })
 }
 
 const requireValidId = (value, label) => {
@@ -553,7 +687,7 @@ const fetchRazorpayPayment = (paymentId) => razorpayRequest(`/payments/${encodeU
 const createCheckoutOrder = async (user, body) => {
   const resolvedPurchase = await resolvePurchaseFromBody(body)
   await assertPurchaseNotEntitled(user, resolvedPurchase)
-  const purchase = resolveCouponPricing(resolvedPurchase, body?.coupon_code)
+  const purchase = await resolveCouponPricing(resolvedPurchase, body?.coupon_code, user.id)
   const now = new Date().toISOString()
   const orderPayload = {
     user_id: user.id,
@@ -565,6 +699,7 @@ const createCheckoutOrder = async (user, body) => {
     original_amount: purchase.originalAmount,
     amount: purchase.amount,
     coupon_code: purchase.couponCode,
+    coupon_id: purchase.couponId,
     discount_amount: purchase.discountAmount,
     currency: purchase.currency,
     status: 'pending',
@@ -576,6 +711,27 @@ const createCheckoutOrder = async (user, body) => {
   const pendingOrder = Array.isArray(pendingRows) ? pendingRows[0] : pendingRows
   if (!pendingOrder?.id) {
     throw new ApiError(500, 'The local payment order could not be created.', 'order_create_failed')
+  }
+
+  if (purchase.couponId) {
+    try {
+      await insertRows('coupon_usages', {
+        coupon_id: purchase.couponId,
+        order_id: pendingOrder.id,
+        user_id: user.id,
+        coupon_code: purchase.couponCode,
+        discount_amount: purchase.discountAmount,
+        status: 'pending',
+        created_at: now,
+        updated_at: now,
+      })
+    } catch (_error) {
+      await updateRows('orders', { id: `eq.${pendingOrder.id}` }, {
+        status: 'failed',
+        updated_at: new Date().toISOString(),
+      }).catch(() => null)
+      throw new ApiError(409, 'This coupon is no longer available.', 'coupon_limit_reached')
+    }
   }
 
   let razorpayOrder
@@ -591,6 +747,12 @@ const createCheckoutOrder = async (user, body) => {
       status: 'failed',
       updated_at: new Date().toISOString(),
     }).catch(() => null)
+    if (purchase.couponId) {
+      await updateRows('coupon_usages', { order_id: `eq.${pendingOrder.id}` }, {
+        status: 'void',
+        updated_at: new Date().toISOString(),
+      }).catch(() => null)
+    }
     throw error
   }
 
@@ -615,7 +777,7 @@ const createCheckoutOrder = async (user, body) => {
 const previewCheckoutPricing = async (user, body) => {
   const resolvedPurchase = await resolvePurchaseFromBody(body)
   await assertPurchaseNotEntitled(user, resolvedPurchase)
-  const purchase = resolveCouponPricing(resolvedPurchase, body?.coupon_code)
+  const purchase = await resolveCouponPricing(resolvedPurchase, body?.coupon_code, user.id)
 
   return {
     valid: purchase.couponValid,
@@ -697,6 +859,7 @@ const paymentPayloadForOrder = (order, payment, { signature = null, webhookEvent
     original_amount: toNumber(order?.original_amount, order?.amount),
     amount: toNumber(payment?.amount, order?.amount),
     coupon_code: order?.coupon_code || null,
+    coupon_id: order?.coupon_id || null,
     discount_amount: toNumber(order?.discount_amount),
     currency: getText(payment?.currency, order?.currency || INR).toUpperCase(),
     status: getText(payment?.status, 'unknown'),
@@ -727,7 +890,24 @@ const markOrderStatus = async (order, status, extra = {}) => {
     updated_at: new Date().toISOString(),
     ...extra,
   })
-  return Array.isArray(rows) ? rows[0] : rows
+  const updatedOrder = Array.isArray(rows) ? rows[0] : rows
+  if (order?.coupon_id) {
+    const usageStatus = status === 'paid'
+      ? 'redeemed'
+      : status === 'refunded'
+        ? 'refunded'
+        : ['failed', 'cancelled'].includes(status)
+          ? 'void'
+          : null
+    if (usageStatus) {
+      await updateRows('coupon_usages', { order_id: `eq.${order.id}` }, {
+        status: usageStatus,
+        redeemed_at: usageStatus === 'redeemed' ? new Date().toISOString() : null,
+        updated_at: new Date().toISOString(),
+      }).catch(() => null)
+    }
+  }
+  return updatedOrder
 }
 
 const verifyCheckoutPayment = async (user, body) => {
@@ -847,4 +1027,5 @@ module.exports = {
   verifyWebhookSignature,
   resolveCouponPricing,
   resolveEffectivePurchaseEntitlement,
+  listAdminUsers,
 }
