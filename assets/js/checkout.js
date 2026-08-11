@@ -5,8 +5,8 @@ import {
   formatCurrency,
   getText,
   loadRazorpayCheckout,
-} from './commerce.js'
-import { getEntitlementSnapshot, hierarchyForBook } from './content-access.js'
+} from './commerce.js?v=20260812-purchase-pipeline'
+import { getEntitlementSnapshot, hierarchyForBook } from './content-access.js?v=20260812-purchase-pipeline'
 
 const node = (selector) => document.querySelector(selector)
 const setStatus = (target, message = '', type = '') => {

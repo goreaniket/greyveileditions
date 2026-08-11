@@ -78,8 +78,8 @@
     const identity = createNode("div", { class: "reader-toolbar__identity", "aria-label": "Reader status" });
     const brand = createNode("p", { class: "reader-brand", "data-reader-brand": "" }, body.dataset.readerBrand || "Greyveil Reader");
     const series = createNode("p", { class: "reader-series", "data-reader-series": "" }, "Greyveil Editions");
-    const titleNode = createNode("p", { class: "reader-title", "data-reader-title": "" }, "Checking access");
-    const status = createNode("p", { class: "reader-status", "data-reader-status": "" }, "Checking access");
+    const titleNode = createNode("p", { class: "reader-title", "data-reader-title": "" }, "Opening reader");
+    const status = createNode("p", { class: "reader-status", "data-reader-status": "" }, "Opening reader");
     identity.append(brand, series, titleNode, status);
 
     const controls = createNode("div", { class: "reader-toolbar__controls", "aria-label": "Reader tools" });
@@ -157,7 +157,7 @@
 
     const main = createNode("main", { id: "reader-content", class: "reader-stage", "aria-live": "polite" });
     const loadingNode = createNode("div", { class: "reader-loading", "data-reader-loading": "" });
-    loadingNode.append(createNode("p", {}, "Checking access..."));
+    loadingNode.append(createNode("p", {}, "Opening reader..."));
     const article = createNode("article", {
       class: "reader-pages",
       "data-reader-pages": "",
@@ -272,7 +272,7 @@
     });
   };
 
-  const resetReaderIdentity = (status = "Checking access") => {
+  const resetReaderIdentity = (status = "Opening reader") => {
     setGenericDocumentMeta();
     if (brandNode) brandNode.textContent = body.dataset.readerBrand || "Greyveil Reader";
     if (seriesNode) seriesNode.textContent = "Greyveil Editions";
@@ -1452,7 +1452,7 @@
     try {
       readerLoaded = false;
       setReaderControlsEnabled(false);
-      resetReaderIdentity("Checking access");
+      resetReaderIdentity("Opening reader");
       if (loading) loading.hidden = false;
       clearNode(pagesRoot);
       clearNode(contentsList);

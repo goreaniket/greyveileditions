@@ -23,7 +23,10 @@ export const normalizeVisibility = (value, fallback = DEFAULT_VISIBILITY) => {
 }
 
 export const visibilityForBook = (book) => {
-  return normalizeVisibility(book?.visibility, book?.is_public === true ? 'public' : DEFAULT_VISIBILITY)
+  const explicitVisibility = normalizeVisibility(book?.visibility, DEFAULT_VISIBILITY)
+  if (explicitVisibility === 'private') return 'private'
+  if (book?.is_public === true || explicitVisibility === 'public') return 'public'
+  return DEFAULT_VISIBILITY
 }
 
 export const displayNameFor = (user, profile) => {
@@ -74,6 +77,7 @@ export const effectiveVisibilityForBookHierarchy = ({
   series = null,
   book = null,
 } = {}) => {
+  if (book && visibilityForBook(book) === 'public') return 'public'
   return effectiveVisibility({
     collection,
     volume,
@@ -175,9 +179,11 @@ export const canReadBook = ({
   paidOrders = [],
 } = {}, context = {}) => {
   if (!book) return false
+  if (!hierarchyIsComplete({ collection, volume, series, book })
+      || !hierarchyIsActive({ collection, volume, series, book })) return false
+  if (visibilityForBook(book) === 'public') return true
   if (isAdminRole(context.role)) {
-    return hierarchyIsComplete({ collection, volume, series, book })
-      && hierarchyIsActive({ collection, volume, series, book })
+    return true
   }
   if (!canDiscoverContent({ collection, volume, series, book }, context)) return false
 
@@ -260,6 +266,7 @@ export const purchaseEntitlementDetails = (
     const [bookHierarchy] = eligibleBooksForPurchase(purchase, hierarchy)
     if (!bookHierarchy) return { entitled: false, reason: 'not_entitled' }
     const { book, series, collection } = bookHierarchy
+    if (visibilityForBook(book) === 'public') return { entitled: true, reason: 'public' }
     if (hasPaidOrderForProduct({ purchaseType: 'book', targetId: book.id }, paidOrders)
         || hasPaidOrderForProduct({ purchaseType: 'series', targetId: series?.id }, paidOrders)
         || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)) {
@@ -602,15 +609,15 @@ export const fetchHierarchyForBookSlug = async (bookSlug) => {
 }
 
 export const resolveReaderAccess = async (bookSlug) => {
-  const context = await getAccessContext()
   const hierarchy = await fetchHierarchyForBookSlug(bookSlug)
   const errors = Object.entries(hierarchy.errors || {}).filter(([, error]) => error)
+  const guestContext = { user: null, profile: null, role: 'guest', isAdmin: false, displayName: 'Reader' }
 
   if (errors.length) {
     return {
       allowed: false,
       reason: 'unavailable',
-      context,
+      context: guestContext,
       hierarchy,
       errors,
     }
@@ -621,7 +628,7 @@ export const resolveReaderAccess = async (bookSlug) => {
     return {
       allowed: false,
       reason: 'unavailable',
-      context,
+      context: guestContext,
       hierarchy,
       errors: [],
     }
@@ -636,7 +643,7 @@ export const resolveReaderAccess = async (bookSlug) => {
     return {
       allowed: false,
       reason: 'unavailable',
-      context,
+      context: guestContext,
       hierarchy,
       book,
       bookHierarchy,
@@ -644,6 +651,22 @@ export const resolveReaderAccess = async (bookSlug) => {
       errors: [],
     }
   }
+
+  if (visibilityForBook(book) === 'public') {
+    return {
+      allowed: true,
+      reason: 'public',
+      context: guestContext,
+      hierarchy,
+      book,
+      bookHierarchy,
+      visibility: 'public',
+      grants: [],
+      errors: [],
+    }
+  }
+
+  const context = await getAccessContext()
 
   if (isAdminRole(context.role)) {
     return {
@@ -668,20 +691,6 @@ export const resolveReaderAccess = async (bookSlug) => {
       book,
       bookHierarchy,
       visibility,
-      errors: [],
-    }
-  }
-
-  if (visibility === 'public') {
-    return {
-      allowed: true,
-      reason: 'public',
-      context,
-      hierarchy,
-      book,
-      bookHierarchy,
-      visibility,
-      grants: [],
       errors: [],
     }
   }

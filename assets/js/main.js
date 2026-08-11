@@ -7,6 +7,12 @@ const currentCopyrightYear = "2026";
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const mainScriptUrl = document.currentScript?.src || new URL("/assets/js/main.js", window.location.href).href;
+const purchasePipelineVersion = "20260812-purchase-pipeline";
+const versionedPurchaseAssetUrl = (name) => {
+  const url = new URL(name, mainScriptUrl);
+  url.searchParams.set("v", purchasePipelineVersion);
+  return url.href;
+};
 const loginPath = "/auth/login/";
 const accountPath = "/account/";
 const adminPath = "/admin/";
@@ -455,7 +461,12 @@ const ensurePurchaseAction = (link, decision) => {
   const container = purchaseContainerForLink(link);
   if (!container) return;
 
-  const existing = generatedPurchaseButtons(container, book.id)[0];
+  const matchingButtons = Array.from(container.querySelectorAll('[data-purchase-type="book"]'))
+    .filter((button) => String(button.dataset.purchaseBookId || "") === String(book.id));
+  const existing = matchingButtons[0];
+  matchingButtons.slice(1).forEach((button) => {
+    if (button.hasAttribute("data-generated-purchase") || button.hasAttribute("data-generated-upsell")) button.remove();
+  });
   const button = existing || document.createElement("button");
   button.type = "button";
   button.className = container.classList.contains("card-actions")
@@ -500,11 +511,14 @@ const ensureDirectPurchaseOptions = (main, decision) => {
   if (!container) return;
   const { collection, series, book } = decision.hierarchy;
 
-  if (decision.target.kind === "book" && book?.id) {
+  if (decision.target.kind === "book" && book?.id && !decision.publicReadable) {
     ensureUpsellButton(container, {
       type: "book", id: book.id, slug: book.slug,
       label: "Buy This Book - Rs. 149", style: "primary",
     });
+  }
+  if (decision.target.kind === "book" && decision.publicReadable) {
+    container.querySelectorAll('[data-purchase-type="book"]').forEach((button) => button.remove());
   }
   if (["book", "series"].includes(decision.target.kind) && series?.id) {
     const prices = { "human-mind": "599", "human-paradox": "599", "human-fiction": "499" };
@@ -619,7 +633,11 @@ const contentDecision = (target, hierarchy, access, context, lookup) => {
   if (target.kind === "book") {
     const book = lookup.booksBySlug.get(target.slug);
     const itemHierarchy = access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes);
-    const allowed = access.canDiscoverContent(itemHierarchy, context);
+    const publicReadable = Boolean(book)
+      && access.visibilityForBook(book) === "public"
+      && access.hierarchyIsComplete(itemHierarchy)
+      && access.hierarchyIsActive(itemHierarchy);
+    const allowed = publicReadable || access.canDiscoverContent(itemHierarchy, context);
     const currentGrant = book?.id ? lookup.currentGrantsByBookId.get(book.id) : null;
     const canRead = allowed
       ? access.canReadBook({
@@ -633,6 +651,7 @@ const contentDecision = (target, hierarchy, access, context, lookup) => {
       target,
       allowed,
       canRead,
+      publicReadable,
       book,
       hierarchy: itemHierarchy,
     };
@@ -648,7 +667,7 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
   records.forEach(suspendRecord);
 
   try {
-    const access = await import(new URL("content-access.js", mainScriptUrl).href);
+    const access = await import(versionedPurchaseAssetUrl("content-access.js"));
     const snapshot = await access.getEntitlementSnapshot();
     const context = snapshot.context || contextFromAuthState(access, authState);
     const hierarchy = snapshot.hierarchy;
@@ -720,7 +739,7 @@ const refreshAuthAndContentVisibility = async (invalidateReason = '') => {
   const runId = contentVisibilityRun;
   setAccessPending();
   if (invalidateReason) {
-    const access = await import(new URL("content-access.js", mainScriptUrl).href);
+    const access = await import(versionedPurchaseAssetUrl("content-access.js"));
     access.invalidateEntitlementSnapshot(invalidateReason);
   }
   const authState = await initAuthNavigation();
@@ -747,7 +766,7 @@ const bindAuthStateRefresh = async () => {
 refreshAuthAndContentVisibility();
 bindAuthStateRefresh();
 window.addEventListener("greyveil:purchase-complete", () => refreshAuthAndContentVisibility("purchase-complete"));
-import(new URL("purchases.js", mainScriptUrl).href).catch((error) => {
+import(versionedPurchaseAssetUrl("purchases.js")).catch((error) => {
   console.info("Checkout controls could not be initialized.", {
     name: error?.name,
     message: error?.message,

@@ -129,7 +129,13 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.match(source, /window\.location\.replace\(`\/auth\/login\/\?next=/)
   assert.match(auth, /preserveAuthReturnLinks/)
   assert.doesNotMatch(purchases, /api\/create-order/)
+  assert.doesNotMatch(purchases, /getCurrentUser/)
   assert.match(purchases, /checkoutUrlForPayload/)
+  assert.equal((purchases.match(/document\.addEventListener\('click', handlePurchaseClick\)/g) || []).length, 1)
+  assert.match(main, /versionedPurchaseAssetUrl\("purchases\.js"\)/)
+  assert.match(main, /matchingButtons\.slice\(1\)/)
+  assert.match(html, /main\.js\?v=20260812-purchase-pipeline/)
+  assert.match(html, /checkout\.js\?v=20260812-purchase-pipeline/)
   assert.match(main, /Buy Full Series/)
   assert.match(main, /Buy Full Collection/)
   assert.match(auth, /data-account-profile-form/)
@@ -180,6 +186,20 @@ test('public review route matcher supports Greyveil book URLs', async () => {
   assert.equal(reviews.bookSlugFromPath('/projects/human-mind/books/the-last-shift/'), 'the-last-shift')
   assert.equal(reviews.bookSlugFromPath('/projects/human-mind/books/the-last-shift/index.html'), 'the-last-shift')
   assert.equal(reviews.bookSlugFromPath('/projects/human-mind/books/the-last-shift/reader/'), '')
+})
+
+test('public reader and purchase surfaces do not present an entitlement wait or book checkout', async () => {
+  const [reader, main, purchases, api] = await Promise.all([
+    readFile(new URL('../assets/js/reader.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/main.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/purchases.js', import.meta.url), 'utf8'),
+    readFile(new URL('../api/_lib/greyveil-api.js', import.meta.url), 'utf8'),
+  ])
+  assert.doesNotMatch(reader, /Checking access\.\.\.|"Checking access"/)
+  assert.match(main, /decision\.publicReadable/)
+  assert.match(main, /data-purchase-type="book"/)
+  assert.match(purchases, /detail\.reason === 'public'/)
+  assert.match(api, /public_book_not_purchasable/)
 })
 
 test('migration retains purchase validation and trusted platform policies', async () => {

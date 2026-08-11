@@ -5,12 +5,12 @@ import {
   normalizePurchaseType,
   purchasePayloadForElement,
   purchaseTargetForPayload,
-} from './commerce.js'
+} from './commerce.js?v=20260812-purchase-pipeline'
 import {
   getEntitlementSnapshot,
   invalidateEntitlementSnapshot,
   purchaseEntitlementDetails,
-} from './content-access.js'
+} from './content-access.js?v=20260812-purchase-pipeline'
 
 const PRICE_LABELS = {
   book: 'Rs. 149',
@@ -51,6 +51,13 @@ const setPurchaseState = (button, state, detail = {}) => {
   button.dataset.purchaseAccessState = state
   button.removeAttribute('aria-busy')
   button.removeAttribute('title')
+  button.hidden = detail.reason === 'public'
+
+  if (detail.reason === 'public') {
+    button.disabled = true
+    button.dataset.purchaseAccessState = 'public'
+    return
+  }
 
   if (state === 'checking') {
     button.disabled = true

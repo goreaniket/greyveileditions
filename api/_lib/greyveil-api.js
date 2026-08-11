@@ -418,7 +418,12 @@ const normalizeVisibility = (value, fallback = 'paid') => {
   return ['public', 'paid', 'private'].includes(visibility) ? visibility : fallback
 }
 
-const visibilityForBook = (book) => normalizeVisibility(book?.visibility, book?.is_public === true ? 'public' : 'paid')
+const visibilityForBook = (book) => {
+  const explicitVisibility = normalizeVisibility(book?.visibility, 'paid')
+  if (explicitVisibility === 'private') return 'private'
+  if (book?.is_public === true || explicitVisibility === 'public') return 'public'
+  return 'paid'
+}
 
 const isActive = (item) => item?.is_active !== false
 
@@ -484,6 +489,9 @@ const resolvePurchaseFromBody = async (body) => {
     const collection = await resolveCollectionForSeries(series, volume)
     const hierarchy = { collection, volume, series, book }
     assertPurchaseableHierarchy(hierarchy)
+    if (visibilityForBook(book) === 'public') {
+      throw new ApiError(409, 'This book is free to read and cannot be purchased.', 'public_book_not_purchasable')
+    }
 
     return {
       purchaseType,
@@ -579,6 +587,13 @@ const hasPaidProductOrder = (paidOrders, purchaseType, targetId) => {
 }
 
 const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
+  if (purchase.purchaseType === 'book'
+      && hierarchyIsComplete(purchase.hierarchy)
+      && hierarchyIsActive(purchase.hierarchy)
+      && visibilityForBook(purchase.hierarchy.book) === 'public') {
+    return { entitled: true, reason: 'public' }
+  }
+
   const profile = await selectOne('profiles', {
     id: `eq.${user.id}`,
     select: 'id, role',

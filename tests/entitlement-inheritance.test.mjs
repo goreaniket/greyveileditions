@@ -30,8 +30,8 @@ const collection = {
   visibility: 'public',
 }
 const volume = { id: volumeId, collection_id: collectionId, slug: 'volume', title: 'Volume', ...active }
-const seriesA = { id: seriesAId, volume_id: volumeId, collection_id: null, slug: 'series-a', title: 'Series A', ...active }
-const seriesB = { id: seriesBId, volume_id: volumeId, collection_id: null, slug: 'series-b', title: 'Series B', ...active }
+const seriesA = { id: seriesAId, volume_id: volumeId, collection_id: null, slug: 'human-mind', title: 'Series A', ...active }
+const seriesB = { id: seriesBId, volume_id: volumeId, collection_id: null, slug: 'human-fiction', title: 'Series B', ...active }
 const book = (id, seriesId = seriesAId) => ({
   id,
   series_id: seriesId,
@@ -41,6 +41,12 @@ const book = (id, seriesId = seriesAId) => ({
   ...active,
 })
 const books = [book(1), book(2), book(3), book(4, seriesBId)]
+const publicBook = {
+  ...book(5),
+  slug: 'public-book',
+  is_public: true,
+  visibility: 'paid',
+}
 const hierarchy = {
   collections: [collection],
   volumes: [volume],
@@ -79,6 +85,36 @@ test('paid product orders dynamically inherit future book access', async () => {
   assert.equal(access.canReadBook({ ...laterSeriesBook, paidOrders: [seriesOrder] }, context), true)
   assert.equal(access.canReadBook({ ...laterCollectionBook, paidOrders: [collectionOrder] }, context), true)
   assert.equal(access.canReadBook({ ...laterCollectionBook, paidOrders: [seriesOrder] }, context), false)
+})
+
+test('active public books are readable without granting parent ownership', async () => {
+  const access = await loadContentAccess()
+  const publicHierarchy = {
+    ...hierarchy,
+    books: [publicBook],
+  }
+  const item = access.hierarchyForBook(publicBook, publicHierarchy.seriesItems, publicHierarchy.collections, publicHierarchy.volumes)
+  const guest = { user: null, role: 'guest' }
+  const zeroEntitlementUser = { user, role: 'customer' }
+  const bookTarget = { purchaseType: 'book', targetId: publicBook.id }
+  const seriesTarget = { purchaseType: 'series', targetId: seriesAId }
+  const collectionTarget = { purchaseType: 'collection', targetId: collectionId }
+
+  assert.equal(access.visibilityForBook(publicBook), 'public')
+  assert.equal(access.canReadBook(item, guest), true)
+  assert.equal(access.canReadBook(item, zeroEntitlementUser), true)
+  assert.deepEqual(
+    access.purchaseEntitlementDetails(bookTarget, publicHierarchy, [], guest, []),
+    { entitled: true, reason: 'public' }
+  )
+  assert.equal(access.hasEffectivePurchaseEntitlement(seriesTarget, publicHierarchy, [], zeroEntitlementUser, []), false)
+  assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, publicHierarchy, [], zeroEntitlementUser, []), false)
+
+  const privateBook = { ...publicBook, is_public: false, visibility: 'private' }
+  const privateItem = { ...item, book: privateBook }
+  assert.equal(access.visibilityForBook(privateBook), 'private')
+  assert.equal(access.canReadBook(privateItem, guest), false)
+  assert.equal(access.canReadBook(privateItem, zeroEntitlementUser), false)
 })
 
 test('purchase CTA entitlement follows exact product ownership semantics', async () => {
@@ -138,15 +174,19 @@ test('server resolver recognizes historical paid scope and rejects direct API du
   let grants = []
   let profileRole = 'customer'
   let razorpayCallCount = 0
+  const razorpayRequests = []
+  const localOrderPayloads = []
 
   globalThis.fetch = async (input, options = {}) => {
     const url = new URL(String(input))
     if (url.hostname === 'api.razorpay.com') {
       razorpayCallCount += 1
+      const request = JSON.parse(options.body)
+      razorpayRequests.push(request)
       return new Response(JSON.stringify({
-        id: 'order_test_collection',
-        amount: 129900,
-        currency: 'INR',
+        id: `order_test_${razorpayCallCount}`,
+        amount: request.amount,
+        currency: request.currency,
       }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
@@ -158,6 +198,7 @@ test('server resolver recognizes historical paid scope and rejects direct API du
     if (url.pathname.endsWith('/orders')) {
       if (options.method === 'POST') {
         const body = JSON.parse(options.body)
+        localOrderPayloads.push(body)
         rows = [{ id: '50000000-0000-4000-8000-000000000001', ...body }]
       } else if (options.method === 'PATCH') {
         rows = [{ id: '50000000-0000-4000-8000-000000000001', ...JSON.parse(options.body) }]
@@ -166,10 +207,32 @@ test('server resolver recognizes historical paid scope and rejects direct API du
       }
     }
     if (url.pathname.endsWith('/book_access')) rows = grants
-    if (url.pathname.endsWith('/books')) rows = books.filter((item) => {
+    if (url.pathname.endsWith('/coupons') && url.searchParams.get('code') === 'eq.RIZZ') rows = [{
+      id: '60000000-0000-4000-8000-000000000001',
+      code: 'RIZZ',
+      active: true,
+      discount_type: 'fixed_final_price',
+      discount_value: 0,
+      fixed_final_price: 100,
+      applicable_purchase_types: ['book', 'series', 'collection'],
+      applies_to_all_products: true,
+    }]
+    if (url.pathname.endsWith('/coupon_product_rules')) rows = []
+    if (url.pathname.endsWith('/coupon_usages')) {
+      rows = options.method === 'POST' ? [{ id: '70000000-0000-4000-8000-000000000001', ...JSON.parse(options.body) }] : []
+    }
+    if (url.pathname.endsWith('/books')) rows = [...books, publicBook].filter((item) => {
+      const idFilter = url.searchParams.get('id')
       const seriesFilter = url.searchParams.get('series_id')
-      return !seriesFilter || seriesFilter === `eq.${item.series_id}`
+      if (idFilter) return idFilter === `eq.${item.id}`
+      if (seriesFilter) return seriesFilter === `eq.${item.series_id}` && item.id !== publicBook.id
+      return true
     })
+    if (url.pathname.endsWith('/series')) rows = [seriesA, seriesB].filter((item) => {
+      const idFilter = url.searchParams.get('id')
+      return !idFilter || idFilter === `eq.${item.id}`
+    })
+    if (url.pathname.endsWith('/volumes')) rows = [volume]
     if (url.pathname.endsWith('/collections')) rows = [collection]
 
     return new Response(JSON.stringify(rows), {
@@ -193,6 +256,11 @@ test('server resolver recognizes historical paid scope and rejects direct API du
     purchaseType: 'book',
     bookId: books[2].id,
     hierarchy: { collection, volume, series: seriesA, book: books[2] },
+  }
+  const publicBookPurchase = {
+    purchaseType: 'book',
+    bookId: publicBook.id,
+    hierarchy: { collection, volume, series: seriesA, book: publicBook },
   }
 
   orders = []
@@ -218,19 +286,62 @@ test('server resolver recognizes historical paid scope and rejects direct API du
   assert.equal(pricing.original_amount, 129900)
   assert.equal(pricing.final_amount, 129900)
 
-  const createdOrder = await api.createCheckoutOrder(user, {
-    purchase_type: 'collection',
-    collection_id: collectionId,
+  const checkoutCases = [
+    { type: 'book', id: books[2].id, amount: 14900, payload: { purchase_type: 'book', book_id: books[2].id, amount: 1 } },
+    { type: 'series', id: seriesAId, amount: 59900, payload: { purchase_type: 'series', series_id: seriesAId } },
+    { type: 'series', id: seriesBId, amount: 49900, payload: { purchase_type: 'series', series_id: seriesBId } },
+    { type: 'collection', id: collectionId, amount: 129900, payload: { purchase_type: 'collection', collection_id: collectionId } },
+  ]
+  for (const checkoutCase of checkoutCases) {
+    const createdOrder = await api.createCheckoutOrder(user, checkoutCase.payload)
+    const localOrder = localOrderPayloads.at(-1)
+    const razorpayOrder = razorpayRequests.at(-1)
+    assert.equal(createdOrder.amount, checkoutCase.amount)
+    assert.equal(createdOrder.currency, 'INR')
+    assert.equal(localOrder.purchase_type, checkoutCase.type)
+    assert.equal(String(localOrder[`${checkoutCase.type}_id`]), String(checkoutCase.id))
+    assert.equal(localOrder.book_id === null ? null : String(localOrder.book_id), checkoutCase.type === 'book' ? String(checkoutCase.id) : null)
+    assert.equal(localOrder.series_id === null ? null : String(localOrder.series_id), checkoutCase.type === 'series' ? String(checkoutCase.id) : null)
+    assert.equal(localOrder.collection_id === null ? null : String(localOrder.collection_id), checkoutCase.type === 'collection' ? String(checkoutCase.id) : null)
+    assert.equal(razorpayOrder.amount, checkoutCase.amount)
+    assert.equal(razorpayOrder.currency, 'INR')
+  }
+  assert.equal(razorpayCallCount, checkoutCases.length)
+
+  const discountedOrder = await api.createCheckoutOrder(user, {
+    purchase_type: 'book',
+    book_id: books[2].id,
+    coupon_code: 'rIzZ',
   })
-  assert.equal(createdOrder.amount, 129900)
-  assert.equal(createdOrder.currency, 'INR')
-  assert.equal(razorpayCallCount, 1)
+  assert.equal(discountedOrder.original_amount, 14900)
+  assert.equal(discountedOrder.amount, 100)
+  assert.equal(discountedOrder.coupon_code, 'RIZZ')
+  assert.equal(razorpayRequests.at(-1).amount, 100)
+
+  const invalidCouponOrder = await api.createCheckoutOrder(user, {
+    purchase_type: 'series',
+    series_id: seriesBId,
+    coupon_code: 'NOPE',
+  })
+  assert.equal(invalidCouponOrder.original_amount, 49900)
+  assert.equal(invalidCouponOrder.amount, 49900)
+  assert.equal(invalidCouponOrder.coupon_code, null)
 
   orders = []
   grants = books.slice(0, 3).map((item) => grant(item.id))
   assert.equal((await api.resolveEffectivePurchaseEntitlement(user, seriesPurchase)).entitled, true)
   grants = []
   assert.equal((await api.resolveEffectivePurchaseEntitlement(user, bookPurchase)).entitled, false)
+  assert.deepEqual(
+    await api.resolveEffectivePurchaseEntitlement(user, publicBookPurchase),
+    { entitled: true, reason: 'public' }
+  )
+  const razorpayCallsBeforePublicBook = razorpayCallCount
+  await assert.rejects(
+    api.createCheckoutOrder(user, { purchase_type: 'book', book_id: publicBook.id }),
+    (error) => error?.code === 'public_book_not_purchasable' && error?.statusCode === 409
+  )
+  assert.equal(razorpayCallCount, razorpayCallsBeforePublicBook)
   grants = [grant(books[2].id)]
   assert.equal((await api.resolveEffectivePurchaseEntitlement(user, bookPurchase)).entitled, true)
   grants = [grant(books[2].id, { expires_at: '2020-01-01T00:00:00.000Z' })]
