@@ -241,41 +241,58 @@ export const eligibleBooksForPurchase = ({ purchaseType, targetId } = {}, hierar
     })
 }
 
-export const hasEffectivePurchaseEntitlement = (
+export const purchaseEntitlementDetails = (
   purchase,
   hierarchy = {},
   grants = [],
   context = {},
   paidOrders = []
 ) => {
-  if (isAdminRole(context.role)) return true
+  if (isAdminRole(context.role)) return { entitled: true, reason: 'admin' }
 
   const purchaseType = String(purchase?.purchaseType || '').trim().toLowerCase()
   const targetId = purchase?.targetId
-  if (!['book', 'series', 'collection'].includes(purchaseType) || !targetId) return false
+  if (!['book', 'series', 'collection'].includes(purchaseType) || !targetId) {
+    return { entitled: false, reason: 'invalid' }
+  }
 
   if (purchaseType === 'book') {
     const [bookHierarchy] = eligibleBooksForPurchase(purchase, hierarchy)
-    return Boolean(bookHierarchy) && canReadBook({
-      ...bookHierarchy,
-      grants,
-      paidOrders,
-    }, context)
+    if (!bookHierarchy) return { entitled: false, reason: 'not_entitled' }
+    const { book, series, collection } = bookHierarchy
+    if (hasPaidOrderForProduct({ purchaseType: 'book', targetId: book.id }, paidOrders)
+        || hasPaidOrderForProduct({ purchaseType: 'series', targetId: series?.id }, paidOrders)
+        || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)) {
+      return { entitled: true, reason: 'paid' }
+    }
+    if (hasBookEntitlement(book, grants)) return { entitled: true, reason: 'owner_grant' }
+    if (effectiveVisibilityForBookHierarchy(bookHierarchy) === 'public') return { entitled: true, reason: 'public' }
+    return { entitled: false, reason: 'not_entitled' }
   }
 
   if (purchaseType === 'collection') {
-    return hasPaidOrderForProduct(purchase, paidOrders)
+    const entitled = hasPaidOrderForProduct(purchase, paidOrders)
+    return { entitled, reason: entitled ? 'paid' : 'not_entitled' }
   }
 
   const series = (hierarchy.seriesItems || []).find((item) => idsMatch(item.id, targetId))
-  if (!series) return false
+  if (!series) return { entitled: false, reason: 'not_entitled' }
   const volume = volumeForSeries(series, hierarchy.volumes || [])
   const collection = collectionForSeries(series, hierarchy.collections || [])
     || collectionForVolume(volume, hierarchy.collections || [])
 
-  return hasPaidOrderForProduct(purchase, paidOrders)
-    || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)
+  if (hasPaidOrderForProduct(purchase, paidOrders)
+      || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)) {
+    return { entitled: true, reason: 'paid' }
+  }
+
+  const eligibleBooks = eligibleBooksForPurchase(purchase, hierarchy)
+  const fullyGranted = eligibleBooks.length > 0
+    && eligibleBooks.every((item) => hasBookEntitlement(item.book, grants))
+  return { entitled: fullyGranted, reason: fullyGranted ? 'owner_grant' : 'not_entitled' }
 }
+
+export const hasEffectivePurchaseEntitlement = (...args) => purchaseEntitlementDetails(...args).entitled
 
 export const filterDiscoverableBooks = (books = [], seriesItems = [], collections = [], volumes = [], context = {}) => {
   return books.filter((book) => canDiscoverContent(hierarchyForBook(book, seriesItems, collections, volumes), context))
@@ -450,6 +467,7 @@ export const getEntitlementSnapshot = async ({ force = false } = {}) => {
 if (typeof window !== 'undefined') {
   window.addEventListener('greyveil:access-changed', () => invalidateEntitlementSnapshot('access-change'))
   window.addEventListener('greyveil:role-changed', () => invalidateEntitlementSnapshot('role-change'))
+  window.addEventListener('greyveil:profile-changed', () => invalidateEntitlementSnapshot('profile-change'))
 }
 
 export const fetchHierarchyForBooks = async (bookIds = []) => {

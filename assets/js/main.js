@@ -473,12 +473,62 @@ const ensurePurchaseAction = (link, decision) => {
   }
 };
 
+const ensureUpsellButton = (container, { type, id, slug, label, style = "ghost" }) => {
+  if (!container || !type || !id) return null;
+  const idKey = `purchase${type.charAt(0).toUpperCase()}${type.slice(1)}Id`;
+  const existing = Array.from(container.querySelectorAll(`[data-purchase-type="${type}"]`))
+    .find((button) => String(button.dataset[idKey] || "") === String(id)
+      || (slug && button.dataset.purchaseSlug === slug));
+  const button = existing || document.createElement("button");
+  button.type = "button";
+  button.className = `button ${style} purchase-button`;
+  button.dataset.purchaseType = type;
+  button.dataset[idKey] = id;
+  if (slug) button.dataset.purchaseSlug = slug;
+  button.dataset.purchaseLabel = label;
+  button.textContent = label;
+  if (!existing) {
+    button.dataset.generatedUpsell = "";
+    container.append(button);
+  }
+  return button;
+};
+
+const ensureDirectPurchaseOptions = (main, decision) => {
+  if (!main || !decision?.hierarchy) return;
+  const container = main.querySelector(".project-hero .button-row, .book-hero .button-row, .button-row");
+  if (!container) return;
+  const { collection, series, book } = decision.hierarchy;
+
+  if (decision.target.kind === "book" && book?.id) {
+    ensureUpsellButton(container, {
+      type: "book", id: book.id, slug: book.slug,
+      label: "Buy This Book - Rs. 149", style: "primary",
+    });
+  }
+  if (["book", "series"].includes(decision.target.kind) && series?.id) {
+    const prices = { "human-mind": "599", "human-paradox": "599", "human-fiction": "499" };
+    ensureUpsellButton(container, {
+      type: "series", id: series.id, slug: series.slug,
+      label: `Buy Full Series - Rs. ${prices[series.slug] || "599"}`,
+    });
+  }
+  if (collection?.id) {
+    ensureUpsellButton(container, {
+      type: "collection", id: collection.id, slug: collection.slug,
+      label: "Buy Full Collection - Rs. 1,299",
+    });
+  }
+  window.dispatchEvent(new CustomEvent("greyveil:purchases-refresh-labels"));
+};
+
 const updateBookSurfaceState = (node, decision, access, context) => {
   if (!node || decision.target.kind !== "book" || !decision.book) return;
 
   const visibility = access.effectiveVisibilityForBookHierarchy(decision.hierarchy);
   const locked = visibility === "paid" && !decision.canRead;
   const readerLinks = [];
+  const directPage = node.matches?.("main");
 
   if (node.matches?.("a[href*='/reader/']")) readerLinks.push(node);
   node.querySelectorAll?.("a[href*='/reader/']").forEach((link) => readerLinks.push(link));
@@ -486,7 +536,7 @@ const updateBookSurfaceState = (node, decision, access, context) => {
   readerLinks.forEach((link) => {
     if (locked) {
       lockReaderLink(link, context.user);
-      ensurePurchaseAction(link, decision);
+      if (!directPage) ensurePurchaseAction(link, decision);
     } else {
       restoreLink(link);
       removeGeneratedPurchaseAction(link, decision.book);
@@ -552,7 +602,8 @@ const contentDecision = (target, hierarchy, access, context, lookup) => {
     const series = lookup.seriesBySlug.get(target.slug);
     const volume = access.volumeForSeries(series, hierarchy.volumes);
     const itemHierarchy = {
-      collection: access.collectionForSeries(series, hierarchy.collections),
+      collection: access.collectionForSeries(series, hierarchy.collections)
+        || access.collectionForVolume(volume, hierarchy.collections),
       volume,
       series,
     };
@@ -645,6 +696,7 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
       if (decision.allowed) {
         restoreDirectContent();
         updateBookSurfaceState(directContentState.main, decision, access, context);
+        ensureDirectPurchaseOptions(directContentState.main, decision);
       } else {
         showUnavailableContent();
       }

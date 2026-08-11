@@ -2,6 +2,8 @@ import { supabase } from './supabase-client.js'
 
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const ROLE_OPTIONS = ['customer', 'admin', 'super_admin']
+const ANNOUNCEMENT_IMAGE_BUCKET = 'announcement-images'
+const MAX_ANNOUNCEMENT_IMAGE_BYTES = 5 * 1024 * 1024
 const getText = (value, fallback = '') => String(value ?? '').trim() || fallback
 const bySelector = (selector) => document.querySelector(selector)
 const clear = (node) => { if (node) node.replaceChildren() }
@@ -50,6 +52,7 @@ const state = {
   books: [],
   coupons: [],
   couponProducts: [],
+  couponUsages: [],
   announcements: [],
 }
 
@@ -212,17 +215,40 @@ const renderCoupons = () => {
   const list = bySelector('[data-admin-coupons]')
   if (!list) return
   clear(list)
+  const wrap = create('div', 'admin-table-wrap')
+  const table = create('table', 'admin-table admin-platform-table')
+  table.innerHTML = '<thead><tr><th>Code</th><th>Description</th><th>Status</th><th>Discount</th><th>Valid From</th><th>Valid Until</th><th>Uses</th><th>Per User</th><th>Products</th><th>Actions</th></tr></thead>'
+  const body = document.createElement('tbody')
   state.coupons.forEach((coupon) => {
-    const item = create('article', 'admin-platform-item')
-    const heading = create('div', 'admin-platform-item__heading')
-    const title = create('div')
-    title.append(create('strong', '', coupon.code), create('span', '', getText(coupon.description, coupon.discount_type)))
-    heading.append(title, create('span', `admin-status admin-status--${coupon.active ? 'approved' : 'rejected'}`, coupon.active ? 'active' : 'inactive'))
+    const row = document.createElement('tr')
+    const redeemed = state.couponUsages.filter((usage) => usage.coupon_id === coupon.id && usage.status === 'redeemed').length
+    const targets = couponProductsFor(coupon.id)
+    const productSummary = targets.length
+      ? targets.map((target) => `${target.purchase_type}:${target.target_id}`).join(', ')
+      : `All ${(coupon.applicable_purchase_types || []).join(', ')}`
     const detail = coupon.discount_type === 'fixed_final_price'
-      ? `Final price: ${(Number(coupon.fixed_final_price) / 100).toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}`
-      : `${coupon.discount_type}: ${coupon.discount_value}`
-    const meta = create('p', 'admin-platform-item__meta', `${detail} - ${coupon.applicable_purchase_types.join(', ')}`)
-    const actions = create('div', 'admin-form-actions')
+      ? `Final ${(Number(coupon.fixed_final_price) / 100).toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}`
+      : coupon.discount_type === 'fixed_amount'
+        ? `${(Number(coupon.discount_value) / 100).toLocaleString('en-IN', { style: 'currency', currency: 'INR' })} off`
+        : `${coupon.discount_value}% off`
+    const labels = ['Code', 'Description', 'Status', 'Discount', 'Valid From', 'Valid Until', 'Uses', 'Per User', 'Products']
+    ;[
+      coupon.code,
+      getText(coupon.description, '-'),
+      coupon.active ? 'Active' : 'Inactive',
+      detail,
+      formatDate(coupon.valid_from),
+      formatDate(coupon.valid_until),
+      `${redeemed} / ${coupon.maximum_total_uses || 'Unlimited'}`,
+      coupon.maximum_uses_per_user || 'Unlimited',
+      productSummary,
+    ].forEach((value, index) => {
+      const cell = create('td', '', String(value))
+      cell.dataset.label = labels[index]
+      row.append(cell)
+    })
+    const actions = create('td', 'admin-platform-table__actions')
+    actions.dataset.label = 'Actions'
     const edit = create('button', 'admin-action', 'Edit')
     edit.type = 'button'
     edit.addEventListener('click', () => fillCouponForm(coupon))
@@ -242,20 +268,28 @@ const renderCoupons = () => {
       else { state.coupons = state.coupons.filter((item) => item.id !== coupon.id); renderCoupons() }
     })
     actions.append(edit, toggle, remove)
-    item.append(heading, meta, actions)
-    list.append(item)
+    row.append(actions)
+    body.append(row)
   })
+  table.append(body)
+  wrap.append(table)
+  list.append(wrap)
+  if (!state.coupons.length) list.append(create('p', 'admin-empty', 'No coupons have been created.'))
 }
 
 const loadCoupons = async () => {
   if (!isSuperAdmin()) return
-  const [coupons, products] = await Promise.all([
+  const [coupons, products, usages] = await Promise.all([
     supabase.from('coupons').select('*').order('created_at', { ascending: false }),
     supabase.from('coupon_products').select('*'),
+    supabase.from('coupon_usages').select('coupon_id, status'),
   ])
   if (coupons.error) throw coupons.error
+  if (products.error) throw products.error
+  if (usages.error) throw usages.error
   state.coupons = coupons.data || []
   state.couponProducts = products.data || []
+  state.couponUsages = usages.data || []
   renderCoupons()
 }
 
@@ -315,29 +349,85 @@ const saveCoupon = async (event) => {
 const fillAnnouncementForm = (announcement) => {
   const form = bySelector('[data-announcement-form]')
   if (!form) return
+  form.dataset.filling = 'true'
   form.reset()
+  delete form.dataset.filling
   ;['id', 'title', 'message', 'placement', 'audience', 'audience_target_id', 'image_url', 'cta_label', 'cta_url'].forEach((name) => {
     if (form.elements[name]) form.elements[name].value = announcement?.[name] ?? ''
   })
   form.elements.active.value = String(announcement?.active !== false)
   form.elements.starts_at.value = announcement?.starts_at ? announcement.starts_at.slice(0, 16) : ''
   form.elements.ends_at.value = announcement?.ends_at ? announcement.ends_at.slice(0, 16) : ''
+  form.elements.image_file.value = ''
+  form.dataset.originalImageUrl = announcement?.image_url || ''
+  const preview = bySelector('[data-announcement-image-preview]')
+  const remove = bySelector('[data-announcement-image-remove]')
+  if (preview) {
+    preview.src = announcement?.image_url || ''
+    preview.hidden = !announcement?.image_url
+  }
+  if (remove) remove.hidden = !announcement?.image_url
   form.elements.title.focus()
+}
+
+const announcementStatus = (announcement) => {
+  if (!announcement.active) return 'Inactive'
+  const now = Date.now()
+  const starts = announcement.starts_at ? Date.parse(announcement.starts_at) : null
+  const ends = announcement.ends_at ? Date.parse(announcement.ends_at) : null
+  if (Number.isFinite(starts) && starts > now) return 'Scheduled'
+  if (Number.isFinite(ends) && ends <= now) return 'Expired'
+  return 'Active'
+}
+
+const storagePathFromPublicUrl = (value) => {
+  const marker = `/object/public/${ANNOUNCEMENT_IMAGE_BUCKET}/`
+  const index = getText(value).indexOf(marker)
+  return index >= 0 ? decodeURIComponent(getText(value).slice(index + marker.length)) : ''
+}
+
+const removeAnnouncementImage = async (imageUrl) => {
+  const path = storagePathFromPublicUrl(imageUrl)
+  if (path) await supabase.storage.from(ANNOUNCEMENT_IMAGE_BUCKET).remove([path])
 }
 
 const renderAnnouncements = () => {
   const list = bySelector('[data-admin-announcements]')
   if (!list) return
   clear(list)
+  const wrap = create('div', 'admin-table-wrap')
+  const table = create('table', 'admin-table admin-platform-table')
+  table.innerHTML = '<thead><tr><th>Image</th><th>Title</th><th>Placement</th><th>Audience</th><th>Start</th><th>End</th><th>Status</th><th>CTA</th><th>Actions</th></tr></thead>'
+  const body = document.createElement('tbody')
   state.announcements.forEach((announcement) => {
-    const item = create('article', 'admin-platform-item')
-    const heading = create('div', 'admin-platform-item__heading')
-    const title = create('div')
-    title.append(create('strong', '', announcement.title), create('span', '', `${announcement.placement} - ${announcement.audience}`))
-    heading.append(title, create('span', `admin-status admin-status--${announcement.active ? 'approved' : 'rejected'}`, announcement.active ? 'active' : 'inactive'))
-    const message = create('p', 'admin-review-item__text', announcement.message)
-    const meta = create('p', 'admin-platform-item__meta', `${formatDate(announcement.starts_at || announcement.created_at)} to ${formatDate(announcement.ends_at)}`)
-    const actions = create('div', 'admin-form-actions')
+    const row = document.createElement('tr')
+    const imageCell = document.createElement('td')
+    imageCell.dataset.label = 'Image'
+    if (announcement.image_url) {
+      const image = create('img', 'admin-announcement-thumbnail')
+      image.src = announcement.image_url
+      image.alt = ''
+      imageCell.append(image)
+    } else imageCell.textContent = '-'
+    row.append(imageCell)
+    const labels = ['Title', 'Placement', 'Audience', 'Start', 'End', 'Status', 'CTA']
+    ;[
+      announcement.title,
+      announcement.placement,
+      announcement.audience,
+      formatDate(announcement.starts_at),
+      formatDate(announcement.ends_at),
+      announcementStatus(announcement),
+      announcement.cta_label
+        ? `${announcement.cta_label}${announcement.cta_url ? ` - ${announcement.cta_url}` : ''}`
+        : '-',
+    ].forEach((value, index) => {
+      const cell = create('td', '', value)
+      cell.dataset.label = labels[index]
+      row.append(cell)
+    })
+    const actions = create('td', 'admin-platform-table__actions')
+    actions.dataset.label = 'Actions'
     const edit = create('button', 'admin-action', 'Edit')
     edit.type = 'button'
     edit.addEventListener('click', () => fillAnnouncementForm(announcement))
@@ -348,10 +438,24 @@ const renderAnnouncements = () => {
       if (error) window.alert(error.message)
       else { announcement.active = !announcement.active; renderAnnouncements() }
     })
-    actions.append(edit, toggle)
-    item.append(heading, message, meta, actions)
-    list.append(item)
+    const remove = create('button', 'admin-action admin-action--danger', 'Delete')
+    remove.type = 'button'
+    remove.addEventListener('click', async () => {
+      if (!window.confirm(`Delete announcement ${announcement.title}?`)) return
+      const { error } = await supabase.from('announcements').delete().eq('id', announcement.id)
+      if (error) return window.alert(error.message)
+      await removeAnnouncementImage(announcement.image_url)
+      state.announcements = state.announcements.filter((item) => item.id !== announcement.id)
+      renderAnnouncements()
+    })
+    actions.append(edit, toggle, remove)
+    row.append(actions)
+    body.append(row)
   })
+  table.append(body)
+  wrap.append(table)
+  list.append(wrap)
+  if (!state.announcements.length) list.append(create('p', 'admin-empty', 'No announcements have been created.'))
 }
 
 const loadAnnouncements = async () => {
@@ -366,13 +470,32 @@ const saveAnnouncement = async (event) => {
   const form = event.currentTarget
   const id = getText(form.elements.id.value)
   const audience = form.elements.audience.value
+  const imageFile = form.elements.image_file.files?.[0] || null
+  const originalImageUrl = getText(form.dataset.originalImageUrl)
+  const selectedImageUrl = getText(form.elements.image_url.value)
+  let uploadedImageUrl = selectedImageUrl || null
+  let uploadedStoragePath = ''
+  if (imageFile) {
+    if (!['image/png', 'image/jpeg', 'image/webp'].includes(imageFile.type) || imageFile.size > MAX_ANNOUNCEMENT_IMAGE_BYTES) {
+      return setStatus('[data-announcement-image-status]', 'Choose a PNG, JPEG, or WebP image no larger than 5 MB.', 'error')
+    }
+    const extension = imageFile.type === 'image/png' ? 'png' : imageFile.type === 'image/webp' ? 'webp' : 'jpg'
+    uploadedStoragePath = `${state.user.id}/${crypto.randomUUID()}.${extension}`
+    setStatus('[data-announcement-image-status]', 'Uploading image...', 'info')
+    const upload = await supabase.storage.from(ANNOUNCEMENT_IMAGE_BUCKET).upload(uploadedStoragePath, imageFile, {
+      contentType: imageFile.type,
+      upsert: false,
+    })
+    if (upload.error) return setStatus('[data-announcement-image-status]', 'Image upload failed. Please try again.', 'error')
+    uploadedImageUrl = supabase.storage.from(ANNOUNCEMENT_IMAGE_BUCKET).getPublicUrl(uploadedStoragePath).data.publicUrl
+  }
   const payload = {
     title: getText(form.elements.title.value),
     message: getText(form.elements.message.value),
     placement: form.elements.placement.value,
     audience,
     audience_target_id: ['series-owner', 'collection-owner'].includes(audience) ? getText(form.elements.audience_target_id.value) : null,
-    image_url: getText(form.elements.image_url.value) || null,
+    image_url: uploadedImageUrl,
     cta_label: getText(form.elements.cta_label.value) || null,
     cta_url: getText(form.elements.cta_url.value) || null,
     starts_at: nullableDate(form.elements.starts_at.value),
@@ -385,8 +508,17 @@ const saveAnnouncement = async (event) => {
   const result = id
     ? await supabase.from('announcements').update(payload).eq('id', id)
     : await supabase.from('announcements').insert(payload)
-  if (result.error) return setStatus('[data-announcement-status]', result.error.message, 'error')
+  if (result.error) {
+    if (uploadedStoragePath) await supabase.storage.from(ANNOUNCEMENT_IMAGE_BUCKET).remove([uploadedStoragePath])
+    return setStatus('[data-announcement-status]', result.error.message, 'error')
+  }
+  if (originalImageUrl && originalImageUrl !== uploadedImageUrl) await removeAnnouncementImage(originalImageUrl)
   form.reset()
+  form.dataset.originalImageUrl = ''
+  const preview = bySelector('[data-announcement-image-preview]')
+  if (preview) { preview.src = ''; preview.hidden = true }
+  bySelector('[data-announcement-image-remove]')?.setAttribute('hidden', '')
+  setStatus('[data-announcement-image-status]', '', '')
   setStatus('[data-announcement-status]', 'Announcement saved.', 'success')
   await loadAnnouncements()
 }
@@ -413,6 +545,40 @@ const init = async () => {
   bySelector('[data-review-filter]')?.addEventListener('change', renderReviews)
   bySelector('[data-coupon-form]')?.addEventListener('submit', saveCoupon)
   bySelector('[data-announcement-form]')?.addEventListener('submit', saveAnnouncement)
+  bySelector('[data-announcement-form]')?.addEventListener('reset', (event) => {
+    if (event.currentTarget.dataset.filling === 'true') return
+    event.currentTarget.dataset.originalImageUrl = ''
+    window.setTimeout(() => {
+      const preview = bySelector('[data-announcement-image-preview]')
+      if (preview) { preview.src = ''; preview.hidden = true }
+      bySelector('[data-announcement-image-remove]')?.setAttribute('hidden', '')
+      setStatus('[data-announcement-image-status]', '', '')
+    }, 0)
+  })
+  const imageInput = bySelector('[data-announcement-form] [name="image_file"]')
+  imageInput?.addEventListener('change', () => {
+    const file = imageInput.files?.[0]
+    const preview = bySelector('[data-announcement-image-preview]')
+    const remove = bySelector('[data-announcement-image-remove]')
+    if (!file || !preview) return
+    if (!['image/png', 'image/jpeg', 'image/webp'].includes(file.type) || file.size > MAX_ANNOUNCEMENT_IMAGE_BYTES) {
+      imageInput.value = ''
+      return setStatus('[data-announcement-image-status]', 'Choose a PNG, JPEG, or WebP image no larger than 5 MB.', 'error')
+    }
+    preview.src = URL.createObjectURL(file)
+    preview.hidden = false
+    if (remove) remove.hidden = false
+    setStatus('[data-announcement-image-status]', `${file.name} ready to upload.`, 'success')
+  })
+  bySelector('[data-announcement-image-remove]')?.addEventListener('click', () => {
+    const form = bySelector('[data-announcement-form]')
+    form.elements.image_file.value = ''
+    form.elements.image_url.value = ''
+    const preview = bySelector('[data-announcement-image-preview]')
+    if (preview) { preview.src = ''; preview.hidden = true }
+    bySelector('[data-announcement-image-remove]').hidden = true
+    setStatus('[data-announcement-image-status]', 'Image removed from this announcement.', 'info')
+  })
   bySelector('[data-admin-refresh]')?.addEventListener('click', () => window.setTimeout(loadAll, 0))
 
   await loadAll()

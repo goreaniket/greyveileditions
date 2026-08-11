@@ -128,6 +128,7 @@
             <div>
               <p class="admin-eyebrow">Registered Profiles</p>
               <h2 id="users-title">Users</h2>
+              <p class="admin-panel-note">Review customer identity and access. Only super admins can change roles; self-role changes and removal of the final super admin are blocked.</p>
             </div>
           </div>
 
@@ -167,7 +168,7 @@
             <div>
               <p class="admin-eyebrow">Reader Reviews</p>
               <h2 id="reviews-title">Review Moderation</h2>
-              <p class="admin-panel-note">Only approved reviews appear publicly. Reader edits return to pending moderation.</p>
+              <p class="admin-panel-note">Moderate reviews from readers with verified book access. Only approved reviews appear publicly, and reader edits return to pending.</p>
             </div>
           </div>
           <div class="admin-filters">
@@ -182,7 +183,7 @@
             <div>
               <p class="admin-eyebrow">Checkout Promotions</p>
               <h2 id="coupons-title">Coupons</h2>
-              <p class="admin-panel-note">Coupon pricing and limits are enforced by the checkout server and database.</p>
+              <p class="admin-panel-note">Coupons adjust a server-owned checkout price by percentage, fixed discount, or fixed final price. Dates control availability, limits cap redemption, and product types or optional targets define where a code applies. Only super admins can manage them.</p>
             </div>
           </div>
           <form class="admin-card admin-platform-form" data-coupon-form>
@@ -211,7 +212,7 @@
             <div>
               <p class="admin-eyebrow">Marketing</p>
               <h2 id="announcements-title">Announcements</h2>
-              <p class="admin-panel-note">Publish restrained banners and account notices for relevant readers.</p>
+              <p class="admin-panel-note">Announcements are banners or cards placed across the site, home, account, library, or project pages. Audience rules target everyone, signed-in readers, or product owners; start and end dates schedule visibility automatically.</p>
             </div>
           </div>
           <form class="admin-card admin-platform-form" data-announcement-form>
@@ -223,10 +224,16 @@
               <label><span>Audience Target ID</span><input name="audience_target_id" /></label>
               <label><span>CTA Label</span><input name="cta_label" /></label>
               <label><span>CTA URL</span><input name="cta_url" type="url" /></label>
-              <label><span>Image URL</span><input name="image_url" type="url" /></label>
               <label><span>Starts</span><input name="starts_at" type="datetime-local" /></label>
               <label><span>Ends</span><input name="ends_at" type="datetime-local" /></label>
               <label><span>Active</span><select name="active"><option value="true">Active</option><option value="false">Inactive</option></select></label>
+            </div>
+            <div class="admin-announcement-image" data-announcement-image-upload>
+              <input name="image_url" type="hidden" />
+              <label><span>Announcement Image</span><input name="image_file" type="file" accept="image/png,image/jpeg,image/webp" /></label>
+              <img data-announcement-image-preview alt="Announcement image preview" hidden />
+              <button class="admin-action" type="button" data-announcement-image-remove hidden>Remove Image</button>
+              <p class="admin-form-status" data-announcement-image-status role="status" aria-live="polite"></p>
             </div>
             <label class="admin-platform-wide"><span>Short Message</span><textarea name="message" required maxlength="600" rows="3"></textarea></label>
             <div class="admin-form-actions"><button class="admin-action admin-action--primary" type="submit">Save Announcement</button><button class="admin-action" type="reset">New Announcement</button><p class="admin-form-status" data-announcement-status></p></div>
@@ -546,7 +553,7 @@
             <div>
               <p class="admin-eyebrow">Checkout Activity</p>
               <h2 id="payments-title">Payments</h2>
-              <p class="admin-panel-note">Verified Razorpay orders and payment states. Select a row for full details.</p>
+              <p class="admin-panel-note">Inspect trusted Razorpay orders, captured-payment status, coupons, and refunds. This view is read-only; payment verification and persisted amounts cannot be changed here.</p>
             </div>
           </div>
 

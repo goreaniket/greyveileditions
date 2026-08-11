@@ -98,7 +98,7 @@ test('purchase CTA entitlement follows exact product ownership semantics', async
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, allBookGrants, context, []), false)
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [], context, [collectionOrder]), true)
 
-  assert.equal(access.hasEffectivePurchaseEntitlement(seriesTarget, hierarchy, allBookGrants, context, []), false)
+  assert.equal(access.hasEffectivePurchaseEntitlement(seriesTarget, hierarchy, allBookGrants, context, []), true)
   assert.equal(access.hasEffectivePurchaseEntitlement(seriesTarget, hierarchy, [], context, [oneSeriesOrder]), true)
   assert.equal(access.hasEffectivePurchaseEntitlement(seriesTarget, hierarchy, [], context, [collectionOrder]), true)
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [], { user, role: 'admin' }, []), true)
@@ -107,6 +107,7 @@ test('purchase CTA entitlement follows exact product ownership semantics', async
 test('site collection CTA uses the canonical live Human Paradox slug', async () => {
   const html = await readFile(new URL('../projects/index.html', import.meta.url), 'utf8')
   assert.match(html, /data-purchase-type="collection"[^>]+data-purchase-slug="human-paradox-collection"/)
+  assert.match(html, new RegExp(`data-purchase-collection-id="${collectionId}"`))
   assert.doesNotMatch(html, /data-purchase-slug="the-human-paradox-collection"/)
 })
 
@@ -165,6 +166,10 @@ test('server resolver recognizes historical paid scope and rejects direct API du
       }
     }
     if (url.pathname.endsWith('/book_access')) rows = grants
+    if (url.pathname.endsWith('/books')) rows = books.filter((item) => {
+      const seriesFilter = url.searchParams.get('series_id')
+      return !seriesFilter || seriesFilter === `eq.${item.series_id}`
+    })
     if (url.pathname.endsWith('/collections')) rows = [collection]
 
     return new Response(JSON.stringify(rows), {
@@ -222,6 +227,8 @@ test('server resolver recognizes historical paid scope and rejects direct API du
   assert.equal(razorpayCallCount, 1)
 
   orders = []
+  grants = books.slice(0, 3).map((item) => grant(item.id))
+  assert.equal((await api.resolveEffectivePurchaseEntitlement(user, seriesPurchase)).entitled, true)
   grants = []
   assert.equal((await api.resolveEffectivePurchaseEntitlement(user, bookPurchase)).entitled, false)
   grants = [grant(books[2].id)]

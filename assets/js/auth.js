@@ -736,6 +736,16 @@ const safeLoginReturnPath = () => {
   return next.startsWith('/') && !next.startsWith('//') ? next : ''
 }
 
+const preserveAuthReturnLinks = () => {
+  const next = safeLoginReturnPath()
+  if (!next) return
+  document.querySelectorAll('[data-auth-switch]').forEach((link) => {
+    const url = new URL(link.href, window.location.origin)
+    url.searchParams.set('next', next)
+    link.href = `${url.pathname}${url.search}`
+  })
+}
+
 export async function redirectByRole() {
   window.location.assign(safeLoginReturnPath() || ACCOUNT_PATH)
 }
@@ -1062,6 +1072,8 @@ const initAccountPage = async () => {
   const roleNode = document.querySelector('[data-account-role]')
   const accountActions = document.querySelector('[data-account-actions]')
   const libraryRefreshButton = document.querySelector('[data-library-refresh]')
+  const profileForm = document.querySelector('[data-account-profile-form]')
+  const profileStatus = document.querySelector('[data-account-profile-status]')
   let activeUser = null
   let activeProfile = null
   let activeRole = 'customer'
@@ -1094,6 +1106,7 @@ const initAccountPage = async () => {
 
     if (nameNode) nameNode.textContent = displayNameFor(currentUser, profile)
     if (emailNode) emailNode.textContent = currentUser.email || ''
+    if (profileForm?.elements.display_name) profileForm.elements.display_name.value = displayNameFor(currentUser, profile)
 
     if (roleRow && roleNode) {
       roleNode.textContent = formatRole(role)
@@ -1110,6 +1123,35 @@ const initAccountPage = async () => {
   }
 
   await renderCurrentAccount(user)
+
+  profileForm?.addEventListener('submit', async (event) => {
+    event.preventDefault()
+    if (!activeUser?.id) return
+    const displayName = getFormValue(profileForm, 'display_name').replace(/\s+/g, ' ')
+    if (displayName.length < 2 || displayName.length > 80 || /[\u0000-\u001f\u007f]/.test(displayName)) {
+      setStatus(profileStatus, 'Use a display name between 2 and 80 characters.', 'error')
+      return
+    }
+    const button = profileForm.querySelector('button[type="submit"]')
+    setBusy(button, true, 'Saving...')
+    setStatus(profileStatus, 'Saving your display name...', 'info')
+    const { data, error } = await supabase
+      .from('profiles')
+      .update({ display_name: displayName })
+      .eq('id', activeUser.id)
+      .select('id, display_name, role')
+      .maybeSingle()
+    setBusy(button, false)
+    if (error || !data) {
+      setStatus(profileStatus, 'Your display name could not be updated. Please try again.', 'error')
+      return
+    }
+    activeProfile = { ...activeProfile, ...data }
+    if (nameNode) nameNode.textContent = data.display_name
+    profileForm.elements.display_name.value = data.display_name
+    setStatus(profileStatus, 'Display name updated.', 'success')
+    window.dispatchEvent(new CustomEvent('greyveil:profile-changed', { detail: { userId: activeUser.id } }))
+  })
 
   supabase.auth.onAuthStateChange((_event, session) => {
     window.setTimeout(async () => {
@@ -1153,6 +1195,7 @@ const initAccountPage = async () => {
 
 const page = document.body.dataset.authPage
 
+preserveAuthReturnLinks()
 if (page === 'signup') initSignupPage()
 if (page === 'login') initLoginPage()
 if (page === 'forgot-password') initForgotPasswordPage()

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Greyveil Editions</title>
+  <meta name="description" content="Complete a secure Greyveil Editions purchase." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body data-checkout-page>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="/index.html">Greyveil Editions</a>
+    <a class="button ghost checkout-header-back" href="/projects/" data-checkout-return>Back</a>
+  </header>
+
+  <main id="main-content" class="checkout-page page-shell">
+    <section class="checkout-loading" data-checkout-loading>
+      <p class="eyebrow">Secure Checkout</p>
+      <h1>Preparing your order.</h1>
+      <div class="checkout-loading-line" aria-hidden="true"></div>
+    </section>
+
+    <section class="checkout-shell" data-checkout-shell hidden>
+      <div class="checkout-heading">
+        <p class="eyebrow">Secure Checkout</p>
+        <h1>Complete your purchase.</h1>
+      </div>
+
+      <div class="checkout-layout">
+        <div class="checkout-primary">
+          <section class="checkout-section" aria-labelledby="checkout-order-title">
+            <p class="checkout-step">01</p>
+            <div>
+              <h2 id="checkout-order-title">Order Summary</h2>
+              <h3 data-checkout-product>Greyveil purchase</h3>
+              <p class="checkout-product-type" data-checkout-product-type></p>
+              <p data-checkout-includes></p>
+              <p class="checkout-price-line"><span>Original price</span><strong data-checkout-original-price></strong></p>
+            </div>
+          </section>
+
+          <section class="checkout-section" aria-labelledby="checkout-customer-title">
+            <p class="checkout-step">02</p>
+            <div>
+              <h2 id="checkout-customer-title">Customer</h2>
+              <p><strong data-checkout-customer-name></strong><br><span data-checkout-customer-email></span></p>
+            </div>
+          </section>
+
+          <section class="checkout-section" aria-labelledby="checkout-coupon-title">
+            <p class="checkout-step">03</p>
+            <div>
+              <h2 id="checkout-coupon-title">Coupon</h2>
+              <form class="checkout-coupon-form" data-checkout-coupon-form>
+                <label for="checkout-coupon-code">Coupon code <span>(optional)</span></label>
+                <div>
+                  <input id="checkout-coupon-code" name="coupon_code" maxlength="40" autocomplete="off" autocapitalize="characters" spellcheck="false" />
+                  <button class="button ghost" type="submit">Apply</button>
+                </div>
+                <button class="checkout-coupon-remove" type="button" data-checkout-coupon-remove hidden>Remove coupon</button>
+                <p class="form-status" data-checkout-coupon-status role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </section>
+        </div>
+
+        <aside class="checkout-confirmation" aria-labelledby="checkout-confirmation-title">
+          <p class="eyebrow">Final Confirmation</p>
+          <h2 id="checkout-confirmation-title">Total payable</h2>
+          <div class="checkout-total">
+            <span data-checkout-total-original hidden></span>
+            <strong data-checkout-total></strong>
+          </div>
+          <p>Your payment is processed securely by Razorpay. Access is granted only after payment verification.</p>
+          <button class="button primary" type="button" data-checkout-pay>Proceed to Razorpay</button>
+          <a class="checkout-return-link" href="/projects/" data-checkout-return>Return to product</a>
+          <p class="form-status" data-checkout-status role="status" aria-live="polite"></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="checkout-error" data-checkout-error hidden>
+      <p class="eyebrow">Checkout Unavailable</p>
+      <h1 data-checkout-error-title>We could not prepare this order.</h1>
+      <p data-checkout-error-message>Please return to the product and try again.</p>
+      <div class="button-row"><a class="button primary" href="/projects/" data-checkout-return>Return to product</a><a class="button ghost" href="/account/">My Account</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 Greyveil Editions. All rights reserved.</p></footer>
+  <script src="/assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/checkout.js"></script>
+</body>
+</html>

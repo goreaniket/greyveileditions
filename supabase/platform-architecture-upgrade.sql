@@ -301,6 +301,15 @@ to authenticated
 using (public.greyveil_is_super_admin())
 with check (public.greyveil_is_super_admin());
 
+drop policy if exists "Users update their own profile" on public.profiles;
+create policy "Users update their own profile"
+on public.profiles for update
+to authenticated
+using (id = auth.uid())
+with check (id = auth.uid());
+
+grant update on public.profiles to authenticated;
+
 -- Managed coupons and enforced usage limits.
 alter table public.orders
   add column if not exists original_amount integer,
@@ -674,6 +683,41 @@ grant select on public.coupon_usages to authenticated;
 grant select on public.announcements to anon, authenticated;
 grant insert, update, delete on public.announcements to authenticated;
 grant select, insert, update, delete on public.notification_reads to authenticated;
+
+-- Public announcement artwork. Only authenticated Greyveil admins can manage files.
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values (
+  'announcement-images',
+  'announcement-images',
+  true,
+  5242880,
+  array['image/png', 'image/jpeg', 'image/webp']
+)
+on conflict (id) do update
+set public = excluded.public,
+    file_size_limit = excluded.file_size_limit,
+    allowed_mime_types = excluded.allowed_mime_types;
+
+drop policy if exists "Public reads announcement images" on storage.objects;
+create policy "Public reads announcement images"
+on storage.objects for select to anon, authenticated
+using (bucket_id = 'announcement-images');
+
+drop policy if exists "Admins upload announcement images" on storage.objects;
+create policy "Admins upload announcement images"
+on storage.objects for insert to authenticated
+with check (bucket_id = 'announcement-images' and public.greyveil_is_admin());
+
+drop policy if exists "Admins update announcement images" on storage.objects;
+create policy "Admins update announcement images"
+on storage.objects for update to authenticated
+using (bucket_id = 'announcement-images' and public.greyveil_is_admin())
+with check (bucket_id = 'announcement-images' and public.greyveil_is_admin());
+
+drop policy if exists "Admins delete announcement images" on storage.objects;
+create policy "Admins delete announcement images"
+on storage.objects for delete to authenticated
+using (bucket_id = 'announcement-images' and public.greyveil_is_admin());
 
 commit;
 

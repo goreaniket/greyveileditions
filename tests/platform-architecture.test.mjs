@@ -89,6 +89,70 @@ test('managed RIZZ pricing remains server-calculated for every product type', as
   }
 })
 
+test('checkout links preserve explicit product selection and a safe return path', async () => {
+  const commerce = await importSource('../assets/js/commerce.js', {
+    mocks: 'const supabase = {};',
+  })
+  const ids = {
+    book: '10000000-0000-4000-8000-000000000001',
+    series: '20000000-0000-4000-8000-000000000001',
+    collection: '7b5292b0-5487-454a-a171-bfe46e3f6729',
+  }
+  for (const type of ['book', 'series', 'collection']) {
+    const url = commerce.checkoutUrlForPayload({ purchase_type: type, [`${type}_id`]: ids[type] }, '/projects/source/?view=all')
+    assert.match(url, /^\/checkout\//)
+    const selection = commerce.checkoutSelectionFromSearch(url.slice(url.indexOf('?')))
+    assert.equal(selection.purchaseType, type)
+    assert.equal(selection.targetId, ids[type])
+    assert.equal(selection.returnPath, '/projects/source/?view=all')
+  }
+  const externalReturn = commerce.checkoutUrlForPayload({ purchase_type: 'collection', collection_id: ids.collection }, '//example.com')
+  assert.equal(commerce.checkoutSelectionFromSearch(externalReturn.slice(externalReturn.indexOf('?'))).returnPath, '/')
+})
+
+test('dedicated checkout owns coupon preview and delays order creation until final pay', async () => {
+  const [html, source, purchases, main, auth] = await Promise.all([
+    readFile(new URL('../checkout/index.html', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/checkout.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/purchases.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/main.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/auth.js', import.meta.url), 'utf8'),
+  ])
+  assert.match(html, /Order Summary/)
+  assert.match(html, /Customer/)
+  assert.match(html, /Coupon code <span>\(optional\)<\/span>/)
+  assert.match(html, /Final Confirmation/)
+  assert.match(source, /apiPost\('\/api\/validate-coupon'/)
+  assert.match(source, /payButton\.addEventListener\('click'/)
+  assert.match(source, /apiPost\('\/api\/create-order'/)
+  assert.ok(source.indexOf("payButton.addEventListener('click'") < source.indexOf("apiPost('/api/create-order'"))
+  assert.match(source, /window\.location\.replace\(`\/auth\/login\/\?next=/)
+  assert.match(auth, /preserveAuthReturnLinks/)
+  assert.doesNotMatch(purchases, /api\/create-order/)
+  assert.match(purchases, /checkoutUrlForPayload/)
+  assert.match(main, /Buy Full Series/)
+  assert.match(main, /Buy Full Collection/)
+  assert.match(auth, /data-account-profile-form/)
+  assert.match(auth, /\.from\('profiles'\)[\s\S]+\.update\(\{ display_name/)
+})
+
+test('admin management renders real coupon and announcement tables with storage uploads', async () => {
+  const [html, source, sql] = await Promise.all([
+    readFile(new URL('../admin/index.html', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/admin-platform.js', import.meta.url), 'utf8'),
+    readFile(new URL('../supabase/platform-architecture-upgrade.sql', import.meta.url), 'utf8'),
+  ])
+  assert.match(source, /coupon_usages/)
+  assert.match(source, /admin-platform-table/)
+  assert.match(source, /ANNOUNCEMENT_IMAGE_BUCKET = 'announcement-images'/)
+  assert.match(source, /supabase\.storage\.from\(ANNOUNCEMENT_IMAGE_BUCKET\)\.upload/)
+  assert.match(source, /announcementStatus/)
+  assert.match(html, /image\/png,image\/jpeg,image\/webp/)
+  assert.match(sql, /insert into storage\.buckets/)
+  assert.match(sql, /Admins upload announcement images/)
+  assert.match(sql, /Users update their own profile/)
+})
+
 test('library grouping preserves Collection to Series to Book hierarchy', async () => {
   const auth = await importSource('../assets/js/auth.js', {
     mocks: 'const supabase = {};',

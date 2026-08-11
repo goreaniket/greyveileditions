@@ -594,10 +594,10 @@ const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
       status: 'eq.paid',
       select: 'id, user_id, purchase_type, book_id, series_id, collection_id, status, paid_at',
     }),
-    purchase.purchaseType === 'book'
+    ['book', 'series'].includes(purchase.purchaseType)
       ? selectRows('book_access', {
       user_id: `eq.${user.id}`,
-      book_id: `eq.${purchase.bookId}`,
+      ...(purchase.purchaseType === 'book' ? { book_id: `eq.${purchase.bookId}` } : {}),
       select: BOOK_ACCESS_SELECT,
     })
       : Promise.resolve([]),
@@ -610,9 +610,21 @@ const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
 
   const collectionId = purchase.hierarchy.collection?.id
   if (purchase.purchaseType === 'series') {
-    const entitled = hasPaidProductOrder(paidOrders, 'series', purchase.seriesId)
+    const paidEntitlement = hasPaidProductOrder(paidOrders, 'series', purchase.seriesId)
       || hasPaidProductOrder(paidOrders, 'collection', collectionId)
-    return { entitled, reason: entitled ? 'series_or_collection_order' : 'not_entitled' }
+    if (paidEntitlement) return { entitled: true, reason: 'series_or_collection_order' }
+
+    const seriesBooks = await selectRows('books', {
+      series_id: `eq.${purchase.seriesId}`,
+      select: BOOK_SELECT,
+    })
+    const eligibleBookIds = seriesBooks
+      .filter((book) => isActive(book) && visibilityForBook(book) !== 'private')
+      .map((book) => String(book.id))
+    const grantedBookIds = new Set(grants.filter(isCurrentGrant).map((grant) => String(grant.book_id)))
+    const fullyGranted = eligibleBookIds.length > 0
+      && eligibleBookIds.every((bookId) => grantedBookIds.has(bookId))
+    return { entitled: fullyGranted, reason: fullyGranted ? 'series_owner_grant' : 'not_entitled' }
   }
 
   const book = { ...purchase.hierarchy.book, visibility: visibilityForBook(purchase.hierarchy.book) }
