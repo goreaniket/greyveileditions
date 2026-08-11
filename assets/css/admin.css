@@ -1212,6 +1212,28 @@
   vertical-align: top;
 }
 
+.admin-payment-stat-grid {
+  margin-bottom: 18px;
+}
+
+.admin-payments-table {
+  min-width: 820px;
+}
+
+.admin-clickable-row {
+  cursor: pointer;
+  transition: background-color .16s ease;
+}
+
+.admin-clickable-row:hover {
+  background: rgba(140, 106, 74, .07);
+}
+
+.admin-clickable-row:focus-visible {
+  outline: 3px solid rgba(140, 106, 74, .3);
+  outline-offset: -3px;
+}
+
 .admin-table th {
   color: var(--slate);
   font-size: .72rem;
@@ -1292,6 +1314,32 @@
 .admin-badge--disabled {
   background: rgba(42, 52, 64, .1);
   color: rgba(42, 52, 64, .72);
+}
+
+.admin-badge--paid,
+.admin-badge--captured,
+.admin-badge--success,
+.admin-badge--completed {
+  background: rgba(108, 154, 139, .16);
+  color: #476b63;
+}
+
+.admin-badge--pending,
+.admin-badge--created,
+.admin-badge--authorized {
+  background: rgba(140, 106, 74, .14);
+  color: #795a3d;
+}
+
+.admin-badge--failed,
+.admin-badge--cancelled {
+  background: rgba(140, 79, 74, .12);
+  color: #79413e;
+}
+
+.admin-badge--refunded {
+  background: rgba(144, 175, 197, .2);
+  color: var(--indigo);
 }
 
 .admin-hierarchy {

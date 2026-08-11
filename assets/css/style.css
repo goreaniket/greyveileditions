@@ -823,6 +823,32 @@ h3 {
   color: var(--slate);
 }
 
+.purchase-button {
+  cursor: pointer;
+}
+
+.purchase-button:disabled {
+  cursor: wait;
+  opacity: .68;
+}
+
+.purchase-status {
+  flex: 1 1 100%;
+  min-height: 1.4em;
+  color: rgba(42, 52, 64, .66);
+  font-size: .82rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.purchase-status[data-status="error"] {
+  color: #8c4f4a;
+}
+
+.purchase-status[data-status="success"] {
+  color: var(--teal);
+}
+
 .button:hover,
 .book-card a:hover,
 .contact-link:hover {
@@ -1654,6 +1680,7 @@ body:not([data-access-state="resolved"]) main:has(.projects-collection-hero)::be
 }
 
 .card-actions a,
+.card-actions .purchase-button,
 .book-card > a {
   flex: 1 1 0;
   min-width: 0;
@@ -2171,6 +2198,103 @@ main > .home-hero ~ .section .contact-link {
 .library-empty p {
   margin: 10px 0 0;
   color: rgba(58, 58, 58, .7);
+}
+
+.account-payments {
+  padding-block-start: 18px;
+}
+
+.account-payments .section-heading {
+  align-items: flex-start;
+}
+
+.account-payments .section-heading p:not(.eyebrow) {
+  max-width: 58ch;
+  margin: 10px 0 0;
+  color: rgba(58, 58, 58, .7);
+}
+
+.account-payments-status {
+  margin: -12px 0 20px;
+}
+
+.payment-history-list {
+  display: grid;
+  gap: 10px;
+  max-width: 900px;
+}
+
+.payment-history-card {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 20px;
+  padding: 16px 18px;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 0 12px 30px rgba(42, 52, 64, .05);
+}
+
+.payment-history-card__heading {
+  min-width: 0;
+  display: contents;
+}
+
+.payment-history-card__heading h3 {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+
+.payment-history-card__heading > strong {
+  color: var(--slate);
+  white-space: nowrap;
+}
+
+.payment-history-card__meta,
+.payment-history-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  color: rgba(42, 52, 64, .64);
+  font-size: .84rem;
+  font-weight: 700;
+}
+
+.payment-history-card__footer {
+  grid-column: 1 / -1;
+  padding-top: 9px;
+  border-top: 1px solid rgba(42, 52, 64, .08);
+}
+
+.payment-history-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(140, 106, 74, .1);
+  color: var(--bronze);
+  font-size: .72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.payment-history-status--paid {
+  background: rgba(108, 154, 139, .14);
+  color: #2f5f61;
+}
+
+.payment-history-status--failed,
+.payment-history-status--cancelled {
+  background: rgba(140, 79, 74, .12);
+  color: #79413e;
 }
 
 .instagram-icon {
@@ -3827,7 +3951,8 @@ blockquote {
 }
 
 @media (max-width: 640px) {
-  .account-library {
+  .account-library,
+  .account-payments {
     padding-block-start: 0;
   }
 
@@ -3874,6 +3999,22 @@ blockquote {
 
   .library-card__access {
     padding-top: 9px;
+  }
+
+  .payment-history-card {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-history-card__heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .payment-history-card__meta,
+  .payment-history-card__footer {
+    grid-column: 1;
   }
 }
 

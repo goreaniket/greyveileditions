@@ -62,6 +62,7 @@ const displayNameFor = (user, profile) => {
 }
 
 let accountLibraryRun = 0
+let accountPaymentsRun = 0
 let accountLibraryRefreshTimer = 0
 
 const getText = (value, fallback = '') => {
@@ -99,9 +100,129 @@ const libraryNodes = () => ({
   refresh: document.querySelector('[data-library-refresh]'),
 })
 
+const paymentNodes = () => ({
+  section: document.querySelector('[data-account-payments]'),
+  status: document.querySelector('[data-payments-status]'),
+  list: document.querySelector('[data-payments-list]'),
+  empty: document.querySelector('[data-payments-empty]'),
+})
+
 const clearNode = (node) => {
   if (!node) return
   while (node.firstChild) node.firstChild.remove()
+}
+
+const formatCurrency = (amount, currency = 'INR') => {
+  const paise = Number(amount)
+  if (!Number.isFinite(paise)) return '-'
+
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: getText(currency, 'INR').toUpperCase(),
+    maximumFractionDigits: 2,
+  }).format(paise / 100)
+}
+
+const formatPurchaseType = (value) => formatAccessType(getText(value, 'purchase'))
+
+const paymentStatusForOrder = (order, payment) => {
+  const paymentStatus = getText(payment?.status).toLowerCase()
+  if (paymentStatus === 'refunded') return 'refunded'
+  if (paymentStatus === 'failed') return 'failed'
+  if (paymentStatus === 'captured' || payment?.captured === true) return 'paid'
+  return getText(order?.status, paymentStatus || 'pending').toLowerCase()
+}
+
+const paymentHistoryCard = (order, payment) => {
+  const card = document.createElement('article')
+  card.className = 'payment-history-card'
+
+  const heading = document.createElement('div')
+  heading.className = 'payment-history-card__heading'
+  const title = document.createElement('h3')
+  title.textContent = getText(order.item_name, 'Greyveil purchase')
+  const amount = document.createElement('strong')
+  amount.textContent = formatCurrency(order.amount, order.currency)
+  heading.append(title, amount)
+
+  const meta = document.createElement('div')
+  meta.className = 'payment-history-card__meta'
+  const type = document.createElement('span')
+  type.textContent = formatPurchaseType(order.purchase_type)
+  const date = document.createElement('time')
+  date.dateTime = order.created_at || ''
+  date.textContent = formatDate(order.paid_at || order.created_at) || 'Date unavailable'
+  meta.append(type, date)
+
+  const footer = document.createElement('div')
+  footer.className = 'payment-history-card__footer'
+  const status = document.createElement('span')
+  const statusValue = paymentStatusForOrder(order, payment)
+  status.className = `payment-history-status payment-history-status--${statusValue.replace(/[^a-z0-9]+/g, '-')}`
+  status.textContent = formatAccessType(statusValue)
+  footer.append(status)
+
+  if (payment?.method) {
+    const method = document.createElement('span')
+    method.textContent = `Paid by ${formatAccessType(payment.method)}`
+    footer.append(method)
+  }
+
+  card.append(heading, meta, footer)
+  return card
+}
+
+const renderAccountPayments = async (user) => {
+  const nodes = paymentNodes()
+  if (!nodes.section || !nodes.list) return
+
+  const runId = ++accountPaymentsRun
+  nodes.section.hidden = false
+  clearNode(nodes.list)
+  if (nodes.empty) nodes.empty.hidden = true
+  setStatus(nodes.status, 'Checking your payments...', 'info')
+
+  try {
+    const [ordersResult, paymentsResult] = await Promise.all([
+      supabase
+        .from('orders')
+        .select('id, user_id, purchase_type, item_name, amount, currency, status, created_at, paid_at, verified_at')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false }),
+      supabase
+        .from('payments')
+        .select('order_id, user_id, amount, currency, status, method, captured, created_at, verified_at, razorpay_created_at')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false }),
+    ])
+
+    if (ordersResult.error) throw ordersResult.error
+    if (paymentsResult.error) throw paymentsResult.error
+    if (runId !== accountPaymentsRun) return
+
+    const paymentsByOrder = new Map()
+    ;(paymentsResult.data || []).forEach((payment) => {
+      const key = String(payment.order_id || '')
+      if (key && !paymentsByOrder.has(key)) paymentsByOrder.set(key, payment)
+    })
+
+    const orders = ordersResult.data || []
+    orders.forEach((order) => {
+      nodes.list.append(paymentHistoryCard(order, paymentsByOrder.get(String(order.id))))
+    })
+
+    if (nodes.empty) nodes.empty.hidden = Boolean(orders.length)
+    setStatus(nodes.status, '', '')
+  } catch (error) {
+    console.info('Account payments could not be loaded.', {
+      name: error?.name,
+      message: error?.message,
+      code: error?.code,
+    })
+    clearNode(nodes.list)
+    if (nodes.empty) nodes.empty.hidden = true
+    setStatus(nodes.status, 'We could not load your payment history right now.', 'error')
+  }
 }
 
 const bookReaderPath = (book, series) => {
@@ -411,8 +532,13 @@ export async function signOut() {
   if (error) throw error
 }
 
+const safeLoginReturnPath = () => {
+  const next = new URLSearchParams(window.location.search).get('next') || ''
+  return next.startsWith('/') && !next.startsWith('//') ? next : ''
+}
+
 export async function redirectByRole() {
-  window.location.assign(ACCOUNT_PATH)
+  window.location.assign(safeLoginReturnPath() || ACCOUNT_PATH)
 }
 
 const showAuthView = (view) => {
@@ -580,6 +706,7 @@ const initAccountPage = async () => {
     window.clearTimeout(accountLibraryRefreshTimer)
     accountLibraryRefreshTimer = window.setTimeout(() => {
       renderAccountLibrary(activeUser, activeProfile, activeRole)
+      renderAccountPayments(activeUser)
     }, 150)
   }
 
@@ -610,7 +737,10 @@ const initAccountPage = async () => {
     renderAccountAdminAction(accountActions, logoutButton, role)
 
     showAuthView(view)
-    await renderAccountLibrary(currentUser, profile, role)
+    await Promise.all([
+      renderAccountLibrary(currentUser, profile, role),
+      renderAccountPayments(currentUser),
+    ])
   }
 
   await renderCurrentAccount(user)
@@ -634,6 +764,7 @@ const initAccountPage = async () => {
   libraryRefreshButton?.addEventListener('click', refreshCurrentLibrary)
   window.addEventListener('focus', refreshCurrentLibrary)
   window.addEventListener('pageshow', refreshCurrentLibrary)
+  window.addEventListener('greyveil:purchase-complete', refreshCurrentLibrary)
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) refreshCurrentLibrary()
   })

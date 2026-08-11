@@ -128,6 +128,8 @@ const selectors = {
   seriesAccessStatus: '[data-series-access-status]',
   seriesAccessSummary: '[data-series-access-summary]',
   seriesAccessRevoke: '[data-series-access-revoke]',
+  paymentsTable: '[data-payments-table]',
+  paymentsEmpty: '[data-payments-empty]',
   feedbackSearch: '[data-feedback-search]',
   feedbackStatus: '[data-feedback-status-filter]',
   feedbackRating: '[data-feedback-rating-filter]',
@@ -152,6 +154,8 @@ const state = {
   bookCovers: [],
   feedbacks: [],
   accessGrants: [],
+  orders: [],
+  payments: [],
   contentSelection: {
     kind: '',
     id: '',
@@ -171,6 +175,10 @@ const state = {
   errors: {},
   feedbackDrawer: {
     feedback: null,
+    returnFocus: null,
+  },
+  paymentDrawer: {
+    order: null,
     returnFocus: null,
   },
 }
@@ -249,6 +257,8 @@ const singleNodes = {
   seriesAccessStatus: $(selectors.seriesAccessStatus),
   seriesAccessSummary: $(selectors.seriesAccessSummary),
   seriesAccessRevoke: $(selectors.seriesAccessRevoke),
+  paymentsTable: $(selectors.paymentsTable),
+  paymentsEmpty: $(selectors.paymentsEmpty),
   feedbackSearch: $(selectors.feedbackSearch),
   feedbackStatus: $(selectors.feedbackStatus),
   feedbackRating: $(selectors.feedbackRating),
@@ -588,6 +598,7 @@ const setStat = (name, value) => {
 
 const setStatsLoading = () => {
   ;['users', 'books', 'feedbacks', 'newFeedbacks', 'accessGrants'].forEach((name) => setStat(name, '-'))
+  ;['revenue', 'success', 'pending', 'failed', 'refunded'].forEach((name) => setPaymentStat(name, '-'))
 }
 
 const setFormStatus = (node, message = '', type = '') => {
@@ -1022,6 +1033,42 @@ const fetchAccessGrants = async () => {
   }
 }
 
+const fetchOrders = async () => {
+  const { data, error } = await supabase
+    .from('orders')
+    .select('id, user_id, purchase_type, book_id, series_id, collection_id, item_name, amount, currency, status, razorpay_order_id, created_at, updated_at, paid_at, verified_at')
+    .order('created_at', { ascending: false })
+
+  if (error) {
+    state.orders = []
+    const key = isSchemaError(error) ? 'orders_schema' : 'orders'
+    setTableError(key, error, isSchemaError(error) ? 'payment migration check' : 'read')
+    return
+  }
+
+  state.orders = data || []
+  clearTableError('orders')
+  clearTableError('orders_schema')
+}
+
+const fetchPayments = async () => {
+  const { data, error } = await supabase
+    .from('payments')
+    .select('id, order_id, user_id, razorpay_payment_id, razorpay_order_id, amount, currency, status, method, captured, created_at, updated_at, verified_at, razorpay_created_at')
+    .order('created_at', { ascending: false })
+
+  if (error) {
+    state.payments = []
+    const key = isSchemaError(error) ? 'payments_schema' : 'payments'
+    setTableError(key, error, isSchemaError(error) ? 'payment migration check' : 'read')
+    return
+  }
+
+  state.payments = data || []
+  clearTableError('payments')
+  clearTableError('payments_schema')
+}
+
 const fetchBookFiles = async () => {
   const { data, error } = await supabase
     .from('book_files')
@@ -1113,6 +1160,8 @@ const loadAdminData = async () => {
     fetchBooks(),
     fetchFeedbacks(),
     fetchAccessGrants(),
+    fetchOrders(),
+    fetchPayments(),
     fetchBookFiles(),
     fetchBookCovers(),
   ])
@@ -1476,6 +1525,7 @@ const renderFilteredSections = () => {
   renderFilesManager()
   renderAccessGrants()
   renderSeriesAccessStatus()
+  renderPayments()
   renderFeedback()
 }
 
@@ -1490,6 +1540,188 @@ const renderHierarchyDependentSections = () => {
   renderFilesManager()
   renderAccessGrants()
   renderSeriesAccessStatus()
+}
+
+const formatPaymentAmount = (amount, currency = 'INR') => {
+  const paise = Number(amount)
+  if (!Number.isFinite(paise)) return '-'
+
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: getText(currency, 'INR').toUpperCase(),
+    maximumFractionDigits: 2,
+  }).format(paise / 100)
+}
+
+const formatPaymentLabel = (value, fallback = '-') => {
+  const text = getText(value, fallback).replace(/[_-]+/g, ' ').toLowerCase()
+  return text.replace(/\b\w/g, (letter) => letter.toUpperCase())
+}
+
+const paymentForOrder = (order) => {
+  const orderId = String(order?.id || '')
+  return state.payments.find((payment) => String(payment.order_id || '') === orderId) || null
+}
+
+const paymentStatusValue = (order, payment = paymentForOrder(order)) => {
+  const paymentStatus = normalize(payment?.status)
+  const orderStatus = normalize(order?.status)
+
+  if (paymentStatus.includes('refund') || orderStatus.includes('refund')) return 'refunded'
+  if (['failed', 'cancelled'].includes(paymentStatus) || ['failed', 'cancelled'].includes(orderStatus)) return 'failed'
+  if (payment?.captured === true || paymentStatus === 'captured' || ['paid', 'success', 'completed'].includes(orderStatus)) return 'paid'
+  return orderStatus || paymentStatus || 'pending'
+}
+
+const setPaymentStat = (name, value) => {
+  const node = document.querySelector(`[data-payment-stat="${name}"]`)
+  if (node) node.textContent = value
+}
+
+const renderPaymentStats = () => {
+  if (state.errors.orders || state.errors.orders_schema) {
+    ;['revenue', 'success', 'pending', 'failed', 'refunded'].forEach((name) => setPaymentStat(name, 'Blocked'))
+    return
+  }
+
+  const statuses = state.orders.map((order) => ({
+    order,
+    status: paymentStatusValue(order),
+  }))
+  const successful = statuses.filter((item) => item.status === 'paid')
+  const revenue = successful.reduce((total, item) => total + (Number(item.order.amount) || 0), 0)
+
+  setPaymentStat('revenue', formatPaymentAmount(revenue, 'INR'))
+  setPaymentStat('success', successful.length)
+  setPaymentStat('pending', statuses.filter((item) => ['pending', 'created', 'authorized'].includes(item.status)).length)
+  setPaymentStat('failed', statuses.filter((item) => item.status === 'failed').length)
+  setPaymentStat('refunded', statuses.filter((item) => item.status === 'refunded').length)
+}
+
+const closePaymentDrawer = () => {
+  document.removeEventListener('keydown', handlePaymentDrawerKeydown)
+  document.querySelector('.payment-detail-modal')?.remove()
+
+  const returnTarget = state.paymentDrawer.returnFocus?.isConnected
+    ? state.paymentDrawer.returnFocus
+    : singleNodes.paymentsTable?.querySelector('.admin-clickable-row')
+  state.paymentDrawer.order = null
+  state.paymentDrawer.returnFocus = null
+  returnTarget?.focus({ preventScroll: true })
+}
+
+const handlePaymentDrawerKeydown = (event) => {
+  if (event.key === 'Escape') closePaymentDrawer()
+}
+
+const openPaymentDrawer = (order, trigger, options = {}) => {
+  state.paymentDrawer.order = order
+  state.paymentDrawer.returnFocus = trigger || state.paymentDrawer.returnFocus || document.activeElement
+
+  document.removeEventListener('keydown', handlePaymentDrawerKeydown)
+  document.querySelector('.payment-detail-modal')?.remove()
+
+  const payment = paymentForOrder(order)
+  const profile = profileMap().get(order.user_id)
+  const customer = getText(profile?.display_name, getText(order.user_id, 'Unknown customer'))
+  const status = paymentStatusValue(order, payment)
+  const overlay = createNode('div', 'feedback-detail-modal payment-detail-modal')
+  overlay.setAttribute('role', 'presentation')
+
+  const drawer = createNode('aside', 'feedback-detail-drawer payment-detail-drawer')
+  drawer.setAttribute('role', 'dialog')
+  drawer.setAttribute('aria-modal', 'true')
+  drawer.setAttribute('aria-labelledby', 'payment-detail-title')
+
+  const header = createNode('div', 'feedback-detail-drawer__header')
+  const title = createNode('div')
+  title.append(
+    createNode('p', 'admin-eyebrow', 'Payment Detail'),
+    createNode('h3', '', getText(order.item_name, 'Greyveil purchase'))
+  )
+  title.querySelector('h3').id = 'payment-detail-title'
+
+  const closeButton = createNode('button', 'admin-action', 'Close')
+  closeButton.type = 'button'
+  closeButton.addEventListener('click', closePaymentDrawer)
+  header.append(title, closeButton)
+
+  const statusRow = createNode('div', 'feedback-detail-drawer__status')
+  statusRow.append(statusBadge(status), createNode('span', '', `Current order state: ${formatPaymentLabel(status)}`))
+
+  const fields = createNode('div', 'feedback-detail-grid')
+  fields.append(
+    feedbackDetailField('Customer', customer),
+    feedbackDetailField('Customer ID', order.user_id, { secondary: true }),
+    feedbackDetailField('Order', order.id),
+    feedbackDetailField('Payment ID', payment?.razorpay_payment_id, { secondary: true }),
+    feedbackDetailField('Razorpay Order ID', order.razorpay_order_id || payment?.razorpay_order_id, { secondary: true }),
+    feedbackDetailField('Item', order.item_name),
+    feedbackDetailField('Purchase Type', formatPaymentLabel(order.purchase_type)),
+    feedbackDetailField('Amount', formatPaymentAmount(order.amount, order.currency)),
+    feedbackDetailField('Method', formatPaymentLabel(payment?.method)),
+    feedbackDetailField('Status', formatPaymentLabel(status)),
+    feedbackDetailField('Order Created', formatDate(order.created_at)),
+    feedbackDetailField('Order Updated', formatDate(order.updated_at)),
+    feedbackDetailField('Paid', formatDate(order.paid_at)),
+    feedbackDetailField('Order Verified', formatDate(order.verified_at)),
+    feedbackDetailField('Payment Recorded', formatDate(payment?.created_at)),
+    feedbackDetailField('Payment Verified', formatDate(payment?.verified_at || payment?.razorpay_created_at))
+  )
+
+  drawer.append(header, statusRow, fields)
+  overlay.append(drawer)
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) closePaymentDrawer()
+  })
+  document.body.append(overlay)
+  document.addEventListener('keydown', handlePaymentDrawerKeydown)
+
+  if (!options.preserveFocus) closeButton.focus({ preventScroll: true })
+}
+
+const paymentRow = (order) => {
+  const payment = paymentForOrder(order)
+  const profile = profileMap().get(order.user_id)
+  const customer = getText(profile?.display_name, getText(order.user_id, 'Unknown customer'))
+  const status = paymentStatusValue(order, payment)
+  const row = document.createElement('tr')
+  row.className = 'admin-clickable-row'
+  row.tabIndex = 0
+  row.setAttribute('aria-label', `Open payment for ${customer}, ${getText(order.item_name, 'Greyveil purchase')}`)
+
+  const statusCell = document.createElement('td')
+  statusCell.append(statusBadge(status))
+  row.append(
+    tableCell(customer, true),
+    tableCell(getText(order.item_name, 'Greyveil purchase')),
+    tableCell(formatPaymentLabel(order.purchase_type)),
+    tableCell(formatPaymentAmount(order.amount, order.currency)),
+    statusCell,
+    tableCell(formatDate(order.paid_at || order.created_at))
+  )
+
+  row.addEventListener('click', () => openPaymentDrawer(order, row))
+  row.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return
+    event.preventDefault()
+    openPaymentDrawer(order, row)
+  })
+  return row
+}
+
+const renderPayments = () => {
+  const table = singleNodes.paymentsTable
+  clearNode(table)
+  renderPaymentStats()
+  if (!table) return
+
+  state.orders.forEach((order) => table.append(paymentRow(order)))
+  applyResponsiveTableLabels(table)
+
+  if (singleNodes.paymentsEmpty) {
+    singleNodes.paymentsEmpty.hidden = Boolean(state.orders.length) || Boolean(state.errors.orders || state.errors.orders_schema)
+  }
 }
 
 const renderUsers = () => {

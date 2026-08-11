@@ -435,6 +435,44 @@ const lockReaderLink = (link, user) => {
   link.setAttribute("aria-disabled", "true");
 };
 
+const purchaseContainerForLink = (link) => link.closest(".button-row, .card-actions") || link.parentElement;
+
+const generatedPurchaseButtons = (container, bookId) => {
+  if (!container || !bookId) return [];
+  return Array.from(container.querySelectorAll("[data-generated-purchase][data-purchase-book-id]"))
+    .filter((button) => button.dataset.purchaseBookId === bookId);
+};
+
+const removeGeneratedPurchaseAction = (link, book) => {
+  const container = purchaseContainerForLink(link);
+  generatedPurchaseButtons(container, book?.id).forEach((button) => button.remove());
+};
+
+const ensurePurchaseAction = (link, decision) => {
+  const book = decision.book;
+  if (!book?.id) return;
+
+  const container = purchaseContainerForLink(link);
+  if (!container) return;
+
+  const existing = generatedPurchaseButtons(container, book.id)[0];
+  const button = existing || document.createElement("button");
+  button.type = "button";
+  button.className = container.classList.contains("card-actions")
+    ? "button ghost purchase-button"
+    : "button primary purchase-button";
+  button.dataset.generatedPurchase = "";
+  button.dataset.purchaseType = "book";
+  button.dataset.purchaseBookId = book.id;
+  button.dataset.purchaseLabel = "Buy Book - Rs. 149";
+  button.textContent = button.dataset.purchaseLabel;
+
+  if (!existing) {
+    link.insertAdjacentElement("afterend", button);
+    window.dispatchEvent(new CustomEvent("greyveil:purchases-refresh-labels"));
+  }
+};
+
 const updateBookSurfaceState = (node, decision, access, context) => {
   if (!node || decision.target.kind !== "book" || !decision.book) return;
 
@@ -448,8 +486,10 @@ const updateBookSurfaceState = (node, decision, access, context) => {
   readerLinks.forEach((link) => {
     if (locked) {
       lockReaderLink(link, context.user);
+      ensurePurchaseAction(link, decision);
     } else {
       restoreLink(link);
+      removeGeneratedPurchaseAction(link, decision.book);
     }
   });
 
@@ -644,6 +684,14 @@ const bindAuthStateRefresh = async () => {
 
 refreshAuthAndContentVisibility();
 bindAuthStateRefresh();
+window.addEventListener("greyveil:purchase-complete", refreshAuthAndContentVisibility);
+import(new URL("purchases.js", mainScriptUrl).href).catch((error) => {
+  console.info("Checkout controls could not be initialized.", {
+    name: error?.name,
+    message: error?.message,
+    code: error?.code,
+  });
+});
 
 document.querySelectorAll(".dropdown").forEach((dropdown) => {
   const trigger = dropdown.querySelector(".dropdown-trigger");

@@ -45,6 +45,7 @@
           <button type="button" data-admin-tab="content" aria-selected="false">Content</button>
           <button type="button" data-admin-tab="books" aria-selected="false">Books</button>
           <button type="button" data-admin-tab="book-access" aria-selected="false">Book Access</button>
+          <button type="button" data-admin-tab="payments" aria-selected="false">Payments</button>
           <button type="button" data-admin-tab="feedback" aria-selected="false">Feedback</button>
           <button type="button" data-admin-tab="files" aria-selected="false">Files</button>
         </nav>
@@ -461,6 +462,56 @@
               </div>
             </form>
           </div>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="payments" aria-labelledby="payments-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Checkout Activity</p>
+              <h2 id="payments-title">Payments</h2>
+              <p class="admin-panel-note">Verified Razorpay orders and payment states. Select a row for full details.</p>
+            </div>
+          </div>
+
+          <div class="admin-stat-grid admin-payment-stat-grid">
+            <article class="admin-stat-card">
+              <span>Successful Revenue</span>
+              <strong data-payment-stat="revenue">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>Successful</span>
+              <strong data-payment-stat="success">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>Pending</span>
+              <strong data-payment-stat="pending">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>Failed</span>
+              <strong data-payment-stat="failed">-</strong>
+            </article>
+            <article class="admin-stat-card">
+              <span>Refunded</span>
+              <strong data-payment-stat="refunded">-</strong>
+            </article>
+          </div>
+
+          <div class="admin-table-wrap">
+            <table class="admin-table admin-payments-table">
+              <thead>
+                <tr>
+                  <th scope="col">Customer</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Purchase Type</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Date</th>
+                </tr>
+              </thead>
+              <tbody data-payments-table></tbody>
+            </table>
+          </div>
+          <p class="admin-empty" data-payments-empty hidden>No payment orders are available to display.</p>
         </section>
 
         <section class="admin-panel" data-admin-panel="feedback" aria-labelledby="feedback-title">
