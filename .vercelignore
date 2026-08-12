@@ -1,3 +1,15 @@
 projects/**/chapters/word/
 projects/**/chapters/WORD/
 projects/**/chapters/PDF/
+generated/
+output/
+tmp/
+tools/book-generator/
+tests/
+supabase/
+docs/
+.agents/
+.github/
+assets/books/**/cover/front-cover-print.png
+assets/books/**/cover/cover-source.png
+assets/books/**/design-spec.json

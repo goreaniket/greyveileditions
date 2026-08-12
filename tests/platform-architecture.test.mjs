@@ -111,12 +111,13 @@ test('checkout links preserve explicit product selection and a safe return path'
 })
 
 test('dedicated checkout owns coupon preview and delays order creation until final pay', async () => {
-  const [html, source, purchases, main, auth] = await Promise.all([
+  const [html, source, purchases, main, auth, styles] = await Promise.all([
     readFile(new URL('../checkout/index.html', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/checkout.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/purchases.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/main.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/auth.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/css/style.css', import.meta.url), 'utf8'),
   ])
   assert.match(html, /Order Summary/)
   assert.match(html, /Customer/)
@@ -124,8 +125,9 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.match(html, /Final Confirmation/)
   assert.match(source, /apiPost\('\/api\/validate-coupon'/)
   assert.match(source, /payButton\.addEventListener\('click'/)
-  assert.match(source, /apiPost\('\/api\/create-order'/)
-  assert.ok(source.indexOf("payButton.addEventListener('click'") < source.indexOf("apiPost('/api/create-order'"))
+  assert.match(source, /edgeFunctionPost\('create-order'/)
+  assert.match(source, /edgeFunctionPost\('verify-payment'/)
+  assert.ok(source.indexOf("payButton.addEventListener('click'") < source.indexOf("edgeFunctionPost('create-order'"))
   assert.match(source, /window\.location\.replace\(`\/auth\/login\/\?next=/)
   assert.match(auth, /preserveAuthReturnLinks/)
   assert.doesNotMatch(purchases, /api\/create-order/)
@@ -135,7 +137,8 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.match(main, /versionedPurchaseAssetUrl\("purchases\.js"\)/)
   assert.match(main, /matchingButtons\.slice\(1\)/)
   assert.match(html, /main\.js\?v=20260812-purchase-pipeline/)
-  assert.match(html, /checkout\.js\?v=20260812-purchase-pipeline/)
+  assert.match(html, /checkout\.js\?v=20260812-edge-payments/)
+  assert.match(styles, /\.checkout-page \[hidden\][\s\S]+display: none !important/)
   assert.match(main, /Buy Full Series/)
   assert.match(main, /Buy Full Collection/)
   assert.match(auth, /data-account-profile-form/)

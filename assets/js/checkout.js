@@ -2,11 +2,12 @@ import { supabase } from './supabase-client.js'
 import {
   apiPost,
   checkoutSelectionFromSearch,
+  edgeFunctionPost,
   formatCurrency,
   getText,
   loadRazorpayCheckout,
-} from './commerce.js?v=20260812-purchase-pipeline'
-import { getEntitlementSnapshot, hierarchyForBook } from './content-access.js?v=20260812-purchase-pipeline'
+} from './commerce.js?v=20260812-edge-payments'
+import { getEntitlementSnapshot, hierarchyForBook } from './content-access.js?v=20260812-edge-payments'
 
 const node = (selector) => document.querySelector(selector)
 const setStatus = (target, message = '', type = '') => {
@@ -71,7 +72,7 @@ export const openRazorpay = async ({ user, profile, order, itemName }) => {
       modal: { ondismiss: () => resolve({ dismissed: true }) },
       handler: async (response) => {
         try {
-          resolve(await apiPost('/api/verify-payment', {
+          resolve(await edgeFunctionPost('verify-payment', {
             local_order_id: order.local_order_id,
             razorpay_payment_id: response.razorpay_payment_id,
             razorpay_order_id: response.razorpay_order_id,
@@ -203,7 +204,7 @@ const initCheckout = async () => {
     setBusy(payButton, true, 'Preparing Razorpay...')
     setStatus(checkoutStatus, 'Confirming your final server-owned price...', 'info')
     try {
-      const { order } = await apiPost('/api/create-order', {
+      const { order } = await edgeFunctionPost('create-order', {
         ...selection.payload,
         ...(appliedCoupon ? { coupon_code: appliedCoupon } : {}),
       })
@@ -217,10 +218,16 @@ const initCheckout = async () => {
         return
       }
       if (verification?.paid) {
-        setStatus(checkoutStatus, 'Payment confirmed. Access has been added to your library.', 'success')
+        setStatus(checkoutStatus, 'Payment confirmed. Refreshing your library...', 'success')
         payButton.disabled = true
         payButton.textContent = 'Payment confirmed'
+        try {
+          await getEntitlementSnapshot({ force: true })
+        } catch (_error) {
+          // The paid order remains authoritative; listeners below retry the library refresh.
+        }
         window.dispatchEvent(new CustomEvent('greyveil:purchase-complete', { detail: verification }))
+        setStatus(checkoutStatus, 'Payment confirmed. Access has been added to your library.', 'success')
         return
       }
       setStatus(checkoutStatus, 'Payment is processing. Your library will update after confirmation.', 'info')

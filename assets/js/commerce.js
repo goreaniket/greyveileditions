@@ -44,6 +44,39 @@ export const apiPost = async (path, payload) => {
   return result
 }
 
+export const edgeFunctionPost = async (name, payload) => {
+  const token = await sessionToken()
+  if (!token) {
+    const error = new Error('Please log in before starting checkout.')
+    error.code = 'login_required'
+    throw error
+  }
+
+  const { data, error: invokeError } = await supabase.functions.invoke(name, {
+    body: payload,
+    headers: { Authorization: `Bearer ${token}` },
+  })
+
+  if (invokeError) {
+    let result = null
+    try {
+      result = await invokeError.context?.clone?.().json()
+    } catch (_error) {
+      result = null
+    }
+    const error = new Error(result?.error?.message || 'The payment request could not be completed.')
+    error.code = result?.error?.code || 'request_failed'
+    throw error
+  }
+
+  if (data?.success === false && data?.error) {
+    const error = new Error(data.error.message || 'The payment request could not be completed.')
+    error.code = data.error.code || 'request_failed'
+    throw error
+  }
+  return data
+}
+
 export const formatCurrency = (amount, currency = 'INR') => {
   const paise = Number(amount)
   if (!Number.isFinite(paise)) return '-'

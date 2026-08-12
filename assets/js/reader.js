@@ -304,6 +304,8 @@
   let readerLoaded = false;
   let lastAccessCheck = 0;
   let accessRecheckInFlight = false;
+  let activeAccessDecision = null;
+  let watermarkSessionSeed = Math.floor(Math.random() * 1000000);
   let restoring = false;
   let appliedBookVariables = [];
   let coverFailed = false;
@@ -342,6 +344,65 @@
       const author = book.author ? ` by ${book.author}` : "";
       description.setAttribute("content", `A continuous paginated ${publisher} reader for ${title}${author}.`);
     }
+  };
+
+  const watermarkTextForDecision = (decision = activeAccessDecision) => {
+    const title = book?.title || decision?.book?.title || "Greyveil Reader";
+    const authenticatedName = decision?.context?.user
+      ? String(
+          decision.context.profile?.display_name
+          || decision.context.user?.user_metadata?.display_name
+          || "Greyveil Reader"
+        ).trim()
+      : "";
+    return `${authenticatedName || "Greyveil Editions"} \u2022 ${title}`;
+  };
+
+  const watermarkOffsetForPage = (pageNumber) => {
+    const value = (watermarkSessionSeed + Number(pageNumber || 0) * 37) % 41;
+    return `${value - 20}px`;
+  };
+
+  const applyReaderWatermarks = (decision = activeAccessDecision) => {
+    activeAccessDecision = decision?.allowed ? decision : null;
+    const watermarkText = activeAccessDecision ? watermarkTextForDecision(activeAccessDecision) : "";
+    body.dataset.readerProtected = watermarkText ? "true" : "false";
+
+    pagesRoot?.querySelectorAll(".book-page").forEach((page, index) => {
+      let layer = page.querySelector(":scope > .reader-watermark-layer");
+      if (!watermarkText) {
+        layer?.remove();
+        return;
+      }
+      if (!layer) {
+        layer = createNode("div", { class: "reader-watermark-layer", "aria-hidden": "true" });
+        page.prepend(layer);
+      }
+      layer.style.setProperty("--reader-watermark-offset", watermarkOffsetForPage(index + 1));
+      layer.replaceChildren(...Array.from({ length: 9 }, () => createNode("span", {}, watermarkText)));
+    });
+  };
+
+  const protectedReaderTarget = (target) => target instanceof Element
+    && Boolean(target.closest(".book-page__content"))
+    && !Boolean(target.closest("input, textarea, select, button, [contenteditable='true'], .feedback-panel"));
+
+  const protectedReaderSelection = () => {
+    const anchor = window.getSelection()?.anchorNode;
+    const element = anchor?.nodeType === Node.ELEMENT_NODE ? anchor : anchor?.parentElement;
+    return protectedReaderTarget(element);
+  };
+
+  const blockProtectedReaderEvent = (event) => {
+    if (!readerLoaded || (!protectedReaderTarget(event.target) && !protectedReaderSelection())) return;
+    event.preventDefault();
+  };
+
+  const discourageReaderPrint = (event) => {
+    const printShortcut = (event.ctrlKey || event.metaKey) && String(event.key).toLowerCase() === "p";
+    if (!readerLoaded || !printShortcut) return;
+    event.preventDefault();
+    if (statusNode) statusNode.textContent = "Printing is unavailable in Greyveil Reader";
   };
 
   const loadStylesheet = (href, label) => new Promise((resolve) => {
@@ -968,6 +1029,7 @@
       pageNumber = finalizePage(current, fragment, pageNumber);
       pagesRoot.innerHTML = "";
       pagesRoot.append(fragment);
+      applyReaderWatermarks();
       indexMarkers();
       bindCoverFallback();
       bindFeedback();
@@ -1316,7 +1378,11 @@
 
   const resolveCurrentReaderAccess = async () => {
     const access = await loadContentAccessModule();
-    const decision = await access.resolveReaderAccess(readerBookSlug);
+    let decision = await access.resolveReaderAccess(readerBookSlug);
+    if (decision.allowed && decision.reason === "public") {
+      const context = await access.getAccessContext();
+      decision = { ...decision, context };
+    }
     lastAccessCheck = Date.now();
     if (!decision.allowed) logAccessDecision(decision);
     return decision;
@@ -1359,6 +1425,8 @@
     savedState = {};
     coverFailed = false;
     readerLoaded = false;
+    activeAccessDecision = null;
+    body.dataset.readerProtected = "false";
     book = null;
 
     if (loading) loading.hidden = true;
@@ -1378,6 +1446,8 @@
       const decision = await resolveCurrentReaderAccess();
       if (!decision.allowed) {
         clearProtectedReaderView(decision);
+      } else {
+        applyReaderWatermarks(decision);
       }
     } catch (error) {
       console.info("Reader access re-check failed.", {
@@ -1393,6 +1463,15 @@
 
   const handleReaderAuthChange = (event) => {
     if (event === "INITIAL_SESSION") return;
+
+    watermarkSessionSeed = Math.floor(Math.random() * 1000000);
+    if (readerLoaded) {
+      applyReaderWatermarks({
+        allowed: true,
+        context: { user: null, profile: null },
+        book: activeAccessDecision?.book || null,
+      });
+    }
 
     window.setTimeout(() => {
       if (readerLoaded) {
@@ -1428,6 +1507,7 @@
     }
 
     const decision = await guardReaderAccess();
+    activeAccessDecision = decision;
     bookUrl = `/assets/books/${decision.book.slug}/book.json`;
     const bookResponseUrl = new URL(bookUrl, window.location.href);
     book = await fetchJson(bookResponseUrl.href);
@@ -1506,6 +1586,11 @@
   window.addEventListener("keydown", closeContentsOnEscape);
   drawer.addEventListener("keydown", closeContentsOnEscape);
   document.addEventListener("keydown", closeContentsOnEscape, true);
+  document.addEventListener("copy", blockProtectedReaderEvent, true);
+  document.addEventListener("cut", blockProtectedReaderEvent, true);
+  document.addEventListener("dragstart", blockProtectedReaderEvent, true);
+  document.addEventListener("contextmenu", blockProtectedReaderEvent, true);
+  document.addEventListener("keydown", discourageReaderPrint, true);
 
   init();
   bindReaderAccessRefresh();

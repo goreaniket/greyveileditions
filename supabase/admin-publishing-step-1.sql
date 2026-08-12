@@ -43,7 +43,7 @@ grant execute on function public.greyveil_is_super_admin() to authenticated;
 
 create table if not exists public.book_files (
   id uuid primary key default gen_random_uuid(),
-  book_id uuid not null references public.books(id) on delete restrict,
+  book_id bigint not null references public.books(id) on delete restrict,
   file_type text not null check (file_type in ('pdf', 'epub', 'docx', 'source')),
   storage_path text not null,
   file_name text not null,
@@ -56,7 +56,7 @@ create table if not exists public.book_files (
 
 create table if not exists public.book_covers (
   id uuid primary key default gen_random_uuid(),
-  book_id uuid not null references public.books(id) on delete restrict,
+  book_id bigint not null references public.books(id) on delete restrict,
   cover_type text not null check (cover_type in ('front_cover', 'print_cover', 'source_cover')),
   storage_path text not null,
   file_name text not null,

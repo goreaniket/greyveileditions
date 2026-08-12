@@ -156,6 +156,7 @@ const state = {
   accessGrants: [],
   orders: [],
   payments: [],
+  paymentCustomers: [],
   contentSelection: {
     kind: '',
     id: '',
@@ -1069,6 +1070,18 @@ const fetchPayments = async () => {
   clearTableError('payments_schema')
 }
 
+const fetchPaymentCustomers = async () => {
+  const { data, error } = await supabase.rpc('greyveil_admin_payment_customers')
+  if (error) {
+    state.paymentCustomers = []
+    setTableError('payment_customers', error, 'admin payment customer lookup')
+    return
+  }
+
+  state.paymentCustomers = data || []
+  clearTableError('payment_customers')
+}
+
 const fetchBookFiles = async () => {
   const { data, error } = await supabase
     .from('book_files')
@@ -1162,6 +1175,7 @@ const loadAdminData = async () => {
     fetchAccessGrants(),
     fetchOrders(),
     fetchPayments(),
+    fetchPaymentCustomers(),
     fetchBookFiles(),
     fetchBookCovers(),
   ])
@@ -1659,7 +1673,7 @@ const openPaymentDrawer = (order, trigger, options = {}) => {
   document.querySelector('.payment-detail-modal')?.remove()
 
   const payment = paymentForOrder(order)
-  const profile = profileMap().get(order.user_id)
+  const profile = paymentCustomerMap().get(order.user_id) || profileMap().get(order.user_id)
   const customer = getText(profile?.display_name, getText(order.user_id, 'Unknown customer'))
   const status = paymentStatusValue(order, payment)
   const pricing = paymentPricing(order, payment)
@@ -1690,6 +1704,7 @@ const openPaymentDrawer = (order, trigger, options = {}) => {
   const fields = createNode('div', 'feedback-detail-grid')
   fields.append(
     feedbackDetailField('Customer', customer),
+    feedbackDetailField('Email', profile?.email || '-', { secondary: true }),
     feedbackDetailField('Customer ID', order.user_id, { secondary: true }),
     feedbackDetailField('Order', order.id),
     feedbackDetailField('Payment ID', payment?.razorpay_payment_id, { secondary: true }),
@@ -1723,7 +1738,7 @@ const openPaymentDrawer = (order, trigger, options = {}) => {
 
 const paymentRow = (order) => {
   const payment = paymentForOrder(order)
-  const profile = profileMap().get(order.user_id)
+  const profile = paymentCustomerMap().get(order.user_id) || profileMap().get(order.user_id)
   const customer = getText(profile?.display_name, getText(order.user_id, 'Unknown customer'))
   const status = paymentStatusValue(order, payment)
   const row = document.createElement('tr')
@@ -3844,6 +3859,7 @@ const updateBookContentControls = async (book, controls) => {
 }
 
 const profileMap = () => new Map(state.users.map((profile) => [profile.id, profile]))
+const paymentCustomerMap = () => new Map(state.paymentCustomers.map((profile) => [profile.id, profile]))
 
 const bookMap = () => {
   const map = new Map()

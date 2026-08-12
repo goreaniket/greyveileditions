@@ -4644,6 +4644,10 @@ blockquote {
   padding-block: calc(var(--header-offset) + 58px) 72px;
 }
 
+.checkout-page [hidden] {
+  display: none !important;
+}
+
 .checkout-header-back {
   width: fit-content;
   flex: 0 0 auto;

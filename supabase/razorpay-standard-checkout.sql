@@ -10,7 +10,10 @@ alter table public.orders
   add column if not exists series_id uuid references public.series(id) on delete restrict,
   add column if not exists collection_id uuid references public.collections(id) on delete restrict,
   add column if not exists item_name text,
+  add column if not exists original_amount integer,
   add column if not exists amount integer,
+  add column if not exists coupon_code text,
+  add column if not exists discount_amount integer not null default 0,
   add column if not exists currency text not null default 'INR',
   add column if not exists status text not null default 'pending',
   add column if not exists razorpay_order_id text,
@@ -25,7 +28,10 @@ alter table public.payments
   add column if not exists razorpay_payment_id text,
   add column if not exists razorpay_order_id text,
   add column if not exists razorpay_signature text,
+  add column if not exists original_amount integer,
   add column if not exists amount integer,
+  add column if not exists coupon_code text,
+  add column if not exists discount_amount integer not null default 0,
   add column if not exists currency text not null default 'INR',
   add column if not exists status text not null default 'created',
   add column if not exists method text,
@@ -105,19 +111,25 @@ create trigger touch_payments_updated_at
 before update on public.payments
 for each row execute function public.greyveil_touch_payment_updated_at();
 
-create or replace function public.greyveil_grant_collection_order_access()
+create or replace function public.greyveil_grant_paid_order_access()
 returns trigger
 language plpgsql
 security definer
 set search_path = public
 as $$
 begin
-  if new.purchase_type <> 'collection'
-     or new.collection_id is null
+  if new.purchase_type not in ('book', 'series', 'collection')
      or new.user_id is null
-     or new.status <> 'paid' then
+     or new.status <> 'paid'
+     or (new.purchase_type = 'book' and new.book_id is null)
+     or (new.purchase_type = 'series' and new.series_id is null)
+     or (new.purchase_type = 'collection' and new.collection_id is null) then
     return new;
   end if;
+
+  -- Serialize fulfillment for a user so repeated verification and webhook delivery
+  -- cannot create duplicate access rows while the same order is settling.
+  perform pg_advisory_xact_lock(hashtextextended(new.user_id::text, 0));
 
   update public.book_access access
   set access_type = 'purchase',
@@ -133,7 +145,11 @@ begin
     on collection_item.id = coalesce(series_item.collection_id, volume.collection_id)
   where access.user_id = new.user_id
     and access.book_id = book.id
-    and collection_item.id = new.collection_id
+    and (
+      (new.purchase_type = 'book' and book.id = new.book_id)
+      or (new.purchase_type = 'series' and series_item.id = new.series_id)
+      or (new.purchase_type = 'collection' and collection_item.id = new.collection_id)
+    )
     and coalesce(collection_item.is_active, true)
     and coalesce(volume.is_active, true)
     and coalesce(series_item.is_active, true)
@@ -167,7 +183,11 @@ begin
   left join public.volumes volume on volume.id = series_item.volume_id
   join public.collections collection_item
     on collection_item.id = coalesce(series_item.collection_id, volume.collection_id)
-  where collection_item.id = new.collection_id
+  where (
+      (new.purchase_type = 'book' and book.id = new.book_id)
+      or (new.purchase_type = 'series' and series_item.id = new.series_id)
+      or (new.purchase_type = 'collection' and collection_item.id = new.collection_id)
+    )
     and coalesce(collection_item.is_active, true)
     and coalesce(volume.is_active, true)
     and coalesce(series_item.is_active, true)
@@ -188,9 +208,38 @@ end;
 $$;
 
 drop trigger if exists greyveil_collection_order_access on public.orders;
-create trigger greyveil_collection_order_access
-after insert or update of status, collection_id on public.orders
-for each row execute function public.greyveil_grant_collection_order_access();
+drop trigger if exists greyveil_paid_order_access on public.orders;
+create trigger greyveil_paid_order_access
+after insert or update of status, book_id, series_id, collection_id on public.orders
+for each row execute function public.greyveil_grant_paid_order_access();
+
+drop function if exists public.greyveil_grant_collection_order_access();
+
+create or replace function public.greyveil_admin_payment_customers()
+returns table (
+  id uuid,
+  display_name text,
+  email text
+)
+language plpgsql
+security definer
+set search_path = ''
+as $$
+begin
+  if not public.greyveil_is_admin() then
+    raise exception 'Admin access required.' using errcode = '42501';
+  end if;
+
+  return query
+  select distinct
+    account.id,
+    profile.display_name,
+    account.email::text
+  from auth.users account
+  join public.orders payment_order on payment_order.user_id = account.id
+  left join public.profiles profile on profile.id = account.id;
+end;
+$$;
 
 alter table public.orders enable row level security;
 alter table public.payments enable row level security;
@@ -212,14 +261,20 @@ using (user_id = auth.uid() or public.greyveil_is_admin());
 revoke select on public.orders from authenticated;
 grant select (
   id, user_id, purchase_type, book_id, series_id, collection_id, item_name,
-  amount, currency, status, razorpay_order_id, created_at, updated_at, paid_at, verified_at
+  original_amount, amount, coupon_code, discount_amount, currency, status,
+  razorpay_order_id, created_at, updated_at, paid_at, verified_at
 ) on public.orders to authenticated;
 
 revoke select on public.payments from authenticated;
 grant select (
-  id, order_id, user_id, razorpay_payment_id, razorpay_order_id, amount, currency,
-  status, method, captured, created_at, updated_at, verified_at, razorpay_created_at
+  id, order_id, user_id, razorpay_payment_id, razorpay_order_id, original_amount,
+  amount, coupon_code, discount_amount, currency, status, method, captured,
+  created_at, updated_at, verified_at, razorpay_created_at
 ) on public.payments to authenticated;
 
-revoke all on function public.greyveil_grant_collection_order_access() from public;
+revoke all on function public.greyveil_grant_paid_order_access() from public;
 revoke all on function public.greyveil_touch_payment_updated_at() from public;
+revoke all on function public.greyveil_admin_payment_customers() from public;
+grant execute on function public.greyveil_admin_payment_customers() to authenticated;
+
+notify pgrst, 'reload schema';
