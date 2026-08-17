@@ -11,6 +11,8 @@ const BOOK_FILE_BUCKET = 'book-files'
 const BOOK_COVER_BUCKET = 'book-covers'
 const BOOK_FILE_SELECT = 'id, book_id, file_type, storage_path, file_name, mime_type, file_size, created_at, updated_at'
 const BOOK_COVER_SELECT = 'id, book_id, cover_type, storage_path, file_name, mime_type, file_size, created_at, updated_at'
+const SIGNED_URL_TTL_SECONDS = 60
+const SIGNED_PREVIEW_CLEAR_DELAY = 55000
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 const NUMERIC_ID_PATTERN = /^\d+$/
 const COVER_CONFIGS = {
@@ -51,6 +53,7 @@ const BOOK_FILE_CONFIGS = {
     superAdminOnly: true,
   },
 }
+const signedPreviewTimers = new WeakMap()
 
 const selectors = {
   loading: '[data-admin-loading]',
@@ -2784,7 +2787,7 @@ const handleBookFileDownload = async (book, fileType, status, button) => {
 
   const { data, error } = await supabase.storage
     .from(BOOK_FILE_BUCKET)
-    .createSignedUrl(record.storage_path, 60)
+    .createSignedUrl(record.storage_path, SIGNED_URL_TTL_SECONDS)
 
   restoreButton()
 
@@ -2830,6 +2833,10 @@ const renderManagedFileMeta = (record) => {
 const refreshCoverPreview = async (record, image, status, button) => {
   if (!record?.storage_path || !image) return
 
+  const existingTimer = signedPreviewTimers.get(image)
+  if (existingTimer) window.clearTimeout(existingTimer)
+  signedPreviewTimers.delete(image)
+
   const previousLabel = button?.textContent
   if (button) {
     button.disabled = true
@@ -2838,21 +2845,32 @@ const refreshCoverPreview = async (record, image, status, button) => {
 
   const { data, error } = await supabase.storage
     .from(BOOK_COVER_BUCKET)
-    .createSignedUrl(record.storage_path, 60)
+    .createSignedUrl(record.storage_path, SIGNED_URL_TTL_SECONDS)
 
   if (button) {
     button.disabled = false
     button.textContent = previousLabel
   }
 
-  if (error) {
+  if (error || !data?.signedUrl) {
+    image.removeAttribute('src')
+    image.hidden = true
     setFormStatus(status, 'Preview could not be opened with current storage policies.', 'error')
-    setTableError('book_covers_storage', error, 'signed preview')
+    setTableError('book_covers_storage', error || new Error('Signed URL was not returned.'), 'signed preview')
     return
   }
 
-  image.src = data?.signedUrl || ''
-  image.hidden = !image.src
+  image.referrerPolicy = 'no-referrer'
+  image.src = data.signedUrl
+  image.hidden = false
+  signedPreviewTimers.set(image, window.setTimeout(() => {
+    if (image.src === data.signedUrl) {
+      image.removeAttribute('src')
+      image.hidden = true
+      setFormStatus(status, 'Preview expired. Select Preview to refresh it.', 'info')
+    }
+    signedPreviewTimers.delete(image)
+  }, SIGNED_PREVIEW_CLEAR_DELAY))
   setFormStatus(status, 'Preview refreshed for this admin session.', 'success')
 }
 

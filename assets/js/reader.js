@@ -1313,10 +1313,38 @@
     });
   };
 
-  const fetchJson = async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`Unable to load ${url}`);
-    return response.json();
+  const readerContentErrorPayload = async (error, data) => {
+    if (data?.error) return data.error;
+    const response = error?.context;
+    if (!response || typeof response.clone !== "function") return null;
+
+    try {
+      return (await response.clone().json())?.error || null;
+    } catch (_error) {
+      return null;
+    }
+  };
+
+  const fetchReaderContent = async (resources) => {
+    const { supabase } = await loadSupabaseModule();
+    const { data, error } = await supabase.functions.invoke("reader-content", {
+      body: {
+        book_slug: readerBookSlug,
+        resources,
+      },
+    });
+
+    if (error || !data?.success || !data?.resources) {
+      const problem = await readerContentErrorPayload(error, data);
+      const reason = ["login_required", "access_required", "unavailable"].includes(problem?.code)
+        ? problem.code
+        : "unavailable";
+      throw readerAccessError({ reason });
+    }
+
+    const missing = resources.find((resource) => !Object.prototype.hasOwnProperty.call(data.resources, resource));
+    if (missing) throw new Error("Reader content response is incomplete.");
+    return data.resources;
   };
 
   const readerAccessCopy = (reason) => {
@@ -1465,20 +1493,16 @@
     if (event === "INITIAL_SESSION") return;
 
     watermarkSessionSeed = Math.floor(Math.random() * 1000000);
-    if (readerLoaded) {
-      applyReaderWatermarks({
-        allowed: true,
-        context: { user: null, profile: null },
-        book: activeAccessDecision?.book || null,
-      });
-    }
+    readerLoadToken += 1;
+    clearProtectedReaderView({ reason: "unavailable" });
+    clearNode(pagesRoot);
+    body.classList.add("is-paginating");
+    if (loading) loading.hidden = false;
+    resetReaderIdentity("Opening reader");
+    setReaderControlsEnabled(false);
 
     window.setTimeout(() => {
-      if (readerLoaded) {
-        recheckReaderAccess({ force: true });
-      } else {
-        init();
-      }
+      init();
     }, 0);
   };
 
@@ -1510,7 +1534,8 @@
     activeAccessDecision = decision;
     bookUrl = `/assets/books/${decision.book.slug}/book.json`;
     const bookResponseUrl = new URL(bookUrl, window.location.href);
-    book = await fetchJson(bookResponseUrl.href);
+    const manifestResources = await fetchReaderContent(["book.json"]);
+    book = manifestResources["book.json"];
     if (!book.id || !book.title || !Array.isArray(book.units)) {
       throw new Error("Book configuration is missing required metadata.");
     }
@@ -1522,8 +1547,11 @@
     savedState = readState();
     const rootUrl = new URL(".", bookResponseUrl.href);
     normalizeBookCover(rootUrl);
-    units = await Promise.all(book.units.map((unit) => fetchJson(new URL(unit.file, rootUrl).href)));
+    const unitResources = book.units.map((unit) => String(unit.file || "").trim());
     await guardReaderAccess();
+    const protectedUnits = await fetchReaderContent(unitResources);
+    units = unitResources.map((resource) => protectedUnits[resource]);
+    activeAccessDecision = await guardReaderAccess();
     buildSourceBlocks();
   };
 

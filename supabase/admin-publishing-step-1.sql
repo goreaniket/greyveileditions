@@ -95,7 +95,10 @@ create policy "Admins can read book file metadata"
 on public.book_files
 for select
 to authenticated
-using (public.greyveil_is_admin());
+using (
+  public.greyveil_is_super_admin()
+  or (public.greyveil_is_admin() and file_type = 'pdf')
+);
 
 drop policy if exists "Admins can write allowed book file metadata" on public.book_files;
 create policy "Admins can write allowed book file metadata"

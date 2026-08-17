@@ -29,11 +29,15 @@ test('reader repeats a session-varying watermark on every rendered page', async 
   assert.ok(reader.indexOf('pagesRoot.append(fragment)') < reader.indexOf('applyReaderWatermarks()', reader.indexOf('pagesRoot.append(fragment)')))
 })
 
-test('auth changes clear personal identity immediately and access lifecycle keeps rechecking', async () => {
+test('auth changes clear protected content immediately and reload under the new session', async () => {
   const reader = await source('../assets/js/reader.js')
   const authHandler = reader.slice(reader.indexOf('const handleReaderAuthChange'), reader.indexOf('const bindReaderAccessRefresh'))
-  assert.match(authHandler, /context: \{ user: null, profile: null \}/)
-  assert.match(authHandler, /recheckReaderAccess\(\{ force: true \}\)/)
+  assert.match(authHandler, /readerLoadToken \+= 1/)
+  assert.match(authHandler, /clearProtectedReaderView\(\{ reason: "unavailable" \}\)/)
+  assert.match(authHandler, /clearNode\(pagesRoot\)/)
+  assert.match(authHandler, /resetReaderIdentity\("Opening reader"\)/)
+  assert.match(authHandler, /window\.setTimeout\(\(\) => \{[\s\S]+init\(\)/)
+  assert.doesNotMatch(authHandler, /applyReaderWatermarks/)
   assert.match(reader, /onAuthStateChange\(handleReaderAuthChange\)/)
   assert.match(reader, /visibilitychange/)
   assert.match(reader, /window\.addEventListener\("focus"/)
@@ -67,21 +71,24 @@ test('every reader route loads the protected shared assets', async () => {
   assert.equal(readerEntries.length, 14)
   for (const entry of readerEntries) {
     const html = await readFile(new URL(entry.replaceAll('\\', '/'), projectRoot), 'utf8')
-    assert.match(html, /reader\.css\?v=20260812-protection/)
-    assert.match(html, /reader\.js\?v=20260812-protection/)
+    assert.match(html, /reader\.css\?v=20260813-private-content/)
+    assert.match(html, /reader\.js\?v=20260813-private-content/)
   }
 })
 
-test('raw reader JSON is still public deployment material and requires a future private-delivery migration', async () => {
-  const [book, chapter, vercelIgnore] = await Promise.all([
+test('raw reader JSON stays available locally but is excluded from public deployment', async () => {
+  const [book, chapter, vercelIgnore, reader] = await Promise.all([
     source('../assets/books/the-last-shift/book.json'),
     source('../assets/books/the-last-shift/chapters/08-chapter-01.json'),
     source('../.vercelignore'),
+    source('../assets/js/reader.js'),
   ])
   assert.match(book, /"units"/)
   assert.match(chapter, /"elements"/)
-  assert.doesNotMatch(vercelIgnore, /^assets\/books\/$/m)
-  assert.doesNotMatch(vercelIgnore, /chapters\/\*\.json/)
+  assert.match(vercelIgnore, /assets\/books\/\*\*\/book\.json/)
+  assert.match(vercelIgnore, /assets\/books\/\*\*\/chapters\//)
+  assert.match(reader, /supabase\.functions\.invoke\("reader-content"/)
+  assert.doesNotMatch(reader, /fetch\([^\n]+bookResponseUrl/)
 })
 
 test('Vercel excludes private publishing outputs and generator-only cover masters', async () => {
@@ -93,9 +100,11 @@ test('Vercel excludes private publishing outputs and generator-only cover master
     'assets/books/**/cover/front-cover-print.png',
     'assets/books/**/cover/cover-source.png',
     'assets/books/**/design-spec.json',
+    'assets/books/**/book.json',
+    'assets/books/**/chapters/',
   ]) assert.match(vercelIgnore, new RegExp(pattern.replaceAll('*', '\\*').replaceAll('/', '\\/')))
   assert.doesNotMatch(vercelIgnore, /front-cover\.webp/)
-  assert.doesNotMatch(vercelIgnore, /chapters\/\*\.json/)
+  assert.doesNotMatch(vercelIgnore, /theme\.css/)
 })
 
 test('file permissions and safe deletes are independently enforced by RLS', async () => {
@@ -109,7 +118,7 @@ test('file permissions and safe deletes are independently enforced by RLS', asyn
   assert.match(sql, /not exists \([\s\S]+from public\.volumes/)
   assert.match(sql, /not exists \([\s\S]+from public\.series/)
   assert.match(sql, /not exists \([\s\S]+from public\.books/)
-  assert.match(admin, /createSignedUrl\(record\.storage_path, 60\)/)
+  assert.match(admin, /createSignedUrl\(record\.storage_path, SIGNED_URL_TTL_SECONDS\)/)
   assert.match(admin, /const token = kind === 'book' \? 'DELETE BOOK' : 'DELETE'/)
   assert.match(admin, /Delete blocked: \$\{deleteDependencyText\(kind, counts\)\}/)
 })

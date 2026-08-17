@@ -4,7 +4,7 @@ projects/**/chapters/PDF/
 generated/
 output/
 tmp/
-tools/book-generator/
+tools/
 tests/
 supabase/
 docs/
@@ -13,3 +13,5 @@ docs/
 assets/books/**/cover/front-cover-print.png
 assets/books/**/cover/cover-source.png
 assets/books/**/design-spec.json
+assets/books/**/book.json
+assets/books/**/chapters/

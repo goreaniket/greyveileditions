@@ -6,3 +6,6 @@ verify_jwt = true
 
 [functions.razorpay-webhook]
 verify_jwt = false
+
+[functions.reader-content]
+verify_jwt = false
