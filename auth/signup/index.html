@@ -59,14 +59,20 @@
           <span>Email</span>
           <input name="email" type="email" autocomplete="email" required />
         </label>
-        <label>
-          <span>Password</span>
-          <input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
-        </label>
-        <label>
-          <span>Confirm Password</span>
-          <input name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
-        </label>
+        <div class="auth-password-field">
+          <label for="signup-password">Password</label>
+          <span class="auth-password-control">
+            <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
+            <button class="auth-password-toggle" type="button" data-password-toggle aria-controls="signup-password" aria-label="Show password" aria-pressed="false">Show</button>
+          </span>
+        </div>
+        <div class="auth-password-field">
+          <label for="signup-confirm-password">Confirm Password</label>
+          <span class="auth-password-control">
+            <input id="signup-confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
+            <button class="auth-password-toggle" type="button" data-password-toggle aria-controls="signup-confirm-password" aria-label="Show password" aria-pressed="false">Show</button>
+          </span>
+        </div>
         <div class="button-row auth-form-actions">
           <button class="button primary" type="submit">Create Account</button>
           <a class="hero-link" href="/auth/login/" data-auth-switch>Sign in instead</a>
@@ -105,6 +111,6 @@
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
-  <script type="module" src="/assets/js/auth.js?v=20260817-domain-auth"></script>
+  <script type="module" src="/assets/js/auth.js?v=20260818-auth-ui"></script>
 </body>
 </html>

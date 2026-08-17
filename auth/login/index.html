@@ -55,10 +55,13 @@
           <span>Email</span>
           <input name="email" type="email" autocomplete="email" required />
         </label>
-        <label>
-          <span>Password</span>
-          <input name="password" type="password" autocomplete="current-password" required />
-        </label>
+        <div class="auth-password-field">
+          <label for="login-password">Password</label>
+          <span class="auth-password-control">
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+            <button class="auth-password-toggle" type="button" data-password-toggle aria-controls="login-password" aria-label="Show password" aria-pressed="false">Show</button>
+          </span>
+        </div>
         <a class="auth-forgot-link" href="/forgot-password/">Forgot password?</a>
         <div class="button-row auth-form-actions">
           <button class="button primary" type="submit">Sign In</button>
@@ -98,6 +101,6 @@
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
-  <script type="module" src="/assets/js/auth.js?v=20260817-domain-auth"></script>
+  <script type="module" src="/assets/js/auth.js?v=20260818-auth-ui"></script>
 </body>
 </html>

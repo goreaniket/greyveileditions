@@ -1,6 +1,11 @@
 import { supabase } from './supabase-client.js'
 import { friendlyAuthMessage, logAuthDiagnostic } from './auth-errors.js'
 import { appUrl, safeReturnPath } from './site-config.js'
+import {
+  createExclusiveStateController,
+  initPasswordVisibilityToggles,
+  selectPasswordRecoverySession,
+} from './auth-ui.js'
 
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const LOGIN_PATH = '/auth/login/'
@@ -9,6 +14,8 @@ const ADMIN_PATH = '/admin/'
 const RESET_PASSWORD_PATH = '/reset-password/'
 const MIN_PASSWORD_LENGTH = 8
 const MAX_PASSWORD_LENGTH = 128
+const PASSWORD_RECOVERY_CONTEXT_KEY = 'greyveil:password-recovery'
+const PASSWORD_RECOVERY_CONTEXT_TTL_MS = 60 * 60 * 1000
 
 const getFormValue = (form, name) => form.elements[name]?.value.trim() || ''
 
@@ -39,11 +46,13 @@ const recoveryUrlState = () => {
   const search = new URLSearchParams(window.location.search)
   const hash = new URLSearchParams(window.location.hash.replace(/^#/, ''))
   const type = search.get('type') || hash.get('type') || ''
+  const implicitAccessToken = hash.get('access_token') || ''
 
   return {
     hasError: search.has('error') || search.has('error_code') || hash.has('error') || hash.has('error_code'),
-    hasImplicitRecovery: type === 'recovery' && hash.has('access_token'),
+    hasImplicitRecovery: type === 'recovery' && Boolean(implicitAccessToken),
     hasPkceRecovery: search.has('code'),
+    implicitAccessToken,
     isRecovery: type === 'recovery' || search.has('code'),
   }
 }
@@ -56,6 +65,46 @@ const hasAuthCallbackError = () => {
 
 const clearRecoveryUrl = () => {
   window.history.replaceState({}, document.title, window.location.pathname)
+}
+
+const clearPasswordRecoveryContext = () => {
+  try {
+    window.sessionStorage.removeItem(PASSWORD_RECOVERY_CONTEXT_KEY)
+  } catch (_error) {
+    // Recovery still works when session storage is unavailable.
+  }
+}
+
+const rememberPasswordRecoverySession = (session) => {
+  const userId = session?.user?.id
+  if (!userId) return
+
+  const now = Date.now()
+  const sessionExpiry = Number(session.expires_at) * 1000
+  const expiresAt = Number.isFinite(sessionExpiry) && sessionExpiry > now
+    ? Math.min(sessionExpiry, now + PASSWORD_RECOVERY_CONTEXT_TTL_MS)
+    : now + PASSWORD_RECOVERY_CONTEXT_TTL_MS
+
+  try {
+    window.sessionStorage.setItem(PASSWORD_RECOVERY_CONTEXT_KEY, JSON.stringify({ userId, expiresAt }))
+  } catch (_error) {
+    // The active URL flow remains usable without a refresh marker.
+  }
+}
+
+const isRememberedPasswordRecoverySession = (session) => {
+  const userId = session?.user?.id
+  if (!userId) return false
+
+  try {
+    const context = JSON.parse(window.sessionStorage.getItem(PASSWORD_RECOVERY_CONTEXT_KEY) || 'null')
+    const valid = context?.userId === userId && Number(context.expiresAt) > Date.now()
+    if (!valid) clearPasswordRecoveryContext()
+    return valid
+  } catch (_error) {
+    clearPasswordRecoveryContext()
+    return false
+  }
 }
 
 const isNetworkError = (error) => {
@@ -968,43 +1017,38 @@ const initResetPasswordPage = async () => {
   const form = document.querySelector('[data-reset-password-form]')
   const invalid = document.querySelector('[data-reset-invalid]')
   const success = document.querySelector('[data-reset-success]')
+  if (!form || !loading || !invalid || !success) return
+
   const status = form?.querySelector('[data-auth-status]')
   const submitButton = form?.querySelector('button[type="submit"]')
   const urlState = recoveryUrlState()
+  const resetState = createExclusiveStateController({
+    checking: loading,
+    valid: form,
+    invalid,
+    success,
+  })
   let recoverySession = null
   let passwordUpdated = false
-  let resolveRecoveryEvent
-  const recoveryEvent = new Promise((resolve) => {
-    resolveRecoveryEvent = resolve
-  })
-
-  const showOnly = (active) => {
-    ;[loading, form, invalid, success].forEach((node) => {
-      if (node) node.hidden = node !== active
-    })
-  }
 
   const showInvalid = () => {
     recoverySession = null
-    if (form) {
-      form.elements.password.value = ''
-      form.elements.confirm_password.value = ''
-    }
+    form.elements.password.value = ''
+    form.elements.confirm_password.value = ''
+    clearPasswordRecoveryContext()
     clearRecoveryUrl()
-    showOnly(invalid)
+    resetState.show('invalid')
   }
 
-  if (!form || !loading || !invalid || !success) return
-  showOnly(loading)
+  resetState.show('checking')
 
   const { data: listenerData } = supabase.auth.onAuthStateChange((event, session) => {
     if (event !== 'PASSWORD_RECOVERY' || !session) return
     recoverySession = session
-    resolveRecoveryEvent(session)
   })
   const subscription = listenerData?.subscription
 
-  if (urlState.hasError || !urlState.isRecovery) {
+  if (urlState.hasError) {
     subscription?.unsubscribe()
     showInvalid()
     return
@@ -1030,17 +1074,26 @@ const initResetPasswordPage = async () => {
     recoverySession = data.session
   }
 
-  const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
-  if (!sessionError && urlState.hasImplicitRecovery && sessionData?.session) {
-    recoverySession = sessionData.session
+  let sessionData = null
+  let sessionError = null
+  try {
+    const result = await supabase.auth.getSession()
+    sessionData = result.data
+    sessionError = result.error
+  } catch (getSessionError) {
+    sessionError = getSessionError
   }
 
-  if (!recoverySession) {
-    recoverySession = await Promise.race([
-      recoveryEvent,
-      new Promise((resolve) => window.setTimeout(() => resolve(null), 2200)),
-    ])
-  }
+  if (sessionError) logAuthDiagnostic('password_recovery_session', sessionError)
+
+  const currentSession = sessionData?.session || null
+  const rememberedSession = !urlState.isRecovery && isRememberedPasswordRecoverySession(currentSession)
+  recoverySession = selectPasswordRecoverySession({
+    urlState,
+    resolvedSession: recoverySession,
+    currentSession,
+    rememberedSession,
+  })
 
   if (!recoverySession) {
     subscription?.unsubscribe()
@@ -1048,8 +1101,9 @@ const initResetPasswordPage = async () => {
     return
   }
 
+  rememberPasswordRecoverySession(recoverySession)
   clearRecoveryUrl()
-  showOnly(form)
+  resetState.show('valid')
   form.elements.password.focus({ preventScroll: true })
 
   form.addEventListener('submit', async (event) => {
@@ -1095,7 +1149,8 @@ const initResetPasswordPage = async () => {
     recoverySession = null
     submitButton.disabled = true
     subscription?.unsubscribe()
-    showOnly(success)
+    clearPasswordRecoveryContext()
+    resetState.show('success')
   })
 }
 
@@ -1232,6 +1287,7 @@ const initAccountPage = async () => {
 
 const page = document.body.dataset.authPage
 
+initPasswordVisibilityToggles()
 preserveAuthReturnLinks()
 if (page === 'signup') initSignupPage()
 if (page === 'login') initLoginPage()

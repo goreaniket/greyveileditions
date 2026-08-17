@@ -23,6 +23,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -2568,6 +2572,63 @@ main > .home-hero ~ .section .contact-link {
 .auth-forgot-link:hover {
   color: var(--slate);
   text-decoration-color: var(--bronze);
+}
+
+[data-reset-state][hidden] {
+  display: none !important;
+}
+
+.auth-password-field {
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.feedback-form .auth-password-field > label {
+  margin-bottom: 8px;
+}
+
+.auth-password-control {
+  position: relative;
+  display: block;
+  min-width: 0;
+}
+
+.feedback-form .auth-password-control input {
+  padding-inline-end: 5.25rem;
+}
+
+.feedback-form .auth-password-toggle {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 3.6rem;
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--bronze);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  transform: translateY(-50%);
+}
+
+.feedback-form .auth-password-toggle:hover {
+  background: rgba(140, 106, 74, .1);
+  color: var(--slate);
+}
+
+.feedback-form .auth-password-toggle:focus-visible {
+  outline: 2px solid var(--bronze);
+  outline-offset: 1px;
 }
 
 .auth-state-card {

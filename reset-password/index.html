@@ -38,20 +38,26 @@
     </section>
 
     <section class="section page-shell feedback-layout">
-      <article class="contact-card auth-card auth-state-card reveal" data-reset-loading>
+      <article class="contact-card auth-card auth-state-card reveal" data-reset-state="checking" data-reset-loading>
         <h2>Checking your reset link.</h2>
         <p class="form-status" data-status="info" role="status" aria-live="polite">Confirming your secure recovery session...</p>
       </article>
 
-      <form class="contact-card feedback-form auth-card reveal" data-reset-password-form hidden>
-        <label>
-          <span>New Password</span>
-          <input name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
-        </label>
-        <label>
-          <span>Confirm New Password</span>
-          <input name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
-        </label>
+      <form class="contact-card feedback-form auth-card reveal" data-reset-state="valid" data-reset-password-form hidden>
+        <div class="auth-password-field">
+          <label for="reset-password">New Password</label>
+          <span class="auth-password-control">
+            <input id="reset-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
+            <button class="auth-password-toggle" type="button" data-password-toggle aria-controls="reset-password" aria-label="Show password" aria-pressed="false">Show</button>
+          </span>
+        </div>
+        <div class="auth-password-field">
+          <label for="reset-confirm-password">Confirm New Password</label>
+          <span class="auth-password-control">
+            <input id="reset-confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required />
+            <button class="auth-password-toggle" type="button" data-password-toggle aria-controls="reset-confirm-password" aria-label="Show password" aria-pressed="false">Show</button>
+          </span>
+        </div>
         <p class="auth-field-note">Use at least 8 characters.</p>
         <div class="button-row auth-form-actions">
           <button class="button primary" type="submit">Update password</button>
@@ -59,7 +65,7 @@
         <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
       </form>
 
-      <article class="contact-card auth-card auth-state-card reveal" data-reset-invalid hidden>
+      <article class="contact-card auth-card auth-state-card reveal" data-reset-state="invalid" data-reset-invalid hidden>
         <h2>Reset link unavailable.</h2>
         <p>This password reset link is invalid or has expired.</p>
         <div class="button-row auth-form-actions">
@@ -68,7 +74,7 @@
         </div>
       </article>
 
-      <article class="contact-card auth-card auth-state-card reveal" data-reset-success hidden>
+      <article class="contact-card auth-card auth-state-card reveal" data-reset-state="success" data-reset-success hidden>
         <h2>Password updated successfully.</h2>
         <p>Your Greyveil account is ready with the new password.</p>
         <div class="button-row auth-form-actions">
@@ -103,6 +109,6 @@
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
-  <script type="module" src="/assets/js/auth.js?v=20260817-domain-auth"></script>
+  <script type="module" src="/assets/js/auth.js?v=20260818-auth-ui"></script>
 </body>
 </html>
