@@ -3,11 +3,11 @@ import { errorResponse, handleOptions, json, markOrder, paymentCaptured, payment
 Deno.serve(async (request) => {
   const preflight = handleOptions(request)
   if (preflight) return preflight
-  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Use POST.' } })
+  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Use POST.' } }, request)
   try {
     const rawBody = await request.text()
     const signature = request.headers.get('x-razorpay-signature') || ''
-    if (!await verifyHmac(requireEnv('RAZORPAY_WEBHOOK_SECRET'), rawBody, signature)) return json(400, { success: false, error: { code: 'invalid_webhook_signature', message: 'Webhook signature could not be verified.' } })
+    if (!await verifyHmac(requireEnv('RAZORPAY_WEBHOOK_SECRET'), rawBody, signature)) return json(400, { success: false, error: { code: 'invalid_webhook_signature', message: 'Webhook signature could not be verified.' } }, request)
     const event = JSON.parse(rawBody)
     const eventName = String(event?.event || '')
     let payment = event?.payload?.payment?.entity || null
@@ -23,10 +23,10 @@ Deno.serve(async (request) => {
       eventId: String(event?.id || eventName),
       verified: Boolean(order && paymentMatches(payment, order)),
     })
-    if (!order) return json(200, { success: true, processed: false, reason: 'local_order_not_found' })
+    if (!order) return json(200, { success: true, processed: false, reason: 'local_order_not_found' }, request)
     if (eventName === 'payment.failed') {
       if (order.status !== 'paid') await markOrder(admin, order, 'failed')
-      return json(200, { success: true, processed: true, status: 'failed' })
+      return json(200, { success: true, processed: true, status: 'failed' }, request)
     }
     if (payment?.status === 'refunded' || eventName === 'payment.refunded' || eventName === 'refund.processed') {
       await markOrder(admin, order, 'refunded')
@@ -37,12 +37,12 @@ Deno.serve(async (request) => {
         updated_at: new Date().toISOString(),
       }).eq('razorpay_payment_id', payment?.id || refund?.payment_id)
       if (refundUpdateError) throw refundUpdateError
-      return json(200, { success: true, processed: true, status: 'refunded' })
+      return json(200, { success: true, processed: true, status: 'refunded' }, request)
     }
     if (payment && paymentCaptured(payment) && paymentMatches(payment, order)) {
       await markOrder(admin, order, 'paid', { paid_at: order.paid_at || new Date().toISOString(), verified_at: new Date().toISOString() })
-      return json(200, { success: true, processed: true, status: 'paid' })
+      return json(200, { success: true, processed: true, status: 'paid' }, request)
     }
-    return json(200, { success: true, processed: true, status: order.status || 'pending' })
-  } catch (error) { return errorResponse(error) }
+    return json(200, { success: true, processed: true, status: order.status || 'pending' }, request)
+  } catch (error) { return errorResponse(error, request) }
 })

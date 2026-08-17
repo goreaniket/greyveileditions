@@ -3,7 +3,7 @@ import { applyCoupon, assertNotEntitled, authenticate, errorResponse, handleOpti
 Deno.serve(async (request) => {
   const preflight = handleOptions(request)
   if (preflight) return preflight
-  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Use POST.' } })
+  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Use POST.' } }, request)
   try {
     const admin = serviceClient()
     const user = await authenticate(request, admin)
@@ -31,11 +31,11 @@ Deno.serve(async (request) => {
       if (!razorpayOrder?.id || Number(razorpayOrder.amount) !== purchase.amount || razorpayOrder.currency !== purchase.currency) throw new HttpError(502, 'Razorpay returned an unexpected order.', 'razorpay_order_mismatch')
       const { error: updateError } = await admin.from('orders').update({ razorpay_order_id: razorpayOrder.id, updated_at: new Date().toISOString() }).eq('id', localOrder.id)
       if (updateError) throw new HttpError(500, 'The Razorpay order could not be linked.', 'order_update_failed')
-      return json(200, { success: true, order: { order_id: razorpayOrder.id, local_order_id: localOrder.id, key_id: requireEnv('RAZORPAY_KEY_ID'), amount: purchase.amount, original_amount: purchase.originalAmount, coupon_code: purchase.couponCode, discount_amount: purchase.discountAmount, currency: purchase.currency } })
+      return json(200, { success: true, order: { order_id: razorpayOrder.id, local_order_id: localOrder.id, key_id: requireEnv('RAZORPAY_KEY_ID'), amount: purchase.amount, original_amount: purchase.originalAmount, coupon_code: purchase.couponCode, discount_amount: purchase.discountAmount, currency: purchase.currency } }, request)
     } catch (error) {
       await admin.from('orders').update({ status: 'failed', updated_at: new Date().toISOString() }).eq('id', localOrder.id)
       if (purchase.couponId) await admin.from('coupon_usages').update({ status: 'void', updated_at: new Date().toISOString() }).eq('order_id', localOrder.id)
       throw error
     }
-  } catch (error) { return errorResponse(error) }
+  } catch (error) { return errorResponse(error, request) }
 })

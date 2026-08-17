@@ -72,7 +72,7 @@ test('every reader route loads the protected shared assets', async () => {
   for (const entry of readerEntries) {
     const html = await readFile(new URL(entry.replaceAll('\\', '/'), projectRoot), 'utf8')
     assert.match(html, /reader\.css\?v=20260813-private-content/)
-    assert.match(html, /reader\.js\?v=20260813-private-content/)
+    assert.match(html, /reader\.js\?v=20260817-domain-auth/)
   }
 })
 

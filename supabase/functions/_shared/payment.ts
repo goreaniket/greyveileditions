@@ -1,10 +1,5 @@
 import { createClient, type SupabaseClient, type User } from 'npm:@supabase/supabase-js@2'
-
-export const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-razorpay-signature',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-}
+import { corsHeaders, handleCors } from './cors.ts'
 
 const INR = 'INR'
 const BOOK_PRICE = 14900
@@ -23,14 +18,14 @@ export class HttpError extends Error {
   }
 }
 
-export const json = (status: number, body: unknown) => new Response(JSON.stringify(body), {
+export const json = (status: number, body: unknown, request: Request) => new Response(JSON.stringify(body), {
   status,
-  headers: { ...CORS_HEADERS, 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' },
+  headers: { ...corsHeaders(request), 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' },
 })
-export const errorResponse = (error: unknown) => {
+export const errorResponse = (error: unknown, request: Request) => {
   const problem = error instanceof HttpError ? error : new HttpError(500, 'The payment service could not complete the request.')
   const message = problem.status >= 500 ? 'The payment service could not complete the request.' : problem.message
-  return json(problem.status, { success: false, error: { code: problem.code, message } })
+  return json(problem.status, { success: false, error: { code: problem.code, message } }, request)
 }
 export const requireEnv = (name: string) => {
   const value = Deno.env.get(name)?.trim()
@@ -240,4 +235,4 @@ export const markOrder = async (admin: SupabaseClient, order: any, status: strin
 export const parseBody = async (request: Request) => {
   try { return await request.json() as Record<string, unknown> } catch { throw new HttpError(400, 'Request body must be valid JSON.', 'invalid_json') }
 }
-export const handleOptions = (request: Request) => request.method === 'OPTIONS' ? new Response(null, { status: 204, headers: CORS_HEADERS }) : null
+export const handleOptions = handleCors

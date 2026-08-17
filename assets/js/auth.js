@@ -1,4 +1,6 @@
 import { supabase } from './supabase-client.js'
+import { friendlyAuthMessage, logAuthDiagnostic } from './auth-errors.js'
+import { appUrl, safeReturnPath } from './site-config.js'
 
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const LOGIN_PATH = '/auth/login/'
@@ -23,32 +25,6 @@ const setBusy = (button, busy, label) => {
   button.textContent = busy ? label : button.dataset.defaultLabel
 }
 
-const friendlyAuthMessage = (error, fallback) => {
-  const message = error?.message?.toLowerCase() || ''
-
-  if (message.includes('invalid login credentials')) {
-    return 'The email or password is not correct.'
-  }
-
-  if (message.includes('email not confirmed')) {
-    return 'Please confirm your email before signing in.'
-  }
-
-  if (message.includes('already registered') || message.includes('already exists')) {
-    return 'An account already exists for this email. Try signing in instead.'
-  }
-
-  if (message.includes('password')) {
-    return 'Please use a stronger password and try again.'
-  }
-
-  if (message.includes('network') || message.includes('fetch')) {
-    return 'We could not reach the account service. Please try again.'
-  }
-
-  return fallback
-}
-
 const validateNewPassword = (password, confirmation) => {
   if (!password || !confirmation) return 'Please complete both password fields.'
   if (password.length < MIN_PASSWORD_LENGTH) return `Use at least ${MIN_PASSWORD_LENGTH} characters.`
@@ -57,7 +33,7 @@ const validateNewPassword = (password, confirmation) => {
   return ''
 }
 
-const resetPasswordRedirectUrl = () => new URL(RESET_PASSWORD_PATH, window.location.origin).href
+const resetPasswordRedirectUrl = () => appUrl(RESET_PASSWORD_PATH)
 
 const recoveryUrlState = () => {
   const search = new URLSearchParams(window.location.search)
@@ -70,6 +46,12 @@ const recoveryUrlState = () => {
     hasPkceRecovery: search.has('code'),
     isRecovery: type === 'recovery' || search.has('code'),
   }
+}
+
+const hasAuthCallbackError = () => {
+  const search = new URLSearchParams(window.location.search)
+  const hash = new URLSearchParams(window.location.hash.replace(/^#/, ''))
+  return search.has('error') || search.has('error_code') || hash.has('error') || hash.has('error_code')
 }
 
 const clearRecoveryUrl = () => {
@@ -733,7 +715,14 @@ export async function signOut() {
 
 const safeLoginReturnPath = () => {
   const next = new URLSearchParams(window.location.search).get('next') || ''
-  return next.startsWith('/') && !next.startsWith('//') ? next : ''
+  return safeReturnPath(next)
+}
+
+const signupConfirmationRedirectUrl = () => {
+  const url = new URL(LOGIN_PATH, appUrl('/'))
+  url.searchParams.set('confirmed', '1')
+  url.searchParams.set('next', safeLoginReturnPath() || ACCOUNT_PATH)
+  return url.href
 }
 
 const preserveAuthReturnLinks = () => {
@@ -824,22 +813,37 @@ const initSignupPage = async () => {
     setBusy(submitButton, true, 'Creating account...')
     setStatus(status, 'Creating your account...', 'info')
 
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
-          display_name: displayName,
+    let data = null
+    let error = null
+    try {
+      const result = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: signupConfirmationRedirectUrl(),
+          data: {
+            display_name: displayName,
+          },
         },
-      },
-    })
+      })
+      data = result.data
+      error = result.error
+    } catch (signupError) {
+      error = signupError
+    }
 
     form.elements.password.value = ''
     form.elements.confirm_password.value = ''
     setBusy(submitButton, false)
 
     if (error) {
+      logAuthDiagnostic('signup', error)
       setStatus(status, friendlyAuthMessage(error, 'We could not create the account. Please try again.'), 'error')
+      return
+    }
+
+    if (data?.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+      setStatus(status, 'An account already exists for this email. Try signing in instead.', 'error')
       return
     }
 
@@ -862,6 +866,12 @@ const initLoginPage = async () => {
 
   if (!form || !await guardAuthPage(view)) return
 
+  if (hasAuthCallbackError()) {
+    setStatus(status, 'This email confirmation link is invalid or has expired. Try signing in or create the account again.', 'error')
+  } else if (new URLSearchParams(window.location.search).get('confirmed') === '1') {
+    setStatus(status, 'Email confirmed. Sign in to continue.', 'success')
+  }
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault()
 
@@ -876,14 +886,18 @@ const initLoginPage = async () => {
     setBusy(submitButton, true, 'Signing in...')
     setStatus(status, 'Signing in...', 'info')
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    })
+    let error = null
+    try {
+      const result = await supabase.auth.signInWithPassword({ email, password })
+      error = result.error
+    } catch (loginError) {
+      error = loginError
+    }
 
     form.elements.password.value = ''
 
     if (error) {
+      logAuthDiagnostic('login', error)
       setBusy(submitButton, false)
       setStatus(status, friendlyAuthMessage(error, 'We could not sign you in. Please try again.'), 'error')
       return
@@ -932,6 +946,8 @@ const initForgotPasswordPage = async () => {
     } catch (requestError) {
       error = requestError
     }
+
+    if (error) logAuthDiagnostic('forgot_password', error)
 
     form.reset()
     if (error && isNetworkError(error)) {
@@ -994,6 +1010,26 @@ const initResetPasswordPage = async () => {
     return
   }
 
+  if (urlState.hasPkceRecovery) {
+    const code = new URLSearchParams(window.location.search).get('code') || ''
+    let data = null
+    let error = null
+    try {
+      const result = await supabase.auth.exchangeCodeForSession(code)
+      data = result.data
+      error = result.error
+    } catch (exchangeError) {
+      error = exchangeError
+    }
+    if (error || !data?.session) {
+      logAuthDiagnostic('password_recovery_exchange', error)
+      subscription?.unsubscribe()
+      showInvalid()
+      return
+    }
+    recoverySession = data.session
+  }
+
   const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
   if (!sessionError && urlState.hasImplicitRecovery && sessionData?.session) {
     recoverySession = sessionData.session
@@ -1042,6 +1078,7 @@ const initResetPasswordPage = async () => {
     form.elements.confirm_password.value = ''
 
     if (error) {
+      logAuthDiagnostic('password_update', error)
       const message = String(error.message || '').toLowerCase()
       if (message.includes('session') || message.includes('jwt') || message.includes('expired')) {
         subscription?.unsubscribe()

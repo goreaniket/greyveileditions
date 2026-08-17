@@ -11,7 +11,7 @@ Use this template when preparing a new book copyright page or revising an existi
 - **Edition:** [Owner confirmation required]
 - **Publisher:** Greyveil Editions, unless a verified edition record states otherwise.
 - **ISBN:** [When available / Owner confirmation required]
-- **Permissions URL:** https://greyveileditions.vercel.app/copyright/
+- **Permissions URL:** https://greyveileditions.site/copyright/
 - **Verified contact email:** greyveileditions@gmail.com
 - **Cover/art credits:** [Owner confirmation required]
 - **Third-party acknowledgements:** [Owner confirmation required]
@@ -28,7 +28,7 @@ No part of this publication may be reproduced, distributed, stored, transmitted,
 
 Brief quotations may be possible for genuine reviews, commentary, criticism, scholarship, educational reference, reporting, or similar lawful purposes. Please provide clear attribution with the book title, author name, publisher, and the official Greyveil page where practical.
 
-For permissions, licensing, translations, adaptations, course use, anthology inclusion, audiobook or narrated-video requests, cover or artwork use, or commercial reuse, contact Greyveil Editions at greyveileditions@gmail.com or visit https://greyveileditions.vercel.app/copyright/.
+For permissions, licensing, translations, adaptations, course use, anthology inclusion, audiobook or narrated-video requests, cover or artwork use, or commercial reuse, contact Greyveil Editions at greyveileditions@gmail.com or visit https://greyveileditions.site/copyright/.
 
 Cover/art credits: [cover artist, designer, photographer, source, licence, or permission record - owner confirmation required].
 

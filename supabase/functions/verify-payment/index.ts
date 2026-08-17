@@ -3,7 +3,7 @@ import { authenticate, errorResponse, handleOptions, HttpError, json, markOrder,
 Deno.serve(async (request) => {
   const preflight = handleOptions(request)
   if (preflight) return preflight
-  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Use POST.' } })
+  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Use POST.' } }, request)
   try {
     const admin = serviceClient()
     const user = await authenticate(request, admin)
@@ -26,9 +26,9 @@ Deno.serve(async (request) => {
     const persisted = await persistPayment(admin, order, payment, { signature, verified: true })
     if (!paymentCaptured(payment)) {
       await markOrder(admin, order, payment.status === 'failed' ? 'failed' : 'pending')
-      return json(200, { success: false, paid: false, status: payment.status, local_order_id: order.id, payment_id: persisted.razorpay_payment_id })
+      return json(200, { success: false, paid: false, status: payment.status, local_order_id: order.id, payment_id: persisted.razorpay_payment_id }, request)
     }
     await markOrder(admin, order, 'paid', { paid_at: order.paid_at || new Date().toISOString(), verified_at: new Date().toISOString() })
-    return json(200, { success: true, paid: true, status: 'paid', local_order_id: order.id, purchase_type: order.purchase_type, item_name: order.item_name, payment_id: persisted.razorpay_payment_id, original_amount: order.original_amount, amount: order.amount, coupon_code: order.coupon_code, discount_amount: order.discount_amount })
-  } catch (error) { return errorResponse(error) }
+    return json(200, { success: true, paid: true, status: 'paid', local_order_id: order.id, purchase_type: order.purchase_type, item_name: order.item_name, payment_id: persisted.razorpay_payment_id, original_amount: order.original_amount, amount: order.amount, coupon_code: order.coupon_code, discount_amount: order.discount_amount }, request)
+  } catch (error) { return errorResponse(error, request) }
 })

@@ -10,4 +10,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://greyveileditions.vercel.app/sitemap.xml
+Sitemap: https://greyveileditions.site/sitemap.xml

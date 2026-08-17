@@ -9,6 +9,8 @@
   const loadFeedbackModule = () => import(new URL("feedback-submission.js", readerScriptUrl).href);
   const loadContentAccessModule = () => import(new URL("content-access.js", readerScriptUrl).href);
   const loadSupabaseModule = () => import(new URL("supabase-client.js", readerScriptUrl).href);
+  const currentReaderReturnPath = () => `${window.location.pathname}${window.location.search}${window.location.hash}`;
+  const readerLoginUrl = () => `/auth/login/?next=${encodeURIComponent(currentReaderReturnPath())}`;
 
   // Minimum book.json schema: id, title, readerRoute, themeStylesheet,
   // designSpecFile, feedbackContext, occupationOptions, ratingOptions, and
@@ -1353,7 +1355,7 @@
         title: "Log in to continue.",
         message: "Please log in with an account that has access to this reader.",
         actions: [
-          { href: "/auth/login/", label: "Log in" },
+          { href: readerLoginUrl(), label: "Log in" },
           { href: "/account/", label: "My Account" },
         ],
       };

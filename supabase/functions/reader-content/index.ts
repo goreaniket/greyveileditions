@@ -1,17 +1,13 @@
 import { createClient } from 'npm:@supabase/supabase-js@2'
+import { corsHeaders, handleCors } from '../_shared/cors.ts'
 
-const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-}
-const RESPONSE_HEADERS = {
-  ...CORS_HEADERS,
+const responseHeaders = (request: Request) => ({
+  ...corsHeaders(request),
   'Content-Type': 'application/json; charset=utf-8',
   'Cache-Control': 'private, no-store, max-age=0',
   Pragma: 'no-cache',
-  Vary: 'Authorization',
-}
+  Vary: 'Authorization, Origin',
+})
 const BUCKET = 'reader-content'
 const MAX_RESOURCES = 64
 const BOOK_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
@@ -28,9 +24,9 @@ class HttpError extends Error {
   }
 }
 
-const json = (status: number, body: unknown) => new Response(JSON.stringify(body), {
+const json = (status: number, body: unknown, request: Request) => new Response(JSON.stringify(body), {
   status,
-  headers: RESPONSE_HEADERS,
+  headers: responseHeaders(request),
 })
 
 const requireEnv = (name: string) => {
@@ -108,8 +104,9 @@ const readResource = async (
 }
 
 Deno.serve(async (request) => {
-  if (request.method === 'OPTIONS') return new Response('ok', { headers: CORS_HEADERS })
-  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Method not allowed.' } })
+  const corsResponse = handleCors(request)
+  if (corsResponse) return corsResponse
+  if (request.method !== 'POST') return json(405, { success: false, error: { code: 'method_not_allowed', message: 'Method not allowed.' } }, request)
 
   try {
     const admin = serviceClient()
@@ -150,7 +147,7 @@ Deno.serve(async (request) => {
         visibility: authorization.effective_visibility,
       },
       resources: Object.fromEntries(entries),
-    })
+    }, request)
   } catch (error) {
     const problem = error instanceof HttpError
       ? error
@@ -164,6 +161,6 @@ Deno.serve(async (request) => {
         code: problem.code,
         message: problem.status >= 500 ? 'Reader content could not be loaded.' : problem.message,
       },
-    })
+    }, request)
   }
 })
