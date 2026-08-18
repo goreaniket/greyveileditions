@@ -55,8 +55,6 @@ class ExportTheme:
     cover_fit: str
     title_opening_top_in: float
     unit_opening_top_in: float
-    unit_opening_body_start_in: float
-    chapter_opening_body_start_in: float
     title_rule_primary_in: float
     title_rule_secondary_in: float
     title_rule_horizontal_offset_in: float
@@ -184,8 +182,6 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
         cover_fit=cover_fit_from_design(layout, mapping, cover_spec, semantic_pages),
         title_opening_top_in=parse_length_inches(layout.get("titleOpeningTopOffset"), 1.18),
         unit_opening_top_in=parse_length_inches(layout.get("unitOpeningTopOffset"), 0.15),
-        unit_opening_body_start_in=parse_length_inches(layout.get("unitOpeningBodyStart"), 172 / 96),
-        chapter_opening_body_start_in=parse_length_inches(layout.get("chapterOpeningBodyStart"), 242 / 96),
         title_rule_primary_in=parse_length_inches(
             layout.get("titleOpeningRulePrimary"),
             px_to_inches(value_at(title_motif_px, 0), 1.0),

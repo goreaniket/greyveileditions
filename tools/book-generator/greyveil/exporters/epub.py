@@ -31,6 +31,8 @@ from greyveil.models import BookModel, ChapterBlock, ChapterUnit
 
 
 POINTS_PER_INCH = 72
+EPUB_UNIT_OPENING_BODY_START_PX = 172
+EPUB_CHAPTER_OPENING_BODY_START_PX = 242
 SHORT_PAGE_EXCLUDED_KINDS = {"chapter", "contents", "dedication", "opening", "part"}
 
 
@@ -235,7 +237,7 @@ def build_unit_pages(
     start_index: int,
 ) -> list[FixedPage]:
     fragments = fragments_from_blocks(unit, geometry)
-    chunks = chunks_for_unit(unit, fragments, theme, geometry)
+    chunks = chunks_for_unit(unit, fragments, geometry)
     if not chunks:
         chunks = [[]]
 
@@ -269,7 +271,6 @@ def build_unit_pages(
 def chunks_for_unit(
     unit: ChapterUnit,
     fragments: list[BlockFragment],
-    theme: ExportTheme,
     geometry: FixedGeometry,
 ) -> list[list[BlockFragment]]:
     if unit.kind == "contents":
@@ -280,7 +281,7 @@ def chunks_for_unit(
 
     return paginate_fragments(
         fragments,
-        first_page_capacity(unit, theme, geometry),
+        first_page_capacity(unit, geometry),
         continuation_page_capacity(geometry),
         geometry,
     )
@@ -559,11 +560,10 @@ def split_text_to_fit(text: str, target_chars: int) -> list[str]:
     return pieces
 
 
-def first_page_capacity(unit: ChapterUnit, theme: ExportTheme, geometry: FixedGeometry) -> int:
+def first_page_capacity(unit: ChapterUnit, geometry: FixedGeometry) -> int:
     line_box = effective_line_box_px(geometry)
     if unit.kind == "chapter":
-        body_start_px = round(theme.chapter_opening_body_start_in * 96)
-        usable_px = geometry.height_px - body_start_px - geometry.bottom_px - 24
+        usable_px = geometry.height_px - EPUB_CHAPTER_OPENING_BODY_START_PX - geometry.bottom_px - 24
     elif unit.kind in {"contents"}:
         usable_px = geometry.height_px - contents_first_frame_top_px() - geometry.bottom_px - 38
     elif unit.kind in {"dedication"}:
@@ -571,8 +571,7 @@ def first_page_capacity(unit: ChapterUnit, theme: ExportTheme, geometry: FixedGe
     elif unit.kind in {"part"}:
         usable_px = geometry.height_px - 210 - geometry.bottom_px - 24
     else:
-        body_start_px = round(theme.unit_opening_body_start_in * 96)
-        usable_px = geometry.height_px - body_start_px - geometry.bottom_px - 24
+        usable_px = geometry.height_px - EPUB_UNIT_OPENING_BODY_START_PX - geometry.bottom_px - 24
     return max(6, math.floor(usable_px / line_box))
 
 
@@ -787,8 +786,8 @@ def fixed_stylesheet(theme: ExportTheme, geometry: FixedGeometry) -> str:
     title_rule_clearance = theme.title_rule_clearance_in * css_px_per_inch
     title_rule_vertical = theme.title_rule_vertical_offset_in * css_px_per_inch
     unit_top = geometry.top_px + round(theme.unit_opening_top_in * css_px_per_inch)
-    unit_body_start = round(theme.unit_opening_body_start_in * css_px_per_inch)
-    chapter_body_start = round(theme.chapter_opening_body_start_in * css_px_per_inch)
+    unit_body_start = EPUB_UNIT_OPENING_BODY_START_PX
+    chapter_body_start = EPUB_CHAPTER_OPENING_BODY_START_PX
     unit_opening_depth = max(1, unit_body_start - unit_top)
     chapter_opening_depth = max(1, chapter_body_start - unit_top)
     return f"""

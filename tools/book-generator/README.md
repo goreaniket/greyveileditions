@@ -55,8 +55,10 @@ Contract:
 - Use print-safe 5.5 x 8.5 page geometry.
 - Encode inside and outside margins, a binding gutter, top/bottom margins, and
   Word mirror margins.
-- Keep the front cover out of the DOCX body; cover production is handled as a
-  separate print artifact.
+- Include a centered, aspect-preserving cover as a native inline Word image
+  contained inside the print-safe page area.
+- Keep the cover editable and intentionally contained: no floating or absolute
+  positioning, and no fake full-bleed treatment.
 
 ## Validate The Last Shift
 
