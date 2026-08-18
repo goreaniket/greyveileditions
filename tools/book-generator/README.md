@@ -82,6 +82,27 @@ python tools/book-generator/generate_book.py the-last-shift --docx
 python tools/book-generator/generate_book.py the-last-shift --all
 ```
 
+## Import a DOCX manuscript
+
+The input automation layer normalizes a Word manuscript into the same book
+source consumed by the existing generator. It never overwrites an existing
+`assets/books/<slug>/` folder.
+
+```bash
+python tools/book-generator/import_book.py path/to/manuscript.docx
+python tools/book-generator/import_book.py path/to/manuscript.docx --cover path/to/cover.png --generate
+python tools/book-generator/import_book.py --process-inbox --generate
+```
+
+The default inbox is `tools/book-generator/inbox/`; `~$*.docx` Word temporary
+files are ignored. The importer detects explicit Word title/subtitle/author
+styles and conservative structural headings, retains source runs and emphasis,
+and uses `the-last-shift` design configuration unless `--design-from` is set.
+Missing title, author, cover, or usable manuscript structure returns `NEEDS
+ATTENTION` without creating or merging a book folder. With `--generate`, the
+existing generator is invoked once per format and the resulting PDF, EPUB, and
+DOCX receive structural QA.
+
 Default outputs are written to:
 
 ```text
