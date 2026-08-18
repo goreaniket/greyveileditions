@@ -46,6 +46,7 @@ class FixedGeometry:
     content_height_px: int
     body_size_px: float
     line_height_px: float
+    paragraph_spacing_px: float
 
     @classmethod
     def from_theme(cls, theme: ExportTheme) -> "FixedGeometry":
@@ -66,6 +67,7 @@ class FixedGeometry:
             content_height_px=height_px - top_px - bottom_px,
             body_size_px=theme.body_size_pt,
             line_height_px=theme.body_line_pt,
+            paragraph_spacing_px=theme.paragraph_spacing_pt,
         )
 
 
@@ -594,7 +596,7 @@ def short_tail_capacity(geometry: FixedGeometry) -> int:
 
 
 def effective_line_box_px(geometry: FixedGeometry) -> float:
-    return geometry.line_height_px + 4
+    return geometry.line_height_px + geometry.paragraph_spacing_px
 
 
 def contents_line_box_px(geometry: FixedGeometry) -> float:
@@ -757,9 +759,9 @@ def fixed_package_opf(
 
 
 def fixed_stylesheet(theme: ExportTheme, geometry: FixedGeometry) -> str:
-    body_font = css_font_stack(theme.body_font, "Georgia, serif")
-    display_font = css_font_stack(theme.display_font, "Georgia, serif")
-    sans_font = css_font_stack(theme.sans_font, "Arial, sans-serif")
+    body_font = css_font_stack(theme.body_font_stack)
+    display_font = css_font_stack(theme.display_font_stack)
+    sans_font = css_font_stack(theme.sans_font_stack)
     rule_color = rgba(theme.accent, 0.18)
     edge_color = rgba(theme.accent, 0.085)
     contents_left = max(36, geometry.inside_px - 4)
@@ -1099,7 +1101,7 @@ body {{
 }}
 
 .reader-paragraph + .reader-paragraph {{
-  margin-top: 4px;
+  margin-top: {theme.paragraph_spacing_pt}px;
 }}
 
 .page--short-content .reader-paragraph,

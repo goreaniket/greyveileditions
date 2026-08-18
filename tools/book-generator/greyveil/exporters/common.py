@@ -30,9 +30,13 @@ class ExportTheme:
     body_font: str
     display_font: str
     sans_font: str
+    body_font_stack: tuple[str, ...]
+    display_font_stack: tuple[str, ...]
+    sans_font_stack: tuple[str, ...]
     body_size_pt: float
     body_line_pt: float
     first_line_indent_in: float
+    paragraph_spacing_pt: float
     title_size_pt: float
     chapter_title_size_pt: float
     chapter_number_size_pt: float
@@ -63,6 +67,9 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
     mapping = export_mapping(design, print_mode=print_mode)
     colors = design.get("colorSystem", {}).get("light", {}) if isinstance(design, dict) else {}
     fonts = design.get("fonts", {}) if isinstance(design, dict) else {}
+    typography = design.get("typography", {}) if isinstance(design, dict) else {}
+    if not isinstance(typography, dict):
+        typography = {}
     print_palette = mapping.get("printPalette", {}) if isinstance(mapping, dict) else {}
 
     gutter = parse_inches(mapping.get("gutterMargin"), 0.14 if print_mode else 0.0)
@@ -73,6 +80,20 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
         "5.5in x 8.5in",
     )
     body_size_pt = parse_points(first_string(mapping.get("bodyFontSize"), mapping.get("body")), 11.5)
+    body_font_stack = merge_font_stacks(
+        first_string(mapping.get("bodyFont"), mapping.get("body"), fonts.get("body"), "Georgia"),
+        fonts.get("body"),
+        "Georgia, Times New Roman, serif",
+    )
+    display_font_stack = merge_font_stacks(
+        first_string(mapping.get("displayFont"), fonts.get("display"), "Georgia"),
+        fonts.get("display"),
+        "Georgia, serif",
+    )
+    sans_font_stack = merge_font_stacks(
+        first_string(fonts.get("interface"), "Arial"),
+        "Arial, sans-serif",
+    )
 
     return ExportTheme(
         trim_width_in=parse_trim(trim_value, TRIM_WIDTH_IN, 0),
@@ -82,12 +103,16 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
         top_margin_in=parse_inches(mapping.get("topMargin"), 0.72),
         bottom_margin_in=parse_inches(mapping.get("bottomMargin"), 0.74),
         gutter_in=gutter,
-        body_font=font_primary(first_string(mapping.get("bodyFont"), mapping.get("body"), fonts.get("body"), "Georgia")),
-        display_font=font_primary(first_string(mapping.get("displayFont"), fonts.get("display"), "Georgia")),
-        sans_font=font_primary(first_string(fonts.get("interface"), "Arial")),
+        body_font=body_font_stack[0],
+        display_font=display_font_stack[0],
+        sans_font=sans_font_stack[0],
+        body_font_stack=body_font_stack,
+        display_font_stack=display_font_stack,
+        sans_font_stack=sans_font_stack,
         body_size_pt=body_size_pt,
         body_line_pt=parse_leading(first_string(mapping.get("bodyLineSpacing"), mapping.get("lineSpacing")), body_size_pt, 18.7),
         first_line_indent_in=parse_inches(mapping.get("firstLineIndent"), 0.18),
+        paragraph_spacing_pt=parse_paragraph_spacing(typography.get("paragraphSpacing"), body_size_pt, 4.0),
         title_size_pt=parse_points(mapping.get("titleSize"), 49.0),
         chapter_title_size_pt=parse_points(first_string(mapping.get("chapterTitleSize"), mapping.get("chapterTitle")), 29.0),
         chapter_number_size_pt=parse_points(mapping.get("chapterNumberSize"), 10.0),
@@ -143,6 +168,20 @@ def parse_leading(value: object, body_size_pt: float, fallback: float) -> float:
     return parsed
 
 
+def parse_paragraph_spacing(value: object, body_size_pt: float, fallback: float) -> float:
+    if isinstance(value, (int, float)):
+        return float(value)
+    if not isinstance(value, str):
+        return fallback
+
+    em_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*em\b", value, flags=re.IGNORECASE)
+    if em_match:
+        return float(em_match.group(1)) * body_size_pt
+
+    pt_match = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*pt\b", value, flags=re.IGNORECASE)
+    return float(pt_match.group(1)) if pt_match else fallback
+
+
 def parse_inches(value: object, fallback: float) -> float:
     return parse_number(value, fallback)
 
@@ -179,15 +218,41 @@ def hex_no_hash(value: str) -> str:
 
 
 def font_primary(font_stack: str) -> str:
-    if not font_stack:
-        return "Georgia"
-    return font_stack.split(",")[0].strip().strip("\"'")
+    parsed = parse_font_stack(font_stack)
+    return parsed[0] if parsed else "Georgia"
 
 
-def css_font_stack(primary: str, fallback: str) -> str:
-    if " " in primary:
-        return f"'{primary}', {fallback}"
-    return f"{primary}, {fallback}"
+def parse_font_stack(value: object) -> tuple[str, ...]:
+    if not isinstance(value, str):
+        return ()
+    return tuple(
+        clean
+        for item in value.split(",")
+        if (clean := item.strip().strip("\"'"))
+    )
+
+
+def merge_font_stacks(*values: object) -> tuple[str, ...]:
+    merged: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        for family in parse_font_stack(value):
+            normalized = family.casefold()
+            if normalized not in seen:
+                seen.add(normalized)
+                merged.append(family)
+    return tuple(merged) or ("Georgia", "serif")
+
+
+def css_font_stack(font_stack: Sequence[str]) -> str:
+    generic_families = {"cursive", "fantasy", "monospace", "sans-serif", "serif", "system-ui"}
+    formatted = []
+    for family in font_stack:
+        if family.casefold() in generic_families or re.fullmatch(r"[a-zA-Z][a-zA-Z0-9-]*", family):
+            formatted.append(family)
+        else:
+            formatted.append(f"'{family.replace(chr(39), chr(92) + chr(39))}'")
+    return ", ".join(formatted)
 
 
 def preferred_cover(

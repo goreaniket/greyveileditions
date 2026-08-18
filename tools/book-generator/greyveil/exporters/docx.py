@@ -109,7 +109,7 @@ def configure_styles(doc: Document, theme: ExportTheme) -> None:
     normal.paragraph_format.line_spacing = Pt(theme.body_line_pt)
     normal.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
     normal.paragraph_format.space_before = Pt(0)
-    normal.paragraph_format.space_after = Pt(4)
+    normal.paragraph_format.space_after = Pt(theme.paragraph_spacing_pt)
 
     title = get_or_add_style(styles, "Greyveil Title", WD_STYLE_TYPE.PARAGRAPH)
     set_style_font(title, theme.display_font, min(theme.title_size_pt, 43), theme.heading, bold=True)
@@ -143,7 +143,7 @@ def configure_styles(doc: Document, theme: ExportTheme) -> None:
     body.paragraph_format.line_spacing = Pt(theme.body_line_pt)
     body.paragraph_format.line_spacing_rule = WD_LINE_SPACING.EXACTLY
     body.paragraph_format.space_before = Pt(0)
-    body.paragraph_format.space_after = Pt(4)
+    body.paragraph_format.space_after = Pt(theme.paragraph_spacing_pt)
 
     front = get_or_add_style(styles, "Greyveil Front Matter", WD_STYLE_TYPE.PARAGRAPH)
     set_style_font(front, theme.body_font, max(9.8, theme.body_size_pt - 1.0), theme.text)
