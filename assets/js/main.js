@@ -134,6 +134,12 @@ const initAuthNavigation = async () => {
 
     const profile = await authModule.getCurrentProfile(user);
     slots.forEach((slot) => renderProfileNav(slot, user, profile, authModule));
+    window.addEventListener("greyveil:profile-changed", (event) => {
+      const nextUser = event.detail?.user;
+      const nextProfile = event.detail?.profile;
+      if (!nextUser || !nextProfile) return;
+      slots.forEach((slot) => renderProfileNav(slot, nextUser, nextProfile, authModule));
+    });
     return {
       user,
       profile,

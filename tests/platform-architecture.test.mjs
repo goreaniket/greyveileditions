@@ -111,12 +111,13 @@ test('checkout links preserve explicit product selection and a safe return path'
 })
 
 test('dedicated checkout owns coupon preview and delays order creation until final pay', async () => {
-  const [html, source, purchases, main, auth, styles] = await Promise.all([
+  const [html, source, purchases, main, auth, authProfile, styles] = await Promise.all([
     readFile(new URL('../checkout/index.html', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/checkout.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/purchases.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/main.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/auth.js', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/auth-profile.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/css/style.css', import.meta.url), 'utf8'),
   ])
   assert.match(html, /Order Summary/)
@@ -142,7 +143,8 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.match(main, /Buy Full Series/)
   assert.match(main, /Buy Full Collection/)
   assert.match(auth, /data-account-profile-form/)
-  assert.match(auth, /\.from\('profiles'\)[\s\S]+\.update\(\{ display_name/)
+  assert.match(auth, /updateOwnDisplayName\(\{ supabase, user: activeUser, displayName \}\)/)
+  assert.match(authProfile, /\.from\('profiles'\)[\s\S]+\.update\(\{ display_name/)
 })
 
 test('checkout opens Razorpay with trusted Book, Series, and Collection orders', async () => {

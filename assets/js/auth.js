@@ -1,5 +1,12 @@
 import { supabase } from './supabase-client.js'
 import { friendlyAuthMessage, logAuthDiagnostic } from './auth-errors.js'
+import {
+  isValidDisplayName,
+  normalizeDisplayName,
+  SIGNUP_OUTCOMES,
+  signupOutcomeFor,
+  updateOwnDisplayName,
+} from './auth-profile.js'
 import { appUrl, safeReturnPath } from './site-config.js'
 import {
   createExclusiveStateController,
@@ -748,7 +755,10 @@ export async function getCurrentProfile(user = null) {
     .eq('id', currentUser.id)
     .maybeSingle()
 
-  if (error) return null
+  if (error) {
+    logAuthDiagnostic('profile_load', error)
+    return null
+  }
   return data
 }
 
@@ -885,24 +895,25 @@ const initSignupPage = async () => {
     form.elements.confirm_password.value = ''
     setBusy(submitButton, false)
 
-    if (error) {
-      logAuthDiagnostic('signup', error)
-      setStatus(status, friendlyAuthMessage(error, 'We could not create the account. Please try again.'), 'error')
+    const signupOutcome = signupOutcomeFor({ data, error })
+    if (signupOutcome.outcome === SIGNUP_OUTCOMES.FAILED) {
+      logAuthDiagnostic('signup', signupOutcome.error)
+      setStatus(status, friendlyAuthMessage(signupOutcome.error, 'We could not create the account. Please try again.'), 'error')
       return
     }
 
-    if (data?.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+    if (signupOutcome.outcome === SIGNUP_OUTCOMES.EXISTING_ACCOUNT) {
       setStatus(status, 'An account already exists for this email. Try signing in instead.', 'error')
       return
     }
 
-    if (data?.session) {
+    if (signupOutcome.outcome === SIGNUP_OUTCOMES.SIGNED_IN) {
       setStatus(status, 'Account created. Redirecting...', 'success')
-      window.setTimeout(() => redirectByRole(data.user), 500)
+      window.setTimeout(() => redirectByRole(signupOutcome.user), 500)
       return
     }
 
-    setStatus(status, 'Account created. Please check your email to confirm your address before signing in.', 'success')
+    setStatus(status, 'Check your email to confirm your Greyveil Editions account.', 'success')
     form.reset()
   })
 }
@@ -1218,31 +1229,59 @@ const initAccountPage = async () => {
 
   profileForm?.addEventListener('submit', async (event) => {
     event.preventDefault()
-    if (!activeUser?.id) return
-    const displayName = getFormValue(profileForm, 'display_name').replace(/\s+/g, ' ')
-    if (displayName.length < 2 || displayName.length > 80 || /[\u0000-\u001f\u007f]/.test(displayName)) {
+    if (!activeUser?.id) {
+      setStatus(profileStatus, 'Please sign in before updating your display name.', 'error')
+      return
+    }
+    const displayName = normalizeDisplayName(getFormValue(profileForm, 'display_name'))
+    if (!isValidDisplayName(displayName)) {
       setStatus(profileStatus, 'Use a display name between 2 and 80 characters.', 'error')
       return
     }
     const button = profileForm.querySelector('button[type="submit"]')
+    if (button?.disabled) return
     setBusy(button, true, 'Saving...')
     setStatus(profileStatus, 'Saving your display name...', 'info')
-    const { data, error } = await supabase
-      .from('profiles')
-      .update({ display_name: displayName })
-      .eq('id', activeUser.id)
-      .select('id, display_name, role')
-      .maybeSingle()
+    const result = await updateOwnDisplayName({ supabase, user: activeUser, displayName })
     setBusy(button, false)
-    if (error || !data) {
-      setStatus(profileStatus, 'Your display name could not be updated. Please try again.', 'error')
+
+    if (!result.ok) {
+      if (result.error) logAuthDiagnostic(result.stage, result.error)
+      if (result.reason === 'update-denied') {
+        setStatus(profileStatus, 'Your display name update was denied. Please sign in again or contact support.', 'error')
+      } else if (result.reason === 'profile-missing') {
+        setStatus(profileStatus, 'Your account profile is unavailable. Please contact support.', 'error')
+      } else if (result.reason === 'refresh-failed') {
+        setStatus(profileStatus, 'Your display name was saved, but Account could not refresh it. Please refresh the page.', 'error')
+      } else {
+        setStatus(profileStatus, 'Your display name could not be updated. Please try again.', 'error')
+      }
       return
     }
-    activeProfile = { ...activeProfile, ...data }
-    if (nameNode) nameNode.textContent = data.display_name
-    profileForm.elements.display_name.value = data.display_name
+
+    if (result.metadataError) logAuthDiagnostic('profile_metadata_sync', result.metadataError)
+    activeUser = {
+      ...activeUser,
+      ...result.user,
+      user_metadata: {
+        ...activeUser.user_metadata,
+        ...result.user?.user_metadata,
+        display_name: result.displayName,
+      },
+    }
+    activeProfile = result.profile
+    activeRole = result.profile.role || activeRole
+    if (nameNode) nameNode.textContent = result.displayName
+    profileForm.elements.display_name.value = result.displayName
     setStatus(profileStatus, 'Display name updated.', 'success')
-    window.dispatchEvent(new CustomEvent('greyveil:profile-changed', { detail: { userId: activeUser.id } }))
+    window.dispatchEvent(new CustomEvent('greyveil:profile-changed', {
+      detail: {
+        userId: activeUser.id,
+        displayName: result.displayName,
+        profile: activeProfile,
+        user: activeUser,
+      },
+    }))
   })
 
   supabase.auth.onAuthStateChange((_event, session) => {

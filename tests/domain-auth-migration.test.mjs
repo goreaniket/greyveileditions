@@ -114,15 +114,24 @@ test('auth errors are safe for users and structured only for local diagnostics',
   assert.equal(diagnostics.length, 1)
 })
 
-test('profile repair hardcodes customer role and remains duplicate-safe', async () => {
+test('profile repair preserves the existing trigger, hardcodes customer, and repairs own-profile RLS', async () => {
   const migration = await source('../supabase/auth-profile-signup-repair.sql')
   assert.match(migration, /alter column role set default 'customer'/)
   assert.match(migration, /security definer[\s\S]+set search_path = ''/)
   assert.match(migration, /insert into public\.profiles \(id, display_name, role, created_at\)/)
   assert.match(migration, /'customer',[\s\S]+on conflict \(id\) do nothing/)
-  assert.match(migration, /after insert on auth\.users/)
-  assert.match(migration, /Review existing auth\.users AFTER INSERT trigger/)
-  assert.match(migration, /revoke all on function[\s\S]+from public, anon, authenticated/)
+  assert.match(migration, /tgname = 'on_auth_user_created'/)
+  assert.match(migration, /Existing on_auth_user_created trigger definition/)
+  assert.match(migration, /pg_get_functiondef\(signup_function_oid\)/)
+  assert.match(migration, /create or replace function %I\.%I\(\)/)
+  assert.doesNotMatch(migration, /create trigger\s+(?:greyveil_create_profile_after_signup|on_auth_user_created)/i)
+  assert.doesNotMatch(migration, /drop trigger[^;]+on auth\.users/i)
+  assert.match(migration, /Users read their own profile[\s\S]+for select[\s\S]+auth\.uid\(\) = id/)
+  assert.match(migration, /Users update their own profile[\s\S]+for update[\s\S]+auth\.uid\(\) = id/)
+  assert.match(migration, /greyveil_guard_customer_profile_fields/)
+  assert.match(migration, /to_jsonb\(new\) - 'display_name'/)
+  assert.match(migration, /grant update \(display_name\) on public\.profiles to authenticated/)
+  assert.match(migration, /greyveil_guard_profile_role/)
   assert.doesNotMatch(migration, /raw_user_meta_data\s*->>\s*'role'/)
 })
 

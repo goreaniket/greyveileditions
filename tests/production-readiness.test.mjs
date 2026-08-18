@@ -180,6 +180,12 @@ test('native hidden state cannot be overridden by component display rules', asyn
   assert.match(css, /(?:^|\n)\[hidden\]\s*{\s*display:\s*none\s*!important;/)
 })
 
+test('the responsive Admin menu reports its open and closed state accessibly', async () => {
+  const source = await readFile(path.join(repositoryRoot, 'assets/js/admin.js'), 'utf8')
+  assert.match(source, /setAttribute\('aria-label', open \? 'Close admin navigation' : 'Open admin navigation'\)/)
+  assert.match(source, /classList\.remove\('is-admin-nav-open'\)[\s\S]+setAttribute\('aria-expanded', 'false'\)[\s\S]+setAttribute\('aria-label', 'Open admin navigation'\)/)
+})
+
 test('static forms and non-submitting buttons have an effective native or scripted action', async () => {
   const javascriptFiles = []
   for await (const filePath of glob('assets/js/*.{js,mjs}', { cwd: repositoryRoot })) javascriptFiles.push(filePath)

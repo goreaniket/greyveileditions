@@ -678,6 +678,7 @@ const showPanel = (name) => {
 
   document.body.classList.remove('is-admin-nav-open')
   singleNodes.menu?.setAttribute('aria-expanded', 'false')
+  singleNodes.menu?.setAttribute('aria-label', 'Open admin navigation')
   if (name === 'files') renderFilesManager()
 }
 
@@ -713,6 +714,7 @@ const bindControls = () => {
   singleNodes.menu?.addEventListener('click', () => {
     const open = document.body.classList.toggle('is-admin-nav-open')
     singleNodes.menu.setAttribute('aria-expanded', String(open))
+    singleNodes.menu.setAttribute('aria-label', open ? 'Close admin navigation' : 'Open admin navigation')
   })
 
   singleNodes.refresh?.addEventListener('click', () => loadAdminData())
