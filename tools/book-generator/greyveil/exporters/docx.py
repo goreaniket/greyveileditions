@@ -5,20 +5,24 @@ from __future__ import annotations
 from pathlib import Path
 
 from docx import Document
+from docx.enum.section import WD_SECTION
 from docx.enum.style import WD_STYLE_TYPE
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
+from PIL import Image as PILImage
 
 from greyveil.exporters.common import (
     ExportTheme,
     block_plain_text,
     book_number_label,
     hex_no_hash,
+    hide_folio_for_unit,
     is_quote_block,
     iter_text_runs,
     output_path,
+    preferred_cover,
     theme_from_model,
     unit_label,
     unit_phase,
@@ -44,6 +48,7 @@ def export_docx(model: BookModel, repo_root: Path, output: Path | None = None) -
 
     configure_page(doc, theme)
     configure_styles(doc, theme)
+    add_cover_page(doc, model, theme)
     add_opening_page(doc, model, theme)
     add_units(doc, model, repo_root, theme)
 
@@ -53,6 +58,12 @@ def export_docx(model: BookModel, repo_root: Path, output: Path | None = None) -
 
 def configure_page(doc: Document, theme: ExportTheme) -> None:
     section = doc.sections[0]
+    configure_section_geometry(section, theme)
+    enable_mirror_margins(doc)
+    configure_section_footer(section, theme, visible=False)
+
+
+def configure_section_geometry(section, theme: ExportTheme) -> None:
     section.page_width = Inches(theme.trim_width_in)
     section.page_height = Inches(theme.trim_height_in)
     section.left_margin = Inches(theme.inside_margin_in)
@@ -61,11 +72,9 @@ def configure_page(doc: Document, theme: ExportTheme) -> None:
     section.bottom_margin = Inches(theme.bottom_margin_in)
     section.header_distance = Inches(0.36)
     section.footer_distance = Inches(theme.folio_bottom_in)
-    section.different_first_page_header_footer = True
+    section.different_first_page_header_footer = False
 
     set_section_gutter(section, theme.gutter_in)
-    enable_mirror_margins(doc)
-    configure_footer(section, theme)
 
 
 def set_section_gutter(section, gutter_in: float) -> None:
@@ -89,14 +98,67 @@ def enable_mirror_margins(doc: Document) -> None:
         settings.append(OxmlElement("w:mirrorMargins"))
 
 
-def configure_footer(section, theme: ExportTheme) -> None:
-    paragraph = section.footer.paragraphs[0]
+def configure_section_footer(section, theme: ExportTheme, *, visible: bool) -> None:
+    footer = section.footer
+    footer.is_linked_to_previous = False
+    footer_element = footer._element
+    for child in list(footer_element):
+        footer_element.remove(child)
+    footer_element.append(OxmlElement("w:p"))
+    if not visible:
+        return
+
+    paragraph = footer.paragraphs[0]
     paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
     paragraph.paragraph_format.space_before = Pt(0)
     paragraph.paragraph_format.space_after = Pt(0)
     run = paragraph.add_run()
     set_run_font(run, theme.sans_font, theme.folio_size_pt, theme.subtle)
     add_page_field(run)
+
+
+def add_folio_section(doc: Document, theme: ExportTheme, *, visible: bool) -> None:
+    section = doc.add_section(WD_SECTION.NEW_PAGE)
+    configure_section_geometry(section, theme)
+    configure_section_footer(section, theme, visible=visible)
+
+
+def add_cover_page(doc: Document, model: BookModel, theme: ExportTheme) -> bool:
+    cover = preferred_cover(model.cover_assets, roles=("print", "source", "web"))
+    if not cover or not cover.resolved_path or not cover.resolved_path.exists():
+        return False
+
+    with PILImage.open(cover.resolved_path) as source:
+        image_width, image_height = source.size
+    available_width = theme.content_width_in
+    available_height = theme.trim_height_in - theme.top_margin_in - theme.bottom_margin_in
+    width_scale = available_width / image_width
+    height_scale = available_height / image_height
+    paragraph = doc.add_paragraph()
+    paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    paragraph.paragraph_format.first_line_indent = Inches(0)
+    paragraph.paragraph_format.left_indent = Inches(0)
+    paragraph.paragraph_format.right_indent = Inches(0)
+    paragraph.paragraph_format.space_after = Pt(0)
+    paragraph.paragraph_format.line_spacing = 1
+    run = paragraph.add_run()
+    if width_scale <= height_scale:
+        display_width = available_width
+        display_height = image_height * width_scale
+        run.add_picture(str(cover.resolved_path), width=Inches(display_width))
+    else:
+        display_height = available_height
+        run.add_picture(str(cover.resolved_path), height=Inches(display_height))
+    paragraph.paragraph_format.space_before = Inches(max(0, (available_height - display_height) / 2))
+    disable_image_compression(doc)
+    doc.add_page_break()
+    return True
+
+
+def disable_image_compression(doc: Document) -> None:
+    settings = doc.settings.element
+    if settings.find(qn("w:doNotAutoCompressPictures")) is None:
+        settings.append(OxmlElement("w:doNotAutoCompressPictures"))
 
 
 def configure_styles(doc: Document, theme: ExportTheme) -> None:
@@ -180,7 +242,7 @@ def configure_styles(doc: Document, theme: ExportTheme) -> None:
 
 
 def add_opening_page(doc: Document, model: BookModel, theme: ExportTheme) -> None:
-    first = doc.paragraphs[0] if doc.paragraphs else doc.add_paragraph()
+    first = doc.add_paragraph()
     first.style = "Greyveil Kicker"
     first.paragraph_format.space_before = Inches(theme.title_opening_top_in)
     if model.metadata.series:
@@ -219,17 +281,18 @@ def add_opening_page(doc: Document, model: BookModel, theme: ExportTheme) -> Non
             imprint = f"{imprint} {model.metadata.edition_year}"
         add_text_run(publisher, imprint, theme.sans_font, 8.0, theme.accent, bold=True)
 
-    doc.add_page_break()
-
 
 def add_units(doc: Document, model: BookModel, repo_root: Path, theme: ExportTheme) -> None:
-    exported = 0
+    folio_hidden = True
     for unit in model.chapters:
         if unit.kind == "opening":
             continue
-        if exported > 0:
+        unit_folio_hidden = hide_folio_for_unit(unit, theme)
+        if unit_folio_hidden != folio_hidden:
+            add_folio_section(doc, theme, visible=not unit_folio_hidden)
+        else:
             doc.add_page_break()
-        exported += 1
+        folio_hidden = unit_folio_hidden
 
         add_unit_header(doc, unit, theme)
         no_indent_next = True

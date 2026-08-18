@@ -235,7 +235,7 @@ def build_unit_pages(
     start_index: int,
 ) -> list[FixedPage]:
     fragments = fragments_from_blocks(unit, geometry)
-    chunks = chunks_for_unit(unit, fragments, geometry)
+    chunks = chunks_for_unit(unit, fragments, theme, geometry)
     if not chunks:
         chunks = [[]]
 
@@ -266,7 +266,12 @@ def build_unit_pages(
     return pages
 
 
-def chunks_for_unit(unit: ChapterUnit, fragments: list[BlockFragment], geometry: FixedGeometry) -> list[list[BlockFragment]]:
+def chunks_for_unit(
+    unit: ChapterUnit,
+    fragments: list[BlockFragment],
+    theme: ExportTheme,
+    geometry: FixedGeometry,
+) -> list[list[BlockFragment]]:
     if unit.kind == "contents":
         return paginate_contents_fragments(fragments, geometry)
 
@@ -275,7 +280,7 @@ def chunks_for_unit(unit: ChapterUnit, fragments: list[BlockFragment], geometry:
 
     return paginate_fragments(
         fragments,
-        first_page_capacity(unit, geometry),
+        first_page_capacity(unit, theme, geometry),
         continuation_page_capacity(geometry),
         geometry,
     )
@@ -554,10 +559,11 @@ def split_text_to_fit(text: str, target_chars: int) -> list[str]:
     return pieces
 
 
-def first_page_capacity(unit: ChapterUnit, geometry: FixedGeometry) -> int:
+def first_page_capacity(unit: ChapterUnit, theme: ExportTheme, geometry: FixedGeometry) -> int:
     line_box = effective_line_box_px(geometry)
     if unit.kind == "chapter":
-        usable_px = geometry.height_px - 242 - geometry.bottom_px - 24
+        body_start_px = round(theme.chapter_opening_body_start_in * 96)
+        usable_px = geometry.height_px - body_start_px - geometry.bottom_px - 24
     elif unit.kind in {"contents"}:
         usable_px = geometry.height_px - contents_first_frame_top_px() - geometry.bottom_px - 38
     elif unit.kind in {"dedication"}:
@@ -565,7 +571,8 @@ def first_page_capacity(unit: ChapterUnit, geometry: FixedGeometry) -> int:
     elif unit.kind in {"part"}:
         usable_px = geometry.height_px - 210 - geometry.bottom_px - 24
     else:
-        usable_px = geometry.height_px - 172 - geometry.bottom_px - 24
+        body_start_px = round(theme.unit_opening_body_start_in * 96)
+        usable_px = geometry.height_px - body_start_px - geometry.bottom_px - 24
     return max(6, math.floor(usable_px / line_box))
 
 
@@ -780,6 +787,10 @@ def fixed_stylesheet(theme: ExportTheme, geometry: FixedGeometry) -> str:
     title_rule_clearance = theme.title_rule_clearance_in * css_px_per_inch
     title_rule_vertical = theme.title_rule_vertical_offset_in * css_px_per_inch
     unit_top = geometry.top_px + round(theme.unit_opening_top_in * css_px_per_inch)
+    unit_body_start = round(theme.unit_opening_body_start_in * css_px_per_inch)
+    chapter_body_start = round(theme.chapter_opening_body_start_in * css_px_per_inch)
+    unit_opening_depth = max(1, unit_body_start - unit_top)
+    chapter_opening_depth = max(1, chapter_body_start - unit_top)
     return f"""
 @namespace epub "http://www.idpf.org/2007/ops";
 
@@ -931,13 +942,13 @@ body {{
   left: {geometry.inside_px}px;
   top: {unit_top}px;
   width: {geometry.content_width_px}px;
-  min-height: 138px;
+  min-height: {unit_opening_depth}px;
   box-sizing: border-box;
   padding: 28px 0 18px 22px;
 }}
 
 .page--chapter .unit-header {{
-  min-height: 176px;
+  min-height: {chapter_opening_depth}px;
   padding-top: 34px;
 }}
 
@@ -1044,12 +1055,12 @@ body {{
 }}
 
 .flow-frame--first {{
-  top: 172px;
+  top: {unit_body_start}px;
   bottom: {geometry.bottom_px + 22}px;
 }}
 
 .page--chapter .flow-frame--first {{
-  top: 242px;
+  top: {chapter_body_start}px;
 }}
 
 .page--contents .flow-frame--first {{

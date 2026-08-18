@@ -641,7 +641,7 @@ def append_units(
         append_unit_header(story, unit, styles, theme, fonts)
 
         for block in unit.blocks:
-            append_block(story, block, unit, styles, fonts)
+            append_block(story, block, unit, styles, theme, fonts)
 
 
 def append_unit_header(
@@ -681,6 +681,7 @@ def append_block(
     block: ChapterBlock,
     unit: ChapterUnit,
     styles,
+    theme: ExportTheme,
     fonts: PdfFontSet,
 ) -> None:
     if block.type == "space":
@@ -832,6 +833,8 @@ def pdf_inline_html(
             current_font = None
             parts.append("<br/>")
             continue
+        if char == "\t":
+            char = " "
         font_name = role.font_for(char, bold=bold, italic=italic)
         if font_name is None:
             continue
