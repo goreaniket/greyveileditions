@@ -1,25 +1,15 @@
 const crypto = require('crypto')
 
 const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
-const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection'])
+const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection', 'pass'])
 const UUID_OR_NUMERIC_PATTERN = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|\d+)$/i
 const INR = 'INR'
 
-const BOOK_PRICE = 14900
-const SERIES_PRICES = {
-  'human-mind': 59900,
-  'human-paradox': 59900,
-  'human-fiction': 49900,
-}
-const COLLECTION_PRICES = {
-  'human-paradox-collection': 129900,
-  'the-human-paradox-collection': 129900,
-}
-
-const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
+const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, sort_order, price_amount, created_at, updated_at'
 const VOLUME_SELECT = 'id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
-const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
-const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active'
+const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, price_amount, sort_order, created_at, updated_at'
+const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active, price_amount'
+const TEMPORARY_PASS_SELECT = 'id, slug, title, active, price_amount, duration_hours, scope_type, collection_id'
 const BOOK_ACCESS_SELECT = 'user_id, book_id, access_type, granted_at, expires_at, is_visible, can_read'
 const ORDER_SELECT = [
   'id',
@@ -28,6 +18,7 @@ const ORDER_SELECT = [
   'book_id',
   'series_id',
   'collection_id',
+  'temporary_access_pass_id',
   'item_name',
   'original_amount',
   'amount',
@@ -457,6 +448,14 @@ const assertPurchaseableHierarchy = (hierarchy) => {
   }
 }
 
+const configuredPrice = (item, label) => {
+  const amount = Number(item?.price_amount)
+  if (!Number.isInteger(amount) || amount <= 0) {
+    throw new ApiError(400, `This ${label} is not configured for checkout.`, 'price_not_configured')
+  }
+  return amount
+}
+
 const resolveCollectionForSeries = async (series, volume = null) => {
   const collectionId = series?.collection_id || volume?.collection_id
   return collectionId ? fetchById('collections', collectionId, COLLECTION_SELECT) : null
@@ -472,6 +471,7 @@ const resolvePurchaseFromBody = async (body) => {
     book: getText(body?.book_id),
     series: getText(body?.series_id),
     collection: getText(body?.collection_id),
+    pass: getText(body?.temporary_access_pass_id),
   }
   const providedTargets = Object.entries(targetFields).filter(([, value]) => value)
 
@@ -498,9 +498,10 @@ const resolvePurchaseFromBody = async (body) => {
       bookId,
       seriesId: null,
       collectionId: null,
+      temporaryAccessPassId: null,
       targetId: bookId,
       itemName: getText(book.title, 'Greyveil Book'),
-      amount: BOOK_PRICE,
+      amount: configuredPrice(book, 'book'),
       currency: INR,
       hierarchy,
     }
@@ -516,19 +517,42 @@ const resolvePurchaseFromBody = async (body) => {
     const hierarchy = { collection, volume, series }
     assertPurchaseableHierarchy(hierarchy)
 
-    const amount = SERIES_PRICES[normalizeSlug(series.slug)]
-    if (!amount) throw new ApiError(400, 'This series is not configured for checkout.', 'price_not_configured')
+    const amount = configuredPrice(series, 'series')
 
     return {
       purchaseType,
       bookId: null,
       seriesId,
       collectionId: null,
+      temporaryAccessPassId: null,
       targetId: seriesId,
       itemName: getText(series.title, 'Greyveil Series'),
       amount,
       currency: INR,
       hierarchy,
+    }
+  }
+
+  if (purchaseType === 'pass') {
+    const passId = requireValidId(targetFields.pass, 'temporary_access_pass_id')
+    const pass = await fetchById('temporary_access_passes', passId, TEMPORARY_PASS_SELECT)
+    if (!pass?.active) throw new ApiError(404, 'This access pass is not available.', 'purchase_unavailable')
+    const collection = pass.scope_type === 'collection'
+      ? await fetchById('collections', pass.collection_id, COLLECTION_SELECT)
+      : null
+    if (pass.scope_type === 'collection') assertPurchaseableHierarchy({ collection })
+    const amount = configuredPrice(pass, 'access pass')
+    return {
+      purchaseType,
+      bookId: null,
+      seriesId: null,
+      collectionId: null,
+      temporaryAccessPassId: passId,
+      targetId: passId,
+      itemName: getText(pass.title, 'Greyveil Access Pass'),
+      amount,
+      currency: INR,
+      hierarchy: { collection },
     }
   }
 
@@ -538,17 +562,14 @@ const resolvePurchaseFromBody = async (body) => {
 
   const hierarchy = { collection }
   assertPurchaseableHierarchy(hierarchy)
-  const collectionSlug = normalizeSlug(collection.slug)
-  const amount = COLLECTION_PRICES[collectionSlug]
-    || (normalizeSlug(collection.title).includes('human-paradox') ? COLLECTION_PRICES['human-paradox-collection'] : null)
-
-  if (!amount) throw new ApiError(400, 'This collection is not configured for checkout.', 'price_not_configured')
+  const amount = configuredPrice(collection, 'collection')
 
   return {
     purchaseType,
     bookId: null,
     seriesId: null,
     collectionId,
+    temporaryAccessPassId: null,
     targetId: collectionId,
     itemName: getText(collection.title, 'Greyveil Collection'),
     amount,
@@ -601,6 +622,16 @@ const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
   const role = normalizeSlug(profile?.role || 'customer').replace(/-/g, '_')
   if (role === 'admin' || role === 'super_admin') {
     return { entitled: true, reason: role }
+  }
+
+  if (purchase.purchaseType === 'pass') {
+    const activations = await selectRows('temporary_access_pass_activations', {
+      user_id: `eq.${user.id}`,
+      pass_id: `eq.${purchase.temporaryAccessPassId}`,
+      select: 'pass_id, expires_at',
+    })
+    const entitled = activations.some((activation) => Date.parse(activation.expires_at) > Date.now())
+    return { entitled, reason: entitled ? 'temporary_pass' : 'not_entitled' }
   }
 
   const [paidOrders, grants] = await Promise.all([
@@ -722,6 +753,7 @@ const createCheckoutOrder = async (user, body) => {
     book_id: purchase.bookId,
     series_id: purchase.seriesId,
     collection_id: purchase.collectionId,
+    temporary_access_pass_id: purchase.temporaryAccessPassId,
     item_name: purchase.itemName,
     original_amount: purchase.originalAmount,
     amount: purchase.amount,

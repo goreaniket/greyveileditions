@@ -14,7 +14,7 @@ Deno.serve(async (request) => {
     const now = new Date().toISOString()
     const { data: localOrder, error: localError } = await admin.from('orders').insert({
       user_id: user.id, purchase_type: purchase.purchaseType, book_id: purchase.bookId, series_id: purchase.seriesId,
-      collection_id: purchase.collectionId, item_name: purchase.itemName, original_amount: purchase.originalAmount,
+      collection_id: purchase.collectionId, temporary_access_pass_id: purchase.temporaryAccessPassId, item_name: purchase.itemName, original_amount: purchase.originalAmount,
       amount: purchase.amount, coupon_id: purchase.couponId, coupon_code: purchase.couponCode,
       discount_amount: purchase.discountAmount, currency: purchase.currency, status: 'pending', created_at: now, updated_at: now,
     }).select().single()

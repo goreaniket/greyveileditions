@@ -19,6 +19,7 @@ const volumeId = '20000000-0000-4000-8000-000000000001'
 const seriesAId = '30000000-0000-4000-8000-000000000001'
 const seriesBId = '30000000-0000-4000-8000-000000000002'
 const user = { id: '40000000-0000-4000-8000-000000000001' }
+const passId = '80000000-0000-4000-8000-000000000001'
 const context = { user, role: 'customer' }
 
 const active = { is_active: true, visibility: 'paid' }
@@ -28,16 +29,18 @@ const collection = {
   title: 'The Human Paradox Collection',
   ...active,
   visibility: 'public',
+  price_amount: 129900,
 }
 const volume = { id: volumeId, collection_id: collectionId, slug: 'volume', title: 'Volume', ...active }
-const seriesA = { id: seriesAId, volume_id: volumeId, collection_id: null, slug: 'human-mind', title: 'Series A', ...active }
-const seriesB = { id: seriesBId, volume_id: volumeId, collection_id: null, slug: 'human-fiction', title: 'Series B', ...active }
+const seriesA = { id: seriesAId, volume_id: volumeId, collection_id: null, slug: 'human-mind', title: 'Series A', price_amount: 59900, ...active }
+const seriesB = { id: seriesBId, volume_id: volumeId, collection_id: null, slug: 'human-fiction', title: 'Series B', price_amount: 49900, ...active }
 const book = (id, seriesId = seriesAId) => ({
   id,
   series_id: seriesId,
   slug: `book-${id}`,
   title: `Book ${id}`,
   is_public: false,
+  price_amount: 14900,
   ...active,
 })
 const books = [book(1), book(2), book(3), book(4, seriesBId)]
@@ -176,6 +179,17 @@ test('server resolver recognizes historical paid scope and rejects direct API du
   let razorpayCallCount = 0
   const razorpayRequests = []
   const localOrderPayloads = []
+  let passActivations = []
+  const accessPass = {
+    id: passId,
+    slug: 'collection-day-pass',
+    title: 'Collection 1-Day Pass',
+    active: true,
+    price_amount: 9900,
+    duration_hours: 24,
+    scope_type: 'collection',
+    collection_id: collectionId,
+  }
 
   globalThis.fetch = async (input, options = {}) => {
     const url = new URL(String(input))
@@ -207,6 +221,8 @@ test('server resolver recognizes historical paid scope and rejects direct API du
       }
     }
     if (url.pathname.endsWith('/book_access')) rows = grants
+    if (url.pathname.endsWith('/temporary_access_pass_activations')) rows = passActivations
+    if (url.pathname.endsWith('/temporary_access_passes')) rows = [accessPass]
     if (url.pathname.endsWith('/coupons') && url.searchParams.get('code') === 'eq.RIZZ') rows = [{
       id: '60000000-0000-4000-8000-000000000001',
       code: 'RIZZ',
@@ -286,6 +302,14 @@ test('server resolver recognizes historical paid scope and rejects direct API du
   assert.equal(pricing.original_amount, 129900)
   assert.equal(pricing.final_amount, 129900)
 
+  collection.price_amount = 131900
+  const updatedPricing = await api.previewCheckoutPricing(user, {
+    purchase_type: 'collection',
+    collection_id: collectionId,
+  })
+  assert.equal(updatedPricing.final_amount, 131900)
+  collection.price_amount = 129900
+
   const checkoutCases = [
     { type: 'book', id: books[2].id, amount: 14900, payload: { purchase_type: 'book', book_id: books[2].id, amount: 1 } },
     { type: 'series', id: seriesAId, amount: 59900, payload: { purchase_type: 'series', series_id: seriesAId } },
@@ -307,6 +331,34 @@ test('server resolver recognizes historical paid scope and rejects direct API du
     assert.equal(razorpayOrder.currency, 'INR')
   }
   assert.equal(razorpayCallCount, checkoutCases.length)
+
+  const historicalBookAmount = localOrderPayloads[0].amount
+  books[2].price_amount = 15900
+  const repricedBook = await api.previewCheckoutPricing(user, {
+    purchase_type: 'book',
+    book_id: books[2].id,
+  })
+  assert.equal(repricedBook.final_amount, 15900)
+  assert.equal(localOrderPayloads[0].amount, historicalBookAmount)
+  books[2].price_amount = 14900
+
+  const passOrder = await api.createCheckoutOrder(user, {
+    purchase_type: 'pass',
+    temporary_access_pass_id: passId,
+    amount: 1,
+  })
+  assert.equal(passOrder.amount, 9900)
+  assert.equal(localOrderPayloads.at(-1).temporary_access_pass_id, passId)
+  assert.equal(localOrderPayloads.at(-1).book_id, null)
+  assert.equal(localOrderPayloads.at(-1).series_id, null)
+  assert.equal(localOrderPayloads.at(-1).collection_id, null)
+  passActivations = [{ pass_id: passId, expires_at: '2099-01-01T00:00:00.000Z' }]
+  await assert.rejects(
+    api.createCheckoutOrder(user, { purchase_type: 'pass', temporary_access_pass_id: passId }),
+    (error) => error?.code === 'already_entitled' && error?.statusCode === 409
+  )
+  passActivations = [{ pass_id: passId, expires_at: '2020-01-01T00:00:00.000Z' }]
+  assert.equal((await api.previewCheckoutPricing(user, { purchase_type: 'pass', temporary_access_pass_id: passId })).final_amount, 9900)
 
   const discountedOrder = await api.createCheckoutOrder(user, {
     purchase_type: 'book',

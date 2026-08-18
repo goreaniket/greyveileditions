@@ -4,18 +4,16 @@ import test from 'node:test'
 
 const source = (path) => readFile(new URL(path, import.meta.url), 'utf8')
 
-test('Edge create-order authenticates, resolves trusted targets, and owns pricing', async () => {
+test('Edge create-order authenticates, resolves trusted targets, and reads persisted pricing', async () => {
   const [shared, createOrder] = await Promise.all([
     source('../supabase/functions/_shared/payment.ts'),
     source('../supabase/functions/create-order/index.ts'),
   ])
 
   assert.match(shared, /admin\.auth\.getUser/)
-  assert.match(shared, /const BOOK_PRICE = 14900/)
-  assert.match(shared, /'human-mind': 59900/)
-  assert.match(shared, /'human-paradox': 59900/)
-  assert.match(shared, /'human-fiction': 49900/)
-  assert.match(shared, /129900/)
+  assert.match(shared, /price_amount/)
+  assert.match(shared, /configuredPrice/)
+  assert.doesNotMatch(shared, /const BOOK_PRICE/)
   assert.match(shared, /provided\.length !== 1/)
   assert.match(shared, /already_entitled/)
   assert.match(createOrder, /resolvePurchase\(admin, body\)/)
@@ -23,6 +21,24 @@ test('Edge create-order authenticates, resolves trusted targets, and owns pricin
   assert.match(createOrder, /amount: purchase\.amount/)
   assert.doesNotMatch(createOrder, /amount:\s*body\./)
   assert.doesNotMatch(createOrder, /user_id:\s*body\./)
+  assert.match(createOrder, /temporary_access_pass_id: purchase\.temporaryAccessPassId/)
+})
+
+test('hierarchical commerce migration keeps parent ownership dynamic and temporary passes server-authoritative', async () => {
+  const sql = await source('../supabase/hierarchical-commerce-access.sql')
+  assert.match(sql, /add column if not exists price_amount integer/)
+  assert.match(sql, /greyveil_resolve_book_access/)
+  assert.match(sql, /order_row\.series_id = hierarchy\.series_id/)
+  assert.match(sql, /order_row\.collection_id = hierarchy\.collection_id/)
+  assert.match(sql, /temporary_access_pass_activations/)
+  assert.match(sql, /activation_time \+ make_interval\(hours => pass_row\.duration_hours\)/)
+  assert.match(sql, /revoke all on function public\.greyveil_resolve_book_access/)
+  assert.match(sql, /greyveil_admin_update_catalog_price/)
+  assert.match(sql, /greyveil_admin_update_catalog_visibility/)
+  const directFulfillment = sql.match(/create or replace function public\.greyveil_grant_paid_order_access\(\)[\s\S]*?\$\$;/)?.[0] || ''
+  assert.match(directFulfillment, /new\.purchase_type <> 'book'/)
+  assert.doesNotMatch(directFulfillment, /new\.purchase_type = 'series'/)
+  assert.doesNotMatch(directFulfillment, /new\.purchase_type = 'collection'/)
 })
 
 test('Edge verification checks ownership, signature, Razorpay state, amount, and currency', async () => {

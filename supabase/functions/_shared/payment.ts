@@ -2,10 +2,7 @@ import { createClient, type SupabaseClient, type User } from 'npm:@supabase/supa
 import { corsHeaders, handleCors } from './cors.ts'
 
 const INR = 'INR'
-const BOOK_PRICE = 14900
-const SERIES_PRICES: Record<string, number> = { 'human-mind': 59900, 'human-paradox': 59900, 'human-fiction': 49900 }
-const COLLECTION_PRICES: Record<string, number> = { 'human-paradox-collection': 129900, 'the-human-paradox-collection': 129900 }
-const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection'])
+const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection', 'pass'])
 const ID_PATTERN = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|\d+)$/i
 
 export class HttpError extends Error {
@@ -60,10 +57,11 @@ const one = async (admin: SupabaseClient, table: string, id: string) => {
 }
 
 export type Purchase = {
-  purchaseType: 'book' | 'series' | 'collection'
+  purchaseType: 'book' | 'series' | 'collection' | 'pass'
   bookId: string | null
   seriesId: string | null
   collectionId: string | null
+  temporaryAccessPassId: string | null
   targetId: string
   itemName: string
   amount: number
@@ -82,11 +80,17 @@ const validateHierarchy = (hierarchy: Purchase['hierarchy']) => {
   }
 }
 
+const configuredPrice = (item: any, label: string) => {
+  const amount = Number(item?.price_amount)
+  if (!Number.isInteger(amount) || amount <= 0) throw new HttpError(400, `This ${label} is not configured for checkout.`, 'price_not_configured')
+  return amount
+}
+
 export const resolvePurchase = async (admin: SupabaseClient, body: Record<string, unknown>): Promise<Purchase> => {
   const normalizedType = slug(body.purchase_type)
   if (!VALID_PURCHASE_TYPES.has(normalizedType)) throw new HttpError(400, 'Choose a valid purchase type.', 'invalid_purchase_type')
   const purchaseType = normalizedType as Purchase['purchaseType']
-  const targets = { book: text(body.book_id), series: text(body.series_id), collection: text(body.collection_id) }
+  const targets = { book: text(body.book_id), series: text(body.series_id), collection: text(body.collection_id), pass: text(body.temporary_access_pass_id) }
   const provided = Object.entries(targets).filter(([, value]) => value)
   if (provided.length !== 1 || provided[0][0] !== purchaseType || !ID_PATTERN.test(provided[0][1])) {
     throw new HttpError(400, 'Send exactly one matching purchase target.', 'invalid_purchase_target')
@@ -102,7 +106,8 @@ export const resolvePurchase = async (admin: SupabaseClient, body: Record<string
     if (!collection || !volume || !series) throw new HttpError(404, 'This purchase is not currently available.', 'purchase_unavailable')
     validateHierarchy(hierarchy)
     if (visibility(book, 'paid') === 'public') throw new HttpError(409, 'This book is free to read and cannot be purchased.', 'public_book_not_purchasable')
-    return { purchaseType: 'book', bookId: String(book.id), seriesId: null, collectionId: null, targetId: String(book.id), itemName: text(book.title, 'Greyveil Book'), amount: BOOK_PRICE, originalAmount: BOOK_PRICE, couponId: null, couponCode: null, discountAmount: 0, currency: INR, hierarchy }
+    const amount = configuredPrice(book, 'book')
+    return { purchaseType: 'book', bookId: String(book.id), seriesId: null, collectionId: null, temporaryAccessPassId: null, targetId: String(book.id), itemName: text(book.title, 'Greyveil Book'), amount, originalAmount: amount, couponId: null, couponCode: null, discountAmount: 0, currency: INR, hierarchy }
   }
   if (purchaseType === 'series') {
     const series = await one(admin, 'series', targets.series)
@@ -113,16 +118,22 @@ export const resolvePurchase = async (admin: SupabaseClient, body: Record<string
     const hierarchy = { collection, volume, series }
     if (!collection || !volume) throw new HttpError(404, 'This purchase is not currently available.', 'purchase_unavailable')
     validateHierarchy(hierarchy)
-    const amount = SERIES_PRICES[slug(series.slug)]
-    if (!amount) throw new HttpError(400, 'This series is not configured for checkout.', 'price_not_configured')
-    return { purchaseType: 'series', bookId: null, seriesId: String(series.id), collectionId: null, targetId: String(series.id), itemName: text(series.title, 'Greyveil Series'), amount, originalAmount: amount, couponId: null, couponCode: null, discountAmount: 0, currency: INR, hierarchy }
+    const amount = configuredPrice(series, 'series')
+    return { purchaseType: 'series', bookId: null, seriesId: String(series.id), collectionId: null, temporaryAccessPassId: null, targetId: String(series.id), itemName: text(series.title, 'Greyveil Series'), amount, originalAmount: amount, couponId: null, couponCode: null, discountAmount: 0, currency: INR, hierarchy }
+  }
+  if (purchaseType === 'pass') {
+    const pass = await one(admin, 'temporary_access_passes', targets.pass)
+    if (!pass?.active) throw new HttpError(404, 'This access pass is not available.', 'purchase_unavailable')
+    const collection = pass.scope_type === 'collection' ? await one(admin, 'collections', String(pass.collection_id)) : null
+    if (pass.scope_type === 'collection') validateHierarchy({ collection })
+    const amount = configuredPrice(pass, 'access pass')
+    return { purchaseType: 'pass', bookId: null, seriesId: null, collectionId: null, temporaryAccessPassId: String(pass.id), targetId: String(pass.id), itemName: text(pass.title, 'Greyveil Access Pass'), amount, originalAmount: amount, couponId: null, couponCode: null, discountAmount: 0, currency: INR, hierarchy: { collection } }
   }
   const collection = await one(admin, 'collections', targets.collection)
   if (!collection) throw new HttpError(404, 'This collection is not available.', 'purchase_unavailable')
   validateHierarchy({ collection })
-  const amount = COLLECTION_PRICES[slug(collection.slug)] || (slug(collection.title).includes('human-paradox') ? 129900 : 0)
-  if (!amount) throw new HttpError(400, 'This collection is not configured for checkout.', 'price_not_configured')
-  return { purchaseType: 'collection', bookId: null, seriesId: null, collectionId: String(collection.id), targetId: String(collection.id), itemName: text(collection.title, 'Greyveil Collection'), amount, originalAmount: amount, couponId: null, couponCode: null, discountAmount: 0, currency: INR, hierarchy: { collection } }
+  const amount = configuredPrice(collection, 'collection')
+  return { purchaseType: 'collection', bookId: null, seriesId: null, collectionId: String(collection.id), temporaryAccessPassId: null, targetId: String(collection.id), itemName: text(collection.title, 'Greyveil Collection'), amount, originalAmount: amount, couponId: null, couponCode: null, discountAmount: 0, currency: INR, hierarchy: { collection } }
 }
 
 const currentGrant = (grant: any) => grant?.is_visible === true && grant?.can_read === true && (!grant?.expires_at || Date.parse(grant.expires_at) > Date.now())
@@ -130,6 +141,12 @@ export const assertNotEntitled = async (admin: SupabaseClient, user: User, purch
   const { data: profile, error: profileError } = await admin.from('profiles').select('role').eq('id', user.id).maybeSingle()
   if (profileError) throw new HttpError(500, 'Entitlement data could not be checked.', 'database_read_failed')
   if (['admin', 'super_admin'].includes(profile?.role)) throw new HttpError(409, 'This item is already in your library.', 'already_entitled')
+  if (purchase.purchaseType === 'pass') {
+    const { data: activations, error: activationError } = await admin.from('temporary_access_pass_activations').select('expires_at').eq('user_id', user.id).eq('pass_id', purchase.temporaryAccessPassId)
+    if (activationError) throw new HttpError(500, 'Entitlement data could not be checked.', 'database_read_failed')
+    if ((activations || []).some((activation) => Date.parse(activation.expires_at) > Date.now())) throw new HttpError(409, 'This access pass is already active.', 'already_entitled')
+    return
+  }
   const { data: orders, error } = await admin.from('orders').select('purchase_type, book_id, series_id, collection_id, status').eq('user_id', user.id).eq('status', 'paid')
   if (error) throw new HttpError(500, 'Entitlement data could not be checked.', 'database_read_failed')
   const paid = orders || []
