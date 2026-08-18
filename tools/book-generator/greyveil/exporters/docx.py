@@ -242,6 +242,11 @@ def configure_styles(doc: Document, theme: ExportTheme) -> None:
 
 
 def add_opening_page(doc: Document, model: BookModel, theme: ExportTheme) -> None:
+    opening = next((unit for unit in model.chapters if unit.kind == "opening"), None)
+    if opening and str(opening.raw.get("openingMode", "")).casefold() == "source":
+        add_source_opening_page(doc, opening, theme)
+        return
+
     first = doc.add_paragraph()
     first.style = "Greyveil Kicker"
     first.paragraph_format.space_before = Inches(theme.title_opening_top_in)
@@ -280,6 +285,62 @@ def add_opening_page(doc: Document, model: BookModel, theme: ExportTheme) -> Non
         if model.metadata.edition_year:
             imprint = f"{imprint} {model.metadata.edition_year}"
         add_text_run(publisher, imprint, theme.sans_font, 8.0, theme.accent, bold=True)
+
+
+def add_source_opening_page(doc: Document, opening: ChapterUnit, theme: ExportTheme) -> None:
+    first_content = True
+    title_rule_added = False
+
+    for block in opening.blocks:
+        if block.type == "space":
+            add_spacer(doc, 0.10)
+            continue
+
+        role = str(block.raw.get("role", "")).casefold()
+        if role == "title":
+            if not title_rule_added:
+                add_displaced_rule(
+                    doc,
+                    theme,
+                    width_a=theme.title_rule_primary_in,
+                    width_b=theme.title_rule_secondary_in,
+                    left=0.0,
+                    horizontal_offset=theme.title_rule_horizontal_offset_in,
+                    vertical_offset=theme.title_rule_vertical_offset_in,
+                    after_pt=12,
+                )
+                title_rule_added = True
+            style_name = "Greyveil Title"
+            font_name, size_pt, color = theme.display_font, min(theme.title_size_pt, 43), theme.heading
+        elif role == "subtitle-line":
+            style_name = "Greyveil Subtitle"
+            font_name, size_pt, color = theme.display_font, 14.2, theme.muted
+        elif role == "epigraph" or is_quote_block(block.type):
+            style_name = "Greyveil Quote"
+            font_name, size_pt, color = theme.display_font, 13.2, theme.accent
+        else:
+            style_name = "Greyveil Kicker"
+            font_name, size_pt, color = theme.sans_font, theme.chapter_number_size_pt, theme.accent
+            if role in {"series-line", "book-number"}:
+                color = theme.warm
+
+        paragraph = doc.add_paragraph(style=style_name)
+        if first_content:
+            paragraph.paragraph_format.space_before = Inches(theme.title_opening_top_in)
+            first_content = False
+        if role == "subtitle-line":
+            paragraph.paragraph_format.space_after = Pt(2)
+
+        for text, bold, italic in iter_text_runs(block):
+            add_text_run(
+                paragraph,
+                text,
+                font_name,
+                size_pt,
+                color,
+                bold=bold,
+                italic=italic or role == "epigraph",
+            )
 
 
 def add_units(doc: Document, model: BookModel, repo_root: Path, theme: ExportTheme) -> None:

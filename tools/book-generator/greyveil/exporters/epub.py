@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import html
 import math
+import re
 import textwrap
 import uuid
 import zipfile
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 
 from greyveil.exporters.common import (
@@ -204,6 +206,10 @@ def cover_page_body(model: BookModel, cover) -> str:
 
 
 def title_page_body(model: BookModel) -> str:
+    opening = next((unit for unit in model.chapters if unit.kind == "opening"), None)
+    if opening and str(opening.raw.get("openingMode", "")).casefold() == "source":
+        return source_title_page_body(opening)
+
     metadata = model.metadata
     parts = [
         '<main class="page page--title" epub:type="titlepage">',
@@ -225,6 +231,40 @@ def title_page_body(model: BookModel) -> str:
         if metadata.edition_year:
             imprint = f"{imprint} {metadata.edition_year}"
         parts.append(f'<p class="title-imprint">{html.escape(imprint)}</p>')
+    parts.extend(["</section>", "</main>"])
+    return "\n".join(parts)
+
+
+def source_title_page_body(opening: ChapterUnit) -> str:
+    parts = [
+        '<main class="page page--title page--source-title" epub:type="titlepage">',
+        '<div class="title-rule title-rule--a"></div>',
+        '<div class="title-rule title-rule--b"></div>',
+        '<section class="title-block">',
+    ]
+    for block in opening.blocks:
+        if block.type == "space":
+            parts.append('<div class="title-source-space" aria-hidden="true"></div>')
+            continue
+
+        content = block_html(block)
+        if not content:
+            continue
+        role = str(block.raw.get("role", "")).casefold()
+        if role == "title":
+            parts.append(f"<h1>{content}</h1>")
+        elif role == "subtitle-line":
+            parts.append(f'<p class="title-subtitle">{content}</p>')
+        elif role == "epigraph" or is_quote_block(block.type):
+            parts.append(f'<blockquote class="title-epigraph">{content}</blockquote>')
+        elif role == "author":
+            parts.append(f'<p class="title-author">{content}</p>')
+        elif role == "publisher":
+            parts.append(f'<p class="title-imprint">{content}</p>')
+        elif role == "collection-line":
+            parts.append(f'<p class="title-collection">{content}</p>')
+        else:
+            parts.append(f'<p class="title-kicker">{content}</p>')
     parts.extend(["</section>", "</main>"])
     return "\n".join(parts)
 
@@ -731,27 +771,90 @@ def fixed_package_opf(
     )
     spine_items = "\n".join(f'    <itemref idref="{html.escape(page.id)}"/>' for page in pages)
     metadata = model.metadata
-    subtitle = f"    <dc:description>{html.escape(metadata.subtitle)}</dc:description>\n" if metadata.subtitle else ""
-    series = f"    <meta property=\"belongs-to-collection\">{html.escape(metadata.series)}</meta>\n" if metadata.series else ""
-    book_number = (
-        f"    <meta property=\"group-position\">{html.escape(book_number_label(metadata.book_number).replace('Book ', ''))}</meta>\n"
-        if metadata.book_number
-        else ""
+    title_metadata = [
+        f'    <dc:title id="main-title">{html.escape(metadata.title)}</dc:title>',
+        '    <meta refines="#main-title" property="title-type">main</meta>',
+    ]
+    if metadata.subtitle:
+        title_metadata.extend(
+            [
+                f'    <dc:title id="subtitle">{html.escape(metadata.subtitle)}</dc:title>',
+                '    <meta refines="#subtitle" property="title-type">subtitle</meta>',
+            ]
+        )
+
+    hierarchy_metadata: list[str] = []
+    collection_id = ""
+    if metadata.collection:
+        collection_id = "collection"
+        hierarchy_metadata.extend(
+            [
+                f'    <meta id="{collection_id}" property="belongs-to-collection">{html.escape(metadata.collection)}</meta>',
+                f'    <meta refines="#{collection_id}" property="collection-type">collection</meta>',
+            ]
+        )
+    series_id = ""
+    if metadata.series and metadata.series.casefold() != metadata.collection.casefold():
+        series_id = "series"
+        hierarchy_metadata.extend(
+            [
+                f'    <meta id="{series_id}" property="belongs-to-collection">{html.escape(metadata.series)}</meta>',
+                f'    <meta refines="#{series_id}" property="collection-type">series</meta>',
+            ]
+        )
+
+    group_position = numeric_group_position(metadata.book_number)
+    group_id = series_id or collection_id
+    if group_position and group_id:
+        hierarchy_metadata.append(
+            f'    <meta refines="#{group_id}" property="group-position">{group_position}</meta>'
+        )
+
+    accessibility_features = ["readingOrder", "tableOfContents", "pageNavigation"]
+    if cover and cover.resolved_path:
+        accessibility_features.append("alternativeText")
+    accessibility_metadata = [
+        '    <meta property="schema:accessMode">textual</meta>',
+        '    <meta property="schema:accessMode">visual</meta>',
+        *(f'    <meta property="schema:accessibilityFeature">{feature}</meta>' for feature in accessibility_features),
+        '    <meta property="schema:accessibilityHazard">noFlashingHazard</meta>',
+        '    <meta property="schema:accessibilityHazard">noMotionSimulationHazard</meta>',
+        '    <meta property="schema:accessibilityHazard">noSoundHazard</meta>',
+    ]
+    summary = (
+        "This fixed-layout publication is primarily textual and includes a table of contents, "
+        "page navigation, a defined reading order, and alternative text for the cover artwork. "
+        "Its fixed page presentation may limit text resizing and reflow."
+        if cover and cover.resolved_path
+        else
+        "This fixed-layout publication is primarily textual and includes a table of contents, "
+        "page navigation, and a defined reading order. Its fixed page presentation may limit "
+        "text resizing and reflow."
     )
+    accessibility_metadata.append(
+        f'    <meta property="schema:accessibilitySummary">{html.escape(summary)}</meta>'
+    )
+
+    modified = datetime.now(timezone.utc).replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
+    title_metadata_xml = "\n".join(title_metadata)
+    hierarchy_metadata_xml = "\n".join(hierarchy_metadata)
+    accessibility_metadata_xml = "\n".join(accessibility_metadata)
     return f"""<?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="book-id" xml:lang="en" prefix="rendition: http://www.idpf.org/vocab/rendition/# schema: https://schema.org/">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="book-id">{identifier}</dc:identifier>
-    <dc:title>{html.escape(metadata.title)}</dc:title>
+{title_metadata_xml}
     <dc:creator>{html.escape(metadata.author)}</dc:creator>
     <dc:publisher>{html.escape(metadata.publisher)}</dc:publisher>
     <dc:language>en</dc:language>
-    <meta property="dcterms:modified">2026-08-09T00:00:00Z</meta>
+    <meta property="dcterms:modified">{modified}</meta>
     <meta property="rendition:layout">pre-paginated</meta>
     <meta property="rendition:orientation">portrait</meta>
     <meta property="rendition:spread">none</meta>
     <meta property="rendition:flow">paginated</meta>
-{subtitle}{series}{book_number}{cover_meta}  </metadata>
+{hierarchy_metadata_xml}
+{accessibility_metadata_xml}
+{cover_meta}  </metadata>
   <manifest>
     <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
     <item id="style" href="styles/greyveil-fixed.css" media-type="text/css"/>
@@ -762,6 +865,55 @@ def fixed_package_opf(
   </spine>
 </package>
 """
+
+
+def numeric_group_position(value: str) -> str:
+    clean = re.sub(r"^\s*book\b[\s:—–-]*", "", value or "", flags=re.IGNORECASE).strip()
+    if re.fullmatch(r"\d+(?:\.\d+)*", clean):
+        return ".".join(str(int(part)) for part in clean.split("."))
+
+    roman = clean.upper()
+    if not roman or not re.fullmatch(r"[IVXLCDM]+", roman):
+        return ""
+
+    values = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    total = 0
+    previous = 0
+    for character in reversed(roman):
+        current = values[character]
+        if current < previous:
+            total -= current
+        else:
+            total += current
+            previous = current
+
+    if not 0 < total < 4000 or roman_from_int(total) != roman:
+        return ""
+    return str(total)
+
+
+def roman_from_int(value: int) -> str:
+    numerals = (
+        (1000, "M"),
+        (900, "CM"),
+        (500, "D"),
+        (400, "CD"),
+        (100, "C"),
+        (90, "XC"),
+        (50, "L"),
+        (40, "XL"),
+        (10, "X"),
+        (9, "IX"),
+        (5, "V"),
+        (4, "IV"),
+        (1, "I"),
+    )
+    parts: list[str] = []
+    remaining = value
+    for number, numeral in numerals:
+        count, remaining = divmod(remaining, number)
+        parts.append(numeral * count)
+    return "".join(parts)
 
 
 def fixed_stylesheet(theme: ExportTheme, geometry: FixedGeometry) -> str:
@@ -927,8 +1079,28 @@ body {{
   line-height: 19px;
 }}
 
+.page--source-title .title-subtitle {{
+  max-width: 40ch;
+  margin-bottom: 2px;
+}}
+
+.title-source-space {{
+  height: 10px;
+}}
+
+.title-epigraph {{
+  max-width: 38ch;
+  margin: 10px 0;
+  color: {theme.accent};
+  font-family: {display_font};
+  font-size: 11.5px;
+  font-style: italic;
+  line-height: 16px;
+}}
+
 .title-author,
-.title-imprint {{
+.title-imprint,
+.title-collection {{
   margin: 0 0 5px;
   color: {theme.accent};
   font-family: {sans_font};

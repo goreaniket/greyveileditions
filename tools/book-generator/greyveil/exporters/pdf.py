@@ -474,6 +474,18 @@ def build_styles(theme: ExportTheme, fonts: PdfFontSet):
     )
     sheet.add(
         ParagraphStyle(
+            name="GreyveilOpeningSubtitleLine",
+            parent=sheet["Normal"],
+            fontName=fonts.display.primary(italic=True),
+            fontSize=14.2,
+            leading=17,
+            alignment=TA_LEFT,
+            textColor=muted,
+            spaceAfter=2,
+        )
+    )
+    sheet.add(
+        ParagraphStyle(
             name="GreyveilMeta",
             parent=sheet["Normal"],
             fontName=fonts.sans.primary(),
@@ -560,6 +572,20 @@ def build_styles(theme: ExportTheme, fonts: PdfFontSet):
     )
     sheet.add(
         ParagraphStyle(
+            name="GreyveilOpeningEpigraph",
+            parent=sheet["BodyText"],
+            fontName=fonts.display.primary(italic=True),
+            fontSize=11.5,
+            leading=16,
+            leftIndent=12,
+            rightIndent=24,
+            textColor=accent,
+            spaceBefore=8,
+            spaceAfter=8,
+        )
+    )
+    sheet.add(
+        ParagraphStyle(
             name="GreyveilDedication",
             parent=sheet["Normal"],
             fontName=fonts.display.primary(italic=True),
@@ -594,6 +620,12 @@ def append_opening_page(
     theme: ExportTheme,
     fonts: PdfFontSet,
 ) -> None:
+    opening = next((unit for unit in model.chapters if unit.kind == "opening"), None)
+    if opening and str(opening.raw.get("openingMode", "")).casefold() == "source":
+        append_source_opening_page(story, opening, styles, theme, fonts)
+        story.append(PageBreak())
+        return
+
     metadata = model.metadata
     story.append(FolioPolicy(True))
     story.append(Spacer(1, theme.title_opening_top_in * inch))
@@ -620,6 +652,39 @@ def append_opening_page(
             publisher = f"{publisher} {metadata.edition_year}"
         story.append(Paragraph(pdf_text(publisher, fonts.sans, bold=True), styles["GreyveilMeta"]))
     story.append(PageBreak())
+
+
+def append_source_opening_page(
+    story: List[Flowable],
+    opening: ChapterUnit,
+    styles,
+    theme: ExportTheme,
+    fonts: PdfFontSet,
+) -> None:
+    story.append(FolioPolicy(True))
+    story.append(Spacer(1, theme.title_opening_top_in * inch))
+    story.append(opening_rule(theme, title=True))
+
+    for block in opening.blocks:
+        if block.type == "space":
+            story.append(Spacer(1, 0.12 * inch))
+            continue
+
+        role = str(block.raw.get("role", "")).casefold()
+        if role == "title":
+            font_role, style_name = fonts.display, "GreyveilOpeningTitle"
+        elif role == "subtitle-line":
+            font_role, style_name = fonts.display, "GreyveilOpeningSubtitleLine"
+        elif role == "epigraph" or is_quote_block(block.type):
+            font_role, style_name = fonts.display, "GreyveilOpeningEpigraph"
+        elif role in {"series-line", "book-number"}:
+            font_role, style_name = fonts.sans, "GreyveilOpeningSeries"
+        else:
+            font_role, style_name = fonts.sans, "GreyveilMeta"
+
+        text = pdf_block_html(block, font_role)
+        if text:
+            story.append(Paragraph(text, styles[style_name]))
 
 
 def append_units(
