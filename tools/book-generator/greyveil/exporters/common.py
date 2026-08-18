@@ -16,6 +16,7 @@ from greyveil.utils import first_string
 TRIM_WIDTH_IN = 5.5
 TRIM_HEIGHT_IN = 8.5
 QUOTE_BLOCK_TYPES = {"quote", "blockquote"}
+DEFAULT_HIDDEN_FOLIO_KINDS = frozenset({"opening", "contents", "dedication", "feedback"})
 
 
 @dataclass(frozen=True)
@@ -51,6 +52,30 @@ class ExportTheme:
     accent: str
     accent_strong: str
     warm: str
+    cover_fit: str
+    title_opening_top_in: float
+    unit_opening_top_in: float
+    title_rule_primary_in: float
+    title_rule_secondary_in: float
+    title_rule_horizontal_offset_in: float
+    title_rule_vertical_offset_in: float
+    title_rule_clearance_in: float
+    unit_rule_primary_in: float
+    unit_rule_secondary_in: float
+    unit_rule_horizontal_offset_in: float
+    unit_rule_vertical_offset_in: float
+    opening_kicker_gap_pt: float
+    opening_body_gap_pt: float
+    divider_primary_width_in: float
+    divider_secondary_width_in: float
+    divider_horizontal_offset_in: float
+    divider_vertical_offset_in: float
+    divider_height_in: float
+    folio_bottom_in: float
+    folio_size_pt: float
+    folio_rule_width_in: float
+    folio_rule_gap_in: float
+    folio_hidden_kinds: frozenset[str]
 
     @property
     def content_width_in(self) -> float:
@@ -71,6 +96,34 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
     if not isinstance(typography, dict):
         typography = {}
     print_palette = mapping.get("printPalette", {}) if isinstance(mapping, dict) else {}
+    layout = design.get("generationLayout", {}) if isinstance(design, dict) else {}
+    if not isinstance(layout, dict):
+        layout = {}
+    semantic_pages = design.get("semanticPageTypes", {}) if isinstance(design, dict) else {}
+    if not isinstance(semantic_pages, dict):
+        semantic_pages = {}
+    title_page = semantic_dict(semantic_pages, "titlePage")
+    chapter_page = semantic_dict(semantic_pages, "chapterOpeningPage", "chapterOpening")
+    divider_page = semantic_dict(semantic_pages, "sectionBreak")
+    folio_page = semantic_dict(semantic_pages, "pageNumbers")
+    cover_spec = design.get("coverSpecification", {}) if isinstance(design, dict) else {}
+    if not isinstance(cover_spec, dict):
+        cover_spec = {}
+
+    title_motif_px = measurements(title_page.get("motif"), "px")
+    chapter_motif_px = measurements(chapter_page.get("motif"), "px")
+    divider_mapping_in = measurements(mapping.get("sectionBreak"), "in")
+    divider_semantic_px = measurements(
+        " ".join(
+            first_string(divider_page.get(key))
+            for key in ("primaryRule", "secondaryRule", "offset", "heightDesktop")
+        ),
+        "px",
+    )
+    page_number_mapping_in = measurements(mapping.get("pageNumber"), "in")
+    page_number_mapping_pt = measurements(mapping.get("pageNumber"), "pt")
+    folio_placement_px = measurements(folio_page.get("desktopPlacement"), "px")
+    folio_rule_px = measurements(folio_page.get("rule"), "px")
 
     gutter = parse_inches(mapping.get("gutterMargin"), 0.14 if print_mode else 0.0)
     trim_value = first_string(
@@ -130,6 +183,78 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
             first_string(colors.get("warmMist"), colors.get("warm"), colors.get("warmCounterpoint"), colors.get("mist")),
             "#7E8F9B",
         ),
+        cover_fit=cover_fit_from_design(layout, mapping, cover_spec, semantic_pages),
+        title_opening_top_in=parse_inches(layout.get("titleOpeningTopOffset"), 1.18),
+        unit_opening_top_in=parse_inches(layout.get("unitOpeningTopOffset"), 0.15),
+        title_rule_primary_in=parse_inches(
+            layout.get("titleOpeningRulePrimary"),
+            px_to_inches(value_at(title_motif_px, 0), 1.0),
+        ),
+        title_rule_secondary_in=parse_inches(
+            layout.get("titleOpeningRuleSecondary"),
+            px_to_inches(value_at(title_motif_px, 1), 0.60),
+        ),
+        title_rule_horizontal_offset_in=parse_inches(
+            layout.get("titleOpeningRuleHorizontalOffset"),
+            px_to_inches(value_at(title_motif_px, 2), 0.15),
+        ),
+        title_rule_vertical_offset_in=parse_inches(
+            layout.get("titleOpeningRuleVerticalOffset"),
+            px_to_inches(value_at(title_motif_px, 3), 0.125),
+        ),
+        title_rule_clearance_in=parse_inches(layout.get("titleOpeningRuleClearance"), 14 / 96),
+        unit_rule_primary_in=parse_inches(
+            layout.get("unitOpeningRulePrimary"),
+            px_to_inches(value_at(chapter_motif_px, 0), 0.75),
+        ),
+        unit_rule_secondary_in=parse_inches(
+            layout.get("unitOpeningRuleSecondary"),
+            px_to_inches(value_at(chapter_motif_px, 1), 0.44),
+        ),
+        unit_rule_horizontal_offset_in=parse_inches(
+            layout.get("unitOpeningRuleHorizontalOffset"),
+            px_to_inches(value_at(chapter_motif_px, 2), 0.125),
+        ),
+        unit_rule_vertical_offset_in=parse_inches(layout.get("unitOpeningRuleVerticalOffset"), 0.125),
+        opening_kicker_gap_pt=parse_points(layout.get("openingKickerGap"), 8.0),
+        opening_body_gap_pt=parse_points(layout.get("openingBodyGap"), 20.0),
+        divider_primary_width_in=parse_inches(
+            layout.get("dividerPrimaryWidth"),
+            value_at(divider_mapping_in, 0, px_to_inches(value_at(divider_semantic_px, 0), 0.44)),
+        ),
+        divider_secondary_width_in=parse_inches(
+            layout.get("dividerSecondaryWidth"),
+            value_at(divider_mapping_in, 1, px_to_inches(value_at(divider_semantic_px, 2), 0.27)),
+        ),
+        divider_horizontal_offset_in=parse_inches(
+            layout.get("dividerHorizontalOffset"),
+            value_at(divider_mapping_in, 2, px_to_inches(value_at(divider_semantic_px, 4), 0.12)),
+        ),
+        divider_vertical_offset_in=parse_inches(
+            layout.get("dividerVerticalOffset"),
+            value_at(divider_mapping_in, 3, px_to_inches(value_at(divider_semantic_px, 5), 0.07)),
+        ),
+        divider_height_in=parse_inches(
+            layout.get("dividerHeight"),
+            px_to_inches(value_at(measurements(divider_page.get("heightDesktop"), "px"), 0), 0.625),
+        ),
+        folio_bottom_in=parse_inches(
+            layout.get("folioBottomOffset"),
+            value_at(page_number_mapping_in, 0, px_to_inches(value_at(folio_placement_px, 0), 0.30)),
+        ),
+        folio_size_pt=parse_points(
+            layout.get("folioSize"),
+            value_at(page_number_mapping_pt, 0, 8.0),
+        ),
+        folio_rule_width_in=parse_inches(
+            layout.get("folioRuleWidth"),
+            value_at(page_number_mapping_in, 1, px_to_inches(value_at(folio_rule_px, 0), 0.24)),
+        ),
+        folio_rule_gap_in=parse_inches(
+            layout.get("folioRuleGap"),
+            px_to_inches(7, 7 / 96),
+        ),
+        folio_hidden_kinds=folio_hidden_kinds(layout, mapping, folio_page),
     )
 
 
@@ -155,6 +280,58 @@ def export_mapping(design: dict, *, print_mode: bool) -> dict:
         merged.update(pdf)
 
     return merged
+
+
+def semantic_dict(semantic_pages: dict, *keys: str) -> dict:
+    for key in keys:
+        value = semantic_pages.get(key)
+        if isinstance(value, dict):
+            return value
+    return {}
+
+
+def measurements(value: object, unit: str) -> list[float]:
+    if not isinstance(value, str):
+        return []
+    pattern = rf"([0-9]+(?:\.[0-9]+)?)\s*{re.escape(unit)}\b"
+    return [float(match) for match in re.findall(pattern, value, flags=re.IGNORECASE)]
+
+
+def value_at(values: Sequence[float], index: int, fallback: float = 0.0) -> float:
+    return values[index] if len(values) > index else fallback
+
+
+def px_to_inches(value: float, fallback: float) -> float:
+    return value / 96 if value > 0 else fallback
+
+
+def cover_fit_from_design(layout: dict, mapping: dict, cover_spec: dict, semantic_pages: dict) -> str:
+    pdf_cover = cover_spec.get("PdfCoverPageMapping", {})
+    if not isinstance(pdf_cover, dict):
+        pdf_cover = {}
+    declared = first_string(
+        layout.get("coverFit"),
+        mapping.get("coverFit"),
+        cover_spec.get("imageFitBehavior"),
+        pdf_cover.get("fitMode"),
+        semantic_pages.get("frontCover"),
+        semantic_pages.get("cover"),
+    ).casefold()
+    if "contain" in declared or "no crop" in declared or "without cropping" in declared:
+        return "contain"
+    return "contain"
+
+
+def folio_hidden_kinds(layout: dict, mapping: dict, folio_page: dict) -> frozenset[str]:
+    configured = layout.get("folioHiddenOn", folio_page.get("hiddenOn"))
+    if isinstance(configured, list):
+        normalized = frozenset(str(value).strip().casefold() for value in configured if str(value).strip())
+        if normalized:
+            return normalized
+
+    declared = first_string(mapping.get("specialPages")).casefold()
+    from_mapping = frozenset(kind for kind in DEFAULT_HIDDEN_FOLIO_KINDS if kind in declared)
+    return from_mapping or DEFAULT_HIDDEN_FOLIO_KINDS
 
 
 def parse_points(value: object, fallback: float) -> float:
@@ -284,8 +461,9 @@ def unit_subtitle(unit: ChapterUnit) -> str:
     return first_string(unit.raw.get("subtitle"))
 
 
-def hide_folio_for_unit(unit: ChapterUnit) -> bool:
-    return unit.kind in {"opening", "contents", "dedication", "feedback"}
+def hide_folio_for_unit(unit: ChapterUnit, theme: ExportTheme | None = None) -> bool:
+    hidden_kinds = theme.folio_hidden_kinds if theme else DEFAULT_HIDDEN_FOLIO_KINDS
+    return unit.kind in hidden_kinds
 
 
 def is_quote_block(block_type: str) -> bool:

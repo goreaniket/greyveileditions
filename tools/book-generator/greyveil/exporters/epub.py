@@ -163,7 +163,7 @@ def build_fixed_pages(model: BookModel, theme: ExportTheme, geometry: FixedGeome
             continue
 
         unit_pages = build_unit_pages(unit, theme, geometry, start_index=page_index)
-        hide_folio = hide_folio_for_unit(unit)
+        hide_folio = hide_folio_for_unit(unit, theme)
         for unit_page_index, page in enumerate(unit_pages):
             page_index += 1
             nav_label = unit.short_title or unit.title if unit_page_index == 0 else ""
@@ -759,6 +759,7 @@ def fixed_package_opf(
 
 
 def fixed_stylesheet(theme: ExportTheme, geometry: FixedGeometry) -> str:
+    css_px_per_inch = 96
     body_font = css_font_stack(theme.body_font_stack)
     display_font = css_font_stack(theme.display_font_stack)
     sans_font = css_font_stack(theme.sans_font_stack)
@@ -775,6 +776,10 @@ def fixed_stylesheet(theme: ExportTheme, geometry: FixedGeometry) -> str:
     short_width = geometry.content_width_px
     short_font_size = min(geometry.body_size_px, 11.0)
     short_line_height = max(15.2, min(geometry.line_height_px, geometry.body_size_px + 3.7))
+    title_top = geometry.top_px + round(theme.title_opening_top_in * css_px_per_inch)
+    title_rule_clearance = theme.title_rule_clearance_in * css_px_per_inch
+    title_rule_vertical = theme.title_rule_vertical_offset_in * css_px_per_inch
+    unit_top = geometry.top_px + round(theme.unit_opening_top_in * css_px_per_inch)
     return f"""
 @namespace epub "http://www.idpf.org/2007/ops";
 
@@ -835,7 +840,7 @@ body {{
 }}
 
 .page--cover {{
-  background: {theme.heading};
+  background: {theme.paper};
 }}
 
 .cover-image {{
@@ -843,7 +848,7 @@ body {{
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: {theme.cover_fit};
   display: block;
 }}
 
@@ -857,7 +862,7 @@ body {{
 .title-block {{
   position: absolute;
   left: {geometry.inside_px}px;
-  top: 164px;
+  top: {title_top}px;
   width: {geometry.content_width_px}px;
 }}
 
@@ -870,21 +875,21 @@ body {{
 
 .title-rule--a {{
   left: {geometry.inside_px}px;
-  top: 138px;
-  width: 96px;
+  top: {title_top - title_rule_clearance - title_rule_vertical}px;
+  width: {theme.title_rule_primary_in * css_px_per_inch}px;
   opacity: .48;
 }}
 
 .title-rule--b {{
-  left: {geometry.inside_px + 14}px;
-  top: 150px;
-  width: 58px;
+  left: {geometry.inside_px + (theme.title_rule_horizontal_offset_in * css_px_per_inch)}px;
+  top: {title_top - title_rule_clearance}px;
+  width: {theme.title_rule_secondary_in * css_px_per_inch}px;
   opacity: .26;
 }}
 
 .title-kicker,
 .unit-kicker {{
-  margin: 0 0 5px;
+  margin: 0 0 {theme.opening_kicker_gap_pt}px;
   color: {theme.warm};
   font-family: {sans_font};
   font-size: 8.5px;
@@ -924,7 +929,7 @@ body {{
 .unit-header {{
   position: absolute;
   left: {geometry.inside_px}px;
-  top: 66px;
+  top: {unit_top}px;
   width: {geometry.content_width_px}px;
   min-height: 138px;
   box-sizing: border-box;
@@ -967,14 +972,14 @@ body {{
 .reader-rule--a {{
   left: 0;
   top: 0;
-  width: 72px;
+  width: {theme.unit_rule_primary_in * css_px_per_inch}px;
   opacity: .46;
 }}
 
 .reader-rule--b {{
-  left: 12px;
-  top: 12px;
-  width: 42px;
+  left: {theme.unit_rule_horizontal_offset_in * css_px_per_inch}px;
+  top: {theme.unit_rule_vertical_offset_in * css_px_per_inch}px;
+  width: {theme.unit_rule_secondary_in * css_px_per_inch}px;
   opacity: .24;
 }}
 
@@ -1147,7 +1152,7 @@ body {{
 
 .reader-section-break {{
   position: relative;
-  height: 42px;
+  height: {theme.divider_height_in * css_px_per_inch}px;
   margin: 4px 0;
 }}
 
@@ -1160,15 +1165,15 @@ body {{
 }}
 
 .reader-section-break span:first-child {{
-  width: 44px;
+  width: {theme.divider_primary_width_in * css_px_per_inch}px;
   opacity: .50;
-  transform: translate(-6px, -4px);
+  transform: translate(-{theme.divider_horizontal_offset_in * css_px_per_inch / 2}px, -{theme.divider_vertical_offset_in * css_px_per_inch / 2}px);
 }}
 
 .reader-section-break span:last-child {{
-  width: 27px;
+  width: {theme.divider_secondary_width_in * css_px_per_inch}px;
   opacity: .28;
-  transform: translate(12px, 7px);
+  transform: translate({theme.divider_horizontal_offset_in * css_px_per_inch}px, {theme.divider_vertical_offset_in * css_px_per_inch}px);
 }}
 
 .reader-quote {{
@@ -1199,19 +1204,19 @@ body {{
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 14px;
+  bottom: {theme.folio_bottom_in * css_px_per_inch}px;
   display: grid;
   justify-items: center;
-  gap: 5px;
+  gap: {theme.folio_rule_gap_in * css_px_per_inch}px;
   color: {theme.subtle};
   font-family: {sans_font};
-  font-size: 8px;
+  font-size: {theme.folio_size_pt}px;
   line-height: 1;
 }}
 
 .page-folio span {{
   display: block;
-  width: 24px;
+  width: {theme.folio_rule_width_in * css_px_per_inch}px;
   height: 1px;
   background: {theme.accent};
   opacity: .34;

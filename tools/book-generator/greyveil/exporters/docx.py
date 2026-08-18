@@ -60,7 +60,7 @@ def configure_page(doc: Document, theme: ExportTheme) -> None:
     section.top_margin = Inches(theme.top_margin_in)
     section.bottom_margin = Inches(theme.bottom_margin_in)
     section.header_distance = Inches(0.36)
-    section.footer_distance = Inches(0.34)
+    section.footer_distance = Inches(theme.folio_bottom_in)
     section.different_first_page_header_footer = True
 
     set_section_gutter(section, theme.gutter_in)
@@ -95,7 +95,7 @@ def configure_footer(section, theme: ExportTheme) -> None:
     paragraph.paragraph_format.space_before = Pt(0)
     paragraph.paragraph_format.space_after = Pt(0)
     run = paragraph.add_run()
-    set_run_font(run, theme.sans_font, 8, theme.subtle)
+    set_run_font(run, theme.sans_font, theme.folio_size_pt, theme.subtle)
     add_page_field(run)
 
 
@@ -127,14 +127,14 @@ def configure_styles(doc: Document, theme: ExportTheme) -> None:
     set_style_font(kicker, theme.sans_font, theme.chapter_number_size_pt, theme.accent, bold=True)
     kicker.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
     kicker.paragraph_format.first_line_indent = Inches(0)
-    kicker.paragraph_format.space_after = Pt(6)
+    kicker.paragraph_format.space_after = Pt(theme.opening_kicker_gap_pt)
 
     heading = get_or_add_style(styles, "Greyveil Unit Title", WD_STYLE_TYPE.PARAGRAPH)
     set_style_font(heading, theme.display_font, theme.chapter_title_size_pt, theme.heading, bold=True)
     heading.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
     heading.paragraph_format.first_line_indent = Inches(0)
     heading.paragraph_format.line_spacing = 1.03
-    heading.paragraph_format.space_after = Pt(18)
+    heading.paragraph_format.space_after = Pt(theme.opening_body_gap_pt)
 
     body = get_or_add_style(styles, "Greyveil Body", WD_STYLE_TYPE.PARAGRAPH)
     set_style_font(body, theme.body_font, theme.body_size_pt, theme.text)
@@ -182,14 +182,23 @@ def configure_styles(doc: Document, theme: ExportTheme) -> None:
 def add_opening_page(doc: Document, model: BookModel, theme: ExportTheme) -> None:
     first = doc.paragraphs[0] if doc.paragraphs else doc.add_paragraph()
     first.style = "Greyveil Kicker"
-    first.paragraph_format.space_before = Inches(1.0)
+    first.paragraph_format.space_before = Inches(theme.title_opening_top_in)
     if model.metadata.series:
         add_text_run(first, model.metadata.series.upper(), theme.sans_font, theme.chapter_number_size_pt, theme.warm, bold=True)
     if model.metadata.book_number:
         p = doc.add_paragraph(style="Greyveil Kicker")
         add_text_run(p, book_number_label(model.metadata.book_number).upper(), theme.sans_font, theme.chapter_number_size_pt, theme.warm, bold=True)
 
-    add_displaced_rule(doc, theme, width_a=0.68, width_b=0.42, left=0.0, after_pt=12)
+    add_displaced_rule(
+        doc,
+        theme,
+        width_a=theme.title_rule_primary_in,
+        width_b=theme.title_rule_secondary_in,
+        left=0.0,
+        horizontal_offset=theme.title_rule_horizontal_offset_in,
+        vertical_offset=theme.title_rule_vertical_offset_in,
+        after_pt=12,
+    )
 
     title = doc.add_paragraph(style="Greyveil Title")
     add_text_run(title, model.metadata.title.upper(), theme.display_font, min(theme.title_size_pt, 43), theme.heading, bold=True)
@@ -235,13 +244,31 @@ def add_units(doc: Document, model: BookModel, repo_root: Path, theme: ExportThe
 def add_unit_header(doc: Document, unit: ChapterUnit, theme: ExportTheme) -> None:
     if unit.kind == "dedication":
         add_spacer(doc, 1.25)
-        add_displaced_rule(doc, theme, width_a=0.52, width_b=0.3, left=(theme.content_width_in - 0.52) / 2, after_pt=10)
+        add_displaced_rule(
+            doc,
+            theme,
+            width_a=theme.unit_rule_primary_in,
+            width_b=theme.unit_rule_secondary_in,
+            left=(theme.content_width_in - theme.unit_rule_primary_in) / 2,
+            horizontal_offset=theme.unit_rule_horizontal_offset_in,
+            vertical_offset=theme.unit_rule_vertical_offset_in,
+            after_pt=10,
+        )
         title = doc.add_paragraph(style="Greyveil Dedication")
         add_text_run(title, unit.title, theme.display_font, 19.5, theme.accent, italic=True)
         return
 
-    add_spacer(doc, 0.12 if unit.kind == "chapter" else 0.05)
-    add_displaced_rule(doc, theme, width_a=0.58 if unit.kind == "chapter" else 0.48, width_b=0.32, left=0.0, after_pt=8)
+    add_spacer(doc, theme.unit_opening_top_in)
+    add_displaced_rule(
+        doc,
+        theme,
+        width_a=theme.unit_rule_primary_in,
+        width_b=theme.unit_rule_secondary_in,
+        left=0.0,
+        horizontal_offset=theme.unit_rule_horizontal_offset_in,
+        vertical_offset=theme.unit_rule_vertical_offset_in,
+        after_pt=theme.opening_kicker_gap_pt,
+    )
 
     phase = unit_phase(unit)
     if phase:
@@ -276,7 +303,16 @@ def add_block(
         return None
 
     if block.type in {"section-break", "divider"}:
-        add_displaced_rule(doc, theme, width_a=0.44, width_b=0.27, left=0.1, after_pt=8)
+        add_displaced_rule(
+            doc,
+            theme,
+            width_a=theme.divider_primary_width_in,
+            width_b=theme.divider_secondary_width_in,
+            left=0.1,
+            horizontal_offset=theme.divider_horizontal_offset_in,
+            vertical_offset=theme.divider_vertical_offset_in,
+            after_pt=8,
+        )
         return None
 
     if block.type == "image":
@@ -330,10 +366,20 @@ def add_displaced_rule(
     width_a: float,
     width_b: float,
     left: float,
+    horizontal_offset: float,
+    vertical_offset: float,
     after_pt: float,
 ) -> None:
     add_rule(doc, theme, left=left, width=width_a, color=theme.accent, before_pt=0, after_pt=0)
-    add_rule(doc, theme, left=left + 0.12, width=width_b, color=theme.accent, before_pt=0, after_pt=after_pt)
+    add_rule(
+        doc,
+        theme,
+        left=left + horizontal_offset,
+        width=width_b,
+        color=theme.accent,
+        before_pt=vertical_offset * 72,
+        after_pt=after_pt,
+    )
 
 
 def add_rule(

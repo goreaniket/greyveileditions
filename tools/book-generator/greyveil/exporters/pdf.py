@@ -153,17 +153,25 @@ class PdfFontSet:
 class SectionRule(Flowable):
     def __init__(
         self,
-        width: float = 96,
+        primary_width: float,
+        secondary_width: float,
         color=colors.HexColor("#7E8F9B"),
         *,
+        horizontal_offset: float,
+        vertical_offset: float,
         align: str = "left",
         height: float = 24,
     ):
         super().__init__()
-        self.width = width
+        self.primary_width = primary_width
+        self.secondary_width = secondary_width
+        self.horizontal_offset = horizontal_offset
+        self.vertical_offset = vertical_offset
+        self.width = max(primary_width, horizontal_offset + secondary_width)
         self.height = height
         self.color = color
         self.align = align
+        self.hAlign = align.upper()
 
     def wrap(self, _available_width, _available_height):
         return self.width, self.height
@@ -173,18 +181,24 @@ class SectionRule(Flowable):
         self.canv.setStrokeColor(self.color)
         self.canv.setLineWidth(0.6)
         y = self.height / 2
-        self.canv.line(0, y + 3, self.width * 0.72, y + 3)
-        self.canv.line(14, y - 3, self.width, y - 3)
+        self.canv.line(0, y + (self.vertical_offset / 2), self.primary_width, y + (self.vertical_offset / 2))
+        self.canv.line(
+            self.horizontal_offset,
+            y - (self.vertical_offset / 2),
+            self.horizontal_offset + self.secondary_width,
+            y - (self.vertical_offset / 2),
+        )
         self.canv.restoreState()
 
 
 class FullBleedCover(Flowable):
-    """Draw the cover image to the complete PDF trim box."""
+    """Fit the complete cover artwork within the PDF trim box."""
 
-    def __init__(self, image_path: Path, page_size: tuple[float, float]):
+    def __init__(self, image_path: Path, page_size: tuple[float, float], theme: ExportTheme):
         super().__init__()
         self.image_path = image_path
         self.page_width, self.page_height = page_size
+        self.theme = theme
         self.width = self.page_width
         self.height = self.page_height
 
@@ -194,20 +208,25 @@ class FullBleedCover(Flowable):
     def draw(self):
         with PILImage.open(self.image_path) as source:
             image_width, image_height = source.size
-        scale = max(self.page_width / image_width, self.page_height / image_height)
+        scale_fn = min if self.theme.cover_fit == "contain" else max
+        scale = scale_fn(self.page_width / image_width, self.page_height / image_height)
         draw_width = image_width * scale
         draw_height = image_height * scale
         x = (self.page_width - draw_width) / 2
         y = (self.page_height - draw_height) / 2
+        self.canv.saveState()
+        self.canv.setFillColor(colors.HexColor(self.theme.paper))
+        self.canv.rect(0, 0, self.page_width, self.page_height, stroke=0, fill=1)
         self.canv.drawImage(
             str(self.image_path),
             x,
             y,
             width=draw_width,
             height=draw_height,
-            preserveAspectRatio=False,
+            preserveAspectRatio=True,
             mask="auto",
         )
+        self.canv.restoreState()
 
 
 class FolioPolicy(Flowable):
@@ -235,7 +254,7 @@ def export_pdf(model: BookModel, repo_root: Path, output: Path | None = None) ->
     styles = build_styles(theme, fonts)
     story: List[Flowable] = []
 
-    append_cover(story, model, page_size)
+    append_cover(story, model, theme, page_size)
     append_opening_page(story, model, styles, theme, fonts)
     append_units(story, model.chapters, styles, theme, fonts)
 
@@ -474,7 +493,7 @@ def build_styles(theme: ExportTheme, fonts: PdfFontSet):
             leading=theme.chapter_title_size_pt * 1.08,
             alignment=TA_LEFT,
             textColor=heading_color,
-            spaceAfter=20,
+            spaceAfter=theme.opening_body_gap_pt,
         )
     )
     sheet.add(
@@ -486,7 +505,7 @@ def build_styles(theme: ExportTheme, fonts: PdfFontSet):
             leading=theme.chapter_number_size_pt + 2,
             alignment=TA_LEFT,
             textColor=accent,
-            spaceAfter=8,
+            spaceAfter=theme.opening_kicker_gap_pt,
         )
     )
     sheet.add(
@@ -555,10 +574,15 @@ def build_styles(theme: ExportTheme, fonts: PdfFontSet):
     return sheet
 
 
-def append_cover(story: List[Flowable], model: BookModel, page_size: tuple[float, float]) -> None:
+def append_cover(
+    story: List[Flowable],
+    model: BookModel,
+    theme: ExportTheme,
+    page_size: tuple[float, float],
+) -> None:
     cover = preferred_cover(model.cover_assets)
     if cover and cover.resolved_path and cover.resolved_path.exists():
-        story.append(FullBleedCover(cover.resolved_path, page_size))
+        story.append(FullBleedCover(cover.resolved_path, page_size, theme))
     story.append(NextPageTemplate("body"))
     story.append(PageBreak())
 
@@ -572,8 +596,8 @@ def append_opening_page(
 ) -> None:
     metadata = model.metadata
     story.append(FolioPolicy(True))
-    story.append(Spacer(1, 1.18 * inch))
-    story.append(SectionRule(width=96, color=colors.HexColor(theme.accent), height=26))
+    story.append(Spacer(1, theme.title_opening_top_in * inch))
+    story.append(opening_rule(theme, title=True))
     if metadata.series:
         story.append(Paragraph(pdf_text(metadata.series.upper(), fonts.sans, bold=True), styles["GreyveilOpeningSeries"]))
     if metadata.book_number:
@@ -613,7 +637,7 @@ def append_units(
             story.append(PageBreak())
         exported += 1
 
-        story.append(FolioPolicy(hide_folio_for_unit(unit)))
+        story.append(FolioPolicy(hide_folio_for_unit(unit, theme)))
         append_unit_header(story, unit, styles, theme, fonts)
 
         for block in unit.blocks:
@@ -629,13 +653,12 @@ def append_unit_header(
 ) -> None:
     if unit.kind == "dedication":
         story.append(Spacer(1, 1.42 * inch))
-        story.append(SectionRule(width=74, color=colors.HexColor(theme.accent), height=30))
+        story.append(opening_rule(theme, align="center"))
         story.append(Paragraph(pdf_text(unit.title, fonts.display, italic=True), styles["GreyveilDedication"]))
         return
 
-    top_space = 0.32 * inch if unit.kind == "chapter" else 0.22 * inch
-    story.append(Spacer(1, top_space))
-    story.append(SectionRule(width=86 if unit.kind == "chapter" else 72, color=colors.HexColor(theme.accent)))
+    story.append(Spacer(1, theme.unit_opening_top_in * inch))
+    story.append(opening_rule(theme))
 
     phase = unit_phase(unit)
     if phase:
@@ -664,7 +687,7 @@ def append_block(
         story.append(Spacer(1, 0.18 * inch))
         return
     if block.type in {"section-break", "divider"}:
-        story.append(SectionRule())
+        story.append(divider_rule(theme))
         return
 
     if is_quote_block(block.type):
@@ -718,10 +741,48 @@ def draw_page_folio(
     canvas.setStrokeColor(colors.HexColor(theme.accent))
     canvas.setFillColor(colors.HexColor(theme.subtle))
     canvas.setLineWidth(0.35)
-    canvas.line((width / 2) - 12, 0.36 * inch, (width / 2) + 12, 0.36 * inch)
-    canvas.setFont(fonts.sans.primary(), 8)
-    canvas.drawCentredString(width / 2, 0.24 * inch, str(max(1, doc.page - 1)))
+    folio_y = theme.folio_bottom_in * inch
+    half_rule = theme.folio_rule_width_in * inch / 2
+    rule_y = folio_y + theme.folio_size_pt + (theme.folio_rule_gap_in * inch)
+    canvas.line((width / 2) - half_rule, rule_y, (width / 2) + half_rule, rule_y)
+    canvas.setFont(fonts.sans.primary(), theme.folio_size_pt)
+    canvas.drawCentredString(width / 2, folio_y, str(max(1, doc.page - 1)))
     canvas.restoreState()
+
+
+def opening_rule(theme: ExportTheme, *, title: bool = False, align: str = "left") -> SectionRule:
+    if title:
+        primary = theme.title_rule_primary_in
+        secondary = theme.title_rule_secondary_in
+        horizontal = theme.title_rule_horizontal_offset_in
+        vertical = theme.title_rule_vertical_offset_in
+        height = theme.title_rule_vertical_offset_in + theme.title_rule_clearance_in
+    else:
+        primary = theme.unit_rule_primary_in
+        secondary = theme.unit_rule_secondary_in
+        horizontal = theme.unit_rule_horizontal_offset_in
+        vertical = theme.unit_rule_vertical_offset_in
+        height = max(0.24, vertical * 1.8)
+    return SectionRule(
+        primary * inch,
+        secondary * inch,
+        color=colors.HexColor(theme.accent),
+        horizontal_offset=horizontal * inch,
+        vertical_offset=vertical * inch,
+        align=align,
+        height=height * inch,
+    )
+
+
+def divider_rule(theme: ExportTheme) -> SectionRule:
+    return SectionRule(
+        theme.divider_primary_width_in * inch,
+        theme.divider_secondary_width_in * inch,
+        color=colors.HexColor(theme.accent),
+        horizontal_offset=theme.divider_horizontal_offset_in * inch,
+        vertical_offset=theme.divider_vertical_offset_in * inch,
+        height=theme.divider_height_in * inch,
+    )
 
 
 def pdf_text(
