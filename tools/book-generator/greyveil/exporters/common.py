@@ -113,13 +113,9 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
     title_motif_px = measurements(title_page.get("motif"), "px")
     chapter_motif_px = measurements(chapter_page.get("motif"), "px")
     divider_mapping_in = measurements(mapping.get("sectionBreak"), "in")
-    divider_semantic_px = measurements(
-        " ".join(
-            first_string(divider_page.get(key))
-            for key in ("primaryRule", "secondaryRule", "offset", "heightDesktop")
-        ),
-        "px",
-    )
+    divider_primary_px = measurements(divider_page.get("primaryRule"), "px")
+    divider_secondary_px = measurements(divider_page.get("secondaryRule"), "px")
+    divider_offset_px = measurements(divider_page.get("offset"), "px")
     page_number_mapping_in = measurements(mapping.get("pageNumber"), "in")
     page_number_mapping_pt = measurements(mapping.get("pageNumber"), "pt")
     folio_placement_px = measurements(folio_page.get("desktopPlacement"), "px")
@@ -184,61 +180,61 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
             "#7E8F9B",
         ),
         cover_fit=cover_fit_from_design(layout, mapping, cover_spec, semantic_pages),
-        title_opening_top_in=parse_inches(layout.get("titleOpeningTopOffset"), 1.18),
-        unit_opening_top_in=parse_inches(layout.get("unitOpeningTopOffset"), 0.15),
-        title_rule_primary_in=parse_inches(
+        title_opening_top_in=parse_length_inches(layout.get("titleOpeningTopOffset"), 1.18),
+        unit_opening_top_in=parse_length_inches(layout.get("unitOpeningTopOffset"), 0.15),
+        title_rule_primary_in=parse_length_inches(
             layout.get("titleOpeningRulePrimary"),
             px_to_inches(value_at(title_motif_px, 0), 1.0),
         ),
-        title_rule_secondary_in=parse_inches(
+        title_rule_secondary_in=parse_length_inches(
             layout.get("titleOpeningRuleSecondary"),
             px_to_inches(value_at(title_motif_px, 1), 0.60),
         ),
-        title_rule_horizontal_offset_in=parse_inches(
+        title_rule_horizontal_offset_in=parse_length_inches(
             layout.get("titleOpeningRuleHorizontalOffset"),
             px_to_inches(value_at(title_motif_px, 2), 0.15),
         ),
-        title_rule_vertical_offset_in=parse_inches(
+        title_rule_vertical_offset_in=parse_length_inches(
             layout.get("titleOpeningRuleVerticalOffset"),
             px_to_inches(value_at(title_motif_px, 3), 0.125),
         ),
-        title_rule_clearance_in=parse_inches(layout.get("titleOpeningRuleClearance"), 14 / 96),
-        unit_rule_primary_in=parse_inches(
+        title_rule_clearance_in=parse_length_inches(layout.get("titleOpeningRuleClearance"), 14 / 96),
+        unit_rule_primary_in=parse_length_inches(
             layout.get("unitOpeningRulePrimary"),
             px_to_inches(value_at(chapter_motif_px, 0), 0.75),
         ),
-        unit_rule_secondary_in=parse_inches(
+        unit_rule_secondary_in=parse_length_inches(
             layout.get("unitOpeningRuleSecondary"),
             px_to_inches(value_at(chapter_motif_px, 1), 0.44),
         ),
-        unit_rule_horizontal_offset_in=parse_inches(
+        unit_rule_horizontal_offset_in=parse_length_inches(
             layout.get("unitOpeningRuleHorizontalOffset"),
             px_to_inches(value_at(chapter_motif_px, 2), 0.125),
         ),
-        unit_rule_vertical_offset_in=parse_inches(layout.get("unitOpeningRuleVerticalOffset"), 0.125),
+        unit_rule_vertical_offset_in=parse_length_inches(layout.get("unitOpeningRuleVerticalOffset"), 0.125),
         opening_kicker_gap_pt=parse_points(layout.get("openingKickerGap"), 8.0),
         opening_body_gap_pt=parse_points(layout.get("openingBodyGap"), 20.0),
-        divider_primary_width_in=parse_inches(
+        divider_primary_width_in=parse_length_inches(
             layout.get("dividerPrimaryWidth"),
-            value_at(divider_mapping_in, 0, px_to_inches(value_at(divider_semantic_px, 0), 0.44)),
+            value_at(divider_mapping_in, 0, px_to_inches(value_at(divider_primary_px, 0), 0.44)),
         ),
-        divider_secondary_width_in=parse_inches(
+        divider_secondary_width_in=parse_length_inches(
             layout.get("dividerSecondaryWidth"),
-            value_at(divider_mapping_in, 1, px_to_inches(value_at(divider_semantic_px, 2), 0.27)),
+            value_at(divider_mapping_in, 1, px_to_inches(value_at(divider_secondary_px, 0), 0.27)),
         ),
-        divider_horizontal_offset_in=parse_inches(
+        divider_horizontal_offset_in=parse_length_inches(
             layout.get("dividerHorizontalOffset"),
-            value_at(divider_mapping_in, 2, px_to_inches(value_at(divider_semantic_px, 4), 0.12)),
+            value_at(divider_mapping_in, 2, px_to_inches(value_at(divider_offset_px, 0), 0.12)),
         ),
-        divider_vertical_offset_in=parse_inches(
+        divider_vertical_offset_in=parse_length_inches(
             layout.get("dividerVerticalOffset"),
-            value_at(divider_mapping_in, 3, px_to_inches(value_at(divider_semantic_px, 5), 0.07)),
+            value_at(divider_mapping_in, 3, px_to_inches(value_at(divider_offset_px, 1), 0.07)),
         ),
-        divider_height_in=parse_inches(
+        divider_height_in=parse_length_inches(
             layout.get("dividerHeight"),
             px_to_inches(value_at(measurements(divider_page.get("heightDesktop"), "px"), 0), 0.625),
         ),
-        folio_bottom_in=parse_inches(
+        folio_bottom_in=parse_length_inches(
             layout.get("folioBottomOffset"),
             value_at(page_number_mapping_in, 0, px_to_inches(value_at(folio_placement_px, 0), 0.30)),
         ),
@@ -246,11 +242,11 @@ def theme_from_model(model: BookModel, *, print_mode: bool = False) -> ExportThe
             layout.get("folioSize"),
             value_at(page_number_mapping_pt, 0, 8.0),
         ),
-        folio_rule_width_in=parse_inches(
+        folio_rule_width_in=parse_length_inches(
             layout.get("folioRuleWidth"),
             value_at(page_number_mapping_in, 1, px_to_inches(value_at(folio_rule_px, 0), 0.24)),
         ),
-        folio_rule_gap_in=parse_inches(
+        folio_rule_gap_in=parse_length_inches(
             layout.get("folioRuleGap"),
             px_to_inches(7, 7 / 96),
         ),
@@ -309,9 +305,11 @@ def cover_fit_from_design(layout: dict, mapping: dict, cover_spec: dict, semanti
     pdf_cover = cover_spec.get("PdfCoverPageMapping", {})
     if not isinstance(pdf_cover, dict):
         pdf_cover = {}
+    explicit = first_string(layout.get("coverFit"), mapping.get("coverFit")).casefold()
+    if explicit in {"cover", "crop", "fill"}:
+        return "cover"
     declared = first_string(
-        layout.get("coverFit"),
-        mapping.get("coverFit"),
+        explicit,
         cover_spec.get("imageFitBehavior"),
         pdf_cover.get("fitMode"),
         semantic_pages.get("frontCover"),
@@ -361,6 +359,17 @@ def parse_paragraph_spacing(value: object, body_size_pt: float, fallback: float)
 
 def parse_inches(value: object, fallback: float) -> float:
     return parse_number(value, fallback)
+
+
+def parse_length_inches(value: object, fallback: float) -> float:
+    if isinstance(value, str):
+        px = measurements(value, "px")
+        if px:
+            return px[0] / 96
+        points = measurements(value, "pt")
+        if points:
+            return points[0] / 72
+    return parse_inches(value, fallback)
 
 
 def parse_trim(value: object, fallback: float, index: int) -> float:
