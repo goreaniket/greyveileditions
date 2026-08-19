@@ -139,8 +139,28 @@ Source ZIP export remains reserved for a later pipeline step.
 The Admin Publishing screen records durable jobs and uploads inputs to private
 Supabase storage. It does not run Python from a browser request or from Vercel.
 Run `run_generation_worker.py` in a trusted worker environment with a repository
-checkout plus `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`. The worker uses the
-existing importer, generator, and QA modules, then keeps candidate artifacts in
-private storage until an admin requests publication. Deploying the candidate
-source and switching canonical public outputs remains an external worker/release
-integration; it is intentionally not faked by the website.
+checkout plus `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`:
+
+```bash
+python tools/book-generator/run_generation_worker.py --once
+python tools/book-generator/run_generation_worker.py --job <generation-job-uuid>
+```
+
+Each invocation atomically claims one queued generation or requested
+publication. A stalled claim can be recovered only after its heartbeat is stale;
+the claim token prevents a former worker from updating a reassigned job.
+
+Generation uses the existing importer, generator, and QA modules. It retains a
+private candidate source archive, cover, PDF, EPUB, DOCX, and QA report in
+`generation-candidates`. When an admin requests publication, the worker verifies
+all six candidate records and copies them to versioned paths in the existing
+private `book-files` and `book-covers` buckets. Only after those copies succeed
+does the service-role-only database function atomically update canonical
+`book_files`, `book_covers`, book visibility/activation, and the job status.
+Older live objects are never deleted, so a failed generation or failed promotion
+cannot replace a published version.
+
+This is a worker-compatible release boundary, not a hosted Python worker. The
+production deployment still needs a trusted scheduler/container/VM with this
+repository checkout and those server-only environment variables. Do not expose
+the service-role key to the browser or add it to Vercel client configuration.
