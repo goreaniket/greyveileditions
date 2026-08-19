@@ -50,9 +50,10 @@ test('guest pass offer uses the active database pass and preserves checkout targ
     source('../index.html'), source('../assets/js/access-pass.js'), source('../assets/js/commerce.js'),
   ])
   assert.match(home, /data-access-pass-offer/)
-  assert.match(pass, /temporary_access_passes/)
+  assert.match(pass, /getEntitlementSnapshot/)
+  assert.match(pass, /snapshot\.accessPasses/)
   assert.match(pass, /formatCurrency\(pass\.price_amount\)/)
-  assert.match(pass, /temporary_access_pass_activations/)
+  assert.match(pass, /snapshot\.passActivations/)
   assert.match(pass, /temporary_access_pass_id/)
   assert.match(commerce, /'pass'/)
   assert.match(commerce, /temporary_access_pass_id/)

@@ -14,12 +14,13 @@ test('entitlement snapshot shares one access fetch across page consumers', async
   globalThis.__greyveilQueryCounts = {}
   const mocks = `
     const queryData = {
-      collections: [], volumes: [], series: [], books: [], book_access: [], orders: []
+      collections: [], volumes: [], series: [], books: [], book_access: [], orders: [],
+      temporary_access_passes: [], temporary_access_pass_activations: []
     };
     const supabase = { from(table) {
       globalThis.__greyveilQueryCounts[table] = (globalThis.__greyveilQueryCounts[table] || 0) + 1;
       const builder = {
-        select() { return builder; }, order() { return builder; }, eq() { return builder; },
+        select() { return builder; }, order() { return builder; }, eq() { return builder; }, gt() { return builder; },
         then(resolve) { return Promise.resolve({ data: queryData[table] || [], error: null }).then(resolve); }
       };
       return builder;
@@ -35,15 +36,17 @@ test('entitlement snapshot shares one access fetch across page consumers', async
   ])
   assert.equal(snapshots[0], snapshots[1])
   assert.equal(snapshots[1], snapshots[2])
-  for (const table of ['collections', 'volumes', 'series', 'books', 'book_access', 'orders']) {
+  for (const table of ['collections', 'volumes', 'series', 'books', 'book_access', 'orders', 'temporary_access_passes', 'temporary_access_pass_activations']) {
     assert.equal(globalThis.__greyveilQueryCounts[table], 1, `${table} should load once`)
   }
 
   await access.getEntitlementSnapshot()
   assert.equal(globalThis.__greyveilQueryCounts.orders, 1)
+  assert.equal(globalThis.__greyveilQueryCounts.temporary_access_pass_activations, 1)
   access.invalidateEntitlementSnapshot('test-refresh')
   await access.getEntitlementSnapshot()
   assert.equal(globalThis.__greyveilQueryCounts.orders, 2)
+  assert.equal(globalThis.__greyveilQueryCounts.temporary_access_pass_activations, 2)
 })
 
 test('managed RIZZ pricing remains server-calculated for every product type', async () => {
@@ -137,8 +140,8 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.equal((purchases.match(/document\.addEventListener\('click', handlePurchaseClick\)/g) || []).length, 1)
   assert.match(main, /versionedPurchaseAssetUrl\("purchases\.js"\)/)
   assert.match(main, /matchingButtons\.slice\(1\)/)
-  assert.match(html, /main\.js\?v=20260812-purchase-pipeline/)
-  assert.match(html, /checkout\.js\?v=20260812-edge-payments/)
+  assert.match(html, /main\.js\?v=20260819-commerce-stabilization/)
+  assert.match(html, /checkout\.js\?v=20260819-commerce-stabilization/)
   assert.match(styles, /\.checkout-page \[hidden\][\s\S]+display: none !important/)
   assert.match(main, /Buy Full Series/)
   assert.match(main, /Buy Full Collection/)

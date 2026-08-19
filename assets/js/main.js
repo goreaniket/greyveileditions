@@ -7,7 +7,7 @@ const currentCopyrightYear = "2026";
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const mainScriptUrl = document.currentScript?.src || new URL("/assets/js/main.js", window.location.href).href;
-const purchasePipelineVersion = "20260812-purchase-pipeline";
+const purchasePipelineVersion = "20260819-commerce-stabilization";
 const versionedPurchaseAssetUrl = (name) => {
   const url = new URL(name, mainScriptUrl);
   url.searchParams.set("v", purchasePipelineVersion);
@@ -451,6 +451,22 @@ const lockReaderLink = (link, user) => {
 
 const purchaseContainerForLink = (link) => link.closest(".button-row, .card-actions") || link.parentElement;
 
+const catalogPriceLabel = (amount) => {
+  const paise = Number(amount);
+  if (!Number.isInteger(paise) || paise <= 0) return "";
+  return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 2 }).format(paise / 100);
+};
+
+const setPurchaseResolving = (button, label) => {
+  button.dataset.purchaseLabel = label;
+  button.dataset.purchaseDefaultLabel = label;
+  button.dataset.purchaseAccessState = "checking";
+  button.classList.add("purchase-button", "purchase-button--resolving");
+  button.disabled = true;
+  button.setAttribute("aria-busy", "true");
+  button.textContent = "Checking access…";
+};
+
 const generatedPurchaseButtons = (container, bookId) => {
   if (!container || !bookId) return [];
   return Array.from(container.querySelectorAll("[data-generated-purchase][data-purchase-book-id]"))
@@ -483,17 +499,20 @@ const ensurePurchaseAction = (link, decision) => {
   button.dataset.generatedPurchase = "";
   button.dataset.purchaseType = "book";
   button.dataset.purchaseBookId = book.id;
-  button.dataset.purchaseLabel = "Buy Book - Rs. 149";
-  button.textContent = button.dataset.purchaseLabel;
+  const price = catalogPriceLabel(book.price_amount);
+  if (!price) return;
+  setPurchaseResolving(button, `Buy Book — ${price}`);
 
   if (!existing) {
     link.insertAdjacentElement("afterend", button);
-    window.dispatchEvent(new CustomEvent("greyveil:purchases-refresh-labels"));
   }
+  window.dispatchEvent(new CustomEvent("greyveil:purchases-refresh-labels"));
 };
 
-const ensureUpsellButton = (container, { type, id, slug, label, style = "ghost" }) => {
+const ensureUpsellButton = (container, { type, id, slug, label, priceAmount, style = "ghost" }) => {
   if (!container || !type || !id) return null;
+  const price = catalogPriceLabel(priceAmount);
+  if (!price) return null;
   const idKey = `purchase${type.charAt(0).toUpperCase()}${type.slice(1)}Id`;
   const existing = Array.from(container.querySelectorAll(`[data-purchase-type="${type}"]`))
     .find((button) => String(button.dataset[idKey] || "") === String(id)
@@ -504,12 +523,12 @@ const ensureUpsellButton = (container, { type, id, slug, label, style = "ghost" 
   button.dataset.purchaseType = type;
   button.dataset[idKey] = id;
   if (slug) button.dataset.purchaseSlug = slug;
-  button.dataset.purchaseLabel = label;
-  button.textContent = label;
+  setPurchaseResolving(button, `${label} — ${price}`);
   if (!existing) {
     button.dataset.generatedUpsell = "";
     container.append(button);
   }
+  window.dispatchEvent(new CustomEvent("greyveil:purchases-refresh-labels"));
   return button;
 };
 
@@ -519,29 +538,27 @@ const ensureDirectPurchaseOptions = (main, decision) => {
   if (!container) return;
   const { collection, series, book } = decision.hierarchy;
 
-  if (decision.target.kind === "book" && book?.id && !decision.publicReadable) {
+  if (decision.target.kind === "book" && book?.id && !decision.publicReadable && !decision.canRead) {
     ensureUpsellButton(container, {
       type: "book", id: book.id, slug: book.slug,
-      label: "Buy This Book - Rs. 149", style: "primary",
+      label: "Buy This Book", priceAmount: book.price_amount, style: "primary",
     });
   }
   if (decision.target.kind === "book" && decision.publicReadable) {
     container.querySelectorAll('[data-purchase-type="book"]').forEach((button) => button.remove());
   }
-  if (["book", "series"].includes(decision.target.kind) && series?.id) {
-    const prices = { "human-mind": "599", "human-paradox": "599", "human-fiction": "499" };
+  if (["book", "series"].includes(decision.target.kind) && series?.id && !decision.canRead) {
     ensureUpsellButton(container, {
       type: "series", id: series.id, slug: series.slug,
-      label: `Buy Full Series - Rs. ${prices[series.slug] || "599"}`,
+      label: "Buy Full Series", priceAmount: series.price_amount,
     });
   }
-  if (collection?.id) {
+  if (collection?.id && !decision.canRead) {
     ensureUpsellButton(container, {
       type: "collection", id: collection.id, slug: collection.slug,
-      label: "Buy Full Collection - Rs. 1,299",
+      label: "Buy Full Collection", priceAmount: collection.price_amount,
     });
   }
-  window.dispatchEvent(new CustomEvent("greyveil:purchases-refresh-labels"));
 };
 
 const updateBookSurfaceState = (node, decision, access, context) => {
@@ -579,7 +596,7 @@ const updateBookSurfaceState = (node, decision, access, context) => {
   }
 };
 
-const createContentLookup = (hierarchy, access, grants = [], paidOrders = []) => {
+const createContentLookup = (hierarchy, access, grants = [], paidOrders = [], accessPasses = [], passActivations = []) => {
   const currentGrantsByBookId = new Map();
   grants
     .filter((grant) => access.isGrantCurrent(grant))
@@ -596,6 +613,8 @@ const createContentLookup = (hierarchy, access, grants = [], paidOrders = []) =>
     collectionsByTitleSlug: new Map(hierarchy.collections.map((item) => [slugifyContent(item.title), item])),
     currentGrantsByBookId,
     paidOrders,
+    accessPasses,
+    passActivations,
   };
 };
 
@@ -657,6 +676,8 @@ const contentDecision = (target, hierarchy, access, context, lookup) => {
           ...itemHierarchy,
           grants: currentGrant ? [currentGrant] : [],
           paidOrders: lookup.paidOrders,
+          accessPasses: lookup.accessPasses,
+          passActivations: lookup.passActivations,
         }, context)
       : false;
 
@@ -708,7 +729,14 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
 
     const grants = snapshot.grants || [];
     const paidOrders = snapshot.paidOrders || [];
-    const lookup = createContentLookup(hierarchy, access, grants, paidOrders);
+    const lookup = createContentLookup(
+      hierarchy,
+      access,
+      grants,
+      paidOrders,
+      snapshot.accessPasses || [],
+      snapshot.passActivations || []
+    );
 
     if (runId !== contentVisibilityRun) return;
 
@@ -763,6 +791,7 @@ const bindAuthStateRefresh = async () => {
   try {
     const { supabase } = await import(new URL("supabase-client.js", mainScriptUrl).href);
     supabase.auth.onAuthStateChange(() => {
+      contentVisibilityRun += 1;
       setAccessPending();
       window.clearTimeout(authRefreshTimer);
       authRefreshTimer = window.setTimeout(() => refreshAuthAndContentVisibility("auth-change"), 0);

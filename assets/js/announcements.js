@@ -1,5 +1,4 @@
 import { getCurrentSessionOnce, supabase } from './supabase-client.js'
-import { getEntitlementSnapshot } from './content-access.js'
 
 const create = (tag, className = '', text = '') => {
   const node = document.createElement(tag)
@@ -47,9 +46,12 @@ const announcementContent = (announcement, compact = false) => {
     image.loading = 'lazy'
     content.append(image)
   }
-  const copy = create('div')
-  if (!compact) copy.append(create('em', 'announcement-kicker', 'New from Greyveil'))
-  copy.append(create('strong', '', announcement.title), create('span', '', announcement.message))
+  const copy = create('div', 'announcement-copy')
+  copy.append(
+    create('em', 'announcement-kicker', compact ? 'Greyveil Editions' : 'New from Greyveil'),
+    create('strong', 'announcement-title', announcement.title),
+    create('span', 'announcement-message', announcement.message)
+  )
   content.append(copy)
   const ctaUrl = safeUrl(announcement.cta_url)
   if (announcement.cta_label && ctaUrl) {
@@ -80,13 +82,20 @@ const renderFloating = (announcement) => {
   if (dismissed(announcement.id)) return
   const card = create('aside', 'floating-announcement')
   card.setAttribute('aria-label', 'Announcement')
+  card.setAttribute('role', 'region')
   card.append(announcementContent(announcement, true))
-  const close = create('button', 'floating-announcement__close', 'Close')
+  const close = create('button', 'floating-announcement__close', '×')
   close.type = 'button'
   close.setAttribute('aria-label', 'Dismiss announcement')
-  close.addEventListener('click', () => { dismiss(announcement.id); card.remove() })
+  close.title = 'Dismiss announcement'
+  close.addEventListener('click', () => {
+    dismiss(announcement.id)
+    card.classList.add('is-dismissing')
+    window.setTimeout(() => card.remove(), 180)
+  })
   card.append(close)
   document.body.append(card)
+  window.requestAnimationFrame(() => card.classList.add('is-visible'))
 }
 
 const renderBanner = (announcement) => {
@@ -125,12 +134,12 @@ const markRead = async (userId, announcementIds) => {
   )
 }
 
-const renderNotificationCenter = async (snapshot, announcements) => {
-  if (!snapshot.context.user?.id || !announcements.length) return
+const renderNotificationCenter = async (user, announcements) => {
+  if (!user?.id || !announcements.length) return
   const { data: reads } = await supabase
     .from('notification_reads')
     .select('announcement_id, read_at')
-    .eq('user_id', snapshot.context.user.id)
+    .eq('user_id', user.id)
   const readIds = new Set((reads || []).map((item) => item.announcement_id))
   const unread = announcements.filter((item) => !readIds.has(item.id))
 
@@ -156,7 +165,7 @@ const renderNotificationCenter = async (snapshot, announcements) => {
     panel.hidden = !panel.hidden
     button.setAttribute('aria-expanded', String(!panel.hidden))
     if (!panel.hidden && unread.length) {
-      await markRead(snapshot.context.user.id, unread.map((item) => item.id))
+      await markRead(user.id, unread.map((item) => item.id))
       button.querySelector('.notification-center__count')?.remove()
       panel.querySelectorAll('.is-unread').forEach((item) => item.classList.remove('is-unread'))
     }
@@ -197,8 +206,7 @@ const loadAnnouncements = async () => {
       .forEach(renderPageAnnouncement)
     const { data: auth } = await getCurrentSessionOnce()
     if (auth?.session?.user) {
-      const snapshot = await getEntitlementSnapshot()
-      await renderNotificationCenter(snapshot, announcements)
+      await renderNotificationCenter(auth.session.user, announcements)
     }
   } catch (error) {
     console.info('Announcements are not available.', { message: error?.message, code: error?.code })

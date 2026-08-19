@@ -5,15 +5,18 @@ export const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 export const VISIBILITY_STATES = ['public', 'paid', 'private']
 
 const DEFAULT_VISIBILITY = 'paid'
-const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
+const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, price_amount, sort_order, created_at, updated_at'
 const VOLUME_SELECT = 'id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
-const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
-const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active, created_at, updated_at'
+const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, price_amount, sort_order, created_at, updated_at'
+const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active, price_amount, created_at, updated_at'
 const PAID_ORDER_SELECT = 'id, user_id, purchase_type, book_id, series_id, collection_id, status, paid_at'
+const ACCESS_PASS_SELECT = 'id, title, active, price_amount, duration_hours, scope_type, collection_id'
+const PASS_ACTIVATION_SELECT = 'pass_id, expires_at'
 
 let entitlementSnapshot = null
 let entitlementSnapshotPromise = null
 let entitlementSnapshotVersion = 0
+let entitlementAuthGeneration = 0
 
 export const isAdminRole = (role) => ADMIN_ROLES.has(role)
 
@@ -170,6 +173,24 @@ export const hasInheritedPaidOrderEntitlement = ({
     || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)
 }
 
+export const isPassActivationCurrent = (activation) => {
+  const expiresAt = Date.parse(activation?.expires_at || '')
+  return Number.isFinite(expiresAt) && expiresAt > Date.now()
+}
+
+export const passCoversHierarchy = (pass, { collection = null } = {}) => {
+  if (!pass?.id) return false
+  if (pass.scope_type === 'library') return true
+  return pass.scope_type === 'collection' && idsMatch(pass.collection_id, collection?.id)
+}
+
+export const hasActivePassEntitlement = (hierarchy = {}, passes = [], activations = []) => {
+  const activePassIds = new Set(
+    activations.filter(isPassActivationCurrent).map((activation) => String(activation.pass_id))
+  )
+  return passes.some((pass) => activePassIds.has(String(pass.id)) && passCoversHierarchy(pass, hierarchy))
+}
+
 export const canReadBook = ({
   collection = null,
   volume = null,
@@ -177,6 +198,8 @@ export const canReadBook = ({
   book = null,
   grants = [],
   paidOrders = [],
+  accessPasses = [],
+  passActivations = [],
 } = {}, context = {}) => {
   if (!book) return false
   if (!hierarchyIsComplete({ collection, volume, series, book })
@@ -194,6 +217,7 @@ export const canReadBook = ({
 
   return hasBookEntitlement(book, grants)
     || hasInheritedPaidOrderEntitlement({ collection, series, book }, paidOrders)
+    || hasActivePassEntitlement({ collection, volume, series, book }, accessPasses, passActivations)
 }
 
 export const mapById = (items = []) => new Map(items.map((item) => [item.id, item]))
@@ -252,7 +276,9 @@ export const purchaseEntitlementDetails = (
   hierarchy = {},
   grants = [],
   context = {},
-  paidOrders = []
+  paidOrders = [],
+  accessPasses = [],
+  passActivations = []
 ) => {
   if (isAdminRole(context.role)) return { entitled: true, reason: 'admin' }
 
@@ -273,13 +299,16 @@ export const purchaseEntitlementDetails = (
       return { entitled: true, reason: 'paid' }
     }
     if (hasBookEntitlement(book, grants)) return { entitled: true, reason: 'owner_grant' }
+    if (hasActivePassEntitlement(bookHierarchy, accessPasses, passActivations)) return { entitled: true, reason: 'temporary_pass' }
     if (effectiveVisibilityForBookHierarchy(bookHierarchy) === 'public') return { entitled: true, reason: 'public' }
     return { entitled: false, reason: 'not_entitled' }
   }
 
   if (purchaseType === 'collection') {
+    const collection = (hierarchy.collections || []).find((item) => idsMatch(item.id, targetId))
     const entitled = hasPaidOrderForProduct(purchase, paidOrders)
-    return { entitled, reason: entitled ? 'paid' : 'not_entitled' }
+      || hasActivePassEntitlement({ collection }, accessPasses, passActivations)
+    return { entitled, reason: entitled ? (hasPaidOrderForProduct(purchase, paidOrders) ? 'paid' : 'temporary_pass') : 'not_entitled' }
   }
 
   const series = (hierarchy.seriesItems || []).find((item) => idsMatch(item.id, targetId))
@@ -291,6 +320,10 @@ export const purchaseEntitlementDetails = (
   if (hasPaidOrderForProduct(purchase, paidOrders)
       || hasPaidOrderForProduct({ purchaseType: 'collection', targetId: collection?.id }, paidOrders)) {
     return { entitled: true, reason: 'paid' }
+  }
+
+  if (hasActivePassEntitlement({ collection, volume, series }, accessPasses, passActivations)) {
+    return { entitled: true, reason: 'temporary_pass' }
   }
 
   const eligibleBooks = eligibleBooksForPurchase(purchase, hierarchy)
@@ -334,6 +367,28 @@ export const fetchViewerPaidOrders = async (userId) => {
     .eq('user_id', userId)
     .eq('status', 'paid')
     .order('paid_at', { ascending: false })
+
+  return { data: data || [], error }
+}
+
+export const fetchActiveAccessPasses = async () => {
+  const { data, error } = await supabase
+    .from('temporary_access_passes')
+    .select(ACCESS_PASS_SELECT)
+    .eq('active', true)
+    .order('created_at', { ascending: true })
+
+  return { data: data || [], error }
+}
+
+export const fetchViewerPassActivations = async (userId) => {
+  if (!userId) return { data: [], error: null }
+
+  const { data, error } = await supabase
+    .from('temporary_access_pass_activations')
+    .select(PASS_ACTIVATION_SELECT)
+    .eq('user_id', userId)
+    .gt('expires_at', new Date().toISOString())
 
   return { data: data || [], error }
 }
@@ -410,10 +465,12 @@ export const getEntitlementSnapshot = async ({ force = false } = {}) => {
   if (entitlementSnapshotPromise) return entitlementSnapshotPromise
 
   const requestedVersion = entitlementSnapshotVersion
-  entitlementSnapshotPromise = (async () => {
-    const [context, hierarchy] = await Promise.all([
+  const requestedAuthGeneration = entitlementAuthGeneration
+  const requestPromise = (async () => {
+    const [context, hierarchy, accessPassesResult] = await Promise.all([
       getAccessContext(),
       fetchContentHierarchy(),
+      fetchActiveAccessPasses(),
     ])
     const hierarchyErrors = Object.entries(hierarchy.errors || {}).filter(([, error]) => error)
     if (hierarchyErrors.length) {
@@ -422,18 +479,20 @@ export const getEntitlementSnapshot = async ({ force = false } = {}) => {
       throw error
     }
 
-    const [grantsResult, paidOrdersResult] = context.user?.id && !context.isAdmin
+    const [grantsResult, paidOrdersResult, passActivationsResult] = context.user?.id && !context.isAdmin
       ? await Promise.all([
         fetchViewerBookGrants(context.user.id),
         fetchViewerPaidOrders(context.user.id),
+        fetchViewerPassActivations(context.user.id),
       ])
-      : [{ data: [], error: null }, { data: [], error: null }]
+      : [{ data: [], error: null }, { data: [], error: null }, { data: [], error: null }]
 
-    if (grantsResult.error || paidOrdersResult.error) {
+    if (grantsResult.error || paidOrdersResult.error || passActivationsResult.error) {
       const error = new Error('Account access could not be resolved.')
       error.sources = [
         ...(grantsResult.error ? [['book_access', grantsResult.error]] : []),
         ...(paidOrdersResult.error ? [['orders', paidOrdersResult.error]] : []),
+        ...(passActivationsResult.error ? [['temporary_access_pass_activations', passActivationsResult.error]] : []),
       ]
       throw error
     }
@@ -443,33 +502,45 @@ export const getEntitlementSnapshot = async ({ force = false } = {}) => {
     const directBookIds = new Set(
       grants.filter(isGrantCurrent).map((grant) => String(grant.book_id))
     )
+    if (requestedVersion !== entitlementSnapshotVersion
+        || requestedAuthGeneration !== entitlementAuthGeneration) {
+      return getEntitlementSnapshot()
+    }
     const snapshot = {
       version: requestedVersion,
+      authGeneration: requestedAuthGeneration,
+      ownerKey: context.user?.id ? String(context.user.id) : 'guest',
       context,
       hierarchy,
       grants,
       paidOrders,
+      accessPasses: accessPassesResult.error ? [] : accessPassesResult.data || [],
+      passActivations: passActivationsResult.data || [],
       directBookIds,
       ...snapshotOwnership(paidOrders),
     }
 
-    if (requestedVersion === entitlementSnapshotVersion) {
-      entitlementSnapshot = snapshot
-      if (typeof window !== 'undefined') {
-        window.dispatchEvent(new CustomEvent('greyveil:entitlements-ready', {
-          detail: { snapshot },
-        }))
-      }
+    entitlementSnapshot = snapshot
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('greyveil:entitlements-ready', {
+        detail: { snapshot },
+      }))
     }
     return snapshot
   })()
+  entitlementSnapshotPromise = requestPromise
 
   try {
-    return await entitlementSnapshotPromise
+    return await requestPromise
   } finally {
-    if (requestedVersion === entitlementSnapshotVersion) entitlementSnapshotPromise = null
+    if (entitlementSnapshotPromise === requestPromise) entitlementSnapshotPromise = null
   }
 }
+
+supabase.auth?.onAuthStateChange?.(() => {
+  entitlementAuthGeneration += 1
+  invalidateEntitlementSnapshot('auth-change')
+})
 
 if (typeof window !== 'undefined') {
   window.addEventListener('greyveil:access-changed', () => invalidateEntitlementSnapshot('access-change'))

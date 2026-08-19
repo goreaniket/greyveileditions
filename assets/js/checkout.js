@@ -6,8 +6,8 @@ import {
   formatCurrency,
   getText,
   loadRazorpayCheckout,
-} from './commerce.js?v=20260812-edge-payments'
-import { getEntitlementSnapshot, hierarchyForBook } from './content-access.js?v=20260812-edge-payments'
+} from './commerce.js?v=20260819-commerce-stabilization'
+import { getEntitlementSnapshot, hierarchyForBook } from './content-access.js?v=20260819-commerce-stabilization'
 
 const node = (selector) => document.querySelector(selector)
 const setStatus = (target, message = '', type = '') => {
@@ -202,7 +202,7 @@ const initCheckout = async () => {
   })
 
   payButton.addEventListener('click', async () => {
-    setBusy(payButton, true, 'Preparing Razorpay...')
+    setBusy(payButton, true, 'Preparing payment...')
     setStatus(checkoutStatus, 'Confirming your final server-owned price...', 'info')
     try {
       const { order } = await edgeFunctionPost('create-order', {
@@ -211,7 +211,7 @@ const initCheckout = async () => {
       })
       const verification = await openRazorpay({ user, profile, order, itemName: basePricing.item_name })
       if (verification?.dismissed) {
-        setStatus(checkoutStatus, 'Razorpay was closed before payment was confirmed.', 'info')
+        setStatus(checkoutStatus, 'The payment window was closed before payment was confirmed.', 'info')
         return
       }
       if (verification?.failed) {
