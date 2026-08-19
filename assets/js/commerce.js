@@ -1,6 +1,6 @@
 import { supabase } from './supabase-client.js'
 
-export const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection'])
+export const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection', 'pass'])
 const CHECKOUT_SCRIPT_URL = 'https://checkout.razorpay.com/v1/checkout.js'
 const ID_PATTERN = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|\d+)$/i
 let checkoutScriptPromise = null
@@ -8,6 +8,7 @@ const recordIdPromises = new Map()
 
 export const getText = (value, fallback = '') => String(value ?? '').trim() || fallback
 export const normalizePurchaseType = (value) => getText(value).toLowerCase()
+const targetFieldFor = (type) => type === 'pass' ? 'temporary_access_pass_id' : `${type}_id`
 
 export const safeInternalPath = (value, fallback = '/') => {
   const path = getText(value)
@@ -93,7 +94,7 @@ export const resolveRecordId = async (type, slug) => {
   if (!VALID_PURCHASE_TYPES.has(purchaseType) || !cleanSlug) return ''
   const cacheKey = `${purchaseType}:${cleanSlug}`
   if (recordIdPromises.has(cacheKey)) return recordIdPromises.get(cacheKey)
-  const table = { book: 'books', series: 'series', collection: 'collections' }[purchaseType]
+  const table = { book: 'books', series: 'series', collection: 'collections', pass: 'temporary_access_passes' }[purchaseType]
   const request = (async () => {
     const { data, error } = await supabase.from(table).select('id, slug, title').eq('slug', cleanSlug).maybeSingle()
     if (error || !data?.id) throw new Error('This purchase option is not available right now.')
@@ -111,12 +112,12 @@ export const purchasePayloadForElement = async (element) => {
   const targetId = getText(element.dataset[idDatasetName])
     || await resolveRecordId(purchaseType, element.dataset.purchaseSlug)
   if (!ID_PATTERN.test(targetId)) throw new Error('This purchase option is not available right now.')
-  return { purchase_type: purchaseType, [`${purchaseType}_id`]: targetId }
+  return { purchase_type: purchaseType, [targetFieldFor(purchaseType)]: targetId }
 }
 
 export const purchaseTargetForPayload = (payload) => {
   const purchaseType = normalizePurchaseType(payload?.purchase_type)
-  return { purchaseType, targetId: getText(payload?.[`${purchaseType}_id`]) }
+  return { purchaseType, targetId: getText(payload?.[targetFieldFor(purchaseType)]) }
 }
 
 export const checkoutUrlForPayload = (payload, returnPath = '/') => {
@@ -139,7 +140,7 @@ export const checkoutSelectionFromSearch = (search = window.location.search) => 
     purchaseType,
     targetId,
     returnPath: safeInternalPath(params.get('return'), '/projects/'),
-    payload: { purchase_type: purchaseType, [`${purchaseType}_id`]: targetId },
+    payload: { purchase_type: purchaseType, [targetFieldFor(purchaseType)]: targetId },
   }
 }
 

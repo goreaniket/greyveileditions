@@ -40,6 +40,7 @@ const includedContent = async (selection) => {
       const books = hierarchy.books.filter((item) => idsMatch(item.series_id, selection.targetId) && item.is_active !== false)
       return `Includes ${books.length} currently available ${books.length === 1 ? 'book' : 'books'} in this series.`
     }
+    if (selection.purchaseType === 'pass') return 'Temporary access is activated only after verified payment and expires from the recorded activation time.'
     const seriesIds = new Set(hierarchy.seriesItems.filter((series) => {
       const volume = hierarchy.volumes.find((item) => idsMatch(item.id, series.volume_id))
       return idsMatch(series.collection_id || volume?.collection_id, selection.targetId)

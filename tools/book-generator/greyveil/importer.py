@@ -69,6 +69,7 @@ def import_docx(
     *,
     design_from: str = "the-last-shift",
     cover_path: Path | None = None,
+    metadata_overrides: dict[str, str] | None = None,
 ) -> ImportResult:
     job = GenerationJob()
     manuscript_path = manuscript_path.resolve()
@@ -84,6 +85,11 @@ def import_docx(
     job.advance(GenerationStage.NORMALIZING)
     parsed = parse_manuscript(document)
     metadata = detect_metadata(document, parsed["opening"])
+    # Founder review happens before generation. Only explicit, non-empty admin
+    # corrections replace detected values; manuscript text is never rewritten.
+    for key, value in (metadata_overrides or {}).items():
+        if isinstance(value, str) and value.strip():
+            metadata[key] = value.strip()
     title = metadata.get("title", "")
     slug = slugify(title) if title else ""
     selected_cover = find_cover(manuscript_path, cover_path)

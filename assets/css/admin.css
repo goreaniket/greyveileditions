@@ -114,6 +114,31 @@
   gap: 12px;
 }
 
+.founder-creator,
+.founder-jobs,
+.founder-catalog,
+.founder-passes {
+  margin-bottom: 20px;
+}
+
+.founder-job {
+  display: grid;
+  gap: 8px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(42, 52, 64, .12);
+}
+
+.founder-job:first-of-type { border-top: 0; }
+.founder-job__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.founder-job progress { width: 100%; height: 8px; accent-color: var(--admin-accent); }
+.founder-job p, .founder-job small { margin: 0; color: var(--admin-muted); }
+.founder-job__qa { font-size: .78rem; }
+.founder-catalog .admin-platform-item { display: grid; grid-template-columns: minmax(180px, 1fr) 110px 110px auto; align-items: center; gap: 10px; }
+
+@media (max-width: 720px) {
+  .founder-catalog .admin-platform-item { grid-template-columns: 1fr; }
+}
+
 .admin-platform-item {
   padding: 18px 0;
   border-bottom: 1px solid rgba(255, 255, 255, .12);

@@ -245,6 +245,68 @@ html {
   color: rgba(255, 255, 255, .78);
 }
 
+.announcement-kicker {
+  display: block;
+  color: var(--bronze);
+  font-family: var(--sans);
+  font-size: .66rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.announcement-hero-highlight {
+  position: relative;
+  margin-top: 20px;
+  padding: 22px 58px 22px 26px;
+  border: 1px solid rgba(140, 106, 74, .3);
+  border-left: 4px solid var(--bronze);
+  background: linear-gradient(110deg, rgba(247, 243, 237, .98), rgba(232, 239, 235, .82));
+}
+
+.announcement-hero-highlight .announcement-content { justify-content: flex-start; color: var(--charcoal); }
+.announcement-hero-highlight .announcement-content span { color: #59636d; }
+.announcement-hero-highlight .announcement-link { color: var(--indigo); }
+.announcement-hero-highlight__close,
+.floating-announcement__close { border: 0; color: inherit; font: inherit; background: transparent; cursor: pointer; }
+.announcement-hero-highlight__close { position: absolute; top: 12px; right: 14px; font-size: .72rem; }
+
+.floating-announcement {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 105;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: min(355px, calc(100vw - 32px));
+  padding: 16px 14px 14px 18px;
+  border: 1px solid rgba(140, 106, 74, .34);
+  border-left: 4px solid var(--bronze);
+  color: var(--charcoal);
+  background: rgba(250, 248, 244, .97);
+  box-shadow: var(--shadow);
+}
+.floating-announcement .announcement-content { display: grid; justify-content: start; gap: 5px; color: inherit; }
+.floating-announcement .announcement-content span { color: #616873; }
+.floating-announcement .announcement-link { color: var(--indigo); }
+.floating-announcement__close { padding: 0; color: #66707a; font-size: .72rem; }
+
+.access-pass-offer { margin-top: 18px; }
+.access-pass-offer > section {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 24px;
+  border: 1px solid rgba(42, 52, 64, .14);
+  background: rgba(255, 255, 255, .54);
+}
+.access-pass-offer h2, .access-pass-offer p { margin: 0; }
+.access-pass-offer h2 { font-size: clamp(1.5rem, 2.4vw, 2.2rem); }
+.access-pass-offer__price { color: var(--indigo); font-size: 1.1rem; }
+
 .announcement-link {
   color: #fff;
   font-weight: 700;
@@ -387,6 +449,9 @@ html {
   .site-announcement {
     justify-content: flex-start;
   }
+
+  .floating-announcement { right: 16px; bottom: 16px; }
+  .access-pass-offer > section { grid-template-columns: 1fr; gap: 10px; }
 }
 
 body {

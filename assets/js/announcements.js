@@ -48,6 +48,7 @@ const announcementContent = (announcement, compact = false) => {
     content.append(image)
   }
   const copy = create('div')
+  if (!compact) copy.append(create('em', 'announcement-kicker', 'New from Greyveil'))
   copy.append(create('strong', '', announcement.title), create('span', '', announcement.message))
   content.append(copy)
   const ctaUrl = safeUrl(announcement.cta_url)
@@ -57,6 +58,35 @@ const announcementContent = (announcement, compact = false) => {
     content.append(link)
   }
   return content
+}
+
+const renderHeroHighlight = (announcement) => {
+  if (dismissed(announcement.id)) return
+  const main = document.querySelector('main')
+  if (!main) return
+  const section = create('section', 'page-shell announcement-hero-highlight')
+  section.setAttribute('aria-label', 'New from Greyveil')
+  section.append(announcementContent(announcement))
+  const close = create('button', 'announcement-hero-highlight__close', 'Dismiss')
+  close.type = 'button'
+  close.addEventListener('click', () => { dismiss(announcement.id); section.remove() })
+  section.append(close)
+  const hero = main.querySelector('h1')?.closest('section, header, div')
+  if (hero?.parentNode) hero.insertAdjacentElement('afterend', section)
+  else main.insertBefore(section, main.firstChild)
+}
+
+const renderFloating = (announcement) => {
+  if (dismissed(announcement.id)) return
+  const card = create('aside', 'floating-announcement')
+  card.setAttribute('aria-label', 'Announcement')
+  card.append(announcementContent(announcement, true))
+  const close = create('button', 'floating-announcement__close', 'Close')
+  close.type = 'button'
+  close.setAttribute('aria-label', 'Dismiss announcement')
+  close.addEventListener('click', () => { dismiss(announcement.id); card.remove() })
+  card.append(close)
+  document.body.append(card)
 }
 
 const renderBanner = (announcement) => {
@@ -157,9 +187,10 @@ export const initAnnouncements = async () => {
     const announcements = data || []
     const pagePlacement = placementForPage()
     const banner = announcements.find((item) => item.placement === 'site-wide')
-    if (banner) renderBanner(banner)
+    if (banner) renderFloating(banner)
+    if (pagePlacement === 'home') announcements.filter((item) => item.placement === 'home').forEach(renderHeroHighlight)
     announcements
-      .filter((item) => item.placement === pagePlacement || (pagePlacement === 'account' && item.placement === 'library'))
+      .filter((item) => item.placement === pagePlacement && item.placement !== 'home' || (pagePlacement === 'account' && item.placement === 'library'))
       .forEach(renderPageAnnouncement)
     await renderNotificationCenter(snapshot, announcements)
   } catch (error) {

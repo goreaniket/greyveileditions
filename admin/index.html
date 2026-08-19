@@ -44,6 +44,7 @@
           <button type="button" data-admin-tab="users" aria-selected="false">Users</button>
           <button type="button" data-admin-tab="content" aria-selected="false">Content</button>
           <button type="button" data-admin-tab="books" aria-selected="false">Books</button>
+          <button type="button" data-admin-tab="publishing" aria-selected="false">Publishing</button>
           <button type="button" data-admin-tab="book-access" aria-selected="false">Book Access</button>
           <button type="button" data-admin-tab="payments" aria-selected="false">Payments</button>
           <button type="button" data-admin-tab="reviews" aria-selected="false">Reviews</button>
@@ -106,6 +107,10 @@
           </div>
 
           <div class="admin-dashboard-grid">
+            <article class="admin-card">
+              <div class="admin-card-heading"><h3>Publishing</h3><button type="button" data-admin-tab-link="publishing">Open workflow</button></div>
+              <p class="admin-panel-note">Books, Series, Collections, Generation Jobs, Announcements, and Access Passes remain managed through focused admin tools.</p>
+            </article>
             <article class="admin-card">
               <div class="admin-card-heading">
                 <h3>Recent Feedback</h3>
@@ -219,7 +224,7 @@
             <input type="hidden" name="id" />
             <div class="admin-access-grid">
               <label><span>Title</span><input name="title" required maxlength="160" /></label>
-              <label><span>Placement</span><select name="placement"><option value="site-wide">Site-wide Top Banner</option><option value="home">Home</option><option value="account">Account</option><option value="library">My Library</option><option value="project">Project / Series</option></select></label>
+              <label><span>Placement</span><select name="placement"><option value="home">Hero Highlight (Home)</option><option value="site-wide">Floating (Site-wide)</option><option value="account">Account</option><option value="library">My Library</option><option value="project">Project / Series</option></select></label>
               <label><span>Audience</span><select name="audience"><option value="everyone">Everyone</option><option value="logged-in">Logged-in Users</option><option value="series-owner">Series Owners</option><option value="collection-owner">Collection Owners</option></select></label>
               <label><span>Audience Target ID</span><input name="audience_target_id" /></label>
               <label><span>CTA Label</span><input name="cta_label" /></label>
@@ -387,6 +392,17 @@
             </table>
           </div>
           <p class="admin-empty" data-books-empty hidden>No books match the current filters.</p>
+        </section>
+
+        <section class="admin-panel" data-admin-panel="publishing" aria-labelledby="publishing-title">
+          <div class="admin-panel-heading">
+            <div>
+              <p class="admin-eyebrow">Founder Workflow</p>
+              <h2 id="publishing-title">Publishing</h2>
+              <p class="admin-panel-note">Manuscripts are queued for the separate Greyveil worker. Candidate files stay private until QA succeeds and an admin publishes them.</p>
+            </div>
+          </div>
+          <div data-founder-publishing></div>
         </section>
 
         <section class="admin-panel" data-admin-panel="book-access" aria-labelledby="book-access-title">
@@ -692,6 +708,7 @@
   </main>
 
   <script type="module" src="/assets/js/admin.js"></script>
+  <script type="module" src="/assets/js/founder-publishing.js"></script>
   <script type="module" src="/assets/js/admin-platform.js"></script>
 </body>
 </html>

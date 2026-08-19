@@ -133,3 +133,14 @@ python tools/book-generator/generate_book.py the-last-shift --pdf-prototype
 - Export print-safe editable DOCX files.
 
 Source ZIP export remains reserved for a later pipeline step.
+
+## Founder publishing worker boundary
+
+The Admin Publishing screen records durable jobs and uploads inputs to private
+Supabase storage. It does not run Python from a browser request or from Vercel.
+Run `run_generation_worker.py` in a trusted worker environment with a repository
+checkout plus `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`. The worker uses the
+existing importer, generator, and QA modules, then keeps candidate artifacts in
+private storage until an admin requests publication. Deploying the candidate
+source and switching canonical public outputs remains an external worker/release
+integration; it is intentionally not faked by the website.
