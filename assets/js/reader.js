@@ -1315,37 +1315,67 @@
     });
   };
 
-  const readerContentErrorPayload = async (error, data) => {
-    if (data?.error) return data.error;
-    const response = error?.context;
-    if (!response || typeof response.clone !== "function") return null;
-
-    try {
-      return (await response.clone().json())?.error || null;
-    } catch (_error) {
-      return null;
+  const readerContentFailure = (problem, status = 0) => {
+    const code = String(problem?.code || "reader_api_failed");
+    if (code === "login_required") return { reason: "login_required", category: "authorization_denied", code, status };
+    if (["access_required", "access_denied"].includes(code)) {
+      return { reason: "access_required", category: "authorization_denied", code, status };
     }
+    if (["book_not_found", "book_unavailable", "invalid_book"].includes(code)) {
+      return { reason: "unavailable", category: "book_not_found", code, status };
+    }
+    if (["source_missing", "content_unavailable", "published_source_missing", "invalid_content", "invalid_published_source"].includes(code)) {
+      return { reason: "unavailable", category: "source_missing", code, status };
+    }
+    if (["published_reference_invalid", "published_reference_unavailable"].includes(code)) {
+      return { reason: "unavailable", category: "published_reference_missing", code, status };
+    }
+    if (code === "network_error") return { reason: "unavailable", category: "network_error", code, status };
+    return { reason: "unavailable", category: "reader_api_failed", code, status };
   };
 
   const fetchReaderContent = async (resources) => {
-    const { supabase } = await loadSupabaseModule();
-    const { data, error } = await supabase.functions.invoke("reader-content", {
-      body: {
-        book_slug: readerBookSlug,
-        resources,
-      },
-    });
+    const { getCurrentSessionOnce } = await loadSupabaseModule();
+    const { data: sessionData, error: sessionError } = await getCurrentSessionOnce();
+    if (sessionError) {
+      throw readerAccessError(readerContentFailure({ code: "session_unavailable" }));
+    }
 
-    if (error || !data?.success || !data?.resources) {
-      const problem = await readerContentErrorPayload(error, data);
-      const reason = ["login_required", "access_required", "unavailable"].includes(problem?.code)
-        ? problem.code
-        : "unavailable";
-      throw readerAccessError({ reason });
+    const headers = { "Content-Type": "application/json" };
+    if (sessionData?.session?.access_token) headers.Authorization = `Bearer ${sessionData.session.access_token}`;
+
+    let response;
+    try {
+      response = await fetch("/api/reader-content", {
+        method: "POST",
+        headers,
+        credentials: "same-origin",
+        body: JSON.stringify({
+          book_slug: readerBookSlug,
+          resources,
+        }),
+      });
+    } catch (_error) {
+      throw readerAccessError(readerContentFailure({ code: "network_error" }));
+    }
+
+    let data = null;
+    try {
+      data = await response.json();
+    } catch (_error) {
+      data = null;
+    }
+
+    if (!response.ok || !data?.success || !data?.resources) {
+      const failure = readerContentFailure(data?.error, response.status);
+      console.info("Reader content request failed.", failure);
+      throw readerAccessError(failure);
     }
 
     const missing = resources.find((resource) => !Object.prototype.hasOwnProperty.call(data.resources, resource));
-    if (missing) throw new Error("Reader content response is incomplete.");
+    if (missing) {
+      throw readerAccessError(readerContentFailure({ code: "response_incomplete" }, response.status));
+    }
     return data.resources;
   };
 

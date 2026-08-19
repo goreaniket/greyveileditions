@@ -70,9 +70,10 @@ test('database reader resolver is service-only and uses current book_access flag
   assert.match(sql, /grant execute on function public\.greyveil_reader_content_authorization\(uuid, text\) to service_role/)
 })
 
-test('Edge reader delivery authenticates before private storage reads and never returns signed URLs', async () => {
-  const [edge, config] = await Promise.all([
+test('Reader delivery authenticates before private storage reads and never returns signed URLs', async () => {
+  const [edge, api, config] = await Promise.all([
     source('../supabase/functions/reader-content/index.ts'),
+    source('../api/reader-content.js'),
     source('../supabase/config.toml'),
   ])
   assert.match(edge, /admin\.auth\.getUser\(token\)/)
@@ -82,17 +83,24 @@ test('Edge reader delivery authenticates before private storage reads and never 
   assert.match(edge, /RESOURCE_PATTERN/)
   assert.match(edge, /MAX_RESOURCES = 64/)
   assert.match(edge, /admin\.storage\.from\(BUCKET\)\.download/)
+  assert.match(edge, /\.eq\('file_type', 'source'\)/)
+  assert.match(edge, /published\/\$\{bookSlug\}\/\$\{VERSION_PATTERN\}\/source/)
+  assert.match(edge, /return \{ source: 'legacy'/)
   assert.match(edge, /Cache-Control': 'private, no-store, max-age=0'/)
-  assert.ok(edge.indexOf(".rpc('greyveil_reader_content_authorization'") < edge.indexOf('await readResource(admin'))
+  assert.ok(edge.indexOf(".rpc('greyveil_reader_content_authorization'") < edge.indexOf('await readResources(admin'))
   assert.doesNotMatch(edge, /createSignedUrl|getPublicUrl/)
   assert.doesNotMatch(edge, /service_role.*resources|SUPABASE_SERVICE_ROLE_KEY.*return/i)
+  assert.match(api, /greyveil_reader_content_authorization/)
+  assert.match(api, /handleReaderContentRequest/)
+  assert.match(api, /downloadObject\('reader-content'/)
   assert.match(config, /\[functions\.reader-content\][\s\S]+verify_jwt = false/)
 })
 
 test('reader retrieves no manifest or chapter content until access resolution succeeds', async () => {
   const reader = await source('../assets/js/reader.js')
   const loadBook = reader.slice(reader.indexOf('const loadBook = async'), reader.indexOf('const init = async'))
-  assert.match(reader, /supabase\.functions\.invoke\("reader-content"/)
+  assert.match(reader, /fetch\("\/api\/reader-content"/)
+  assert.match(reader, /await getCurrentSessionOnce\(\)/)
   assert.doesNotMatch(reader, /const fetchJson/)
   assert.ok(loadBook.indexOf('await guardReaderAccess()') < loadBook.indexOf('fetchReaderContent(["book.json"])'))
   assert.ok(loadBook.indexOf('fetchReaderContent(["book.json"])') < loadBook.indexOf('fetchReaderContent(unitResources)'))

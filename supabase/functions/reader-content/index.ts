@@ -1,4 +1,5 @@
 import { createClient } from 'npm:@supabase/supabase-js@2'
+import { unzipSync } from 'npm:fflate@0.8.2'
 import { corsHeaders, handleCors } from '../_shared/cors.ts'
 
 const responseHeaders = (request: Request) => ({
@@ -10,8 +11,10 @@ const responseHeaders = (request: Request) => ({
 })
 const BUCKET = 'reader-content'
 const MAX_RESOURCES = 64
+const MAX_SOURCE_ARCHIVE_BYTES = 64 * 1024 * 1024
 const BOOK_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const RESOURCE_PATTERN = /^(?:book\.json|chapters\/[a-z0-9][a-z0-9._-]*\.json)$/i
+const VERSION_PATTERN = '[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}'
 
 class HttpError extends Error {
   status: number
@@ -103,6 +106,80 @@ const readResource = async (
   }
 }
 
+const publishedSource = async (
+  admin: ReturnType<typeof serviceClient>,
+  bookId: number,
+  bookSlug: string,
+) => {
+  const { data, error } = await admin
+    .from('book_files')
+    .select('book_id,file_type,storage_path,file_name,mime_type,file_size,updated_at')
+    .eq('book_id', bookId)
+    .eq('file_type', 'source')
+    .maybeSingle()
+  if (error) throw new HttpError(500, 'Published Reader reference could not be checked.', 'published_reference_unavailable')
+  return String(data?.storage_path || '').replaceAll('\\', '/').startsWith(`published/${bookSlug}/`)
+    ? data
+    : null
+}
+
+const readPublishedResources = async (
+  admin: ReturnType<typeof serviceClient>,
+  bookSlug: string,
+  source: Record<string, unknown>,
+  resources: string[],
+) => {
+  const storagePath = String(source.storage_path || '').trim().replaceAll('\\', '/')
+  const expected = new RegExp(`^published/${bookSlug}/${VERSION_PATTERN}/source/[^/]+\\.zip$`, 'i')
+  const fileSize = Number(source.file_size)
+  if (source.file_type !== 'source' || !expected.test(storagePath)
+      || (Number.isFinite(fileSize) && (fileSize < 0 || fileSize > MAX_SOURCE_ARCHIVE_BYTES))) {
+    throw new HttpError(500, 'The published Reader reference is invalid.', 'published_reference_invalid')
+  }
+
+  const { data, error } = await admin.storage.from('book-files').download(storagePath)
+  if (error || !data) throw new HttpError(404, 'Published Reader content is unavailable.', 'published_source_missing')
+  if (data.size > MAX_SOURCE_ARCHIVE_BYTES) {
+    throw new HttpError(500, 'The published Reader source is invalid.', 'invalid_published_source')
+  }
+
+  let entries: Record<string, Uint8Array>
+  try {
+    entries = unzipSync(new Uint8Array(await data.arrayBuffer()))
+  } catch (_error) {
+    throw new HttpError(500, 'The published Reader source is invalid.', 'invalid_published_source')
+  }
+
+  const decoder = new TextDecoder()
+  return Object.fromEntries(resources.map((resource) => {
+    const content = entries[`${bookSlug}/${resource}`]
+    if (!content) throw new HttpError(404, 'Published Reader content is missing.', 'source_missing')
+    try {
+      return [resource, JSON.parse(decoder.decode(content))]
+    } catch (_error) {
+      throw new HttpError(500, 'Reader content is unavailable.', 'invalid_content')
+    }
+  }))
+}
+
+const readResources = async (
+  admin: ReturnType<typeof serviceClient>,
+  bookId: number,
+  bookSlug: string,
+  resources: string[],
+) => {
+  const source = await publishedSource(admin, bookId, bookSlug)
+  if (source) {
+    return { source: 'published', resources: await readPublishedResources(admin, bookSlug, source, resources) }
+  }
+
+  const entries = await Promise.all(resources.map(async (resource) => [
+    resource,
+    await readResource(admin, bookSlug, resource),
+  ] as const))
+  return { source: 'legacy', resources: Object.fromEntries(entries) }
+}
+
 Deno.serve(async (request) => {
   const corsResponse = handleCors(request)
   if (corsResponse) return corsResponse
@@ -133,10 +210,7 @@ Deno.serve(async (request) => {
       throw new HttpError(status, message, String(authorization.reason || 'access_denied'))
     }
 
-    const entries = await Promise.all(resources.map(async (resource) => [
-      resource,
-      await readResource(admin, bookSlug, resource),
-    ] as const))
+    const resolved = await readResources(admin, authorization.book_id, bookSlug, resources)
 
     return json(200, {
       success: true,
@@ -146,7 +220,8 @@ Deno.serve(async (request) => {
         title: authorization.book_title,
         visibility: authorization.effective_visibility,
       },
-      resources: Object.fromEntries(entries),
+      source: resolved.source,
+      resources: resolved.resources,
     }, request)
   } catch (error) {
     const problem = error instanceof HttpError
