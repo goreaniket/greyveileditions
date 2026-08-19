@@ -1,0 +1,69 @@
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m233[m[36m-[m  select book.id, book.slug, book.title,
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m234[m[36m-[m    case when lower(coalesce(book.visibility, '')) = 'private' then 'private'
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m235[m[36m-[m         when coalesce(book.is_public, false) or lower(coalesce(book.visibility, '')) = 'public' then 'public'
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m236[m[36m-[m         when lower(coalesce(series_item.visibility, 'public')) = 'private' or lower(coalesce(volume.visibility, 'public')) = 'private' or lower(coalesce(collection_item.visibility, 'public')) = 'private' then 'private'
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m237[m[36m-[m         else 'paid' end as visibility
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m238[m[36m-[m  into target
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m239[m[36m-[m  from public.books book
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m240[m[36m-[m  left join public.series series_item on series_item.id = book.series_id
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m241[m[36m-[m  left join public.volumes volume on volume.id = series_item.volume_id
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m242[m[36m-[m  left join public.collections collection_item on collection_item.id = coalesce(series_item.collection_id, volume.collection_id)
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m243[m[36m-[m  where book.slug = lower(btrim(target_book_slug)) limit 1;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m244[m[36m-[m  if not found then return; end if;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m245[m[36m-[m  select * into decision from public.greyveil_resolve_book_access(target_user_id, target.id);
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m246[m[36m-[m  book_id := target.id; book_slug := target.slug; book_title := target.title; effective_visibility := target.visibility;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m247[m[36m-[m  allowed := coalesce(decision.allowed, false);
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m248[m[36m-[m  reason := case when allowed then lower(decision.access_state) when target_user_id is null and target.visibility = 'paid' then 'login_required' when target.visibility = 'private' then 'unavailable' else 'access_required' end;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m249[m[36m-[m  return next;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m250[m[36m-[mend;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m251[m[36m-[m$$;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m252[m[36m-[m
+[35msupabase/hierarchical-commerce-access.sql[m[36m:[m[32m253[m[36m:[mcreate or replace function public.[1;31mgreyveil_admin_update_catalog_price[m(target_type text, target_id text, new_price_amount integer)
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m254[m[36m-[mreturns void language plpgsql security definer set search_path = public as $$
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m255[m[36m-[mbegin
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m256[m[36m-[m  if not public.greyveil_is_admin() then raise exception 'Admin access required.' using errcode = '42501'; end if;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m257[m[36m-[m  if new_price_amount is null or new_price_amount <= 0 then raise exception 'Price must be positive.'; end if;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m258[m[36m-[m  if target_type = 'book' then update public.books set price_amount = new_price_amount where id = target_id::bigint;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m259[m[36m-[m  elsif target_type = 'series' then update public.series set price_amount = new_price_amount where id = target_id::uuid;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m260[m[36m-[m  elsif target_type = 'collection' then update public.collections set price_amount = new_price_amount where id = target_id::uuid;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m261[m[36m-[m  else raise exception 'Unsupported catalog target.'; end if;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m262[m[36m-[m  if not found then raise exception 'Catalog target was not found.'; end if;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m263[m[36m-[mend;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m264[m[36m-[m$$;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m265[m[36m-[m
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m266[m[36m-[mcreate or replace function public.greyveil_admin_update_catalog_visibility(target_type text, target_id text, new_visibility text)
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m267[m[36m-[mreturns void language plpgsql security definer set search_path = public as $$
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m268[m[36m-[mdeclare normalized_visibility text := lower(btrim(new_visibility));
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m269[m[36m-[mbegin
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m270[m[36m-[m  if not public.greyveil_is_admin() then raise exception 'Admin access required.' using errcode = '42501'; end if;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m271[m[36m-[m  if normalized_visibility not in ('public', 'paid', 'private') then raise exception 'Unsupported visibility.'; end if;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m272[m[36m-[m  if target_type = 'book' then
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m273[m[36m-[m    update public.books set visibility = normalized_visibility, is_public = normalized_visibility = 'public' where id = target_id::bigint;
+[36m--[m
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m300[m[36m-[m
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m301[m[36m-[malter table public.catalog_access_grants enable row level security;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m302[m[36m-[malter table public.temporary_access_passes enable row level security;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m303[m[36m-[malter table public.temporary_access_pass_activations enable row level security;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m304[m[36m-[mdrop policy if exists "Users and admins read catalog grants" on public.catalog_access_grants;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m305[m[36m-[mcreate policy "Users and admins read catalog grants" on public.catalog_access_grants for select to authenticated using (user_id = auth.uid() or public.greyveil_is_admin());
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m306[m[36m-[mdrop policy if exists "Admins manage catalog grants" on public.catalog_access_grants;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m307[m[36m-[mcreate policy "Admins manage catalog grants" on public.catalog_access_grants for all to authenticated using (public.greyveil_is_admin()) with check (public.greyveil_is_admin());
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m308[m[36m-[mdrop policy if exists "Public reads active temporary passes" on public.temporary_access_passes;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m309[m[36m-[mcreate policy "Public reads active temporary passes" on public.temporary_access_passes for select to anon, authenticated using (active or public.greyveil_is_admin());
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m310[m[36m-[mdrop policy if exists "Admins manage temporary passes" on public.temporary_access_passes;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m311[m[36m-[mcreate policy "Admins manage temporary passes" on public.temporary_access_passes for all to authenticated using (public.greyveil_is_admin()) with check (public.greyveil_is_admin());
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m312[m[36m-[mdrop policy if exists "Users and admins read pass activations" on public.temporary_access_pass_activations;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m313[m[36m-[mcreate policy "Users and admins read pass activations" on public.temporary_access_pass_activations for select to authenticated using (user_id = auth.uid() or public.greyveil_is_admin());
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m314[m[36m-[m
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m315[m[36m-[mrevoke all on function public.greyveil_resolve_book_access(uuid, bigint) from public;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m316[m[36m-[mrevoke all on function public.greyveil_resolve_book_access(uuid, bigint) from anon;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m317[m[36m-[mrevoke all on function public.greyveil_resolve_book_access(uuid, bigint) from authenticated;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m318[m[36m-[mgrant execute on function public.greyveil_resolve_book_access(uuid, bigint) to service_role;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m319[m[36m-[mgrant execute on function public.greyveil_effective_book_access(uuid, bigint) to authenticated;
+[35msupabase/hierarchical-commerce-access.sql[m[36m:[m[32m320[m[36m:[mgrant execute on function public.[1;31mgreyveil_admin_update_catalog_price[m(text, text, integer) to authenticated;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m321[m[36m-[mgrant execute on function public.greyveil_admin_update_catalog_visibility(text, text, text) to authenticated;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m322[m[36m-[mgrant execute on function public.greyveil_admin_set_book_series(bigint, uuid) to authenticated;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m323[m[36m-[mgrant execute on function public.greyveil_admin_set_series_collection(uuid, uuid) to authenticated;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m324[m[36m-[m
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m325[m[36m-[mcommit;
+[35msupabase/hierarchical-commerce-access.sql[m[36m-[m[32m326[m[36m-[mnotify pgrst, 'reload schema';
