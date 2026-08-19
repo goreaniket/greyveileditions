@@ -2764,8 +2764,142 @@ main > .home-hero ~ .section .contact-link {
   overflow-wrap: anywhere;
 }
 
+.account-overview {
+  padding-block: 14px 30px;
+}
+
+.account-overview .section-heading {
+  margin-bottom: 18px;
+}
+
+.access-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.access-overview-card {
+  display: grid;
+  align-content: space-between;
+  gap: 18px;
+  min-height: 132px;
+  padding: 18px;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 0 12px 30px rgba(42, 52, 64, .05);
+}
+
+.access-overview-card strong {
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1;
+}
+
+.access-overview-card span {
+  color: rgba(42, 52, 64, .68);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.access-overview-card--pass {
+  background: linear-gradient(135deg, rgba(140, 106, 74, .14), rgba(255, 255, 255, .52));
+}
+
+.access-overview-card--pass strong {
+  color: var(--bronze);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  line-height: 1.05;
+}
+
+.account-profile-section {
+  padding-block: 30px 64px;
+}
+
+.account-security-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 15px 0;
+  border-top: 1px solid rgba(42, 52, 64, .1);
+  border-bottom: 1px solid rgba(42, 52, 64, .1);
+}
+
+.account-security-action div {
+  display: grid;
+  gap: 4px;
+}
+
+.account-security-action strong {
+  color: var(--slate);
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.account-security-action span {
+  color: rgba(42, 52, 64, .66);
+  font-size: .88rem;
+}
+
 .account-library {
   padding-block-start: 18px;
+}
+
+.account-pass {
+  padding-block-start: 18px;
+}
+
+.account-pass-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 900px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid rgba(140, 106, 74, .24);
+  border-radius: 8px;
+  background: linear-gradient(120deg, rgba(140, 106, 74, .11), rgba(255, 255, 255, .52));
+}
+
+.account-pass-card h3 {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.05;
+}
+
+.account-pass-card p {
+  margin: 8px 0 0;
+  color: rgba(42, 52, 64, .7);
+}
+
+.account-pass-card__actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.account-pass-link {
+  color: var(--slate);
+  font-size: .88rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(140, 106, 74, .42);
+  text-underline-offset: 4px;
+}
+
+.account-pass-link:hover {
+  color: var(--bronze);
+  text-decoration-color: var(--bronze);
 }
 
 .account-library .section-heading {
@@ -4702,8 +4836,32 @@ blockquote {
   }
 
   .account-library,
-  .account-payments {
+  .account-payments,
+  .account-pass {
     padding-block-start: 0;
+  }
+
+  .access-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .access-overview-card {
+    min-height: 112px;
+    padding: 15px;
+  }
+
+  .account-pass-card,
+  .account-security-action {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .account-pass-card__actions {
+    width: 100%;
+  }
+
+  .account-pass-card__actions .button {
+    width: 100%;
   }
 
   .account-library .section-heading {

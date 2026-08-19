@@ -199,6 +199,19 @@ const paymentNodes = () => ({
   empty: document.querySelector('[data-payments-empty]'),
 })
 
+const accountOverviewNodes = () => ({
+  section: document.querySelector('[data-account-overview]'),
+  books: document.querySelector('[data-overview-books]'),
+  series: document.querySelector('[data-overview-series]'),
+  collections: document.querySelector('[data-overview-collections]'),
+  pass: document.querySelector('[data-overview-pass]'),
+})
+
+const accountPassNodes = () => ({
+  section: document.querySelector('[data-account-pass]'),
+  card: document.querySelector('[data-account-pass-card]'),
+})
+
 const clearNode = (node) => {
   if (!node) return
   while (node.firstChild) node.firstChild.remove()
@@ -224,6 +237,14 @@ const paymentStatusForOrder = (order, payment) => {
   if (paymentStatus === 'captured' || payment?.captured === true) return 'paid'
   return getText(order?.status, paymentStatus || 'pending').toLowerCase()
 }
+
+const paymentStatusExplanation = (status) => ({
+  paid: 'Payment confirmed. This purchase is available in your library.',
+  pending: 'Payment is still being confirmed. Access will appear once it is complete.',
+  failed: 'This payment did not go through. No access has been added.',
+  refunded: 'This payment was refunded. Access from this purchase may no longer be available.',
+  cancelled: 'This payment was cancelled. No access has been added.',
+}[status] || 'This payment is being processed. We’ll update it as soon as confirmation arrives.')
 
 const paymentHistoryCard = (order, payment) => {
   const card = document.createElement('article')
@@ -275,6 +296,10 @@ const paymentHistoryCard = (order, payment) => {
   status.className = `payment-history-status payment-history-status--${statusValue.replace(/[^a-z0-9]+/g, '-')}`
   status.textContent = formatAccessType(statusValue)
   footer.append(status)
+
+  const explanation = document.createElement('span')
+  explanation.textContent = paymentStatusExplanation(statusValue)
+  footer.append(explanation)
 
   if (payment?.method) {
     const method = document.createElement('span')
@@ -403,6 +428,72 @@ const libraryAccessCopy = (item, role) => {
   }
 }
 
+const activePassRecords = (snapshot = {}) => {
+  const passesById = new Map((snapshot.accessPasses || []).map((pass) => [String(pass.id), pass]))
+  return (snapshot.passActivations || [])
+    .filter((activation) => Date.parse(activation.expires_at) > Date.now())
+    .map((activation) => ({ activation, pass: passesById.get(String(activation.pass_id)) }))
+    .filter((record) => record.pass)
+    .sort((left, right) => Date.parse(left.activation.expires_at) - Date.parse(right.activation.expires_at))
+}
+
+const renderAccountOverview = (items, snapshot) => {
+  const nodes = accountOverviewNodes()
+  if (!nodes.section) return
+  const activePass = activePassRecords(snapshot)[0] || null
+  const seriesCount = new Set(items.map((item) => String(item.series?.id || '')).filter(Boolean)).size
+  const collectionCount = new Set(items.map((item) => String(item.collection?.id || '')).filter(Boolean)).size
+  if (nodes.books) nodes.books.textContent = String(items.length)
+  if (nodes.series) nodes.series.textContent = String(seriesCount)
+  if (nodes.collections) nodes.collections.textContent = String(collectionCount)
+  if (nodes.pass) nodes.pass.textContent = activePass ? 'Active Pass' : 'No active Pass'
+  nodes.section.hidden = false
+}
+
+const renderAccountPass = (snapshot) => {
+  const nodes = accountPassNodes()
+  if (!nodes.section || !nodes.card) return
+  const active = activePassRecords(snapshot)[0] || null
+  const offers = snapshot.accessPasses || []
+  clearNode(nodes.card)
+
+  const copy = document.createElement('div')
+  const title = document.createElement('h3')
+  const detail = document.createElement('p')
+  copy.append(title, detail)
+
+  if (active) {
+    title.textContent = active.pass.title || '1-Day Pass active'
+    detail.textContent = `Active until ${formatDate(active.activation.expires_at)}.`
+  } else {
+    title.textContent = 'Need temporary access?'
+    detail.textContent = offers.length
+      ? 'Choose an eligible pass to unlock Greyveil readers for a limited time.'
+      : 'There are no temporary access passes available right now.'
+  }
+  nodes.card.append(copy)
+
+  if (offers.length) {
+    const actions = document.createElement('div')
+    actions.className = 'account-pass-card__actions'
+    if (!active) {
+      const offer = offers[0]
+      const purchase = document.createElement('a')
+      purchase.className = 'button primary'
+      purchase.textContent = 'Get 1-Day Pass'
+      purchase.href = `/checkout/?type=pass&id=${encodeURIComponent(String(offer.id))}&return=%2Faccount%2F`
+      actions.append(purchase)
+    }
+    const view = document.createElement('a')
+    view.className = 'account-pass-link'
+    view.href = '#one-day-access'
+    view.textContent = 'View eligible Passes →'
+    actions.append(view)
+    nodes.card.append(actions)
+  }
+  nodes.section.hidden = false
+}
+
 const libraryBookState = (item, access) => {
   if (!access.hierarchyIsActive(item)) return { key: 'coming-soon', label: 'Coming Soon' }
   if (access.effectiveVisibilityForBookHierarchy(item) === 'private') {
@@ -482,7 +573,7 @@ const libraryCard = (item, role, access) => {
   return card
 }
 
-export const buildCustomerLibraryItems = (hierarchy, grants, paidOrders, access) => {
+export const buildCustomerLibraryItems = (hierarchy, grants, paidOrders, access, snapshot = {}) => {
   const grantsByBook = currentGrantMap(grants, access)
 
   return hierarchy.books
@@ -490,7 +581,10 @@ export const buildCustomerLibraryItems = (hierarchy, grants, paidOrders, access)
       const itemHierarchy = access.hierarchyForBook(book, hierarchy.seriesItems, hierarchy.collections, hierarchy.volumes)
       const directGrant = grantsByBook.get(book.id)
       const inheritedPurchase = access.hasInheritedPaidOrderEntitlement(itemHierarchy, paidOrders)
-      const grant = directGrant || (inheritedPurchase ? { access_type: 'purchase', expires_at: null } : null)
+      const passRecord = activePassRecords(snapshot).find(({ pass }) => access.passCoversHierarchy(pass, itemHierarchy))
+      const grant = directGrant
+        || (inheritedPurchase ? { access_type: 'purchase', expires_at: null } : null)
+        || (passRecord ? { access_type: '1-day pass', expires_at: passRecord.activation.expires_at } : null)
       return { ...itemHierarchy, grant }
     })
     .filter((item) => {
@@ -715,7 +809,7 @@ const renderAccountLibrary = async (user, profile, role, { force = false } = {})
 
     const items = isAdminRole(role)
       ? buildAdminLibraryItems(hierarchy, access)
-      : buildCustomerLibraryItems(hierarchy, grants, paidOrders, access)
+      : buildCustomerLibraryItems(hierarchy, grants, paidOrders, access, snapshot)
 
     if (!isAdminRole(role)) logCustomerLibraryDiagnostics(hierarchy, grants, items, access)
 
@@ -723,6 +817,8 @@ const renderAccountLibrary = async (user, profile, role, { force = false } = {})
 
     const sortedItems = sortLibraryItems(items)
     renderLibraryHierarchy(nodes.grid, sortedItems, role, access)
+    renderAccountOverview(sortedItems, snapshot)
+    renderAccountPass(snapshot)
 
     if (nodes.empty) nodes.empty.hidden = Boolean(sortedItems.length)
     setStatus(nodes.status, '', '')

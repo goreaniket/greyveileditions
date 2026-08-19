@@ -44,37 +44,24 @@
     <section class="project-hero page-shell feedback-hero auth-hero">
       <div class="reveal">
         <p class="eyebrow">Your Account</p>
-        <h1>Greyveil Editions</h1>
-        <p class="hero-text">A quiet place for your reader account details.</p>
+        <h1>Welcome, <span data-account-name>Reader</span></h1>
+        <p class="hero-text">Your Greyveil account and reading access in one place.</p>
       </div>
     </section>
 
-    <section class="section page-shell feedback-layout">
-      <article class="contact-card feedback-form auth-card reveal" data-auth-view hidden>
-        <p class="eyebrow">Signed In</p>
-        <h2 data-account-name>Reader</h2>
-        <div class="account-details">
-          <p class="account-detail">
-            <strong>Email</strong>
-            <span data-account-email></span>
-          </p>
-          <p class="account-detail" data-account-role-row hidden>
-            <strong>Internal Role</strong>
-            <span data-account-role></span>
-          </p>
+    <section class="section page-shell account-overview reveal" data-account-overview hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Access Overview</p>
+          <h2>Your reading access, at a glance.</h2>
         </div>
-        <form class="account-profile-form" data-account-profile-form>
-          <label for="account-display-name"><span>Display name</span><input id="account-display-name" name="display_name" minlength="2" maxlength="80" autocomplete="name" required /></label>
-          <div class="account-profile-form__actions">
-            <button class="button ghost" type="submit">Save name</button>
-            <p class="form-status" data-account-profile-status role="status" aria-live="polite"></p>
-          </div>
-        </form>
-        <div class="contact-actions" data-account-actions>
-          <button class="button primary" type="button" data-logout-button>Logout</button>
-        </div>
-        <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
-      </article>
+      </div>
+      <div class="access-overview-grid" aria-label="Your current access">
+        <article class="access-overview-card"><strong data-overview-books>0</strong><span>Books available</span></article>
+        <article class="access-overview-card"><strong data-overview-series>0</strong><span>Series access</span></article>
+        <article class="access-overview-card"><strong data-overview-collections>0</strong><span>Collection access</span></article>
+        <article class="access-overview-card access-overview-card--pass"><strong data-overview-pass>No active Pass</strong><span>1-Day Access</span></article>
+      </div>
     </section>
 
     <section class="section page-shell account-library" data-account-library hidden>
@@ -94,6 +81,16 @@
       </article>
     </section>
 
+    <section id="one-day-access" class="section page-shell account-pass" data-account-pass hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">1-Day Access</p>
+          <h2>Temporary reading access.</h2>
+        </div>
+      </div>
+      <article class="account-pass-card" data-account-pass-card></article>
+    </section>
+
     <section class="section page-shell account-payments" data-account-payments hidden>
       <div class="section-heading">
         <div>
@@ -107,6 +104,38 @@
       <article class="library-empty" data-payments-empty hidden>
         <h3>No payments yet.</h3>
         <p>Your completed and pending Greyveil purchases will appear here.</p>
+      </article>
+    </section>
+
+    <section class="section page-shell feedback-layout account-profile-section">
+      <article class="contact-card feedback-form auth-card reveal" data-auth-view hidden>
+        <p class="eyebrow">Profile &amp; Security</p>
+        <h2>Your reader details</h2>
+        <div class="account-details">
+          <p class="account-detail">
+            <strong>Email</strong>
+            <span data-account-email></span>
+          </p>
+          <p class="account-detail" data-account-role-row hidden>
+            <strong>Internal Role</strong>
+            <span data-account-role></span>
+          </p>
+        </div>
+        <form class="account-profile-form" data-account-profile-form>
+          <label for="account-display-name"><span>Display name</span><input id="account-display-name" name="display_name" minlength="2" maxlength="80" autocomplete="name" required /></label>
+          <div class="account-profile-form__actions">
+            <button class="button ghost" type="submit">Save name</button>
+            <p class="form-status" data-account-profile-status role="status" aria-live="polite"></p>
+          </div>
+        </form>
+        <div class="account-security-action">
+          <div><strong>Password</strong><span>We’ll email secure reset instructions to your account.</span></div>
+          <a class="button ghost" href="/forgot-password/">Reset password</a>
+        </div>
+        <div class="contact-actions" data-account-actions>
+          <button class="button primary" type="button" data-logout-button>Sign out</button>
+        </div>
+        <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
       </article>
     </section>
   </main>
@@ -140,6 +169,6 @@
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
-  <script type="module" src="/assets/js/auth.js?v=20260818-auth-profile-fix"></script>
+  <script type="module" src="/assets/js/auth.js?v=20260819-account-hub"></script>
 </body>
 </html>
