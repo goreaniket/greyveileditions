@@ -1945,6 +1945,7 @@ const handleCreateCollection = async (event) => {
   form.reset()
   populateFilters()
   renderHierarchyDependentSections()
+  window.dispatchEvent(new CustomEvent('greyveil:catalog-changed', { detail: { type: 'collection', id: data?.id || null } }))
 }
 
 const handleCreateVolume = async (event) => {
@@ -2043,6 +2044,7 @@ const handleCreateSeries = async (event) => {
   form.reset()
   populateFilters()
   renderHierarchyDependentSections()
+  window.dispatchEvent(new CustomEvent('greyveil:catalog-changed', { detail: { type: 'series', id: data?.id || null } }))
 }
 
 const renderCollections = () => {
@@ -3564,6 +3566,7 @@ const updateCollection = async (collection, controls) => {
   clearTableError('collections')
   populateFilters()
   renderHierarchyDependentSections()
+  window.dispatchEvent(new CustomEvent('greyveil:catalog-changed', { detail: { type: 'collection', id: collection.id } }))
 }
 
 const updateVolume = async (volume, controls) => {
@@ -3659,6 +3662,7 @@ const updateSeries = async (series, controls) => {
   clearTableError('series')
   populateFilters()
   renderHierarchyDependentSections()
+  window.dispatchEvent(new CustomEvent('greyveil:catalog-changed', { detail: { type: 'series', id: series.id } }))
 }
 
 const selectedBookFilters = () => ({
@@ -3876,6 +3880,7 @@ const updateBookContentControls = async (book, controls) => {
   Object.assign(book, data || updates)
   clearTableError('books')
   renderHierarchyDependentSections()
+  window.dispatchEvent(new CustomEvent('greyveil:catalog-changed', { detail: { type: 'book', id: book.id } }))
 }
 
 const profileMap = () => new Map(state.users.map((profile) => [profile.id, profile]))

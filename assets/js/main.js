@@ -297,8 +297,10 @@ const collectContentSurfaceRecords = () => {
 
 const suspendNode = (node) => {
   if (!node?.isConnected) return;
-  node.hidden = true;
-  if ("inert" in node) node.inert = true;
+  // Static catalog copy is already in the page. Keep it visible while the
+  // asynchronous entitlement check updates only its access controls.
+  node.dataset.accessPending = "";
+  node.setAttribute("aria-busy", "true");
 };
 
 const suspendDirectNode = (node) => {

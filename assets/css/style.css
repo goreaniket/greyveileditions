@@ -1505,46 +1505,6 @@ h3 {
   max-width: 9ch;
 }
 
-body:not([data-access-state="resolved"]) .dropdown-menu,
-body:not([data-access-state="resolved"]) .project-card,
-body:not([data-access-state="resolved"]) .book-card,
-body:not([data-access-state="resolved"]) main.book-detail > *,
-body.series-landing:not([data-access-state="resolved"]) main > *,
-body:not([data-access-state="resolved"]) .projects-collection-hero,
-body:not([data-access-state="resolved"]) .projects-collection-hero ~ .section {
-  visibility: hidden;
-}
-
-body:not([data-access-state="resolved"]) main.book-detail,
-body.series-landing:not([data-access-state="resolved"]) main,
-body:not([data-access-state="resolved"]) main:has(.projects-collection-hero) {
-  position: relative;
-  min-height: 72svh;
-}
-
-body:not([data-access-state="resolved"]) main.book-detail::before,
-body.series-landing:not([data-access-state="resolved"]) main::before,
-body:not([data-access-state="resolved"]) main:has(.projects-collection-hero)::before {
-  content: "";
-  position: absolute;
-  top: calc(var(--header-offset) + 34px);
-  left: 50%;
-  z-index: 2;
-  width: min(260px, calc(100% - 80px));
-  height: 2px;
-  padding: 0;
-  border: 0;
-  border-radius: 2px;
-  background: linear-gradient(90deg, rgba(42, 52, 64, .12), var(--bronze), rgba(42, 52, 64, .12));
-  background-size: 200% 100%;
-  animation: entitlement-loading 1.2s linear infinite;
-  transform: translateX(-50%);
-}
-
-@keyframes entitlement-loading {
-  to { background-position: -200% 0; }
-}
-
 .founder-line,
 .entity-links {
   max-width: 680px;

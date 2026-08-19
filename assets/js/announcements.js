@@ -1,4 +1,4 @@
-import { supabase } from './supabase-client.js'
+import { getCurrentSessionOnce, supabase } from './supabase-client.js'
 import { getEntitlementSnapshot } from './content-access.js'
 
 const create = (tag, className = '', text = '') => {
@@ -176,24 +176,36 @@ const renderNotificationCenter = async (snapshot, announcements) => {
   host.append(wrapper)
 }
 
-export const initAnnouncements = async () => {
+let announcementsInit = null
+
+const loadAnnouncements = async () => {
+  const pagePlacement = placementForPage()
+  if (!document.querySelector('main') && !document.querySelector('.nav-links, nav')) return
   try {
-    const snapshot = await getEntitlementSnapshot()
     const { data, error } = await supabase
       .from('announcements')
       .select('id, title, message, image_url, cta_label, cta_url, placement, audience, starts_at, ends_at, active, created_at')
       .order('created_at', { ascending: false })
     if (error) return
     const announcements = data || []
-    const pagePlacement = placementForPage()
+    if (!announcements.length) return
     const banner = announcements.find((item) => item.placement === 'site-wide')
     if (banner) renderFloating(banner)
     if (pagePlacement === 'home') announcements.filter((item) => item.placement === 'home').forEach(renderHeroHighlight)
     announcements
       .filter((item) => item.placement === pagePlacement && item.placement !== 'home' || (pagePlacement === 'account' && item.placement === 'library'))
       .forEach(renderPageAnnouncement)
-    await renderNotificationCenter(snapshot, announcements)
+    const { data: auth } = await getCurrentSessionOnce()
+    if (auth?.session?.user) {
+      const snapshot = await getEntitlementSnapshot()
+      await renderNotificationCenter(snapshot, announcements)
+    }
   } catch (error) {
     console.info('Announcements are not available.', { message: error?.message, code: error?.code })
   }
+}
+
+export const initAnnouncements = () => {
+  if (!announcementsInit) announcementsInit = loadAnnouncements()
+  return announcementsInit
 }

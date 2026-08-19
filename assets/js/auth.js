@@ -1,4 +1,4 @@
-import { supabase } from './supabase-client.js'
+import { getCurrentSessionOnce, supabase } from './supabase-client.js'
 import { friendlyAuthMessage, logAuthDiagnostic } from './auth-errors.js'
 import {
   isValidDisplayName,
@@ -137,6 +137,8 @@ const displayNameFor = (user, profile) => {
 let accountLibraryRun = 0
 let accountPaymentsRun = 0
 let accountLibraryRefreshTimer = 0
+let profileLookup = null
+let profileLookupUserId = ''
 
 const getText = (value, fallback = '') => {
   const text = value == null ? '' : String(value).trim()
@@ -740,27 +742,33 @@ const renderAccountLibrary = async (user, profile, role, { force = false } = {})
 }
 
 export async function getCurrentUser() {
-  const { data, error } = await supabase.auth.getUser()
-  if (error || !data?.user) return null
-  return data.user
+  const { data, error } = await getCurrentSessionOnce()
+  if (error || !data?.session?.user) return null
+  return data.session.user
 }
 
 export async function getCurrentProfile(user = null) {
   const currentUser = user || await getCurrentUser()
   if (!currentUser) return null
-
-  const { data, error } = await supabase
-    .from('profiles')
-    .select('id, display_name, role')
-    .eq('id', currentUser.id)
-    .maybeSingle()
-
-  if (error) {
-    logAuthDiagnostic('profile_load', error)
-    return null
-  }
-  return data
+  if (profileLookup && profileLookupUserId === currentUser.id) return profileLookup
+  profileLookupUserId = currentUser.id
+  profileLookup = (async () => {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('id, display_name, role')
+      .eq('id', currentUser.id)
+      .maybeSingle()
+    if (error) {
+      logAuthDiagnostic('profile_load', error)
+      return null
+    }
+    return data
+  })()
+  profileLookup.catch(() => { profileLookup = null; profileLookupUserId = '' })
+  return profileLookup
 }
+
+supabase.auth?.onAuthStateChange?.(() => { profileLookup = null; profileLookupUserId = '' })
 
 export async function getUserRole(user = null) {
   const profile = await getCurrentProfile(user)
@@ -1271,6 +1279,8 @@ const initAccountPage = async () => {
     }
     activeProfile = result.profile
     activeRole = result.profile.role || activeRole
+    profileLookupUserId = activeUser.id
+    profileLookup = Promise.resolve(activeProfile)
     if (nameNode) nameNode.textContent = result.displayName
     profileForm.elements.display_name.value = result.displayName
     setStatus(profileStatus, 'Display name updated.', 'success')

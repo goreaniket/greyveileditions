@@ -1,4 +1,4 @@
-import { supabase } from './supabase-client.js'
+import { getCurrentSessionOnce, supabase } from './supabase-client.js'
 
 export const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection', 'pass'])
 const CHECKOUT_SCRIPT_URL = 'https://checkout.razorpay.com/v1/checkout.js'
@@ -16,7 +16,7 @@ export const safeInternalPath = (value, fallback = '/') => {
 }
 
 export const sessionToken = async () => {
-  const { data, error } = await supabase.auth.getSession()
+  const { data, error } = await getCurrentSessionOnce()
   if (error || !data?.session?.access_token) return ''
   return data.session.access_token
 }
