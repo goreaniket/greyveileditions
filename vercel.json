@@ -1,0 +1,27 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "greyveileditions.vercel.app"
+        }
+      ],
+      "destination": "https://greyveileditions.site/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.greyveileditions.site"
+        }
+      ],
+      "destination": "https://greyveileditions.site/$1",
+      "permanent": true
+    }
+  ]
+}

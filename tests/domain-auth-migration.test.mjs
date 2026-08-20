@@ -9,6 +9,8 @@ import { friendlyAuthMessage, logAuthDiagnostic } from '../assets/js/auth-errors
 const repositoryRoot = fileURLToPath(new URL('../', import.meta.url))
 const source = (path) => readFile(new URL(path, import.meta.url), 'utf8')
 const legacyHostname = ['greyveileditions', 'vercel', 'app'].join('.')
+const productionHostname = new URL(PRODUCTION_ORIGIN).hostname
+const wwwHostname = `www.${productionHostname}`
 
 const textFiles = async () => {
   const patterns = ['**/*.html', '**/*.js', '**/*.mjs', '**/*.ts', '**/*.sql', '**/*.xml', '**/*.txt', '**/*.md', '**/*.json', '**/*.toml']
@@ -19,13 +21,16 @@ const textFiles = async () => {
   return [...files]
 }
 
-test('the custom domain is the only Greyveil production origin in repository text', async () => {
+test('the legacy production hostname appears only in its explicit redirect condition', async () => {
   const stale = []
   for (const path of await textFiles()) {
     const text = await readFile(new URL(path.replaceAll('\\', '/'), new URL('../', import.meta.url)), 'utf8')
     if (text.includes(legacyHostname)) stale.push(path)
   }
-  assert.deepEqual(stale, [])
+  assert.deepEqual(stale, ['vercel.json'])
+})
+
+test('the custom domain is the only canonical Greyveil origin in repository HTML', async () => {
 
   const htmlFiles = []
   for await (const path of glob('**/*.html', { cwd: repositoryRoot })) htmlFiles.push(path)
@@ -38,6 +43,75 @@ test('the custom domain is the only Greyveil production origin in repository tex
       assert.doesNotThrow(() => JSON.parse(match[1]), `${path} has invalid JSON-LD`)
     }
   }
+})
+
+test('noncanonical hosts have permanent, same-path, query-preserving redirects without loops', async () => {
+  const config = JSON.parse(await source('../vercel.json'))
+  assert.equal(config.redirects?.length, 2)
+
+  const redirectsByHost = new Map(config.redirects.map((redirect) => [redirect.has?.[0]?.value, redirect]))
+  assert.deepEqual([...redirectsByHost.keys()].sort(), [legacyHostname, wwwHostname].sort())
+
+  for (const [hostname, redirect] of redirectsByHost) {
+    assert.deepEqual(redirect.has, [{ type: 'host', value: hostname }])
+    assert.equal(redirect.source, '/(.*)')
+    assert.equal(redirect.destination, `${PRODUCTION_ORIGIN}/$1`)
+    assert.equal(redirect.permanent, true)
+    assert.equal(new URL(redirect.destination.replace('$1', '')).hostname, productionHostname)
+    assert.notEqual(productionHostname, hostname)
+    assert.ok(!redirect.destination.includes('?'), 'Vercel must inherit the original query string instead of replacing it')
+  }
+
+  const resolveRedirect = (hostname, pathAndQuery) => {
+    const redirect = redirectsByHost.get(hostname)
+    const url = new URL(pathAndQuery, `https://${hostname}`)
+    const match = url.pathname.match(/^\/(.*)$/)
+    assert.ok(match)
+    return `${redirect.destination.replace('$1', match[1])}${url.search}`
+  }
+
+  assert.equal(resolveRedirect(legacyHostname, '/'), `${PRODUCTION_ORIGIN}/`)
+  assert.equal(resolveRedirect(legacyHostname, '/about/'), `${PRODUCTION_ORIGIN}/about/`)
+  assert.equal(resolveRedirect(legacyHostname, '/projects/human-mind/'), `${PRODUCTION_ORIGIN}/projects/human-mind/`)
+  assert.equal(resolveRedirect(legacyHostname, '/about/?source=test&campaign=seo'), `${PRODUCTION_ORIGIN}/about/?source=test&campaign=seo`)
+  assert.equal(resolveRedirect(legacyHostname, '/api/validate-coupon'), `${PRODUCTION_ORIGIN}/api/validate-coupon`)
+  assert.equal(resolveRedirect(wwwHostname, '/founder/?source=www'), `${PRODUCTION_ORIGIN}/founder/?source=www`)
+})
+
+test('public pages have one exact self-canonical while intentionally private routes stay noindex', async () => {
+  const specialFiles = new Set(['404.html', 'google15fc12813d867a6a.html'])
+  const intentionalAlias = 'about/lalit-rakesh-mishra/index.html'
+  const failures = []
+  let publicCount = 0
+  let noindexCount = 0
+
+  for await (const rawPath of glob('**/*.html', { cwd: repositoryRoot })) {
+    const path = rawPath.replaceAll('\\', '/')
+    if (specialFiles.has(path)) continue
+    const html = await readFile(new URL(path, new URL('../', import.meta.url)), 'utf8')
+    const robots = html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i)?.[1] || ''
+    const canonicals = [...html.matchAll(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/gi)].map((match) => match[1])
+
+    if (/\bnoindex\b/i.test(robots)) {
+      noindexCount += 1
+      if (path === intentionalAlias) assert.deepEqual(canonicals, [`${PRODUCTION_ORIGIN}/founder/`])
+      continue
+    }
+
+    publicCount += 1
+    const route = path === 'index.html'
+      ? '/'
+      : path.endsWith('/index.html')
+        ? `/${path.slice(0, -'index.html'.length)}`
+        : `/${path}`
+    if (canonicals.length !== 1 || canonicals[0] !== `${PRODUCTION_ORIGIN}${route}`) {
+      failures.push(`${path}: ${canonicals.join(', ') || 'missing canonical'}`)
+    }
+  }
+
+  assert.equal(publicCount, 24)
+  assert.equal(noindexCount, 23)
+  assert.deepEqual(failures, [])
 })
 
 test('sitemap, robots, structured identities, and reader indexing rules use the intended domain', async () => {
