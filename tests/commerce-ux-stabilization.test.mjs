@@ -217,11 +217,31 @@ test('floating announcements retain a distinct compact, accessible presentation 
   assert.match(announcements, /renderHeroHighlight/)
   assert.match(announcements, /renderFloating/)
   assert.match(announcements, /card\.setAttribute\('role', 'region'\)/)
-  assert.match(announcements, /close\.setAttribute\('aria-label', 'Dismiss announcement'\)/)
+  assert.match(announcements, /closeControl\('floating-announcement__close'\)/)
+  assert.match(announcements, /closeControl\('announcement-hero-highlight__close'\)/)
+  assert.match(announcements, /icon\.setAttribute\('aria-hidden', 'true'\)/)
   assert.match(announcements, /card\.classList\.add\('is-visible'\)/)
   assert.match(announcements, /card\.classList\.add\('is-dismissing'\)/)
-  assert.match(css, /width: min\(420px, calc\(100vw - 40px\)\)/)
+  assert.match(css, /width: min\(400px, calc\(100vw - 40px\)\)/)
   assert.match(css, /\.floating-announcement\.is-visible/)
   assert.match(css, /\.floating-announcement\.is-dismissing/)
   assert.match(css, /width: min\(420px, calc\(100vw - 24px\)\)/)
+})
+
+test('notification panel renders readable configured content without reserved blank space', async () => {
+  const [announcements, css] = await Promise.all([
+    source('../assets/js/announcements.js'),
+    source('../assets/css/style.css'),
+  ])
+
+  assert.match(announcements, /if \(announcement\.message\) copy\.append\(create\('span', 'announcement-message', announcement\.message\)\)/)
+  assert.match(announcements, /if \(announcement\.cta_label && ctaUrl\)/)
+  assert.doesNotMatch(announcements, /Trial Available|One day Free Trial|The Last Shift/i)
+  assert.match(announcements, /const list = create\('div', 'notification-center__list'\)/)
+  assert.match(announcements, /closeControl\('notification-center__close', 'Close notifications'\)/)
+  assert.match(announcements, /button\.setAttribute\('aria-controls', 'greyveil-notification-panel'\)/)
+  assert.match(css, /\.notification-item \.announcement-message\s*\{[\s\S]*?color: #59636d/)
+  assert.match(css, /\.notification-center__list\s*\{[\s\S]*?overflow-y: auto/)
+  assert.match(css, /\.notification-item:last-child \{ border-bottom: 0; \}/)
+  assert.match(css, /@media \(max-width: 1040px\)[\s\S]*?\.notification-center__panel\s*\{[\s\S]*?position: static/)
 })

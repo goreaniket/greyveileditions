@@ -7,6 +7,17 @@ const create = (tag, className = '', text = '') => {
   return node
 }
 
+const closeControl = (className, label = 'Dismiss announcement') => {
+  const button = create('button', className)
+  button.type = 'button'
+  button.setAttribute('aria-label', label)
+  button.title = label
+  const icon = create('span', 'announcement-close__icon', '×')
+  icon.setAttribute('aria-hidden', 'true')
+  button.append(icon)
+  return button
+}
+
 const placementForPage = () => {
   const path = window.location.pathname
   if (/^\/(?:index\.html)?$/.test(path)) return 'home'
@@ -47,11 +58,9 @@ const announcementContent = (announcement, compact = false) => {
     content.append(image)
   }
   const copy = create('div', 'announcement-copy')
-  copy.append(
-    create('em', 'announcement-kicker', compact ? 'Greyveil Editions' : 'New from Greyveil'),
-    create('strong', 'announcement-title', announcement.title),
-    create('span', 'announcement-message', announcement.message)
-  )
+  copy.append(create('em', 'announcement-kicker', compact ? 'Greyveil Editions' : 'New from Greyveil'))
+  if (announcement.title) copy.append(create('strong', 'announcement-title', announcement.title))
+  if (announcement.message) copy.append(create('span', 'announcement-message', announcement.message))
   content.append(copy)
   const ctaUrl = safeUrl(announcement.cta_url)
   if (announcement.cta_label && ctaUrl) {
@@ -69,8 +78,7 @@ const renderHeroHighlight = (announcement) => {
   const section = create('section', 'page-shell announcement-hero-highlight')
   section.setAttribute('aria-label', 'New from Greyveil')
   section.append(announcementContent(announcement))
-  const close = create('button', 'announcement-hero-highlight__close', 'Dismiss')
-  close.type = 'button'
+  const close = closeControl('announcement-hero-highlight__close')
   close.addEventListener('click', () => { dismiss(announcement.id); section.remove() })
   section.append(close)
   const hero = main.querySelector('h1')?.closest('section, header, div')
@@ -84,10 +92,7 @@ const renderFloating = (announcement) => {
   card.setAttribute('aria-label', 'Announcement')
   card.setAttribute('role', 'region')
   card.append(announcementContent(announcement, true))
-  const close = create('button', 'floating-announcement__close', '×')
-  close.type = 'button'
-  close.setAttribute('aria-label', 'Dismiss announcement')
-  close.title = 'Dismiss announcement'
+  const close = closeControl('floating-announcement__close')
   close.addEventListener('click', () => {
     dismiss(announcement.id)
     card.classList.add('is-dismissing')
@@ -103,9 +108,7 @@ const renderBanner = (announcement) => {
   const banner = create('aside', 'site-announcement')
   banner.setAttribute('aria-label', 'Announcement')
   banner.append(announcementContent(announcement))
-  const close = create('button', 'site-announcement__close', 'Close')
-  close.type = 'button'
-  close.setAttribute('aria-label', 'Dismiss announcement')
+  const close = closeControl('site-announcement__close')
   close.addEventListener('click', () => { dismiss(announcement.id); banner.remove() })
   banner.append(close)
   const skipLink = document.querySelector('.skip-link')
@@ -150,16 +153,31 @@ const renderNotificationCenter = async (user, announcements) => {
   const button = create('button', 'notification-center__button', 'Notifications')
   button.type = 'button'
   button.setAttribute('aria-expanded', 'false')
+  button.setAttribute('aria-controls', 'greyveil-notification-panel')
   if (unread.length) button.append(create('span', 'notification-center__count', String(unread.length)))
   const panel = create('div', 'notification-center__panel')
+  panel.id = 'greyveil-notification-panel'
+  panel.setAttribute('role', 'region')
+  panel.setAttribute('aria-label', 'Notifications')
   panel.hidden = true
   const heading = create('div', 'notification-center__heading')
   heading.append(create('strong', '', 'Notifications'), create('span', '', unread.length ? `${unread.length} unread` : 'Up to date'))
-  panel.append(heading)
+  const panelClose = closeControl('notification-center__close', 'Close notifications')
+  heading.append(panelClose)
+  const list = create('div', 'notification-center__list')
+  panel.append(heading, list)
   announcements.forEach((announcement) => {
     const item = create('article', `notification-item ${readIds.has(announcement.id) ? '' : 'is-unread'}`.trim())
     item.append(announcementContent(announcement, true))
-    panel.append(item)
+    list.append(item)
+  })
+  const closePanel = () => {
+    panel.hidden = true
+    button.setAttribute('aria-expanded', 'false')
+  }
+  panelClose.addEventListener('click', () => {
+    closePanel()
+    button.focus()
   })
   button.addEventListener('click', async () => {
     panel.hidden = !panel.hidden
@@ -172,13 +190,11 @@ const renderNotificationCenter = async (user, announcements) => {
   })
   document.addEventListener('click', (event) => {
     if (wrapper.contains(event.target)) return
-    panel.hidden = true
-    button.setAttribute('aria-expanded', 'false')
+    closePanel()
   })
   document.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape' || panel.hidden) return
-    panel.hidden = true
-    button.setAttribute('aria-expanded', 'false')
+    closePanel()
     button.focus()
   })
   wrapper.append(button, panel)
