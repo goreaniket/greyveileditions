@@ -222,10 +222,15 @@ test('floating announcements retain a distinct compact, accessible presentation 
   assert.match(announcements, /icon\.setAttribute\('aria-hidden', 'true'\)/)
   assert.match(announcements, /card\.classList\.add\('is-visible'\)/)
   assert.match(announcements, /card\.classList\.add\('is-dismissing'\)/)
-  assert.match(css, /width: min\(400px, calc\(100vw - 40px\)\)/)
+  assert.match(css, /width: min\(420px, calc\(100vw - 40px\)\)/)
+  assert.match(css, /padding: 24px 20px 20px 24px/)
+  assert.match(css, /font-size: clamp\(1\.36rem, 2\.2vw, 1\.58rem\)/)
   assert.match(css, /\.floating-announcement\.is-visible/)
   assert.match(css, /\.floating-announcement\.is-dismissing/)
-  assert.match(css, /width: min\(420px, calc\(100vw - 24px\)\)/)
+  assert.match(css, /width: min\(360px, calc\(100vw - 24px\)\)/)
+  assert.match(css, /max-height: min\(44svh, 360px\)/)
+  assert.match(css, /\.floating-announcement \.announcement-title \{ max-width: none; font-size: 1\.08rem/)
+  assert.match(css, /\.announcement-hero-highlight \{[\s\S]*?padding: 16px 44px 16px 18px/)
 })
 
 test('notification panel renders readable configured content without reserved blank space', async () => {
