@@ -203,7 +203,8 @@ test('payment copy is provider-neutral while payment implementation identifiers 
 
   assert.match(checkoutHtml, /Proceed to Payment/)
   assert.doesNotMatch(checkoutHtml, /Proceed to Razorpay/)
-  assert.match(checkoutJs, /Preparing payment\.\.\./)
+  assert.match(checkoutJs, /Preparing payment…/)
+  assert.doesNotMatch(checkoutHtml, /processed securely by Razorpay/i)
   assert.match(commerce, /checkout\.razorpay\.com/)
 })
 

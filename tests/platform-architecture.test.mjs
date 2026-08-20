@@ -141,7 +141,7 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.match(main, /versionedPurchaseAssetUrl\("purchases\.js"\)/)
   assert.match(main, /matchingButtons\.slice\(1\)/)
   assert.match(html, /main\.js\?v=20260819-commerce-stabilization/)
-  assert.match(html, /checkout\.js\?v=20260819-commerce-stabilization/)
+  assert.match(html, /checkout\.js\?v=20260820-success-redirect/)
   assert.match(styles, /\.checkout-page \[hidden\][\s\S]+display: none !important/)
   assert.match(main, /Buy Full Series/)
   assert.match(main, /Buy Full Collection/)
