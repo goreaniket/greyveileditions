@@ -69,3 +69,28 @@ test('announcements render a restrained hero highlight and floating placement fr
   assert.match(css, /\.announcement-hero-highlight/)
   assert.match(css, /\.floating-announcement/)
 })
+
+test('homepage and About reuse one layered Greyveil brand-art treatment without duplicate hero logos', async () => {
+  const [home, about, css, announcements] = await Promise.all([
+    source('../index.html'),
+    source('../about/index.html'),
+    source('../assets/css/style.css'),
+    source('../assets/js/announcements.js'),
+  ])
+  const homeHero = home.match(/<section class="hero page-shell home-hero">([\s\S]*?)<\/section>/)?.[1] || ''
+
+  assert.match(homeHero, /greyveil-brand-art greyveil-brand-art--hero/)
+  assert.match(homeHero, /greyveil-brand-art__layers/)
+  assert.equal((homeHero.match(/assets\/images\/greyveil-logo\.png/g) || []).length, 1)
+  assert.equal((homeHero.match(/greyveil-brand-art--hero/g) || []).length, 1)
+
+  assert.match(about, /greyveil-brand-art greyveil-brand-art--about/)
+  assert.match(about, /greyveil-brand-art__main/)
+  assert.match(about, /\.\.\/assets\/images\/greyveil-logo\.png/)
+  assert.doesNotMatch(about, /greyveil-logo-panel/)
+
+  assert.match(css, /\.greyveil-brand-art\s*\{/)
+  assert.match(css, /\.about-feature \.greyveil-brand-art--about/)
+  assert.match(css, /@media \(max-width: 640px\)[\s\S]*?\.about-feature \.greyveil-brand-art--about\s*\{[\s\S]*?overflow: clip/)
+  assert.match(announcements, /hero\.insertAdjacentElement\('afterend', section\)/)
+})

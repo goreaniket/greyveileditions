@@ -986,6 +986,14 @@ summary:focus-visible,
   isolation: isolate;
 }
 
+.greyveil-brand-art {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  isolation: isolate;
+  place-items: center;
+}
+
 .project-hero {
   position: relative;
   place-items: center;
@@ -1758,12 +1766,23 @@ h3 {
   object-fit: contain;
 }
 
-.home-hero .logo-archive {
+.greyveil-brand-art__main {
   position: relative;
   z-index: 2;
+  width: min(100%, 410px);
+  aspect-ratio: 1;
+  overflow: visible;
 }
 
-.hero-book-composition {
+.greyveil-brand-art__main .book-cover-image {
+  opacity: .9;
+  filter: saturate(.84) contrast(.96);
+  -webkit-mask-image: radial-gradient(ellipse 88% 92% at 50% 48%, #000 78%, rgba(0, 0, 0, .82) 90%, transparent 100%);
+  mask-image: radial-gradient(ellipse 88% 92% at 50% 48%, #000 78%, rgba(0, 0, 0, .82) 90%, transparent 100%);
+}
+
+.hero-book-composition,
+.greyveil-brand-art__layers {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1776,7 +1795,8 @@ h3 {
   filter: saturate(.74) sepia(.12);
 }
 
-.hero-book {
+.hero-book,
+.greyveil-brand-art__layer {
   position: absolute;
   width: clamp(86px, 10vw, 136px);
   aspect-ratio: 2 / 3;
@@ -1787,7 +1807,8 @@ h3 {
   mix-blend-mode: multiply;
 }
 
-.hero-book-01 {
+.hero-book-01,
+.greyveil-brand-art__layer--01 {
   left: 12%;
   top: 18%;
   background-image: url("../images/home-hero-the-last-shift.jpg");
@@ -1798,7 +1819,8 @@ h3 {
   transform: rotate(-16deg);
 }
 
-.hero-book-02 {
+.hero-book-02,
+.greyveil-brand-art__layer--02 {
   right: 18%;
   top: 8%;
   background-image: url("../images/home-hero-the-paradox-of-awareness.jpg");
@@ -1809,7 +1831,8 @@ h3 {
   transform: rotate(12deg);
 }
 
-.hero-book-03 {
+.hero-book-03,
+.greyveil-brand-art__layer--03 {
   left: 24%;
   bottom: 9%;
   background-image: url("../images/home-hero-the-fiction-of-awareness.jpg");
@@ -1820,7 +1843,8 @@ h3 {
   transform: rotate(-6deg);
 }
 
-.hero-book-04 {
+.hero-book-04,
+.greyveil-brand-art__layer--04 {
   right: 12%;
   bottom: 15%;
   background-image: url("../images/home-hero-the-end-of-interpretation.jpg");
@@ -1831,7 +1855,8 @@ h3 {
   transform: rotate(17deg);
 }
 
-.hero-book-05 {
+.hero-book-05,
+.greyveil-brand-art__layer--05 {
   left: 50%;
   top: 49%;
   background-image: url("../images/home-hero-when-understanding-begins.jpg");
@@ -1840,15 +1865,6 @@ h3 {
     url("../images/home-hero-when-understanding-begins.jpg") type("image/jpeg")
   );
   transform: translate(-50%, -50%) rotate(2deg);
-}
-
-.greyveil-logo-panel {
-  background: transparent;
-}
-
-.greyveil-logo-panel .author-image {
-  padding: clamp(10px, 2vw, 24px);
-  object-fit: contain;
 }
 
 .premium-media-frame {
@@ -1877,7 +1893,6 @@ h3 {
 /* When the premium frame is wrapping a logo or poster art (not a photo),
    drop the tinted gradient, border and shadow so the artwork's own
    background shows cleanly with no card mat behind it. */
-.premium-media-frame.greyveil-logo-panel,
 .premium-media-frame.logo-archive,
 .premium-media-frame.series-art-frame {
   background: transparent;
@@ -1897,7 +1912,6 @@ h3 {
 }
 
 /* No shine sweep over logos or poster art either — it reads as a glare */
-.premium-media-frame.greyveil-logo-panel::after,
 .premium-media-frame.logo-archive::after,
 .premium-media-frame.series-art-frame::after {
   display: none;
@@ -1911,7 +1925,6 @@ h3 {
   border-radius: inherit;
 }
 
-.premium-media-frame.greyveil-logo-panel .author-image,
 .series-art-frame .author-image {
   padding: 6px;
   object-fit: contain;
@@ -2002,6 +2015,23 @@ h3 {
 
 .about-feature {
   padding-block-start: var(--header-offset);
+}
+
+.about-feature .greyveil-brand-art--about {
+  width: min(100%, 470px);
+  min-height: clamp(380px, 34vw, 500px);
+  justify-self: center;
+}
+
+.about-feature .greyveil-brand-art__main {
+  width: clamp(260px, 25vw, 360px);
+}
+
+.about-feature .greyveil-brand-art__layers {
+  width: clamp(380px, 34vw, 520px);
+  height: clamp(360px, 32vw, 480px);
+  opacity: .14;
+  transform: translate(-50%, -50%) rotate(-2deg);
 }
 
 .section {
@@ -4390,20 +4420,13 @@ blockquote {
     place-items: center;
   }
 
-  .home-hero .logo-archive {
+  .home-hero .greyveil-brand-art__main {
     width: clamp(300px, 27vw, 410px);
     aspect-ratio: 1;
     overflow: visible;
   }
 
-  .home-hero .logo-archive .book-cover-image {
-    opacity: .9;
-    filter: saturate(.84) contrast(.96);
-    -webkit-mask-image: radial-gradient(ellipse 88% 92% at 50% 48%, #000 78%, rgba(0, 0, 0, .82) 90%, transparent 100%);
-    mask-image: radial-gradient(ellipse 88% 92% at 50% 48%, #000 78%, rgba(0, 0, 0, .82) 90%, transparent 100%);
-  }
-
-  .home-hero .hero-book-composition {
+  .home-hero .greyveil-brand-art__layers {
     width: clamp(420px, 38vw, 620px);
     height: clamp(400px, 36vw, 590px);
     opacity: .2;
@@ -4467,7 +4490,7 @@ blockquote {
     margin-top: 10px;
   }
 
-  .home-hero .logo-archive {
+  .home-hero .greyveil-brand-art__main {
     width: min(88vw, 360px);
     height: auto;
     max-width: none;
@@ -4485,7 +4508,7 @@ blockquote {
     opacity: 1;
   }
 
-  .home-hero .hero-book-composition {
+  .home-hero .greyveil-brand-art__layers {
     display: block;
     width: min(105vw, 400px);
     height: min(94vw, 380px);
@@ -4493,7 +4516,7 @@ blockquote {
     transform: translate(-50%, -50%) rotate(-3deg);
   }
 
-  .home-hero .hero-book {
+  .home-hero .greyveil-brand-art__layer {
     width: clamp(68px, 22vw, 102px);
     box-shadow: 0 16px 34px rgba(42, 52, 64, .18);
   }
@@ -4523,33 +4546,27 @@ blockquote {
     line-height: 1.6;
   }
 
-  .about-feature .greyveil-logo-panel {
-    position: relative;
-    width: min(82vw, 330px);
-    aspect-ratio: 1;
-    overflow: visible;
-    isolation: isolate;
+  .about-feature .greyveil-brand-art--about {
+    width: min(100%, 340px);
+    min-height: min(88vw, 340px);
+    overflow: clip;
     margin-inline: auto;
   }
 
-  .about-feature .greyveil-logo-panel::before {
-    content: "";
-    position: absolute;
-    inset: 8% -7% -6% 9%;
-    z-index: -1;
-    border: 1px solid rgba(140, 106, 74, .16);
-    border-radius: 8px;
-    background:
-      radial-gradient(circle at 24% 18%, rgba(140, 106, 74, .14), transparent 38%),
-      linear-gradient(145deg, rgba(255, 255, 255, .38), rgba(231, 226, 218, .28));
-    box-shadow: 0 18px 42px rgba(42, 52, 64, .1);
-    transform: rotate(-4deg);
+  .about-feature .greyveil-brand-art__main {
+    width: min(74vw, 280px);
   }
 
-  .about-feature img {
-    position: relative;
-    z-index: 1;
-    padding: clamp(8px, 3vw, 16px);
+  .about-feature .greyveil-brand-art__layers {
+    width: min(88vw, 340px);
+    height: min(84vw, 325px);
+    opacity: .1;
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+
+  .about-feature .greyveil-brand-art__layer {
+    width: clamp(66px, 20vw, 92px);
+    box-shadow: 0 14px 30px rgba(42, 52, 64, .16);
   }
 
   .about-layout:not(.about-feature) {
