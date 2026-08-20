@@ -305,6 +305,14 @@ body[data-access-state="resolving"] [data-purchase-type]::after {
 .announcement-hero-highlight .announcement-title { font-size: clamp(1.24rem, 2vw, 1.52rem); }
 .announcement-hero-highlight .announcement-message { max-width: 68ch; color: #59636d; font-size: .94rem; line-height: 1.62; }
 .announcement-hero-highlight .announcement-link { color: var(--indigo); }
+
+@media (min-width: 721px) {
+  .announcement-hero-highlight .announcement-content {
+    width: 100%;
+    max-width: 430px;
+  }
+}
+
 .announcement-hero-highlight__close,
 .floating-announcement__close,
 .notification-center__close { border: 0; color: inherit; font: inherit; background: transparent; cursor: pointer; }
@@ -313,8 +321,8 @@ body[data-access-state="resolving"] [data-purchase-type]::after {
   top: 12px;
   right: 14px;
   display: grid;
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   padding: 0;
   border-radius: 50%;
   color: #64707b;
