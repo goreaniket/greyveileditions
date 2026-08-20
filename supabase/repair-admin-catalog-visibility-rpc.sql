@@ -20,7 +20,8 @@ begin
     raise exception 'Admin access required.' using errcode = '42501';
   end if;
 
-  if normalized_visibility not in ('public', 'paid', 'private') then
+  if normalized_visibility is null
+      or normalized_visibility not in ('public', 'paid', 'private') then
     raise exception 'Unsupported visibility.';
   end if;
 

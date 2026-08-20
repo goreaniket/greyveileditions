@@ -13,6 +13,8 @@ language plpgsql
 security definer
 set search_path = public
 as $$
+declare
+  normalized_target_type text := lower(btrim(target_type));
 begin
   if not public.greyveil_is_admin() then
     raise exception 'Admin access required.' using errcode = '42501';
@@ -22,15 +24,15 @@ begin
     raise exception 'Price must be positive.';
   end if;
 
-  if target_type = 'book' then
+  if normalized_target_type = 'book' then
     update public.books
     set price_amount = new_price_amount
     where id = target_id::bigint;
-  elsif target_type = 'series' then
+  elsif normalized_target_type = 'series' then
     update public.series
     set price_amount = new_price_amount
     where id = target_id::uuid;
-  elsif target_type = 'collection' then
+  elsif normalized_target_type = 'collection' then
     update public.collections
     set price_amount = new_price_amount
     where id = target_id::uuid;
