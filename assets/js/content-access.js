@@ -11,7 +11,7 @@ const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, v
 const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active, price_amount, created_at, updated_at'
 const PAID_ORDER_SELECT = 'id, user_id, purchase_type, book_id, series_id, collection_id, status, paid_at'
 const ACCESS_PASS_SELECT = 'id, title, active, price_amount, duration_hours, scope_type, collection_id'
-const PASS_ACTIVATION_SELECT = 'pass_id, expires_at'
+const PASS_ACTIVATION_SELECT = 'pass_id, user_id, expires_at'
 
 let entitlementSnapshot = null
 let entitlementSnapshotPromise = null
@@ -184,11 +184,17 @@ export const passCoversHierarchy = (pass, { collection = null } = {}) => {
   return pass.scope_type === 'collection' && idsMatch(pass.collection_id, collection?.id)
 }
 
-export const hasActivePassEntitlement = (hierarchy = {}, passes = [], activations = []) => {
+export const hasActivePassEntitlement = (hierarchy = {}, passes = [], activations = [], userId = null) => {
+  const viewerId = userId == null ? '' : String(userId)
   const activePassIds = new Set(
-    activations.filter(isPassActivationCurrent).map((activation) => String(activation.pass_id))
+    activations
+      .filter((activation) => isPassActivationCurrent(activation)
+        && (!viewerId || idsMatch(activation.user_id, viewerId)))
+      .map((activation) => String(activation.pass_id))
   )
-  return passes.some((pass) => activePassIds.has(String(pass.id)) && passCoversHierarchy(pass, hierarchy))
+  return passes.some((pass) => pass?.active !== false
+    && activePassIds.has(String(pass.id))
+    && passCoversHierarchy(pass, hierarchy))
 }
 
 export const canReadBook = ({
@@ -217,7 +223,12 @@ export const canReadBook = ({
 
   return hasBookEntitlement(book, grants)
     || hasInheritedPaidOrderEntitlement({ collection, series, book }, paidOrders)
-    || hasActivePassEntitlement({ collection, volume, series, book }, accessPasses, passActivations)
+    || hasActivePassEntitlement(
+      { collection, volume, series, book },
+      accessPasses,
+      passActivations,
+      context.user.id
+    )
 }
 
 export const mapById = (items = []) => new Map(items.map((item) => [item.id, item]))
@@ -299,7 +310,9 @@ export const purchaseEntitlementDetails = (
       return { entitled: true, reason: 'paid' }
     }
     if (hasBookEntitlement(book, grants)) return { entitled: true, reason: 'owner_grant' }
-    if (hasActivePassEntitlement(bookHierarchy, accessPasses, passActivations)) return { entitled: true, reason: 'temporary_pass' }
+    if (hasActivePassEntitlement(bookHierarchy, accessPasses, passActivations, context.user?.id)) {
+      return { entitled: true, reason: 'temporary_pass' }
+    }
     if (effectiveVisibilityForBookHierarchy(bookHierarchy) === 'public') return { entitled: true, reason: 'public' }
     return { entitled: false, reason: 'not_entitled' }
   }
@@ -307,7 +320,7 @@ export const purchaseEntitlementDetails = (
   if (purchaseType === 'collection') {
     const collection = (hierarchy.collections || []).find((item) => idsMatch(item.id, targetId))
     const entitled = hasPaidOrderForProduct(purchase, paidOrders)
-      || hasActivePassEntitlement({ collection }, accessPasses, passActivations)
+      || hasActivePassEntitlement({ collection }, accessPasses, passActivations, context.user?.id)
     return { entitled, reason: entitled ? (hasPaidOrderForProduct(purchase, paidOrders) ? 'paid' : 'temporary_pass') : 'not_entitled' }
   }
 
@@ -322,7 +335,7 @@ export const purchaseEntitlementDetails = (
     return { entitled: true, reason: 'paid' }
   }
 
-  if (hasActivePassEntitlement({ collection, volume, series }, accessPasses, passActivations)) {
+  if (hasActivePassEntitlement({ collection, volume, series }, accessPasses, passActivations, context.user?.id)) {
     return { entitled: true, reason: 'temporary_pass' }
   }
 
@@ -779,11 +792,13 @@ export const resolveReaderAccess = async (bookSlug) => {
     }
   }
 
-  const [grantsResult, paidOrdersResult] = await Promise.all([
+  const [grantsResult, paidOrdersResult, accessPassesResult, passActivationsResult] = await Promise.all([
     fetchViewerBookGrants(context.user.id),
     fetchViewerPaidOrders(context.user.id),
+    fetchActiveAccessPasses(),
+    fetchViewerPassActivations(context.user.id),
   ])
-  if (grantsResult.error || paidOrdersResult.error) {
+  if (grantsResult.error || paidOrdersResult.error || accessPassesResult.error || passActivationsResult.error) {
     return {
       allowed: false,
       reason: 'access_required',
@@ -794,17 +809,28 @@ export const resolveReaderAccess = async (bookSlug) => {
       visibility,
       grants: [],
       paidOrders: [],
+      accessPasses: [],
+      passActivations: [],
       errors: [
         ...(grantsResult.error ? [['book_access', grantsResult.error]] : []),
         ...(paidOrdersResult.error ? [['orders', paidOrdersResult.error]] : []),
+        ...(accessPassesResult.error ? [['temporary_access_passes', accessPassesResult.error]] : []),
+        ...(passActivationsResult.error ? [['temporary_access_pass_activations', passActivationsResult.error]] : []),
       ],
     }
   }
 
   const grants = grantsResult.data || []
   const paidOrders = paidOrdersResult.data || []
-  const entitled = hasBookEntitlement(book, grants)
-    || hasInheritedPaidOrderEntitlement(bookHierarchy, paidOrders)
+  const accessPasses = accessPassesResult.data || []
+  const passActivations = passActivationsResult.data || []
+  const entitled = canReadBook({
+    ...bookHierarchy,
+    grants,
+    paidOrders,
+    accessPasses,
+    passActivations,
+  }, context)
   return {
     allowed: entitled,
     reason: entitled ? 'entitled' : 'access_required',
@@ -815,6 +841,8 @@ export const resolveReaderAccess = async (bookSlug) => {
     visibility,
     grants,
     paidOrders,
+    accessPasses,
+    passActivations,
     errors: [],
   }
 }

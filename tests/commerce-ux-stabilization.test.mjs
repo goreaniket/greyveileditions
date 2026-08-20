@@ -148,7 +148,7 @@ test('access-sensitive purchase controls use a shared snapshot and neutral state
   assert.match(access, /accessPasses: accessPassesResult\.error \? \[\] : accessPassesResult\.data \|\| \[\]/)
   assert.match(access, /passActivations: passActivationsResult\.data \|\| \[\]/)
   assert.match(access, /hasActivePassEntitlement/)
-  assert.match(access, /\|\| hasActivePassEntitlement\(\{ collection, volume, series, book \}, accessPasses, passActivations\)/)
+  assert.match(access, /\|\| hasActivePassEntitlement\([\s\S]+\{ collection, volume, series, book \},[\s\S]+accessPasses,[\s\S]+passActivations,[\s\S]+context\.user\.id/)
 
   assert.match(purchases, /setPurchaseState\(button, 'checking'\)/)
   assert.match(purchases, /button\.textContent = 'Checking access…'/)

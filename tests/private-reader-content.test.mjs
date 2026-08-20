@@ -41,6 +41,17 @@ test('reader access matrix preserves public, paid, private, admin, expiry, and r
   const guest = { user: null, role: 'guest' }
   const customer = { user: { id: 'customer' }, role: 'customer' }
   const admin = { user: { id: 'admin' }, role: 'admin' }
+  const collectionPass = {
+    id: 'collection-pass',
+    active: true,
+    scope_type: 'collection',
+    collection_id: 'collection',
+  }
+  const activeActivation = {
+    pass_id: collectionPass.id,
+    user_id: customer.user.id,
+    expires_at: '2099-01-01T00:00:00Z',
+  }
 
   assert.equal(access.canReadBook(publicHierarchy, guest), true)
   assert.equal(access.canReadBook(legacyPublicHierarchy, guest), true)
@@ -49,8 +60,38 @@ test('reader access matrix preserves public, paid, private, admin, expiry, and r
   assert.equal(access.canReadBook({ ...paidHierarchy, grants: [{ book_id: 2, is_visible: true, can_read: true }] }, customer), true)
   assert.equal(access.canReadBook({ ...paidHierarchy, grants: [{ book_id: 2, is_visible: true, can_read: true, expires_at: '2000-01-01T00:00:00Z' }] }, customer), false)
   assert.equal(access.canReadBook({ ...paidHierarchy, grants: [{ book_id: 2, is_visible: false, can_read: true }] }, customer), false)
+  assert.equal(access.canReadBook({
+    ...paidHierarchy,
+    accessPasses: [collectionPass],
+    passActivations: [activeActivation],
+  }, customer), true)
+  assert.equal(access.canReadBook({
+    ...paidHierarchy,
+    accessPasses: [collectionPass],
+    passActivations: [{ ...activeActivation, expires_at: '2000-01-01T00:00:00Z' }],
+  }, customer), false)
+  assert.equal(access.canReadBook({
+    ...paidHierarchy,
+    accessPasses: [{ ...collectionPass, collection_id: 'another-collection' }],
+    passActivations: [activeActivation],
+  }, customer), false)
+  assert.equal(access.canReadBook({
+    ...paidHierarchy,
+    accessPasses: [collectionPass],
+    passActivations: [{ ...activeActivation, user_id: 'another-user' }],
+  }, customer), false)
   assert.equal(access.canReadBook(privateHierarchy, customer), false)
   assert.equal(access.canReadBook(privateHierarchy, admin), true)
+})
+
+test('Reader preflight uses the shared Pass-aware book resolver', async () => {
+  const access = await source('../assets/js/content-access.js')
+  const resolver = access.slice(access.indexOf('export const resolveReaderAccess'), access.length)
+  assert.match(resolver, /fetchActiveAccessPasses\(\)/)
+  assert.match(resolver, /fetchViewerPassActivations\(context\.user\.id\)/)
+  assert.match(resolver, /const entitled = canReadBook\(\{/)
+  assert.match(resolver, /accessPasses,[\s\S]+passActivations/)
+  assert.doesNotMatch(resolver, /const entitled = hasBookEntitlement/)
 })
 
 test('database reader resolver is service-only and uses current book_access flags', async () => {
