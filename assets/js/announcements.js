@@ -71,17 +71,17 @@ const announcementContent = (announcement, compact = false) => {
   return content
 }
 
-const renderHeroHighlight = (announcement) => {
+const renderHomeBanner = (announcement) => {
   if (dismissed(announcement.id)) return
   const main = document.querySelector('main')
   if (!main) return
-  const section = create('section', 'page-shell announcement-hero-highlight')
+  const section = create('section', 'page-shell home-announcement-banner')
   section.setAttribute('aria-label', 'New from Greyveil')
   section.append(announcementContent(announcement))
-  const close = closeControl('announcement-hero-highlight__close')
+  const close = closeControl('home-announcement-banner__close')
   close.addEventListener('click', () => { dismiss(announcement.id); section.remove() })
   section.append(close)
-  const hero = main.querySelector('h1')?.closest('section, header, div')
+  const hero = main.querySelector('.home-hero')
   if (hero?.parentNode) hero.insertAdjacentElement('afterend', section)
   else main.insertBefore(section, main.firstChild)
 }
@@ -216,7 +216,7 @@ const loadAnnouncements = async () => {
     if (!announcements.length) return
     const banner = announcements.find((item) => item.placement === 'site-wide')
     if (banner) renderFloating(banner)
-    if (pagePlacement === 'home') announcements.filter((item) => item.placement === 'home').forEach(renderHeroHighlight)
+    if (pagePlacement === 'home') announcements.filter((item) => item.placement === 'home').forEach(renderHomeBanner)
     announcements
       .filter((item) => item.placement === pagePlacement && item.placement !== 'home' || (pagePlacement === 'account' && item.placement === 'library'))
       .forEach(renderPageAnnouncement)

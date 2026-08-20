@@ -59,14 +59,17 @@ test('guest pass offer uses the active database pass and preserves checkout targ
   assert.match(commerce, /temporary_access_pass_id/)
 })
 
-test('announcements render a restrained hero highlight and floating placement from the existing system', async () => {
+test('announcements render a home banner below the hero while retaining floating placement', async () => {
   const [announcements, css] = await Promise.all([
     source('../assets/js/announcements.js'), source('../assets/css/style.css'),
   ])
-  assert.match(announcements, /renderHeroHighlight/)
+  assert.match(announcements, /renderHomeBanner/)
   assert.match(announcements, /renderFloating/)
   assert.match(announcements, /New from Greyveil/)
-  assert.match(css, /\.announcement-hero-highlight/)
+  assert.match(announcements, /const hero = main\.querySelector\('\.home-hero'\)/)
+  assert.match(announcements, /hero\.insertAdjacentElement\('afterend', section\)/)
+  assert.doesNotMatch(announcements, /closest\('section, header, div'\)/)
+  assert.match(css, /\.home-announcement-banner/)
   assert.match(css, /\.floating-announcement/)
 })
 

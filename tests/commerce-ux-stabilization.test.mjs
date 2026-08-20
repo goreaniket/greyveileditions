@@ -208,33 +208,40 @@ test('payment copy is provider-neutral while payment implementation identifiers 
   assert.match(commerce, /checkout\.razorpay\.com/)
 })
 
-test('floating announcements retain a distinct compact, accessible presentation from hero highlights', async () => {
+test('home banners remain separate from the hero while floating announcements stay compact and accessible', async () => {
   const [announcements, css] = await Promise.all([
     source('../assets/js/announcements.js'),
     source('../assets/css/style.css'),
   ])
 
-  assert.match(announcements, /renderHeroHighlight/)
+  assert.match(announcements, /renderHomeBanner/)
   assert.match(announcements, /renderFloating/)
-  assert.match(announcements, /create\('section', 'page-shell announcement-hero-highlight'\)/)
+  assert.match(announcements, /create\('section', 'page-shell home-announcement-banner'\)/)
+  assert.match(announcements, /const hero = main\.querySelector\('\.home-hero'\)/)
+  assert.match(announcements, /hero\.insertAdjacentElement\('afterend', section\)/)
+  assert.doesNotMatch(announcements, /closest\('section, header, div'\)/)
   assert.match(announcements, /card\.setAttribute\('role', 'region'\)/)
   assert.match(announcements, /closeControl\('floating-announcement__close'\)/)
-  assert.match(announcements, /closeControl\('announcement-hero-highlight__close'\)/)
+  assert.match(announcements, /closeControl\('home-announcement-banner__close'\)/)
   assert.match(announcements, /icon\.setAttribute\('aria-hidden', 'true'\)/)
   assert.match(announcements, /card\.classList\.add\('is-visible'\)/)
   assert.match(announcements, /card\.classList\.add\('is-dismissing'\)/)
+  assert.match(announcements, /item\.placement === 'site-wide'[\s\S]*?renderFloating\(banner\)/)
+  assert.match(css, /\.floating-announcement \{\s*position: fixed;/)
   assert.match(css, /width: min\(420px, calc\(100vw - 40px\)\)/)
   assert.match(css, /padding: 24px 20px 20px 24px/)
   assert.match(css, /font-size: clamp\(1\.36rem, 2\.2vw, 1\.58rem\)/)
-  assert.match(css, /@media \(min-width: 721px\) \{\s*\.announcement-hero-highlight \.announcement-content \{\s*width: 100%;\s*max-width: 430px;\s*\}\s*\}/)
-  assert.match(css, /\.announcement-hero-highlight__close \{[\s\S]*?width: 34px;[\s\S]*?height: 34px;/)
+  assert.match(css, /\.home-announcement-banner \.announcement-content \{[\s\S]*?width: 100%;[\s\S]*?flex-wrap: wrap;/)
+  assert.match(css, /\.home-announcement-banner \.announcement-copy \{ flex: 1 1 520px;/)
+  assert.match(css, /\.home-announcement-banner__close \{[\s\S]*?width: 40px;[\s\S]*?height: 40px;/)
   assert.match(css, /\.floating-announcement\.is-visible/)
   assert.match(css, /\.floating-announcement\.is-dismissing/)
   assert.match(css, /width: min\(360px, calc\(100vw - 24px\)\)/)
   assert.match(css, /max-height: min\(44svh, 360px\)/)
   assert.match(css, /\.floating-announcement \.announcement-title \{ max-width: none; font-size: 1\.08rem/)
-  assert.match(css, /\.announcement-hero-highlight \{[\s\S]*?padding: 16px 44px 16px 18px/)
-  assert.match(css, /\.announcement-hero-highlight__close \{ top: 9px; right: 9px; width: 26px; height: 26px; \}/)
+  assert.match(css, /@media \(max-width: 720px\)[\s\S]*?\.home-announcement-banner \{[\s\S]*?padding: 20px 46px 20px 20px/)
+  assert.match(css, /\.home-announcement-banner \.announcement-copy \{ flex: 0 1 auto; gap: 5px; \}/)
+  assert.match(css, /\.home-announcement-banner__close \{ top: 9px; right: 9px; width: 32px; height: 32px; \}/)
 })
 
 test('notification panel renders readable configured content without reserved blank space', async () => {
