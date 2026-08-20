@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 const sql = await readFile(new URL('../supabase/temporary-access-pass-production-fix.sql', import.meta.url), 'utf8')
+const repairSql = await readFile(new URL('../supabase/repair-refunded-pass-reader-access.sql', import.meta.url), 'utf8')
 
 test('targeted pass migration preserves Book, Series, Collection, and adds only Pass order targets', () => {
   assert.match(sql, /purchase_type in \('book', 'series', 'collection', 'pass'\)/)
@@ -35,6 +36,49 @@ test('Reader authorization adds scoped, expiring passes without removing existin
   assert.match(sql, /pass_row\.scope_type = 'library'/)
   assert.match(sql, /pass_row\.scope_type = 'collection' and pass_row\.collection_id = hierarchy\.resolved_collection_id/)
   assert.match(sql, /if target_user_id is null then allowed := false/)
+})
+
+test('targeted Reader repair is one service-safe function replacement', () => {
+  assert.equal((repairSql.match(/create or replace function/gi) || []).length, 1)
+  assert.match(repairSql, /create or replace function public\.greyveil_reader_content_authorization\(\s*target_user_id uuid, target_book_slug text\s*\)/)
+  assert.match(repairSql, /language plpgsql stable security definer set search_path = public/)
+  assert.doesNotMatch(repairSql, /create table|alter table|create trigger|create policy|grant |revoke /i)
+})
+
+test('Reader pass authorization requires a matching source order that remains paid', () => {
+  assert.match(repairSql, /join public\.orders activation_order on activation_order\.id = activation\.order_id/)
+  assert.match(repairSql, /activation_order\.user_id = target_user_id/)
+  assert.match(repairSql, /activation_order\.status = 'paid'/)
+  assert.match(repairSql, /activation_order\.purchase_type = 'pass'/)
+  assert.match(repairSql, /activation_order\.temporary_access_pass_id = activation\.pass_id/)
+})
+
+test('Reader repair preserves permanent ownership, manual, admin, and public access branches', () => {
+  assert.match(repairSql, /viewer_role in \('admin', 'super_admin'\)/)
+  assert.match(repairSql, /effective_visibility = 'public'/)
+  assert.match(repairSql, /from public\.book_access access/)
+  assert.match(repairSql, /paid_order\.purchase_type = 'book'/)
+  assert.match(repairSql, /paid_order\.purchase_type = 'series'/)
+  assert.match(repairSql, /paid_order\.purchase_type = 'collection'/)
+})
+
+test('Reader Pass regression matrix denies every non-paid or mismatched activation', () => {
+  const now = Date.parse('2026-08-20T00:00:00Z')
+  const allowed = ({
+    status = 'paid', viewer = 'viewer', activationUser = 'viewer', expiresAt = '2099-01-01T00:00:00Z',
+    scopeType = 'collection', passCollection = 'collection-a', bookCollection = 'collection-a',
+  } = {}) => activationUser === viewer
+    && Date.parse(expiresAt) > now
+    && status === 'paid'
+    && (scopeType === 'library' || (scopeType === 'collection' && passCollection === bookCollection))
+
+  assert.equal(allowed({ status: 'paid' }), true)
+  for (const status of ['refunded', 'failed', 'cancelled', 'pending']) {
+    assert.equal(allowed({ status }), false, `${status} Pass order must be denied`)
+  }
+  assert.equal(allowed({ expiresAt: '2026-08-19T23:59:59Z' }), false)
+  assert.equal(allowed({ activationUser: 'another-user' }), false)
+  assert.equal(allowed({ passCollection: 'collection-b' }), false)
 })
 
 test('RLS exposes only active offers, prevents self-grants, and allows Founder pass configuration', () => {
