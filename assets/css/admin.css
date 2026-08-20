@@ -386,7 +386,8 @@
   color: #79413e;
 }
 
-.admin-menu-button {
+.admin-menu-button,
+.admin-nav-close {
   display: none;
 }
 
@@ -2054,9 +2055,21 @@
 
   .admin-sidebar {
     position: fixed;
-    inset: 0 auto 0 0;
+    inset: 0 auto auto 0;
     z-index: 30;
     width: min(280px, 86vw);
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100svh;
+    max-height: 100dvh;
+    overflow: hidden;
+    padding:
+      max(20px, env(safe-area-inset-top))
+      max(18px, env(safe-area-inset-right))
+      max(20px, env(safe-area-inset-bottom))
+      max(18px, env(safe-area-inset-left));
     transform: translateX(-104%);
     transition: transform .24s ease;
   }
@@ -2074,7 +2087,46 @@
   }
 
   .admin-brand {
+    flex: 0 0 auto;
     padding-block: 10px;
+    padding-right: 54px;
+  }
+
+  .admin-nav-close {
+    position: absolute;
+    top: max(18px, env(safe-area-inset-top));
+    right: max(18px, env(safe-area-inset-right));
+    display: grid;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(42, 52, 64, .14);
+    border-radius: 50%;
+    color: var(--slate);
+    font: inherit;
+    font-size: 1.45rem;
+    line-height: 1;
+    background: rgba(248, 247, 244, .82);
+    cursor: pointer;
+    place-items: center;
+  }
+
+  .admin-nav-close:hover,
+  .admin-nav-close:focus-visible {
+    border-color: rgba(140, 106, 74, .32);
+    background: rgba(140, 106, 74, .12);
+  }
+
+  .admin-nav {
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: 4px;
+    scrollbar-gutter: stable;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
 
   .admin-nav button {

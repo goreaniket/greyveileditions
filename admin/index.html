@@ -34,11 +34,14 @@
     </section>
 
     <div class="admin-shell" data-admin-app hidden>
-      <aside class="admin-sidebar" data-admin-sidebar aria-label="Admin navigation">
+      <aside class="admin-sidebar" id="admin-navigation" data-admin-sidebar aria-label="Admin navigation">
         <a class="admin-brand" href="/index.html">
           <span>Greyveil</span>
           <strong>Editions</strong>
         </a>
+        <button class="admin-nav-close" type="button" data-admin-menu-close aria-label="Close admin navigation">
+          <span aria-hidden="true">×</span>
+        </button>
         <nav class="admin-nav" aria-label="Dashboard sections">
           <button type="button" data-admin-tab="dashboard" aria-selected="true">Dashboard</button>
           <button type="button" data-admin-tab="users" aria-selected="false">Users</button>
@@ -57,7 +60,7 @@
 
       <div class="admin-workspace">
         <header class="admin-topbar">
-          <button class="admin-menu-button" type="button" data-admin-menu aria-label="Open admin navigation" aria-expanded="false">Menu</button>
+          <button class="admin-menu-button" type="button" data-admin-menu aria-label="Open admin navigation" aria-controls="admin-navigation" aria-expanded="false">Menu</button>
           <div>
             <p class="admin-eyebrow">Greyveil Editions</p>
             <h1>Admin Dashboard</h1>

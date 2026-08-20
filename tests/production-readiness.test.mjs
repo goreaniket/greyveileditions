@@ -181,9 +181,33 @@ test('native hidden state cannot be overridden by component display rules', asyn
 })
 
 test('the responsive Admin menu reports its open and closed state accessibly', async () => {
-  const source = await readFile(path.join(repositoryRoot, 'assets/js/admin.js'), 'utf8')
+  const [html, source] = await Promise.all([
+    readFile(path.join(repositoryRoot, 'admin/index.html'), 'utf8'),
+    readFile(path.join(repositoryRoot, 'assets/js/admin.js'), 'utf8'),
+  ])
+  assert.match(html, /id="admin-navigation"[^>]*data-admin-sidebar/)
+  assert.match(html, /data-admin-menu[^>]*aria-label="Open admin navigation"[^>]*aria-controls="admin-navigation"[^>]*aria-expanded="false"/)
+  assert.match(html, /data-admin-menu-close[^>]*aria-label="Close admin navigation"/)
+  assert.match(source, /setAdminNavigationOpen/)
   assert.match(source, /setAttribute\('aria-label', open \? 'Close admin navigation' : 'Open admin navigation'\)/)
-  assert.match(source, /classList\.remove\('is-admin-nav-open'\)[\s\S]+setAttribute\('aria-expanded', 'false'\)[\s\S]+setAttribute\('aria-label', 'Open admin navigation'\)/)
+  assert.match(source, /menuClose\?\.focus\(\{ preventScroll: true \}\)/)
+  assert.match(source, /const restoreMenuFocus = document\.body\.classList\.contains\('is-admin-nav-open'\)[\s\S]*?setAdminNavigationOpen\(false, \{ restoreFocus: restoreMenuFocus \}\)/)
+  assert.match(source, /event\.key !== 'Escape'[\s\S]*?setAdminNavigationOpen\(false, \{ restoreFocus: true \}\)/)
+})
+
+test('Admin mobile navigation has one viewport-safe scroll owner isolated to the drawer breakpoint', async () => {
+  const css = await readFile(path.join(repositoryRoot, 'assets/css/admin.css'), 'utf8')
+  const mobile = css.match(/@media \(max-width: 820px\) \{([\s\S]*?)\n\}\n\n@media \(max-width: 560px\)/)?.[1] || ''
+  const mobileNav = mobile.match(/\.admin-nav \{([^}]*)\}/)?.[1] || ''
+
+  assert.match(css, /\.admin-menu-button,\s*\.admin-nav-close \{\s*display: none;/)
+  assert.match(mobile, /\.admin-sidebar \{[\s\S]*?height: 100vh;[\s\S]*?height: 100svh;[\s\S]*?height: 100dvh;/)
+  assert.match(mobile, /\.admin-sidebar \{[\s\S]*?max-height: 100dvh;[\s\S]*?overflow: hidden;/)
+  assert.match(mobile, /env\(safe-area-inset-top\)[\s\S]*?env\(safe-area-inset-bottom\)/)
+  assert.match(mobile, /\.admin-nav \{[\s\S]*?min-height: 0;[\s\S]*?flex: 1 1 auto;[\s\S]*?overflow-x: hidden;[\s\S]*?overflow-y: auto;/)
+  assert.match(mobile, /overscroll-behavior: contain;[\s\S]*?touch-action: pan-y;/)
+  assert.match(mobile, /\.admin-nav-close \{[\s\S]*?display: grid;[\s\S]*?width: 44px;[\s\S]*?height: 44px;/)
+  assert.doesNotMatch(mobileNav, /height:\s*\d+px/)
 })
 
 test('static forms and non-submitting buttons have an effective native or scripted action', async () => {
@@ -206,7 +230,7 @@ test('static forms and non-submitting buttons have an effective native or script
       if (type === 'submit' || type === 'reset') continue
 
       const classWired = /\bclass\s*=\s*(["'])[^"']*\b(?:nav-toggle|dropdown-trigger)\b[^"']*\1/i.test(buttonTag)
-      const dataMarker = buttonTag.match(/\bdata-((?:password-toggle|purchase-type|logout-button|library-refresh|checkout-(?:pay|coupon-remove)|admin-(?:logout|refresh|menu|tab(?:-link)?)|announcement-image-remove|book-filters-reset|series-access-revoke|access-mode-tab))(?:\s|=|>)/i)?.[1]
+      const dataMarker = buttonTag.match(/\bdata-((?:password-toggle|purchase-type|logout-button|library-refresh|checkout-(?:pay|coupon-remove)|admin-(?:logout|refresh|menu(?:-close)?|tab(?:-link)?)|announcement-image-remove|book-filters-reset|series-access-revoke|access-mode-tab))(?:\s|=|>)/i)?.[1]
       const dataWired = dataMarker && javascript.includes(`[data-${dataMarker}`)
       if (!classWired && !dataWired) failures.push(`${filePath}: button has no effective handler: ${buttonTag}`)
     }

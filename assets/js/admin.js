@@ -66,6 +66,7 @@ const selectors = {
   logout: '[data-admin-logout]',
   refresh: '[data-admin-refresh]',
   menu: '[data-admin-menu]',
+  menuClose: '[data-admin-menu-close]',
   navButtons: '[data-admin-tab]',
   tabLinks: '[data-admin-tab-link]',
   panels: '[data-admin-panel]',
@@ -201,6 +202,7 @@ const singleNodes = {
   logout: $(selectors.logout),
   refresh: $(selectors.refresh),
   menu: $(selectors.menu),
+  menuClose: $(selectors.menuClose),
   userSearch: $(selectors.userSearch),
   userRole: $(selectors.userRole),
   usersTable: $(selectors.usersTable),
@@ -666,7 +668,20 @@ const bookLabel = (book) => {
   return parts.join(' - ') || getText(book.id)
 }
 
+const setAdminNavigationOpen = (open, { restoreFocus = false } = {}) => {
+  document.body.classList.toggle('is-admin-nav-open', open)
+  singleNodes.menu?.setAttribute('aria-expanded', String(open))
+  singleNodes.menu?.setAttribute('aria-label', open ? 'Close admin navigation' : 'Open admin navigation')
+
+  if (open) {
+    window.requestAnimationFrame(() => singleNodes.menuClose?.focus({ preventScroll: true }))
+  } else if (restoreFocus) {
+    singleNodes.menu?.focus({ preventScroll: true })
+  }
+}
+
 const showPanel = (name) => {
+  const restoreMenuFocus = document.body.classList.contains('is-admin-nav-open')
   $$(selectors.navButtons).forEach((button) => {
     const isActive = button.dataset.adminTab === name
     button.setAttribute('aria-selected', String(isActive))
@@ -676,9 +691,7 @@ const showPanel = (name) => {
     panel.classList.toggle('is-active', panel.dataset.adminPanel === name)
   })
 
-  document.body.classList.remove('is-admin-nav-open')
-  singleNodes.menu?.setAttribute('aria-expanded', 'false')
-  singleNodes.menu?.setAttribute('aria-label', 'Open admin navigation')
+  setAdminNavigationOpen(false, { restoreFocus: restoreMenuFocus })
   if (name === 'files') renderFilesManager()
 }
 
@@ -712,9 +725,14 @@ const bindControls = () => {
   })
 
   singleNodes.menu?.addEventListener('click', () => {
-    const open = document.body.classList.toggle('is-admin-nav-open')
-    singleNodes.menu.setAttribute('aria-expanded', String(open))
-    singleNodes.menu.setAttribute('aria-label', open ? 'Close admin navigation' : 'Open admin navigation')
+    setAdminNavigationOpen(!document.body.classList.contains('is-admin-nav-open'))
+  })
+
+  singleNodes.menuClose?.addEventListener('click', () => setAdminNavigationOpen(false, { restoreFocus: true }))
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !document.body.classList.contains('is-admin-nav-open')) return
+    event.preventDefault()
+    setAdminNavigationOpen(false, { restoreFocus: true })
   })
 
   singleNodes.refresh?.addEventListener('click', () => loadAdminData())
