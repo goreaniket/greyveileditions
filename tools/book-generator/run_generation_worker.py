@@ -219,10 +219,12 @@ def source_archive(repository_root: Path, candidate_dir: Path, slug: str) -> Pat
 
 
 def cover_file(repository_root: Path, slug: str) -> Path:
-    covers = sorted((repository_root / "assets" / "books" / slug / "cover").glob("*"))
-    if not covers:
-        raise RuntimeError("Imported source has no cover asset.")
-    return covers[0]
+    model = load_book(repository_root, slug)
+    for role in ("web", "source", "print"):
+        cover = next((asset for asset in model.cover_assets if asset.role == role and asset.exists), None)
+        if cover and cover.resolved_path:
+            return cover.resolved_path
+    raise RuntimeError("Imported source has no cover asset.")
 
 
 def cover_mime(path: Path) -> str:
