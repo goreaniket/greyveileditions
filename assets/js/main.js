@@ -700,6 +700,14 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
   const records = collectContentSurfaceRecords();
   records.forEach(suspendRecord);
 
+  // Informational routes have no protected catalog surface to reconcile. Avoid
+  // a hierarchy request there; routes with catalog or detail content still use
+  // the same authority-backed snapshot below.
+  if (!records.length && !directTarget) {
+    setAccessResolved(runId);
+    return;
+  }
+
   try {
     const access = await import(versionedPurchaseAssetUrl("content-access.js"));
     const snapshot = await access.getEntitlementSnapshot();

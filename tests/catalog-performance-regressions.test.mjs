@@ -47,3 +47,12 @@ test('public enhancement shares session and profile reads and leaves static cata
   assert.doesNotMatch(main, /node\.hidden = true;/)
   assert.doesNotMatch(css, /body:not\(\[data-access-state="resolved"\]\) \.project-card/)
 })
+
+test('informational routes skip catalog hydration while Account shares the versioned entitlement module', async () => {
+  const [main, auth, account] = await Promise.all([
+    source('../assets/js/main.js'), source('../assets/js/auth.js'), source('../account/index.html'),
+  ])
+  assert.match(main, /if \(!records\.length && !directTarget\) \{\s*setAccessResolved\(runId\);\s*return;/)
+  assert.match(auth, /import\('\.\/content-access\.js\?v=20260819-commerce-stabilization'\)/)
+  assert.match(account, /<script type="module" src="\/assets\/js\/auth\.js"><\/script>/)
+})

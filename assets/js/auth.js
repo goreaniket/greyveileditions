@@ -790,7 +790,9 @@ const renderAccountLibrary = async (user, profile, role, { force = false } = {})
   setStatus(nodes.status, 'Loading your library...', 'info')
 
   try {
-    const access = await import('./content-access.js')
+    // Keep Account on the same module instance as shared navigation and
+    // purchase controls so one entitlement snapshot serves this page load.
+    const access = await import('./content-access.js?v=20260819-commerce-stabilization')
     const snapshot = await access.getEntitlementSnapshot({ force })
     const { hierarchy, paidOrders } = snapshot
     const grants = (snapshot.grants || []).filter((grant) => access.isGrantCurrent(grant))
