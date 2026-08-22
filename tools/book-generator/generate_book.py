@@ -92,6 +92,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         type=Path,
         help="Optional base output folder; format subfolders are created inside it.",
     )
+    parser.add_argument(
+        "--repo-root",
+        type=Path,
+        help="Optional trusted repository-shaped source root for isolated worker generation.",
+    )
     args = parser.parse_args(argv)
     selected = [args.pdf, args.epub, args.docx, args.pdf_prototype]
     if args.all:
@@ -123,7 +128,7 @@ def main(argv: list[str] | None = None) -> int:
         print("Choose --validate, --pdf, --epub, --docx, --all, or --pdf-prototype.")
         return 2
 
-    root = repo_root()
+    root = args.repo_root.resolve() if args.repo_root else repo_root()
     model = load_book(root, args.slug)
     print_summary(model)
     has_errors = any(issue.severity == "error" for issue in model.issues)

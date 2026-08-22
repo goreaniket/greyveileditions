@@ -70,6 +70,8 @@ def import_docx(
     design_from: str = "the-last-shift",
     cover_path: Path | None = None,
     metadata_overrides: dict[str, str] | None = None,
+    workspace_root: Path | None = None,
+    approved_slug: str | None = None,
 ) -> ImportResult:
     job = GenerationJob()
     manuscript_path = manuscript_path.resolve()
@@ -91,7 +93,12 @@ def import_docx(
         if isinstance(value, str) and value.strip():
             metadata[key] = value.strip()
     title = metadata.get("title", "")
-    slug = slugify(title) if title else ""
+    try:
+        slug = normalize_approved_slug(approved_slug) if approved_slug is not None else (slugify(title) if title else "")
+    except ValueError as exc:
+        return failed_result(job, manuscript_path, str(exc), metadata=metadata)
+    if slug:
+        metadata["slug"] = slug
     selected_cover = find_cover(manuscript_path, cover_path)
     missing_fields = []
     if not title:
@@ -115,7 +122,8 @@ def import_docx(
             warnings=list(job.warnings),
         )
 
-    destination = repo_root / "assets" / "books" / slug
+    generation_root = (workspace_root or repo_root).resolve()
+    destination = generation_root / "assets" / "books" / slug
     if destination.exists():
         return attention_result(job, manuscript_path, slug, metadata, f"Destination already exists: {destination}")
 
@@ -123,11 +131,12 @@ def import_docx(
     if not (reference / "design-spec.json").is_file() or not (reference / "theme.css").is_file():
         return failed_result(job, manuscript_path, f"Design reference is not usable: {design_from}")
 
+    destination.parent.mkdir(parents=True, exist_ok=True)
     staging: Path | None = Path(tempfile.mkdtemp(prefix=f".{slug}.import-", dir=destination.parent))
     try:
         write_imported_source(staging, parsed, metadata, slug, reference, selected_cover, manuscript_path)
         job.advance(GenerationStage.VALIDATING_SOURCE)
-        staging_model = load_book(repo_root, staging.name)
+        staging_model = load_book(generation_root, staging.name)
         errors = [issue.message for issue in staging_model.issues if issue.severity == "error"]
         if errors:
             return failed_result(job, manuscript_path, "Imported source did not validate: " + "; ".join(errors), slug, metadata)
@@ -152,6 +161,13 @@ def import_docx(
     finally:
         if staging is not None and staging.exists():
             shutil.rmtree(staging, ignore_errors=True)
+
+
+def normalize_approved_slug(value: str | None) -> str:
+    normalized = str(value or "").strip().casefold()
+    if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", normalized):
+        raise ValueError("Approved slug must contain lowercase letters, numbers, and single hyphens only.")
+    return normalized
 
 
 def parse_manuscript(document: Document) -> dict[str, list[dict[str, Any]]]:
