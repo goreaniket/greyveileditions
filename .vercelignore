@@ -10,6 +10,9 @@ supabase/
 docs/
 .agents/
 .github/
+railpack.json
+requirements.txt
+.python-version
 assets/books/**/cover/front-cover-print.png
 assets/books/**/cover/cover-source.png
 assets/books/**/design-spec.json

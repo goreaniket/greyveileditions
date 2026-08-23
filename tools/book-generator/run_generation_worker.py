@@ -12,8 +12,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
+import signal
 import shutil
 import tempfile
 import threading
@@ -23,6 +25,7 @@ import urllib.request
 import uuid
 from contextlib import contextmanager
 from dataclasses import dataclass
+from enum import Enum
 from pathlib import Path
 from typing import Callable, Iterator
 
@@ -53,6 +56,29 @@ COVER_INPUT_PATTERN = re.compile(r"^jobs/([0-9a-f-]{36})/cover\.(png|jpe?g|webp)
 HEARTBEAT_INTERVAL_SECONDS = 5 * 60
 HEARTBEAT_MAX_SILENCE_SECONDS = 20 * 60
 HEARTBEAT_REQUEST_TIMEOUT_SECONDS = 10
+DEFAULT_POLL_SECONDS = 10.0
+MIN_POLL_SECONDS = 1.0
+MAX_POLL_SECONDS = 300.0
+ERROR_BACKOFF_BASE_SECONDS = 5.0
+ERROR_BACKOFF_MAX_SECONDS = 60.0
+
+
+class ProcessOutcome(Enum):
+    """Result of one authoritative claim-and-process attempt."""
+
+    NO_JOB = "no_job"
+    SUCCEEDED = "succeeded"
+    JOB_FAILED = "job_failed"
+    INFRASTRUCTURE_FAILED = "infrastructure_failed"
+
+
+class WorkerConfigurationError(RuntimeError):
+    """A safe-to-display continuous-worker startup configuration error."""
+
+
+@dataclass(frozen=True)
+class WorkerLoopConfiguration:
+    poll_seconds: float
 
 
 class ClaimLostError(RuntimeError):
@@ -520,15 +546,29 @@ def claim_one(target_job_id: str | None = None) -> dict | None:
     return job
 
 
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Process one trusted Greyveil generation or publication job.")
-    parser.add_argument("--once", action="store_true", help="Process at most one job (the default).")
-    parser.add_argument("--job", help="Process one specific queued or publish-requested job UUID.")
-    args = parser.parse_args(argv)
-    job = claim_one(args.job)
+def operator_error_message(exc: Exception, job: dict) -> str:
+    """Keep job errors useful without exposing either worker credential."""
+    message = str(exc).strip() or type(exc).__name__
+    for sensitive in (KEY, str(job.get("_claim_token") or "")):
+        if sensitive:
+            message = message.replace(sensitive, "[redacted]")
+    message = re.sub(
+        r"(?i)(worker_token|claim_token)(=|%3[dD])[^&\s]+",
+        r"\1\2[redacted]",
+        message,
+    )
+    return message[:1000]
+
+
+def process_one(target_job_id: str | None = None) -> ProcessOutcome:
+    """Claim and process at most one job through the shared fenced pipeline."""
+    try:
+        job = claim_one(target_job_id)
+    except (OSError, json.JSONDecodeError):
+        print("Generation claim service is unavailable.")
+        return ProcessOutcome.INFRASTRUCTURE_FAILED
     if not job:
-        print("No eligible Greyveil generation jobs.")
-        return 0
+        return ProcessOutcome.NO_JOB
     heartbeat = ClaimHeartbeat(job)
     job["_heartbeat"] = heartbeat
     try:
@@ -538,18 +578,178 @@ def main(argv: list[str] | None = None) -> int:
         else:
             run(job)
         print(f"Processed generation job {job['id']}")
-        return 0
+        return ProcessOutcome.SUCCEEDED
+    except (OSError, json.JSONDecodeError):
+        heartbeat.stop()
+        print(f"Generation job {job['id']} paused because worker infrastructure is unavailable.")
+        return ProcessOutcome.INFRASTRUCTURE_FAILED
     except Exception as exc:  # noqa: BLE001 - persist an operator-readable worker failure.
         heartbeat.stop()
+        error_message = operator_error_message(exc, job)
         try:
-            release_job(job, status="FAILED", error=str(exc), completed_at=utc_now())
+            release_job(job, status="FAILED", error=error_message, completed_at=utc_now())
         except Exception:  # noqa: BLE001 - never mask the original worker failure.
             print(f"Generation job {job['id']} failure state could not be recorded.")
-        print(f"Generation job {job['id']} failed: {exc}")
-        return 1
+        print(f"Generation job {job['id']} failed: {error_message}")
+        return ProcessOutcome.JOB_FAILED
     finally:
         heartbeat.stop()
         job.pop("_heartbeat", None)
+
+
+def load_loop_configuration() -> WorkerLoopConfiguration:
+    """Validate only the values required to start the long-running worker."""
+    for name, value in (("SUPABASE_URL", URL), ("SUPABASE_SERVICE_ROLE_KEY", KEY)):
+        if not value.strip():
+            raise WorkerConfigurationError(f"Missing required environment variable: {name}")
+
+    parsed_url = urllib.parse.urlsplit(URL)
+    if (
+        parsed_url.scheme not in {"http", "https"}
+        or not parsed_url.netloc
+        or parsed_url.username is not None
+        or parsed_url.password is not None
+        or parsed_url.query
+        or parsed_url.fragment
+    ):
+        raise WorkerConfigurationError("SUPABASE_URL must be a valid HTTP or HTTPS origin.")
+
+    raw_poll_seconds = os.environ.get("GREYVEIL_WORKER_POLL_SECONDS")
+    if raw_poll_seconds is None or not raw_poll_seconds.strip():
+        return WorkerLoopConfiguration(poll_seconds=DEFAULT_POLL_SECONDS)
+    try:
+        poll_seconds = float(raw_poll_seconds)
+    except ValueError as exc:
+        raise WorkerConfigurationError(
+            "GREYVEIL_WORKER_POLL_SECONDS must be a number between 1 and 300 seconds."
+        ) from exc
+    if not math.isfinite(poll_seconds) or not MIN_POLL_SECONDS <= poll_seconds <= MAX_POLL_SECONDS:
+        raise WorkerConfigurationError(
+            "GREYVEIL_WORKER_POLL_SECONDS must be a number between 1 and 300 seconds."
+        )
+    return WorkerLoopConfiguration(poll_seconds=poll_seconds)
+
+
+def verify_worker_rpc_readiness() -> None:
+    """Fail closed before claiming real work if required worker RPCs are absent."""
+    probe_job_id = str(uuid.uuid4())
+    probe_token = str(uuid.uuid4())
+    try:
+        claimed = request("/rest/v1/rpc/greyveil_worker_claim_generation_job", "POST", {
+            "claim_token": probe_token,
+            "target_job_id": probe_job_id,
+        }, timeout_seconds=HEARTBEAT_REQUEST_TIMEOUT_SECONDS)
+        heartbeat_valid = request("/rest/v1/rpc/greyveil_worker_heartbeat_generation_job", "POST", {
+            "target_job_id": probe_job_id,
+            "claim_token": probe_token,
+        }, timeout_seconds=HEARTBEAT_REQUEST_TIMEOUT_SECONDS)
+    except Exception as exc:  # noqa: BLE001 - startup reports a static, secret-free error.
+        raise WorkerConfigurationError("Required Supabase worker RPCs are unavailable.") from exc
+    if claimed or heartbeat_valid is not False:
+        raise WorkerConfigurationError("Required Supabase worker RPC readiness check returned an unsafe result.")
+
+
+def infrastructure_backoff_seconds(consecutive_failures: int) -> float:
+    """Return a bounded exponential delay without an unbounded exponent."""
+    exponent = max(0, min(consecutive_failures - 1, 30))
+    return min(ERROR_BACKOFF_MAX_SECONDS, ERROR_BACKOFF_BASE_SECONDS * (2 ** exponent))
+
+
+def run_loop(
+    configuration: WorkerLoopConfiguration,
+    *,
+    stop_event: threading.Event | None = None,
+    process_fn: Callable[[str | None], ProcessOutcome] | None = None,
+    wait_fn: Callable[[float], bool] | None = None,
+) -> int:
+    """Poll sequentially until shutdown, backing off only on claim transport errors."""
+    shutdown = stop_event or threading.Event()
+    process = process_fn or process_one
+    wait = wait_fn or shutdown.wait
+    infrastructure_failures = 0
+    print(f"Greyveil continuous worker started (idle poll: {configuration.poll_seconds:g}s).")
+
+    while not shutdown.is_set():
+        try:
+            outcome = process(None)
+        except KeyboardInterrupt:
+            shutdown.set()
+            print("Greyveil worker shutdown requested by keyboard interrupt.")
+            break
+        except (OSError, json.JSONDecodeError):
+            outcome = ProcessOutcome.INFRASTRUCTURE_FAILED
+
+        if outcome is ProcessOutcome.INFRASTRUCTURE_FAILED:
+            infrastructure_failures += 1
+            delay = infrastructure_backoff_seconds(infrastructure_failures)
+            print(f"Generation claim service unavailable; retrying in {delay:g}s.")
+            try:
+                wait(delay)
+            except KeyboardInterrupt:
+                shutdown.set()
+                print("Greyveil worker shutdown requested by keyboard interrupt.")
+                break
+            continue
+
+        infrastructure_failures = 0
+        if shutdown.is_set():
+            break
+        if outcome is ProcessOutcome.NO_JOB:
+            try:
+                wait(configuration.poll_seconds)
+            except KeyboardInterrupt:
+                shutdown.set()
+                print("Greyveil worker shutdown requested by keyboard interrupt.")
+                break
+
+    print("Greyveil continuous worker stopped.")
+    return 0
+
+
+@contextmanager
+def sigterm_shutdown(stop_event: threading.Event) -> Iterator[None]:
+    """Translate Railway SIGTERM into a cooperative stop after the active job."""
+    if threading.current_thread() is not threading.main_thread():
+        yield
+        return
+    previous_handler = signal.getsignal(signal.SIGTERM)
+
+    def request_shutdown(_signum: int, _frame: object) -> None:
+        if not stop_event.is_set():
+            print("Greyveil worker shutdown requested; no new job will be claimed.")
+        stop_event.set()
+
+    signal.signal(signal.SIGTERM, request_shutdown)
+    try:
+        yield
+    finally:
+        signal.signal(signal.SIGTERM, previous_handler)
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Process trusted Greyveil generation or publication jobs.")
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--once", action="store_true", help="Process at most one job (the default).")
+    modes.add_argument("--job", help="Process one specific queued or publish-requested job UUID.")
+    modes.add_argument("--loop", action="store_true", help="Continuously claim and process jobs until shutdown.")
+    args = parser.parse_args(argv)
+
+    if args.loop:
+        try:
+            configuration = load_loop_configuration()
+            verify_worker_rpc_readiness()
+        except WorkerConfigurationError as exc:
+            print(exc)
+            return 2
+        stop_event = threading.Event()
+        with sigterm_shutdown(stop_event):
+            return run_loop(configuration, stop_event=stop_event)
+
+    outcome = process_one(args.job)
+    if outcome is ProcessOutcome.NO_JOB:
+        print("No eligible Greyveil generation jobs.")
+        return 0
+    return 0 if outcome is ProcessOutcome.SUCCEEDED else 1
 
 
 if __name__ == "__main__":
