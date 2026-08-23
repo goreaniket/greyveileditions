@@ -7,14 +7,23 @@ const queueDefinition = (source) => source.match(
   /create or replace function public\.greyveil_admin_queue_generation_job\([\s\S]*?\)\s*returns public\.book_generation_jobs language plpgsql security definer set search_path = public as \$\$/i,
 )?.[0].replace(/\s+/g, ' ').trim().toLowerCase()
 
-test('targeted queue repair replaces the exact existing signature without changing its ACL', async () => {
+test('targeted queue repair preserves the signature and enforces the browser-admin ACL', async () => {
   const [workflow, repair] = await Promise.all([
     text('../supabase/founder-publishing-workflow.sql'),
     text('../supabase/repair-generation-job-queue-transition.sql'),
   ])
   assert.equal(queueDefinition(repair), queueDefinition(workflow))
-  assert.match(repair, /if not public\.greyveil_is_admin\(\)/i)
-  assert.doesNotMatch(repair, /drop function|revoke |grant /i)
+  assert.match(repair, /if public\.greyveil_is_admin\(\) is distinct from true then/i)
+  assert.ok(
+    repair.indexOf('is distinct from true') < repair.indexOf('select * into job'),
+    'the NULL-safe Admin guard must run before the job lookup',
+  )
+  const signature = String.raw`public\.greyveil_admin_queue_generation_job\(uuid, text, text, jsonb, text, uuid, uuid, integer, text, integer\)`
+  assert.match(repair, new RegExp(`revoke all on function ${signature} from public`, 'i'))
+  assert.match(repair, new RegExp(`revoke all on function ${signature} from anon`, 'i'))
+  assert.match(repair, new RegExp(`revoke all on function ${signature} from authenticated`, 'i'))
+  assert.match(repair, new RegExp(`grant execute on function ${signature} to authenticated`, 'i'))
+  assert.doesNotMatch(repair, /grant execute[\s\S]*to (?:public|anon)/i)
 })
 
 test('targeted queue repair permits only legitimate queue and retry source states', async () => {

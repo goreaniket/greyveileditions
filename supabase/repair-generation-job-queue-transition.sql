@@ -15,7 +15,7 @@ declare
   clean_slug text;
   expected_manuscript_path text;
 begin
-  if not public.greyveil_is_admin() then
+  if public.greyveil_is_admin() is distinct from true then
     raise exception 'Admin access required.' using errcode = '42501';
   end if;
 
@@ -106,4 +106,11 @@ begin
 end;
 $$;
 
+revoke all on function public.greyveil_admin_queue_generation_job(uuid, text, text, jsonb, text, uuid, uuid, integer, text, integer) from public;
+revoke all on function public.greyveil_admin_queue_generation_job(uuid, text, text, jsonb, text, uuid, uuid, integer, text, integer) from anon;
+revoke all on function public.greyveil_admin_queue_generation_job(uuid, text, text, jsonb, text, uuid, uuid, integer, text, integer) from authenticated;
+grant execute on function public.greyveil_admin_queue_generation_job(uuid, text, text, jsonb, text, uuid, uuid, integer, text, integer) to authenticated;
+
 commit;
+
+notify pgrst, 'reload schema';
