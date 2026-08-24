@@ -1,6 +1,7 @@
 import { getCurrentSessionOnce, supabase } from './supabase-client.js'
 import { friendlyAuthMessage, logAuthDiagnostic } from './auth-errors.js'
 import {
+  hasPasswordIdentity,
   isValidDisplayName,
   normalizeDisplayName,
   SIGNUP_OUTCOMES,
@@ -1317,6 +1318,7 @@ const initAccountPage = async () => {
   const roleRow = document.querySelector('[data-account-role-row]')
   const roleNode = document.querySelector('[data-account-role]')
   const accountActions = document.querySelector('[data-account-actions]')
+  const passwordAction = document.querySelector('[data-account-password-action]')
   const libraryRefreshButton = document.querySelector('[data-library-refresh]')
   const profileForm = document.querySelector('[data-account-profile-form]')
   const profileStatus = document.querySelector('[data-account-profile-status]')
@@ -1353,6 +1355,7 @@ const initAccountPage = async () => {
     if (nameNode) nameNode.textContent = displayNameFor(currentUser, profile)
     if (emailNode) emailNode.textContent = currentUser.email || ''
     if (profileForm?.elements.display_name) profileForm.elements.display_name.value = displayNameFor(currentUser, profile)
+    if (passwordAction) passwordAction.hidden = !hasPasswordIdentity(currentUser)
 
     if (roleRow && roleNode) {
       roleNode.textContent = formatRole(role)

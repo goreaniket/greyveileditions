@@ -116,10 +116,6 @@
             <strong>Email</strong>
             <span data-account-email></span>
           </p>
-          <p class="account-detail" data-account-role-row hidden>
-            <strong>Internal Role</strong>
-            <span data-account-role></span>
-          </p>
         </div>
         <form class="account-profile-form" data-account-profile-form>
           <label for="account-display-name"><span>Display name</span><input id="account-display-name" name="display_name" minlength="2" maxlength="80" autocomplete="name" required /></label>
@@ -128,7 +124,13 @@
             <p class="form-status" data-account-profile-status role="status" aria-live="polite"></p>
           </div>
         </form>
-        <div class="account-security-action">
+        <div class="account-details" data-account-role-row hidden>
+          <p class="account-detail">
+            <strong>Internal Role</strong>
+            <span data-account-role></span>
+          </p>
+        </div>
+        <div class="account-security-action" data-account-password-action hidden>
           <div><strong>Password</strong><span>We’ll email secure reset instructions to your account.</span></div>
           <a class="button ghost" href="/forgot-password/">Reset password</a>
         </div>

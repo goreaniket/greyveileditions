@@ -35,6 +35,22 @@ export const isValidDisplayName = (value) => {
     && !/[\u0000-\u001f\u007f]/.test(displayName)
 }
 
+const normalizedProvider = (value) => String(value || '').trim().toLowerCase()
+
+export const hasPasswordIdentity = (user) => {
+  const identities = Array.isArray(user?.identities) ? user.identities : null
+  const identityProviders = identities?.map((identity) => normalizedProvider(identity?.provider)).filter(Boolean) || []
+  if (identityProviders.length) return identityProviders.includes('email')
+
+  const providers = Array.isArray(user?.app_metadata?.providers)
+    ? user.app_metadata.providers.map(normalizedProvider).filter(Boolean)
+    : []
+  if (providers.length) return providers.includes('email')
+
+  // A primary provider alone cannot rule out a linked email identity.
+  return true
+}
+
 const updateDenied = (error) => {
   const message = `${error?.code || ''} ${error?.message || ''}`.toLowerCase()
   return Number(error?.status || 0) === 401

@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 import {
+  hasPasswordIdentity,
   isValidDisplayName,
   normalizeDisplayName,
   SIGNUP_OUTCOMES,
@@ -85,6 +86,29 @@ test('display names are trimmed, normalized, and validated', () => {
   assert.equal(isValidDisplayName('A'), false)
   assert.equal(isValidDisplayName('Greyveil Reader'), true)
   assert.equal(isValidDisplayName(`Reader\u0000Name`), false)
+})
+
+test('password recovery eligibility follows authenticated identities, including linked accounts', () => {
+  assert.equal(hasPasswordIdentity({
+    email: 'reader@gmail.com',
+    identities: [{ provider: 'google' }],
+  }), false, 'Google-only account')
+  assert.equal(hasPasswordIdentity({
+    email: 'reader@gmail.com',
+    identities: [{ provider: 'email' }],
+  }), true, 'email/password account')
+  assert.equal(hasPasswordIdentity({
+    identities: [{ provider: 'google' }, { provider: 'email' }],
+  }), true, 'linked Google and email account')
+  assert.equal(hasPasswordIdentity({
+    identities: [],
+    app_metadata: { providers: ['google', 'email'] },
+  }), true, 'linked account metadata fallback')
+  assert.equal(hasPasswordIdentity({
+    identities: [],
+    app_metadata: { provider: 'google' },
+  }), true, 'incomplete primary-provider metadata')
+  assert.equal(hasPasswordIdentity({ email: 'legacy@example.com' }), true, 'unknown legacy identity state')
 })
 
 test('own display-name update confirms one row, refetches the profile, and syncs metadata', async () => {
