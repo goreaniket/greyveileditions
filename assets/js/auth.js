@@ -7,7 +7,7 @@ import {
   signupOutcomeFor,
   updateOwnDisplayName,
 } from './auth-profile.js'
-import { appUrl, safeReturnPath } from './site-config.js'
+import { appUrl, GOOGLE_OAUTH_REDIRECT_URL, safeReturnPath } from './site-config.js'
 import {
   createExclusiveStateController,
   initPasswordVisibilityToggles,
@@ -900,6 +900,39 @@ const preserveAuthReturnLinks = () => {
   })
 }
 
+const initGoogleSignIn = (form, status) => {
+  const button = form?.querySelector('[data-google-signin]')
+  const label = button?.querySelector('[data-google-signin-label]')
+  if (!button || !label) return
+
+  button.addEventListener('click', async () => {
+    if (button.disabled) return
+
+    button.disabled = true
+    label.textContent = 'Opening Google...'
+    setStatus(status, 'Redirecting to Google...', 'info')
+
+    let error = null
+    try {
+      const result = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: GOOGLE_OAUTH_REDIRECT_URL,
+        },
+      })
+      error = result.error
+    } catch (oauthError) {
+      error = oauthError
+    }
+
+    if (!error) return
+    logAuthDiagnostic('google_oauth', error)
+    button.disabled = false
+    label.textContent = 'Continue with Google'
+    setStatus(status, friendlyAuthMessage(error, 'We could not start Google sign-in. Please try again.'), 'error')
+  })
+}
+
 export async function redirectByRole() {
   window.location.assign(safeLoginReturnPath() || ACCOUNT_PATH)
 }
@@ -950,6 +983,8 @@ const initSignupPage = async () => {
   const submitButton = form?.querySelector('button[type="submit"]')
 
   if (!form || !await guardAuthPage(view)) return
+
+  initGoogleSignIn(form, status)
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault()
@@ -1031,6 +1066,8 @@ const initLoginPage = async () => {
   const submitButton = form?.querySelector('button[type="submit"]')
 
   if (!form || !await guardAuthPage(view)) return
+
+  initGoogleSignIn(form, status)
 
   if (hasAuthCallbackError()) {
     setStatus(status, 'This email confirmation link is invalid or has expired. Try signing in or create the account again.', 'error')

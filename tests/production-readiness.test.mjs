@@ -230,7 +230,7 @@ test('static forms and non-submitting buttons have an effective native or script
       if (type === 'submit' || type === 'reset') continue
 
       const classWired = /\bclass\s*=\s*(["'])[^"']*\b(?:nav-toggle|dropdown-trigger)\b[^"']*\1/i.test(buttonTag)
-      const dataMarker = buttonTag.match(/\bdata-((?:password-toggle|purchase-type|logout-button|library-refresh|checkout-(?:pay|coupon-remove)|admin-(?:logout|refresh|menu(?:-close)?|tab(?:-link)?)|announcement-image-remove|book-filters-reset|series-access-revoke|access-mode-tab))(?:\s|=|>)/i)?.[1]
+      const dataMarker = buttonTag.match(/\bdata-((?:password-toggle|google-signin|purchase-type|logout-button|library-refresh|checkout-(?:pay|coupon-remove)|admin-(?:logout|refresh|menu(?:-close)?|tab(?:-link)?)|announcement-image-remove|book-filters-reset|series-access-revoke|access-mode-tab))(?:\s|=|>)/i)?.[1]
       const dataWired = dataMarker && javascript.includes(`[data-${dataMarker}`)
       if (!classWired && !dataWired) failures.push(`${filePath}: button has no effective handler: ${buttonTag}`)
     }

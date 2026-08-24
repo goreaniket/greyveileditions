@@ -2778,6 +2778,56 @@ main > .home-hero ~ .section .contact-link {
   line-height: 1.05;
 }
 
+.auth-oauth {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.auth-card .button.auth-google-button {
+  width: 100%;
+  border: 1px solid rgba(42, 52, 64, .18);
+  background: rgba(255, 255, 255, .54);
+  box-shadow: 0 10px 24px rgba(42, 52, 64, .08);
+}
+
+.auth-card .button.auth-google-button:hover {
+  border-color: rgba(140, 106, 74, .42);
+  background: rgba(255, 255, 255, .82);
+}
+
+.auth-google-mark {
+  display: inline-grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-inline-end: 8px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ivory);
+  color: #4285f4;
+  font-size: .9rem;
+  font-weight: 800;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(42, 52, 64, .56);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: rgba(42, 52, 64, .14);
+}
+
 .auth-card .button {
   border: 0;
   cursor: pointer;

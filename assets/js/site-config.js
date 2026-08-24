@@ -1,4 +1,5 @@
 export const PRODUCTION_ORIGIN = 'https://greyveileditions.site'
+export const GOOGLE_OAUTH_REDIRECT_URL = `${PRODUCTION_ORIGIN}/account/`
 
 const LOCAL_HOSTNAMES = new Set(['localhost', '127.0.0.1', '[::1]'])
 

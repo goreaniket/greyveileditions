@@ -51,6 +51,13 @@
 
     <section class="section page-shell feedback-layout">
       <form class="contact-card feedback-form auth-card reveal" data-auth-view data-signup-form hidden>
+        <div class="auth-oauth">
+          <button class="button ghost auth-google-button" type="button" data-google-signin>
+            <span class="auth-google-mark" aria-hidden="true">G</span>
+            <span data-google-signin-label>Continue with Google</span>
+          </button>
+          <div class="auth-divider" aria-hidden="true"><span>or use email</span></div>
+        </div>
         <label>
           <span>Display Name</span>
           <input name="display_name" type="text" autocomplete="name" required />
@@ -111,6 +118,6 @@
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
-  <script type="module" src="/assets/js/auth.js?v=20260818-auth-profile-fix"></script>
+  <script type="module" src="/assets/js/auth.js?v=20260824-google-oauth"></script>
 </body>
 </html>
