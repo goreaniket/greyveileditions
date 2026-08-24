@@ -4,7 +4,10 @@ const host = document.querySelector('[data-founder-publishing]')
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const INPUT_BUCKET = 'generation-inputs'
 const POLL_MS = 8000
+const DISPATCH_FAILURE_MESSAGE = 'The job state was preserved, but automatic GitHub worker dispatch failed. Check the job list and retry dispatch if it is still queued; Railway remains available as fallback.'
 let timer = 0
+const activeDispatches = new Set()
+const failedDispatches = new Set()
 let state = { profile: null, jobs: [], books: [], series: [], collections: [], passes: [], catalogErrors: [], selectedJob: null }
 let jobsRequest = 0
 let jobsLoading = false
@@ -147,6 +150,21 @@ const createJob = async (bookId = null) => {
   if (error) throw error
   return data
 }
+const dispatchGenerationWorker = async (jobId) => {
+  const id = text(jobId).toLowerCase()
+  if (activeDispatches.has(id)) return
+  activeDispatches.add(id)
+  try {
+    const { data, error } = await supabase.functions.invoke('dispatch-generation-worker', { body: { job_id: id } })
+    if (error || data?.success !== true) throw new Error(DISPATCH_FAILURE_MESSAGE)
+    failedDispatches.delete(id)
+  } catch (_error) {
+    failedDispatches.add(id)
+    throw new Error(DISPATCH_FAILURE_MESSAGE)
+  } finally {
+    activeDispatches.delete(id)
+  }
+}
 const uploadInput = async (jobId, name, file) => {
   if (!file) return ''
   const path = `jobs/${jobId}/${name}`
@@ -166,22 +184,42 @@ const queue = async (jobId, form, manuscriptPath, coverPath) => {
     target_visibility: visibility, target_price_amount: price,
   })
   if (error) throw error
+  await dispatchGenerationWorker(jobId)
 }
 const jobAction = async (job, action) => {
-  if (action === 'publish') {
-    const { error } = await supabase.rpc('greyveil_admin_publish_generation_job', { target_job_id: job.id }); if (error) throw error
-  } else if (action === 'cancel') {
-    const { error } = await supabase.rpc('greyveil_admin_cancel_generation_job', { target_job_id: job.id }); if (error) throw error
-  } else if (action === 'retry') {
-    const { error } = await supabase.rpc('greyveil_admin_queue_generation_job', {
-      target_job_id: job.id, target_manuscript_path: job.manuscript_path, target_cover_path: job.cover_path || '', target_metadata: job.metadata,
-      target_design_source_slug: job.design_source_slug, target_series_id: job.series_id, target_collection_id: job.collection_id,
-      target_book_number: job.book_number, target_visibility: job.visibility, target_price_amount: job.price_amount,
-    }); if (error) throw error
+  try {
+    if (action === 'publish') {
+      const { error } = await supabase.rpc('greyveil_admin_publish_generation_job', { target_job_id: job.id }); if (error) throw error
+      await dispatchGenerationWorker(job.id)
+    } else if (action === 'cancel') {
+      const { error } = await supabase.rpc('greyveil_admin_cancel_generation_job', { target_job_id: job.id }); if (error) throw error
+    } else if (action === 'retry') {
+      const { error } = await supabase.rpc('greyveil_admin_queue_generation_job', {
+        target_job_id: job.id, target_manuscript_path: job.manuscript_path, target_cover_path: job.cover_path || '', target_metadata: job.metadata,
+        target_design_source_slug: job.design_source_slug, target_series_id: job.series_id, target_collection_id: job.collection_id,
+        target_book_number: job.book_number, target_visibility: job.visibility, target_price_amount: job.price_amount,
+      }); if (error) throw error
+      await dispatchGenerationWorker(job.id)
+    } else if (action === 'dispatch') {
+      await dispatchGenerationWorker(job.id)
+    }
+  } finally {
+    await refreshJobs().catch(() => {})
+    if (action === 'publish') await refreshCatalog().catch(() => {})
   }
-  await refreshJobs()
-  if (action === 'publish') await refreshCatalog()
 }
+
+const bindJobAction = (button, job, action) => button.addEventListener('click', async () => {
+  button.disabled = true
+  try {
+    await jobAction(job, action)
+    if (action === 'dispatch') alert('Worker dispatch requested.')
+  } catch (error) {
+    alert(error.message || 'The job action could not be completed.')
+  } finally {
+    button.disabled = false
+  }
+})
 
 const renderCreator = () => {
   const card = protectForm(el('form', 'admin-card founder-creator')); card.noValidate = true
@@ -196,7 +234,7 @@ const renderCreator = () => {
   detect.addEventListener('click', async () => {
     const manuscript = card.elements.manuscript.files?.[0]; const cover = card.elements.cover.files?.[0]
     if (!manuscript || !/\.docx$/i.test(manuscript.name)) return setStatus(status, 'Choose a DOCX manuscript before detection.', 'error')
-    detect.disabled = true; try { const job = await createJob(card.elements.existing_book.value || null); const manuscriptPath = await uploadInput(job.id, 'manuscript.docx', manuscript); const coverPath = cover ? await uploadInput(job.id, `cover.${cover.name.split('.').pop().toLowerCase()}`, cover) : ''; const { error } = await supabase.rpc('greyveil_admin_request_generation_detection', { target_job_id: job.id, target_manuscript_path: manuscriptPath, target_cover_path: coverPath || null }); if (error) throw error; card.dataset.jobId = job.id; setStatus(status, 'Detection queued. Review the detected metadata in the job list, then confirm the editable fields and queue generation.', 'success'); await refreshJobs() } catch (error) { setStatus(status, error.message || 'Detection could not be queued.', 'error') } finally { detect.disabled = false }
+    detect.disabled = true; try { const job = await createJob(card.elements.existing_book.value || null); const manuscriptPath = await uploadInput(job.id, 'manuscript.docx', manuscript); const coverPath = cover ? await uploadInput(job.id, `cover.${cover.name.split('.').pop().toLowerCase()}`, cover) : ''; const { error } = await supabase.rpc('greyveil_admin_request_generation_detection', { target_job_id: job.id, target_manuscript_path: manuscriptPath, target_cover_path: coverPath || null }); if (error) throw error; card.dataset.jobId = job.id; await dispatchGenerationWorker(job.id); setStatus(status, 'Detection queued and worker dispatch requested. Review the detected metadata when it completes.', 'success'); await refreshJobs() } catch (error) { setStatus(status, error.message || 'Detection could not be queued.', 'error'); await refreshJobs().catch(() => {}) } finally { detect.disabled = false }
   })
   card.addEventListener('submit', async (event) => {
     event.preventDefault(); if (!card.reportValidity()) return
@@ -204,11 +242,11 @@ const renderCreator = () => {
     if (!manuscript || !/\.docx$/i.test(manuscript.name)) return setStatus(status, 'A DOCX manuscript is required.', 'error')
     submit.disabled = true; setStatus(status, 'Uploading private inputs…', 'info')
     try {
-      const job = card.dataset.jobId ? { id: card.dataset.jobId } : await createJob(card.elements.existing_book.value || null)
+      const job = card.dataset.jobId ? { id: card.dataset.jobId } : await createJob(card.elements.existing_book.value || null); card.dataset.jobId = job.id
       const manuscriptPath = await uploadInput(job.id, 'manuscript.docx', manuscript)
       const coverPath = cover ? await uploadInput(job.id, `cover.${cover.name.split('.').pop().toLowerCase()}`, cover) : ''
-      await queue(job.id, card, manuscriptPath, coverPath); card.dataset.dirty = 'false'; setStatus(status, 'Queued. The external worker will detect, import, generate, and validate this candidate.', 'success'); await refreshJobs()
-    } catch (error) { setStatus(status, error.message || 'The job could not be queued.', 'error') } finally { submit.disabled = false }
+      await queue(job.id, card, manuscriptPath, coverPath); card.dataset.dirty = 'false'; setStatus(status, 'Queued and worker dispatch requested. The candidate will be generated and validated privately.', 'success'); await refreshJobs()
+    } catch (error) { setStatus(status, error.message || 'The job could not be queued.', 'error'); await refreshJobs().catch(() => {}) } finally { submit.disabled = false }
   })
   return card
 }
@@ -226,8 +264,9 @@ const renderJobs = () => {
     const qa = job.qa || {}; const qaLine = el('p', 'founder-job__qa', `Source ${qa.source ? '✓' : '—'} · PDF ${qa.pdf ? '✓' : '—'} · EPUB ${qa.epub ? '✓' : '—'} · DOCX ${qa.docx ? '✓' : '—'} · Metadata ${qa.metadata ? '✓' : '—'}`); row.append(qaLine)
     if (job.status === 'AWAITING_REVIEW') row.append(el('small', '', `Detected: ${text(job.metadata?.title, 'title missing')} · ${text(job.metadata?.author, 'author missing')} · ${text(job.metadata?.language, 'language unspecified')}`))
     const actions = el('div', 'admin-form-actions')
-    if (job.status === 'READY_TO_PUBLISH' && qa.ok === true) { const button = el('button', 'admin-action admin-action--primary', 'Request Publish'); button.type = 'button'; button.addEventListener('click', () => jobAction(job, 'publish').catch((error) => alert(error.message))); actions.append(button) }
-    if (['FAILED', 'CANCELLED'].includes(job.status)) { const button = el('button', 'admin-action', 'Regenerate'); button.type = 'button'; button.addEventListener('click', () => jobAction(job, 'retry').catch((error) => alert(error.message))); actions.append(button) }
+    if (job.status === 'READY_TO_PUBLISH' && qa.ok === true) { const button = el('button', 'admin-action admin-action--primary', 'Request Publish'); button.type = 'button'; bindJobAction(button, job, 'publish'); actions.append(button) }
+    if (['FAILED', 'CANCELLED'].includes(job.status)) { const button = el('button', 'admin-action', 'Regenerate'); button.type = 'button'; bindJobAction(button, job, 'retry'); actions.append(button) }
+    if (['QUEUED', 'PUBLISH_REQUESTED'].includes(job.status) && failedDispatches.has(String(job.id).toLowerCase())) { const button = el('button', 'admin-action', 'Retry Worker Dispatch'); button.type = 'button'; bindJobAction(button, job, 'dispatch'); actions.append(button) }
     if (['DRAFT', 'QUEUED', 'AWAITING_REVIEW', 'FAILED'].includes(job.status)) { const button = el('button', 'admin-action', 'Cancel'); button.type = 'button'; button.addEventListener('click', () => jobAction(job, 'cancel').catch((error) => alert(error.message))); actions.append(button) }
     row.append(actions); card.append(row)
   }); return card
