@@ -4,22 +4,33 @@ import test from 'node:test'
 
 const source = (path) => readFile(new URL(path, import.meta.url), 'utf8')
 
-test('Account groups profile controls first and keeps security and sign out in order', async () => {
+test('Account places profile details first and keeps security and sign out at the bottom', async () => {
   const html = await source('../account/index.html')
-  const profileCard = html.match(/<article\b[^>]*data-auth-view[^>]*>([\s\S]*?)<\/article>/)?.[1] || ''
-  const positions = [
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] || ''
+  const topLevelOrder = [
+    main.indexOf('account-profile-section'),
+    main.indexOf('data-account-overview'),
+    main.indexOf('data-account-library'),
+    main.indexOf('data-account-pass'),
+    main.indexOf('data-account-payments'),
+    main.indexOf('account-security-section'),
+  ]
+  const profileCard = main.match(/<article\b[^>]*data-auth-view[^>]*>([\s\S]*?)<\/article>/)?.[1] || ''
+  const securityCard = main.match(/<article\b[^>]*data-account-security-view[^>]*>([\s\S]*?)<\/article>/)?.[1] || ''
+  const profileControlOrder = [
     profileCard.indexOf('data-account-email'),
     profileCard.indexOf('id="account-display-name"'),
     profileCard.indexOf('>Save name<'),
-    profileCard.indexOf('data-account-password-action'),
-    profileCard.indexOf('data-logout-button'),
   ]
 
-  assert.ok(positions.every((position) => position >= 0), 'all Profile & Security controls exist')
-  assert.deepEqual([...positions].sort((a, b) => a - b), positions)
-  assert.match(profileCard, /data-account-password-action hidden/)
-  assert.match(profileCard, /data-account-password-action[\s\S]*href="\/forgot-password\/"[\s\S]*>Reset password</)
-  assert.doesNotMatch(profileCard, /Signed in with Google|Password managed by Google|No password available/i)
+  assert.ok(topLevelOrder.every((position) => position >= 0), 'all Account content sections exist')
+  assert.deepEqual([...topLevelOrder].sort((a, b) => a - b), topLevelOrder)
+  assert.ok(profileControlOrder.every((position) => position >= 0), 'all profile controls exist')
+  assert.deepEqual([...profileControlOrder].sort((a, b) => a - b), profileControlOrder)
+  assert.doesNotMatch(profileCard, /data-account-password-action|data-logout-button/)
+  assert.match(securityCard, /data-account-password-action hidden/)
+  assert.match(securityCard, /data-account-password-action[\s\S]*href="\/forgot-password\/"[\s\S]*>Reset password<[\s\S]*data-logout-button/)
+  assert.doesNotMatch(securityCard, /Signed in with Google|Password managed by Google|No password available/i)
 })
 
 test('Account toggles the complete password action from Supabase user identities', async () => {
@@ -27,6 +38,7 @@ test('Account toggles the complete password action from Supabase user identities
 
   assert.match(auth, /passwordAction = document\.querySelector\('\[data-account-password-action\]'\)/)
   assert.match(auth, /passwordAction\.hidden = !hasPasswordIdentity\(currentUser\)/)
+  assert.match(auth, /showAuthView\(view\)[\s\S]*showAuthView\(securityView\)/)
   assert.doesNotMatch(auth, /(?:localStorage|sessionStorage)[\s\S]{0,120}(?:provider|identity)/i)
 })
 
@@ -41,7 +53,7 @@ test('password reset flow remains the existing secure Supabase email flow', asyn
   assert.match(auth, /if \(page === 'forgot-password'\) initForgotPasswordPage\(\)/)
 })
 
-test('Account password hiding stays responsive and adds no dependency or frontend secret', async () => {
+test('Account desktop and mobile share DOM order without adding a dependency or frontend secret', async () => {
   const [css, auth, authProfile] = await Promise.all([
     source('../assets/css/style.css'),
     source('../assets/js/auth.js'),
@@ -51,6 +63,7 @@ test('Account password hiding stays responsive and adds no dependency or fronten
 
   assert.match(css, /\[hidden\]\s*{\s*display:\s*none\s*!important;/)
   assert.match(css, /@media \(max-width: 640px\)[\s\S]*\.account-security-action\s*{[\s\S]*flex-direction:\s*column;/)
+  assert.doesNotMatch(css, /account-(?:profile|overview|library|pass|payments|security)[^{]*{[^}]*\border\s*:/i)
   assert.doesNotMatch(frontend, /client[_ -]?secret|supabase_service_role_key/i)
   assert.doesNotMatch(authProfile, /^import\s/m)
   await assert.rejects(access(new URL('../package.json', import.meta.url)))

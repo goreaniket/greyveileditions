@@ -1311,6 +1311,7 @@ const initResetPasswordPage = async () => {
 
 const initAccountPage = async () => {
   const view = document.querySelector('[data-auth-view]')
+  const securityView = document.querySelector('[data-account-security-view]')
   const status = document.querySelector('[data-auth-status]')
   const logoutButton = document.querySelector('[data-logout-button]')
   const nameNode = document.querySelector('[data-account-name]')
@@ -1365,6 +1366,7 @@ const initAccountPage = async () => {
     renderAccountAdminAction(accountActions, logoutButton, role)
 
     showAuthView(view)
+    showAuthView(securityView)
     await Promise.all([
       renderAccountLibrary(currentUser, profile, role),
       renderAccountPayments(currentUser),

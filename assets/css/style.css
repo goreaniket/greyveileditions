@@ -3018,6 +3018,10 @@ main > .home-hero ~ .section .contact-link {
 }
 
 .account-profile-section {
+  padding-block: 30px;
+}
+
+.account-security-section {
   padding-block: 30px 64px;
 }
 
