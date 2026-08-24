@@ -3021,10 +3021,6 @@ main > .home-hero ~ .section .contact-link {
   padding-block: 30px;
 }
 
-.account-security-section {
-  padding-block: 30px 64px;
-}
-
 .account-security-action {
   display: flex;
   align-items: center;
@@ -5426,7 +5422,8 @@ blockquote {
   }
 
   .checkout-coupon-form .button,
-  .account-profile-form__actions .button {
+  .account-profile-form__actions .button,
+  .account-profile-section .contact-actions .button {
     width: 100%;
   }
 

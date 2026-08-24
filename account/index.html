@@ -51,7 +51,7 @@
 
     <section class="section page-shell feedback-layout account-profile-section">
       <article class="contact-card feedback-form auth-card reveal" data-auth-view hidden>
-        <p class="eyebrow">Profile</p>
+        <p class="eyebrow">Profile &amp; Security</p>
         <h2>Your reader details</h2>
         <div class="account-details">
           <p class="account-detail">
@@ -66,12 +66,14 @@
             <p class="form-status" data-account-profile-status role="status" aria-live="polite"></p>
           </div>
         </form>
-        <div class="account-details" data-account-role-row hidden>
-          <p class="account-detail">
-            <strong>Internal Role</strong>
-            <span data-account-role></span>
-          </p>
+        <div class="account-security-action" data-account-password-action hidden>
+          <div><strong>Password</strong><span>We’ll email secure reset instructions to your account.</span></div>
+          <a class="button ghost" href="/forgot-password/">Reset password</a>
         </div>
+        <div class="contact-actions" data-account-actions>
+          <button class="button primary" type="button" data-logout-button>Sign out</button>
+        </div>
+        <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
       </article>
     </section>
 
@@ -133,18 +135,6 @@
       </article>
     </section>
 
-    <section class="section page-shell feedback-layout account-security-section">
-      <article class="contact-card feedback-form auth-card reveal" data-account-security-view hidden>
-        <div class="account-security-action" data-account-password-action hidden>
-          <div><strong>Password</strong><span>We’ll email secure reset instructions to your account.</span></div>
-          <a class="button ghost" href="/forgot-password/">Reset password</a>
-        </div>
-        <div class="contact-actions" data-account-actions>
-          <button class="button primary" type="button" data-logout-button>Sign out</button>
-        </div>
-        <p class="form-status" data-auth-status role="status" aria-live="polite"></p>
-      </article>
-    </section>
   </main>
 
   <footer class="site-footer site-footer--rich">

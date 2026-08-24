@@ -122,12 +122,6 @@ const isNetworkError = (error) => {
 
 const isAdminRole = (role) => ADMIN_ROLES.has(role)
 
-const formatRole = (role) => {
-  if (role === 'super_admin') return 'Super admin'
-  if (role === 'admin') return 'Admin'
-  return 'Reader'
-}
-
 const displayNameFor = (user, profile) => {
   return profile?.display_name
     || user?.user_metadata?.display_name
@@ -1311,13 +1305,10 @@ const initResetPasswordPage = async () => {
 
 const initAccountPage = async () => {
   const view = document.querySelector('[data-auth-view]')
-  const securityView = document.querySelector('[data-account-security-view]')
   const status = document.querySelector('[data-auth-status]')
   const logoutButton = document.querySelector('[data-logout-button]')
   const nameNode = document.querySelector('[data-account-name]')
   const emailNode = document.querySelector('[data-account-email]')
-  const roleRow = document.querySelector('[data-account-role-row]')
-  const roleNode = document.querySelector('[data-account-role]')
   const accountActions = document.querySelector('[data-account-actions]')
   const passwordAction = document.querySelector('[data-account-password-action]')
   const libraryRefreshButton = document.querySelector('[data-library-refresh]')
@@ -1358,15 +1349,9 @@ const initAccountPage = async () => {
     if (profileForm?.elements.display_name) profileForm.elements.display_name.value = displayNameFor(currentUser, profile)
     if (passwordAction) passwordAction.hidden = !hasPasswordIdentity(currentUser)
 
-    if (roleRow && roleNode) {
-      roleNode.textContent = formatRole(role)
-      roleRow.hidden = !isAdminRole(role)
-    }
-
     renderAccountAdminAction(accountActions, logoutButton, role)
 
     showAuthView(view)
-    showAuthView(securityView)
     await Promise.all([
       renderAccountLibrary(currentUser, profile, role),
       renderAccountPayments(currentUser),
