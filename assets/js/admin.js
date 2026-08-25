@@ -1,6 +1,7 @@
 import { supabase } from './supabase-client.js'
 import { getCurrentUser, signOut } from './auth.js'
 import { effectiveVisibility, hierarchyForBook, hierarchyIsActive, hierarchyIsComplete, normalizeVisibility, VISIBILITY_STATES } from './content-access.js'
+import { createFeedbackEmailLink } from './admin-feedback-email.js'
 
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const STATUS_OPTIONS = ['new', 'reviewed', 'archived']
@@ -4531,6 +4532,16 @@ const feedbackDetailField = (label, value, options = {}) => {
   return field
 }
 
+const feedbackEmailDetailField = (value) => {
+  const field = createNode('div', 'feedback-detail-field feedback-detail-field--secondary')
+  const emailLink = createFeedbackEmailLink(value)
+  field.append(
+    createNode('span', '', 'Email'),
+    emailLink || createNode('strong', '', getText(value))
+  )
+  return field
+}
+
 const feedbackReviewPreview = (feedback) => {
   const review = getText(feedback['Reviews '], 'No review text provided.')
   return review.length > 170 ? `${review.slice(0, 167).trim()}...` : review
@@ -4604,7 +4615,7 @@ const openFeedbackDrawer = (feedback, trigger, options = {}) => {
     feedbackDetailField('Collection', feedback.Collection),
     feedbackDetailField('Occupation', feedback['Occupation ']),
     feedbackDetailField('Date', formatDate(feedback['Date & time'])),
-    feedbackDetailField('Email', feedback.Email, { secondary: true }),
+    feedbackEmailDetailField(feedback.Email),
     feedbackDetailField('Status', currentStatus)
   )
 

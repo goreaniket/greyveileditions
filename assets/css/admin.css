@@ -1924,7 +1924,8 @@
 }
 
 .feedback-detail-field strong,
-.feedback-detail-field p {
+.feedback-detail-field p,
+.feedback-detail-email {
   margin: 0;
   overflow-wrap: anywhere;
   color: rgba(42, 52, 64, .84);
@@ -1941,6 +1942,26 @@
 .feedback-detail-field--secondary strong {
   color: rgba(42, 52, 64, .56);
   font-weight: 650;
+}
+
+.feedback-detail-email {
+  color: rgba(42, 52, 64, .62);
+  font-weight: 650;
+  text-decoration-color: rgba(140, 106, 74, .42);
+  text-underline-offset: 3px;
+  transition: color .18s ease, text-decoration-color .18s ease;
+}
+
+.feedback-detail-email:hover,
+.feedback-detail-email:focus-visible {
+  color: var(--bronze);
+  text-decoration-color: currentColor;
+}
+
+.feedback-detail-email:focus-visible {
+  outline: 2px solid rgba(140, 106, 74, .3);
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
 .feedback-detail-actions {
