@@ -76,6 +76,21 @@ test('every reader route loads the protected shared assets', async () => {
   }
 })
 
+test('newly published Books use one generic protected Reader shell without deployable generated content', async () => {
+  const [shell, config] = await Promise.all([
+    source('../reader/index.html'),
+    source('../vercel.json').then(JSON.parse),
+  ])
+  assert.deepEqual(config.rewrites, [{
+    source: '/projects/:series/books/:book/reader/:path*',
+    destination: '/reader/index.html',
+  }])
+  assert.match(shell, /<meta name="robots" content="noindex, follow" \/>/)
+  assert.match(shell, /reader\.css\?v=20260813-private-content/)
+  assert.match(shell, /reader\.js\?v=20260819-availability-repair/)
+  assert.doesNotMatch(shell, /book\.json|chapters\/|generation-candidates|published\//)
+})
+
 test('raw reader JSON stays available locally but is excluded from public deployment', async () => {
   const [book, chapter, vercelIgnore, reader] = await Promise.all([
     source('../assets/books/the-last-shift/book.json'),

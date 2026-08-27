@@ -80,14 +80,14 @@ test('deployable route inventory contains every public, auth, commerce, admin, a
   const files = await deployableHtmlFiles()
   const routes = files.map(routeForFile)
 
-  assert.equal(routes.length, 49, 'Update the audited route inventory when routes are intentionally added or removed.')
-  assert.equal(routes.filter((route) => route.endsWith('/reader/')).length, 14)
+  assert.equal(routes.length, 50, 'Update the audited route inventory when routes are intentionally added or removed.')
+  assert.equal(routes.filter((route) => route.endsWith('/reader/')).length, 15)
   assert.equal(routes.filter((route) => /\/books\/[^/]+\.html$/.test(route)).length, 14)
 
   for (const requiredRoute of [
     '/', '/about/', '/founder/', '/projects/', '/account/', '/admin/',
     '/auth/login/', '/auth/signup/', '/forgot-password/', '/reset-password/',
-    '/checkout/', '/contact/', '/credits/', '/404.html',
+    '/checkout/', '/contact/', '/credits/', '/reader/', '/404.html',
     '/google15fc12813d867a6a.html',
   ]) assert.ok(routes.includes(requiredRoute), `Missing route: ${requiredRoute}`)
 })

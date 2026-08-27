@@ -102,7 +102,7 @@ export const handleRequest = async (request) => {
         body: JSON.stringify({ ref: GENERATION_REF, inputs: { job_id: jobId } }),
       },
     )
-    if (response.status !== 204) {
+    if (!response.ok) {
       throw new DispatchError(502, 'GitHub did not accept the worker dispatch.', 'github_dispatch_failed')
     }
 

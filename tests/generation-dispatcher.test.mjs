@@ -47,7 +47,7 @@ test('Edge function targets the detected repository workflow, master ref, and ex
   assert.deepEqual(parseRepository('goreaniket/greyveileditions'), { owner: 'goreaniket', repo: 'greyveileditions' })
   assert.match(edge, /api\.github\.com\/repos\/\$\{encodeURIComponent\(owner\)\}\/\$\{encodeURIComponent\(repo\)\}\/actions\/workflows\/\$\{GENERATION_WORKFLOW\}\/dispatches/)
   assert.match(edge, /body: JSON\.stringify\(\{ ref: GENERATION_REF, inputs: \{ job_id: jobId \} \}\)/)
-  assert.match(edge, /response\.status !== 204/)
+  assert.match(edge, /!response\.ok/)
   assert.match(config, /\[functions\.dispatch-generation-worker\]\s*\nverify_jwt = true/)
 })
 

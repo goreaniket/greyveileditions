@@ -110,7 +110,7 @@ test('public pages have one exact self-canonical while intentionally private rou
   }
 
   assert.equal(publicCount, 24)
-  assert.equal(noindexCount, 23)
+  assert.equal(noindexCount, 24)
   assert.deepEqual(failures, [])
 })
 

@@ -23,5 +23,11 @@
       "destination": "https://greyveileditions.site/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/projects/:series/books/:book/reader/:path*",
+      "destination": "/reader/index.html"
+    }
   ]
 }
