@@ -81,10 +81,16 @@ test('newly published Books use one generic protected Reader shell without deplo
     source('../reader/index.html'),
     source('../vercel.json').then(JSON.parse),
   ])
-  assert.deepEqual(config.rewrites, [{
-    source: '/projects/:series/books/:book/reader/:path*',
-    destination: '/reader/index.html',
-  }])
+  assert.deepEqual(config.rewrites, [
+    {
+      source: '/projects/:series/books/:book/reader/',
+      destination: '/reader/index.html',
+    },
+    {
+      source: '/projects/:series/books/:book/reader/:path*',
+      destination: '/reader/index.html',
+    },
+  ])
   assert.match(shell, /<meta name="robots" content="noindex, follow" \/>/)
   assert.match(shell, /reader\.css\?v=20260813-private-content/)
   assert.match(shell, /reader\.js\?v=20260819-availability-repair/)

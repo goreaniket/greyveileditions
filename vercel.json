@@ -26,6 +26,10 @@
   ],
   "rewrites": [
     {
+      "source": "/projects/:series/books/:book/reader/",
+      "destination": "/reader/index.html"
+    },
+    {
       "source": "/projects/:series/books/:book/reader/:path*",
       "destination": "/reader/index.html"
     }
