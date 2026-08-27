@@ -5,6 +5,7 @@ import test from 'node:test'
 const source = (path) => readFile(new URL(path, import.meta.url), 'utf8')
 const priceSql = await source('../supabase/repair-admin-catalog-price-rpc.sql')
 const visibilitySql = await source('../supabase/repair-admin-catalog-visibility-rpc.sql')
+const guardRepairSql = await source('../supabase/repair-security-definer-admin-guards.sql')
 
 const normalized = (value) => value == null ? null : String(value).trim().toLowerCase()
 const supportedTarget = (value) => ['book', 'series', 'collection'].includes(normalized(value))
@@ -60,12 +61,19 @@ test('visibility RPC keeps Book legacy-public synchronization and parent updates
 })
 
 test('both RPCs preserve Admin-only SECURITY DEFINER boundaries and catalog-only side effects', () => {
-  for (const sql of [priceSql, visibilitySql]) {
+  for (const [name, historicalSql] of [
+    ['greyveil_admin_update_catalog_price', priceSql],
+    ['greyveil_admin_update_catalog_visibility', visibilitySql],
+  ]) {
+    const start = guardRepairSql.indexOf(`create or replace function public.${name}(`)
+    const end = guardRepairSql.indexOf('\n$$;', start)
+    const sql = guardRepairSql.slice(start, end + 4)
     assert.match(sql, /language plpgsql\s+security definer\s+set search_path = public/)
-    assert.match(sql, /if not public\.greyveil_is_admin\(\) then/)
+    assert.match(sql, /if public\.greyveil_is_admin\(\) is distinct from true then/)
     assert.match(sql, /Admin access required\.' using errcode = '42501'/)
-    assert.match(sql, /revoke all on function public\./)
-    assert.match(sql, /grant execute on function public\.[^(]+\([^;]+\) to authenticated/)
+    assert.match(guardRepairSql, new RegExp(`revoke all on function public\\.${name}`))
+    assert.match(guardRepairSql, new RegExp(`grant execute on function public\\.${name}`))
+    assert.ok(historicalSql.length > 0)
   }
 
   const priceBody = functionBody(priceSql)

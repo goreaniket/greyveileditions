@@ -5,7 +5,10 @@ import test from 'node:test'
 const source = (path) => readFile(new URL(path, import.meta.url), 'utf8')
 
 test('founder generation jobs are durable, private, and publish only after QA', async () => {
-  const sql = await source('../supabase/founder-publishing-workflow.sql')
+  const [sql, guardRepairSql] = await Promise.all([
+    source('../supabase/founder-publishing-workflow.sql'),
+    source('../supabase/repair-security-definer-admin-guards.sql'),
+  ])
   assert.match(sql, /create table if not exists public\.book_generation_jobs/)
   assert.match(sql, /'READY_TO_PUBLISH'/)
   assert.match(sql, /alter table public\.book_generation_jobs enable row level security/)
@@ -15,8 +18,9 @@ test('founder generation jobs are durable, private, and publish only after QA', 
   assert.match(sql, /\(job\.qa->>'ok'\)::boolean/)
   assert.match(sql, /generation-inputs.*false/s)
   assert.match(sql, /generation-candidates.*false/s)
-  assert.match(sql, /if not public\.greyveil_is_admin\(\)/)
+  assert.equal((guardRepairSql.match(/if public\.greyveil_is_admin\(\) is distinct from true then/g) || []).length, 9)
   assert.match(sql, /revoke all on function public\.greyveil_admin_publish_generation_job/)
+  assert.match(guardRepairSql, /revoke all on function public\.greyveil_admin_publish_generation_job\(uuid\) from public, anon, authenticated/)
   assert.doesNotMatch(sql, /create policy .*generation.* to anon/i)
 })
 

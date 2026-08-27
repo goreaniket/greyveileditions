@@ -220,34 +220,23 @@ export const verifyHmac = async (secret: string, message: string, signature: str
 export const paymentCaptured = (payment: any) => payment?.status === 'captured' && payment?.captured === true
 export const paymentMatches = (payment: any, order: any) => text(payment?.order_id) === text(order?.razorpay_order_id) && Number(payment?.amount) === Number(order?.amount) && text(payment?.currency).toUpperCase() === text(order?.currency).toUpperCase()
 
-export const persistPayment = async (admin: SupabaseClient, order: any, payment: any, options: { signature?: string; eventId?: string; verified?: boolean } = {}) => {
+export const recordPaymentTransition = async (
+  admin: SupabaseClient,
+  order: any,
+  payment: any,
+  options: { status?: string; signature?: string; eventId?: string; verified?: boolean } = {},
+) => {
   if (!payment?.id) throw new HttpError(400, 'Payment id is missing.', 'invalid_payment')
-  const now = new Date().toISOString()
-  const payload: Record<string, unknown> = {
-    order_id: order?.id || null, user_id: order?.user_id || null, razorpay_payment_id: payment.id,
-    razorpay_order_id: payment.order_id || order?.razorpay_order_id, original_amount: Number(order?.original_amount ?? order?.amount),
-    amount: Number(payment.amount ?? order?.amount), coupon_code: order?.coupon_code || null, coupon_id: order?.coupon_id || null,
-    discount_amount: Number(order?.discount_amount || 0), currency: text(payment.currency, order?.currency || INR).toUpperCase(),
-    status: text(payment.status, 'unknown'), method: payment.method || null, captured: paymentCaptured(payment), raw_payload: payment,
-    razorpay_created_at: payment.created_at ? new Date(Number(payment.created_at) * 1000).toISOString() : null,
-    updated_at: now,
-  }
-  if (options.verified && paymentCaptured(payment)) payload.verified_at = now
-  if (options.signature) payload.razorpay_signature = options.signature
-  if (options.eventId) payload.webhook_event_id = options.eventId
-  const { data, error } = await admin.from('payments').upsert(payload, { onConflict: 'razorpay_payment_id' }).select().single()
-  if (error) throw new HttpError(500, 'Payment could not be persisted.', 'payment_persist_failed')
-  return data
-}
-export const markOrder = async (admin: SupabaseClient, order: any, status: string, extra: Record<string, unknown> = {}) => {
-  const now = new Date().toISOString()
-  const { data, error } = await admin.from('orders').update({ status, updated_at: now, ...extra }).eq('id', order.id).select().single()
-  if (error) throw new HttpError(500, 'Order status could not be persisted.', 'order_update_failed')
-  if (order.coupon_id) {
-    const usageStatus = status === 'paid' ? 'redeemed' : status === 'refunded' ? 'refunded' : ['failed', 'cancelled'].includes(status) ? 'void' : null
-    if (usageStatus) await admin.from('coupon_usages').update({ status: usageStatus, redeemed_at: usageStatus === 'redeemed' ? now : null, updated_at: now }).eq('order_id', order.id)
-  }
-  return data
+  const { data, error } = await admin.rpc('greyveil_record_payment_transition', {
+    p_order_id: order?.id || null,
+    p_payment: payment,
+    p_next_order_status: options.status || null,
+    p_signature: options.signature || null,
+    p_webhook_event_id: options.eventId || null,
+    p_verified: options.verified === true,
+  })
+  if (error) throw new HttpError(500, 'Payment state could not be persisted.', 'payment_transition_failed')
+  return data as { order: any; payment: any; transition_changed: boolean }
 }
 export const parseBody = async (request: Request) => {
   try { return await request.json() as Record<string, unknown> } catch { throw new HttpError(400, 'Request body must be valid JSON.', 'invalid_json') }

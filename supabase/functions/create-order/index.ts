@@ -18,22 +18,23 @@ Deno.serve(async (request) => {
       amount: purchase.amount, coupon_id: purchase.couponId, coupon_code: purchase.couponCode,
       discount_amount: purchase.discountAmount, currency: purchase.currency, status: 'pending', created_at: now, updated_at: now,
     }).select().single()
+    if (localError?.code === '23505') throw new HttpError(409, 'An active checkout already exists for this item.', 'payable_order_exists')
     if (localError || !localOrder) throw new HttpError(500, 'The local order could not be created.', 'order_create_failed')
     if (purchase.couponId) {
       const { error } = await admin.from('coupon_usages').insert({ coupon_id: purchase.couponId, order_id: localOrder.id, user_id: user.id, coupon_code: purchase.couponCode, discount_amount: purchase.discountAmount, status: 'pending', created_at: now, updated_at: now })
       if (error) {
-        await admin.from('orders').update({ status: 'failed', updated_at: new Date().toISOString() }).eq('id', localOrder.id)
+        await admin.from('orders').update({ status: 'failed', updated_at: new Date().toISOString() }).eq('id', localOrder.id).eq('status', 'pending')
         throw new HttpError(409, 'This coupon is no longer available.', 'coupon_limit_reached')
       }
     }
     try {
       const razorpayOrder = await razorpay('/orders', { method: 'POST', body: JSON.stringify({ amount: purchase.amount, currency: purchase.currency, receipt: `gve_${String(localOrder.id).replace(/-/g, '').slice(0, 32)}`, notes: { local_order_id: localOrder.id, purchase_type: purchase.purchaseType, target_id: purchase.targetId } }) })
       if (!razorpayOrder?.id || Number(razorpayOrder.amount) !== purchase.amount || razorpayOrder.currency !== purchase.currency) throw new HttpError(502, 'Razorpay returned an unexpected order.', 'razorpay_order_mismatch')
-      const { error: updateError } = await admin.from('orders').update({ razorpay_order_id: razorpayOrder.id, updated_at: new Date().toISOString() }).eq('id', localOrder.id)
+      const { error: updateError } = await admin.from('orders').update({ razorpay_order_id: razorpayOrder.id, updated_at: new Date().toISOString() }).eq('id', localOrder.id).eq('status', 'pending')
       if (updateError) throw new HttpError(500, 'The Razorpay order could not be linked.', 'order_update_failed')
       return json(200, { success: true, order: { order_id: razorpayOrder.id, local_order_id: localOrder.id, key_id: requireEnv('RAZORPAY_KEY_ID'), amount: purchase.amount, original_amount: purchase.originalAmount, coupon_code: purchase.couponCode, discount_amount: purchase.discountAmount, currency: purchase.currency } }, request)
     } catch (error) {
-      await admin.from('orders').update({ status: 'failed', updated_at: new Date().toISOString() }).eq('id', localOrder.id)
+      await admin.from('orders').update({ status: 'failed', updated_at: new Date().toISOString() }).eq('id', localOrder.id).eq('status', 'pending')
       if (purchase.couponId) await admin.from('coupon_usages').update({ status: 'void', updated_at: new Date().toISOString() }).eq('order_id', localOrder.id)
       throw error
     }

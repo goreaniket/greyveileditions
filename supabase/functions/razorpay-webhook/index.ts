@@ -1,4 +1,4 @@
-import { errorResponse, handleOptions, json, markOrder, paymentCaptured, paymentMatches, persistPayment, razorpay, requireEnv, serviceClient, verifyHmac } from '../_shared/payment.ts'
+import { errorResponse, handleOptions, json, paymentCaptured, paymentMatches, razorpay, recordPaymentTransition, requireEnv, serviceClient, verifyHmac } from '../_shared/payment.ts'
 
 Deno.serve(async (request) => {
   const preflight = handleOptions(request)
@@ -19,30 +19,23 @@ Deno.serve(async (request) => {
     const razorpayOrderId = payment?.order_id || razorpayOrder?.id
     const admin = serviceClient()
     const { data: order } = razorpayOrderId ? await admin.from('orders').select('*').eq('razorpay_order_id', razorpayOrderId).maybeSingle() : { data: null }
-    if (payment?.id) await persistPayment(admin, order, payment, {
-      eventId: String(event?.id || eventName),
-      verified: Boolean(order && paymentMatches(payment, order)),
-    })
+    const refundEvent = payment?.status === 'refunded' || eventName === 'payment.refunded' || eventName === 'refund.processed'
+    if (refundEvent && (payment?.id || refund?.payment_id)) payment = { ...payment, id: payment?.id || refund.payment_id, status: 'refunded' }
+    if (payment?.id && !order) await recordPaymentTransition(admin, null, payment, { eventId: String(event?.id || eventName) })
     if (!order) return json(200, { success: true, processed: false, reason: 'local_order_not_found' }, request)
     if (eventName === 'payment.failed') {
-      if (order.status !== 'paid') await markOrder(admin, order, 'failed')
-      return json(200, { success: true, processed: true, status: 'failed' }, request)
+      const transition = await recordPaymentTransition(admin, order, payment, { eventId: String(event?.id || eventName), status: 'failed' })
+      return json(200, { success: true, processed: true, status: transition.order?.status || order.status }, request)
     }
-    if (payment?.status === 'refunded' || eventName === 'payment.refunded' || eventName === 'refund.processed') {
-      await markOrder(admin, order, 'refunded')
-      const { error: refundUpdateError } = await admin.from('payments').update({
-        status: 'refunded',
-        webhook_event_id: String(event?.id || eventName),
-        raw_payload: event,
-        updated_at: new Date().toISOString(),
-      }).eq('razorpay_payment_id', payment?.id || refund?.payment_id)
-      if (refundUpdateError) throw refundUpdateError
-      return json(200, { success: true, processed: true, status: 'refunded' }, request)
+    if (refundEvent) {
+      const transition = await recordPaymentTransition(admin, order, payment, { eventId: String(event?.id || eventName), status: 'refunded', verified: true })
+      return json(200, { success: true, processed: true, status: transition.order?.status || 'refunded' }, request)
     }
     if (payment && paymentCaptured(payment) && paymentMatches(payment, order)) {
-      await markOrder(admin, order, 'paid', { paid_at: order.paid_at || new Date().toISOString(), verified_at: new Date().toISOString() })
-      return json(200, { success: true, processed: true, status: 'paid' }, request)
+      const transition = await recordPaymentTransition(admin, order, payment, { eventId: String(event?.id || eventName), status: 'paid', verified: true })
+      return json(200, { success: true, processed: true, status: transition.order?.status || order.status }, request)
     }
+    if (payment?.id) await recordPaymentTransition(admin, order, payment, { eventId: String(event?.id || eventName) })
     return json(200, { success: true, processed: true, status: order.status || 'pending' }, request)
   } catch (error) { return errorResponse(error, request) }
 })

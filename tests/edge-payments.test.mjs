@@ -55,7 +55,7 @@ test('Edge verification checks ownership, signature, Razorpay state, amount, and
   assert.match(shared, /Number\(payment\?\.amount\) === Number\(order\?\.amount\)/)
   assert.match(shared, /payment\?\.currency/)
   assert.match(shared, /difference \|=/)
-  assert.match(shared, /onConflict: 'razorpay_payment_id'/)
+  assert.match(shared, /admin\.rpc\('greyveil_record_payment_transition'/)
 })
 
 test('Edge webhook validates the raw body and reconciles captured, failed, and refunded payments', async () => {
@@ -66,6 +66,7 @@ test('Edge webhook validates the raw body and reconciles captured, failed, and r
   assert.match(webhook, /paymentCaptured\(payment\) && paymentMatches\(payment, order\)/)
   assert.match(webhook, /refund\?\.payment_id/)
   assert.match(webhook, /status: 'refunded'/)
+  assert.match(webhook, /recordPaymentTransition\(admin, order, payment/)
 })
 
 test('paid-order migration grants eligible book, series, and collection access idempotently', async () => {
@@ -85,13 +86,16 @@ test('paid-order migration grants eligible book, series, and collection access i
 })
 
 test('payment customer email is exposed only through an admin-checked database function', async () => {
-  const [sql, admin] = await Promise.all([
+  const [historicalSql, guardRepairSql, admin] = await Promise.all([
     source('../supabase/razorpay-standard-checkout.sql'),
+    source('../supabase/repair-security-definer-admin-guards.sql'),
     source('../assets/js/admin.js'),
   ])
-  assert.match(sql, /if not public\.greyveil_is_admin\(\)/)
-  assert.match(sql, /from auth\.users account/)
-  assert.match(sql, /grant execute on function public\.greyveil_admin_payment_customers\(\) to authenticated/)
+  assert.match(guardRepairSql, /if public\.greyveil_is_admin\(\) is distinct from true then/)
+  assert.match(guardRepairSql, /from auth\.users account/)
+  assert.match(guardRepairSql, /revoke all on function public\.greyveil_admin_payment_customers\(\) from public, anon, authenticated/)
+  assert.match(guardRepairSql, /grant execute on function public\.greyveil_admin_payment_customers\(\) to authenticated/)
+  assert.match(historicalSql, /from auth\.users account/)
   assert.match(admin, /supabase\.rpc\('greyveil_admin_payment_customers'\)/)
   assert.match(admin, /feedbackDetailField\('Email'/)
 })

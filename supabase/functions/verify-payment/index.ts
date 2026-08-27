@@ -1,4 +1,4 @@
-import { authenticate, errorResponse, handleOptions, HttpError, json, markOrder, parseBody, paymentCaptured, paymentMatches, persistPayment, razorpay, requireEnv, serviceClient, verifyHmac } from '../_shared/payment.ts'
+import { authenticate, errorResponse, handleOptions, HttpError, json, parseBody, paymentCaptured, paymentMatches, razorpay, recordPaymentTransition, requireEnv, serviceClient, verifyHmac } from '../_shared/payment.ts'
 
 Deno.serve(async (request) => {
   const preflight = handleOptions(request)
@@ -20,15 +20,15 @@ Deno.serve(async (request) => {
     if (!await verifyHmac(requireEnv('RAZORPAY_KEY_SECRET'), `${razorpayOrderId}|${paymentId}`, signature)) throw new HttpError(400, 'Payment signature could not be verified.', 'invalid_payment_signature')
     const payment = await razorpay(`/payments/${encodeURIComponent(paymentId)}`)
     if (!paymentMatches(payment, order)) {
-      await persistPayment(admin, order, payment, { signature })
+      await recordPaymentTransition(admin, order, payment, { signature })
       throw new HttpError(400, 'Payment details did not match the order.', 'payment_mismatch')
     }
-    const persisted = await persistPayment(admin, order, payment, { signature, verified: true })
     if (!paymentCaptured(payment)) {
-      await markOrder(admin, order, payment.status === 'failed' ? 'failed' : 'pending')
-      return json(200, { success: false, paid: false, status: payment.status, local_order_id: order.id, payment_id: persisted.razorpay_payment_id }, request)
+      const transition = await recordPaymentTransition(admin, order, payment, { signature, status: payment.status === 'failed' ? 'failed' : 'pending' })
+      return json(200, { success: false, paid: false, status: transition.order?.status || payment.status, local_order_id: order.id, payment_id: transition.payment?.razorpay_payment_id || payment.id }, request)
     }
-    await markOrder(admin, order, 'paid', { paid_at: order.paid_at || new Date().toISOString(), verified_at: new Date().toISOString() })
-    return json(200, { success: true, paid: true, status: 'paid', local_order_id: order.id, purchase_type: order.purchase_type, item_name: order.item_name, payment_id: persisted.razorpay_payment_id, original_amount: order.original_amount, amount: order.amount, coupon_code: order.coupon_code, discount_amount: order.discount_amount }, request)
+    const transition = await recordPaymentTransition(admin, order, payment, { signature, status: 'paid', verified: true })
+    if (transition.order?.status === 'refunded') throw new HttpError(409, 'This order has been refunded.', 'order_refunded')
+    return json(200, { success: true, paid: true, status: 'paid', local_order_id: order.id, purchase_type: order.purchase_type, item_name: order.item_name, payment_id: transition.payment?.razorpay_payment_id || payment.id, original_amount: order.original_amount, amount: order.amount, coupon_code: order.coupon_code, discount_amount: order.discount_amount }, request)
   } catch (error) { return errorResponse(error, request) }
 })

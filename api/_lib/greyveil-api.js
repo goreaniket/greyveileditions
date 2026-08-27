@@ -282,18 +282,16 @@ const insertRows = async (table, rows) => supabaseRest(table, {
   headers: { Prefer: 'return=representation' },
 })
 
-const upsertRows = async (table, rows, onConflict) => supabaseRest(table, {
-  method: 'POST',
-  query: { on_conflict: onConflict },
-  body: rows,
-  headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
-})
-
 const updateRows = async (table, query, updates) => supabaseRest(table, {
   method: 'PATCH',
   query,
   body: updates,
   headers: { Prefer: 'return=representation' },
+})
+
+const callRpc = (name, parameters) => supabaseRest(`rpc/${name}`, {
+  method: 'POST',
+  body: parameters,
 })
 
 const authenticateUser = async (req) => {
@@ -766,7 +764,15 @@ const createCheckoutOrder = async (user, body) => {
     updated_at: now,
   }
 
-  const pendingRows = await insertRows('orders', orderPayload)
+  let pendingRows
+  try {
+    pendingRows = await insertRows('orders', orderPayload)
+  } catch (error) {
+    if (error?.code === '23505') {
+      throw new ApiError(409, 'An active checkout already exists for this item.', 'payable_order_exists')
+    }
+    throw error
+  }
   const pendingOrder = Array.isArray(pendingRows) ? pendingRows[0] : pendingRows
   if (!pendingOrder?.id) {
     throw new ApiError(500, 'The local payment order could not be created.', 'order_create_failed')
@@ -785,7 +791,7 @@ const createCheckoutOrder = async (user, body) => {
         updated_at: now,
       })
     } catch (_error) {
-      await updateRows('orders', { id: `eq.${pendingOrder.id}` }, {
+      await updateRows('orders', { id: `eq.${pendingOrder.id}`, status: 'eq.pending' }, {
         status: 'failed',
         updated_at: new Date().toISOString(),
       }).catch(() => null)
@@ -802,7 +808,7 @@ const createCheckoutOrder = async (user, body) => {
       throw new ApiError(502, 'Razorpay returned an unexpected order.', 'razorpay_order_mismatch')
     }
   } catch (error) {
-    await updateRows('orders', { id: `eq.${pendingOrder.id}` }, {
+    await updateRows('orders', { id: `eq.${pendingOrder.id}`, status: 'eq.pending' }, {
       status: 'failed',
       updated_at: new Date().toISOString(),
     }).catch(() => null)
@@ -815,7 +821,7 @@ const createCheckoutOrder = async (user, body) => {
     throw error
   }
 
-  const updatedRows = await updateRows('orders', { id: `eq.${pendingOrder.id}` }, {
+  const updatedRows = await updateRows('orders', { id: `eq.${pendingOrder.id}`, status: 'eq.pending' }, {
     razorpay_order_id: razorpayOrder.id,
     updated_at: new Date().toISOString(),
   })
@@ -908,65 +914,21 @@ const paymentMatchesOrder = (payment, order) => {
     && getText(payment?.currency, INR).toUpperCase() === getText(order?.currency, INR).toUpperCase()
 }
 
-const paymentPayloadForOrder = (order, payment, { signature = null, webhookEventId = null } = {}) => {
-  const now = new Date().toISOString()
-  const payload = {
-    order_id: order?.id || null,
-    user_id: order?.user_id || null,
-    razorpay_payment_id: getText(payment?.id),
-    razorpay_order_id: getText(payment?.order_id, order?.razorpay_order_id),
-    original_amount: toNumber(order?.original_amount, order?.amount),
-    amount: toNumber(payment?.amount, order?.amount),
-    coupon_code: order?.coupon_code || null,
-    coupon_id: order?.coupon_id || null,
-    discount_amount: toNumber(order?.discount_amount),
-    currency: getText(payment?.currency, order?.currency || INR).toUpperCase(),
-    status: getText(payment?.status, 'unknown'),
-    method: payment?.method || null,
-    captured: paymentCaptured(payment),
-    raw_payload: payment || {},
-    razorpay_created_at: payment?.created_at ? new Date(Number(payment.created_at) * 1000).toISOString() : null,
-    verified_at: paymentCaptured(payment) ? now : null,
-    updated_at: now,
-  }
-
-  if (signature) payload.razorpay_signature = signature
-  if (webhookEventId) payload.webhook_event_id = webhookEventId
-  return payload
-}
-
-const persistPayment = async (order, payment, options = {}) => {
+const recordPaymentTransition = async (order, payment, {
+  status = null,
+  signature = null,
+  webhookEventId = null,
+  verified = false,
+} = {}) => {
   if (!getText(payment?.id)) throw new ApiError(400, 'Payment id is missing.', 'invalid_payment')
-  const rows = await upsertRows('payments', paymentPayloadForOrder(order, payment, options), 'razorpay_payment_id')
-  return Array.isArray(rows) ? rows[0] : rows
-}
-
-const markOrderStatus = async (order, status, extra = {}) => {
-  const rows = await updateRows('orders', {
-    id: `eq.${order.id}`,
-  }, {
-    status,
-    updated_at: new Date().toISOString(),
-    ...extra,
+  return callRpc('greyveil_record_payment_transition', {
+    p_order_id: order?.id || null,
+    p_payment: payment,
+    p_next_order_status: status,
+    p_signature: signature,
+    p_webhook_event_id: webhookEventId,
+    p_verified: verified === true,
   })
-  const updatedOrder = Array.isArray(rows) ? rows[0] : rows
-  if (order?.coupon_id) {
-    const usageStatus = status === 'paid'
-      ? 'redeemed'
-      : status === 'refunded'
-        ? 'refunded'
-        : ['failed', 'cancelled'].includes(status)
-          ? 'void'
-          : null
-    if (usageStatus) {
-      await updateRows('coupon_usages', { order_id: `eq.${order.id}` }, {
-        status: usageStatus,
-        redeemed_at: usageStatus === 'redeemed' ? new Date().toISOString() : null,
-        updated_at: new Date().toISOString(),
-      }).catch(() => null)
-    }
-  }
-  return updatedOrder
 }
 
 const verifyCheckoutPayment = async (user, body) => {
@@ -981,6 +943,7 @@ const verifyCheckoutPayment = async (user, body) => {
 
   const order = await fetchUserOrder(localOrderId, user.id)
   if (!order) throw new ApiError(404, 'Order was not found for this account.', 'order_not_found')
+  if (order.status === 'refunded') throw new ApiError(409, 'This order has been refunded.', 'order_refunded')
   if (checkoutOrderId !== order.razorpay_order_id) {
     throw new ApiError(400, 'Payment order did not match the checkout order.', 'order_mismatch')
   }
@@ -993,19 +956,21 @@ const verifyCheckoutPayment = async (user, body) => {
 
   const payment = await fetchRazorpayPayment(paymentId)
   if (!paymentMatchesOrder(payment, order)) {
-    await persistPayment(order, payment, { signature })
+    await recordPaymentTransition(order, payment, { signature })
     throw new ApiError(400, 'Payment details did not match the order.', 'payment_mismatch')
   }
 
-  const persistedPayment = await persistPayment(order, payment, { signature })
   if (!paymentCaptured(payment)) {
-    await markOrderStatus(order, payment.status === 'failed' ? 'failed' : 'pending')
+    const transition = await recordPaymentTransition(order, payment, {
+      signature,
+      status: payment.status === 'failed' ? 'failed' : 'pending',
+    })
     return {
       success: false,
       paid: false,
-      status: payment.status,
+      status: transition?.order?.status || payment.status,
       local_order_id: order.id,
-      payment_id: persistedPayment?.razorpay_payment_id || payment.id,
+      payment_id: transition?.payment?.razorpay_payment_id || payment.id,
       original_amount: toNumber(order.original_amount, order.amount),
       amount: toNumber(order.amount),
       coupon_code: order.coupon_code || null,
@@ -1013,20 +978,23 @@ const verifyCheckoutPayment = async (user, body) => {
     }
   }
 
-  const paidAt = new Date().toISOString()
-  const updatedOrder = await markOrderStatus(order, 'paid', {
-    paid_at: order.paid_at || paidAt,
-    verified_at: paidAt,
+  const transition = await recordPaymentTransition(order, payment, {
+    signature,
+    status: 'paid',
+    verified: true,
   })
+  if (transition?.order?.status === 'refunded') {
+    throw new ApiError(409, 'This order has been refunded.', 'order_refunded')
+  }
 
   return {
     success: true,
     paid: true,
     status: 'paid',
-    local_order_id: updatedOrder?.id || order.id,
+    local_order_id: transition?.order?.id || order.id,
     purchase_type: order.purchase_type,
     item_name: order.item_name,
-    payment_id: persistedPayment?.razorpay_payment_id || payment.id,
+    payment_id: transition?.payment?.razorpay_payment_id || payment.id,
     original_amount: toNumber(order.original_amount, order.amount),
     amount: toNumber(order.amount),
     coupon_code: order.coupon_code || null,
@@ -1037,36 +1005,38 @@ const verifyCheckoutPayment = async (user, body) => {
 const processWebhookEvent = async (event) => {
   const eventName = getText(event?.event)
   const eventId = getText(event?.id)
-  const payment = event?.payload?.payment?.entity || null
+  let payment = event?.payload?.payment?.entity || null
+  const refund = event?.payload?.refund?.entity || null
+  if (!payment && refund?.payment_id) payment = await fetchRazorpayPayment(refund.payment_id)
   const razorpayOrder = event?.payload?.order?.entity || null
   const razorpayOrderId = getText(payment?.order_id || razorpayOrder?.id)
   const order = razorpayOrderId ? await fetchOrderByRazorpayId(razorpayOrderId) : null
-
-  if (payment?.id) {
-    await persistPayment(order, payment, { webhookEventId: eventId || eventName || null })
+  const refundEvent = payment?.status === 'refunded' || eventName === 'payment.refunded' || eventName === 'refund.processed'
+  if (refundEvent && (payment?.id || refund?.payment_id)) {
+    payment = { ...payment, id: payment?.id || refund.payment_id, status: 'refunded' }
   }
 
   if (!order) {
+    if (payment?.id) await recordPaymentTransition(null, payment, { webhookEventId: eventId || eventName || null })
     return { processed: false, reason: 'local_order_not_found', event: eventName }
   }
 
   if (eventName === 'payment.failed') {
-    if (order.status !== 'paid') await markOrderStatus(order, 'failed')
-    return { processed: true, status: 'failed', event: eventName }
+    const transition = await recordPaymentTransition(order, payment, { status: 'failed', webhookEventId: eventId || eventName || null })
+    return { processed: true, status: transition?.order?.status || order.status, event: eventName }
   }
 
-  if (payment?.status === 'refunded' || eventName === 'payment.refunded' || eventName === 'refund.processed') {
-    await markOrderStatus(order, 'refunded')
-    return { processed: true, status: 'refunded', event: eventName }
+  if (refundEvent) {
+    const transition = await recordPaymentTransition(order, payment, { status: 'refunded', webhookEventId: eventId || eventName || null, verified: true })
+    return { processed: true, status: transition?.order?.status || 'refunded', event: eventName }
   }
 
   if (payment && paymentCaptured(payment) && paymentMatchesOrder(payment, order)) {
-    await markOrderStatus(order, 'paid', {
-      paid_at: order.paid_at || new Date().toISOString(),
-      verified_at: new Date().toISOString(),
-    })
-    return { processed: true, status: 'paid', event: eventName }
+    const transition = await recordPaymentTransition(order, payment, { status: 'paid', webhookEventId: eventId || eventName || null, verified: true })
+    return { processed: true, status: transition?.order?.status || order.status, event: eventName }
   }
+
+  if (payment?.id) await recordPaymentTransition(order, payment, { webhookEventId: eventId || eventName || null })
 
   return { processed: true, status: order.status || 'pending', event: eventName }
 }
