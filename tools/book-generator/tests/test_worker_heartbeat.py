@@ -514,6 +514,7 @@ class WorkerHeartbeatTest(unittest.TestCase):
             worker, "isolated_job_workspace", side_effect=lambda job_id: original_workspace(job_id, self.temp_path)
         ))
         errors.stack.enter_context(patch.object(worker, "storage_download"))
+        errors.stack.enter_context(patch.object(worker, "validate_docx_archive"))
         errors.stack.enter_context(patch.object(worker, "authoritative_job_slug", return_value="lease-fixture"))
         errors.stack.enter_context(patch.object(worker, "patch_job", side_effect=fake_patch))
         errors.stack.enter_context(patch.object(
@@ -522,6 +523,7 @@ class WorkerHeartbeatTest(unittest.TestCase):
             return_value=SimpleNamespace(status="imported", slug="lease-fixture", error="", warnings=[]),
         ))
         errors.stack.enter_context(patch.object(worker, "generate_book_main", side_effect=generate_fn))
+        errors.stack.enter_context(patch.object(worker, "validate_generated_artifact"))
         errors.stack.enter_context(patch.object(worker, "load_book", return_value=SimpleNamespace(issues=[])))
         errors.stack.enter_context(patch.object(
             worker,

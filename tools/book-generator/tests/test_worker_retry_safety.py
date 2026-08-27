@@ -168,7 +168,10 @@ class WorkerRetrySafetyTest(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(first["path"], f"jobs/{first_id}/pdf/book.pdf")
         self.assertEqual(mocked_upload.call_count, 2)
-        self.assertTrue(all(call.kwargs == {"upsert": True} for call in mocked_upload.call_args_list))
+        self.assertTrue(all(
+            call.kwargs == {"max_bytes": worker.artifact_size_limit("pdf"), "upsert": True}
+            for call in mocked_upload.call_args_list
+        ))
         self.assertNotEqual(
             worker.candidate_object_path(first_id, "pdf", artifact.name),
             worker.candidate_object_path(second_id, "pdf", artifact.name),

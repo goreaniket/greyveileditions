@@ -10,7 +10,7 @@ test('original DOCX fidelity audit blocks unsupported source before normalized s
   const sourceGuard = importer.indexOf('if parsed["source_errors"]:')
   const sourceWrite = importer.indexOf('write_imported_source(')
   const workerImportCheck = worker.indexOf('if result.status != "imported":')
-  const workerExports = worker.indexOf('for stage, flag in (("GENERATING_PDF"')
+  const workerExports = worker.indexOf('for stage, flag, kind in (')
   assert.ok(sourceGuard > 0 && sourceGuard < sourceWrite)
   assert.ok(workerImportCheck > 0 && workerImportCheck < workerExports)
   assert.match(importer, /document\.iter_inner_content\(\)/)

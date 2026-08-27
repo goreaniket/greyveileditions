@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 import os
 import re
 import signal
@@ -36,6 +35,14 @@ from greyveil.importer import detect_metadata, import_docx, normalize_approved_s
 from greyveil.jobs import utc_now
 from greyveil.loader import load_book
 from greyveil.qa import validate_generated_outputs
+from greyveil.resource_limits import (
+    MAX_COVER_BYTES,
+    MAX_MANUSCRIPT_BYTES,
+    ResourceLimitError,
+    artifact_size_limit,
+    validate_docx_archive,
+    validate_generated_artifact,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -56,11 +63,9 @@ COVER_INPUT_PATTERN = re.compile(r"^jobs/([0-9a-f-]{36})/cover\.(png|jpe?g|webp)
 HEARTBEAT_INTERVAL_SECONDS = 5 * 60
 HEARTBEAT_MAX_SILENCE_SECONDS = 20 * 60
 HEARTBEAT_REQUEST_TIMEOUT_SECONDS = 10
-DEFAULT_POLL_SECONDS = 10.0
-MIN_POLL_SECONDS = 1.0
-MAX_POLL_SECONDS = 300.0
-ERROR_BACKOFF_BASE_SECONDS = 5.0
-ERROR_BACKOFF_MAX_SECONDS = 60.0
+REQUEST_TIMEOUT_SECONDS = 60
+STORAGE_DOWNLOAD_CHUNK_BYTES = 1024 * 1024
+MAX_JOB_PROCESSING_SECONDS = 50 * 60
 
 
 class ProcessOutcome(Enum):
@@ -70,15 +75,6 @@ class ProcessOutcome(Enum):
     SUCCEEDED = "succeeded"
     JOB_FAILED = "job_failed"
     INFRASTRUCTURE_FAILED = "infrastructure_failed"
-
-
-class WorkerConfigurationError(RuntimeError):
-    """A safe-to-display continuous-worker startup configuration error."""
-
-
-@dataclass(frozen=True)
-class WorkerLoopConfiguration:
-    poll_seconds: float
 
 
 class ClaimLostError(RuntimeError):
@@ -301,7 +297,7 @@ def request(
     body: object | None = None,
     content_type: str = "application/json",
     extra_headers: dict[str, str] | None = None,
-    timeout_seconds: float = 60,
+    timeout_seconds: float = REQUEST_TIMEOUT_SECONDS,
 ) -> object:
     if not URL or not KEY:
         raise RuntimeError("SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required by the external worker.")
@@ -355,16 +351,83 @@ def advance(job: dict, stage: str) -> None:
     patch_job(job, status=stage, progress=STAGES[stage], started_at=job.get("started_at") or utc_now(), stage_history=history)
 
 
-def storage_download(bucket: str, path: str, destination: Path) -> None:
-    raw = request(f"/storage/v1/object/{bucket}/{urllib.parse.quote(path, safe='/')}", content_type="application/octet-stream")
-    destination.write_bytes(raw)
+def storage_download(
+    bucket: str,
+    path: str,
+    destination: Path,
+    *,
+    max_bytes: int,
+    expected_bytes: int | None = None,
+) -> None:
+    """Stream a private object to disk and stop before crossing its size bound."""
+    if not URL or not KEY:
+        raise RuntimeError("SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required by the external worker.")
+    headers = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
+    object_url = URL + f"/storage/v1/object/{bucket}/{urllib.parse.quote(path, safe='/')}"
+    partial = destination.with_name(f"{destination.name}.partial")
+    total = 0
+    try:
+        with urllib.request.urlopen(
+            urllib.request.Request(object_url, headers=headers, method="GET"),
+            timeout=REQUEST_TIMEOUT_SECONDS,
+        ) as response:
+            content_length = response.headers.get("Content-Length")
+            if content_length:
+                try:
+                    declared_size = int(content_length)
+                except ValueError as exc:
+                    raise ResourceLimitError("Storage returned an invalid object size.") from exc
+                if declared_size > max_bytes:
+                    raise ResourceLimitError("Storage object exceeds its processing safety limit.")
+                if expected_bytes is not None and declared_size != expected_bytes:
+                    raise ResourceLimitError("Stored candidate size does not match its authoritative metadata.")
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            with partial.open("wb") as output:
+                while chunk := response.read(STORAGE_DOWNLOAD_CHUNK_BYTES):
+                    total += len(chunk)
+                    if total > max_bytes:
+                        raise ResourceLimitError("Storage object exceeds its processing safety limit.")
+                    output.write(chunk)
+        if expected_bytes is not None and total != expected_bytes:
+            raise ResourceLimitError("Stored candidate size does not match its authoritative metadata.")
+        if total < 1:
+            raise ResourceLimitError("Storage object is empty.")
+        os.replace(partial, destination)
+    finally:
+        partial.unlink(missing_ok=True)
 
 
-def storage_upload(bucket: str, path: str, source: Path, mime: str, *, upsert: bool = False) -> None:
-    request(f"/storage/v1/object/{bucket}/{urllib.parse.quote(path, safe='/')}", "POST", source.read_bytes(), mime, {"x-upsert": "true"} if upsert else None)
+def storage_upload(
+    bucket: str,
+    path: str,
+    source: Path,
+    mime: str,
+    *,
+    max_bytes: int,
+    upsert: bool = False,
+) -> None:
+    """Upload through Supabase's simple object API with a strict memory bound.
+
+    urllib's request body is buffered for a reliable Content-Length; the worker
+    therefore validates the artifact first and caps the only whole-file buffer.
+    """
+    size = source.stat().st_size
+    if size < 1 or size > max_bytes:
+        raise ResourceLimitError("Generated artifact exceeds its upload safety limit.")
+    payload = source.read_bytes()
+    if len(payload) != size:
+        raise ResourceLimitError("Generated artifact changed while it was prepared for upload.")
+    request(
+        f"/storage/v1/object/{bucket}/{urllib.parse.quote(path, safe='/')}",
+        "POST",
+        payload,
+        mime,
+        {"x-upsert": "true"} if upsert else None,
+    )
 
 
 def detect(job: dict, manuscript: Path) -> None:
+    validate_docx_archive(manuscript)
     document = Document(manuscript)
     parsed = parse_manuscript(document)
     metadata = detect_metadata(document, parsed["opening"])
@@ -393,9 +456,10 @@ def cover_mime(path: Path) -> str:
 
 def upload_candidate(job: dict, kind: str, file: Path, mime: str) -> dict[str, object]:
     """Replace only this job's candidate object so retries converge on one path."""
+    size = validate_generated_artifact(kind, file)
     path = candidate_object_path(job.get("id"), kind, file.name)
-    storage_upload("generation-candidates", path, file, mime, upsert=True)
-    return {"path": path, "file_name": file.name, "file_size": file.stat().st_size, "mime_type": mime}
+    storage_upload("generation-candidates", path, file, mime, max_bytes=artifact_size_limit(kind), upsert=True)
+    return {"path": path, "file_name": file.name, "file_size": size, "mime_type": mime}
 
 
 def run(job: dict) -> None:
@@ -404,12 +468,13 @@ def run(job: dict) -> None:
     require_live_claim(job)
     with isolated_job_workspace(job_id) as workspace:
         manuscript = workspace.inputs / "manuscript.docx"
-        storage_download("generation-inputs", manuscript_path, manuscript)
+        storage_download("generation-inputs", manuscript_path, manuscript, max_bytes=MAX_MANUSCRIPT_BYTES)
+        validate_docx_archive(manuscript)
         require_live_claim(job)
         cover = None
         if cover_path:
             cover = workspace.inputs / f"cover{Path(cover_path).suffix.lower()}"
-            storage_download("generation-inputs", cover_path, cover)
+            storage_download("generation-inputs", cover_path, cover, max_bytes=MAX_COVER_BYTES)
             require_live_claim(job)
         if not (job.get("metadata") or {}).get("title"):
             advance(job, "IMPORTING")
@@ -440,7 +505,16 @@ def run(job: dict) -> None:
             raise RuntimeError(result.error or "; ".join(result.warnings) or "Import requires founder review.")
         if result.slug != slug:
             raise RuntimeError("Imported slug did not match the authoritative generation slug.")
-        for stage, flag in (("GENERATING_PDF", "--pdf"), ("GENERATING_EPUB", "--epub"), ("GENERATING_DOCX", "--docx")):
+        files = {
+            "pdf": workspace.outputs / "pdf" / f"{slug}.pdf",
+            "epub": workspace.outputs / "epub" / f"{slug}.epub",
+            "docx": workspace.outputs / "docx" / f"{slug}-print-editable.docx",
+        }
+        for stage, flag, kind in (
+            ("GENERATING_PDF", "--pdf", "pdf"),
+            ("GENERATING_EPUB", "--epub", "epub"),
+            ("GENERATING_DOCX", "--docx", "docx"),
+        ):
             advance(job, stage)
             if generate_book_main([
                 slug, flag,
@@ -448,14 +522,10 @@ def run(job: dict) -> None:
                 "--output-dir", str(workspace.outputs),
             ]) != 0:
                 raise RuntimeError(f"Existing generator failed during {stage}.")
+            validate_generated_artifact(kind, files[kind])
             require_live_claim(job)
         advance(job, "VALIDATING_OUTPUTS")
         model = load_book(workspace.repository, slug)
-        files = {
-            "pdf": workspace.outputs / "pdf" / f"{slug}.pdf",
-            "epub": workspace.outputs / "epub" / f"{slug}.epub",
-            "docx": workspace.outputs / "docx" / f"{slug}-print-editable.docx",
-        }
         report = validate_generated_outputs(model, files)
         require_live_claim(job)
         qa = {"source": not any(issue.severity == "error" for issue in model.issues), "pdf": files["pdf"].is_file(), "epub": files["epub"].is_file(), "docx": files["docx"].is_file(), "metadata": bool(metadata.get("title")), "ok": report.ok}
@@ -497,7 +567,14 @@ def run(job: dict) -> None:
 def candidate_entry(job: dict, kind: str) -> dict:
     entry = (job.get("candidate") or {}).get(kind)
     path = entry.get("path") if isinstance(entry, dict) else None
-    if not isinstance(entry, dict) or not isinstance(path, str) or not path.startswith(f"jobs/{job['id']}/{kind}/"):
+    file_name = entry.get("file_name") if isinstance(entry, dict) else None
+    if not isinstance(entry, dict) or not isinstance(path, str) or not isinstance(file_name, str):
+        raise RuntimeError(f"Candidate {kind} is missing or has an unsafe path.")
+    try:
+        expected_path = candidate_object_path(job.get("id"), kind, file_name)
+    except RuntimeError as exc:
+        raise RuntimeError(f"Candidate {kind} is missing or has an unsafe path.") from exc
+    if path != expected_path:
         raise RuntimeError(f"Candidate {kind} is missing or has an unsafe path.")
     return entry
 
@@ -514,14 +591,27 @@ def promote(job: dict) -> None:
     for kind in ("pdf", "epub", "docx", "source", "cover"):
         require_live_claim(job)
         entry = candidate_entry(job, kind)
+        try:
+            expected_bytes = int(entry.get("file_size"))
+        except (TypeError, ValueError) as exc:
+            raise RuntimeError(f"Candidate {kind} has an invalid recorded size.") from exc
+        maximum_bytes = artifact_size_limit(kind)
+        if expected_bytes < 1 or expected_bytes > maximum_bytes:
+            raise RuntimeError(f"Candidate {kind} exceeds its publication safety limit.")
         temp_dir = Path(tempfile.mkdtemp(prefix="greyveil-promote-"))
         source = temp_dir / entry["file_name"]
         try:
-            storage_download("generation-candidates", entry["path"], source)
+            storage_download(
+                "generation-candidates",
+                entry["path"],
+                source,
+                max_bytes=maximum_bytes,
+                expected_bytes=expected_bytes,
+            )
             require_live_claim(job)
             bucket = "book-covers" if kind == "cover" else "book-files"
             target = f"published/{slug}/{job['id']}/{kind}/{entry['file_name']}"
-            storage_upload(bucket, target, source, entry["mime_type"], upsert=True)
+            storage_upload(bucket, target, source, entry["mime_type"], max_bytes=maximum_bytes, upsert=True)
             require_live_claim(job)
             published[kind] = {**entry, "path": target, "bucket": bucket}
         finally:
@@ -560,6 +650,27 @@ def operator_error_message(exc: Exception, job: dict) -> str:
     return message[:1000]
 
 
+@contextmanager
+def bounded_job_processing(seconds: int = MAX_JOB_PROCESSING_SECONDS) -> Iterator[None]:
+    """Bound synchronous work on the Linux Actions runner below its job timeout."""
+    alarm_signal = getattr(signal, "SIGALRM", None)
+    if alarm_signal is None or threading.current_thread() is not threading.main_thread():
+        yield
+        return
+    previous_handler = signal.getsignal(alarm_signal)
+
+    def timeout_job(_signum: int, _frame: object) -> None:
+        raise TimeoutError("Generation job exceeded its processing time limit.")
+
+    signal.signal(alarm_signal, timeout_job)
+    signal.setitimer(signal.ITIMER_REAL, seconds)
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(alarm_signal, previous_handler)
+
+
 def process_one(target_job_id: str | None = None) -> ProcessOutcome:
     """Claim and process at most one job through the shared fenced pipeline."""
     try:
@@ -573,10 +684,11 @@ def process_one(target_job_id: str | None = None) -> ProcessOutcome:
     job["_heartbeat"] = heartbeat
     try:
         heartbeat.start()
-        if job["status"] == "PUBLISH_REQUESTED":
-            promote(job)
-        else:
-            run(job)
+        with bounded_job_processing():
+            if job["status"] == "PUBLISH_REQUESTED":
+                promote(job)
+            else:
+                run(job)
         print(f"Processed generation job {job['id']}")
         return ProcessOutcome.SUCCEEDED
     except (OSError, json.JSONDecodeError):
@@ -597,153 +709,12 @@ def process_one(target_job_id: str | None = None) -> ProcessOutcome:
         job.pop("_heartbeat", None)
 
 
-def load_loop_configuration() -> WorkerLoopConfiguration:
-    """Validate only the values required to start the long-running worker."""
-    for name, value in (("SUPABASE_URL", URL), ("SUPABASE_SERVICE_ROLE_KEY", KEY)):
-        if not value.strip():
-            raise WorkerConfigurationError(f"Missing required environment variable: {name}")
-
-    parsed_url = urllib.parse.urlsplit(URL)
-    if (
-        parsed_url.scheme not in {"http", "https"}
-        or not parsed_url.netloc
-        or parsed_url.username is not None
-        or parsed_url.password is not None
-        or parsed_url.query
-        or parsed_url.fragment
-    ):
-        raise WorkerConfigurationError("SUPABASE_URL must be a valid HTTP or HTTPS origin.")
-
-    raw_poll_seconds = os.environ.get("GREYVEIL_WORKER_POLL_SECONDS")
-    if raw_poll_seconds is None or not raw_poll_seconds.strip():
-        return WorkerLoopConfiguration(poll_seconds=DEFAULT_POLL_SECONDS)
-    try:
-        poll_seconds = float(raw_poll_seconds)
-    except ValueError as exc:
-        raise WorkerConfigurationError(
-            "GREYVEIL_WORKER_POLL_SECONDS must be a number between 1 and 300 seconds."
-        ) from exc
-    if not math.isfinite(poll_seconds) or not MIN_POLL_SECONDS <= poll_seconds <= MAX_POLL_SECONDS:
-        raise WorkerConfigurationError(
-            "GREYVEIL_WORKER_POLL_SECONDS must be a number between 1 and 300 seconds."
-        )
-    return WorkerLoopConfiguration(poll_seconds=poll_seconds)
-
-
-def verify_worker_rpc_readiness() -> None:
-    """Fail closed before claiming real work if required worker RPCs are absent."""
-    probe_job_id = str(uuid.uuid4())
-    probe_token = str(uuid.uuid4())
-    try:
-        claimed = request("/rest/v1/rpc/greyveil_worker_claim_generation_job", "POST", {
-            "claim_token": probe_token,
-            "target_job_id": probe_job_id,
-        }, timeout_seconds=HEARTBEAT_REQUEST_TIMEOUT_SECONDS)
-        heartbeat_valid = request("/rest/v1/rpc/greyveil_worker_heartbeat_generation_job", "POST", {
-            "target_job_id": probe_job_id,
-            "claim_token": probe_token,
-        }, timeout_seconds=HEARTBEAT_REQUEST_TIMEOUT_SECONDS)
-    except Exception as exc:  # noqa: BLE001 - startup reports a static, secret-free error.
-        raise WorkerConfigurationError("Required Supabase worker RPCs are unavailable.") from exc
-    if claimed or heartbeat_valid is not False:
-        raise WorkerConfigurationError("Required Supabase worker RPC readiness check returned an unsafe result.")
-
-
-def infrastructure_backoff_seconds(consecutive_failures: int) -> float:
-    """Return a bounded exponential delay without an unbounded exponent."""
-    exponent = max(0, min(consecutive_failures - 1, 30))
-    return min(ERROR_BACKOFF_MAX_SECONDS, ERROR_BACKOFF_BASE_SECONDS * (2 ** exponent))
-
-
-def run_loop(
-    configuration: WorkerLoopConfiguration,
-    *,
-    stop_event: threading.Event | None = None,
-    process_fn: Callable[[str | None], ProcessOutcome] | None = None,
-    wait_fn: Callable[[float], bool] | None = None,
-) -> int:
-    """Poll sequentially until shutdown, backing off only on claim transport errors."""
-    shutdown = stop_event or threading.Event()
-    process = process_fn or process_one
-    wait = wait_fn or shutdown.wait
-    infrastructure_failures = 0
-    print(f"Greyveil continuous worker started (idle poll: {configuration.poll_seconds:g}s).")
-
-    while not shutdown.is_set():
-        try:
-            outcome = process(None)
-        except KeyboardInterrupt:
-            shutdown.set()
-            print("Greyveil worker shutdown requested by keyboard interrupt.")
-            break
-        except (OSError, json.JSONDecodeError):
-            outcome = ProcessOutcome.INFRASTRUCTURE_FAILED
-
-        if outcome is ProcessOutcome.INFRASTRUCTURE_FAILED:
-            infrastructure_failures += 1
-            delay = infrastructure_backoff_seconds(infrastructure_failures)
-            print(f"Generation claim service unavailable; retrying in {delay:g}s.")
-            try:
-                wait(delay)
-            except KeyboardInterrupt:
-                shutdown.set()
-                print("Greyveil worker shutdown requested by keyboard interrupt.")
-                break
-            continue
-
-        infrastructure_failures = 0
-        if shutdown.is_set():
-            break
-        if outcome is ProcessOutcome.NO_JOB:
-            try:
-                wait(configuration.poll_seconds)
-            except KeyboardInterrupt:
-                shutdown.set()
-                print("Greyveil worker shutdown requested by keyboard interrupt.")
-                break
-
-    print("Greyveil continuous worker stopped.")
-    return 0
-
-
-@contextmanager
-def sigterm_shutdown(stop_event: threading.Event) -> Iterator[None]:
-    """Translate Railway SIGTERM into a cooperative stop after the active job."""
-    if threading.current_thread() is not threading.main_thread():
-        yield
-        return
-    previous_handler = signal.getsignal(signal.SIGTERM)
-
-    def request_shutdown(_signum: int, _frame: object) -> None:
-        if not stop_event.is_set():
-            print("Greyveil worker shutdown requested; no new job will be claimed.")
-        stop_event.set()
-
-    signal.signal(signal.SIGTERM, request_shutdown)
-    try:
-        yield
-    finally:
-        signal.signal(signal.SIGTERM, previous_handler)
-
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Process trusted Greyveil generation or publication jobs.")
     modes = parser.add_mutually_exclusive_group()
-    modes.add_argument("--once", action="store_true", help="Process at most one job (the default).")
+    modes.add_argument("--once", action="store_true", help="Process at most one queued job for local diagnostics.")
     modes.add_argument("--job", help="Process one specific queued or publish-requested job UUID.")
-    modes.add_argument("--loop", action="store_true", help="Continuously claim and process jobs until shutdown.")
     args = parser.parse_args(argv)
-
-    if args.loop:
-        try:
-            configuration = load_loop_configuration()
-            verify_worker_rpc_readiness()
-        except WorkerConfigurationError as exc:
-            print(exc)
-            return 2
-        stop_event = threading.Event()
-        with sigterm_shutdown(stop_event):
-            return run_loop(configuration, stop_event=stop_event)
 
     outcome = process_one(args.job)
     if outcome is ProcessOutcome.NO_JOB:

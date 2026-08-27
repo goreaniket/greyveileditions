@@ -322,7 +322,10 @@ class SourceFidelityTest(unittest.TestCase):
 
         self.assertEqual(candidate_paths[0], candidate_paths[1])
         self.assertEqual(mocked_upload.call_count, 2)
-        self.assertTrue(all(call.kwargs == {"upsert": True} for call in mocked_upload.call_args_list))
+        self.assertTrue(all(
+            call.kwargs == {"max_bytes": worker.artifact_size_limit("cover"), "upsert": True}
+            for call in mocked_upload.call_args_list
+        ))
 
         self.assertEqual(self.reference_cover.read_bytes(), canonical_cover_bytes)
 

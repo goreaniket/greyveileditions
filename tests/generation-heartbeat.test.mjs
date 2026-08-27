@@ -103,7 +103,7 @@ test('worker heartbeat wraps long stages and preserves claim-token fencing', asy
   assert.match(worker, /except BaseException:[\s\S]*Generation claim heartbeat stopped unexpectedly/)
   assert.match(worker, /greyveil_worker_heartbeat_generation_job/)
   assert.match(worker, /timeout_seconds=HEARTBEAT_REQUEST_TIMEOUT_SECONDS/)
-  assert.match(worker, /for stage, flag in \(\("GENERATING_PDF"[\s\S]*require_live_claim\(job\)/)
+  assert.match(worker, /for stage, flag, kind in \([\s\S]*\("GENERATING_PDF", "--pdf", "pdf"\)[\s\S]*require_live_claim\(job\)/)
   assert.match(worker, /for kind, file in \{\*\*files[\s\S]*require_live_claim\(job\)/)
   assert.match(worker, /worker_token.*job\['_claim_token'\]/)
   assert.match(worker, /finally:[\s\S]*heartbeat\.stop\(\)[\s\S]*job\.pop\("_heartbeat", None\)/)

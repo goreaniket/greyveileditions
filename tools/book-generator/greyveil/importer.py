@@ -27,6 +27,13 @@ from PIL import UnidentifiedImageError
 
 from .jobs import GenerationJob, GenerationStage, utc_now
 from .loader import load_book
+from .resource_limits import (
+    MAX_COVER_BYTES,
+    MAX_COVER_PIXELS,
+    ResourceLimitError,
+    validate_docx_archive,
+    validate_file_size,
+)
 
 
 IMPORTER_SCHEMA_VERSION = "greyveil.docx-import/v1"
@@ -99,7 +106,10 @@ def import_docx(
         return failed_result(job, manuscript_path, "Input must be an existing .docx manuscript.")
 
     try:
+        validate_docx_archive(manuscript_path)
         document = Document(manuscript_path)
+    except ResourceLimitError as exc:
+        return failed_result(job, manuscript_path, str(exc))
     except Exception:  # noqa: BLE001 - do not expose parser or filesystem details.
         return failed_result(job, manuscript_path, "Manuscript is not a valid DOCX file.")
 
@@ -485,6 +495,7 @@ def validate_cover_image(path: Path) -> None:
     if not expected_format:
         raise ValueError("Cover must use PNG, JPEG, or WebP format.")
     try:
+        validate_file_size(path, MAX_COVER_BYTES, "Cover")
         with warnings.catch_warnings():
             warnings.simplefilter("error", PILImage.DecompressionBombWarning)
             with PILImage.open(path) as image:
@@ -493,6 +504,8 @@ def validate_cover_image(path: Path) -> None:
                 actual_format = image.format
                 dimensions = image.size
                 frame_count = getattr(image, "n_frames", 1)
+                if min(dimensions) < 1 or dimensions[0] * dimensions[1] > MAX_COVER_PIXELS:
+                    raise ValueError("Cover dimensions exceed the decoding safety limit.")
                 image.load()
     except (
         PILImage.DecompressionBombError,
@@ -502,7 +515,10 @@ def validate_cover_image(path: Path) -> None:
         ValueError,
     ) as exc:
         raise ValueError("Cover must be a valid PNG, JPEG, or WebP image.") from exc
-    if actual_format != expected_format or min(dimensions) < 1 or frame_count != 1:
+    if (
+        actual_format != expected_format
+        or frame_count != 1
+    ):
         raise ValueError("Cover must be a valid single-frame PNG, JPEG, or WebP image.")
 
 

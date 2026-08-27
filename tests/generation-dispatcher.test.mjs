@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
+import { access, readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 import {
@@ -87,10 +87,9 @@ test('frontend dispatches only after authoritative queue, detection, retry, and 
   assert.match(frontend, /Retry Worker Dispatch/)
 })
 
-test('Railway claim fencing remains intact and dispatcher adds no deployable book artifacts', async () => {
-  const [workerSql, railpack, vercelIgnore, edge, workflow] = await Promise.all([
+test('claim fencing remains intact and dispatcher adds no deployable book artifacts', async () => {
+  const [workerSql, vercelIgnore, edge, workflow] = await Promise.all([
     source('../supabase/founder-publishing-workflow.sql'),
-    source('../railpack.json'),
     source('../.vercelignore'),
     source('../supabase/functions/dispatch-generation-worker/index.ts'),
     source('../.github/workflows/greyveil-generation-worker.yml'),
@@ -98,7 +97,7 @@ test('Railway claim fencing remains intact and dispatcher adds no deployable boo
 
   assert.match(workerSql, /for update skip locked limit 1/i)
   assert.match(workerSql, /worker_token is null and status in \('QUEUED', 'PUBLISH_REQUESTED'\)/)
-  assert.match(railpack, /run_generation_worker\.py --loop/)
+  await assert.rejects(access(new URL('../railpack.json', import.meta.url)))
   assert.match(vercelIgnore, /^supabase\/$/m)
   assert.doesNotMatch(`${edge}\n${workflow}`, /actions\/upload-artifact|git (?:add|commit|push)|(?:public|assets)\/(?:.*\.(?:pdf|epub|docx|zip))/i)
 })

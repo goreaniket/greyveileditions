@@ -138,13 +138,16 @@ Source ZIP export remains reserved for a later pipeline step.
 
 The Admin Publishing screen records durable jobs and uploads inputs to private
 Supabase storage. It does not run Python from a browser request or from Vercel.
-Run `run_generation_worker.py` in a trusted worker environment with a repository
-checkout plus `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`:
+Production dispatches `.github/workflows/greyveil-generation-worker.yml` with
+one exact job UUID; GitHub Actions supplies `SUPABASE_URL` and
+`SUPABASE_SERVICE_ROLE_KEY` from repository secrets:
 
 ```bash
-python tools/book-generator/run_generation_worker.py --once
 python tools/book-generator/run_generation_worker.py --job <generation-job-uuid>
 ```
+
+`--once` remains available only as a local diagnostic. There is no continuous
+production polling mode or Railway runtime configuration.
 
 Each invocation atomically claims one queued generation or requested
 publication. A stalled claim can be recovered only after its heartbeat is stale;
@@ -160,7 +163,14 @@ does the service-role-only database function atomically update canonical
 Older live objects are never deleted, so a failed generation or failed promotion
 cannot replace a published version.
 
-This is a worker-compatible release boundary, not a hosted Python worker. The
-production deployment still needs a trusted scheduler/container/VM with this
-repository checkout and those server-only environment variables. Do not expose
-the service-role key to the browser or add it to Vercel client configuration.
+Untrusted DOCX packages are inspected before parsing for compressed entry count,
+uncompressed size, per-entry size, unsafe names, and compression ratio. Input,
+cover, generated artifact, and publication-copy sizes are bounded. Storage
+downloads stream to a temporary file in 1 MiB chunks. Supabase's simple upload
+endpoint is called through `urllib`, which requires a buffered request body for
+a reliable content length; that fallback is bounded by the artifact limits.
+The worker also has a 50-minute processing alarm on the Linux runner beneath
+the workflow's 60-minute timeout.
+
+Do not expose the service-role key to the browser or add it to Vercel client
+configuration.

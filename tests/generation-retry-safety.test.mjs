@@ -67,7 +67,7 @@ test('generation retry cannot mutate canonical published metadata or artifact bu
   const runBody = worker.slice(worker.indexOf('def run(job: dict)'), worker.indexOf('def candidate_entry'))
   const promotionBody = worker.slice(worker.indexOf('def promote(job: dict)'), worker.indexOf('def claim_one'))
   assert.match(runBody, /upload_candidate\(job, kind, file, mime\)/)
-  assert.match(worker, /storage_upload\("generation-candidates", path, file, mime, upsert=True\)/)
+  assert.match(worker, /storage_upload\("generation-candidates", path, file, mime, max_bytes=artifact_size_limit\(kind\), upsert=True\)/)
   assert.match(runBody, /READY_TO_PUBLISH/)
   assert.doesNotMatch(runBody, /book-files|book-covers|greyveil_worker_finalize_generation_publication/)
   assert.match(promotionBody, /book-covers/)
@@ -78,6 +78,6 @@ test('generation retry cannot mutate canonical published metadata or artifact bu
 test('candidate retry is same-job upsert while the publish transition remains unchanged', async () => {
   const worker = await text('../tools/book-generator/run_generation_worker.py')
   assert.match(worker, /return f"jobs\/\{canonical_id\}\/\{kind\}\/\{filename\}"/)
-  assert.match(worker, /storage_upload\("generation-candidates", path, file, mime, upsert=True\)/)
+  assert.match(worker, /storage_upload\("generation-candidates", path, file, mime, max_bytes=artifact_size_limit\(kind\), upsert=True\)/)
   assert.match(worker, /if job\["status"\] == "PUBLISH_REQUESTED":[\s\S]*promote\(job\)/)
 })

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
+import { access, readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 const text = (path) => readFile(new URL(path, import.meta.url), 'utf8')
@@ -37,11 +37,10 @@ test('Supabase credentials come only from GitHub Secrets and are never printed',
 })
 
 test('runner artifacts stay ephemeral and worker-only resources stay outside Vercel', async () => {
-  const [workflow, worker, vercelIgnore, railpack] = await Promise.all([
+  const [workflow, worker, vercelIgnore] = await Promise.all([
     text('../.github/workflows/greyveil-generation-worker.yml'),
     text('../tools/book-generator/run_generation_worker.py'),
     text('../.vercelignore'),
-    text('../railpack.json'),
   ])
 
   assert.doesNotMatch(workflow, /actions\/upload-artifact|git (?:add|commit|push)|(?:public|assets)\//i)
@@ -54,5 +53,5 @@ test('runner artifacts stay ephemeral and worker-only resources stay outside Ver
   for (const ignored of ['tools/', '.github/', 'requirements.txt', '.python-version']) {
     assert.match(vercelIgnore, new RegExp(`^${ignored.replace('.', '\\.')}$`, 'm'))
   }
-  assert.match(railpack, /python tools\/book-generator\/run_generation_worker\.py --loop/)
+  await assert.rejects(access(new URL('../railpack.json', import.meta.url)))
 })
