@@ -1,6 +1,25 @@
 .env
 .env.*
 !.env.example
-.vercel
+.vercel/
 supabase/.temp/
 tmp/
+
+# Generated books, previews, and QA artifacts.
+generated/
+output/
+
+# Private local generator intake. Production inputs live in Supabase Storage.
+tools/book-generator/inbox/
+
+# Local formatting exports and Microsoft Word lock files.
+projects/**/chapters/WORD/FORMATTED/
+projects/**/chapters/word/FORMATTED/
+~$*.docx
+
+# Tool caches and dependency trees.
+__pycache__/
+.pytest_cache/
+*.py[cod]
+node_modules/
+coverage/
