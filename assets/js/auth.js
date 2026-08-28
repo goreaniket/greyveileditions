@@ -9,6 +9,7 @@ import {
   updateOwnDisplayName,
 } from './auth-profile.js'
 import { appUrl, GOOGLE_OAUTH_REDIRECT_URL, safeReturnPath } from './site-config.js'
+import { bookCoverPath, bookReaderPath } from './catalog-config.js'
 import {
   createExclusiveStateController,
   initPasswordVisibilityToggles,
@@ -357,16 +358,6 @@ const renderAccountPayments = async (user) => {
     if (nodes.empty) nodes.empty.hidden = true
     setStatus(nodes.status, 'We could not load your payment history right now.', 'error')
   }
-}
-
-const bookReaderPath = (book, series) => {
-  if (!book?.slug || !series?.slug) return ''
-  return `/projects/${series.slug}/books/${book.slug}/reader/`
-}
-
-const bookCoverPath = (book) => {
-  if (!book?.slug) return ''
-  return `/assets/books/${book.slug}/cover/front-cover.webp`
 }
 
 const sortLibraryItems = (items) => {
@@ -787,7 +778,7 @@ const renderAccountLibrary = async (user, profile, role, { force = false } = {})
   try {
     // Keep Account on the same module instance as shared navigation and
     // purchase controls so one entitlement snapshot serves this page load.
-    const access = await import('./content-access.js?v=20260819-commerce-stabilization')
+    const access = await import('./content-access.js')
     const snapshot = await access.getEntitlementSnapshot({ force })
     const { hierarchy, paidOrders } = snapshot
     const grants = (snapshot.grants || []).filter((grant) => access.isGrantCurrent(grant))

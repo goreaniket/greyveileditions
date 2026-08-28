@@ -6,12 +6,12 @@ import {
   formatCurrency,
   getText,
   loadRazorpayCheckout,
-} from './commerce.js?v=20260819-commerce-stabilization'
+} from './commerce.js'
 import {
   canReadBook,
   getEntitlementSnapshot,
   hierarchyForBook,
-} from './content-access.js?v=20260819-commerce-stabilization'
+} from './content-access.js'
 
 const GREYVEIL_ORIGIN = 'https://greyveileditions.site'
 const ACCOUNT_PATH = '/account/'

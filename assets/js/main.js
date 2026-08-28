@@ -7,16 +7,20 @@ const currentCopyrightYear = "2026";
 const finePointer = window.matchMedia("(pointer: fine)").matches;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const mainScriptUrl = document.currentScript?.src || new URL("/assets/js/main.js", window.location.href).href;
-const purchasePipelineVersion = "20260819-commerce-stabilization";
-const versionedPurchaseAssetUrl = (name) => {
-  const url = new URL(name, mainScriptUrl);
-  url.searchParams.set("v", purchasePipelineVersion);
-  return url.href;
-};
+const localAssetUrl = (name) => new URL(name, mainScriptUrl).href;
 const loginPath = "/auth/login/";
 const accountPath = "/account/";
 const adminPath = "/admin/";
 const adminRoles = new Set(["admin", "super_admin"]);
+const catalogLoadTimeoutMs = 15000;
+
+const withTimeout = (promise, timeoutMs, message) => {
+  let timer = 0;
+  const timeout = new Promise((_, reject) => {
+    timer = window.setTimeout(() => reject(new Error(message)), timeoutMs);
+  });
+  return Promise.race([promise, timeout]).finally(() => window.clearTimeout(timer));
+};
 
 document.body.dataset.accessState = "resolving";
 
@@ -263,6 +267,20 @@ const currentPageTarget = () => {
 };
 
 const hasContentTarget = (target) => Boolean(target?.kind && target?.slug);
+
+const catalogMounts = () => Array.from(document.querySelectorAll("[data-catalog-series], [data-catalog-books], [data-catalog-journey]"));
+
+const setCatalogMountPending = (mount) => {
+  mount.setAttribute("aria-busy", "true");
+};
+
+const showCatalogMessage = (mount, message) => {
+  const status = document.createElement("p");
+  status.className = "catalog-status";
+  status.textContent = message;
+  mount.replaceChildren(status);
+  mount.removeAttribute("aria-busy");
+};
 
 const collectContentSurfaceRecords = () => {
   if (contentSurfaceRecords) return contentSurfaceRecords;
@@ -694,23 +712,216 @@ const contentDecision = (target, hierarchy, access, context, lookup) => {
   return { target, allowed: false };
 };
 
+const appendTextNode = (parent, tagName, text, className = "") => {
+  const node = document.createElement(tagName);
+  if (className) node.className = className;
+  node.textContent = text;
+  parent.append(node);
+  return node;
+};
+
+const seriesCatalogCard = (series, hierarchy, access, mount, index) => {
+  const volume = access.volumeForSeries(series, hierarchy.volumes);
+  const collection = access.collectionForSeries(series, hierarchy.collections)
+    || access.collectionForVolume(volume, hierarchy.collections);
+  const card = document.createElement("a");
+  card.className = `project-card rich-project-card tilt-card reveal visible${index ? ` delay-${Math.min(index, 2)}` : ""}`;
+  card.href = access.seriesDetailPath(series);
+
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "project-image-wrap";
+  const image = document.createElement("img");
+  image.src = access.seriesCoverPath(series);
+  image.width = 1024;
+  image.height = 1536;
+  image.alt = `${series.title} series artwork`;
+  image.loading = "lazy";
+  image.decoding = "async";
+  access.bindCoverFallback(image);
+  imageWrap.append(image);
+  card.append(imageWrap);
+  appendTextNode(card, "span", "Available");
+
+  if (mount.hasAttribute("data-catalog-hierarchy")) {
+    const labels = [collection?.title, volume?.title, "Current Series"].filter(Boolean);
+    const path = document.createElement("div");
+    path.className = "project-hierarchy";
+    path.setAttribute("aria-label", "Project hierarchy");
+    labels.forEach((label) => appendTextNode(path, "span", label));
+    card.append(path);
+  }
+
+  appendTextNode(card, "h3", series.title);
+  appendTextNode(card, "p", series.description || `Explore the ${series.title} series.`);
+  appendTextNode(card, "strong", "Enter Series");
+  bindTiltCard(card);
+  return card;
+};
+
+const bookCatalogCard = (decision, access, context, index) => {
+  const { book, hierarchy } = decision;
+  const detailPath = access.bookDetailPath(book, hierarchy.series);
+  const readerPath = access.bookReaderPath(book, hierarchy.series);
+  const accents = ["accent-amber", "accent-blue", "accent-lavender", "accent-emerald", "accent-gold"];
+  const card = document.createElement("article");
+  card.className = `book-card ${accents[index % accents.length]} reveal visible`;
+  card.role = "link";
+  card.tabIndex = 0;
+
+  const openDetail = () => {
+    if (detailPath) window.location.assign(detailPath);
+  };
+  card.addEventListener("click", (event) => {
+    if (!event.target.closest("a, button")) openDetail();
+  });
+  card.addEventListener("keydown", (event) => {
+    if (event.target === card && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      openDetail();
+    }
+  });
+
+  const cover = document.createElement("div");
+  cover.className = "cover-slot";
+  const image = document.createElement("img");
+  image.className = "book-cover-image series-book-cover";
+  image.src = access.bookCoverPath(book);
+  image.width = 1024;
+  image.height = 1536;
+  image.alt = `${book.title} book cover`;
+  image.loading = "lazy";
+  image.decoding = "async";
+  access.bindCoverFallback(image);
+  cover.append(image);
+  card.append(cover);
+  appendTextNode(card, "span", "Available");
+
+  const heading = document.createElement("h3");
+  const detailLink = document.createElement("a");
+  detailLink.href = detailPath;
+  detailLink.textContent = book.title;
+  heading.append(detailLink);
+  card.append(heading);
+  const bookNumber = Number(book.book_number);
+  const position = Number.isFinite(bookNumber) ? `Book ${bookNumber}` : "A book";
+  appendTextNode(card, "p", `${position} in ${hierarchy.series.title}.`);
+
+  const actions = document.createElement("div");
+  actions.className = "card-actions";
+  const preview = createAuthLink(detailPath, "Preview");
+  const reader = createAuthLink(readerPath, "View Book");
+  actions.append(preview, reader);
+  card.append(actions);
+  updateBookSurfaceState(card, decision, access, context);
+  return card;
+};
+
+const renderCatalogJourney = (mount, decisions, access) => {
+  if (!decisions.length) {
+    showCatalogMessage(mount, "No reading journey is currently available.");
+    return;
+  }
+
+  const first = decisions[0];
+  const { collection, volume, series } = first.hierarchy;
+  appendTextNode(mount, "p", "Reading Journey", "eyebrow");
+  appendTextNode(mount, "h2", "Read in sequence.");
+
+  const path = document.createElement("div");
+  path.className = "journey-path";
+  path.setAttribute("aria-label", "Reading hierarchy");
+  [collection?.title, volume?.title, series?.title, "Current Book"]
+    .filter(Boolean)
+    .forEach((label) => appendTextNode(path, "span", label));
+
+  const status = document.createElement("div");
+  status.className = "journey-status";
+  const statusValues = [
+    ["Previous Book", "None"],
+    ["Current Position", `Book 1 of ${decisions.length}`],
+    ["Next Book", decisions[1]?.book?.title || "Series complete"],
+  ];
+  statusValues.forEach(([label, value]) => {
+    const row = document.createElement("p");
+    appendTextNode(row, "span", label);
+    appendTextNode(row, "strong", value);
+    status.append(row);
+  });
+
+  const actions = document.createElement("div");
+  actions.className = "button-row";
+  actions.append(createAuthLink(access.bookDetailPath(first.book, series), "Begin Book 01", "button primary"));
+  mount.replaceChildren(...Array.from(mount.childNodes), path, status, actions);
+  mount.removeAttribute("aria-busy");
+};
+
+const renderCatalogSurfaces = (hierarchy, access, context, lookup) => {
+  catalogMounts().forEach((mount) => {
+    if (mount.hasAttribute("data-catalog-series")) {
+      const collectionSlug = mount.dataset.catalogCollection || "";
+      const visibleSeries = hierarchy.seriesItems.filter((series) => {
+        const decision = contentDecision({ kind: "series", slug: series.slug }, hierarchy, access, context, lookup);
+        if (!decision.allowed) return false;
+        return !collectionSlug || decision.hierarchy.collection?.slug === collectionSlug;
+      });
+      if (!visibleSeries.length) {
+        showCatalogMessage(mount, "No series are currently available.");
+        return;
+      }
+      mount.replaceChildren(...visibleSeries.map((series, index) => seriesCatalogCard(series, hierarchy, access, mount, index)));
+      mount.removeAttribute("aria-busy");
+      return;
+    }
+
+    const seriesSlug = mount.dataset.catalogBooks || mount.dataset.catalogJourney || "";
+    const visibleBooks = hierarchy.books
+      .map((book) => contentDecision({ kind: "book", slug: book.slug }, hierarchy, access, context, lookup))
+      .filter((decision) => decision.allowed && decision.hierarchy.series?.slug === seriesSlug);
+    if (!visibleBooks.length) {
+      showCatalogMessage(mount, "No books are currently available in this series.");
+      return;
+    }
+    if (mount.hasAttribute("data-catalog-journey")) {
+      mount.replaceChildren();
+      renderCatalogJourney(mount, visibleBooks, access);
+      return;
+    }
+    mount.replaceChildren(...visibleBooks.map((decision, index) => bookCatalogCard(decision, access, context, index)));
+    mount.removeAttribute("aria-busy");
+  });
+};
+
+const showCatalogUnavailable = () => {
+  catalogMounts().forEach((mount) => showCatalogMessage(mount, "The catalog is temporarily unavailable."));
+};
+
 const initContentVisibilityFiltering = async (runId = contentVisibilityRun, authState = null) => {
   setAccessPending();
   const directTarget = suspendDirectContent();
   const records = collectContentSurfaceRecords();
+  const mounts = catalogMounts();
+  mounts.forEach(setCatalogMountPending);
   records.forEach(suspendRecord);
 
   // Informational routes have no protected catalog surface to reconcile. Avoid
   // a hierarchy request there; routes with catalog or detail content still use
   // the same authority-backed snapshot below.
-  if (!records.length && !directTarget) {
+  if (!records.length && !directTarget && !mounts.length) {
     setAccessResolved(runId);
     return;
   }
 
   try {
-    const access = await import(versionedPurchaseAssetUrl("content-access.js"));
-    const snapshot = await access.getEntitlementSnapshot();
+    const [accessModule, catalogConfig] = await Promise.all([
+      import(localAssetUrl("content-access.js")),
+      import(localAssetUrl("catalog-config.js")),
+    ]);
+    const access = { ...accessModule, ...catalogConfig };
+    const snapshot = await withTimeout(
+      access.getEntitlementSnapshot(),
+      catalogLoadTimeoutMs,
+      "The catalog request timed out."
+    );
     const context = snapshot.context || contextFromAuthState(access, authState);
     const hierarchy = snapshot.hierarchy;
     const blockingError = hierarchy.errors.collections || hierarchy.errors.volumes || hierarchy.errors.series || hierarchy.errors.books;
@@ -731,6 +942,7 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
         records.forEach(detachRecord);
         if (directTarget) showUnavailableContent();
       }
+      showCatalogUnavailable();
       setAccessResolved(runId);
       return;
     }
@@ -747,6 +959,8 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
     );
 
     if (runId !== contentVisibilityRun) return;
+
+    renderCatalogSurfaces(hierarchy, access, context, lookup);
 
     records.forEach((record) => {
       const decision = contentDecision(record.target, hierarchy, access, context, lookup);
@@ -778,6 +992,7 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
       code: error?.code,
     });
     records.forEach(detachRecord);
+    showCatalogUnavailable();
     if (directTarget) showUnavailableContent();
     setAccessResolved(runId);
   }
@@ -788,7 +1003,7 @@ const refreshAuthAndContentVisibility = async (invalidateReason = '') => {
   const runId = contentVisibilityRun;
   setAccessPending();
   if (invalidateReason) {
-    const access = await import(versionedPurchaseAssetUrl("content-access.js"));
+    const access = await import(localAssetUrl("content-access.js"));
     access.invalidateEntitlementSnapshot(invalidateReason);
   }
   const authState = await initAuthNavigation();
@@ -816,7 +1031,7 @@ const bindAuthStateRefresh = async () => {
 refreshAuthAndContentVisibility();
 bindAuthStateRefresh();
 window.addEventListener("greyveil:purchase-complete", () => refreshAuthAndContentVisibility("purchase-complete"));
-import(versionedPurchaseAssetUrl("purchases.js")).catch((error) => {
+import(localAssetUrl("purchases.js")).catch((error) => {
   console.info("Checkout controls could not be initialized.", {
     name: error?.name,
     message: error?.message,
@@ -874,8 +1089,10 @@ const wordObserver = new IntersectionObserver((entries) => {
 }, { threshold: .45 });
 document.querySelectorAll("[data-words]").forEach((node) => wordObserver.observe(node));
 
-document.querySelectorAll(".tilt-card").forEach((card) => {
+function bindTiltCard(card) {
   if (!finePointer || reducedMotion) return;
+  if (card.dataset.tiltBound) return;
+  card.dataset.tiltBound = "true";
   card.addEventListener("pointermove", (event) => {
     const rect = card.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - .5;
@@ -885,7 +1102,9 @@ document.querySelectorAll(".tilt-card").forEach((card) => {
   card.addEventListener("pointerleave", () => {
     card.style.transform = "";
   });
-});
+}
+
+document.querySelectorAll(".tilt-card").forEach(bindTiltCard);
 
 const feedbackForm = document.querySelector("[data-feedback-form]");
 

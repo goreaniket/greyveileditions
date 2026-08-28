@@ -5,7 +5,7 @@ import {
   getText,
   purchasePayloadForElement,
   purchaseTargetForPayload,
-} from './commerce.js?v=20260819-commerce-stabilization'
+} from './commerce.js'
 import {
   getEntitlementSnapshot,
   hierarchyForBook,
@@ -14,7 +14,7 @@ import {
   collectionForVolume,
   purchaseEntitlementDetails,
   volumeForSeries,
-} from './content-access.js?v=20260819-commerce-stabilization'
+} from './content-access.js'
 
 let initialized = false
 let entitlementRefreshRun = 0

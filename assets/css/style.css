@@ -2467,6 +2467,16 @@ h3 {
   font-size: .85rem;
 }
 
+.catalog-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 32px 24px;
+  border: 1px solid rgba(42, 52, 64, .1);
+  border-radius: 8px;
+  color: rgba(42, 52, 64, .7);
+  text-align: center;
+}
+
 .book-card > a {
   flex: 0 0 auto;
 }

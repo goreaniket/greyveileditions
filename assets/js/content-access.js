@@ -5,6 +5,7 @@ export const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 export const VISIBILITY_STATES = ['public', 'paid', 'private']
 
 const DEFAULT_VISIBILITY = 'paid'
+const PUBLIC_CATALOG_RPC = 'greyveil_public_catalog'
 const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, price_amount, sort_order, created_at, updated_at'
 const VOLUME_SELECT = 'id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
 const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, price_amount, sort_order, created_at, updated_at'
@@ -406,7 +407,7 @@ export const fetchViewerPassActivations = async (userId) => {
   return { data: data || [], error }
 }
 
-export const fetchContentHierarchy = async () => {
+const fetchContentHierarchyFromTables = async () => {
   const [collectionsResult, volumesResult, seriesResult, booksResult] = await Promise.all([
     supabase
       .from('collections')
@@ -440,6 +441,57 @@ export const fetchContentHierarchy = async () => {
       volumes: volumesResult.error,
       series: seriesResult.error,
       books: booksResult.error,
+    },
+  }
+}
+
+const isMissingCatalogRpc = (error) => {
+  const code = String(error?.code || '')
+  const message = String(error?.message || '').toLowerCase()
+  return code === 'PGRST202' || code === '42883'
+    || (message.includes(PUBLIC_CATALOG_RPC) && message.includes('function'))
+}
+
+const catalogPayloadIsValid = (payload) => {
+  return payload
+    && Array.isArray(payload.collections)
+    && Array.isArray(payload.volumes)
+    && Array.isArray(payload.series)
+    && Array.isArray(payload.books)
+}
+
+export const fetchContentHierarchy = async () => {
+  if (typeof supabase.rpc !== 'function') return fetchContentHierarchyFromTables()
+
+  const { data, error } = await supabase.rpc(PUBLIC_CATALOG_RPC)
+  if (error && isMissingCatalogRpc(error)) return fetchContentHierarchyFromTables()
+
+  if (error || !catalogPayloadIsValid(data)) {
+    const catalogError = error || new Error('The public catalog payload was invalid.')
+    return {
+      collections: [],
+      volumes: [],
+      seriesItems: [],
+      books: [],
+      errors: {
+        collections: catalogError,
+        volumes: catalogError,
+        series: catalogError,
+        books: catalogError,
+      },
+    }
+  }
+
+  return {
+    collections: data.collections,
+    volumes: data.volumes,
+    seriesItems: data.series,
+    books: data.books,
+    errors: {
+      collections: null,
+      volumes: null,
+      series: null,
+      books: null,
     },
   }
 }

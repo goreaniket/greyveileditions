@@ -143,11 +143,15 @@ test('purchase CTA entitlement follows exact product ownership semantics', async
   assert.equal(access.hasEffectivePurchaseEntitlement(collectionTarget, hierarchy, [], { user, role: 'admin' }, []), true)
 })
 
-test('site collection CTA uses the canonical live Human Paradox slug', async () => {
-  const html = await readFile(new URL('../projects/index.html', import.meta.url), 'utf8')
-  assert.match(html, /data-purchase-type="collection"[^>]+data-purchase-slug="human-paradox-collection"/)
-  assert.match(html, new RegExp(`data-purchase-collection-id="${collectionId}"`))
-  assert.doesNotMatch(html, /data-purchase-slug="the-human-paradox-collection"/)
+test('site collection mount and purchase CTA use the canonical database collection', async () => {
+  const [html, main] = await Promise.all([
+    readFile(new URL('../projects/index.html', import.meta.url), 'utf8'),
+    readFile(new URL('../assets/js/main.js', import.meta.url), 'utf8'),
+  ])
+  assert.match(html, /data-catalog-collection="human-paradox-collection"/)
+  assert.doesNotMatch(html, /data-purchase-collection-id|Buy Complete Collection - Rs\./)
+  assert.match(main, /type: "collection", id: collection\.id, slug: collection\.slug/)
+  assert.match(main, /priceAmount: collection\.price_amount/)
 })
 
 test('book access preserves direct-grant expiry and inherits trusted paid orders', async () => {

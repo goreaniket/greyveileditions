@@ -17,14 +17,20 @@ test('entitlement snapshot shares one access fetch across page consumers', async
       collections: [], volumes: [], series: [], books: [], book_access: [], orders: [],
       temporary_access_passes: [], temporary_access_pass_activations: []
     };
-    const supabase = { from(table) {
-      globalThis.__greyveilQueryCounts[table] = (globalThis.__greyveilQueryCounts[table] || 0) + 1;
-      const builder = {
-        select() { return builder; }, order() { return builder; }, eq() { return builder; }, gt() { return builder; },
-        then(resolve) { return Promise.resolve({ data: queryData[table] || [], error: null }).then(resolve); }
-      };
-      return builder;
-    }};
+    const supabase = {
+      rpc(name) {
+        globalThis.__greyveilQueryCounts[name] = (globalThis.__greyveilQueryCounts[name] || 0) + 1;
+        return Promise.resolve({ data: { collections: [], volumes: [], series: [], books: [] }, error: null });
+      },
+      from(table) {
+        globalThis.__greyveilQueryCounts[table] = (globalThis.__greyveilQueryCounts[table] || 0) + 1;
+        const builder = {
+          select() { return builder; }, order() { return builder; }, eq() { return builder; }, gt() { return builder; },
+          then(resolve) { return Promise.resolve({ data: queryData[table] || [], error: null }).then(resolve); }
+        };
+        return builder;
+      }
+    };
     const getCurrentUser = async () => ({ id: '40000000-0000-4000-8000-000000000001' });
     const getCurrentProfile = async () => ({ role: 'customer', display_name: 'Reader' });
   `
@@ -36,7 +42,11 @@ test('entitlement snapshot shares one access fetch across page consumers', async
   ])
   assert.equal(snapshots[0], snapshots[1])
   assert.equal(snapshots[1], snapshots[2])
-  for (const table of ['collections', 'volumes', 'series', 'books', 'book_access', 'orders', 'temporary_access_passes', 'temporary_access_pass_activations']) {
+  assert.equal(globalThis.__greyveilQueryCounts.greyveil_public_catalog, 1)
+  for (const table of ['collections', 'volumes', 'series', 'books']) {
+    assert.equal(globalThis.__greyveilQueryCounts[table], undefined, `${table} should come from the catalog RPC`)
+  }
+  for (const table of ['book_access', 'orders', 'temporary_access_passes', 'temporary_access_pass_activations']) {
     assert.equal(globalThis.__greyveilQueryCounts[table], 1, `${table} should load once`)
   }
 
@@ -45,6 +55,7 @@ test('entitlement snapshot shares one access fetch across page consumers', async
   assert.equal(globalThis.__greyveilQueryCounts.temporary_access_pass_activations, 1)
   access.invalidateEntitlementSnapshot('test-refresh')
   await access.getEntitlementSnapshot()
+  assert.equal(globalThis.__greyveilQueryCounts.greyveil_public_catalog, 2)
   assert.equal(globalThis.__greyveilQueryCounts.orders, 2)
   assert.equal(globalThis.__greyveilQueryCounts.temporary_access_pass_activations, 2)
 })
@@ -138,10 +149,11 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.doesNotMatch(purchases, /getCurrentUser/)
   assert.match(purchases, /checkoutUrlForPayload/)
   assert.equal((purchases.match(/document\.addEventListener\('click', handlePurchaseClick\)/g) || []).length, 1)
-  assert.match(main, /versionedPurchaseAssetUrl\("purchases\.js"\)/)
+  assert.match(main, /import\(localAssetUrl\("purchases\.js"\)\)/)
   assert.match(main, /matchingButtons\.slice\(1\)/)
-  assert.match(html, /main\.js\?v=20260819-commerce-stabilization/)
-  assert.match(html, /checkout\.js\?v=20260820-success-redirect/)
+  assert.match(html, /src="\/assets\/js\/main\.js"/)
+  assert.match(html, /src="\/assets\/js\/checkout\.js"/)
+  assert.doesNotMatch(html, /\?v=/)
   assert.match(styles, /\.checkout-page \[hidden\][\s\S]+display: none !important/)
   assert.match(main, /Buy Full Series/)
   assert.match(main, /Buy Full Collection/)

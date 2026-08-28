@@ -1,5 +1,5 @@
-import { checkoutUrlForPayload, formatCurrency } from './commerce.js?v=20260819-commerce-stabilization'
-import { getEntitlementSnapshot } from './content-access.js?v=20260819-commerce-stabilization'
+import { checkoutUrlForPayload, formatCurrency } from './commerce.js'
+import { getEntitlementSnapshot } from './content-access.js'
 
 const host = document.querySelector('[data-access-pass-offer]')
 const make = (tag, className = '', value = '') => {
