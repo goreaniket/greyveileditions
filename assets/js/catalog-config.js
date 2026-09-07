@@ -27,13 +27,14 @@ export const seriesCoverPath = (series) => {
   return slug ? `/assets/images/${slug.replaceAll('-', ' ')}.jpeg` : ''
 }
 
-export const COVER_FALLBACK_PATH = '/assets/images/greyveil-og-cover.jpg'
+export const COVER_FALLBACK_PATH = '/assets/images/greyveil-logo.png'
 
 export const bindCoverFallback = (image) => {
   if (!image) return
   image.addEventListener('error', () => {
     if (image.dataset.coverFallbackApplied) return
     image.dataset.coverFallbackApplied = 'true'
+    image.classList.add('catalog-cover-fallback')
     image.src = COVER_FALLBACK_PATH
   }, { once: true })
 }

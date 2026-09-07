@@ -2420,6 +2420,16 @@ h3 {
   object-fit: contain;
 }
 
+.catalog-cover-fallback {
+  background: #080b0a;
+}
+
+.book-card .series-book-cover.catalog-cover-fallback {
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
 .cover-placeholder .book-cover-image {
   min-height: 620px;
 }

@@ -88,3 +88,18 @@ test('public Pass discovery does not require anon access to the Admin helper', a
   assert.doesNotMatch(sql, /greyveil_is_admin/)
   assert.doesNotMatch(sql, /grant execute|alter function|security definer/i)
 })
+
+test('catalog cover fallback uses a centered dark brand treatment without changing real covers', async () => {
+  const [catalog, main, css] = await Promise.all([
+    source('../assets/js/catalog-config.js'),
+    source('../assets/js/main.js'),
+    source('../assets/css/style.css'),
+  ])
+  assert.match(catalog, /COVER_FALLBACK_PATH = '\/assets\/images\/greyveil-logo\.png'/)
+  assert.match(catalog, /image\.classList\.add\('catalog-cover-fallback'\)/)
+  assert.match(main, /image\.className = "book-cover-image series-book-cover"/)
+  assert.doesNotMatch(main, /series-book-cover catalog-cover-fallback/)
+  assert.match(css, /\.catalog-cover-fallback\s*\{[^}]*background: #080b0a;/)
+  assert.match(css, /\.book-card \.series-book-cover\.catalog-cover-fallback\s*\{[^}]*padding: 0;[^}]*object-fit: contain;[^}]*object-position: center;/)
+  assert.match(css, /\.series-book-cover\s*\{[^}]*padding: 4px;[^}]*object-fit: contain;/)
+})
