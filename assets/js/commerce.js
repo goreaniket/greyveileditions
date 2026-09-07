@@ -21,30 +21,6 @@ export const sessionToken = async () => {
   return data.session.access_token
 }
 
-export const apiPost = async (path, payload) => {
-  const token = await sessionToken()
-  if (!token) {
-    const error = new Error('Please log in before starting checkout.')
-    error.code = 'login_required'
-    throw error
-  }
-  const response = await fetch(path, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  })
-  const result = await response.json().catch(() => ({}))
-  if (!response.ok) {
-    const error = new Error(result?.error?.message || 'The payment request could not be completed.')
-    error.code = result?.error?.code || 'request_failed'
-    throw error
-  }
-  return result
-}
-
 export const edgeFunctionPost = async (name, payload) => {
   const token = await sessionToken()
   if (!token) {

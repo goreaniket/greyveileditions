@@ -4,6 +4,12 @@ verify_jwt = true
 [functions.verify-payment]
 verify_jwt = true
 
+[functions.validate-coupon]
+verify_jwt = true
+
+[functions.reconcile-payment]
+verify_jwt = true
+
 [functions.razorpay-webhook]
 verify_jwt = false
 

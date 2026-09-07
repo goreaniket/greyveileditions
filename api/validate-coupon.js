@@ -1,25 +1,16 @@
 const {
-  allowMethods,
-  authenticateUser,
-  previewCheckoutPricing,
-  readJsonBody,
+  proxyEdgeFunction,
   sendError,
-  sendJson,
 } = require('./_lib/greyveil-api')
 
-module.exports = async (req, res) => {
+const handler = async (req, res) => {
   try {
-    if (!allowMethods(req, res, ['POST', 'OPTIONS'])) return
-
-    const { user } = await authenticateUser(req)
-    const body = await readJsonBody(req)
-    const pricing = await previewCheckoutPricing(user, body)
-
-    sendJson(res, 200, {
-      success: true,
-      pricing,
-    })
+    await proxyEdgeFunction(req, res, 'validate-coupon')
   } catch (error) {
     sendError(res, error)
   }
 }
+
+handler.config = { api: { bodyParser: false } }
+
+module.exports = handler

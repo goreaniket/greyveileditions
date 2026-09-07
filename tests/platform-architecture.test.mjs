@@ -60,47 +60,16 @@ test('entitlement snapshot shares one access fetch across page consumers', async
   assert.equal(globalThis.__greyveilQueryCounts.temporary_access_pass_activations, 2)
 })
 
-test('managed RIZZ pricing remains server-calculated for every product type', async () => {
-  process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-  const api = await import('../api/_lib/greyveil-api.js')
-  globalThis.fetch = async (input) => {
-    const url = new URL(String(input))
-    const path = url.pathname
-    let rows = []
-    if (path.endsWith('/coupons') && url.searchParams.get('code') === 'eq.RIZZ') rows = [{
-      id: '60000000-0000-4000-8000-000000000001',
-      code: 'RIZZ',
-      active: true,
-      discount_type: 'fixed_final_price',
-      discount_value: 0,
-      fixed_final_price: 100,
-      applicable_purchase_types: ['book', 'series', 'collection'],
-      applies_to_all_products: true,
-    }]
-    return new Response(JSON.stringify(rows), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    })
-  }
-
-  const cases = [
-    ['book', 14900],
-    ['series', 59900],
-    ['series', 49900],
-    ['collection', 129900],
-  ]
-  for (const [purchaseType, amount] of cases) {
-    const purchase = { purchaseType, targetId: `${purchaseType}-target`, amount, currency: 'INR' }
-    const discounted = await api.resolveCouponPricing(purchase, 'rIzZ', 'user-id')
-    assert.equal(discounted.originalAmount, amount)
-    assert.equal(discounted.amount, 100)
-    assert.equal(discounted.discountAmount, amount - 100)
-    assert.equal(discounted.couponCode, 'RIZZ')
-
-    const invalid = await api.resolveCouponPricing(purchase, 'NOPE', 'user-id')
-    assert.equal(invalid.amount, amount)
-    assert.equal(invalid.couponCode, null)
-  }
+test('managed pricing remains server-calculated for every product type', async () => {
+  const [shared, validateCoupon] = await Promise.all([
+    readFile(new URL('../supabase/functions/_shared/payment.ts', import.meta.url), 'utf8'),
+    readFile(new URL('../supabase/functions/validate-coupon/index.ts', import.meta.url), 'utf8'),
+  ])
+  assert.match(shared, /const VALID_PURCHASE_TYPES = new Set\(\['book', 'series', 'collection', 'pass'\]\)/)
+  assert.match(shared, /fixed_final_price/)
+  assert.match(shared, /Math\.max\(100, Math\.min\(purchase\.amount, amount\)\)/)
+  assert.match(validateCoupon, /applyCoupon\(admin, resolved, body\.coupon_code, user\.id\)/)
+  assert.doesNotMatch(validateCoupon, /amount:\s*body\./)
 })
 
 test('checkout links preserve explicit product selection and a safe return path', async () => {
@@ -138,7 +107,8 @@ test('dedicated checkout owns coupon preview and delays order creation until fin
   assert.match(html, /Customer/)
   assert.match(html, /Coupon code <span>\(optional\)<\/span>/)
   assert.match(html, /Final Confirmation/)
-  assert.match(source, /apiPost\('\/api\/validate-coupon'/)
+  assert.match(source, /edgeFunctionPost\('validate-coupon'/)
+  assert.doesNotMatch(source, /apiPost|\/api\/(?:create-order|verify-payment|validate-coupon)/)
   assert.match(source, /payButton\.addEventListener\('click'/)
   assert.match(source, /edgeFunctionPost\('create-order'/)
   assert.match(source, /edgeFunctionPost\('verify-payment'/)
@@ -168,7 +138,7 @@ test('checkout opens Razorpay with trusted Book, Series, and Collection orders',
     before: 'const initCheckout',
     mocks: `
       const supabase = {};
-      const apiPost = async () => ({ paid: true });
+      const edgeFunctionPost = async () => ({ paid: true });
       const getText = (value, fallback = '') => String(value ?? '').trim() || fallback;
       const loadRazorpayCheckout = async () => class RazorpayMock {
         constructor(options) { this.options = options; globalThis.__greyveilRazorpayOptions.push(options); }
@@ -249,17 +219,17 @@ test('public review route matcher supports Greyveil book URLs', async () => {
 })
 
 test('public reader and purchase surfaces do not present an entitlement wait or book checkout', async () => {
-  const [reader, main, purchases, api] = await Promise.all([
+  const [reader, main, purchases, payment] = await Promise.all([
     readFile(new URL('../assets/js/reader.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/main.js', import.meta.url), 'utf8'),
     readFile(new URL('../assets/js/purchases.js', import.meta.url), 'utf8'),
-    readFile(new URL('../api/_lib/greyveil-api.js', import.meta.url), 'utf8'),
+    readFile(new URL('../supabase/functions/_shared/payment.ts', import.meta.url), 'utf8'),
   ])
   assert.doesNotMatch(reader, /Checking access\.\.\.|"Checking access"/)
   assert.match(main, /decision\.publicReadable/)
   assert.match(main, /data-purchase-type="book"/)
   assert.match(purchases, /detail\.reason === 'public'/)
-  assert.match(api, /public_book_not_purchasable/)
+  assert.match(payment, /public_book_not_purchasable/)
 })
 
 test('migration retains purchase validation and trusted platform policies', async () => {

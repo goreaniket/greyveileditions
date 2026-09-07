@@ -24,6 +24,17 @@ test('Edge create-order authenticates, resolves trusted targets, and reads persi
   assert.match(createOrder, /temporary_access_pass_id: purchase\.temporaryAccessPassId/)
 })
 
+test('coupon preview shares the canonical Edge purchase and pricing rules', async () => {
+  const validateCoupon = await source('../supabase/functions/validate-coupon/index.ts')
+  assert.match(validateCoupon, /authenticate\(request, admin\)/)
+  assert.match(validateCoupon, /resolvePurchase\(admin, body\)/)
+  assert.match(validateCoupon, /assertNotEntitled\(admin, user, resolved\)/)
+  assert.match(validateCoupon, /applyCoupon\(admin, resolved, body\.coupon_code, user\.id\)/)
+  assert.match(validateCoupon, /original_amount: purchase\.originalAmount/)
+  assert.match(validateCoupon, /final_amount: purchase\.amount/)
+  assert.doesNotMatch(validateCoupon, /amount:\s*body\./)
+})
+
 test('hierarchical commerce migration keeps parent ownership dynamic and temporary passes server-authoritative', async () => {
   const sql = await source('../supabase/hierarchical-commerce-access.sql')
   assert.match(sql, /add column if not exists price_amount integer/)
@@ -67,6 +78,83 @@ test('Edge webhook validates the raw body and reconciles captured, failed, and r
   assert.match(webhook, /refund\?\.payment_id/)
   assert.match(webhook, /status: 'refunded'/)
   assert.match(webhook, /recordPaymentTransition\(admin, order, payment/)
+})
+
+test('pending-order reconciliation is authenticated, provider-authoritative, and terminal-state safe', async () => {
+  const [shared, reconcile] = await Promise.all([
+    source('../supabase/functions/_shared/payment.ts'),
+    source('../supabase/functions/reconcile-payment/index.ts'),
+  ])
+  assert.match(reconcile, /authenticate\(request, admin\)/)
+  assert.match(reconcile, /validRecordId\(localOrderId\)/)
+  assert.match(reconcile, /\.eq\('user_id', user\.id\)/)
+  assert.match(reconcile, /reconcilePendingPayment\(admin, order\)/)
+  assert.match(shared, /TERMINAL_UNPAID_STATUSES = new Set\(\['failed', 'cancelled', 'refunded'\]\)/)
+  assert.ok(shared.indexOf('TERMINAL_UNPAID_STATUSES.has(currentStatus)') < shared.indexOf("razorpay(`/orders/${providerOrderId}`)"))
+  assert.match(shared, /Number\(providerOrder\?\.amount\) !== Number\(order\.amount\)/)
+  assert.match(shared, /providerOrder\?\.currency/)
+  assert.match(shared, /paymentMatches\(payment, order\)/)
+  assert.match(shared, /paymentCaptured\(payment\)/)
+  assert.match(shared, /recordPaymentTransition\(admin, order, captured, \{ status: 'paid', verified: true \}\)/)
+  assert.match(shared, /payment\?\.status === 'refunded' \|\| Number\(payment\?\.amount_refunded \|\| 0\) > 0/)
+  assert.match(shared, /\{ \.\.\.refunded, status: 'refunded' \}/)
+  assert.match(shared, /\{ status: 'refunded', verified: true \}/)
+  assert.doesNotMatch(shared, /reconcilePendingPayment[\s\S]+status: 'failed'/)
+})
+
+test('create-order reconciles and safely reuses an exact pending provider order', async () => {
+  const createOrder = await source('../supabase/functions/create-order/index.ts')
+  assert.match(createOrder, /\.eq\('user_id', user\.id\)/)
+  assert.match(createOrder, /\.eq\('purchase_type', purchase\.purchaseType\)/)
+  assert.match(createOrder, /\.eq\('status', 'pending'\)/)
+  assert.match(createOrder, /reconcilePendingPayment\(admin, existingPending\)/)
+  assert.match(createOrder, /if \(reconciliation\.paid\)[\s\S]+already_entitled/)
+  assert.match(createOrder, /Number\(existingPending\.amount\) === purchase\.amount/)
+  assert.match(createOrder, /existingPending\.razorpay_order_id/)
+  assert.match(createOrder, /payable_order_exists/)
+})
+
+test('legacy webhook compatibility preserves the signed raw body at the Edge boundary', async () => {
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
+  const api = await import('../api/_lib/greyveil-api.js')
+  const originalFetch = globalThis.fetch
+  let forwarded = null
+  globalThis.fetch = async (url, options) => {
+    forwarded = { url: String(url), options }
+    return new Response('{"success":true}', { status: 200, headers: { 'Content-Type': 'application/json' } })
+  }
+  const chunks = []
+  const response = {
+    setHeader() {},
+    end(chunk) { chunks.push(Buffer.from(chunk)) },
+  }
+
+  try {
+    await api.proxyEdgeFunction({
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-razorpay-signature': 'signed-value',
+      },
+      body: Buffer.from('{"event":"payment.captured"}'),
+    }, response, 'razorpay-webhook')
+  } finally {
+    globalThis.fetch = originalFetch
+  }
+
+  assert.match(forwarded.url, /\/functions\/v1\/razorpay-webhook$/)
+  assert.equal(forwarded.options.headers['x-razorpay-signature'], 'signed-value')
+  assert.equal(Buffer.from(forwarded.options.body).toString('utf8'), '{"event":"payment.captured"}')
+  assert.equal(Buffer.concat(chunks).toString('utf8'), '{"success":true}')
+})
+
+test('Vercel payment URLs are compatibility proxies without duplicate payment decisions', async () => {
+  const paths = ['create-order', 'verify-payment', 'validate-coupon', 'razorpay-webhook']
+  for (const path of paths) {
+    const handler = await source(`../api/${path}.js`)
+    assert.match(handler, new RegExp(`proxyEdgeFunction\\(req, res, ['"]${path}['"]\\)`))
+    assert.doesNotMatch(handler, /resolvePurchase|resolveCouponPricing|verifyPaymentSignature|verifyWebhookSignature|recordPaymentTransition/)
+  }
 })
 
 test('paid-order migration grants eligible book, series, and collection access idempotently', async () => {
@@ -116,5 +204,7 @@ test('server secrets remain confined to Edge code and config enables an unsigned
   }
   assert.match(config, /\[functions\.create-order\][\s\S]+verify_jwt = true/)
   assert.match(config, /\[functions\.verify-payment\][\s\S]+verify_jwt = true/)
+  assert.match(config, /\[functions\.validate-coupon\][\s\S]+verify_jwt = true/)
+  assert.match(config, /\[functions\.reconcile-payment\][\s\S]+verify_jwt = true/)
   assert.match(config, /\[functions\.razorpay-webhook\][\s\S]+verify_jwt = false/)
 })

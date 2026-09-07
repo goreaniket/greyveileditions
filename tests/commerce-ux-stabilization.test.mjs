@@ -177,19 +177,16 @@ test('active Pass discovery is scoped, uses database values, and does not duplic
   assert.match(homePass, /formatCurrency\(pass\.price_amount\)/)
 })
 
-test('Pass remains valid through both current server checkout implementations with trusted price resolution', async () => {
-  const [edgePayment, apiPayment, migration] = await Promise.all([
+test('Pass remains valid through the canonical Edge checkout with trusted price resolution', async () => {
+  const [edgePayment, migration] = await Promise.all([
     source('../supabase/functions/_shared/payment.ts'),
-    source('../api/_lib/greyveil-api.js'),
     source('../supabase/temporary-access-pass-production-fix.sql'),
   ])
 
-  for (const implementation of [edgePayment, apiPayment]) {
-    assert.match(implementation, /new Set\(\['book', 'series', 'collection', 'pass'\]\)/)
-    assert.match(implementation, /temporary_access_pass_id/)
-    assert.match(implementation, /purchaseType === 'pass'/)
-    assert.match(implementation, /configuredPrice\(pass, 'access pass'\)/)
-  }
+  assert.match(edgePayment, /new Set\(\['book', 'series', 'collection', 'pass'\]\)/)
+  assert.match(edgePayment, /temporary_access_pass_id/)
+  assert.match(edgePayment, /purchaseType === 'pass'/)
+  assert.match(edgePayment, /configuredPrice\(pass, 'access pass'\)/)
   assert.match(migration, /new\.purchase_type is distinct from 'pass'/)
   assert.match(migration, /activation_time \+ make_interval\(hours => pass_row\.duration_hours\)/)
 })

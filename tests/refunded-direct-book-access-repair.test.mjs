@@ -6,13 +6,12 @@ const repair = await readFile(
   new URL('../supabase/repair-refunded-direct-book-access.sql', import.meta.url),
   'utf8',
 )
-const [checkout, hierarchy, passReaderRepair, callerBindingRepair, webhook, api, readerEdge] = await Promise.all([
+const [checkout, hierarchy, passReaderRepair, callerBindingRepair, webhook, readerEdge] = await Promise.all([
   readFile(new URL('../supabase/razorpay-standard-checkout.sql', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/hierarchical-commerce-access.sql', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/repair-refunded-pass-reader-access.sql', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/repair-caller-binding-probes.sql', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/functions/razorpay-webhook/index.ts', import.meta.url), 'utf8'),
-  readFile(new URL('../api/_lib/greyveil-api.js', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/functions/reader-content/index.ts', import.meta.url), 'utf8'),
 ])
 
@@ -41,7 +40,6 @@ test('canonical producer, refund, and database-consumer paths are explicitly aud
   assert.match(callerBindingRepair, /create or replace function public\.greyveil_effective_book_access_internal/i)
   assert.match(callerBindingRepair, /from public\.book_access access/i)
   assert.match(webhook, /recordPaymentTransition\(admin, order, payment, \{[^}]*status: 'refunded'/)
-  assert.match(api, /recordPaymentTransition\(order, payment, \{[^}]*status: 'refunded'/)
   assert.match(readerEdge, /\.rpc\('greyveil_reader_content_authorization'/)
 })
 

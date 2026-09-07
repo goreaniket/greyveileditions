@@ -1,4 +1,4 @@
-import { applyCoupon, assertNotEntitled, authenticate, errorResponse, handleOptions, HttpError, json, parseBody, razorpay, requireEnv, resolvePurchase, serviceClient } from '../_shared/payment.ts'
+import { applyCoupon, assertNotEntitled, authenticate, errorResponse, handleOptions, HttpError, json, parseBody, razorpay, reconcilePendingPayment, requireEnv, resolvePurchase, serviceClient } from '../_shared/payment.ts'
 
 Deno.serve(async (request) => {
   const preflight = handleOptions(request)
@@ -11,6 +11,26 @@ Deno.serve(async (request) => {
     const resolved = await resolvePurchase(admin, body)
     await assertNotEntitled(admin, user, resolved)
     const purchase = await applyCoupon(admin, resolved, body.coupon_code, user.id)
+    const targetField = purchase.purchaseType === 'pass' ? 'temporary_access_pass_id' : `${purchase.purchaseType}_id`
+    const { data: existingPending, error: pendingError } = await admin.from('orders').select('*')
+      .eq('user_id', user.id)
+      .eq('purchase_type', purchase.purchaseType)
+      .eq(targetField, purchase.targetId)
+      .eq('status', 'pending')
+      .maybeSingle()
+    if (pendingError) throw new HttpError(500, 'Pending order data could not be read.', 'database_read_failed')
+    if (existingPending) {
+      const reconciliation = await reconcilePendingPayment(admin, existingPending)
+      if (reconciliation.paid) throw new HttpError(409, 'This item is already in your library.', 'already_entitled')
+      if (reconciliation.status === 'pending'
+          && existingPending.razorpay_order_id
+          && Number(existingPending.amount) === purchase.amount
+          && String(existingPending.currency).toUpperCase() === purchase.currency
+          && String(existingPending.coupon_code || '') === String(purchase.couponCode || '')) {
+        return json(200, { success: true, order: { order_id: existingPending.razorpay_order_id, local_order_id: existingPending.id, key_id: requireEnv('RAZORPAY_KEY_ID'), amount: purchase.amount, original_amount: purchase.originalAmount, coupon_code: purchase.couponCode, discount_amount: purchase.discountAmount, currency: purchase.currency } }, request)
+      }
+      if (reconciliation.status === 'pending') throw new HttpError(409, 'An active checkout already exists for this item.', 'payable_order_exists')
+    }
     const now = new Date().toISOString()
     const { data: localOrder, error: localError } = await admin.from('orders').insert({
       user_id: user.id, purchase_type: purchase.purchaseType, book_id: purchase.bookId, series_id: purchase.seriesId,

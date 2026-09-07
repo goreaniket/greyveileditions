@@ -1,6 +1,5 @@
 import { supabase } from './supabase-client.js'
 import {
-  apiPost,
   checkoutSelectionFromSearch,
   edgeFunctionPost,
   formatCurrency,
@@ -172,12 +171,31 @@ export const openRazorpay = async ({ user, profile, order, itemName, onVerifying
       handler: async (response) => {
         try {
           onVerifying()
-          resolve(await edgeFunctionPost('verify-payment', {
+          let verification = null
+          let verificationError = null
+          try {
+            verification = await edgeFunctionPost('verify-payment', {
+              local_order_id: order.local_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_signature: response.razorpay_signature,
+            })
+          } catch (error) {
+            verificationError = error
+          }
+          if (verification?.paid) {
+            resolve(verification)
+            return
+          }
+          const reconciliation = await edgeFunctionPost('reconcile-payment', {
             local_order_id: order.local_order_id,
-            razorpay_payment_id: response.razorpay_payment_id,
-            razorpay_order_id: response.razorpay_order_id,
-            razorpay_signature: response.razorpay_signature,
-          }))
+          }).catch(() => null)
+          if (reconciliation?.paid) {
+            resolve(reconciliation)
+            return
+          }
+          if (verification) resolve(verification)
+          else throw verificationError || new Error('Payment confirmation returned no result.')
         } catch (error) {
           reject(error)
         }
@@ -241,7 +259,7 @@ const initCheckout = async () => {
   }
 
   try {
-    const result = await apiPost('/api/validate-coupon', selection.payload)
+    const result = await edgeFunctionPost('validate-coupon', selection.payload)
     basePricing = result.pricing
     currentPricing = result.pricing
     node('[data-checkout-product]').textContent = getText(basePricing.item_name, 'Greyveil purchase')
@@ -276,7 +294,7 @@ const initCheckout = async () => {
     setBusy(couponForm.querySelector('button[type="submit"]'), true, 'Applying...')
     payButton.disabled = true
     try {
-      const { pricing } = await apiPost('/api/validate-coupon', { ...selection.payload, coupon_code: code })
+      const { pricing } = await edgeFunctionPost('validate-coupon', { ...selection.payload, coupon_code: code })
       if (!pricing.valid) {
         resetCoupon()
         setStatus(couponStatus, 'Invalid coupon code. You can continue at the regular price.', 'error')

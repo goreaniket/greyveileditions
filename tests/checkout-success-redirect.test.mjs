@@ -159,6 +159,7 @@ test('checkout copy and state transitions stay simple and refresh access before 
   assert.match(checkout, /Confirming payment…/)
   assert.equal((checkout.match(/Confirming payment…/g) || []).length, 1)
   assert.match(checkout, /handler: async \(response\) => \{[\s\S]+onVerifying\(\)[\s\S]+edgeFunctionPost\('verify-payment'/)
+  assert.match(checkout, /if \(verification\?\.paid\)[\s\S]+edgeFunctionPost\('reconcile-payment'/)
   assert.match(checkout, /if \(paymentInFlight\) return[\s\S]+paymentInFlight = true/)
   assert.match(checkout, /getEntitlementSnapshot\(\{ force: true \}\)[\s\S]+resolveCheckoutSuccessDestination[\s\S]+scheduleCheckoutRedirect/)
   assert.match(checkout, /querySelectorAll\('\[data-checkout-return\]'\)[\s\S]+link\.hidden = true/)

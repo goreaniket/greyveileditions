@@ -2,13 +2,12 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import test from 'node:test'
 
-const [repair, shared, createOrder, verifyPayment, webhook, api] = await Promise.all([
+const [repair, shared, createOrder, verifyPayment, webhook] = await Promise.all([
   readFile(new URL('../supabase/repair-payment-state-and-duplicate-orders.sql', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/functions/_shared/payment.ts', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/functions/create-order/index.ts', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/functions/verify-payment/index.ts', import.meta.url), 'utf8'),
   readFile(new URL('../supabase/functions/razorpay-webhook/index.ts', import.meta.url), 'utf8'),
-  readFile(new URL('../api/_lib/greyveil-api.js', import.meta.url), 'utf8'),
 ])
 
 const sqlFunction = (name) => {
@@ -82,37 +81,26 @@ test('concurrent checkout creation is serialized per user and exact entitlement'
   }
   assert.match(duplicateGuard, /errcode = '23505'/i)
   assert.match(createOrder, /localError\?\.code === '23505'/)
-  assert.match(api, /error\?\.code === '23505'/)
   assert.match(createOrder, /payable_order_exists/)
-  assert.match(api, /payable_order_exists/)
 })
 
 test('verify and webhook callers use the atomic RPC and retain all payment checks', () => {
   assert.match(shared, /admin\.rpc\('greyveil_record_payment_transition'/)
-  assert.match(api, /callRpc\('greyveil_record_payment_transition'/)
   assert.match(verifyPayment, /verifyHmac\(requireEnv\('RAZORPAY_KEY_SECRET'/)
   assert.match(verifyPayment, /paymentMatches\(payment, order\)/)
   assert.match(verifyPayment, /paymentCaptured\(payment\)/)
   assert.match(verifyPayment, /\.eq\('user_id', user\.id\)/)
   assert.match(webhook, /RAZORPAY_WEBHOOK_SECRET/)
   assert.match(webhook, /recordPaymentTransition\(admin, order, payment/)
-  assert.match(api, /verifyPaymentSignature/)
-  assert.match(api, /paymentMatchesOrder\(payment, order\)/)
-  assert.match(api, /paymentCaptured\(payment\)/)
-  assert.match(api, /fetchUserOrder\(localOrderId, user\.id\)/)
 })
 
 test('Book, Series, Collection, and Pass checkout remain server-priced and target-bound', () => {
   for (const type of ['book', 'series', 'collection', 'pass']) {
     assert.match(shared, new RegExp(`['\"]${type}['\"]`))
-    assert.match(api, new RegExp(`['\"]${type}['\"]`))
   }
   assert.match(createOrder, /amount: purchase\.amount/)
   assert.doesNotMatch(createOrder, /amount:\s*body\./)
-  assert.match(api, /amount: purchase\.amount/)
-  assert.doesNotMatch(api, /amount:\s*body\./)
   assert.match(createOrder, /temporary_access_pass_id: purchase\.temporaryAccessPassId/)
-  assert.match(api, /temporary_access_pass_id: purchase\.temporaryAccessPassId/)
 })
 
 test('repair is targeted to payment state and creates no production data changes', () => {

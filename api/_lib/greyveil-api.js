@@ -1,38 +1,4 @@
-const crypto = require('crypto')
-
 const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
-const VALID_PURCHASE_TYPES = new Set(['book', 'series', 'collection', 'pass'])
-const UUID_OR_NUMERIC_PATTERN = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|\d+)$/i
-const INR = 'INR'
-
-const COLLECTION_SELECT = 'id, slug, title, description, visibility, is_active, sort_order, price_amount, created_at, updated_at'
-const VOLUME_SELECT = 'id, collection_id, slug, title, description, visibility, is_active, sort_order, created_at, updated_at'
-const SERIES_SELECT = 'id, collection_id, volume_id, slug, title, description, visibility, is_active, price_amount, sort_order, created_at, updated_at'
-const BOOK_SELECT = 'id, title, series, book_number, slug, visibility, series_id, is_public, is_active, price_amount'
-const TEMPORARY_PASS_SELECT = 'id, slug, title, active, price_amount, duration_hours, scope_type, collection_id'
-const BOOK_ACCESS_SELECT = 'user_id, book_id, access_type, granted_at, expires_at, is_visible, can_read'
-const ORDER_SELECT = [
-  'id',
-  'user_id',
-  'purchase_type',
-  'book_id',
-  'series_id',
-  'collection_id',
-  'temporary_access_pass_id',
-  'item_name',
-  'original_amount',
-  'amount',
-  'coupon_code',
-  'discount_amount',
-  'coupon_id',
-  'currency',
-  'status',
-  'razorpay_order_id',
-  'created_at',
-  'updated_at',
-  'paid_at',
-  'verified_at',
-].join(', ')
 
 class ApiError extends Error {
   constructor(statusCode, message, code = 'request_failed', details = null) {
@@ -49,110 +15,18 @@ const getText = (value, fallback = '') => {
   return text || fallback
 }
 
-const normalizeSlug = (value) => getText(value)
-  .toLowerCase()
-  .replace(/[_\s]+/g, '-')
-  .replace(/-+/g, '-')
-  .replace(/^-+|-+$/g, '')
-
-const normalizeCouponCode = (value) => getText(value).toUpperCase()
-
-const undiscountedPricing = (purchase) => ({
-  ...purchase,
-  amount: Number(purchase.amount),
-  originalAmount: Number(purchase.amount),
-  couponId: null,
-  couponCode: null,
-  discountAmount: 0,
-  couponValid: false,
-})
-
-const resolveCouponPricing = async (purchase, couponCode, userId = null) => {
-  const normalizedCode = normalizeCouponCode(couponCode)
-  if (!normalizedCode) return undiscountedPricing(purchase)
-
-  const originalAmount = Number(purchase.amount)
-  const coupon = await selectOne('coupons', {
-    code: `eq.${normalizedCode}`,
-    select: 'id, code, active, discount_type, discount_value, fixed_final_price, valid_from, valid_until, maximum_total_uses, maximum_uses_per_user, applicable_purchase_types, applies_to_all_products',
-  })
-
-  const now = Date.now()
-  const validFrom = coupon?.valid_from ? Date.parse(coupon.valid_from) : null
-  const validUntil = coupon?.valid_until ? Date.parse(coupon.valid_until) : null
-  const appliesToType = Array.isArray(coupon?.applicable_purchase_types)
-    && coupon.applicable_purchase_types.includes(purchase.purchaseType)
-
-  if (!coupon?.active
-      || !appliesToType
-      || (Number.isFinite(validFrom) && validFrom > now)
-      || (Number.isFinite(validUntil) && validUntil <= now)) {
-    return undiscountedPricing(purchase)
-  }
-
-  const productRules = await selectRows('coupon_products', {
-    coupon_id: `eq.${coupon.id}`,
-    select: 'purchase_type, target_id',
-  })
-  if (coupon.applies_to_all_products === false && !productRules.some((rule) => {
-    return rule.purchase_type === purchase.purchaseType
-      && String(rule.target_id) === String(purchase.targetId)
-  })) {
-    return undiscountedPricing(purchase)
-  }
-
-  const usages = await selectRows('coupon_usages', {
-    coupon_id: `eq.${coupon.id}`,
-    status: 'in.(pending,redeemed)',
-    select: 'user_id, status, created_at',
-  })
-  const countedUsages = usages.filter((usage) => {
-    if (usage.status === 'redeemed') return true
-    const createdAt = Date.parse(usage.created_at)
-    return Number.isFinite(createdAt) && createdAt > now - 30 * 60 * 1000
-  })
-  const userUsages = countedUsages.filter((usage) => String(usage.user_id) === String(userId))
-  if ((coupon.maximum_total_uses && countedUsages.length >= Number(coupon.maximum_total_uses))
-      || (coupon.maximum_uses_per_user && userUsages.length >= Number(coupon.maximum_uses_per_user))) {
-    return undiscountedPricing(purchase)
-  }
-
-  let finalAmount = originalAmount
-  if (coupon.discount_type === 'fixed_final_price') {
-    finalAmount = Number(coupon.fixed_final_price)
-  } else if (coupon.discount_type === 'fixed_amount') {
-    finalAmount = originalAmount - Number(coupon.discount_value || 0)
-  } else if (coupon.discount_type === 'percentage') {
-    finalAmount = Math.round(originalAmount * (100 - Number(coupon.discount_value || 0)) / 100)
-  }
-  finalAmount = Math.max(100, Math.min(originalAmount, finalAmount))
-
-  return {
-    ...purchase,
-    amount: finalAmount,
-    originalAmount,
-    couponId: coupon.id,
-    couponCode: coupon.code,
-    discountAmount: originalAmount - finalAmount,
-    couponValid: true,
-  }
-}
-
 const env = (name, aliases = [], { required = true } = {}) => {
   const value = [name, ...aliases].map((key) => process.env[key]).find((item) => getText(item))
-  if (required && !value) {
-    throw new ApiError(500, `${name} is not configured.`, 'server_config_missing')
-  }
+  if (required && !value) throw new ApiError(500, `${name} is not configured.`, 'server_config_missing')
   return value || ''
 }
 
-const supabaseUrl = () => getText(process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL, DEFAULT_SUPABASE_URL).replace(/\/+$/, '')
+const supabaseUrl = () => getText(
+  process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL,
+  DEFAULT_SUPABASE_URL,
+).replace(/\/+$/, '')
 
 const supabaseServiceKey = () => env('SUPABASE_SERVICE_ROLE_KEY', ['SUPABASE_SERVICE_KEY'])
-
-const razorpayKeyId = () => env('RAZORPAY_KEY_ID')
-
-const razorpayKeySecret = () => env('RAZORPAY_KEY_SECRET')
 
 const sendJson = (res, statusCode, payload) => {
   res.statusCode = statusCode
@@ -166,10 +40,7 @@ const sendError = (res, error) => {
   const message = statusCode >= 500 ? 'The payment service could not complete the request.' : error.message
   sendJson(res, statusCode, {
     success: false,
-    error: {
-      code: error?.code || 'request_failed',
-      message,
-    },
+    error: { code: error?.code || 'request_failed', message },
   })
 }
 
@@ -179,11 +50,7 @@ const allowMethods = (req, res, methods) => {
     sendJson(res, 204, {})
     return false
   }
-
-  if (!methods.includes(req.method)) {
-    throw new ApiError(405, 'Method not allowed.', 'method_not_allowed')
-  }
-
+  if (!methods.includes(req.method)) throw new ApiError(405, 'Method not allowed.', 'method_not_allowed')
   return true
 }
 
@@ -196,24 +63,10 @@ const readRawBodyBuffer = async (req) => {
       req.on('error', reject)
     })
   }
-
   if (Buffer.isBuffer(req.body)) return req.body
   if (typeof req.body === 'string') return Buffer.from(req.body, 'utf8')
   if (req.body && typeof req.body === 'object') return Buffer.from(JSON.stringify(req.body), 'utf8')
   return Buffer.alloc(0)
-}
-
-const readJsonBody = async (req) => {
-  if (req.body && typeof req.body === 'object' && !Buffer.isBuffer(req.body)) return req.body
-  const raw = await readRawBodyBuffer(req)
-  const text = raw.toString('utf8').trim()
-  if (!text) return {}
-
-  try {
-    return JSON.parse(text)
-  } catch (_error) {
-    throw new ApiError(400, 'Request body must be valid JSON.', 'invalid_json')
-  }
 }
 
 const getBearerToken = (req) => {
@@ -225,7 +78,6 @@ const getBearerToken = (req) => {
 const parseJsonResponse = async (response) => {
   const text = await response.text()
   if (!text) return null
-
   try {
     return JSON.parse(text)
   } catch (_error) {
@@ -233,36 +85,24 @@ const parseJsonResponse = async (response) => {
   }
 }
 
-const supabaseRest = async (table, { method = 'GET', query = {}, body, headers = {} } = {}) => {
+const supabaseRest = async (table, { query = {} } = {}) => {
   const key = supabaseServiceKey()
   const url = new URL(`/rest/v1/${table}`, `${supabaseUrl()}/`)
-
   Object.entries(query).forEach(([name, value]) => {
-    if (value == null) return
-    if (Array.isArray(value)) {
-      value.forEach((item) => url.searchParams.append(name, item))
-      return
-    }
-    url.searchParams.set(name, value)
+    if (value != null) url.searchParams.set(name, value)
   })
-
   const response = await fetch(url, {
-    method,
     headers: {
       apikey: key,
       Authorization: `Bearer ${key}`,
       'Content-Type': 'application/json',
-      ...headers,
     },
-    body: body === undefined ? undefined : JSON.stringify(body),
   })
   const payload = await parseJsonResponse(response)
-
   if (!response.ok) {
     const message = payload?.message || payload?.hint || response.statusText || 'Supabase request failed.'
     throw new ApiError(response.status, message, payload?.code || 'supabase_request_failed', payload)
   }
-
   return payload
 }
 
@@ -276,53 +116,50 @@ const selectRows = async (table, query) => {
   return Array.isArray(rows) ? rows : []
 }
 
-const insertRows = async (table, rows) => supabaseRest(table, {
-  method: 'POST',
-  body: rows,
-  headers: { Prefer: 'return=representation' },
-})
-
-const updateRows = async (table, query, updates) => supabaseRest(table, {
-  method: 'PATCH',
-  query,
-  body: updates,
-  headers: { Prefer: 'return=representation' },
-})
-
-const callRpc = (name, parameters) => supabaseRest(`rpc/${name}`, {
-  method: 'POST',
-  body: parameters,
-})
-
 const authenticateUser = async (req) => {
   const token = getBearerToken(req)
   if (!token) throw new ApiError(401, 'Please log in before starting checkout.', 'login_required')
-
   const key = supabaseServiceKey()
   const response = await fetch(`${supabaseUrl()}/auth/v1/user`, {
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${token}`,
-    },
+    headers: { apikey: key, Authorization: `Bearer ${token}` },
   })
   const user = await parseJsonResponse(response)
-
-  if (!response.ok || !user?.id) {
-    throw new ApiError(401, 'Your session could not be confirmed. Please log in again.', 'invalid_session')
-  }
-
+  if (!response.ok || !user?.id) throw new ApiError(401, 'Your session could not be confirmed. Please log in again.', 'invalid_session')
   return { user, token }
 }
 
-const requireAdminUser = async (user, { superAdmin = false } = {}) => {
+const proxyEdgeFunction = async (req, res, functionName) => {
+  if (!allowMethods(req, res, ['POST', 'OPTIONS'])) return
+  const body = await readRawBodyBuffer(req)
+  const key = supabaseServiceKey()
+  const headers = {
+    apikey: key,
+    'Content-Type': getText(req.headers['content-type'], 'application/json'),
+  }
+  const authorization = getText(req.headers.authorization || req.headers.Authorization)
+  const webhookSignature = getText(req.headers['x-razorpay-signature'])
+  if (authorization) headers.Authorization = authorization
+  if (webhookSignature) headers['x-razorpay-signature'] = webhookSignature
+  const response = await fetch(`${supabaseUrl()}/functions/v1/${functionName}`, {
+    method: 'POST',
+    headers,
+    body,
+  })
+  const responseBody = Buffer.from(await response.arrayBuffer())
+  res.statusCode = response.status
+  res.setHeader('Content-Type', response.headers.get('content-type') || 'application/json; charset=utf-8')
+  res.setHeader('Cache-Control', 'no-store')
+  res.end(responseBody)
+}
+
+const requireAdminUser = async (user) => {
   const profile = await selectOne('profiles', {
     id: `eq.${user.id}`,
     select: 'id, display_name, role, created_at',
   })
-  const allowed = superAdmin
-    ? profile?.role === 'super_admin'
-    : ['admin', 'super_admin'].includes(profile?.role)
-  if (!allowed) throw new ApiError(403, 'Admin permission is required.', 'admin_required')
+  if (!['admin', 'super_admin'].includes(profile?.role)) {
+    throw new ApiError(403, 'Admin permission is required.', 'admin_required')
+  }
   return profile
 }
 
@@ -331,15 +168,9 @@ const listAdminUsers = async (user) => {
   const key = supabaseServiceKey()
   const [authResponse, profiles, paidOrders, accessGrants] = await Promise.all([
     fetch(`${supabaseUrl()}/auth/v1/admin/users?per_page=1000`, {
-      headers: {
-        apikey: key,
-        Authorization: `Bearer ${key}`,
-      },
+      headers: { apikey: key, Authorization: `Bearer ${key}` },
     }),
-    selectRows('profiles', {
-      select: 'id, display_name, role, created_at',
-      order: 'created_at.desc',
-    }),
+    selectRows('profiles', { select: 'id, display_name, role, created_at', order: 'created_at.desc' }),
     selectRows('orders', {
       status: 'eq.paid',
       select: 'user_id, purchase_type, book_id, series_id, collection_id, amount',
@@ -351,22 +182,17 @@ const listAdminUsers = async (user) => {
     }),
   ])
   const authPayload = await parseJsonResponse(authResponse)
-  if (!authResponse.ok) {
-    throw new ApiError(authResponse.status, 'Users could not be loaded.', 'auth_admin_read_failed')
-  }
-
+  if (!authResponse.ok) throw new ApiError(authResponse.status, 'Users could not be loaded.', 'auth_admin_read_failed')
   const authUsers = Array.isArray(authPayload?.users) ? authPayload.users : []
   const authById = new Map(authUsers.map((item) => [String(item.id), item]))
   const now = Date.now()
   return profiles.map((profile) => {
     const authUser = authById.get(String(profile.id))
     const orders = paidOrders.filter((order) => String(order.user_id) === String(profile.id))
-    const grants = accessGrants.filter((grant) => {
-      if (String(grant.user_id) !== String(profile.id)) return false
-      if (!grant.expires_at) return true
-      const expiry = Date.parse(grant.expires_at)
-      return Number.isFinite(expiry) && expiry > now
-    })
+    const grants = accessGrants.filter((grant) => (
+      String(grant.user_id) === String(profile.id)
+      && (!grant.expires_at || Date.parse(grant.expires_at) > now)
+    ))
     return {
       id: profile.id,
       display_name: profile.display_name,
@@ -384,677 +210,11 @@ const listAdminUsers = async (user) => {
   })
 }
 
-const requireValidId = (value, label) => {
-  const id = getText(value)
-  if (!UUID_OR_NUMERIC_PATTERN.test(id)) {
-    throw new ApiError(400, `${label} is not valid.`, 'invalid_purchase_target')
-  }
-  return id
-}
-
-const fetchById = (table, id, select) => selectOne(table, {
-  id: `eq.${id}`,
-  select,
-})
-
-const receiptForOrder = (localOrderId) => {
-  const digest = crypto.createHash('sha256').update(getText(localOrderId)).digest('hex').slice(0, 32)
-  return `gve_${digest}`
-}
-
-const normalizeVisibility = (value, fallback = 'paid') => {
-  const visibility = normalizeSlug(value)
-  return ['public', 'paid', 'private'].includes(visibility) ? visibility : fallback
-}
-
-const visibilityForBook = (book) => {
-  const explicitVisibility = normalizeVisibility(book?.visibility, 'paid')
-  if (explicitVisibility === 'private') return 'private'
-  if (book?.is_public === true || explicitVisibility === 'public') return 'public'
-  return 'paid'
-}
-
-const isActive = (item) => item?.is_active !== false
-
-const effectiveVisibility = ({ collection = null, volume = null, series = null, book = null } = {}) => {
-  const items = [collection, volume, series, book].filter(Boolean)
-  if (!items.length) return 'private'
-  if (items.some((item) => normalizeVisibility(item?.visibility, 'public') === 'private')) return 'private'
-  if (items.some((item) => normalizeVisibility(item?.visibility, 'public') === 'paid')) return 'paid'
-  return 'public'
-}
-
-const hierarchyIsActive = ({ collection = null, volume = null, series = null, book = null } = {}) => {
-  return [collection, volume, series, book].every((item) => !item || isActive(item))
-}
-
-const hierarchyIsComplete = ({ collection = null, volume = null, series = null, book = null } = {}) => {
-  if (book) return Boolean(collection && volume && series)
-  if (series) return Boolean(collection && volume)
-  if (volume) return Boolean(collection)
-  return Boolean(collection)
-}
-
-const assertPurchaseableHierarchy = (hierarchy) => {
-  if (!hierarchyIsComplete(hierarchy) || !hierarchyIsActive(hierarchy)) {
-    throw new ApiError(404, 'This purchase is not currently available.', 'purchase_unavailable')
-  }
-
-  const book = hierarchy.book ? { ...hierarchy.book, visibility: visibilityForBook(hierarchy.book) } : null
-  if (effectiveVisibility({ ...hierarchy, book }) === 'private') {
-    throw new ApiError(404, 'This purchase is not currently available.', 'purchase_unavailable')
-  }
-}
-
-const configuredPrice = (item, label) => {
-  const amount = Number(item?.price_amount)
-  if (!Number.isInteger(amount) || amount <= 0) {
-    throw new ApiError(400, `This ${label} is not configured for checkout.`, 'price_not_configured')
-  }
-  return amount
-}
-
-const resolveCollectionForSeries = async (series, volume = null) => {
-  const collectionId = series?.collection_id || volume?.collection_id
-  return collectionId ? fetchById('collections', collectionId, COLLECTION_SELECT) : null
-}
-
-const resolvePurchaseFromBody = async (body) => {
-  const purchaseType = normalizeSlug(body?.purchase_type)
-  if (!VALID_PURCHASE_TYPES.has(purchaseType)) {
-    throw new ApiError(400, 'Choose a valid purchase type.', 'invalid_purchase_type')
-  }
-
-  const targetFields = {
-    book: getText(body?.book_id),
-    series: getText(body?.series_id),
-    collection: getText(body?.collection_id),
-    pass: getText(body?.temporary_access_pass_id),
-  }
-  const providedTargets = Object.entries(targetFields).filter(([, value]) => value)
-
-  if (providedTargets.length !== 1 || providedTargets[0][0] !== purchaseType) {
-    throw new ApiError(400, 'Send exactly one matching purchase target.', 'invalid_purchase_target')
-  }
-
-  if (purchaseType === 'book') {
-    const bookId = requireValidId(targetFields.book, 'book_id')
-    const book = await fetchById('books', bookId, BOOK_SELECT)
-    if (!book) throw new ApiError(404, 'This book is not available.', 'purchase_unavailable')
-
-    const series = book.series_id ? await fetchById('series', book.series_id, SERIES_SELECT) : null
-    const volume = series?.volume_id ? await fetchById('volumes', series.volume_id, VOLUME_SELECT) : null
-    const collection = await resolveCollectionForSeries(series, volume)
-    const hierarchy = { collection, volume, series, book }
-    assertPurchaseableHierarchy(hierarchy)
-    if (visibilityForBook(book) === 'public') {
-      throw new ApiError(409, 'This book is free to read and cannot be purchased.', 'public_book_not_purchasable')
-    }
-
-    return {
-      purchaseType,
-      bookId,
-      seriesId: null,
-      collectionId: null,
-      temporaryAccessPassId: null,
-      targetId: bookId,
-      itemName: getText(book.title, 'Greyveil Book'),
-      amount: configuredPrice(book, 'book'),
-      currency: INR,
-      hierarchy,
-    }
-  }
-
-  if (purchaseType === 'series') {
-    const seriesId = requireValidId(targetFields.series, 'series_id')
-    const series = await fetchById('series', seriesId, SERIES_SELECT)
-    if (!series) throw new ApiError(404, 'This series is not available.', 'purchase_unavailable')
-
-    const volume = series.volume_id ? await fetchById('volumes', series.volume_id, VOLUME_SELECT) : null
-    const collection = await resolveCollectionForSeries(series, volume)
-    const hierarchy = { collection, volume, series }
-    assertPurchaseableHierarchy(hierarchy)
-
-    const amount = configuredPrice(series, 'series')
-
-    return {
-      purchaseType,
-      bookId: null,
-      seriesId,
-      collectionId: null,
-      temporaryAccessPassId: null,
-      targetId: seriesId,
-      itemName: getText(series.title, 'Greyveil Series'),
-      amount,
-      currency: INR,
-      hierarchy,
-    }
-  }
-
-  if (purchaseType === 'pass') {
-    const passId = requireValidId(targetFields.pass, 'temporary_access_pass_id')
-    const pass = await fetchById('temporary_access_passes', passId, TEMPORARY_PASS_SELECT)
-    if (!pass?.active) throw new ApiError(404, 'This access pass is not available.', 'purchase_unavailable')
-    const collection = pass.scope_type === 'collection'
-      ? await fetchById('collections', pass.collection_id, COLLECTION_SELECT)
-      : null
-    if (pass.scope_type === 'collection') assertPurchaseableHierarchy({ collection })
-    const amount = configuredPrice(pass, 'access pass')
-    return {
-      purchaseType,
-      bookId: null,
-      seriesId: null,
-      collectionId: null,
-      temporaryAccessPassId: passId,
-      targetId: passId,
-      itemName: getText(pass.title, 'Greyveil Access Pass'),
-      amount,
-      currency: INR,
-      hierarchy: { collection },
-    }
-  }
-
-  const collectionId = requireValidId(targetFields.collection, 'collection_id')
-  const collection = await fetchById('collections', collectionId, COLLECTION_SELECT)
-  if (!collection) throw new ApiError(404, 'This collection is not available.', 'purchase_unavailable')
-
-  const hierarchy = { collection }
-  assertPurchaseableHierarchy(hierarchy)
-  const amount = configuredPrice(collection, 'collection')
-
-  return {
-    purchaseType,
-    bookId: null,
-    seriesId: null,
-    collectionId,
-    temporaryAccessPassId: null,
-    targetId: collectionId,
-    itemName: getText(collection.title, 'Greyveil Collection'),
-    amount,
-    currency: INR,
-    hierarchy,
-  }
-}
-
-const idsMatch = (left, right) => String(left ?? '') === String(right ?? '')
-
-const isCurrentGrant = (grant) => {
-  if (!grant || grant.is_visible !== true || grant.can_read !== true) return false
-  if (!grant.expires_at) return true
-  const expiresAt = Date.parse(grant.expires_at)
-  return Number.isFinite(expiresAt) && expiresAt > Date.now()
-}
-
-const paidOrderType = (order) => {
-  const explicitType = normalizeSlug(order?.purchase_type)
-  if (VALID_PURCHASE_TYPES.has(explicitType)) return explicitType
-
-  const populatedTargets = ['book', 'series', 'collection']
-    .filter((type) => getText(order?.[`${type}_id`]))
-  return populatedTargets.length === 1 ? populatedTargets[0] : ''
-}
-
-const paidOrderMatches = (order, purchaseType, targetId) => {
-  return normalizeSlug(order?.status) === 'paid'
-    && paidOrderType(order) === purchaseType
-    && idsMatch(order?.[`${purchaseType}_id`], targetId)
-}
-
-const hasPaidProductOrder = (paidOrders, purchaseType, targetId) => {
-  if (!targetId) return false
-  return paidOrders.some((order) => paidOrderMatches(order, purchaseType, targetId))
-}
-
-const resolveEffectivePurchaseEntitlement = async (user, purchase) => {
-  if (purchase.purchaseType === 'book'
-      && hierarchyIsComplete(purchase.hierarchy)
-      && hierarchyIsActive(purchase.hierarchy)
-      && visibilityForBook(purchase.hierarchy.book) === 'public') {
-    return { entitled: true, reason: 'public' }
-  }
-
-  const profile = await selectOne('profiles', {
-    id: `eq.${user.id}`,
-    select: 'id, role',
-  })
-  const role = normalizeSlug(profile?.role || 'customer').replace(/-/g, '_')
-  if (role === 'admin' || role === 'super_admin') {
-    return { entitled: true, reason: role }
-  }
-
-  if (purchase.purchaseType === 'pass') {
-    const activations = await selectRows('temporary_access_pass_activations', {
-      user_id: `eq.${user.id}`,
-      pass_id: `eq.${purchase.temporaryAccessPassId}`,
-      select: 'pass_id, expires_at',
-    })
-    const entitled = activations.some((activation) => Date.parse(activation.expires_at) > Date.now())
-    return { entitled, reason: entitled ? 'temporary_pass' : 'not_entitled' }
-  }
-
-  const [paidOrders, grants] = await Promise.all([
-    selectRows('orders', {
-      user_id: `eq.${user.id}`,
-      status: 'eq.paid',
-      select: 'id, user_id, purchase_type, book_id, series_id, collection_id, status, paid_at',
-    }),
-    ['book', 'series'].includes(purchase.purchaseType)
-      ? selectRows('book_access', {
-      user_id: `eq.${user.id}`,
-      ...(purchase.purchaseType === 'book' ? { book_id: `eq.${purchase.bookId}` } : {}),
-      select: BOOK_ACCESS_SELECT,
-    })
-      : Promise.resolve([]),
-  ])
-
-  if (purchase.purchaseType === 'collection') {
-    const entitled = hasPaidProductOrder(paidOrders, 'collection', purchase.collectionId)
-    return { entitled, reason: entitled ? 'collection_order' : 'not_entitled' }
-  }
-
-  const collectionId = purchase.hierarchy.collection?.id
-  if (purchase.purchaseType === 'series') {
-    const paidEntitlement = hasPaidProductOrder(paidOrders, 'series', purchase.seriesId)
-      || hasPaidProductOrder(paidOrders, 'collection', collectionId)
-    if (paidEntitlement) return { entitled: true, reason: 'series_or_collection_order' }
-
-    const seriesBooks = await selectRows('books', {
-      series_id: `eq.${purchase.seriesId}`,
-      select: BOOK_SELECT,
-    })
-    const eligibleBookIds = seriesBooks
-      .filter((book) => isActive(book) && visibilityForBook(book) !== 'private')
-      .map((book) => String(book.id))
-    const grantedBookIds = new Set(grants.filter(isCurrentGrant).map((grant) => String(grant.book_id)))
-    const fullyGranted = eligibleBookIds.length > 0
-      && eligibleBookIds.every((bookId) => grantedBookIds.has(bookId))
-    return { entitled: fullyGranted, reason: fullyGranted ? 'series_owner_grant' : 'not_entitled' }
-  }
-
-  const book = { ...purchase.hierarchy.book, visibility: visibilityForBook(purchase.hierarchy.book) }
-  const publicAccess = effectiveVisibility({ ...purchase.hierarchy, book }) === 'public'
-  const directGrant = grants.some(isCurrentGrant)
-  const paidAccess = hasPaidProductOrder(paidOrders, 'book', purchase.bookId)
-    || hasPaidProductOrder(paidOrders, 'series', purchase.hierarchy.series?.id)
-    || hasPaidProductOrder(paidOrders, 'collection', collectionId)
-  const entitled = publicAccess || directGrant || paidAccess
-
-  return {
-    entitled,
-    reason: publicAccess
-      ? 'public'
-      : directGrant
-        ? 'book_access'
-        : paidAccess
-          ? 'paid_order'
-          : 'not_entitled',
-  }
-}
-
-const assertPurchaseNotEntitled = async (user, purchase) => {
-  const entitlement = await resolveEffectivePurchaseEntitlement(user, purchase)
-  if (entitlement.entitled) {
-    throw new ApiError(409, 'This item is already in your library.', 'already_entitled')
-  }
-  return entitlement
-}
-
-const razorpayRequest = async (path, { method = 'GET', body } = {}) => {
-  const auth = Buffer.from(`${razorpayKeyId()}:${razorpayKeySecret()}`).toString('base64')
-  const response = await fetch(`https://api.razorpay.com/v1${path}`, {
-    method,
-    headers: {
-      Authorization: `Basic ${auth}`,
-      'Content-Type': 'application/json',
-    },
-    body: body === undefined ? undefined : JSON.stringify(body),
-  })
-  const payload = await parseJsonResponse(response)
-
-  if (!response.ok) {
-    const message = payload?.error?.description || payload?.message || response.statusText || 'Razorpay request failed.'
-    throw new ApiError(response.status, message, payload?.error?.code || 'razorpay_request_failed', payload)
-  }
-
-  return payload
-}
-
-const createRazorpayOrder = (purchase, localOrderId, user) => razorpayRequest('/orders', {
-  method: 'POST',
-  body: {
-    amount: purchase.amount,
-    currency: purchase.currency,
-    receipt: receiptForOrder(localOrderId),
-    notes: {
-      local_order_id: localOrderId,
-      user_id: user.id,
-      purchase_type: purchase.purchaseType,
-      target_id: purchase.targetId,
-      item_name: purchase.itemName,
-      original_amount: String(purchase.originalAmount),
-      discount_amount: String(purchase.discountAmount),
-      ...(purchase.couponCode ? { coupon_code: purchase.couponCode } : {}),
-    },
-  },
-})
-
-const fetchRazorpayPayment = (paymentId) => razorpayRequest(`/payments/${encodeURIComponent(paymentId)}`)
-
-const createCheckoutOrder = async (user, body) => {
-  const resolvedPurchase = await resolvePurchaseFromBody(body)
-  await assertPurchaseNotEntitled(user, resolvedPurchase)
-  const purchase = await resolveCouponPricing(resolvedPurchase, body?.coupon_code, user.id)
-  const now = new Date().toISOString()
-  const orderPayload = {
-    user_id: user.id,
-    purchase_type: purchase.purchaseType,
-    book_id: purchase.bookId,
-    series_id: purchase.seriesId,
-    collection_id: purchase.collectionId,
-    temporary_access_pass_id: purchase.temporaryAccessPassId,
-    item_name: purchase.itemName,
-    original_amount: purchase.originalAmount,
-    amount: purchase.amount,
-    coupon_code: purchase.couponCode,
-    coupon_id: purchase.couponId,
-    discount_amount: purchase.discountAmount,
-    currency: purchase.currency,
-    status: 'pending',
-    created_at: now,
-    updated_at: now,
-  }
-
-  let pendingRows
-  try {
-    pendingRows = await insertRows('orders', orderPayload)
-  } catch (error) {
-    if (error?.code === '23505') {
-      throw new ApiError(409, 'An active checkout already exists for this item.', 'payable_order_exists')
-    }
-    throw error
-  }
-  const pendingOrder = Array.isArray(pendingRows) ? pendingRows[0] : pendingRows
-  if (!pendingOrder?.id) {
-    throw new ApiError(500, 'The local payment order could not be created.', 'order_create_failed')
-  }
-
-  if (purchase.couponId) {
-    try {
-      await insertRows('coupon_usages', {
-        coupon_id: purchase.couponId,
-        order_id: pendingOrder.id,
-        user_id: user.id,
-        coupon_code: purchase.couponCode,
-        discount_amount: purchase.discountAmount,
-        status: 'pending',
-        created_at: now,
-        updated_at: now,
-      })
-    } catch (_error) {
-      await updateRows('orders', { id: `eq.${pendingOrder.id}`, status: 'eq.pending' }, {
-        status: 'failed',
-        updated_at: new Date().toISOString(),
-      }).catch(() => null)
-      throw new ApiError(409, 'This coupon is no longer available.', 'coupon_limit_reached')
-    }
-  }
-
-  let razorpayOrder
-  try {
-    razorpayOrder = await createRazorpayOrder(purchase, pendingOrder.id, user)
-    if (!getText(razorpayOrder?.id)
-        || toNumber(razorpayOrder?.amount) !== purchase.amount
-        || getText(razorpayOrder?.currency, INR).toUpperCase() !== purchase.currency) {
-      throw new ApiError(502, 'Razorpay returned an unexpected order.', 'razorpay_order_mismatch')
-    }
-  } catch (error) {
-    await updateRows('orders', { id: `eq.${pendingOrder.id}`, status: 'eq.pending' }, {
-      status: 'failed',
-      updated_at: new Date().toISOString(),
-    }).catch(() => null)
-    if (purchase.couponId) {
-      await updateRows('coupon_usages', { order_id: `eq.${pendingOrder.id}` }, {
-        status: 'void',
-        updated_at: new Date().toISOString(),
-      }).catch(() => null)
-    }
-    throw error
-  }
-
-  const updatedRows = await updateRows('orders', { id: `eq.${pendingOrder.id}`, status: 'eq.pending' }, {
-    razorpay_order_id: razorpayOrder.id,
-    updated_at: new Date().toISOString(),
-  })
-  const order = Array.isArray(updatedRows) ? updatedRows[0] : updatedRows
-
-  return {
-    order_id: razorpayOrder.id,
-    amount: purchase.amount,
-    original_amount: purchase.originalAmount,
-    coupon_code: purchase.couponCode,
-    discount_amount: purchase.discountAmount,
-    currency: purchase.currency,
-    key_id: razorpayKeyId(),
-    local_order_id: order?.id || pendingOrder.id,
-  }
-}
-
-const previewCheckoutPricing = async (user, body) => {
-  const resolvedPurchase = await resolvePurchaseFromBody(body)
-  await assertPurchaseNotEntitled(user, resolvedPurchase)
-  const purchase = await resolveCouponPricing(resolvedPurchase, body?.coupon_code, user.id)
-
-  return {
-    valid: purchase.couponValid,
-    coupon_code: purchase.couponCode,
-    item_name: purchase.itemName,
-    original_amount: purchase.originalAmount,
-    final_amount: purchase.amount,
-    discount_amount: purchase.discountAmount,
-    currency: purchase.currency,
-  }
-}
-
-const expectedPaymentSignature = (razorpayOrderId, paymentId) => crypto
-  .createHmac('sha256', razorpayKeySecret())
-  .update(`${razorpayOrderId}|${paymentId}`)
-  .digest('hex')
-
-const timingSafeTextEqual = (left, right) => {
-  const leftBuffer = Buffer.from(getText(left), 'utf8')
-  const rightBuffer = Buffer.from(getText(right), 'utf8')
-  return leftBuffer.length === rightBuffer.length && crypto.timingSafeEqual(leftBuffer, rightBuffer)
-}
-
-const verifyPaymentSignature = ({ razorpayOrderId, paymentId, signature }) => {
-  const expected = expectedPaymentSignature(razorpayOrderId, paymentId)
-  if (!timingSafeTextEqual(expected, signature)) {
-    throw new ApiError(400, 'Payment signature could not be verified.', 'invalid_payment_signature')
-  }
-}
-
-const verifyWebhookSignature = (rawBody, signature) => {
-  const secret = env('RAZORPAY_WEBHOOK_SECRET', [], { required: false })
-  if (!secret) throw new ApiError(500, 'RAZORPAY_WEBHOOK_SECRET is not configured.', 'server_config_missing')
-
-  const expected = crypto
-    .createHmac('sha256', secret)
-    .update(rawBody)
-    .digest('hex')
-
-  if (!timingSafeTextEqual(expected, signature)) {
-    throw new ApiError(400, 'Webhook signature could not be verified.', 'invalid_webhook_signature')
-  }
-}
-
-const fetchUserOrder = async (localOrderId, userId) => {
-  const id = requireValidId(localOrderId, 'local_order_id')
-  return selectOne('orders', {
-    id: `eq.${id}`,
-    user_id: `eq.${userId}`,
-    select: ORDER_SELECT,
-  })
-}
-
-const fetchOrderByRazorpayId = (razorpayOrderId) => selectOne('orders', {
-  razorpay_order_id: `eq.${getText(razorpayOrderId)}`,
-  select: ORDER_SELECT,
-})
-
-const toNumber = (value, fallback = 0) => {
-  const number = Number(value)
-  return Number.isFinite(number) ? number : fallback
-}
-
-const paymentCaptured = (payment) => payment?.status === 'captured' || payment?.captured === true
-
-const paymentMatchesOrder = (payment, order) => {
-  return getText(payment?.order_id) === getText(order?.razorpay_order_id)
-    && toNumber(payment?.amount) === toNumber(order?.amount)
-    && getText(payment?.currency, INR).toUpperCase() === getText(order?.currency, INR).toUpperCase()
-}
-
-const recordPaymentTransition = async (order, payment, {
-  status = null,
-  signature = null,
-  webhookEventId = null,
-  verified = false,
-} = {}) => {
-  if (!getText(payment?.id)) throw new ApiError(400, 'Payment id is missing.', 'invalid_payment')
-  return callRpc('greyveil_record_payment_transition', {
-    p_order_id: order?.id || null,
-    p_payment: payment,
-    p_next_order_status: status,
-    p_signature: signature,
-    p_webhook_event_id: webhookEventId,
-    p_verified: verified === true,
-  })
-}
-
-const verifyCheckoutPayment = async (user, body) => {
-  const localOrderId = requireValidId(body?.local_order_id, 'local_order_id')
-  const paymentId = getText(body?.razorpay_payment_id)
-  const checkoutOrderId = getText(body?.razorpay_order_id)
-  const signature = getText(body?.razorpay_signature)
-
-  if (!paymentId || !checkoutOrderId || !signature) {
-    throw new ApiError(400, 'Payment verification details are incomplete.', 'invalid_payment_verification')
-  }
-
-  const order = await fetchUserOrder(localOrderId, user.id)
-  if (!order) throw new ApiError(404, 'Order was not found for this account.', 'order_not_found')
-  if (order.status === 'refunded') throw new ApiError(409, 'This order has been refunded.', 'order_refunded')
-  if (checkoutOrderId !== order.razorpay_order_id) {
-    throw new ApiError(400, 'Payment order did not match the checkout order.', 'order_mismatch')
-  }
-
-  verifyPaymentSignature({
-    razorpayOrderId: order.razorpay_order_id,
-    paymentId,
-    signature,
-  })
-
-  const payment = await fetchRazorpayPayment(paymentId)
-  if (!paymentMatchesOrder(payment, order)) {
-    await recordPaymentTransition(order, payment, { signature })
-    throw new ApiError(400, 'Payment details did not match the order.', 'payment_mismatch')
-  }
-
-  if (!paymentCaptured(payment)) {
-    const transition = await recordPaymentTransition(order, payment, {
-      signature,
-      status: payment.status === 'failed' ? 'failed' : 'pending',
-    })
-    return {
-      success: false,
-      paid: false,
-      status: transition?.order?.status || payment.status,
-      local_order_id: order.id,
-      payment_id: transition?.payment?.razorpay_payment_id || payment.id,
-      original_amount: toNumber(order.original_amount, order.amount),
-      amount: toNumber(order.amount),
-      coupon_code: order.coupon_code || null,
-      discount_amount: toNumber(order.discount_amount),
-    }
-  }
-
-  const transition = await recordPaymentTransition(order, payment, {
-    signature,
-    status: 'paid',
-    verified: true,
-  })
-  if (transition?.order?.status === 'refunded') {
-    throw new ApiError(409, 'This order has been refunded.', 'order_refunded')
-  }
-
-  return {
-    success: true,
-    paid: true,
-    status: 'paid',
-    local_order_id: transition?.order?.id || order.id,
-    purchase_type: order.purchase_type,
-    item_name: order.item_name,
-    payment_id: transition?.payment?.razorpay_payment_id || payment.id,
-    original_amount: toNumber(order.original_amount, order.amount),
-    amount: toNumber(order.amount),
-    coupon_code: order.coupon_code || null,
-    discount_amount: toNumber(order.discount_amount),
-  }
-}
-
-const processWebhookEvent = async (event) => {
-  const eventName = getText(event?.event)
-  const eventId = getText(event?.id)
-  let payment = event?.payload?.payment?.entity || null
-  const refund = event?.payload?.refund?.entity || null
-  if (!payment && refund?.payment_id) payment = await fetchRazorpayPayment(refund.payment_id)
-  const razorpayOrder = event?.payload?.order?.entity || null
-  const razorpayOrderId = getText(payment?.order_id || razorpayOrder?.id)
-  const order = razorpayOrderId ? await fetchOrderByRazorpayId(razorpayOrderId) : null
-  const refundEvent = payment?.status === 'refunded' || eventName === 'payment.refunded' || eventName === 'refund.processed'
-  if (refundEvent && (payment?.id || refund?.payment_id)) {
-    payment = { ...payment, id: payment?.id || refund.payment_id, status: 'refunded' }
-  }
-
-  if (!order) {
-    if (payment?.id) await recordPaymentTransition(null, payment, { webhookEventId: eventId || eventName || null })
-    return { processed: false, reason: 'local_order_not_found', event: eventName }
-  }
-
-  if (eventName === 'payment.failed') {
-    const transition = await recordPaymentTransition(order, payment, { status: 'failed', webhookEventId: eventId || eventName || null })
-    return { processed: true, status: transition?.order?.status || order.status, event: eventName }
-  }
-
-  if (refundEvent) {
-    const transition = await recordPaymentTransition(order, payment, { status: 'refunded', webhookEventId: eventId || eventName || null, verified: true })
-    return { processed: true, status: transition?.order?.status || 'refunded', event: eventName }
-  }
-
-  if (payment && paymentCaptured(payment) && paymentMatchesOrder(payment, order)) {
-    const transition = await recordPaymentTransition(order, payment, { status: 'paid', webhookEventId: eventId || eventName || null, verified: true })
-    return { processed: true, status: transition?.order?.status || order.status, event: eventName }
-  }
-
-  if (payment?.id) await recordPaymentTransition(order, payment, { webhookEventId: eventId || eventName || null })
-
-  return { processed: true, status: order.status || 'pending', event: eventName }
-}
-
 module.exports = {
-  ApiError,
   allowMethods,
   authenticateUser,
-  createCheckoutOrder,
-  previewCheckoutPricing,
-  processWebhookEvent,
-  readJsonBody,
-  readRawBodyBuffer,
+  listAdminUsers,
+  proxyEdgeFunction,
   sendError,
   sendJson,
-  verifyCheckoutPayment,
-  verifyWebhookSignature,
-  resolveCouponPricing,
-  resolveEffectivePurchaseEntitlement,
-  listAdminUsers,
 }

@@ -41,6 +41,7 @@ export const authenticate = async (request: Request, admin = serviceClient()): P
 }
 
 const text = (value: unknown, fallback = '') => String(value ?? '').trim() || fallback
+export const validRecordId = (value: unknown) => ID_PATTERN.test(text(value))
 const slug = (value: unknown) => text(value).toLowerCase().replace(/[_\s]+/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '')
 const idsMatch = (left: unknown, right: unknown) => String(left ?? '') === String(right ?? '')
 const active = (value: any) => value?.is_active !== false
@@ -92,7 +93,7 @@ export const resolvePurchase = async (admin: SupabaseClient, body: Record<string
   const purchaseType = normalizedType as Purchase['purchaseType']
   const targets = { book: text(body.book_id), series: text(body.series_id), collection: text(body.collection_id), pass: text(body.temporary_access_pass_id) }
   const provided = Object.entries(targets).filter(([, value]) => value)
-  if (provided.length !== 1 || provided[0][0] !== purchaseType || !ID_PATTERN.test(provided[0][1])) {
+  if (provided.length !== 1 || provided[0][0] !== purchaseType || !validRecordId(provided[0][1])) {
     throw new HttpError(400, 'Send exactly one matching purchase target.', 'invalid_purchase_target')
   }
   if (purchaseType === 'book') {
@@ -238,6 +239,63 @@ export const recordPaymentTransition = async (
   if (error) throw new HttpError(500, 'Payment state could not be persisted.', 'payment_transition_failed')
   return data as { order: any; payment: any; transition_changed: boolean }
 }
+
+const TERMINAL_UNPAID_STATUSES = new Set(['failed', 'cancelled', 'refunded'])
+
+export const reconcilePendingPayment = async (admin: SupabaseClient, order: any) => {
+  const currentStatus = text(order?.status).toLowerCase()
+  if (currentStatus === 'paid') return { paid: true, status: 'paid', reconciled: false }
+  if (TERMINAL_UNPAID_STATUSES.has(currentStatus)) {
+    return { paid: false, status: currentStatus, reconciled: false }
+  }
+  if (currentStatus !== 'pending' || !order?.razorpay_order_id) {
+    return { paid: false, status: currentStatus || 'pending', reconciled: false }
+  }
+
+  const providerOrderId = encodeURIComponent(text(order.razorpay_order_id))
+  const providerOrder = await razorpay(`/orders/${providerOrderId}`)
+  if (text(providerOrder?.id) !== text(order.razorpay_order_id)
+      || Number(providerOrder?.amount) !== Number(order.amount)
+      || text(providerOrder?.currency).toUpperCase() !== text(order.currency).toUpperCase()) {
+    throw new HttpError(409, 'Provider order details did not match the local order.', 'provider_order_mismatch')
+  }
+
+  const providerPayments = await razorpay(`/orders/${providerOrderId}/payments?count=100&skip=0`)
+  const matchingPayments = Array.isArray(providerPayments?.items)
+    ? providerPayments.items.filter((payment: unknown) => paymentMatches(payment, order))
+    : []
+  const refunded = matchingPayments.find((payment: any) => (
+    payment?.status === 'refunded' || Number(payment?.amount_refunded || 0) > 0
+  ))
+  if (refunded) {
+    const transition = await recordPaymentTransition(
+      admin,
+      order,
+      { ...refunded, status: 'refunded' },
+      { status: 'refunded', verified: true },
+    )
+    return {
+      paid: false,
+      status: transition.order?.status || 'refunded',
+      paymentId: transition.payment?.razorpay_payment_id || refunded.id,
+      reconciled: transition.transition_changed === true,
+    }
+  }
+
+  const captured = matchingPayments.find((payment: unknown) => paymentCaptured(payment))
+  if (captured) {
+    const transition = await recordPaymentTransition(admin, order, captured, { status: 'paid', verified: true })
+    return {
+      paid: transition.order?.status === 'paid',
+      status: transition.order?.status || 'pending',
+      paymentId: transition.payment?.razorpay_payment_id || captured.id,
+      reconciled: transition.transition_changed === true,
+    }
+  }
+
+  return { paid: false, status: 'pending', reconciled: false }
+}
+
 export const parseBody = async (request: Request) => {
   try { return await request.json() as Record<string, unknown> } catch { throw new HttpError(400, 'Request body must be valid JSON.', 'invalid_json') }
 }
