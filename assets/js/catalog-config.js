@@ -22,9 +22,16 @@ export const bookCoverPath = (book) => {
   return slug ? `/assets/books/${slug}/cover/front-cover.webp` : ''
 }
 
+export const SERIES_ARTWORK_PATHS = Object.freeze({
+  'human-mind': '/assets/images/the human mind.jpeg',
+  'human-fiction': '/assets/images/the human fiction.jpeg',
+  'human-paradox': '/assets/images/the human paradox.jpeg',
+})
+
 export const seriesCoverPath = (series) => {
   const slug = cleanSlug(series?.slug)
-  return slug ? `/assets/images/${slug.replaceAll('-', ' ')}.jpeg` : ''
+  return SERIES_ARTWORK_PATHS[slug]
+    || (slug ? `/assets/images/${slug.replaceAll('-', ' ')}.jpeg` : '')
 }
 
 export const COVER_FALLBACK_PATH = '/assets/images/greyveil-logo.png'

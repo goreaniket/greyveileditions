@@ -103,3 +103,26 @@ test('catalog cover fallback uses a centered dark brand treatment without changi
   assert.match(css, /\.book-card \.series-book-cover\.catalog-cover-fallback\s*\{[^}]*padding: 0;[^}]*object-fit: contain;[^}]*object-position: center;/)
   assert.match(css, /\.series-book-cover\s*\{[^}]*padding: 4px;[^}]*object-fit: contain;/)
 })
+
+test('dynamic series cards retain the three established static artworks by slug', async () => {
+  const [catalog, mind, fiction, paradox] = await Promise.all([
+    source('../assets/js/catalog-config.js'),
+    source('../projects/human-mind/index.html'),
+    source('../projects/human-fiction/index.html'),
+    source('../projects/human-paradox/index.html'),
+  ])
+  const expected = [
+    ['human-mind', 'the human mind.jpeg', mind],
+    ['human-fiction', 'the human fiction.jpeg', fiction],
+    ['human-paradox', 'the human paradox.jpeg', paradox],
+  ]
+  for (const [slug, artwork, detailPage] of expected) {
+    assert.ok(
+      catalog.includes(`'${slug}': '/assets/images/${artwork}'`),
+      `${slug} must map to its existing artwork`,
+    )
+    assert.ok(detailPage.includes(`../../assets/images/${artwork}`), `${slug} detail artwork must remain unchanged`)
+  }
+  assert.match(catalog, /SERIES_ARTWORK_PATHS\[slug\]\s*\|\|/)
+  assert.match(catalog, /slug\.replaceAll\('-', ' '\)/)
+})
