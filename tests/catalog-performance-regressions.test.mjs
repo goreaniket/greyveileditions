@@ -48,7 +48,9 @@ test('public enhancement shares session reads and renders catalog mounts from th
   assert.match(announcements, /if \(!announcements\.length\) return/)
   assert.match(access, /supabase\.rpc\(PUBLIC_CATALOG_RPC\)/)
   assert.match(access, /fetchContentHierarchyFromTables/)
+  assert.match(access, /onAuthStateChange\?\.\(\(event\) => \{\s*if \(event === 'INITIAL_SESSION'\) return/)
   assert.match(main, /renderCatalogSurfaces\(hierarchy, access, context, lookup\)/)
+  assert.match(main, /onAuthStateChange\(\(event\) => \{\s*\/\/[\s\S]*?if \(event === "INITIAL_SESSION"\) return;/)
   assert.match(home, /data-catalog-series/)
   assert.match(projects, /data-catalog-collection="human-paradox-collection"/)
   assert.match(mind, /data-catalog-books="human-mind"/)
@@ -77,4 +79,12 @@ test('public catalog RPC returns metadata only and filters private inactive hier
   assert.match(sql, /coalesce\(book\.is_active, true\)/)
   assert.match(sql, /grant execute on function public\.greyveil_public_catalog\(\) to anon, authenticated/)
   assert.doesNotMatch(sql, /book_files|book_covers|storage\.objects|storage_path/)
+})
+
+test('public Pass discovery does not require anon access to the Admin helper', async () => {
+  const sql = await source('../supabase/repair-public-temporary-pass-read.sql')
+  assert.match(sql, /create policy "Public reads active temporary passes"/)
+  assert.match(sql, /to anon, authenticated\s+using \(active\)/)
+  assert.doesNotMatch(sql, /greyveil_is_admin/)
+  assert.doesNotMatch(sql, /grant execute|alter function|security definer/i)
 })

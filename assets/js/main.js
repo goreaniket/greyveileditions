@@ -1013,7 +1013,11 @@ const refreshAuthAndContentVisibility = async (invalidateReason = '') => {
 const bindAuthStateRefresh = async () => {
   try {
     const { supabase } = await import(new URL("supabase-client.js", mainScriptUrl).href);
-    supabase.auth.onAuthStateChange(() => {
+    supabase.auth.onAuthStateChange((event) => {
+      // The explicit startup refresh above already owns initial hydration.
+      // Re-running it for Supabase's initial session notification duplicates
+      // the catalog RPC and can race the first render.
+      if (event === "INITIAL_SESSION") return;
       contentVisibilityRun += 1;
       setAccessPending();
       window.clearTimeout(authRefreshTimer);

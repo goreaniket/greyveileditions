@@ -602,7 +602,8 @@ export const getEntitlementSnapshot = async ({ force = false } = {}) => {
   }
 }
 
-supabase.auth?.onAuthStateChange?.(() => {
+supabase.auth?.onAuthStateChange?.((event) => {
+  if (event === 'INITIAL_SESSION') return
   entitlementAuthGeneration += 1
   invalidateEntitlementSnapshot('auth-change')
 })
