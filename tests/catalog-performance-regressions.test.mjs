@@ -52,7 +52,7 @@ test('public enhancement shares session reads and renders catalog mounts from th
   assert.match(main, /renderCatalogSurfaces\(hierarchy, access, context, lookup\)/)
   assert.match(main, /onAuthStateChange\(\(event\) => \{\s*\/\/[\s\S]*?if \(event === "INITIAL_SESSION"\) return;/)
   assert.match(home, /data-catalog-series/)
-  assert.match(projects, /data-catalog-collection="human-paradox-collection"/)
+  assert.match(projects, /data-catalog-collection="human-experience-collection"/)
   assert.match(mind, /data-catalog-books="human-mind"/)
   assert.doesNotMatch(mind, /<article class="book-card/)
   assert.doesNotMatch(main, /node\.hidden = true;/)
