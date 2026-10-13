@@ -1,0 +1,1418 @@
+{
+  "books": [
+    {
+      "journey_number": 1,
+      "volume": "I",
+      "series": "The Human Mind",
+      "series_book_number": 1,
+      "title": "The Last Shift",
+      "core_question": "Why attachment turns into distance and personal change",
+      "key_topics": "Attachment, fear of loss, detachment, emotional shutdown",
+      "reader_situation": "Breakup, emotional attachment, difficulty letting go",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 2,
+      "volume": "I",
+      "series": "The Human Mind",
+      "series_book_number": 2,
+      "title": "The Last Shift — Part II",
+      "core_question": "How do interpretations and self-stories amplify emotional pain?",
+      "key_topics": "Perception, narratives, rejection, identity, healing",
+      "reader_situation": "Readers questioning their thought patterns after relational distress",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 3,
+      "volume": "I",
+      "series": "The Human Mind",
+      "series_book_number": 3,
+      "title": "The Quiet I Started Living With",
+      "core_question": "How does unspoken emotional experience become isolation?",
+      "key_topics": "Silence, overthinking, self-distance, feeling unseen",
+      "reader_situation": "Feels misunderstood, emotionally numb or unable to explain what is happening",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 4,
+      "volume": "I",
+      "series": "The Human Mind",
+      "series_book_number": 4,
+      "title": "The Loop Within",
+      "core_question": "Why does the mind keep replaying what has already ended?",
+      "key_topics": "Rumination, unfinished conversations, memory, attachment",
+      "reader_situation": "Stuck on a person, event, memory or conversation",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 5,
+      "volume": "I",
+      "series": "The Human Mind",
+      "series_book_number": 5,
+      "title": "When Understanding Begins",
+      "core_question": "Why can two caring people interpret each other so differently?",
+      "key_topics": "Family, parent-child fear, expectations, empathy, misunderstandings",
+      "reader_situation": "Parent-child conflict, family misunderstandings, feeling unheard",
+      "reading_depth": "Accessible"
+    },
+    {
+      "journey_number": 6,
+      "volume": "II",
+      "series": "The Human Paradox",
+      "series_book_number": 1,
+      "title": "The Paradox of Awareness",
+      "core_question": "What happens when the observer begins questioning the self?",
+      "key_topics": "Awareness, identity, clarity, self-observation, control",
+      "reader_situation": "Analytical readers who question themselves constantly",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 7,
+      "volume": "II",
+      "series": "The Human Paradox",
+      "series_book_number": 2,
+      "title": "The Paradox of Explanation",
+      "core_question": "Why does the mind feel compelled to explain every event?",
+      "key_topics": "Need for reasons, control, uncertainty, explanation",
+      "reader_situation": "Needs a reason for everything; uncertainty feels heavy",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 8,
+      "volume": "II",
+      "series": "The Human Paradox",
+      "series_book_number": 3,
+      "title": "The End of Interpretation",
+      "core_question": "What remains when constant meaning-making loses its grip?",
+      "key_topics": "Identity, narration, meaning, awareness, silence",
+      "reader_situation": "Feels exhausted by interpreting every thought",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 9,
+      "volume": "II",
+      "series": "The Human Paradox",
+      "series_book_number": 4,
+      "title": "The Paradox of Reality",
+      "core_question": "How do mental filters affect what appears real and certain?",
+      "key_topics": "Perception, memory filters, certainty, reality",
+      "reader_situation": "Questioning assumptions and conflicting viewpoints",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 10,
+      "volume": "II",
+      "series": "The Human Paradox",
+      "series_book_number": 5,
+      "title": "The Paradox of Stillness",
+      "core_question": "What if the need to arrive is prolonging the search?",
+      "key_topics": "Seeking, enoughness, incompleteness, resistance",
+      "reader_situation": "Feels never finished or always chasing a final answer",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 11,
+      "volume": "III",
+      "series": "The Human Fiction",
+      "series_book_number": 1,
+      "title": "The Fiction of Awareness",
+      "core_question": "How does the story called 'I' form out of experience?",
+      "key_topics": "Self-narration, memory ownership, fixed identity",
+      "reader_situation": "Interested in identity and the voice inside the mind",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 12,
+      "volume": "III",
+      "series": "The Human Fiction",
+      "series_book_number": 2,
+      "title": "The Fiction of Meaning",
+      "core_question": "Why do events become signals, lessons and personal meanings?",
+      "key_topics": "Purpose, significance, story-making, randomness",
+      "reader_situation": "Constantly looks for hidden meaning in ordinary events",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 13,
+      "volume": "III",
+      "series": "The Human Fiction",
+      "series_book_number": 3,
+      "title": "The Fiction of Becoming",
+      "core_question": "Why do imagined future versions make the present feel insufficient?",
+      "key_topics": "Future self, comparison, achievement, self-repair",
+      "reader_situation": "Pressure to achieve, comparison, never-good-enough mindset",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 14,
+      "volume": "III",
+      "series": "The Human Fiction",
+      "series_book_number": 4,
+      "title": "The Fiction of the Human",
+      "core_question": "What is the larger human story behind our smaller self-stories?",
+      "key_topics": "Human identity, psychological narration, separation",
+      "reader_situation": "Experienced readers wanting a synthesis of the Fiction series",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 15,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 1,
+      "title": "The Person Who Was Tired of Being Strong",
+      "core_question": "What happens when being strong becomes the only allowed identity?",
+      "key_topics": "Emotional exhaustion, approval, performance, self-acceptance",
+      "reader_situation": "Tired of meeting expectations and hiding feelings",
+      "reading_depth": "Accessible"
+    },
+    {
+      "journey_number": 16,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 2,
+      "title": "The World We Thought We Saw",
+      "core_question": "How does what we expect change what we think we saw?",
+      "key_topics": "Memory, assumptions, first impressions, confirmation, perception",
+      "reader_situation": "Misjudgments, certainty about people, mistaken assumptions",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 17,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 3,
+      "title": "An Unknown Part of Life",
+      "core_question": "What else are we feeling when we call something love?",
+      "key_topics": "Love, jealousy, attachment, trust, fear, sacrifice",
+      "reader_situation": "Relationship confusion, intense attachment, jealousy or fear of loss",
+      "reading_depth": "Intense"
+    },
+    {
+      "journey_number": 18,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 4,
+      "title": "The People We Couldn't Save",
+      "core_question": "When does caring turn into needing to be indispensable?",
+      "key_topics": "Rescue identity, guilt, care, boundaries, agency",
+      "reader_situation": "Guilt over another person's choices or suffering",
+      "reading_depth": "Intense"
+    },
+    {
+      "journey_number": 19,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 5,
+      "title": "Between Birth and Death",
+      "core_question": "What changes as human life moves from dependence to acceptance?",
+      "key_topics": "Childhood, conditioning, love, work, ageing, mortality",
+      "reader_situation": "Life-stage reflection, questions about ageing, priorities, mortality",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 20,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 6,
+      "title": "The Things We Did Right and Still Lost",
+      "core_question": "Why can doing everything right still fail to produce the desired result?",
+      "key_topics": "Effort, luck, unfairness, outcome, disappointment",
+      "reader_situation": "Did your best but lost, failed or experienced unfairness",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 21,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 7,
+      "title": "The Life We Forgot While Building a Life",
+      "core_question": "How can protecting a life consume the life being protected?",
+      "key_topics": "Responsibility, work, productivity, caregiving, presence",
+      "reader_situation": "Working endlessly, family duties, duty-driven exhaustion",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 22,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 8,
+      "title": "The World That Never Leaves Us Alone",
+      "core_question": "How much of the larger world can one finite life carry?",
+      "key_topics": "Digital overload, comparison, mediated lives, attention",
+      "reader_situation": "Overwhelmed by social media, information and other people's lives",
+      "reading_depth": "Reflective"
+    },
+    {
+      "journey_number": 23,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 9,
+      "title": "The Distance Between Two Minds",
+      "core_question": "Can we know another person's world without becoming them?",
+      "key_topics": "Understanding, empathy, private experience, miscommunication",
+      "reader_situation": "Feels unseen or misunderstood despite closeness",
+      "reading_depth": "Deep"
+    },
+    {
+      "journey_number": 24,
+      "volume": "IV",
+      "series": "The Human Experience",
+      "series_book_number": 10,
+      "title": "The Enough That Never Arrived",
+      "core_question": "Why do achievements become normal and the finish line keep moving?",
+      "key_topics": "Satisfaction, achievement adaptation, moving goals, enoughness",
+      "reader_situation": "Has progress or success but still feels dissatisfied",
+      "reading_depth": "Deep"
+    }
+  ],
+  "matches": [
+    {
+      "id": "RM-01-01",
+      "reader_concern": "I become attached before I know whether the other person feels the same",
+      "primary_journey_number": 1,
+      "primary_anchor": "Silent Attachment",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-01-02",
+      "reader_concern": "I keep imagining losing someone even when they are still here",
+      "primary_journey_number": 1,
+      "primary_anchor": "Fear of Losing",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-01-03",
+      "reader_concern": "I feel emotionally exhausted after caring for someone",
+      "primary_journey_number": 1,
+      "primary_anchor": "Emotional Exhaustion",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-01-04",
+      "reader_concern": "I have started withdrawing and shutting down without explaining why",
+      "primary_journey_number": 1,
+      "primary_anchor": "Emotional Shutdown",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-02-01",
+      "reader_concern": "My feelings and the facts of a situation keep getting mixed up",
+      "primary_journey_number": 2,
+      "primary_anchor": "What We Feel vs What Is",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-02-02",
+      "reader_concern": "I keep inventing explanations for other people’s behaviour",
+      "primary_journey_number": 2,
+      "primary_anchor": "The Stories We Create",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-02-03",
+      "reader_concern": "I need to be right even when it damages relationships",
+      "primary_journey_number": 2,
+      "primary_anchor": "The Need to Be Right",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-02-04",
+      "reader_concern": "I interpret someone leaving as proof that I was rejected",
+      "primary_journey_number": 2,
+      "primary_anchor": "You Were Never Rejected: You Were Just Interpreting",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-03-01",
+      "reader_concern": "I stopped talking because I do not know how to explain myself",
+      "primary_journey_number": 3,
+      "primary_anchor": "Why I Stopped Talking",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I can't explain what's happening inside me"
+      ]
+    },
+    {
+      "id": "RM-03-02",
+      "reader_concern": "There are conversations I have rehearsed but never had",
+      "primary_journey_number": 3,
+      "primary_anchor": "The Conversations That Never Happened",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-03-03",
+      "reader_concern": "I feel like nobody knows the version of me I hide",
+      "primary_journey_number": 3,
+      "primary_anchor": "The Version of Me Nobody Ever Knew",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-03-04",
+      "reader_concern": "I feel myself growing distant from people without noticing",
+      "primary_journey_number": 3,
+      "primary_anchor": "The Distance I Didn’t Notice Growing",
+      "anchor_pdf_page": 4,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-04-01",
+      "reader_concern": "I relive conversations that have already ended",
+      "primary_journey_number": 4,
+      "primary_anchor": "When You Keep Replaying Conversations",
+      "anchor_pdf_page": 4,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I can't move on from someone or an old conversation",
+        "I replay arguments every night"
+      ]
+    },
+    {
+      "id": "RM-04-02",
+      "reader_concern": "I miss the version of someone who no longer exists",
+      "primary_journey_number": 4,
+      "primary_anchor": "When You Fall in Love With a Version That No Longer",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-04-03",
+      "reader_concern": "I keep treating old memories as more real than today",
+      "primary_journey_number": 4,
+      "primary_anchor": "When Memory Becomes Stronger Than Reality",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-04-04",
+      "reader_concern": "I am scared that moving on means losing the feeling itself",
+      "primary_journey_number": 4,
+      "primary_anchor": "When You Are Afraid to Lose the Feeling",
+      "anchor_pdf_page": 4,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-05-01",
+      "reader_concern": "Love in my family has started feeling like rules and control",
+      "primary_journey_number": 5,
+      "primary_anchor": "When Love Starts Feeling Like Rules",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "My parents and I love each other but constantly fight"
+      ]
+    },
+    {
+      "id": "RM-05-02",
+      "reader_concern": "My parents’ worry feels like pressure rather than care",
+      "primary_journey_number": 5,
+      "primary_anchor": "When Parents Speak Through Fear",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-05-03",
+      "reader_concern": "I react emotionally before understanding what my family means",
+      "primary_journey_number": 5,
+      "primary_anchor": "When Understanding Starts Replacing Reaction",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-05-04",
+      "reader_concern": "I feel forced to choose a side in a family disagreement",
+      "primary_journey_number": 5,
+      "primary_anchor": "When You Stop Choosing Sides",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-06-01",
+      "reader_concern": "Understanding myself has made me feel more isolated",
+      "primary_journey_number": 6,
+      "primary_anchor": "The Burden of Too Much Clarity",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-06-02",
+      "reader_concern": "I understand my emotions intellectually but still cannot feel settled",
+      "primary_journey_number": 6,
+      "primary_anchor": "The Distance Between Knowing and Feeling",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I think constantly but don't understand myself"
+      ]
+    },
+    {
+      "id": "RM-06-03",
+      "reader_concern": "I have stopped trusting my own judgment",
+      "primary_journey_number": 6,
+      "primary_anchor": "The Moment You Stop Trusting Yourself",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-06-04",
+      "reader_concern": "I think my identity is fixed and fear questioning it",
+      "primary_journey_number": 6,
+      "primary_anchor": "The Paradox of Identity",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-07-01",
+      "reader_concern": "I cannot stop asking why something painful happened",
+      "primary_journey_number": 7,
+      "primary_anchor": "The Need to Know Why",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I keep asking why every bad thing happened"
+      ]
+    },
+    {
+      "id": "RM-07-02",
+      "reader_concern": "I panic over situations that have not happened yet",
+      "primary_journey_number": 7,
+      "primary_anchor": "The Fear of What Has Not Happened",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-07-03",
+      "reader_concern": "I believe everything will collapse unless I control it",
+      "primary_journey_number": 7,
+      "primary_anchor": "The Illusion of Control",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I'm exhausted by having to control everything"
+      ]
+    },
+    {
+      "id": "RM-07-04",
+      "reader_concern": "I need a complete explanation before I can let something go",
+      "primary_journey_number": 7,
+      "primary_anchor": "When the Mind Stops Explaining",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-08-01",
+      "reader_concern": "My inner commentary has become constant noise",
+      "primary_journey_number": 8,
+      "primary_anchor": "When Thoughts Become Noise",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-08-02",
+      "reader_concern": "I feel trapped by the story I keep telling about myself",
+      "primary_journey_number": 8,
+      "primary_anchor": "The Breakdown of Narration",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-08-03",
+      "reader_concern": "I am afraid of being without a clear identity",
+      "primary_journey_number": 8,
+      "primary_anchor": "The Weakening of Identity",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-08-04",
+      "reader_concern": "I keep treating every difficult feeling as a problem to solve",
+      "primary_journey_number": 8,
+      "primary_anchor": "When Nothing Needs to Be Solved",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-09-01",
+      "reader_concern": "I assume that what I see is the whole truth",
+      "primary_journey_number": 9,
+      "primary_anchor": "When Seeing Is Not Knowing",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-09-02",
+      "reader_concern": "Past memories colour how I interpret the present",
+      "primary_journey_number": 9,
+      "primary_anchor": "The Memory Inside the Moment",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I want to understand how memories change my perspective"
+      ]
+    },
+    {
+      "id": "RM-09-03",
+      "reader_concern": "People close to me seem to inhabit a different reality",
+      "primary_journey_number": 9,
+      "primary_anchor": "A Thousand Worlds in One World",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-09-04",
+      "reader_concern": "I struggle when something contradicts what I was certain about",
+      "primary_journey_number": 9,
+      "primary_anchor": "When Certainty Stops Working",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-10-01",
+      "reader_concern": "I keep waiting for the day life finally feels complete",
+      "primary_journey_number": 10,
+      "primary_anchor": "The Illusion of Arrival",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-10-02",
+      "reader_concern": "I treat myself as incomplete until I improve",
+      "primary_journey_number": 10,
+      "primary_anchor": "The Mind That Calls Itself Incomplete",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-10-03",
+      "reader_concern": "I feel I must finish healing before I can live",
+      "primary_journey_number": 10,
+      "primary_anchor": "Healing Without an Endpoint",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-10-04",
+      "reader_concern": "I cannot sit with life unless I am searching for something",
+      "primary_journey_number": 10,
+      "primary_anchor": "The Habit of Searching",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "Everything in my life feels like one endless search"
+      ]
+    },
+    {
+      "id": "RM-11-01",
+      "reader_concern": "I define myself entirely by a fixed personality label",
+      "primary_journey_number": 11,
+      "primary_anchor": "The Illusion of a Fixed I",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-11-02",
+      "reader_concern": "I assume every memory proves who I really am",
+      "primary_journey_number": 11,
+      "primary_anchor": "The Illusion of Memory Ownership",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-11-03",
+      "reader_concern": "The voice in my head feels like my unquestionable identity",
+      "primary_journey_number": 11,
+      "primary_anchor": "The Fiction of the Inner Voice",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-11-04",
+      "reader_concern": "I cannot imagine myself without my personal backstory",
+      "primary_journey_number": 11,
+      "primary_anchor": "The Collapse of the Self-Story",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-12-01",
+      "reader_concern": "I feel pressured to find a purpose in every experience",
+      "primary_journey_number": 12,
+      "primary_anchor": "The Illusion of Purpose",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-12-02",
+      "reader_concern": "I interpret random events as secret messages meant for me",
+      "primary_journey_number": 12,
+      "primary_anchor": "The Search for Hidden Significance",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "My mind turns everything into a sign or lesson"
+      ]
+    },
+    {
+      "id": "RM-12-03",
+      "reader_concern": "I keep attaching to the meaning I gave someone’s actions",
+      "primary_journey_number": 12,
+      "primary_anchor": "The Meaning Attachment Loop",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-12-04",
+      "reader_concern": "When my old beliefs stop making sense I feel lost",
+      "primary_journey_number": 12,
+      "primary_anchor": "The Collapse of Meaning Systems",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-13-01",
+      "reader_concern": "I keep postponing happiness until I become a better version of myself",
+      "primary_journey_number": 13,
+      "primary_anchor": "The Illusion of Who I Will Become",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I keep thinking I will finally be happy later"
+      ]
+    },
+    {
+      "id": "RM-13-02",
+      "reader_concern": "My achievements have become my entire identity",
+      "primary_journey_number": 13,
+      "primary_anchor": "The Achievement Identity Cycle",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "My whole identity depends on my achievements"
+      ]
+    },
+    {
+      "id": "RM-13-03",
+      "reader_concern": "I believe I must repair a fundamentally broken self",
+      "primary_journey_number": 13,
+      "primary_anchor": "The Broken Self Narrative",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-13-04",
+      "reader_concern": "I cannot stop measuring whether I am growing fast enough",
+      "primary_journey_number": 13,
+      "primary_anchor": "The Fiction of Growth",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-14-01",
+      "reader_concern": "I want to question what being human really means",
+      "primary_journey_number": 14,
+      "primary_anchor": "The Story Called Human",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I want to question what it means to be human"
+      ]
+    },
+    {
+      "id": "RM-14-02",
+      "reader_concern": "I feel separated from everyone by the identity I defend",
+      "primary_journey_number": 14,
+      "primary_anchor": "The Fiction of Separation",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-14-03",
+      "reader_concern": "I notice how my mind constructs the world I experience",
+      "primary_journey_number": 14,
+      "primary_anchor": "The Reality-Making Machine",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-14-04",
+      "reader_concern": "I am exhausted by the character I perform in my own life",
+      "primary_journey_number": 14,
+      "primary_anchor": "When the Story Sees Itself",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-15-01",
+      "reader_concern": "I smile so nobody notices how tired I am",
+      "primary_journey_number": 15,
+      "primary_anchor": "The Smile That Hid Everything",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I'm tired of being strong for everyone"
+      ]
+    },
+    {
+      "id": "RM-15-02",
+      "reader_concern": "I changed my personality to be accepted",
+      "primary_journey_number": 15,
+      "primary_anchor": "The Person You Became To Be Accepted",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-15-03",
+      "reader_concern": "I have forgotten what I want because I keep meeting expectations",
+      "primary_journey_number": 15,
+      "primary_anchor": "The Person Who Forgot What They Wanted",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-15-04",
+      "reader_concern": "I am afraid to start over even though my life feels wrong",
+      "primary_journey_number": 15,
+      "primary_anchor": "The Person Who Was Afraid To Start Again",
+      "anchor_pdf_page": 3,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-16-01",
+      "reader_concern": "I only notice evidence that confirms my first impression",
+      "primary_journey_number": 16,
+      "primary_anchor": "The Evidence You Were Looking For",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-16-02",
+      "reader_concern": "I believed a memory that later turned out differently",
+      "primary_journey_number": 16,
+      "primary_anchor": "The Memory That Never Happened",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-16-03",
+      "reader_concern": "I judged someone before really getting to know them",
+      "primary_journey_number": 16,
+      "primary_anchor": "The Person You Never Met",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-16-04",
+      "reader_concern": "I have already decided my future will fail",
+      "primary_journey_number": 16,
+      "primary_anchor": "The Future You Already Decided",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-17-01",
+      "reader_concern": "I do not know what to do when life feels unfamiliar",
+      "primary_journey_number": 17,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-17-02",
+      "reader_concern": "I am trying to understand an unexpected turn in my life",
+      "primary_journey_number": 17,
+      "primary_anchor": "Prologue",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-17-03",
+      "reader_concern": "I want to reflect on experiences I cannot neatly categorize",
+      "primary_journey_number": 17,
+      "primary_anchor": "Chapter 1",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-17-04",
+      "reader_concern": "I feel unsettled by a part of myself I have not explored",
+      "primary_journey_number": 17,
+      "primary_anchor": "Chapter 2",
+      "anchor_pdf_page": 2,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-18-01",
+      "reader_concern": "I feel responsible for a person I could not save",
+      "primary_journey_number": 18,
+      "primary_anchor": "The Chat You Cannot",
+      "anchor_pdf_page": 6,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I feel guilty because I couldn't save someone"
+      ]
+    },
+    {
+      "id": "RM-18-02",
+      "reader_concern": "Helping someone has become the source of my self-worth",
+      "primary_journey_number": 18,
+      "primary_anchor": "Borrowed Purpose",
+      "anchor_pdf_page": 6,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-18-03",
+      "reader_concern": "I secretly resent the sacrifices I made while caring",
+      "primary_journey_number": 18,
+      "primary_anchor": "The Ledger That Appears",
+      "anchor_pdf_page": 6,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-18-04",
+      "reader_concern": "I do not know who I am when nobody needs my help",
+      "primary_journey_number": 18,
+      "primary_anchor": "Who Are You When",
+      "anchor_pdf_page": 7,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-19-01",
+      "reader_concern": "I am struggling with the pressure to compare myself with others",
+      "primary_journey_number": 19,
+      "primary_anchor": "The Birth of Comparison",
+      "anchor_pdf_page": 8,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-19-02",
+      "reader_concern": "I feel distant from friends as adulthood becomes busier",
+      "primary_journey_number": 19,
+      "primary_anchor": "The Friends You Lose",
+      "anchor_pdf_page": 10,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-19-03",
+      "reader_concern": "I am noticing my parents getting older and it frightens me",
+      "primary_journey_number": 19,
+      "primary_anchor": "Parents Become People",
+      "anchor_pdf_page": 10,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-19-04",
+      "reader_concern": "I want to face ageing and mortality without pretending they do not exist",
+      "primary_journey_number": 19,
+      "primary_anchor": "Death Is Not the Opposite",
+      "anchor_pdf_page": 12,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I want to reflect on childhood, ageing and mortality"
+      ]
+    },
+    {
+      "id": "RM-20-01",
+      "reader_concern": "I followed the rules and still did not get the outcome I hoped for",
+      "primary_journey_number": 20,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 7,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I did everything right and still lost"
+      ]
+    },
+    {
+      "id": "RM-20-02",
+      "reader_concern": "I keep confusing effort with a guarantee of success",
+      "primary_journey_number": 20,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 7,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-20-03",
+      "reader_concern": "I am carrying resentment about an undeserved loss",
+      "primary_journey_number": 20,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 7,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-20-04",
+      "reader_concern": "I want to think about fairness when life does not reward goodness",
+      "primary_journey_number": 20,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 7,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-21-01",
+      "reader_concern": "I have organized my days but forgotten to experience them",
+      "primary_journey_number": 21,
+      "primary_anchor": "The Life We Manage",
+      "anchor_pdf_page": 8,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "My job and family duties leave no time for living"
+      ]
+    },
+    {
+      "id": "RM-21-02",
+      "reader_concern": "I keep sacrificing my own life for people I love",
+      "primary_journey_number": 21,
+      "primary_anchor": "The People We Live For",
+      "anchor_pdf_page": 8,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-21-03",
+      "reader_concern": "My worth feels tied to how productive I am",
+      "primary_journey_number": 21,
+      "primary_anchor": "The World That Measures",
+      "anchor_pdf_page": 9,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-21-04",
+      "reader_concern": "My body is showing the cost of a life lived on autopilot",
+      "primary_journey_number": 21,
+      "primary_anchor": "When the Body",
+      "anchor_pdf_page": 10,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-22-01",
+      "reader_concern": "The world feels too big and noisy for one person to process",
+      "primary_journey_number": 22,
+      "primary_anchor": "More World Than One",
+      "anchor_pdf_page": 7,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-22-02",
+      "reader_concern": "I keep assuming everyone else experiences the world like I do",
+      "primary_journey_number": 22,
+      "primary_anchor": "Lives Bigger Than One",
+      "anchor_pdf_page": 7,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-22-03",
+      "reader_concern": "I want to listen to people before trying to explain them",
+      "primary_journey_number": 22,
+      "primary_anchor": "People Before We",
+      "anchor_pdf_page": 8,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-22-04",
+      "reader_concern": "I struggle to live with uncertainty about the world",
+      "primary_journey_number": 22,
+      "primary_anchor": "Knowing Without",
+      "anchor_pdf_page": 8,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-23-01",
+      "reader_concern": "I feel misunderstood even when I explain myself carefully",
+      "primary_journey_number": 23,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 9,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I feel close to someone but still misunderstood"
+      ]
+    },
+    {
+      "id": "RM-23-02",
+      "reader_concern": "I assume closeness means someone should know what I feel",
+      "primary_journey_number": 23,
+      "primary_anchor": "The Private Fact of Being",
+      "anchor_pdf_page": 10,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-23-03",
+      "reader_concern": "I know a person’s habits but not their inner world",
+      "primary_journey_number": 23,
+      "primary_anchor": "The Private Fact of Being",
+      "anchor_pdf_page": 10,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-23-04",
+      "reader_concern": "Two people can share a life and still feel far apart",
+      "primary_journey_number": 23,
+      "primary_anchor": "Prologue",
+      "anchor_pdf_page": 8,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-24-01",
+      "reader_concern": "Everything is almost enough but never fully enough",
+      "primary_journey_number": 24,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 21,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-24-02",
+      "reader_concern": "I reach goals and immediately move the finish line",
+      "primary_journey_number": 24,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 21,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    },
+    {
+      "id": "RM-24-03",
+      "reader_concern": "I have what I once wanted but still feel unfinished",
+      "primary_journey_number": 24,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 21,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": [
+        "I have achieved things but still feel incomplete"
+      ]
+    },
+    {
+      "id": "RM-24-04",
+      "reader_concern": "I cannot enjoy what I have because I am chasing what comes next",
+      "primary_journey_number": 24,
+      "primary_anchor": "Introduction",
+      "anchor_pdf_page": 21,
+      "editorial_status": "CHAPTER_ANCHOR_LOCATED_NOT_SEMANTICALLY_APPROVED",
+      "aliases": []
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Attachment / difficulty letting go",
+      "primary_recommendation": "01 — The Last Shift",
+      "other_books": "04 The Loop Within | 17 An Unknown Part of Life"
+    },
+    {
+      "topic": "Overthinking / repeated memories",
+      "primary_recommendation": "03 — The Quiet I Started Living With",
+      "other_books": "04 The Loop Within | 07 The Paradox of Explanation"
+    },
+    {
+      "topic": "Loneliness / feeling misunderstood",
+      "primary_recommendation": "03 — The Quiet I Started Living With",
+      "other_books": "05 When Understanding Begins | 23 The Distance Between Two Minds"
+    },
+    {
+      "topic": "Family / parents / expectations",
+      "primary_recommendation": "05 — When Understanding Begins",
+      "other_books": "15 The Person Who Was Tired of Being Strong | 19 Between Birth and Death"
+    },
+    {
+      "topic": "Awareness / self-inquiry",
+      "primary_recommendation": "02 — The Last Shift — Part II",
+      "other_books": "06 The Paradox of Awareness | 11 The Fiction of Awareness"
+    },
+    {
+      "topic": "Identity / self-story",
+      "primary_recommendation": "02 — The Last Shift — Part II",
+      "other_books": "11 The Fiction of Awareness | 13 The Fiction of Becoming | 14 The Fiction of the Human"
+    },
+    {
+      "topic": "Uncertainty / control",
+      "primary_recommendation": "06 — The Paradox of Awareness",
+      "other_books": "07 The Paradox of Explanation | 09 The Paradox of Reality | 20 The Things We Did Right and Still Lost"
+    },
+    {
+      "topic": "Meaning / purpose",
+      "primary_recommendation": "07 — The Paradox of Explanation",
+      "other_books": "08 The End of Interpretation | 12 The Fiction of Meaning | 24 The Enough That Never Arrived"
+    },
+    {
+      "topic": "Perception / memory / assumptions",
+      "primary_recommendation": "09 — The Paradox of Reality",
+      "other_books": "16 The World We Thought We Saw | 02 The Last Shift — Part II"
+    },
+    {
+      "topic": "Acceptance / stillness",
+      "primary_recommendation": "10 — The Paradox of Stillness",
+      "other_books": "15 The Person Who Was Tired of Being Strong | 24 The Enough That Never Arrived"
+    },
+    {
+      "topic": "Love / jealousy / trust",
+      "primary_recommendation": "01 — The Last Shift",
+      "other_books": "17 An Unknown Part of Life | 18 The People We Couldn't Save"
+    },
+    {
+      "topic": "Care / rescuing / guilt",
+      "primary_recommendation": "18 — The People We Couldn't Save",
+      "other_books": "20 The Things We Did Right and Still Lost | 21 The Life We Forgot While Building a Life"
+    },
+    {
+      "topic": "Failure / unfairness / loss",
+      "primary_recommendation": "20 — The Things We Did Right and Still Lost",
+      "other_books": "19 Between Birth and Death | 01 The Last Shift"
+    },
+    {
+      "topic": "Work / duty / emotional exhaustion",
+      "primary_recommendation": "15 — The Person Who Was Tired of Being Strong",
+      "other_books": "21 The Life We Forgot While Building a Life | 19 Between Birth and Death"
+    },
+    {
+      "topic": "Life stages / ageing / mortality",
+      "primary_recommendation": "19 — Between Birth and Death",
+      "other_books": "21 The Life We Forgot While Building a Life"
+    },
+    {
+      "topic": "Digital overwhelm / social comparison",
+      "primary_recommendation": "22 — The World That Never Leaves Us Alone",
+      "other_books": "13 The Fiction of Becoming | 21 The Life We Forgot While Building a Life"
+    },
+    {
+      "topic": "Empathy / communication / different minds",
+      "primary_recommendation": "23 — The Distance Between Two Minds",
+      "other_books": "05 When Understanding Begins | 16 The World We Thought We Saw"
+    },
+    {
+      "topic": "Achievement / never enough",
+      "primary_recommendation": "24 — The Enough That Never Arrived",
+      "other_books": "13 The Fiction of Becoming | 10 The Paradox of Stillness"
+    },
+    {
+      "topic": "Life / human condition",
+      "primary_recommendation": "14 — The Fiction of the Human",
+      "other_books": "19 Between Birth and Death | 24 The Enough That Never Arrived"
+    }
+  ],
+  "journey": [
+    {
+      "journey_number": 1,
+      "volume_label": "I — Inner World",
+      "stage_focus": "Attachment, fear of loss, detachment, emotional shutdown",
+      "next_question": "Why attachment turns into distance and personal change"
+    },
+    {
+      "journey_number": 2,
+      "volume_label": "I — Inner World",
+      "stage_focus": "Perception, narratives, rejection, identity, healing",
+      "next_question": "How do interpretations and self-stories amplify emotional pain?"
+    },
+    {
+      "journey_number": 3,
+      "volume_label": "I — Inner World",
+      "stage_focus": "Silence, overthinking, self-distance, feeling unseen",
+      "next_question": "How does unspoken emotional experience become isolation?"
+    },
+    {
+      "journey_number": 4,
+      "volume_label": "I — Inner World",
+      "stage_focus": "Rumination, unfinished conversations, memory, attachment",
+      "next_question": "Why does the mind keep replaying what has already ended?"
+    },
+    {
+      "journey_number": 5,
+      "volume_label": "I — Inner World",
+      "stage_focus": "Family, parent-child fear, expectations, empathy, misunderstandings",
+      "next_question": "Why can two caring people interpret each other so differently?"
+    },
+    {
+      "journey_number": 6,
+      "volume_label": "II — Limits of Understanding",
+      "stage_focus": "Awareness, identity, clarity, self-observation, control",
+      "next_question": "What happens when the observer begins questioning the self?"
+    },
+    {
+      "journey_number": 7,
+      "volume_label": "II — Limits of Understanding",
+      "stage_focus": "Need for reasons, control, uncertainty, explanation",
+      "next_question": "Why does the mind feel compelled to explain every event?"
+    },
+    {
+      "journey_number": 8,
+      "volume_label": "II — Limits of Understanding",
+      "stage_focus": "Identity, narration, meaning, awareness, silence",
+      "next_question": "What remains when constant meaning-making loses its grip?"
+    },
+    {
+      "journey_number": 9,
+      "volume_label": "II — Limits of Understanding",
+      "stage_focus": "Perception, memory filters, certainty, reality",
+      "next_question": "How do mental filters affect what appears real and certain?"
+    },
+    {
+      "journey_number": 10,
+      "volume_label": "II — Limits of Understanding",
+      "stage_focus": "Seeking, enoughness, incompleteness, resistance",
+      "next_question": "What if the need to arrive is prolonging the search?"
+    },
+    {
+      "journey_number": 11,
+      "volume_label": "III — Stories We Become",
+      "stage_focus": "Self-narration, memory ownership, fixed identity",
+      "next_question": "How does the story called 'I' form out of experience?"
+    },
+    {
+      "journey_number": 12,
+      "volume_label": "III — Stories We Become",
+      "stage_focus": "Purpose, significance, story-making, randomness",
+      "next_question": "Why do events become signals, lessons and personal meanings?"
+    },
+    {
+      "journey_number": 13,
+      "volume_label": "III — Stories We Become",
+      "stage_focus": "Future self, comparison, achievement, self-repair",
+      "next_question": "Why do imagined future versions make the present feel insufficient?"
+    },
+    {
+      "journey_number": 14,
+      "volume_label": "III — Stories We Become",
+      "stage_focus": "Human identity, psychological narration, separation",
+      "next_question": "What is the larger human story behind our smaller self-stories?"
+    },
+    {
+      "journey_number": 15,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Emotional exhaustion, approval, performance, self-acceptance",
+      "next_question": "What happens when being strong becomes the only allowed identity?"
+    },
+    {
+      "journey_number": 16,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Memory, assumptions, first impressions, confirmation, perception",
+      "next_question": "How does what we expect change what we think we saw?"
+    },
+    {
+      "journey_number": 17,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Love, jealousy, attachment, trust, fear, sacrifice",
+      "next_question": "What else are we feeling when we call something love?"
+    },
+    {
+      "journey_number": 18,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Rescue identity, guilt, care, boundaries, agency",
+      "next_question": "When does caring turn into needing to be indispensable?"
+    },
+    {
+      "journey_number": 19,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Childhood, conditioning, love, work, ageing, mortality",
+      "next_question": "What changes as human life moves from dependence to acceptance?"
+    },
+    {
+      "journey_number": 20,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Effort, luck, unfairness, outcome, disappointment",
+      "next_question": "Why can doing everything right still fail to produce the desired result?"
+    },
+    {
+      "journey_number": 21,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Responsibility, work, productivity, caregiving, presence",
+      "next_question": "How can protecting a life consume the life being protected?"
+    },
+    {
+      "journey_number": 22,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Digital overload, comparison, mediated lives, attention",
+      "next_question": "How much of the larger world can one finite life carry?"
+    },
+    {
+      "journey_number": 23,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Understanding, empathy, private experience, miscommunication",
+      "next_question": "Can we know another person's world without becoming them?"
+    },
+    {
+      "journey_number": 24,
+      "volume_label": "IV — Life We Actually Live",
+      "stage_focus": "Satisfaction, achievement adaptation, moving goals, enoughness",
+      "next_question": "Why do achievements become normal and the finish line keep moving?"
+    }
+  ],
+  "reader_match_status": "Editorial preview: chapter references located, semantic suitability and alternative recommendations pending approval",
+  "reader_match_pending_count": 14
+}
