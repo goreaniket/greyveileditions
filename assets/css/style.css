@@ -5455,3 +5455,22 @@ blockquote {
     font-size: 2.15rem;
   }
 }
+
+
+/* Founder identity pill for collection and series navigation */
+.site-nav .founder-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 1px solid rgba(42, 52, 64, .16);
+  border-radius: 999px;
+  background: rgba(248, 247, 244, .34);
+  color: var(--slate);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.site-nav .founder-pill:hover {
+  background: rgba(248, 247, 244, .8);
+  color: var(--charcoal);
+}
