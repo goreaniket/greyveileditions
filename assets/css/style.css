@@ -2137,6 +2137,13 @@ h3 {
   align-items: stretch;
 }
 
+/* Keep the three Volume I series in a clear vertical reading order. */
+.volume-series-list {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+
 /* When a grid only has two cards (e.g. the Reserved Archive card was
    removed), don't stretch them across a leftover 3-column track —
    center two comfortably-sized columns instead. */
