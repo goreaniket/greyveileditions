@@ -1,0 +1,27 @@
+name: Focused reader regression tests
+
+on:
+  push:
+    branches: ["ci/node20-reader-tests"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reader-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run focused reader tests
+        run: |
+          node --test \
+            tests/private-reader-content.test.mjs \
+            tests/reader-availability-regression.test.mjs \
+            tests/reader-protection.test.mjs
