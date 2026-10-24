@@ -212,7 +212,10 @@ const parseContentTarget = (href) => {
     return { kind: slug ? "book" : "", slug };
   }
 
-  const seriesSlug = segments[projectIndex + 1] || "";
+  const projectSegments = segments.slice(projectIndex + 1);
+  const seriesSlug = projectSegments[0] === "human-experience"
+    ? projectSegments[1] || ""
+    : projectSegments[0] || "";
   if (seriesSlug && seriesSlug !== "index.html") {
     return { kind: "series", slug: seriesSlug };
   }
