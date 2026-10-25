@@ -208,7 +208,7 @@ const parseContentTarget = (href) => {
   const booksIndex = segments.indexOf("books");
   if (booksIndex >= 0) {
     const rawSlug = segments[booksIndex + 1] || "";
-    const slug = rawSlug.endsWith(".html") ? rawSlug.replace(/\.html$/, "") : rawSlug;
+    const slug = rawSlug.replace(/\.(?:html|pdf)$/i, "");
     return { kind: slug ? "book" : "", slug };
   }
 
