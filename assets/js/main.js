@@ -507,7 +507,8 @@ const ensurePurchaseAction = (link, decision) => {
   if (!container) return;
 
   const matchingButtons = Array.from(container.querySelectorAll('[data-purchase-type="book"]'))
-    .filter((button) => String(button.dataset.purchaseBookId || "") === String(book.id));
+    .filter((button) => String(button.dataset.purchaseBookId || "") === String(book.id)
+      || button.dataset.purchaseSlug === book.slug);
   const existing = matchingButtons[0];
   matchingButtons.slice(1).forEach((button) => {
     if (button.hasAttribute("data-generated-purchase") || button.hasAttribute("data-generated-upsell")) button.remove();
@@ -588,25 +589,31 @@ const updateBookSurfaceState = (node, decision, access, context) => {
   const visibility = access.effectiveVisibilityForBookHierarchy(decision.hierarchy);
   const locked = visibility === "paid" && !decision.canRead;
   const readerLinks = [];
+  const pdfLinks = [];
   const directPage = node.matches?.("main");
 
-  if (node.matches?.("a[href*='/reader/']")) readerLinks.push(node);
-  node.querySelectorAll?.("a[href*='/reader/']").forEach((link) => readerLinks.push(link));
+  if (node.matches?.("a[href*='/reader/'], a[href$='.pdf']")) readerLinks.push(node);
+  node.querySelectorAll?.("a[href*='/reader/'], a[href$='.pdf']").forEach((link) => readerLinks.push(link));
+  if (node.matches?.("a[href$='.pdf']")) pdfLinks.push(node);
+  node.querySelectorAll?.("a[href$='.pdf']").forEach((link) => pdfLinks.push(link));
 
   readerLinks.forEach((link) => {
+    const isPdf = link.matches("a[href$='.pdf']");
     if (locked) {
       lockReaderLink(link, context.user);
       const pageTarget = currentPageTarget();
       const belongsToDirectBookPage = pageTarget.kind === "book"
         && pageTarget.slug === decision.book.slug
         && link.closest("main") === directContentState.main;
-      if (!directPage && !belongsToDirectBookPage) ensurePurchaseAction(link, decision);
+      if (isPdf || (!directPage && !belongsToDirectBookPage)) ensurePurchaseAction(link, decision);
       else removeGeneratedPurchaseAction(link, decision.book);
     } else {
       restoreLink(link);
-      removeGeneratedPurchaseAction(link, decision.book);
+      if (!isPdf) removeGeneratedPurchaseAction(link, decision.book);
     }
   });
+
+  pdfLinks.forEach((link) => ensurePurchaseAction(link, decision));
 
   if (node.matches?.(".book-card")) {
     const status = node.querySelector("span");
