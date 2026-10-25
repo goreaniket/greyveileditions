@@ -2143,11 +2143,6 @@ h3 {
   gap: 24px;
 }
 
-.volume-two-project-grid {
-  grid-template-columns: minmax(0, 360px);
-  justify-content: center;
-}
-
 /* Preserve portrait artwork proportions inside the existing series cards. */
 .volume-series-list .project-image-wrap {
   width: 100%;
