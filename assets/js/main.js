@@ -499,6 +499,28 @@ const removeGeneratedPurchaseAction = (link, book) => {
   generatedPurchaseButtons(container, book?.id).forEach((button) => button.remove());
 };
 
+const ensureBookPurchaseControl = (link, book) => {
+  if (!book?.id || !book.slug) return;
+
+  const container = purchaseContainerForLink(link);
+  if (!container) return;
+
+  const button = Array.from(container.querySelectorAll('[data-purchase-type="book"]'))
+    .find((item) => String(item.dataset.purchaseBookId || "") === String(book.id)
+      || item.dataset.purchaseSlug === book.slug) || document.createElement("button");
+  button.type = "button";
+  button.className = container.classList.contains("card-actions")
+    ? "button ghost purchase-button"
+    : "button primary purchase-button";
+  button.dataset.purchaseType = "book";
+  button.dataset.purchaseBookId = book.id;
+  button.dataset.purchaseSlug = book.slug;
+  setPurchaseResolving(button, "Buy Book");
+
+  if (!button.isConnected) link.insertAdjacentElement("afterend", button);
+  window.dispatchEvent(new CustomEvent("greyveil:purchases-refresh-labels"));
+};
+
 const ensurePurchaseAction = (link, decision) => {
   const book = decision.book;
   if (!book?.id) return;
@@ -605,15 +627,15 @@ const updateBookSurfaceState = (node, decision, access, context) => {
       const belongsToDirectBookPage = pageTarget.kind === "book"
         && pageTarget.slug === decision.book.slug
         && link.closest("main") === directContentState.main;
-      if (isPdf || (!directPage && !belongsToDirectBookPage)) ensurePurchaseAction(link, decision);
-      else removeGeneratedPurchaseAction(link, decision.book);
+      if (!isPdf && !directPage && !belongsToDirectBookPage) ensurePurchaseAction(link, decision);
+      else if (!isPdf) removeGeneratedPurchaseAction(link, decision.book);
     } else {
       restoreLink(link);
       if (!isPdf) removeGeneratedPurchaseAction(link, decision.book);
     }
   });
 
-  pdfLinks.forEach((link) => ensurePurchaseAction(link, decision));
+  pdfLinks.forEach((link) => ensureBookPurchaseControl(link, decision.book));
 
   if (node.matches?.(".book-card")) {
     const status = node.querySelector("span");
