@@ -8,7 +8,11 @@ export const seriesDetailPath = (series) => {
 export const bookDetailPath = (book, series) => {
   const bookSlug = cleanSlug(book?.slug)
   const seriesSlug = cleanSlug(series?.slug)
-  return bookSlug && seriesSlug ? `/projects/${seriesSlug}/books/${bookSlug}.html` : ''
+  if (!bookSlug || !seriesSlug) return ''
+  const volumeTwoSeries = new Set(['inner-experience', 'lived-experience', 'expanded-experience'])
+  return volumeTwoSeries.has(seriesSlug)
+    ? `/projects/human-experience/books/${bookSlug}/`
+    : `/projects/${seriesSlug}/books/${bookSlug}.html`
 }
 
 export const bookReaderPath = (book, series) => {
