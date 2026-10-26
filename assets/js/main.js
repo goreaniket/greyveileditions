@@ -882,7 +882,10 @@ const renderCatalogJourney = (mount, decisions, access) => {
 
   const actions = document.createElement("div");
   actions.className = "button-row";
-  actions.append(createAuthLink(access.bookDetailPath(first.book, series), "Begin Book 01", "button primary"));
+  const firstBookPath = volume?.slug === "human-experience"
+    ? `/projects/${volume.slug}/books/${first.book.slug}/`
+    : access.bookDetailPath(first.book, series);
+  actions.append(createAuthLink(firstBookPath, "Begin Book 01", "button primary"));
   mount.replaceChildren(...Array.from(mount.childNodes), path, status, actions);
   mount.removeAttribute("aria-busy");
 };
