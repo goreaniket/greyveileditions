@@ -855,7 +855,21 @@ const renderCatalogJourney = (mount, decisions, access) => {
   }
 
   const first = decisions[0];
+  const next = decisions[1];
   const { collection, volume, series } = first.hierarchy;
+  const detailPathFor = (decision) => {
+    if (!decision?.book) return "";
+    const title = decision.book.title?.trim().toLowerCase();
+    const matchingCard = Array.from(document.querySelectorAll(".book-card")).find((card) =>
+      card.querySelector("h3")?.textContent.trim().toLowerCase() === title
+    );
+    const existingDetailLink = matchingCard?.querySelector("a[href*='books/']:not([href$='.pdf'])");
+    if (existingDetailLink) return new URL(existingDetailLink.getAttribute("href"), window.location.href).pathname;
+    return mount.hasAttribute("data-catalog-journey")
+      ? `/projects/human-experience/books/${decision.book.slug}/`
+      : access.bookDetailPath(decision.book, decision.hierarchy.series);
+  };
+
   appendTextNode(mount, "p", "Reading Journey", "eyebrow");
   appendTextNode(mount, "h2", "Read in sequence.");
 
@@ -868,25 +882,30 @@ const renderCatalogJourney = (mount, decisions, access) => {
 
   const status = document.createElement("div");
   status.className = "journey-status";
-  const statusValues = [
+  [
     ["Previous Book", "None"],
     ["Current Position", `Book 1 of ${decisions.length}`],
-    ["Next Book", decisions[1]?.book?.title || "Series complete"],
-  ];
-  statusValues.forEach(([label, value]) => {
+  ].forEach(([label, value]) => {
     const row = document.createElement("p");
     appendTextNode(row, "span", label);
     appendTextNode(row, "strong", value);
     status.append(row);
   });
+  const nextRow = document.createElement("p");
+  appendTextNode(nextRow, "span", "Next Book");
+  if (next) {
+    const nextLink = createAuthLink(detailPathFor(next), next.book.title);
+    nextLink.className = "journey-next-link";
+    nextRow.append(nextLink);
+  } else {
+    appendTextNode(nextRow, "strong", "Series complete");
+  }
+  status.append(nextRow);
 
   const actions = document.createElement("div");
   actions.className = "button-row";
-  const firstBookPath = volume?.slug === "human-experience"
-    ? `/projects/${volume.slug}/books/${first.book.slug}/`
-    : access.bookDetailPath(first.book, series);
-  actions.append(createAuthLink(firstBookPath, "Begin Book 01", "button primary"));
-  mount.replaceChildren(...Array.from(mount.childNodes), path, status, actions);
+  actions.append(createAuthLink(detailPathFor(first), "Begin Book 01", "button primary"));
+  mount.replaceChildren(path, status, actions);
   mount.removeAttribute("aria-busy");
 };
 
