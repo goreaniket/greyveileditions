@@ -66,7 +66,7 @@ const setPurchaseState = (button, state, detail = {}) => {
     return
   }
   if (state === 'entitled') {
-    const ownerGranted = ['owner_grant', 'admin'].includes(detail.reason)
+    const ownerGranted = detail.reason === 'owner_grant'
     button.disabled = true
     button.textContent = detail.reason === 'temporary_pass'
       ? '1-Day access active'
