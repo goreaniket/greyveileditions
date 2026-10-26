@@ -254,8 +254,11 @@ const contentCardInfo = (card) => {
 };
 
 const isLivedExperienceLanding = () => {
+  const path = window.location.pathname.endsWith("/")
+    ? window.location.pathname.slice(0, -1)
+    : window.location.pathname;
   return document.body.classList.contains("series-landing")
-    && window.location.pathname.replace(/\\/+$/, "").endsWith("/projects/human-experience/lived-experience");
+    && path.endsWith("/projects/human-experience/lived-experience");
 };
 
 const currentPageTarget = () => {
