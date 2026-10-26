@@ -253,11 +253,16 @@ const contentCardInfo = (card) => {
   return { kind: "", slug: "" };
 };
 
+const isLivedExperienceLanding = () => {
+  return document.body.classList.contains("series-landing")
+    && window.location.pathname.replace(/\\/+$/, "").endsWith("/projects/human-experience/lived-experience");
+};
+
 const currentPageTarget = () => {
   const main = document.querySelector("main");
   const target = parseContentTarget(window.location.href);
   if (target.kind === "book" && main?.classList.contains("book-detail")) return target;
-  if (target.kind === "series" && document.body.classList.contains("series-landing")) return target;
+  if (target.kind === "series" && document.body.classList.contains("series-landing") && !isLivedExperienceLanding()) return target;
 
   const segments = window.location.pathname.split("/").filter(Boolean);
   const isProjectsRoot = segments[0] === "projects" && (segments.length === 1 || segments[1] === "index.html");
@@ -302,6 +307,11 @@ const collectContentSurfaceRecords = () => {
   };
 
   document.querySelectorAll(".project-card, .book-card").forEach((card) => {
+    // The Lived Experience page is a public series index: keep its four
+    // existing book cards and their current links visible while entitlement
+    // data loads or is unavailable. Individual book detail pages retain
+    // their normal access checks.
+    if (isLivedExperienceLanding() && card.matches(".book-card")) return;
     addRecord(card, contentCardInfo(card));
   });
 
