@@ -859,19 +859,15 @@ const renderCatalogJourney = (mount, decisions, access) => {
   const { collection, volume, series } = first.hierarchy;
   const detailPathFor = (decision) => {
     if (!decision?.book) return "";
-    // Resolve detail URLs from the authoritative catalog hierarchy.
-    // Static card links may use legacy or mistyped slugs, so do not reuse them
-    // for the Volume II reading journey.
-    if (mount.hasAttribute("data-catalog-journey")) {
-      return access.bookDetailPath(decision.book, decision.hierarchy.series);
-    }
     const title = decision.book.title?.trim().toLowerCase();
     const matchingCard = Array.from(document.querySelectorAll(".book-card")).find((card) =>
       card.querySelector("h3")?.textContent.trim().toLowerCase() === title
     );
     const existingDetailLink = matchingCard?.querySelector("a[href*='books/']:not([href$='.pdf'])");
     if (existingDetailLink) return new URL(existingDetailLink.getAttribute("href"), window.location.href).pathname;
-    return access.bookDetailPath(decision.book, decision.hierarchy.series);
+    return mount.hasAttribute("data-catalog-journey")
+      ? `/projects/human-experience/books/${decision.book.slug}/`
+      : access.bookDetailPath(decision.book, decision.hierarchy.series);
   };
 
   appendTextNode(mount, "p", "Reading Journey", "eyebrow");
