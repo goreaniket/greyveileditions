@@ -859,9 +859,14 @@ const renderCatalogJourney = (mount, decisions, access) => {
   const { collection, volume, series } = first.hierarchy;
   const detailPathFor = (decision) => {
     if (!decision?.book) return "";
-    const title = decision.book.title?.trim().toLowerCase();
+    const normalizeBookTitle = (value) => String(value || "")
+      .normalize("NFKD")
+      .replace(/[’‘']/g, "")
+      .replace(/[^\\p{L}\\p{N}]+/gu, "")
+      .toLowerCase();
+    const title = normalizeBookTitle(decision.book.title);
     const matchingCard = Array.from(document.querySelectorAll(".book-card")).find((card) =>
-      card.querySelector("h3")?.textContent.trim().toLowerCase() === title
+      normalizeBookTitle(card.querySelector("h3")?.textContent) === title
     );
     const existingDetailLink = matchingCard?.querySelector("a[href*='books/']:not([href$='.pdf'])");
     if (existingDetailLink) return new URL(existingDetailLink.getAttribute("href"), window.location.href).pathname;
