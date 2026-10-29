@@ -29,6 +29,25 @@ create table if not exists public.sales_invoices (
 create index if not exists sales_invoices_date_idx on public.sales_invoices(invoice_date desc, created_at desc);
 create index if not exists sales_invoices_customer_idx on public.sales_invoices using gin (to_tsvector('simple', customer_name));
 
+-- Match the admin roles used by the existing Greyveil admin dashboard.
+create or replace function public.greyveil_is_admin()
+returns boolean
+language sql
+stable
+security definer
+set search_path = ''
+as $
+  select exists (
+    select 1
+    from public.profiles
+    where id = auth.uid()
+      and role in ('admin', 'super_admin')
+  );
+$;
+
+revoke all on function public.greyveil_is_admin() from public;
+grant execute on function public.greyveil_is_admin() to authenticated;
+
 alter table public.sales_invoices enable row level security;
 
 drop policy if exists "Admins can read sales invoices" on public.sales_invoices;
