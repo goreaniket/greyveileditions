@@ -104,12 +104,13 @@ const buildInvoiceDocument = (invoice) => {
   const invoiceDate = new Date(invoice.invoice_date + 'T00:00:00')
   const dateText = Number.isNaN(invoiceDate.getTime()) ? invoice.invoice_date : new Intl.DateTimeFormat('en-IN', { dateStyle: 'long' }).format(invoiceDate)
   const customerAddress = escapeHtml(invoice.customer_address).replace(/\n/g, '<br>')
+  const voidNotice = invoice.status === 'void' ? '<div style="margin:18px 0;padding:14px;border:2px solid #a22;color:#a22;text-align:center;font-weight:800;letter-spacing:.12em">VOID — NOT VALID FOR PAYMENT</div>' : ''
   const paymentText = invoice.payment_status === 'paid' ? 'Paid' : invoice.payment_status === 'pending' ? 'Payment pending' : invoice.payment_status === 'partial' ? 'Partially paid' : 'Refunded'
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(invoice.invoice_number)} | Greyveil Editions</title><style>
   *{box-sizing:border-box}body{margin:0;background:#efeee9;color:#202832;font:14px/1.55 Inter,Arial,sans-serif;padding:32px 16px}.paper{max-width:820px;margin:auto;background:#fff;padding:48px;border:1px solid #dedbd4}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.brand{font:600 32px Georgia,serif;letter-spacing:.02em}.sub,.muted{color:#6e747b}.kind{text-align:right;color:#8c7659;font-size:11px;letter-spacing:.16em;font-weight:700}.kind strong{display:block;color:#202832;font:500 26px Georgia,serif;letter-spacing:0;margin-top:8px}.rule{height:1px;background:#e5e2dc;margin:26px 0}.meta{display:flex;justify-content:space-between;gap:20px}.addresses{display:grid;grid-template-columns:1fr 1fr;gap:28px}.label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8c7659;font-weight:700}.addresses p{margin:6px 0}.addresses strong{font-size:16px}.items{width:100%;border-collapse:collapse;margin-top:28px}.items th,.items td{text-align:left;padding:12px 8px;border-bottom:1px solid #e9e6e0}.items th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6e747b}.items td:nth-child(n+3),.items th:nth-child(n+3){text-align:right}.totals{width:min(330px,100%);margin:22px 0 0 auto}.totals div{display:flex;justify-content:space-between;padding:7px 0}.grand{border-top:1px solid #d9d5cd;margin-top:8px;padding-top:14px!important;font-size:18px;font-weight:700}.payment{margin-top:20px;padding:13px 16px;background:#f5f4f0}.note{font-size:11px;color:#6e747b;margin-top:28px}.footer{margin-top:40px;padding-top:16px;border-top:1px solid #e5e2dc;color:#6e747b;font-size:12px}.actions{max-width:820px;margin:16px auto;text-align:right}.actions button{background:#26313d;color:#fff;border:0;padding:12px 20px;font:inherit;cursor:pointer}@media(max-width:600px){.paper{padding:24px 18px}.top,.meta{flex-direction:column}.kind{text-align:left}.addresses{grid-template-columns:1fr}.items th,.items td{padding:9px 4px;font-size:11px}}@media print{body{padding:0;background:#fff}.paper{border:0;padding:18px;max-width:none}.actions{display:none}}
   </style></head><body><main class="paper">
     <div class="top"><div><div class="brand">Greyveil Editions</div><div class="sub">Independent Publishing House</div><p class="muted">Vapi, Gujarat, India</p></div><div class="kind">NON-GST DOCUMENT<strong>Sales Invoice</strong></div></div>
-    <div class="rule"></div><div class="meta"><div><span class="label">Invoice number</span><br><strong>${escapeHtml(invoice.invoice_number)}</strong></div><div><span class="label">Invoice date</span><br><strong>${escapeHtml(dateText)}</strong></div></div>
+    ${voidNotice}<div class="rule"></div><div class="meta"><div><span class="label">Invoice number</span><br><strong>${escapeHtml(invoice.invoice_number)}</strong></div><div><span class="label">Invoice date</span><br><strong>${escapeHtml(dateText)}</strong></div></div>
     <div class="rule"></div><div class="addresses"><div><span class="label">Seller</span><p><strong>Greyveil Editions</strong></p><p class="muted">Vapi, Gujarat, India</p></div><div><span class="label">Bill to</span><p><strong>${escapeHtml(invoice.customer_name)}</strong></p><p>${escapeHtml(invoice.customer_phone)}</p><p>${escapeHtml(invoice.customer_email)}</p><p>${customerAddress}</p></div></div>
     <table class="items"><thead><tr><th>#</th><th>Description</th><th>Qty</th><th>Unit price</th><th>Amount</th></tr></thead><tbody>${rows}</tbody></table>
     <div class="totals"><div><span>Subtotal</span><strong>${money(invoice.subtotal_paise)}</strong></div><div><span>Shipping</span><strong>${money(invoice.shipping_paise)}</strong></div><div><span>Discount</span><strong>− ${money(invoice.discount_paise)}</strong></div><div class="grand"><span>Total</span><strong>${money(invoice.total_paise)}</strong></div></div>
@@ -119,8 +120,8 @@ const buildInvoiceDocument = (invoice) => {
   </main><div class="actions"><button onclick="window.print()">Print / Save as PDF</button></div></body></html>`
 }
 
-const openCustomerCopy = (invoice) => {
-  const popup = window.open('', '_blank')
+const openCustomerCopy = (invoice, existingPopup = null) => {
+  const popup = existingPopup || window.open('', '_blank')
   if (!popup) {
     window.alert('Allow pop-ups to open the customer invoice copy.')
     return
@@ -200,6 +201,7 @@ const loadInvoices = async () => {
 const handleSubmit = async (event) => {
   event.preventDefault()
   const form = event.currentTarget
+  const customerWindow = window.open('', '_blank')
   const submit = $('[data-billing-submit]')
   submit.disabled = true
   submit.textContent = 'Saving invoice…'
@@ -242,9 +244,14 @@ const handleSubmit = async (event) => {
     form.reset()
     $('[data-billing-items]').innerHTML = ''
     addItemRow()
-    setStatus('Invoice saved to Greyveil records. Customer copy opened in a new tab.')
-    openCustomerCopy(data)
+    if (customerWindow) {
+      setStatus('Invoice saved to Greyveil records. Customer copy opened in a new tab.')
+      openCustomerCopy(data, customerWindow)
+    } else {
+      setStatus('Invoice saved to Greyveil records. Pop-up was blocked; use View / Print in the register for the customer copy.')
+    }
   } catch (error) {
+    if (customerWindow && !customerWindow.closed) customerWindow.close()
     setStatus(error.message || 'Could not save invoice.', true)
   } finally {
     submit.disabled = false
