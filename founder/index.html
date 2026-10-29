@@ -30,7 +30,7 @@
         "@type": "ProfilePage",
         "@id": "https://greyveileditions.site/founder/#profilepage",
         "url": "https://greyveileditions.site/founder/",
-        "name": "Lalit Rakesh Mishra \u2014 Founder & CEO of Greyveil Editions",
+        "name": "Lalit Rakesh Mishra — Founder & CEO of Greyveil Editions",
         "isPartOf": {
           "@id": "https://greyveileditions.site/#website"
         },
@@ -47,14 +47,39 @@
         "@id": "https://greyveileditions.site/founder/#person",
         "name": "Lalit Rakesh Mishra",
         "url": "https://greyveileditions.site/founder/",
-        "jobTitle": ["Founder", "Chief Executive Officer", "Writer", "Publisher", "Creative Director"],
+        "jobTitle": [
+          "Founder",
+          "Chief Executive Officer",
+          "Writer",
+          "Publisher",
+          "Creative Director"
+        ],
         "worksFor": {
           "@id": "https://greyveileditions.site/#organization"
         },
         "affiliation": {
           "@id": "https://greyveileditions.site/#organization"
         },
-        "image": "https://greyveileditions.site/assets/images/Lalit.jpeg"
+        "image": "https://greyveileditions.site/assets/images/Lalit.jpeg",
+        "description": "Lalit Rakesh Mishra is the founder and CEO of Greyveil Editions, and the creator and author behind The Human Collections, a 24-book literary project organised into two volumes and six series.",
+        "knowsAbout": [
+          "literature",
+          "human psychology",
+          "philosophy",
+          "human experience",
+          "identity",
+          "perception",
+          "relationships",
+          "publishing"
+        ],
+        "creatorOf": [
+          {
+            "@id": "https://greyveileditions.site/projects/#volume-i"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/#volume-ii"
+          }
+        ]
       },
       {
         "@type": "CreativeWorkSeries",
@@ -79,7 +104,10 @@
           {
             "@id": "https://greyveileditions.site/projects/human-fiction/#series"
           }
-        ]
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "CreativeWorkSeries",
@@ -109,7 +137,13 @@
           {
             "@id": "https://greyveileditions.site/projects/human-mind/books/when-understanding-begins.html"
           }
-        ]
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "Book",
@@ -214,7 +248,13 @@
           {
             "@id": "https://greyveileditions.site/projects/human-paradox/books/the-paradox-of-stillness.html"
           }
-        ]
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "Book",
@@ -316,7 +356,13 @@
           {
             "@id": "https://greyveileditions.site/projects/human-fiction/books/the-fiction-of-human.html"
           }
-        ]
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "Book",
@@ -392,10 +438,19 @@
           "@id": "https://greyveileditions.site/founder/#person"
         },
         "hasPart": [
-          { "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series" }
-        ]
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series"
+          }
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "CreativeWorkSeries",
@@ -403,12 +458,26 @@
         "name": "The Inner Experience",
         "url": "https://greyveileditions.site/projects/human-experience/inner-experience/",
         "numberOfItems": 3,
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/#volume-ii" },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/#volume-ii"
+        },
         "hasPart": [
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-person-who-was-tired-of-being-strong/" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-world-we-thought-we-saw/" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/an-unknown-part-of-life/" }
-        ]
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-person-who-was-tired-of-being-strong/"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-world-we-thought-we-saw/"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/an-unknown-part-of-life/"
+          }
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "CreativeWorkSeries",
@@ -416,13 +485,29 @@
         "name": "The Lived Experience",
         "url": "https://greyveileditions.site/projects/human-experience/lived-experience/",
         "numberOfItems": 4,
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/#volume-ii" },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/#volume-ii"
+        },
         "hasPart": [
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-people-we-couldn-t-save/" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/between-birth-and-death/" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-things-we-did-right-and-still-lost/" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-life-we-forgot-while-building-a-life/" }
-        ]
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-people-we-couldn-t-save/"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/between-birth-and-death/"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-things-we-did-right-and-still-lost/"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-life-we-forgot-while-building-a-life/"
+          }
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "CreativeWorkSeries",
@@ -430,102 +515,176 @@
         "name": "The Expanded Experience",
         "url": "https://greyveileditions.site/projects/human-experience/expanded-experience/",
         "numberOfItems": 3,
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/#volume-ii" },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/#volume-ii"
+        },
         "hasPart": [
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-world-that-never-leaves-us-alone/" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-distance-between-two-minds/" },
-          { "@id": "https://greyveileditions.site/projects/human-experience/books/the-enough-that-never-arrived/" }
-        ]
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-world-that-never-leaves-us-alone/"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-distance-between-two-minds/"
+          },
+          {
+            "@id": "https://greyveileditions.site/projects/human-experience/books/the-enough-that-never-arrived/"
+          }
+        ],
+        "creator": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-person-who-was-tired-of-being-strong/",
         "name": "The Person Who Was Tired of Being Strong",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-person-who-was-tired-of-being-strong/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-world-we-thought-we-saw/",
         "name": "The World We Thought We Saw",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-world-we-thought-we-saw/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/an-unknown-part-of-life/",
         "name": "An Unknown Part of Life",
         "url": "https://greyveileditions.site/projects/human-experience/books/an-unknown-part-of-life/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/inner-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-people-we-couldn-t-save/",
         "name": "The People We Couldn't Save",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-people-we-couldn-t-save/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/between-birth-and-death/",
         "name": "Between Birth and Death",
         "url": "https://greyveileditions.site/projects/human-experience/books/between-birth-and-death/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-things-we-did-right-and-still-lost/",
         "name": "The Things We Did Right and Still Lost",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-things-we-did-right-and-still-lost/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-life-we-forgot-while-building-a-life/",
         "name": "The Life We Forgot While Building a Life",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-life-we-forgot-while-building-a-life/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/lived-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-world-that-never-leaves-us-alone/",
         "name": "The World That Never Leaves Us Alone",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-world-that-never-leaves-us-alone/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-distance-between-two-minds/",
         "name": "The Distance Between Two Minds",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-distance-between-two-minds/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series"
+        }
       },
       {
         "@type": "Book",
         "@id": "https://greyveileditions.site/projects/human-experience/books/the-enough-that-never-arrived/",
         "name": "The Enough That Never Arrived",
         "url": "https://greyveileditions.site/projects/human-experience/books/the-enough-that-never-arrived/",
-        "author": { "@id": "https://greyveileditions.site/founder/#person" },
-        "publisher": { "@id": "https://greyveileditions.site/#organization" },
-        "isPartOf": { "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series" }
+        "author": {
+          "@id": "https://greyveileditions.site/founder/#person"
+        },
+        "publisher": {
+          "@id": "https://greyveileditions.site/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://greyveileditions.site/projects/human-experience/expanded-experience/#series"
+        }
       }
     ]
   }
@@ -580,6 +739,7 @@
         <p class="founder-support-statement">Lalit Rakesh Mishra is the founder of Greyveil Editions, an independent publishing house exploring the complexities of human thought, emotion, identity, relationships, perception, and existence through literature, philosophy, and reflection.</p>
         <p>His work goes beyond writing books. He develops the publishing vision, builds collections, shapes the creative identity, oversees publication, and directs the digital platform through which Greyveil reaches its readers.</p>
         <p>He is involved in the work from the first idea to the final presentation.</p>
+        <p>Lalit Rakesh Mishra is the creator and author behind The Human Collections — Greyveil Editions' central literary project. He developed its two-volume structure: Volume I, The Human Collections, and Volume II, The Human Experience. Across six connected series and 24 books, the project explores human thought, identity, perception, relationships, contradiction, and lived experience.</p>
       </div>
     </section>
 
@@ -632,9 +792,9 @@
     <section class="section page-shell" aria-labelledby="collections-heading">
       <div class="section-heading reveal">
         <p class="eyebrow">The Collections</p>
-        <h2 id="collections-heading">Different explorations. One publishing identity.</h2>
+        <h2 id="collections-heading">The Human Collections — created by Lalit Rakesh Mishra.</h2>
       </div>
-      <p class="section-intro reveal">Greyveil Editions brings together literary projects that examine different dimensions of the human experience.</p>
+      <p class="section-intro reveal">The Human Collections is an original publishing project conceived and developed by Lalit Rakesh Mishra for Greyveil Editions. It is organised into two volumes, six connected series, and 24 books exploring different dimensions of the human experience.</p>
       <div class="contact-card reveal">
         <h3>The Human Collections</h3>
         <div class="contact-actions">
@@ -652,9 +812,9 @@
     <section class="section page-shell" aria-labelledby="paradox-collection-heading">
       <div class="section-heading reveal">
         <p class="eyebrow">The Human Paradox Collection</p>
-        <h2 id="paradox-collection-heading">A collection published under Greyveil Editions.</h2>
+        <h2 id="paradox-collection-heading">Volume I — The Human Collections.</h2>
       </div>
-      <p class="section-intro reveal">The Human Paradox Collection brings together three connected series.</p>
+      <p class="section-intro reveal">Created and authored by Lalit Rakesh Mishra, Volume I brings together 14 books across three series: The Human Mind, The Human Paradox, and The Human Fiction.</p>
       <div class="profile-book-list reveal delay-1">
         <div><h3>Series 01 — Human Mind</h3><p>Consciousness, identity, attachment, perception, silence, and understanding.</p></div>
         <div><h3>Series 02 — Human Paradox</h3><p>Contradictions within thought, awareness, explanation, and reality.</p></div>
@@ -665,8 +825,9 @@
     <section class="section page-shell" aria-labelledby="human-experience-heading">
       <div class="section-heading reveal">
         <p class="eyebrow">The Human Experience — Volume II</p>
-        <h2 id="human-experience-heading">A 10-book collection spanning three series.</h2>
+        <h2 id="human-experience-heading">Volume II — The Human Experience.</h2>
       </div>
+      <p class="section-intro reveal">The second volume of Lalit Rakesh Mishra’s Human Collections project. It extends the exploration across 10 books in three connected series.</p>
       <div class="profile-book-list reveal delay-1">
         <div><h3>Series I — The Inner Experience</h3><a href="../projects/human-experience/inner-experience/index.html">The Inner Experience</a></div>
         <div><h3>Series II — The Lived Experience</h3><a href="../projects/human-experience/lived-experience/index.html">The Lived Experience</a></div>
