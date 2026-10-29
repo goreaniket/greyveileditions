@@ -247,7 +247,7 @@ const escapeReceiptText = (value) => String(value ?? '').replace(/[&<>"']/g, (ch
 }[character]))
 
 const openPaymentReceipt = (order, payment, user) => {
-  const popup = window.open('', '_blank', 'noopener,noreferrer')
+  const popup = window.open('', '_blank')
   if (!popup) {
     window.alert('Please allow pop-ups to open your payment receipt.')
     return
