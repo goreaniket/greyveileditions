@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billing & Invoices | Greyveil Editions</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+  <link rel="stylesheet" href="/assets/css/admin-billing.css">
+</head>
+<body class="admin-page billing-page">
+  <main class="billing-shell">
+    <header class="billing-header">
+      <div>
+        <p class="admin-eyebrow">Greyveil Editions · Administration</p>
+        <h1>Billing & Invoices</h1>
+        <p>Create customer bills and keep a searchable internal record.</p>
+      </div>
+      <div class="billing-header-actions">
+        <a class="admin-action" href="/admin/">Admin Dashboard</a>
+        <button class="admin-action" type="button" data-billing-logout>Logout</button>
+      </div>
+    </header>
+
+    <section class="billing-locked" data-billing-loading>
+      <h2>Checking admin access…</h2>
+    </section>
+    <section class="billing-locked" data-billing-locked hidden>
+      <h2>Billing access unavailable</h2>
+      <p data-billing-locked-message>Only Greyveil admins can access invoices.</p>
+      <a class="admin-action admin-action--primary" href="/auth/login/">Go to Login</a>
+    </section>
+
+    <div data-billing-app hidden>
+      <section class="billing-stats" aria-label="Invoice summary">
+        <article><span>Total invoices</span><strong data-billing-count>0</strong></article>
+        <article><span>Recorded sales</span><strong data-billing-sales>₹0</strong></article>
+        <article><span>Pending amount</span><strong data-billing-pending>₹0</strong></article>
+      </section>
+
+      <section class="billing-card">
+        <div class="billing-card-heading">
+          <div><p class="admin-eyebrow">New customer bill</p><h2>Create invoice</h2></div>
+          <span class="billing-nongst">NON-GST INVOICE</span>
+        </div>
+        <form data-billing-form>
+          <div class="billing-form-grid">
+            <label><span>Customer name *</span><input name="customer_name" required maxlength="160" autocomplete="name"></label>
+            <label><span>Customer phone</span><input name="customer_phone" maxlength="30" autocomplete="tel"></label>
+            <label><span>Customer email</span><input name="customer_email" type="email" maxlength="254" autocomplete="email"></label>
+            <label class="billing-wide"><span>Billing / delivery address</span><textarea name="customer_address" rows="2" maxlength="1000" autocomplete="street-address"></textarea></label>
+          </div>
+          <div class="billing-items-heading"><h3>Items</h3><button class="admin-action" type="button" data-billing-add-item>Add item</button></div>
+          <div class="billing-item-list" data-billing-items>
+            <div class="billing-item-row" data-billing-item>
+              <label><span>Book / description *</span><input name="item_name" required maxlength="240" placeholder="Book title"></label>
+              <label><span>Qty</span><input name="item_qty" type="number" min="1" max="999" value="1" required></label>
+              <label><span>Unit price (₹)</span><input name="item_price" type="number" min="0" step="0.01" value="0.00" required></label>
+              <button class="billing-remove-item" type="button" data-billing-remove aria-label="Remove item" disabled>×</button>
+            </div>
+          </div>
+          <div class="billing-totals">
+            <label><span>Shipping (₹)</span><input name="shipping" type="number" min="0" step="0.01" value="0.00"></label>
+            <label><span>Discount (₹)</span><input name="discount" type="number" min="0" step="0.01" value="0.00"></label>
+            <div class="billing-total-preview"><span>Invoice total</span><strong data-billing-total>₹0.00</strong></div>
+          </div>
+          <div class="billing-form-grid">
+            <label><span>Payment status</span><select name="payment_status"><option value="paid">Paid</option><option value="pending">Pending</option><option value="partial">Partially paid</option><option value="refunded">Refunded</option></select></label>
+            <label><span>Payment method</span><select name="payment_method"><option value="">Not specified</option><option>UPI</option><option>Cash</option><option>Bank transfer</option><option>Card</option><option>Other</option></select></label>
+            <label class="billing-wide"><span>Internal note (not shown on customer bill)</span><textarea name="notes" rows="2" maxlength="1000"></textarea></label>
+          </div>
+          <p class="billing-form-message" data-billing-form-status role="status"></p>
+          <div class="billing-actions"><button class="admin-action admin-action--primary" type="submit" data-billing-submit>Save invoice & create customer copy</button></div>
+        </form>
+      </section>
+
+      <section class="billing-card">
+        <div class="billing-card-heading"><div><p class="admin-eyebrow">Permanent register</p><h2>Invoice records</h2></div><button class="admin-action" type="button" data-billing-refresh>Refresh</button></div>
+        <div class="billing-search"><input type="search" placeholder="Search invoice, customer, book…" data-billing-search aria-label="Search invoice records"></div>
+        <div class="billing-table-wrap">
+          <table class="admin-table"><thead><tr><th>Invoice</th><th>Date</th><th>Customer</th><th>Total</th><th>Payment</th><th>Status</th><th>Customer copy</th></tr></thead><tbody data-billing-table></tbody></table>
+        </div>
+        <p class="admin-empty" data-billing-empty hidden>No invoices recorded yet.</p>
+        <p class="billing-register-note">Issued invoices remain in the register. If a bill needs correction, mark the original void and issue a new invoice; do not silently overwrite or delete it.</p>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="/assets/js/admin-billing.js"></script>
+</body>
+</html>
