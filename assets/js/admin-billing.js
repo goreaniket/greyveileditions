@@ -157,6 +157,26 @@ const renderTable = () => {
     button.textContent = 'View / Print'
     button.addEventListener('click', () => openCustomerCopy(invoice))
     action.append(button)
+    if (invoice.status === 'issued') {
+      const voidButton = document.createElement('button')
+      voidButton.className = 'admin-action'
+      voidButton.type = 'button'
+      voidButton.textContent = 'Void'
+      voidButton.style.marginLeft = '6px'
+      voidButton.addEventListener('click', async () => {
+        if (!window.confirm(`Mark ${invoice.invoice_number} as void? The record will remain in the register.`)) return
+        voidButton.disabled = true
+        const { error } = await supabase.from('sales_invoices').update({ status: 'void' }).eq('id', invoice.id)
+        if (error) {
+          window.alert('Could not void this invoice: ' + error.message)
+          voidButton.disabled = false
+          return
+        }
+        invoice.status = 'void'
+        renderTable()
+      })
+      action.append(voidButton)
+    }
     tr.append(action)
     table.append(tr)
   })
