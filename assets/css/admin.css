@@ -2464,3 +2464,20 @@
     min-height: 104px;
   }
 }
+
+
+.admin-nav-billing {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(140, 106, 74, .22);
+  border-radius: 6px;
+  color: rgba(42, 52, 64, .86);
+  font-weight: 700;
+  text-decoration: none;
+}
+.admin-nav-billing:hover {
+  background: rgba(140, 106, 74, .1);
+  color: var(--slate);
+}
