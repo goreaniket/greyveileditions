@@ -242,7 +242,42 @@ const paymentStatusExplanation = (status) => ({
   cancelled: 'This payment was cancelled. No access has been added.',
 }[status] || 'This payment is being processed. We’ll update it as soon as confirmation arrives.')
 
-const paymentHistoryCard = (order, payment) => {
+const escapeReceiptText = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+}[character]))
+
+const openPaymentReceipt = (order, payment, user) => {
+  const popup = window.open('', '_blank', 'noopener,noreferrer')
+  if (!popup) {
+    window.alert('Please allow pop-ups to open your payment receipt.')
+    return
+  }
+
+  const paidAmount = Number(order.amount ?? payment?.amount)
+  const paidAt = order.paid_at || payment?.verified_at || payment?.created_at || order.created_at
+  const date = paidAt ? new Date(paidAt) : new Date()
+  const invoiceDate = Number.isNaN(date.getTime()) ? 'Date unavailable' : new Intl.DateTimeFormat('en-IN', { dateStyle: 'long' }).format(date)
+  const invoiceNumber = `GV-${date.getFullYear()}-${String(order.id || '').replace(/-/g, '').slice(0, 10).toUpperCase()}`
+  const rows = [
+    ['Receipt number', invoiceNumber],
+    ['Order reference', order.id],
+    ['Payment reference', payment?.razorpay_payment_id || 'Not available'],
+    ['Purchase', order.item_name || 'Greyveil purchase'],
+    ['Purchase type', formatPurchaseType(order.purchase_type)],
+    ['Payment date', invoiceDate],
+    ['Payment method', payment?.method ? formatAccessType(payment.method) : 'Razorpay'],
+  ]
+  const details = rows.map(([label, value]) => `<tr><th>${escapeReceiptText(label)}</th><td>${escapeReceiptText(value)}</td></tr>`).join('')
+  const customer = escapeReceiptText(user?.email || 'Customer')
+  const total = escapeReceiptText(formatCurrency(paidAmount, order.currency))
+
+  popup.document.write(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Payment Receipt ${escapeReceiptText(invoiceNumber)} | Greyveil Editions</title><style>
+    *{box-sizing:border-box}body{margin:0;padding:40px 18px;background:#f3f1ed;color:#202833;font:14px/1.55 Inter,Arial,sans-serif}.receipt{max-width:720px;margin:0 auto;padding:42px;background:#fff;border:1px solid #e3e0da}.brand{font:600 30px Georgia,serif;letter-spacing:.02em}.muted{color:#68717b}.rule{height:1px;background:#e4e1dc;margin:26px 0}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8b765b;font-weight:700}h1{font:500 34px Georgia,serif;margin:30px 0 6px}table{width:100%;border-collapse:collapse;margin-top:24px}th,td{text-align:left;padding:13px 8px;border-bottom:1px solid #ece9e4;vertical-align:top}th{width:38%;font-weight:600;color:#68717b}.total{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding:20px;background:#f6f5f2;font-size:17px}.total strong{font:600 25px Georgia,serif}.note{margin-top:28px;font-size:12px;color:#68717b}.actions{max-width:720px;margin:18px auto;text-align:right}.actions button{padding:12px 20px;border:0;background:#26313d;color:white;font:inherit;cursor:pointer}@media print{body{padding:0;background:white}.receipt{border:0;padding:20px;max-width:none}.actions{display:none}}
+    </style></head><body><main class="receipt"><div class="top"><div><div class="brand">Greyveil Editions</div><div class="muted">Independent Publishing House</div></div><div class="tag">Payment confirmed</div></div><h1>Payment Receipt</h1><div class="muted">Issued to ${customer}</div><div class="rule"></div><table><tbody>${details}</tbody></table><div class="total"><span>Amount received</span><strong>${total}</strong></div><p class="note">This document confirms receipt of payment for the Greyveil Editions purchase shown above. It is a payment receipt, not a GST tax invoice.</p><div class="rule"></div><div class="muted">Thank you for supporting Greyveil Editions.</div></main><div class="actions"><button onclick="window.print()">Print / Save as PDF</button></div></body></html>`)
+  popup.document.close()
+}
+
+const paymentHistoryCard = (order, payment, user) => {
   const card = document.createElement('article')
   card.className = 'payment-history-card'
 
@@ -304,6 +339,15 @@ const paymentHistoryCard = (order, payment) => {
   }
 
   card.append(heading, meta, footer)
+
+  if (statusValue === 'paid') {
+    const receiptButton = document.createElement('button')
+    receiptButton.type = 'button'
+    receiptButton.className = 'button ghost payment-history-card__receipt'
+    receiptButton.textContent = 'View / Save Receipt'
+    receiptButton.addEventListener('click', () => openPaymentReceipt(order, payment, user))
+    card.append(receiptButton)
+  }
   return card
 }
 
@@ -343,7 +387,7 @@ const renderAccountPayments = async (user) => {
 
     const orders = ordersResult.data || []
     orders.forEach((order) => {
-      nodes.list.append(paymentHistoryCard(order, paymentsByOrder.get(String(order.id))))
+      nodes.list.append(paymentHistoryCard(order, paymentsByOrder.get(String(order.id)), user))
     })
 
     if (nodes.empty) nodes.empty.hidden = Boolean(orders.length)
