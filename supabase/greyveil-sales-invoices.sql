@@ -36,12 +36,14 @@ language sql
 stable
 security definer
 set search_path = ''
-as 'select exists (
-  select 1
-  from public.profiles
-  where id = auth.uid()
-    and role in (''admin'', ''super_admin'')
-)';
+as $function$
+  select exists (
+    select 1
+    from public.profiles
+    where id = auth.uid()
+      and role in ('admin', 'super_admin')
+  );
+$function$;
 revoke all on function public.greyveil_is_admin() from public;
 grant execute on function public.greyveil_is_admin() to authenticated;
 
