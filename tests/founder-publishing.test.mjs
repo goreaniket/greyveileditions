@@ -77,19 +77,17 @@ test('announcements render a home banner below the hero while retaining floating
   assert.match(css, /\.floating-announcement/)
 })
 
-test('homepage and About reuse one layered Greyveil brand-art treatment without duplicate hero logos', async () => {
+test('the redesigned homepage keeps its literary hero and About retains layered Greyveil brand art', async () => {
   const [home, about, css, announcements] = await Promise.all([
     source('../index.html'),
     source('../about/index.html'),
     source('../assets/css/style.css'),
     source('../assets/js/announcements.js'),
   ])
-  const homeHero = home.match(/<section class="hero page-shell home-hero">([\s\S]*?)<\/section>/)?.[1] || ''
+  const homeHero = home.match(/<section class="hero"[^>]*>([\s\S]*?)<\/section>/)?.[1] || ''
 
-  assert.match(homeHero, /greyveil-brand-art greyveil-brand-art--hero/)
-  assert.match(homeHero, /greyveil-brand-art__layers/)
-  assert.equal((homeHero.match(/assets\/images\/greyveil-logo\.png/g) || []).length, 1)
-  assert.equal((homeHero.match(/greyveil-brand-art--hero/g) || []).length, 1)
+  assert.match(homeHero, /Welcome to<br>everything we<br>/)
+  assert.match(homeHero, /class="hero-art"/)
 
   assert.match(about, /greyveil-brand-art greyveil-brand-art--about/)
   assert.match(about, /greyveil-brand-art__main/)
