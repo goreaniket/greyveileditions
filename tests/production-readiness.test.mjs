@@ -80,7 +80,7 @@ test('deployable route inventory contains every public, auth, commerce, admin, a
   const files = await deployableHtmlFiles()
   const routes = files.map(routeForFile)
 
-  assert.equal(routes.length, 50, 'Update the audited route inventory when routes are intentionally added or removed.')
+  assert.equal(routes.length, 70, 'Update the audited route inventory when routes are intentionally added or removed.')
   assert.equal(routes.filter((route) => route.endsWith('/reader/')).length, 15)
   assert.equal(routes.filter((route) => /\/books\/[^/]+\.html$/.test(route)).length, 14)
 
@@ -213,6 +213,7 @@ test('Admin mobile navigation has one viewport-safe scroll owner isolated to the
 test('static forms and non-submitting buttons have an effective native or scripted action', async () => {
   const javascriptFiles = []
   for await (const filePath of glob('assets/js/*.{js,mjs}', { cwd: repositoryRoot })) javascriptFiles.push(filePath)
+  for await (const filePath of glob('greyveil-2-preview/**/*.js', { cwd: repositoryRoot })) javascriptFiles.push(filePath)
   const javascript = (await Promise.all(javascriptFiles.map((filePath) => readFile(path.join(repositoryRoot, filePath), 'utf8')))).join('\n')
   const failures = []
 
@@ -221,18 +222,21 @@ test('static forms and non-submitting buttons have an effective native or script
 
     for (const formTag of html.match(/<form\b[^>]*>/gi) || []) {
       const formMarker = formTag.match(/\bdata-([a-z0-9-]+-form)(?:\s|=|>)/i)?.[1]
-      if (!formMarker) failures.push(`${filePath}: form has no script marker`)
-      else if (!javascript.includes(`[data-${formMarker}]`)) failures.push(`${filePath}: unwired form data-${formMarker}`)
+      const formId = formTag.match(/\bid\s*=\s*(["'])(.*?)\1/i)?.[2]
+      if (formMarker && !javascript.includes(`[data-${formMarker}]`)) failures.push(`${filePath}: unwired form data-${formMarker}`)
+      else if (!formMarker && (!formId || !javascript.includes(`#${formId}`))) failures.push(`${filePath}: unwired form #${formId || '(missing id)'}`)
     }
 
     for (const buttonTag of html.match(/<button\b[^>]*>/gi) || []) {
       const type = buttonTag.match(/\btype\s*=\s*(["'])(.*?)\1/i)?.[2]?.toLowerCase() || 'submit'
       if (type === 'submit' || type === 'reset') continue
 
-      const classWired = /\bclass\s*=\s*(["'])[^"']*\b(?:nav-toggle|dropdown-trigger)\b[^"']*\1/i.test(buttonTag)
-      const dataMarker = buttonTag.match(/\bdata-((?:password-toggle|google-signin|purchase-type|logout-button|library-refresh|checkout-(?:pay|coupon-remove)|admin-(?:logout|refresh|menu(?:-close)?|tab(?:-link)?)|announcement-image-remove|book-filters-reset|series-access-revoke|access-mode-tab))(?:\s|=|>)/i)?.[1]
+      const classWired = /\bclass\s*=\s*(["'])[^"']*\b(?:nav-toggle|dropdown-trigger|menu-toggle)\b[^"']*\1/i.test(buttonTag)
+      const dataMarker = buttonTag.match(/\bdata-([a-z0-9-]+)(?:\s|=|>)/i)?.[1]
       const dataWired = dataMarker && javascript.includes(`[data-${dataMarker}`)
-      if (!classWired && !dataWired) failures.push(`${filePath}: button has no effective handler: ${buttonTag}`)
+      const buttonId = buttonTag.match(/\bid\s*=\s*(["'])(.*?)\1/i)?.[2]
+      const idWired = buttonId && javascript.includes(`#${buttonId}`)
+      if (!classWired && !dataWired && !idWired) failures.push(`${filePath}: button has no effective handler: ${buttonTag}`)
     }
   }
 

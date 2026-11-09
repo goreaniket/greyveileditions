@@ -33,7 +33,7 @@ test('catalog refreshes are event-driven and do not come from generation polling
   assert.doesNotMatch(refreshJobs, /refreshCatalog|renderCatalogPanel|renderPassesPanel/)
 })
 
-test('public enhancement shares session reads and renders catalog mounts from the canonical payload', async () => {
+test('public enhancement shares session reads while Greyveil 2.0 renders the canonical catalogue', async () => {
   const [client, auth, commerce, pass, announcements, main, access, home, projects, mind, css] = await Promise.all([
     source('../assets/js/supabase-client.js'), source('../assets/js/auth.js'), source('../assets/js/commerce.js'),
     source('../assets/js/access-pass.js'), source('../assets/js/announcements.js'), source('../assets/js/main.js'),
@@ -51,7 +51,9 @@ test('public enhancement shares session reads and renders catalog mounts from th
   assert.match(access, /onAuthStateChange\?\.\(\(event\) => \{\s*if \(event === 'INITIAL_SESSION'\) return/)
   assert.match(main, /renderCatalogSurfaces\(hierarchy, access, context, lookup\)/)
   assert.match(main, /onAuthStateChange\(\(event\) => \{\s*\/\/[\s\S]*?if \(event === "INITIAL_SESSION"\) return;/)
-  assert.match(home, /data-catalog-series/)
+  assert.match(home, /id="book-grid"/)
+  assert.match(home, /src="\.\/greyveil-2-preview\/preview\.js"/)
+  assert.match(await source('../greyveil-2-preview/preview.js'), /const grid = \$\('#book-grid'\)/)
   assert.match(projects, /data-catalog-collection="human-paradox-collection"/)
   assert.match(mind, /data-catalog-books="human-mind"/)
   assert.doesNotMatch(mind, /<article class="book-card/)
