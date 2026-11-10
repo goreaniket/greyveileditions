@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Greyveil Connect Requests — Admin</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+  <link rel="stylesheet" href="/assets/css/community-admin.css">
+</head>
+<body class="admin-page">
+  <main class="community-admin">
+    <header class="community-admin-header">
+      <div><p class="admin-eyebrow">GREYVEIL · CONNECT</p><h1>Community requests</h1><p>Private requests submitted through Greyveil Connect.</p></div>
+      <nav><a href="/admin/">Main dashboard</a><a href="/connect/">Member portal</a></nav>
+    </header>
+    <section id="community-admin-state" class="community-admin-state" role="status">Verifying administrator access…</section>
+    <section id="community-admin-app" hidden>
+      <div class="community-admin-toolbar"><p id="community-admin-count">Loading requests…</p><button type="button" id="community-admin-refresh" class="admin-action">Refresh</button></div>
+      <div id="community-admin-list" class="community-admin-list" aria-live="polite"></div>
+    </section>
+  </main>
+  <script type="module" src="/assets/js/community-admin.js"></script>
+</body>
+</html>
