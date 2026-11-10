@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Greyveil Programmes — Admin</title><link rel="stylesheet" href="/assets/css/admin.css"><link rel="stylesheet" href="/assets/css/community-admin.css"><link rel="stylesheet" href="/assets/css/offering-admin.css"></head>
+<body class="admin-page"><main class="community-admin">
+<header class="community-admin-header"><div><p class="admin-eyebrow">GREYVEIL · CONNECT</p><h1>Programmes & experiences</h1><p>Create and manage public programmes, workshops, events and opportunities.</p></div><nav><a href="/admin/">Main dashboard</a><a href="/connect/discover/">Public discovery</a></nav></header>
+<section id="offering-admin-state" class="community-admin-state" role="status">Verifying administrator access…</section>
+<section id="offering-admin-app" hidden>
+<div class="offering-admin-layout">
+<form id="offering-form" class="offering-form">
+<p class="admin-eyebrow">PUBLISH SOMETHING USEFUL</p><h2 id="offering-form-title">Create an experience</h2>
+<input type="hidden" id="offering-id">
+<label for="offering-title">Title</label><input id="offering-title" maxlength="120" required>
+<label for="offering-type">Type</label><select id="offering-type"><option value="programme">Programme</option><option value="event">Event</option><option value="workshop">Workshop</option><option value="opportunity">Opportunity</option></select>
+<label for="offering-summary">Short description</label><textarea id="offering-summary" minlength="20" maxlength="1800" rows="4" required></textarea>
+<label for="offering-details">Full details (optional)</label><textarea id="offering-details" rows="4"></textarea>
+<div class="offering-form-grid"><div><label for="offering-mode">Delivery</label><select id="offering-mode"><option value="online">Online</option><option value="in_person">In person</option><option value="hybrid">Hybrid</option></select></div><div><label for="offering-capacity">Capacity (optional)</label><input id="offering-capacity" type="number" min="1"></div></div>
+<label for="offering-location">Location or access details</label><input id="offering-location" maxlength="180" placeholder="Venue / online platform">
+<div class="offering-form-grid"><div><label for="offering-start">Starts (optional)</label><input id="offering-start" type="datetime-local"></div><div><label for="offering-end">Ends (optional)</label><input id="offering-end" type="datetime-local"></div></div>
+<label for="offering-status">Publication status</label><select id="offering-status"><option value="draft">Draft</option><option value="published">Published</option><option value="completed">Completed</option><option value="cancelled">Cancelled</option></select>
+<div class="offering-form-actions"><button type="submit" class="admin-action admin-action--primary" id="offering-save">Save experience</button><button type="button" class="admin-action" id="offering-reset">Clear</button></div><p id="offering-form-message" class="community-request-message" role="status"></p>
+</form>
+<section class="offering-admin-list-panel"><div class="offering-admin-list-heading"><div><p class="admin-eyebrow">CURRENT CATALOGUE</p><h2>Manage listings</h2></div><button type="button" class="admin-action" id="offering-refresh">Refresh</button></div><div id="offering-admin-list" class="offering-admin-list">Loading…</div></section>
+</div>
+</section></main><script type="module" src="/assets/js/offering-admin.js"></script></body></html>
