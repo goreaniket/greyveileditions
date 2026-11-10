@@ -147,9 +147,8 @@ h1 em, h2 em, .world-title em { color: var(--moss); font-weight: 400; }
 .results-count { margin: 16px 0; color: #77786e; font: 9px var(--mono); }
 .book-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 29px 17px; }
 .book-card { min-width: 0; }
-.book-cover { position: relative; aspect-ratio: .76; margin-bottom: 14px; display: grid; place-items: center; overflow: hidden; background: #30362f; color: #d9dccf; }
-.book-cover img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .45s ease; }
-.book-card:hover .book-cover img { transform: scale(1.035); }
+.book-cover { position: relative; aspect-ratio: 2 / 3; margin-bottom: 14px; display: grid; place-items: center; overflow: hidden; background: #30362f; color: #d9dccf; }
+.book-cover img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: contain; object-position: center; }
 .cover-placeholder { width: 100%; height: 100%; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; background: radial-gradient(ellipse at 50% 70%, #55604c, #272c26 66%); text-align: center; }
 .cover-placeholder span { font: 7px var(--mono); letter-spacing: .14em; }
 .cover-placeholder strong { font: 600 clamp(16px, 2vw, 23px)/1 var(--serif); }
@@ -899,16 +898,12 @@ h1 em, h2 em, .world-title em { color: var(--moss); font-weight: 400; }
   .book-series, .book-question { color: #636b66; }
   .book-card .book-save { border-color: rgba(52, 59, 56, .3); color: var(--ink); }
   .book-grid { align-items: start; gap: 42px 22px; }
-  .book-card:first-child { grid-column: span 2; }
-  .book-card:first-child .book-cover { aspect-ratio: 1.15; }
   .book-cover { background: var(--sand); color: var(--ink); }
   .cover-placeholder { background: var(--sage); color: var(--ink); }
   .book-card:nth-child(4n + 2) .cover-placeholder { background: var(--warm-sand); }
   .book-card:nth-child(4n + 3) .cover-placeholder { background: var(--lavender); }
   .book-card:nth-child(4n) .cover-placeholder { background: #e8e7df; }
   .book-meta { color: #59645d; }
-  .book-card:first-child .book-title { font-size: clamp(26px, 3vw, 38px); }
-  .book-card:first-child .book-question { max-width: 430px; }
   .save-book:hover, .save-book[aria-pressed="true"] { border-color: var(--soft-terracotta); color: var(--muted-burgundy); }
 
   .match { background: var(--lilac); color: var(--ink); }
@@ -1093,8 +1088,6 @@ h1 em, h2 em, .world-title em { color: var(--moss); font-weight: 400; }
     .hero-art { min-height: 310px; }
     .world-tile { border-radius: 0; }
     .connection-gallery { grid-auto-rows: 160px; }
-    .book-card:first-child { grid-column: span 1; }
-    .book-card:first-child .book-cover { aspect-ratio: .76; }
     .human-timeline { margin-top: 25px; padding-block: 20px; }
     .timeline-steps { grid-template-columns: 1fr 1fr; }
     .timeline-step { min-height: 65px; padding: 9px; border-bottom: 1px solid var(--rule); }

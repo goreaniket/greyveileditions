@@ -2318,11 +2318,7 @@ h3 {
   height: 100%;
   padding: 4px;
   object-fit: contain;
-  transition: transform .55s ease;
-}
-
-.rich-project-card:hover .project-image-wrap img {
-  transform: scale(1.04);
+  object-position: center;
 }
 
 .paradox-theme {
@@ -2434,8 +2430,16 @@ h3 {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: inherit;
+}
+
+.book-cover-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+.author-image {
+  object-fit: cover;
 }
 
 .series-book-cover {
@@ -2451,10 +2455,6 @@ h3 {
   padding: 0;
   object-fit: contain;
   object-position: center;
-}
-
-.cover-placeholder .book-cover-image {
-  min-height: 620px;
 }
 
 .book-card h3 {
@@ -4928,10 +4928,6 @@ blockquote {
     white-space: nowrap;
   }
 
-  .cover-placeholder .book-cover-image {
-    min-height: 420px;
-  }
-
   .button,
   .book-card a,
   .project-card strong,
@@ -5515,5 +5511,44 @@ blockquote {
   .volume-series-list .project-image-wrap {
     width: min(100%, 280px);
     margin-inline: auto;
+  }
+}
+
+.cover-slot,
+.rich-project-card .project-image-wrap,
+.volume-series-list .project-image-wrap,
+.book-hero .cover-placeholder {
+  aspect-ratio: 2 / 3;
+}
+
+.cover-slot > .book-cover-image,
+.rich-project-card .project-image-wrap img,
+.volume-series-list .project-image-wrap img,
+.book-hero .cover-placeholder > .book-cover-image {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+.book-hero .cover-placeholder {
+  align-self: center;
+  justify-self: center;
+  width: min(100%, clamp(260px, 30vw, 370px));
+  min-height: 0;
+  max-height: min(640px, calc(100svh - var(--header-offset) - 24px));
+  background-color: #e9dfd4;
+}
+
+.rich-project-card:hover .project-image-wrap img {
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .book-hero .cover-placeholder {
+    width: min(100%, 340px);
+    max-height: none;
   }
 }
