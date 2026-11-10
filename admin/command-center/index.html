@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Owner Command Centre | Greyveil Editions</title>
+  <link rel="canonical" href="https://greyveileditions.site/admin/command-center/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/owner-command-center.css">
+</head>
+<body>
+  <a class="skip-link" href="#command-main">Skip to command centre</a>
+  <section class="gate" data-gate>
+    <p class="eyebrow">GREYVEIL EDITIONS · PRIVATE OPERATIONS</p>
+    <h1>Opening the<br><em>Command Centre.</em></h1>
+    <p data-gate-message role="status">Verifying your Greyveil session and assigned permissions…</p>
+    <form class="mfa-form" data-mfa-form hidden>
+      <label for="mfa-code">Authenticator code</label>
+      <input id="mfa-code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required>
+      <button type="submit">Verify secure session</button>
+    </form>
+    <button class="setup-mfa" type="button" data-mfa-enroll hidden>Set up an authenticator</button>
+    <div class="mfa-setup" data-mfa-setup hidden>
+      <p>Scan this authenticator URI or enter the secret into your authenticator app. Confirm with its six-digit code to finish setup.</p>
+      <code data-mfa-secret></code>
+      <form class="mfa-form" data-mfa-enroll-form>
+        <label for="mfa-enroll-code">New authenticator code</label>
+        <input id="mfa-enroll-code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required>
+        <button type="submit">Confirm authenticator</button>
+      </form>
+    </div>
+  </section>
+  <div class="shell" data-app hidden>
+    <aside class="rail">
+      <a class="brand" href="/"><span>G<span>E</span></span><b>GREYVEIL<small>EDITIONS</small></b></a>
+      <p class="rail-label">OWNER COMMAND CENTRE</p>
+      <nav aria-label="Command centre">
+        <button type="button" data-view="overview" data-permission="analytics.read" aria-current="page"><span>01</span> Overview</button>
+        <button type="button" data-view="inbox" data-permission="human.inbox.read"><span>02</span> Human Inbox <i data-inbox-count>—</i></button>
+        <button type="button" data-view="readers" data-permission="users.read"><span>03</span> Readers</button>
+        <button type="button" data-view="team" data-permission="staff.read"><span>04</span> Team &amp; access</button>
+        <button type="button" data-view="moderation" data-permission="moderation.read"><span>05</span> Reports &amp; feedback</button>
+        <button type="button" data-view="security" data-permission="audit.read"><span>06</span> Security &amp; audit</button>
+      </nav>
+      <div class="rail-footer"><span data-user-name>Greyveil staff</span><span data-user-role>Assigned role</span><a href="/admin/">Existing administration ↗</a><a href="/">Return to website ↗</a></div>
+    </aside>
+    <main id="command-main" class="workspace">
+      <header class="topbar"><div><p class="eyebrow">EDITORIAL OPERATIONS · PRIVATE</p><h1>Good work begins<br>with <em>attention.</em></h1></div><div class="topbar-actions"><button type="button" class="quiet-button" data-refresh>Refresh overview</button><button type="button" class="quiet-button" data-sign-out>Sign out</button></div></header>
+      <p class="notice" data-notice role="status" aria-live="polite"></p>
+
+      <section class="view is-active" data-panel="overview">
+        <div class="view-heading"><div><p class="eyebrow">A LIVE VIEW OF GREYVEIL</p><h2>At a glance.</h2></div><span class="time-stamp" data-last-updated>Not loaded</span></div>
+        <div class="metric-grid">
+          <article class="metric"><span>Readers</span><strong data-metric="readers">—</strong><small>Registered profiles</small></article>
+          <article class="metric"><span>Books</span><strong data-metric="books">—</strong><small>Existing catalogue</small></article>
+          <article class="metric"><span>Paid orders</span><strong data-metric="captured_orders">—</strong><small>Verified order records</small></article>
+          <article class="metric"><span>Captured revenue</span><strong data-metric="captured_revenue_paise">—</strong><small>Recorded in paise · INR</small></article>
+          <article class="metric"><span>Stories awaiting review</span><strong data-metric="pending_stories">—</strong><small>Private submissions only</small></article>
+          <article class="metric"><span>Open reader reports</span><strong data-metric="open_reports">—</strong><small>Moderation queue</small></article>
+        </div>
+        <div class="overview-grid">
+          <article class="feature-card"><p class="eyebrow">A HUMAN RESPONSE, NEVER AN AUTOMATION</p><h3>Read what needs<br><em>a human reply.</em></h3><p>Private reader submissions stay in the protected inbox. Only assigned staff can open a conversation; publication always requires separate reader consent and editorial approval.</p><button type="button" class="text-action" data-open-view="inbox">Open Human Inbox ↗</button></article>
+          <article class="systems-card"><p class="eyebrow">EXISTING SYSTEMS · NO DUPLICATE DATA</p><a href="/admin/">Books, catalogue &amp; publishing <span>↗</span></a><a href="/admin/#payments">Orders &amp; payment status <span>↗</span></a><a href="/admin/billing/">Invoices &amp; finance records <span>↗</span></a><a href="/admin/#feedback">Reader feedback <span>↗</span></a><a href="/account/">Customer account access <span>↗</span></a></article>
+        </div>
+      </section>
+
+      <section class="view" data-panel="inbox" hidden>
+        <div class="view-heading"><div><p class="eyebrow">PRIVATE READER MESSAGES</p><h2>Human Inbox.</h2></div><button type="button" class="quiet-button" data-load-inbox>Refresh inbox</button></div>
+        <div class="toolbar">
+          <label>Search stories and readers<input type="search" data-inbox-search placeholder="Name, email, subject or words"></label>
+          <label>Status<select data-inbox-status><option value="">All statuses</option><option>pending</option><option>in_review</option><option>responded</option><option>published</option><option>declined</option></select></label>
+          <label>Response category<select data-inbox-category><option value="">All categories</option><option value="listening">Listening</option><option value="understanding">Understanding</option><option value="perspective">Perspective</option><option value="reflection">Reflection</option><option value="reading_guidance">Reading Guidance</option><option value="support_resources">Support Resources</option></select></label>
+        </div>
+        <div class="inbox-layout"><div class="inbox-list" data-inbox-list aria-live="polite"><p class="empty">The private inbox has not been loaded.</p></div><article class="conversation" data-conversation><p class="empty">Select a submission to review its private conversation.</p></article></div>
+      </section>
+
+      <section class="view" data-panel="readers" hidden>
+        <div class="view-heading"><div><p class="eyebrow">ACCOUNT DIRECTORY</p><h2>Readers.</h2></div></div>
+        <div class="toolbar"><label>Search readers<input type="search" data-reader-search placeholder="Name or email"></label><button type="button" class="quiet-button" data-load-readers>Search directory</button></div>
+        <div class="table-wrap"><table><thead><tr><th>Reader</th><th>Email</th><th>Account role</th><th>Joined</th></tr></thead><tbody data-readers-table></tbody></table></div>
+      </section>
+
+      <section class="view" data-panel="team" hidden>
+        <div class="view-heading"><div><p class="eyebrow">EXPLICIT ACCESS · OWNER CONTROLLED</p><h2>Team &amp; access.</h2></div><button type="button" class="quiet-button" data-load-team>Refresh team</button></div>
+        <p class="boundary-note">Owner identity is provisioned separately after Lalit’s account is verified. Staff roles cannot be promoted to Owner. Only the Owner can assign or revoke staff access. MFA is required for every privileged query and change.</p>
+        <form class="invite-form" data-assign-form>
+          <label>Registered account<input type="text" data-staff-user-id required placeholder="Select a reader ID below"></label>
+          <label>Role<select data-staff-role required><option value="super_admin">Super Admin</option><option value="human_support">Human Support</option><option value="content_editor">Content Editor</option><option value="finance_admin">Finance Admin</option><option value="moderator">Moderator</option></select></label>
+          <button type="submit">Assign role</button>
+        </form>
+        <form class="invite-form" data-invite-form>
+          <label>Staff email<input type="email" data-invite-email maxlength="254" autocomplete="email" required placeholder="name@example.com"></label>
+          <label>Role<select data-invite-role required><option value="human_support">Human Support</option><option value="content_editor">Content Editor</option><option value="finance_admin">Finance Admin</option><option value="moderator">Moderator</option><option value="super_admin">Super Admin</option></select></label>
+          <button type="submit">Send secure invitation</button>
+        </form>
+        <p class="hint">The invited person sets their own password through Supabase Auth, then enrolls MFA before opening command-centre data. Invitation links are single-use.</p>
+        <div class="table-wrap"><table><thead><tr><th>Staff member</th><th>Role</th><th>Status</th><th>Assigned</th><th>Action</th></tr></thead><tbody data-team-table></tbody></table></div>
+      </section>
+
+      <section class="view" data-panel="moderation" hidden>
+        <div class="view-heading"><div><p class="eyebrow">REPORTS &amp; READER FEEDBACK</p><h2>Careful review.</h2></div><button type="button" class="quiet-button" data-load-reports>Refresh reports</button></div>
+        <div class="toolbar"><label>Report status<select data-report-status><option value="">All</option><option value="open">Open</option><option value="resolved">Resolved</option><option value="dismissed">Dismissed</option></select></label></div>
+        <div class="report-list" data-report-list><p class="empty">Reports are loaded only for roles with moderation permission.</p></div>
+        <div class="systems-card"><p class="eyebrow">EXISTING FEEDBACK WORKFLOW</p><p>Reader feedback remains managed in the existing authenticated admin tool.</p><a href="/admin/">Open Feedback management ↗</a></div>
+      </section>
+
+      <section class="view" data-panel="security" hidden>
+        <div class="view-heading"><div><p class="eyebrow">SENSITIVE ADMIN ACTIONS</p><h2>Security &amp; audit.</h2></div><button type="button" class="quiet-button" data-load-audit>Refresh audit trail</button></div>
+        <p class="boundary-note">Audit entries are append-only and generated by database operations. Supabase authentication login history and provider health metrics are not exposed by this database integration and are not represented here.</p>
+        <div class="table-wrap"><table><thead><tr><th>When</th><th>Actor</th><th>Action</th><th>Target</th><th>Details</th></tr></thead><tbody data-audit-table></tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="/assets/js/owner-command-center.js"></script>
+</body>
+</html>
