@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Accept Staff Invitation | Greyveil Editions</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/owner-command-center.css">
+</head>
+<body>
+  <main class="gate">
+      <p class="eyebrow">GREYVEIL EDITIONS · PRIVATE OPERATIONS</p>
+      <h1>Accept your<br>staff invitation.</h1>
+      <p data-invite-status role="status" aria-live="polite">Verifying the single-use invitation link…</p>
+      <form class="mfa-form" data-invite-password-form hidden>
+        <label for="invite-password">Create a password</label>
+        <input id="invite-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+        <label for="invite-confirm-password">Confirm password</label>
+        <input id="invite-confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+        <p class="auth-field-note">Use at least 8 characters. Multi-factor authentication is required before accessing command-centre data.</p>
+        <button type="submit">Set password and continue</button>
+      </form>
+      <p><a href="/auth/login/">Return to sign in</a></p>
+  </main>
+  <script type="module" src="/assets/js/accept-staff-invite.js"></script>
+</body>
+</html>
