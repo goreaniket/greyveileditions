@@ -963,8 +963,10 @@ const initGoogleSignIn = (form, status) => {
   })
 }
 
-export async function redirectByRole() {
-  window.location.assign(safeLoginReturnPath() || ACCOUNT_PATH)
+export async function redirectByRole(user = null) {
+  const role = await getUserRole(user)
+  const defaultPath = isAdminRole(role) ? ADMIN_PATH : ACCOUNT_PATH
+  window.location.assign(safeLoginReturnPath() || defaultPath)
 }
 
 const showAuthView = (view) => {
