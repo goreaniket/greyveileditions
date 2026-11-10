@@ -897,8 +897,16 @@ const guardAdminRoute = async () => {
 }
 
 const renderIdentity = () => {
-  if (singleNodes.name) singleNodes.name.textContent = displayNameFor(state.user, state.profile)
-  if (singleNodes.role) singleNodes.role.textContent = formatRole(state.profile?.role)
+  const displayName = displayNameFor(state.user, state.profile)
+  const role = formatRole(state.profile?.role)
+
+  if (singleNodes.name) singleNodes.name.textContent = displayName
+  if (singleNodes.role) singleNodes.role.textContent = role
+
+  const sidebarName = $('[data-admin-sidebar-name]')
+  const sidebarRole = $('[data-admin-sidebar-role]')
+  if (sidebarName) sidebarName.textContent = displayName
+  if (sidebarRole) sidebarRole.textContent = role
 }
 
 const fetchProfiles = async () => {
