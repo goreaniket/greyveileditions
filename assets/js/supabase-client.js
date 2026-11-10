@@ -1,7 +1,9 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-const SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
-const SUPABASE_KEY = 'sb_publishable_qhA0__EUD2M-IUmuy37iEQ_waYsMZyD'
+// Greyveil production project. Keep this publishable key in the browser;
+// never place a service-role or secret key in client-side code.
+const SUPABASE_URL = 'https://fanixwnyglkvkgsxxrtn.supabase.co'
+const SUPABASE_KEY = 'sb_publishable__CASr_IBECt7_fJDhdYYOQ_W_zXRIFl'
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
