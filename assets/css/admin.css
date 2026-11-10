@@ -265,6 +265,44 @@
   text-transform: uppercase;
 }
 
+.admin-sidebar-identity {
+  display: grid;
+  gap: 7px;
+  margin: -10px 2px 0;
+  padding: 14px 12px;
+  border: 1px solid rgba(42, 52, 64, .12);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .48);
+  min-width: 0;
+}
+
+.admin-sidebar-identity__label {
+  color: var(--bronze);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.admin-sidebar-identity strong {
+  overflow-wrap: anywhere;
+  color: var(--slate);
+  font-size: .92rem;
+  line-height: 1.35;
+}
+
+.admin-sidebar-identity__role {
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid rgba(108, 154, 139, .24);
+  border-radius: 999px;
+  background: rgba(108, 154, 139, .12);
+  color: #476b63;
+  font-size: .68rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .admin-nav {
   display: grid;
   gap: 6px;
