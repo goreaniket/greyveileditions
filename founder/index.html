@@ -3,13 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://greyveileditions.site/founder-story/">
-  <meta http-equiv="refresh" content="0;url=/founder-story/">
-  <title>Redirecting to The Founder — Greyveil Editions</title>
-  <script>window.location.replace("/founder-story/" + window.location.search + window.location.hash);</script>
+  <meta name="theme-color" content="#171a17">
+  <meta name="description" content="Lalit Rakesh Mishra, Founder & CEO of Greyveil Editions — an independent literary and psychology publishing house exploring memory, attachment, silence and human experience.">
+  <link rel="canonical" href="https://greyveileditions.site/founder/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Lalit Rakesh Mishra — Founder, Greyveil Editions">
+  <meta property="og:description" content="The person and point of view behind Greyveil Editions. Stories That Stay Within.">
+  <meta property="og:url" content="https://greyveileditions.site/founder/">
+  <meta property="og:image" content="https://greyveileditions.site/assets/images/Lalit.jpeg">
+  <title>The Founder — Lalit Rakesh Mishra | Greyveil Editions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/greyveil-2-preview/style.css">
+  <style>
+    :root{color-scheme:light}
+    body{background:var(--paper);color:var(--ink)}
+    .founder-page-header{position:relative;top:auto;min-height:82px;padding:0 5.2vw;background:#171a17;color:var(--paper-light);border:0}
+    .founder-page-header .primary-nav a{color:rgba(247,246,241,.78)}
+    .founder-hero{min-height:690px;padding:90px 10vw 88px;display:grid;grid-template-columns:minmax(270px,.78fr) minmax(0,1.22fr);align-items:center;gap:clamp(42px,8vw,120px);background:#171a17;color:var(--paper-light);position:relative;overflow:hidden}
+    .founder-hero:after{content:"";position:absolute;width:570px;aspect-ratio:1;border:1px solid rgba(196,207,173,.13);border-radius:50%;right:-140px;top:40px;box-shadow:0 0 0 50px rgba(196,207,173,.025),0 0 0 110px rgba(196,207,173,.018);pointer-events:none}
+    .founder-photo-wrap{position:relative;z-index:1;max-width:390px}
+    .founder-photo-wrap:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(196,207,173,.45)}
+    .founder-photo{position:relative;display:block;width:100%;max-height:570px;aspect-ratio:706/1077;object-fit:cover;object-position:center top;filter:none}
+    .photo-caption{position:relative;margin-top:28px;color:#a7ad9d;font:8px var(--mono);letter-spacing:.15em}
+    .founder-copy{position:relative;z-index:1;max-width:680px}
+    .founder-copy .eyebrow{color:#c4cfad}
+    .founder-copy h1{margin:30px 0 18px;font:500 clamp(58px,7.6vw,108px)/.86 var(--serif);letter-spacing:-.045em}
+    .founder-copy h1 em{color:#c4cfad;font-weight:400}
+    .founder-role{margin:0 0 30px;color:#c4c7bc;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+    .founder-thesis{max-width:560px;margin:0;color:rgba(238,236,228,.8);font:400 clamp(22px,2.5vw,31px)/1.35 var(--serif)}
+    .founder-tagline{margin:29px 0 0;color:#c4cfad;font:9px var(--mono);letter-spacing:.15em}
+    .founder-content{padding:100px 10vw 110px}
+    .founder-statement{max-width:970px;margin:0 auto 95px;display:grid;grid-template-columns:.65fr 1.35fr;gap:8vw;align-items:start}
+    .founder-index{color:#7a816f;font:9px var(--mono);letter-spacing:.14em}
+    .founder-statement h2,.founder-principles h2{margin:0;font:500 clamp(42px,5.4vw,70px)/.98 var(--serif);letter-spacing:-.025em}
+    .founder-statement h2 em,.founder-principles h2 em{color:#64745b;font-weight:400}
+    .founder-statement p{max-width:650px;margin:24px 0 0;color:#666b62;font-size:14px;line-height:2}
+    .founder-principles{padding:64px 6vw;background:#e4e7dc}
+    .principle-grid{margin-top:42px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(52,59,56,.2);border-bottom:1px solid rgba(52,59,56,.2)}
+    .principle{padding:25px 25px 28px 0}
+    .principle+.principle{padding-left:25px;border-left:1px solid rgba(52,59,56,.2)}
+    .principle small{color:#727b69;font:8px var(--mono);letter-spacing:.13em}
+    .principle h3{margin:18px 0 8px;font:500 29px/1 var(--serif)}
+    .principle p{max-width:260px;margin:0;color:#687067;font-size:11px;line-height:1.9}
+    .founder-closing{padding:105px 10vw;text-align:center;background:#171a17;color:var(--paper-light)}
+    .founder-closing blockquote{max-width:850px;margin:22px auto 28px;font:400 clamp(32px,4.8vw,60px)/1.08 var(--serif)}
+    .founder-closing p{color:#aeb2a6;font:9px var(--mono);letter-spacing:.14em}
+    .founder-footer{padding:36px 5.2vw;background:#171a17;color:var(--paper-light)}
+    .founder-footer .footer-bottom{margin-top:25px}
+    @media(max-width:760px){
+      .founder-page-header{min-height:72px;padding:0 6vw}
+      .founder-page-header .primary-nav{gap:10px;flex-wrap:wrap;justify-content:flex-end}
+      .founder-page-header .primary-nav a{font-size:9px}
+      .founder-hero{padding:70px 8vw 78px;grid-template-columns:1fr;gap:48px}
+      .founder-photo-wrap{width:min(76%,330px);margin:auto}
+      .founder-copy h1{font-size:clamp(58px,14vw,88px)}
+      .founder-content{padding:75px 8vw}
+      .founder-statement{grid-template-columns:1fr;gap:22px;margin-bottom:65px}
+      .founder-principles{padding:48px 7vw}
+      .principle-grid{grid-template-columns:1fr}
+      .principle,.principle+.principle{padding:22px 0;border-left:0;border-bottom:1px solid rgba(52,59,56,.18)}
+      .principle:last-child{border-bottom:0}
+      .founder-closing{padding:78px 8vw}
+    }
+  </style>
 </head>
 <body>
-  <p>The Founder page has moved. <a href="/founder-story/">Continue to The Founder — Lalit Rakesh Mishra</a>.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header founder-page-header">
+    <a class="wordmark" href="/" aria-label="Greyveil Editions home"><span class="wordmark-symbol" aria-hidden="true">G<span>E</span></span><span>GREYVEIL <small>EDITIONS</small></span></a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="/">Home</a><a href="/#mind">The Mind</a><a href="/#human">The Human</a><a href="/#connection">The Connection</a><a href="/#library">The Library</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="founder-hero">
+      <div>
+        <div class="founder-photo-wrap"><img class="founder-photo" src="/assets/images/Lalit.jpeg" alt="Lalit Rakesh Mishra, Founder and CEO of Greyveil Editions" fetchpriority="high"></div>
+        <p class="photo-caption">THE PERSON BEHIND THE PUBLISHING HOUSE · 01</p>
+      </div>
+      <div class="founder-copy">
+        <p class="eyebrow">THE FOUNDER <span> / GREYVEIL EDITIONS</span></p>
+        <h1>Lalit Rakesh<br><em>Mishra.</em></h1>
+        <p class="founder-role">Founder &amp; CEO · Writer · The Introspective Rebel</p>
+        <p class="founder-thesis">The ambition is to build something that can stand on its own — not just as a collection of books, but as a publishing identity with a clear point of view.</p>
+        <p class="founder-tagline">GREYVEIL EDITIONS — STORIES THAT STAY WITHIN.</p>
+      </div>
+    </section>
+    <section class="founder-content">
+      <div class="founder-statement">
+        <span class="founder-index">01 / THE POINT OF VIEW</span>
+        <div>
+          <h2>Literature that looks<br>beneath the <em>surface.</em></h2>
+          <p>Greyveil Editions is an independent literary and psychology publishing house exploring memory, attachment, silence, identity, perception, and the quiet architecture of human experience.</p>
+          <p>It is built around a simple conviction: books can do more than deliver information or tell a story. They can give language to experiences people carry privately, and make room for questions that do not resolve neatly.</p>
+        </div>
+      </div>
+      <div class="founder-principles">
+        <p class="eyebrow eyebrow-dark">02 / THE EDITORIAL DIRECTION</p>
+        <h2>A house built around<br><em>human questions.</em></h2>
+        <div class="principle-grid">
+          <article class="principle"><small>01 — INNER LIFE</small><h3>Memory &amp; identity</h3><p>How experience shapes the stories people tell themselves about who they are.</p></article>
+          <article class="principle"><small>02 — HUMAN BONDS</small><h3>Attachment &amp; silence</h3><p>The closeness, distance, absence and unspoken patterns that shape relationships.</p></article>
+          <article class="principle"><small>03 — PERCEPTION</small><h3>Thought &amp; reality</h3><p>The tension between what is lived, what is believed, and what is understood.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="founder-closing">
+      <p class="eyebrow">THE GREYVEIL POSITION</p>
+      <blockquote>“Some things do not leave when the page ends. They stay within.”</blockquote>
+      <p>GREYVEIL EDITIONS · STORIES THAT STAY WITHIN.</p>
+      <a class="button button-light" href="/#library">Explore the library <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer founder-footer">
+    <a class="wordmark footer-mark" href="/"><span class="wordmark-symbol" aria-hidden="true">G<span>E</span></span><span>GREYVEIL <small>EDITIONS</small></span></a>
+    <p>A literary and human-centred institution.<br>Founded and led by Lalit Rakesh Mishra.</p>
+    <nav aria-label="Greyveil pages"><a href="/">Home</a><a href="/about/">About Greyveil</a><a href="/projects/">Projects</a><a href="/credits/">Credits</a><a href="/copyright/">Copyright &amp; Permissions</a><a href="/contact/">Contact</a></nav>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 GREYVEIL EDITIONS · ALL RIGHTS RESERVED</span><a href="mailto:greyveiledtions@gmail.com">Email ↗</a><a href="https://www.instagram.com/greyveil_editions" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.linkedin.com/in/lalit-mishra-6a75542a3/" target="_blank" rel="noopener noreferrer">Founder LinkedIn ↗</a></div>
+  </footer>
 </body>
 </html>
