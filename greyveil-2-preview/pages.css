@@ -53,3 +53,36 @@ body.gv-page.project-theme{background:var(--porcelain)!important;color:var(--ink
 .gv-page .site-footer a{color:#d8dbd2!important;font-size:10px!important}
 .gv-page .site-footer a:hover{color:var(--moss)!important}
 @media(max-width:760px){.gv-page .site-header{padding:15px 6vw!important;align-items:flex-start!important;flex-direction:column!important;gap:12px!important}.gv-page .site-nav{gap:12px 17px!important}.gv-page .book-detail.page-shell{padding:0 7vw 65px!important}.gv-page .book-hero{grid-template-columns:1fr!important;gap:35px!important;min-height:0!important;padding:55px 0!important}.gv-page .cover-placeholder{max-width:245px!important}.gv-page .book-hero h1{font-size:58px!important}.gv-page .detail-body{grid-template-columns:1fr!important;gap:35px!important;padding:55px 0!important}.gv-page .contact-panel{grid-template-columns:1fr!important}.gv-page .site-footer{grid-template-columns:1fr!important;padding:32px 7vw 24px!important}}
+
+/* Greyveil 2.0 — account, checkout and reader-feedback surfaces */
+.gv-page .project-hero{padding:95px 7vw 75px!important;background:radial-gradient(ellipse at 80% 25%,rgba(140,157,121,.17),transparent 35%),var(--forest)!important;color:#faf8f3!important}
+.gv-page .project-hero h1{max-width:850px!important;color:#faf8f3!important;font:500 clamp(52px,7vw,92px)/.94 var(--serif)!important;letter-spacing:-.04em!important}
+.gv-page .project-hero .hero-text{max-width:620px!important;color:#c5cbc0!important;font:400 clamp(19px,2.3vw,27px)/1.5 var(--serif)!important}
+.gv-page .feedback-layout,.gv-page .account-profile-section{max-width:900px!important;margin:0 auto!important;padding:65px 7vw 90px!important}
+.gv-page .feedback-form,.gv-page .auth-card{padding:clamp(24px,5vw,48px)!important;background:var(--paper-light)!important;border:1px solid rgba(52,59,56,.15)!important;border-radius:0!important;box-shadow:0 20px 60px #171a170d!important}
+.gv-page label{display:grid!important;gap:8px!important;margin:0 0 19px!important;color:#465047!important;font:10px var(--mono)!important;letter-spacing:.06em!important}
+.gv-page input,.gv-page textarea,.gv-page select{width:100%!important;min-height:46px!important;padding:12px 13px!important;border:1px solid rgba(52,59,56,.23)!important;border-radius:0!important;background:#fff!important;color:var(--ink)!important;font:13px var(--sans)!important;box-shadow:none!important}
+.gv-page textarea{min-height:150px!important;resize:vertical!important}
+.gv-page input:focus,.gv-page textarea:focus,.gv-page select:focus{outline:2px solid #9ba98e!important;outline-offset:2px!important}
+.gv-page .form-status{color:#63705d!important;font-size:12px!important}
+.gv-page .hero-link,.gv-page .auth-forgot-link,.gv-page .checkout-return-link{color:#53654d!important;text-decoration:underline!important;text-underline-offset:3px!important}
+.gv-page .auth-divider{color:#7b8377!important;font:9px var(--mono)!important;text-transform:uppercase!important;letter-spacing:.12em!important}
+.gv-page .section{background:transparent!important}
+.gv-page .section-heading h2,.gv-page .account-overview h2,.gv-page .account-library h2,.gv-page .account-payments h2{color:var(--ink)!important;font:500 clamp(34px,4vw,52px)/1 var(--serif)!important}
+.gv-page .access-overview-card,.gv-page .account-pass-card,.gv-page .library-empty,.gv-page .payment-history-list>*,.gv-page .library-hierarchy>*{border:1px solid rgba(52,59,56,.14)!important;border-radius:0!important;background:var(--paper-light)!important;box-shadow:none!important}
+.gv-page .checkout-page{max-width:1120px!important;padding:70px 7vw 100px!important}
+.gv-page .checkout-page h1{color:var(--ink)!important;font:500 clamp(46px,6vw,76px)/.95 var(--serif)!important}
+.gv-page .checkout-layout{display:grid!important;grid-template-columns:1.35fr .8fr!important;gap:35px!important}
+.gv-page .checkout-section,.gv-page .checkout-confirmation{padding:25px!important;border:1px solid rgba(52,59,56,.16)!important;border-radius:0!important;background:var(--paper-light)!important;box-shadow:none!important}
+.gv-page .checkout-section h2,.gv-page .checkout-confirmation h2{color:var(--ink)!important;font:500 30px var(--serif)!important}
+.gv-page .checkout-step{color:#78856d!important;font:12px var(--mono)!important}
+.gv-page .checkout-confirmation{position:sticky!important;top:105px!important;height:max-content!important}
+.gv-page .checkout-total strong{color:var(--ink)!important;font:500 40px var(--serif)!important}
+.gv-page .checkout-header-back{color:#faf8f3!important;border-color:#7e8979!important}
+.gv-page .site-footer--rich{grid-template-columns:1fr!important;display:block!important;padding:40px 7vw 25px!important}
+.gv-page .footer-grid{display:grid!important;grid-template-columns:1.4fr 1fr 1fr!important;gap:4vw!important}
+.gv-page .footer-brand-name{color:#faf8f3!important;font:500 27px var(--serif)!important}
+.gv-page .footer-col h3{color:var(--moss)!important;font:9px var(--mono)!important;letter-spacing:.14em!important;text-transform:uppercase!important}
+.gv-page .footer-col a{display:block!important;margin:9px 0!important;color:#d8dbd2!important;font-size:11px!important}
+.gv-page .footer-bottom{margin-top:25px!important;padding-top:16px!important;border-top:1px solid #ffffff22!important;color:#aeb5a7!important}
+@media(max-width:760px){.gv-page .project-hero{padding:70px 7vw 55px!important}.gv-page .checkout-layout,.gv-page .footer-grid{grid-template-columns:1fr!important}.gv-page .checkout-confirmation{position:static!important}.gv-page .site-footer--rich{padding:32px 7vw 22px!important}}
