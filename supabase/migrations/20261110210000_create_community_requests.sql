@@ -21,6 +21,7 @@ create index if not exists community_requests_member_created_idx
 create index if not exists community_requests_status_created_idx
   on public.community_requests (status, created_at desc);
 
+drop policy if exists "Members create their own community requests" on public.community_requests;
 create policy "Members create their own community requests"
   on public.community_requests for insert to authenticated
   with check (
@@ -29,6 +30,7 @@ create policy "Members create their own community requests"
     and consent_to_review = true
   );
 
+drop policy if exists "Members and admins read community requests" on public.community_requests;
 create policy "Members and admins read community requests"
   on public.community_requests for select to authenticated
   using (
@@ -36,11 +38,13 @@ create policy "Members and admins read community requests"
     or (select public.greyveil_is_admin())
   );
 
+drop policy if exists "Admins update community requests" on public.community_requests;
 create policy "Admins update community requests"
   on public.community_requests for update to authenticated
   using ((select public.greyveil_is_admin()))
   with check ((select public.greyveil_is_admin()));
 
+drop policy if exists "Members delete unreviewed community requests" on public.community_requests;
 create policy "Members delete unreviewed community requests"
   on public.community_requests for delete to authenticated
   using (
