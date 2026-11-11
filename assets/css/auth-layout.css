@@ -228,3 +228,113 @@ body[data-auth-page="login"] .auth-card .form-status {
     width: 100%;
   }
 }
+
+
+/* Mobile navigation: keep the menu closed until the Menu control is tapped.
+   The preview theme uses !important display rules, so these scoped overrides
+   are intentionally stronger on the login page. */
+@media (max-width: 1040px) {
+  body[data-auth-page="login"] .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 68px !important;
+    padding: 12px 18px !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  body[data-auth-page="login"] .nav-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 76px;
+    min-height: 40px;
+    padding: 9px 14px;
+    border: 1px solid rgba(250, 248, 243, .32);
+    border-radius: 0;
+    background: transparent;
+    color: #faf8f3;
+    font: 10px/1.2 "IBM Plex Mono", Consolas, monospace;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  body[data-auth-page="login"] .site-nav {
+    position: absolute !important;
+    top: calc(100% + 1px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 40 !important;
+    display: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    max-height: calc(100svh - 70px) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding: 8px 18px 16px !important;
+    background: #171a17 !important;
+    border-top: 1px solid rgba(250, 248, 243, .12);
+    box-shadow: 0 18px 32px rgba(0, 0, 0, .18);
+    box-sizing: border-box !important;
+  }
+
+  body[data-auth-page="login"] .site-nav.open {
+    display: flex !important;
+  }
+
+  body[data-auth-page="login"] .site-nav > a,
+  body[data-auth-page="login"] .site-nav .dropdown-trigger {
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+    min-height: 46px;
+    padding: 12px 4px !important;
+    border-bottom: 1px solid rgba(250, 248, 243, .12) !important;
+    color: #faf8f3 !important;
+    font: 11px/1.4 "Inter", Arial, sans-serif !important;
+    letter-spacing: .04em;
+    text-align: left !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+  }
+
+  body[data-auth-page="login"] .site-nav .dropdown {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  body[data-auth-page="login"] .site-nav .dropdown-menu {
+    position: static !important;
+    display: grid !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    gap: 0 !important;
+    padding: 4px 0 8px 14px !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  body[data-auth-page="login"] .site-nav .dropdown-menu a {
+    display: block !important;
+    width: 100% !important;
+    min-height: 38px;
+    padding: 10px 4px !important;
+    color: rgba(250, 248, 243, .72) !important;
+    font: 10px/1.4 "Inter", Arial, sans-serif !important;
+    text-align: left !important;
+    white-space: normal;
+    box-sizing: border-box !important;
+  }
+}
