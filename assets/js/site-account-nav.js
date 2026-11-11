@@ -1,6 +1,6 @@
 import { supabase } from './supabase-client.js'
 
-const accountLink = document.querySelector('.nav-account')
+const accountLink = document.querySelector('.nav-account, .gv-global-account')
 if (accountLink) {
   const setIdentity = (label, href, role = '') => {
     const textNode = [...accountLink.childNodes].find((node) => node.nodeType === Node.TEXT_NODE)
