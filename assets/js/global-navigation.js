@@ -21,8 +21,8 @@
     header.className = "gv-global-header";
     header.innerHTML = `
       <a class="gv-global-brand" href="/" aria-label="Greyveil Editions, home">
-        <span class="gv-global-symbol" aria-hidden="true">G<span>E</span></span>
-        <span class="gv-global-name">GREYVEIL<small>EDITIONS</small></span>
+        <img class="gv-global-logo" src="/assets/images/greyveil-wordmark.png"
+          alt="Greyveil Editions" width="142" height="71">
       </a>
       <button class="gv-global-toggle" type="button" aria-expanded="false"
         aria-controls="gv-primary-navigation" aria-label="Open navigation">Menu</button>

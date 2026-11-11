@@ -1,10 +1,7 @@
 /* Greyveil global navigation — shared public-site header */
 .gv-global-header{position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:28px;width:100%;min-height:82px;padding:0 clamp(20px,5vw,72px);box-sizing:border-box;background:#f3f0e8;color:#343b38;border-bottom:1px solid rgba(52,59,56,.16)}
 .gv-global-brand{display:inline-flex;flex:0 0 auto;align-items:center;gap:11px;color:#343b38;text-decoration:none}
-.gv-global-symbol{font:32px/.9 "Cormorant Garamond",Georgia,serif;letter-spacing:-.13em;color:#343b38}
-.gv-global-symbol span{position:relative;top:4px;color:#718174}
-.gv-global-name{font:600 11px/1.5 "Inter",Arial,sans-serif;letter-spacing:.2em}
-.gv-global-name small{display:block;margin-top:1px;font:8px/1.5 "IBM Plex Mono",Consolas,monospace;letter-spacing:.34em}
+.gv-global-logo{display:block;width:142px;height:auto;max-height:50px;object-fit:contain}
 .gv-global-nav{display:flex;flex:1 1 auto;align-items:center;justify-content:flex-end;gap:clamp(10px,1.45vw,22px);min-width:0}
 .gv-global-nav a{color:#454d49;text-decoration:none;font:500 10px/1.4 "Inter",Arial,sans-serif;white-space:nowrap;transition:color .18s ease}
 .gv-global-nav a:hover{color:#718174}
@@ -12,10 +9,11 @@
 .gv-global-toggle{display:none;min-width:76px;min-height:42px;padding:9px 13px;border:1px solid rgba(52,59,56,.35);border-radius:0;background:transparent;color:#343b38;font:10px/1.2 "IBM Plex Mono",Consolas,monospace;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 @media(max-width:1120px){
  .gv-global-header{min-height:72px;padding:0 22px;gap:14px;flex-wrap:wrap}
+ .gv-global-logo{width:132px;max-height:46px}
  .gv-global-toggle{display:inline-flex;align-items:center;justify-content:center}
  .gv-global-nav{position:absolute;top:100%;left:0;right:0;z-index:1001;display:none;flex:0 0 100%;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;max-height:calc(100svh - 72px);overflow-y:auto;overflow-x:hidden;padding:8px 22px 18px;background:#f3f0e8;border:1px solid rgba(52,59,56,.16);border-top:0;box-sizing:border-box}
  .gv-global-header.is-open .gv-global-nav{display:flex}
  .gv-global-nav a{display:flex;align-items:center;width:100%;min-height:46px;padding:11px 4px;border-bottom:1px solid rgba(52,59,56,.14);font-size:13px;white-space:normal;box-sizing:border-box}
  .gv-global-nav .gv-global-account{justify-content:center;margin:12px 0 0;padding:13px;border:1px solid rgba(52,59,56,.28)}
 }
-@media(max-width:380px){.gv-global-header{padding-inline:16px}.gv-global-nav{padding-inline:16px}.gv-global-name{font-size:10px}}
+@media(max-width:380px){.gv-global-header{padding-inline:16px}.gv-global-nav{padding-inline:16px}.gv-global-logo{width:124px}}
