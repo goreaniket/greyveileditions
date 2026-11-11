@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Contribute your time, skills and ideas to Greyveil's human-centred community.">
+  <meta name="theme-color" content="#f3f0e8">
+  <title>Contribute — Greyveil</title>
+  <link rel="canonical" href="https://greyveileditions.site/contribute/">
+  <link rel="stylesheet" href="/assets/css/connect.css">
+  <link rel="stylesheet" href="/assets/css/contribute.css">
+</head>
+<body>
+<header class="connect-header"><a class="connect-brand" href="/">GREYVEIL <span>CONTRIBUTE</span></a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/connect/">Get support</a><a href="/community/">Community</a><a href="/connect/discover/">Discover</a><a href="/account/">My account</a></nav></header>
+<main>
+<section class="connect-hero"><p class="eyebrow">BE PART OF WHAT WE BUILD</p><h1>Bring what<br><em>you can.</em></h1><p class="lead">Greyveil is built with people, not just for people. Share your skills, time or ideas. You do not need a perfect background or a public story to contribute.</p><div class="connect-principles"><span>Voluntary participation</span><span>Clear responsibilities</span><span>Respect for boundaries</span></div></section>
+<section class="contribute-layout">
+<div class="contribute-copy"><p class="eyebrow">WAYS TO CONTRIBUTE</p><h2>There is more than one way to help.</h2><ul><li>Welcome and support community activities.</li><li>Help with events, reading circles and workshops.</li><li>Share skills in design, writing, technology or operations.</li><li>Contribute ideas to practical community projects.</li><li>Support research, partnerships and accessibility.</li></ul><div class="honesty-note"><strong>What happens next?</strong><p>This is an expression of interest, not an automatic volunteer appointment. Greyveil reviews applications, discusses role expectations and checks suitability before assigning responsibilities. Some roles may require references, training or safeguarding checks.</p></div></div>
+<section class="contribute-panel">
+<div id="contribute-auth" class="community-admin-state" role="status">Checking your account…</div>
+<form id="contribute-form" hidden>
+<label for="areas">How would you like to contribute?</label>
+<div class="contribute-areas">
+<label><input type="checkbox" name="area" value="community"> Community welcome and facilitation</label>
+<label><input type="checkbox" name="area" value="events"> Events and experiences</label>
+<label><input type="checkbox" name="area" value="learning"> Learning and mentoring</label>
+<label><input type="checkbox" name="area" value="creative"> Writing, design and creative work</label>
+<label><input type="checkbox" name="area" value="technology"> Technology and digital systems</label>
+<label><input type="checkbox" name="area" value="operations"> Research and operations</label>
+<label><input type="checkbox" name="area" value="solutions"> Community problem-solving</label>
+</div>
+<label for="contribute-skills">Skills or experience</label><textarea id="contribute-skills" minlength="2" maxlength="1000" rows="3" required placeholder="Tell us what you can comfortably offer."></textarea>
+<label for="contribute-availability">Availability</label><select id="contribute-availability" required><option value="">Choose availability</option><option value="occasional">Occasionally</option><option value="weekly">A few hours each week</option><option value="monthly">A few hours each month</option><option value="project_based">For specific projects</option></select>
+<label for="contribute-motivation">What interests you about contributing?</label><textarea id="contribute-motivation" minlength="20" maxlength="1600" rows="4" required placeholder="A short note is enough. You do not need to share personal or sensitive details."></textarea>
+<label class="consent-row"><input id="contribute-consent" type="checkbox" required><span>I agree that authorised Greyveil coordinators may review this application and contact me about suitable contribution opportunities.</span></label>
+<button type="submit" id="contribute-submit">Send expression of interest</button><p id="contribute-status" role="status" aria-live="polite"></p>
+</form>
+<div id="contribute-login" hidden><h2>Sign in to contribute.</h2><p>Your application is linked to your account so you can track its status.</p><a class="sign-in-link" href="/auth/login/">Sign in or create an account ↗</a></div>
+</section>
+</section>
+<section class="contribute-history"><div class="history-heading"><div><p class="eyebrow">YOUR PARTICIPATION</p><h2>Your expressions of interest</h2></div><button id="contribute-refresh" class="quiet-button" type="button">Refresh</button></div><div id="contribute-history-list" aria-live="polite">Sign in to view your applications.</div></section>
+</main>
+<footer class="connect-footer"><a href="/">GREYVEIL</a><span>People helping build a more human world.</span><a href="/privacy/">Privacy</a></footer>
+<script type="module" src="/assets/js/contribute.js"></script>
+</body></html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="Greyveil Connect: request connection, wellbeing resources, learning opportunities or practical support.">
+  <title>Greyveil Connect — A Place to Begin</title>
+  <link rel="canonical" href="https://greyveileditions.site/connect/">
+  <link rel="stylesheet" href="/assets/css/connect.css">
+</head>
+<body>
+  <header class="connect-header">
+    <a class="connect-brand" href="/">GREYVEIL <span>CONNECT</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Editions</a>
+      <a href="/connect/discover/">Discover</a>
+      <a href="/contribute/">Contribute</a>
+      <a href="/community/">Community</a>
+      <a href="/account/">My account</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="connect-hero">
+      <p class="eyebrow">A PLACE TO BE HUMAN · GREYVEIL CONNECT</p>
+      <h1>A place to<br><em>begin.</em></h1>
+      <p class="lead">Connection, support, growth and practical help should be easier to find. Tell Greyveil what you are looking for, or how you would like to contribute.</p>
+      <div class="connect-principles">
+        <span>Belonging without pressure</span>
+        <span>Support with clear boundaries</span>
+        <span>Opportunities to contribute</span>
+      </div>
+    </section>
+
+    <section class="connect-content">
+      <div class="connect-intro">
+        <p class="eyebrow">START WITH WHAT YOU NEED</p>
+        <h2>What brings<br>you here?</h2>
+        <p>Choose the closest option. You do not need to explain your whole story. A short, practical note is enough.</p>
+        <div class="honesty-note">
+          <strong>Where Greyveil is today</strong>
+          <p>Connect is an early pilot. Requests are reviewed manually; a response or service is not guaranteed. Greyveil is not a clinical or emergency service.</p>
+        </div>
+      </div>
+
+      <div class="connect-panel">
+        <div class="auth-state" id="auth-state" role="status">Checking your Greyveil account…</div>
+        <form id="connect-form" hidden>
+          <label for="request-type">I am looking for</label>
+          <select id="request-type" name="request_type" required>
+            <option value="">Choose one</option>
+            <option value="belonging">Connection, friendship or community</option>
+            <option value="wellbeing">Wellbeing resources or a support referral</option>
+            <option value="growth">Learning, skills or mentorship</option>
+            <option value="practical_help">Help finding a practical solution</option>
+            <option value="volunteer">I want to volunteer or contribute</option>
+            <option value="partnership">Partnership or collaboration</option>
+          </select>
+
+          <label for="request-summary">A little context <span>(10–1,200 characters)</span></label>
+          <textarea id="request-summary" name="summary" minlength="10" maxlength="1200" rows="5" required placeholder="What would be useful for you? Please keep it brief and avoid sensitive medical or emergency details."></textarea>
+
+          <label class="consent-row">
+            <input id="request-consent" type="checkbox" required>
+            <span>I agree that Greyveil may review this request and use the information to respond about this request. I understand it will be visible to authorised Greyveil administrators.</span>
+          </label>
+
+          <button type="submit" id="connect-submit">Send request</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="privacy-copy">Your request is private to your account and authorised Greyveil administrators. You can view its status here and delete it while it is still marked “Received”.</p>
+        </form>
+
+        <div class="sign-in-prompt" id="sign-in-prompt" hidden>
+          <h3>Sign in to continue.</h3>
+          <p>Requests are linked to your Greyveil account so you can review their status and manage them.</p>
+          <a class="sign-in-link" href="/auth/login/">Sign in or create an account ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="request-history" id="request-history" hidden>
+      <div class="history-heading">
+        <div><p class="eyebrow">YOUR GREYVEIL CONNECT</p><h2>Your requests</h2></div>
+        <button type="button" id="refresh-requests" class="quiet-button">Refresh</button>
+      </div>
+      <div id="request-list" class="request-list" aria-live="polite"></div>
+    </section>
+
+    <section class="support-boundary">
+      <strong>Need urgent or clinical support?</strong>
+      <p>Do not wait for a Greyveil response. If someone is in immediate danger in India, call <a href="tel:112">112</a>. For mental-health support, Tele-MANAS is available at <a href="tel:14416">14416</a>. For clinical care, contact a qualified mental-health professional.</p>
+    </section>
+  </main>
+
+  <footer class="connect-footer">
+    <a href="/">GREYVEIL EDITIONS</a>
+    <span>Connection · Wellbeing · Growth · Practical solutions</span>
+    <a href="/privacy/">Privacy</a>
+  </footer>
+  <script type="module" src="/assets/js/connect.js"></script>
+</body>
+</html>
