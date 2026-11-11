@@ -1,11 +1,19 @@
-/* Exact official Greyveil wordmark supplied by the founder. Keep header theme unchanged. */
-.gv-global-brand{display:inline-flex;align-items:center;flex:0 0 auto;min-width:0}
-.gv-global-brand .gv-global-logo,.wordmark .gv-global-logo{
- display:block;width:156px;height:42px;max-width:100%;max-height:42px;object-fit:contain;object-position:left center
+/* Official founder-supplied Greyveil wordmark. Header theme and navigation remain unchanged. */
+.gv-global-brand,.wordmark{
+ display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;
+ width:156px!important;min-width:0!important;height:42px!important;flex:0 0 156px!important;
+ overflow:hidden!important;font-size:0!important;line-height:0!important;
 }
+.gv-global-brand::before,.wordmark::before{
+ content:"";display:block;width:100%;height:100%;flex:0 0 100%;
+ background-image:url("/assets/images/greyveil-official-wordmark.png?v=20261111");
+ background-repeat:no-repeat;background-position:left center;background-size:contain;
+}
+.gv-global-brand>* ,.wordmark>*{display:none!important}
+.gv-global-brand .gv-global-logo,.wordmark .gv-global-logo{display:none!important}
 @media(max-width:1120px){
- .gv-global-brand .gv-global-logo,.wordmark .gv-global-logo{width:132px;height:auto;max-height:36px}
+ .gv-global-brand,.wordmark{width:132px!important;height:36px!important;flex-basis:132px!important}
 }
 @media(max-width:380px){
- .gv-global-brand .gv-global-logo,.wordmark .gv-global-logo{width:124px;height:auto;max-height:34px}
+ .gv-global-brand,.wordmark{width:124px!important;height:34px!important;flex-basis:124px!important}
 }
