@@ -166,3 +166,14 @@ test('Reader keeps distinct internal delivery failure categories', async () => {
     'reader_api_failed',
   ]) assert.match(reader, new RegExp(`category: "${category}"`))
 })
+
+test('public book-detail pages are not hidden by reader entitlement checks', async () => {
+  const main = await readFile(new URL('../assets/js/main.js', import.meta.url), 'utf8')
+  const start = main.indexOf('const currentPageTarget = () => {')
+  const end = main.indexOf('\n};', start)
+  const pageTarget = main.slice(start, end)
+
+  assert.ok(start >= 0)
+  assert.doesNotMatch(pageTarget, /book-detail|target\.kind === "book"/)
+  assert.match(pageTarget, /target\.kind === "series"/)
+})

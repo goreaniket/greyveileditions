@@ -262,9 +262,7 @@ const isLivedExperienceLanding = () => {
 };
 
 const currentPageTarget = () => {
-  const main = document.querySelector("main");
   const target = parseContentTarget(window.location.href);
-  if (target.kind === "book" && main?.classList.contains("book-detail")) return target;
   if (target.kind === "series" && document.body.classList.contains("series-landing") && !isLivedExperienceLanding()) return target;
 
   const segments = window.location.pathname.split("/").filter(Boolean);
@@ -975,9 +973,8 @@ const initContentVisibilityFiltering = async (runId = contentVisibilityRun, auth
   mounts.forEach(setCatalogMountPending);
   records.forEach(suspendRecord);
 
-  // Informational routes have no protected catalog surface to reconcile. Avoid
-  // a hierarchy request there; routes with catalog or detail content still use
-  // the same authority-backed snapshot below.
+  // Public book details are informational; private reader content is authorized
+  // separately by the Reader API.
   if (!records.length && !directTarget && !mounts.length) {
     setAccessResolved(runId);
     return;
