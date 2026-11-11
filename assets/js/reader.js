@@ -1334,7 +1334,7 @@
     return { reason: "unavailable", category: "reader_api_failed", code, status };
   };
 
-  const fetchReaderContent = async (resources) => {
+  const fetchReaderPayload = async (resources) => {
     const { getCurrentSessionOnce } = await loadSupabaseModule();
     const { data: sessionData, error: sessionError } = await getCurrentSessionOnce();
     if (sessionError) {
@@ -1366,7 +1366,7 @@
       data = null;
     }
 
-    if (!response.ok || !data?.success || !data?.resources) {
+    if (!response.ok || !data?.success || !data?.resources || !data?.book) {
       const failure = readerContentFailure(data?.error, response.status);
       console.info("Reader content request failed.", failure);
       throw readerAccessError(failure);
@@ -1376,7 +1376,12 @@
     if (missing) {
       throw readerAccessError(readerContentFailure({ code: "response_incomplete" }, response.status));
     }
-    return data.resources;
+    return data;
+  };
+
+  const fetchReaderContent = async (resources) => {
+    const payload = await fetchReaderPayload(resources);
+    return payload.resources;
   };
 
   const readerAccessCopy = (reason) => {
@@ -1437,14 +1442,35 @@
   };
 
   const resolveCurrentReaderAccess = async () => {
-    const access = await loadContentAccessModule();
-    let decision = await access.resolveReaderAccess(readerBookSlug);
-    if (decision.allowed && decision.reason === "public") {
-      const context = await access.getAccessContext();
-      decision = { ...decision, context };
-    }
+    // The server API is the single authority for Reader access. It checks the
+    // session against the publishing database and returns only authorized content.
+    // Do not gate the Reader on the browser's separate catalog project/schema.
+    const payload = await fetchReaderPayload(["book.json"]);
+    const { getCurrentSessionOnce } = await loadSupabaseModule();
+    const { data: sessionData } = await getCurrentSessionOnce();
+    const user = sessionData?.session?.user || null;
+    const manifest = payload.resources["book.json"];
+    const decision = {
+      allowed: true,
+      reason: payload.book.visibility === "public" ? "public" : "entitled",
+      context: {
+        user,
+        profile: null,
+        role: user ? "customer" : "guest",
+        isAdmin: false,
+        displayName: user?.user_metadata?.display_name || "Reader",
+      },
+      book: payload.book,
+      bookHierarchy: {
+        series: {
+          slug: window.location.pathname.split("/")[2] || "human-mind",
+        },
+      },
+      visibility: payload.book.visibility,
+      resources: payload.resources,
+      errors: [],
+    };
     lastAccessCheck = Date.now();
-    if (!decision.allowed) logAccessDecision(decision);
     return decision;
   };
 
@@ -1566,7 +1592,7 @@
     activeAccessDecision = decision;
     bookUrl = `/assets/books/${decision.book.slug}/book.json`;
     const bookResponseUrl = new URL(bookUrl, window.location.href);
-    const manifestResources = await fetchReaderContent(["book.json"]);
+    const manifestResources = decision.resources || await fetchReaderContent(["book.json"]);
     book = manifestResources["book.json"];
     if (!book.id || !book.title || !Array.isArray(book.units)) {
       throw new Error("Book configuration is missing required metadata.");
