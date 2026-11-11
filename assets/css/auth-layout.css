@@ -1,0 +1,230 @@
+/* Login layout — scoped so the rest of Greyveil remains unchanged. */
+body[data-auth-page="login"] {
+  min-width: 0;
+  overflow-x: clip;
+  background: #f3f0e8;
+}
+
+body[data-auth-page="login"] main {
+  min-width: 0;
+}
+
+body[data-auth-page="login"] .auth-hero {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: clamp(64px, 9vw, 104px) max(24px, calc((100vw - 1040px) / 2)) clamp(42px, 6vw, 68px) !important;
+  overflow: hidden;
+  text-align: left;
+  background:
+    radial-gradient(ellipse at 82% 20%, rgba(140, 157, 121, .17), transparent 34%),
+    #171a17 !important;
+  color: #faf8f3 !important;
+}
+
+body[data-auth-page="login"] .auth-hero > .reveal {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+body[data-auth-page="login"] .auth-hero .eyebrow {
+  margin: 0 0 18px !important;
+  color: #c4cfad !important;
+  font: 9px/1.4 "IBM Plex Mono", Consolas, monospace !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase;
+}
+
+body[data-auth-page="login"] .auth-hero h1 {
+  max-width: 12ch;
+  margin: 0 !important;
+  color: #faf8f3 !important;
+  font: 500 clamp(44px, 7vw, 76px)/.98 "Cormorant Garamond", Georgia, serif !important;
+  letter-spacing: -.035em;
+  overflow-wrap: anywhere;
+}
+
+body[data-auth-page="login"] .auth-hero .hero-text {
+  max-width: 42ch;
+  margin: 16px 0 0 !important;
+  color: rgba(250, 248, 243, .72) !important;
+  font: 400 clamp(17px, 2vw, 21px)/1.55 "Cormorant Garamond", Georgia, serif !important;
+}
+
+body[data-auth-page="login"] .feedback-layout {
+  display: grid !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+  padding: clamp(32px, 6vw, 68px) 24px clamp(52px, 8vw, 88px) !important;
+  place-items: center;
+}
+
+body[data-auth-page="login"] .auth-card {
+  display: block !important;
+  width: 100% !important;
+  max-width: 560px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: clamp(22px, 5vw, 42px) !important;
+  background: #faf8f3 !important;
+  border: 1px solid rgba(52, 59, 56, .16) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 18px 48px rgba(23, 26, 23, .08) !important;
+}
+
+body[data-auth-page="login"] .auth-card *,
+body[data-auth-page="login"] .auth-card *::before,
+body[data-auth-page="login"] .auth-card *::after {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+body[data-auth-page="login"] .auth-google-button {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 16px !important;
+  border: 1px solid rgba(52, 59, 56, .24) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #343b38 !important;
+  box-shadow: none !important;
+  font: 500 12px/1.4 "Inter", Arial, sans-serif !important;
+}
+
+body[data-auth-page="login"] .auth-google-mark {
+  flex: 0 0 24px;
+  margin: 0;
+  background: transparent;
+}
+
+body[data-auth-page="login"] .auth-card label {
+  display: grid !important;
+  width: 100%;
+  gap: 8px !important;
+  margin: 0 0 18px !important;
+  color: #465047 !important;
+  font: 10px/1.4 "IBM Plex Mono", Consolas, monospace !important;
+  letter-spacing: .06em !important;
+}
+
+body[data-auth-page="login"] .auth-card input {
+  display: block;
+  width: 100% !important;
+  min-height: 48px !important;
+  margin: 0;
+  padding: 12px 13px !important;
+  border: 1px solid rgba(52, 59, 56, .24) !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  color: #343b38 !important;
+  font: 14px/1.4 "Inter", Arial, sans-serif !important;
+}
+
+body[data-auth-page="login"] .auth-password-field {
+  width: 100%;
+  margin: 0 0 16px !important;
+}
+
+body[data-auth-page="login"] .auth-password-control {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+}
+
+body[data-auth-page="login"] .auth-password-control input {
+  padding-right: 72px !important;
+}
+
+body[data-auth-page="login"] .auth-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #53654d;
+  font: 10px "Inter", Arial, sans-serif;
+  cursor: pointer;
+}
+
+body[data-auth-page="login"] .auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #7b8377 !important;
+  font: 9px/1.4 "IBM Plex Mono", Consolas, monospace !important;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+body[data-auth-page="login"] .auth-divider::before,
+body[data-auth-page="login"] .auth-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(52, 59, 56, .16);
+}
+
+body[data-auth-page="login"] .auth-forgot-link,
+body[data-auth-page="login"] .auth-form-actions .hero-link {
+  color: #53654d !important;
+  font-size: 12px;
+}
+
+body[data-auth-page="login"] .auth-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px !important;
+}
+
+body[data-auth-page="login"] .auth-form-actions .button.primary {
+  min-width: 140px;
+  min-height: 48px;
+  border: 1px solid #171a17 !important;
+  border-radius: 0 !important;
+  background: #171a17 !important;
+  color: #faf8f3 !important;
+}
+
+body[data-auth-page="login"] .auth-card .form-status {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  body[data-auth-page="login"] .auth-hero {
+    padding: 58px 24px 38px !important;
+  }
+
+  body[data-auth-page="login"] .auth-hero h1 {
+    max-width: 10ch;
+    font-size: clamp(42px, 12vw, 58px) !important;
+  }
+
+  body[data-auth-page="login"] .feedback-layout {
+    padding: 28px 18px 54px !important;
+  }
+
+  body[data-auth-page="login"] .auth-card {
+    padding: 22px 18px !important;
+  }
+
+  body[data-auth-page="login"] .auth-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  body[data-auth-page="login"] .auth-form-actions .button.primary {
+    width: 100%;
+  }
+}
