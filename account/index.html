@@ -14,32 +14,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/greyveil-2-preview/pages.css">
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/global-navigation.css">
 </head>
 <body class="gv-page" data-auth-page="account">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="ambient-field" aria-hidden="true"><span></span><span></span><span></span></div>
 
-  <header class="site-header" data-header>
-    <a class="brand" href="/index.html">Greyveil Editions</a>
-    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle aria-controls="primary-navigation">Menu</button>
-    <nav id="primary-navigation" class="site-nav" data-nav aria-label="Primary">
-      <a href="/index.html">Home</a>
-      <a href="/about/index.html">About</a>
-      <div class="dropdown">
-        <a class="dropdown-trigger" href="/projects/index.html" aria-haspopup="true" aria-expanded="false">Projects</a>
-        <div class="dropdown-menu">
-          <a href="/projects/index.html">The Human Paradox Collection</a>
-          
-          <a class="dropdown-series" href="/projects/human-mind/index.html">The Human Mind</a>
-          <a class="dropdown-series" href="/projects/human-paradox/index.html">The Human Paradox</a>
-          <a class="dropdown-series" href="/projects/human-fiction/index.html">The Human Fiction</a>
-        </div>
-      </div>
-      <a href="/founder/">Founder</a><a href="/founder-note/">Founder&rsquo;s Note</a><a href="/credits/index.html">Credits</a>
-      <a href="/contact/index.html">Contact</a>
-    </nav>
-  </header>
+  <header class="gv-global-header">
+  <a class="gv-global-brand" href="/" aria-label="Greyveil Editions, home">
+    <span class="gv-global-symbol" aria-hidden="true">G<span>E</span></span>
+    <span class="gv-global-name">GREYVEIL<small>EDITIONS</small></span>
+  </a>
+  <button class="gv-global-toggle" type="button" aria-expanded="false" aria-controls="gv-primary-navigation">Menu</button>
+  <nav class="gv-global-nav" id="gv-primary-navigation" aria-label="Primary navigation">
+    <a href="/#explore">Discover</a>
+    <a href="/#mind">The Mind</a>
+    <a href="/#human">The Human</a>
+    <a href="/#connection">The Connection</a>
+    <a href="/#library">The Library</a>
+    <a href="/#collective">The Collective</a>
+    <a href="/connect/">Connect</a>
+    <a href="/contribute/">Contribute</a>
+    <a href="/#origin">The Origin</a>
+    <a class="gv-global-account" href="/#my-space">Sign in / My Space <span aria-hidden="true">↘</span></a>
+  </nav>
+</header>
 
   <main id="main-content">
     <section class="project-hero page-shell feedback-hero auth-hero">
@@ -168,5 +168,6 @@
 
   <script src="/assets/js/main.js" defer></script>
   <script type="module" src="/assets/js/auth.js"></script>
+  <script src="/assets/js/global-navigation.js" defer></script>
 </body>
 </html>
