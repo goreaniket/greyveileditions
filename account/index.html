@@ -97,7 +97,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow" data-library-eyebrow>My Library</p>
-          <h2 data-library-title>My Library</h2>
+          <h2 data-library-title>Your Books</h2>
           <p data-library-note>Your available Greyveil readers appear here.</p>
         </div>
         <button class="button ghost account-library-refresh" type="button" data-library-refresh>Refresh Library</button>
@@ -124,7 +124,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Payments</p>
-          <h2>Payment History</h2>
+          <h2>Your Payments</h2>
           <p>Your Greyveil checkout activity and current payment status.</p>
         </div>
       </div>
@@ -134,6 +134,20 @@
         <h3>No payments yet.</h3>
         <p>Your completed and pending Greyveil purchases will appear here.</p>
       </article>
+    </section>
+
+    <section class="section page-shell account-activity" data-account-activity hidden>
+      <div class="section-heading">
+        <div><p class="eyebrow">Reading Activity</p><h2>Your Activities</h2><p>Reading time and progress saved on this device.</p></div>
+        <button class="button ghost" type="button" data-activity-refresh>Refresh Activity</button>
+      </div>
+      <div class="access-overview-grid account-activity-grid">
+        <article class="access-overview-card"><strong data-activity-time>0 min</strong><span>Total reading time</span></article>
+        <article class="access-overview-card"><strong data-activity-books>0</strong><span>Books opened</span></article>
+        <article class="access-overview-card"><strong data-activity-last>—</strong><span>Last reading session</span></article>
+      </div>
+      <div class="payment-history-list" data-activity-list></div>
+      <p class="form-status" role="status">Activity is stored in this browser and is not synced across devices.</p>
     </section>
 
   </main>
