@@ -59,7 +59,7 @@
   createSharedHeader();
   applyOfficialWordmark();
   const pageRoutes = new Map([
-    ["Discover", "/projects/"], ["The Mind", "/projects/human-mind/"],
+    ["Discover", "/connect/discover/"], ["The Mind", "/projects/human-mind/"],
     ["The Human", "/projects/human-experience/"], ["The Connection", "/connect/"],
     ["The Library", "/projects/"], ["The Collective", "/community/"],
     ["Connect", "/connect/"], ["Contribute", "/contribute/"], ["The Origin", "/founder/"],
