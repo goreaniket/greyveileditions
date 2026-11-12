@@ -300,6 +300,8 @@
   let chapterMarkers = [];
   let savedState = {};
   let scrollSaveTimer = null;
+  let readingSessionStartedAt = 0;
+  let readingTimer = null;
   let resizeTimer = null;
   let paginationToken = 0;
   let readerLoadToken = 0;
@@ -480,6 +482,22 @@
     }
   };
 
+  const flushReadingTime = (force = false) => {
+    if (!book || !readingSessionStartedAt || (document.hidden && !force)) return;
+    const now = Date.now();
+    const elapsed = Math.max(0, Math.floor((now - readingSessionStartedAt) / 1000));
+    if (!elapsed) return;
+    readingSessionStartedAt = now;
+    writeState({
+      totalReadingSeconds: Math.max(0, Number(savedState.totalReadingSeconds) || 0) + elapsed,
+      lastReadAt: new Date(now).toISOString(),
+      bookTitle: book.title || "Greyveil Book",
+    });
+  };
+  const startReadingTimeTracking = () => {
+    if (!readingSessionStartedAt && !document.hidden) readingSessionStartedAt = Date.now();
+    if (!readingTimer) readingTimer = window.setInterval(flushReadingTime, 15000);
+  };
   const applyBookTheme = (readerTheme) => {
     const theme = book.theme || {};
     if (theme.className) body.classList.add(theme.className);
@@ -1551,8 +1569,10 @@
     }
 
     document.addEventListener("visibilitychange", () => {
-      if (!document.hidden) recheckReaderAccess({ force: true });
+      if (document.hidden) { flushReadingTime(true); readingSessionStartedAt = 0; }
+      else { if (readerLoaded) readingSessionStartedAt = Date.now(); recheckReaderAccess({ force: true }); }
     });
+    window.addEventListener("pagehide", () => flushReadingTime(true));
     window.addEventListener("focus", () => recheckReaderAccess());
     window.setInterval(() => recheckReaderAccess(), ACCESS_RECHECK_DELAY);
   };
@@ -1603,6 +1623,7 @@
       const initialFont = savedState.fontSize || DEFAULT_FONT_SIZE;
       document.documentElement.style.setProperty("--reader-body-size", `${clamp(initialFont, MIN_FONT_SIZE, MAX_FONT_SIZE)}px`);
       readerLoaded = true;
+      startReadingTimeTracking();
       setReaderControlsEnabled(true);
       fontDecrease.disabled = initialFont <= MIN_FONT_SIZE;
       fontIncrease.disabled = initialFont >= MAX_FONT_SIZE;
