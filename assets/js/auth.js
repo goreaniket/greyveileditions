@@ -433,12 +433,12 @@ const libraryHierarchyReady = (hierarchy, access) => {
 
 const configureLibraryCopy = (nodes, role) => {
   const admin = isAdminRole(role)
-  if (nodes.eyebrow) nodes.eyebrow.textContent = admin ? 'Admin Library' : 'My Library'
-  if (nodes.title) nodes.title.textContent = admin ? 'Full Catalogue Access' : 'My Library'
+  if (nodes.eyebrow) nodes.eyebrow.textContent = admin ? 'Admin Library' : 'Your Books'
+  if (nodes.title) nodes.title.textContent = admin ? 'Full Catalogue Access' : 'Your Books'
   if (nodes.note) {
     nodes.note.textContent = admin
       ? 'All active Greyveil books are available from this account.'
-      : 'Your available Greyveil readers appear here.'
+      : 'Books you can read with your Greyveil account appear here.'
   }
 }
 
@@ -1340,6 +1340,55 @@ const initResetPasswordPage = async () => {
   })
 }
 
+const renderAccountActivity = () => {
+  const section = document.querySelector('[data-account-activity]')
+  if (!section) return
+  const timeNode = document.querySelector('[data-activity-time]')
+  const booksNode = document.querySelector('[data-activity-books]')
+  const lastNode = document.querySelector('[data-activity-last]')
+  const list = document.querySelector('[data-activity-list]')
+  const records = []
+  try {
+    for (let index = 0; index < localStorage.length; index += 1) {
+      const key = localStorage.key(index) || ''
+      if (!key.startsWith('greyveil:') || !key.includes(':continuous-reader:')) continue
+      const state = JSON.parse(localStorage.getItem(key) || '{}')
+      const seconds = Math.max(0, Number(state.totalReadingSeconds) || 0)
+      const lastReadAt = state.lastReadAt || ''
+      if (seconds || lastReadAt || Number(state.scrollRatio) > 0) {
+        records.push({
+          title: getText(state.bookTitle, key.split(':')[1] || 'Greyveil Book'),
+          seconds,
+          lastReadAt,
+          percent: Math.max(0, Math.min(100, Math.round(Number(state.scrollRatio || 0) * 100))),
+        })
+      }
+    }
+  } catch (error) {
+    console.info('Local reading activity is unavailable.', { name: error?.name, message: error?.message })
+  }
+  records.sort((a, b) => Date.parse(b.lastReadAt || 0) - Date.parse(a.lastReadAt || 0))
+  const totalMinutes = Math.floor(records.reduce((sum, item) => sum + item.seconds, 0) / 60)
+  const hours = Math.floor(totalMinutes / 60)
+  if (timeNode) timeNode.textContent = hours ? hours + 'h ' + (totalMinutes % 60) + 'm' : totalMinutes + ' min'
+  if (booksNode) booksNode.textContent = String(records.length)
+  if (lastNode) lastNode.textContent = records[0]?.lastReadAt ? formatDate(records[0].lastReadAt) : 'No activity yet'
+  if (list) {
+    clearNode(list)
+    records.slice(0, 6).forEach((item) => {
+      const card = document.createElement('article')
+      card.className = 'payment-history-card'
+      const heading = document.createElement('h3')
+      heading.textContent = item.title
+      const detail = document.createElement('p')
+      detail.textContent = Math.floor(item.seconds / 60) + ' min read · ' + item.percent + '% progress' + (item.lastReadAt ? ' · ' + formatDate(item.lastReadAt) : '')
+      card.append(heading, detail)
+      list.append(card)
+    })
+  }
+  section.hidden = false
+}
+
 const initAccountPage = async () => {
   const view = document.querySelector('[data-auth-view]')
   const status = document.querySelector('[data-auth-status]')
@@ -1393,9 +1442,11 @@ const initAccountPage = async () => {
       renderAccountLibrary(currentUser, profile, role),
       renderAccountPayments(currentUser),
     ])
+    renderAccountActivity()
   }
 
   await renderCurrentAccount(user)
+  document.querySelector("[data-activity-refresh]")?.addEventListener("click", renderAccountActivity)
 
   profileForm?.addEventListener('submit', async (event) => {
     event.preventDefault()
