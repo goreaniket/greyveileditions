@@ -55,7 +55,35 @@
   ensureStyles();
   createSharedHeader();
   applyOfficialWordmark();
-
+  const pageRoutes = new Map([
+    ["Discover", "/projects/"], ["The Mind", "/projects/human-mind/"],
+    ["The Human", "/projects/human-experience/"], ["The Connection", "/connect/"],
+    ["The Library", "/projects/"], ["The Collective", "/community/"],
+    ["Connect", "/connect/"], ["Contribute", "/contribute/"], ["The Origin", "/founder/"],
+  ]);
+  document.querySelectorAll(".gv-global-header .gv-global-nav a, .site-header .primary-nav a").forEach((link) => {
+    const label = link.textContent.trim().replace(/[↘↗→]/g, "").trim();
+    if (pageRoutes.has(label)) link.setAttribute("href", pageRoutes.get(label));
+  });
+  document.querySelectorAll(".site-header").forEach((header) => {
+    const toggle = header.querySelector(".menu-toggle");
+    const nav = header.querySelector(".primary-nav");
+    if (!toggle || !nav || toggle.dataset.gvBound === "true") return;
+    toggle.dataset.gvBound = "true";
+    const setOpen = (open) => {
+      nav.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+      toggle.textContent = open ? "Close" : "Menu";
+    };
+    toggle.addEventListener("click", () => setOpen(!nav.classList.contains("open")));
+    nav.addEventListener("click", (event) => { if (event.target.closest("a")) setOpen(false); });
+    document.addEventListener("pointerdown", (event) => { if (nav.classList.contains("open") && !header.contains(event.target)) setOpen(false); });
+    document.addEventListener("keydown", (event) => { if (event.key === "Escape" && nav.classList.contains("open")) { setOpen(false); toggle.focus(); } });
+    window.addEventListener("popstate", () => setOpen(false));
+    window.addEventListener("hashchange", () => setOpen(false));
+    window.addEventListener("pageshow", () => setOpen(false));
+  });
   document.querySelectorAll(".gv-global-header").forEach((header) => {
     const toggle = header.querySelector(".gv-global-toggle");
     const nav = header.querySelector(".gv-global-nav");
@@ -77,11 +105,30 @@
         toggle.focus();
       }
     });
+    document.addEventListener("pointerdown", (event) => { if (header.classList.contains("is-open") && !header.contains(event.target)) setOpen(false); });
+    window.addEventListener("popstate", () => setOpen(false));
+    window.addEventListener("hashchange", () => setOpen(false));
+    window.addEventListener("pageshow", () => setOpen(false));
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1120) setOpen(false);
     }, { passive: true });
   });
 
+  const applyCoverMarks = () => {
+    const selector = ".book-cover-image, .library-card__cover img, .book-card img, .project-card img[src*='cover'], img[src*='/assets/books/'][src*='cover'], img[src*='/covers/']";
+    document.querySelectorAll(selector).forEach((image) => {
+      const parent = image.parentElement;
+      if (!parent || parent.querySelector(":scope > .gv-cover-publisher-mark")) return;
+      if (getComputedStyle(parent).position === "static") parent.style.position = "relative";
+      const mark = document.createElement("span");
+      mark.className = "gv-cover-publisher-mark";
+      mark.setAttribute("aria-label", "Greyveil Editions");
+      mark.setAttribute("role", "img");
+      parent.append(mark);
+    });
+  };
+  applyCoverMarks();
+  new MutationObserver(applyCoverMarks).observe(document.body, { childList: true, subtree: true });
   import("/assets/js/site-account-nav.js").catch((error) => {
     console.info("Greyveil account navigation could not be initialized.", {
       name: error?.name, message: error?.message
