@@ -17,3 +17,14 @@
 @media(max-width:380px){
  .gv-global-brand,.wordmark{width:124px!important;height:34px!important;flex-basis:124px!important}
 }
+
+/* Publisher identity on book-cover artwork throughout the site. */
+.gv-cover-publisher-mark{
+ position:absolute;z-index:3;right:8px;bottom:8px;display:block;
+ width:clamp(68px,22%,104px);height:24px;padding:4px 7px;
+ background:rgba(13,17,23,.82) url("/assets/images/greyveil-official-wordmark.png") center/contain no-repeat;
+ border:1px solid rgba(255,255,255,.18);border-radius:2px;
+ pointer-events:none;box-sizing:border-box;
+}
+.reader-cover-page__frame,.library-card__cover,.cover-placeholder{position:relative}
+@media(max-width:480px){.gv-cover-publisher-mark{width:64px;height:20px;right:6px;bottom:6px}}
