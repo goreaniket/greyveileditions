@@ -28,3 +28,57 @@
 }
 .reader-cover-page__frame,.library-card__cover,.cover-placeholder{position:relative}
 @media(max-width:480px){.gv-cover-publisher-mark{width:64px;height:20px;right:6px;bottom:6px}}
+
+
+/* Shared navigation: readable spacing on desktop and a clear stacked panel on phones. */
+.gv-global-header{
+ position:sticky;top:0;z-index:1000;width:100%;min-height:76px;
+ display:flex;align-items:center;justify-content:space-between;
+ gap:24px;padding:14px clamp(18px,4vw,64px);
+ background:rgba(13,17,23,.97);color:#f3f0e8;
+ border-bottom:1px solid rgba(255,255,255,.12);
+ box-sizing:border-box;backdrop-filter:blur(14px);
+}
+.gv-global-brand{flex:0 0 156px;min-width:0}
+.gv-global-nav{
+ display:flex;flex:1 1 auto;align-items:center;justify-content:flex-end;
+ flex-wrap:wrap;column-gap:clamp(12px,1.45vw,22px);row-gap:10px;
+ min-width:0;
+}
+.gv-global-nav a{
+ display:inline-flex;align-items:center;min-height:32px;padding:5px 0;
+ color:rgba(243,240,232,.82);font:500 10px/1.45 Inter,Arial,sans-serif;
+ letter-spacing:.025em;text-decoration:none;white-space:nowrap;
+}
+.gv-global-nav a:hover,.gv-global-nav a:focus-visible{color:#c4cfad}
+.gv-global-nav .gv-global-account{
+ margin-left:4px;padding:7px 11px;border:1px solid rgba(196,207,173,.42);
+ color:#f3f0e8;gap:7px;
+}
+.gv-global-toggle{
+ display:none;align-items:center;justify-content:center;min-height:40px;
+ padding:8px 14px;border:1px solid rgba(196,207,173,.45);
+ background:transparent;color:#f3f0e8;font:500 11px/1 Inter,Arial,sans-serif;
+ letter-spacing:.06em;cursor:pointer;
+}
+@media(max-width:1120px){
+ .gv-global-header{flex-wrap:wrap;gap:10px 18px;padding:12px 5vw}
+ .gv-global-toggle{display:inline-flex;margin-left:auto}
+ .gv-global-nav{
+  display:none;flex:1 0 100%;width:100%;justify-content:flex-start;
+  align-items:stretch;flex-direction:column;flex-wrap:nowrap;gap:0;
+  padding:8px 0 5px;border-top:1px solid rgba(255,255,255,.12);
+ }
+ .gv-global-header.is-open .gv-global-nav{display:flex}
+ .gv-global-nav a{
+  width:100%;min-height:42px;padding:10px 4px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  white-space:normal;font-size:12px;line-height:1.5;
+ }
+ .gv-global-nav .gv-global-account{width:fit-content;margin:10px 0 2px;padding:10px 12px}
+}
+@media(max-width:420px){
+ .gv-global-header{padding:11px 18px}
+ .gv-global-brand{flex-basis:132px;width:132px;height:36px}
+ .gv-global-nav a{font-size:12px;min-height:44px}
+}
