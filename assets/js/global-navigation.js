@@ -2,12 +2,15 @@
   const logoPath = "/assets/images/greyveil-official-wordmark.png?v=20261111";
 
   const ensureStyles = () => {
-    const exists = [...document.querySelectorAll('link[rel="stylesheet"]')]
-      .some((link) => link.href.includes("/assets/css/global-navigation.css"));
-    if (exists) return;
+    const existing = [...document.querySelectorAll('link[rel="stylesheet"]')]
+      .find((link) => link.href.includes("/assets/css/global-navigation.css"));
+    if (existing) {
+      if (!existing.href.includes("v=20261112")) existing.href = "/assets/css/global-navigation.css?v=20261112";
+      return;
+    }
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/css/global-navigation.css?v=20261111";
+    link.href = "/assets/css/global-navigation.css?v=20261112";
     document.head.append(link);
   };
 
