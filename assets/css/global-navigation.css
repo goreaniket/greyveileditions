@@ -1,28 +1,28 @@
 /* Official founder-supplied Greyveil wordmark. Header theme and navigation remain unchanged. */
-.gv-global-brand,.wordmark{
+.gv-global-brand,.wordmark,.gv-brand{
  display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;
  width:156px!important;min-width:0!important;height:42px!important;flex:0 0 156px!important;
  overflow:hidden!important;font-size:0!important;line-height:0!important;
 }
-.gv-global-brand::before,.wordmark::before{
+.gv-global-brand::before,.wordmark::before,.gv-brand::before{
  content:"";display:block;width:100%;height:100%;flex:0 0 100%;
- background-image:url("/assets/images/greyveil-official-wordmark.png?v=20261111");
+ background-image:url("/assets/images/greyveil-official-wordmark.svg?v=20261111");
  background-repeat:no-repeat;background-position:left center;background-size:contain;
 }
-.gv-global-brand>* ,.wordmark>*{display:none!important}
-.gv-global-brand .gv-global-logo,.wordmark .gv-global-logo{display:none!important}
+.gv-global-brand>* ,.wordmark>* ,.gv-brand>*{display:none!important}
+.gv-global-brand .gv-global-logo,.wordmark .gv-global-logo,.gv-brand .gv-global-logo{display:none!important}
 @media(max-width:1120px){
- .gv-global-brand,.wordmark{width:132px!important;height:36px!important;flex-basis:132px!important}
+ .gv-global-brand,.wordmark,.gv-brand{width:132px!important;height:36px!important;flex-basis:132px!important}
 }
 @media(max-width:380px){
- .gv-global-brand,.wordmark{width:124px!important;height:34px!important;flex-basis:124px!important}
+ .gv-global-brand,.wordmark,.gv-brand{width:124px!important;height:34px!important;flex-basis:124px!important}
 }
 
 /* Publisher identity on book-cover artwork throughout the site. */
 .gv-cover-publisher-mark{
  position:absolute;z-index:3;right:8px;bottom:8px;display:block;
  width:clamp(68px,22%,104px);height:24px;padding:4px 7px;
- background:rgba(13,17,23,.82) url("/assets/images/greyveil-official-wordmark.png") center/contain no-repeat;
+ background:rgba(13,17,23,.82) url("/assets/images/greyveil-official-wordmark.svg") center/contain no-repeat;
  border:1px solid rgba(255,255,255,.18);border-radius:2px;
  pointer-events:none;box-sizing:border-box;
 }
@@ -39,7 +39,7 @@
  border-bottom:1px solid rgba(255,255,255,.12);
  box-sizing:border-box;backdrop-filter:blur(14px);
 }
-.gv-global-brand{flex:0 0 156px;min-width:0}
+.gv-global-brand,.gv-brand{flex:0 0 156px;min-width:0}
 .gv-global-nav{
  display:flex;flex:1 1 auto;align-items:center;justify-content:flex-end;
  flex-wrap:wrap;column-gap:clamp(12px,1.45vw,22px);row-gap:10px;
@@ -79,6 +79,6 @@
 }
 @media(max-width:420px){
  .gv-global-header{padding:11px 18px}
- .gv-global-brand{flex-basis:132px;width:132px;height:36px}
+ .gv-global-brand,.gv-brand{flex-basis:132px;width:132px;height:36px}
  .gv-global-nav a{font-size:12px;min-height:44px}
 }
