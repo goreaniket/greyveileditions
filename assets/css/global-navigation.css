@@ -9,6 +9,9 @@
  background-color:#F3F0E8;background-image:url("/assets/images/greyveil-official-wordmark.svg?v=20261115");border-radius:2px;
  background-repeat:no-repeat;background-position:left center;background-size:contain;
 }
+.site-header .wordmark::before{
+ background-image:url("/assets/images/greyveil-logo.png?v=20261116");
+}
 .gv-global-brand>* ,.wordmark>* ,.gv-brand>*{display:none!important}
 .gv-global-brand .gv-global-logo,.wordmark .gv-global-logo,.gv-brand .gv-global-logo{display:none!important}
 @media(max-width:1120px){
