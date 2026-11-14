@@ -6,7 +6,7 @@
 }
 .gv-global-brand::before,.wordmark::before,.gv-brand::before{
  content:"";display:block;width:100%;height:100%;flex:0 0 100%;
- background-image:url("/assets/images/greyveil-official-wordmark.svg?v=20261111");
+ background-image:url("/assets/images/greyveil-official-wordmark.svg?v=20261114");
  background-repeat:no-repeat;background-position:left center;background-size:contain;
 }
 .gv-global-brand>* ,.wordmark>* ,.gv-brand>*{display:none!important}
