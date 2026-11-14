@@ -1,23 +1,23 @@
 (() => {
-  const logoPath = "/assets/images/greyveil-official-wordmark.png?v=20261111";
+  const logoPath = "/assets/images/greyveil-official-wordmark.svg?v=20261114";
 
   const ensureStyles = () => {
     const existing = [...document.querySelectorAll('link[rel="stylesheet"]')]
       .find((link) => link.href.includes("/assets/css/global-navigation.css"));
     if (existing) {
-      if (!existing.href.includes("v=20261112")) existing.href = "/assets/css/global-navigation.css?v=20261112";
+      if (!existing.href.includes("v=20261114")) existing.href = "/assets/css/global-navigation.css?v=20261114";
       return;
     }
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/css/global-navigation.css?v=20261112";
+    link.href = "/assets/css/global-navigation.css?v=20261114";
     document.head.append(link);
   };
 
   const applyOfficialWordmark = () => {
-    document.querySelectorAll(".gv-global-brand, .wordmark").forEach((brand) => {
+    document.querySelectorAll(".gv-global-brand, .wordmark, .gv-brand").forEach((brand) => {
       const existing = brand.querySelector(".gv-global-logo");
-      if (existing && existing.src.includes("greyveil-official-wordmark.png")) return;
+      if (existing && existing.src.includes("greyveil-official-wordmark.svg")) return;
       const logo = document.createElement("img");
       logo.className = "gv-global-logo";
       logo.src = logoPath;
