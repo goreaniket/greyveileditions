@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://greyveileditions.site/</loc>
     <lastmod>2026-11-10</lastmod>
@@ -27,22 +27,47 @@
   <url>
     <loc>https://greyveileditions.site/projects/human-mind/books/the-last-shift.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-mind/assets/covers/the%20last%20shift.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-mind/books/the-last-shift-ii.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-mind/assets/covers/the%20last%20shift%20pt-2%20.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-mind/books/the-quiet-i-started-living-with.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-mind/assets/covers/the%20quiet%20i%20started%20living%20with%20.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-mind/books/the-loop-within.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-mind/assets/covers/the%20loop%20within.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-mind/books/when-understanding-begins.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-mind/assets/covers/when%20understanding%20begins%20.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-paradox/</loc>
@@ -51,22 +76,47 @@
   <url>
     <loc>https://greyveileditions.site/projects/human-paradox/books/the-paradox-of-awareness.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-paradox/assets/covers/the%20paradox%20of%20awareness.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-paradox/books/the-paradox-of-explanation.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-paradox/assets/covers/the%20paradox%20of%20explanation.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-paradox/books/the-end-of-interpretation.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-paradox/assets/covers/the%20end%20of%20interpretation.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-paradox/books/the-paradox-of-reality.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-paradox/assets/covers/the%20paradox%20of%20reality.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-paradox/books/the-paradox-of-stillness.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-paradox/assets/covers/the%20paradox%20of%20stillness.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-fiction/</loc>
@@ -75,18 +125,38 @@
   <url>
     <loc>https://greyveileditions.site/projects/human-fiction/books/the-fiction-of-awareness.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-fiction/assets/covers/the%20fiction%20of%20awareness.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-fiction/books/the-fiction-of-meaning.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-fiction/assets/covers/the%20fiction%20of%20meaning.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-fiction/books/the-fiction-of-becoming.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-fiction/assets/covers/the%20fiction%20of%20becoming.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-fiction/books/the-fiction-of-human.html</loc>
     <lastmod>2026-08-03</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-fiction/assets/covers/the%20fiction%20of%20human%20.jpeg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/contact/</loc>
@@ -119,42 +189,92 @@
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-person-who-was-tired-of-being-strong/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-01.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-world-we-thought-we-saw/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-02.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/an-unknown-part-of-life/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-03.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-people-we-couldn-t-save/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-04.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/between-birth-and-death/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-05.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-things-we-did-right-and-still-lost/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-06.png</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-life-we-forgot-while-building-a-life/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-07.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-world-that-never-leaves-us-alone/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-08.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-distance-between-two-minds/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-09.png</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/projects/human-experience/books/the-enough-that-never-arrived/</loc>
     <lastmod>2026-11-10</lastmod>
+  
+    <image:image>
+      <image:loc>https://greyveileditions.site/projects/human-experience/covers/book-10.jpg</image:loc>
+      <image:title>Greyveil Editions book cover</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://greyveileditions.site/founder-note/</loc>
