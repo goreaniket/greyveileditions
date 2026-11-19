@@ -26,7 +26,7 @@ const supabaseUrl = () => getText(
   DEFAULT_SUPABASE_URL,
 ).replace(/\/+$/, '')
 
-const supabaseServiceKey = () => env('SUPABASE_SERVICE_ROLE_KEY', ['SUPABASE_SERVICE_KEY'])
+const supabaseServiceKey = () => env('SUPABASE_SECRET_KEY', ['SUPABASE_SERVICE_ROLE_KEY', 'SUPABASE_SERVICE_KEY'])
 
 const sendJson = (res, statusCode, payload) => {
   res.statusCode = statusCode
