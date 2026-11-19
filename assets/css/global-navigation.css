@@ -3,14 +3,13 @@
  display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;
  width:156px!important;min-width:0!important;height:42px!important;flex:0 0 156px!important;
  overflow:hidden!important;font-size:0!important;line-height:0!important;
+ background:#F3F0E8;border-radius:2px;box-sizing:border-box;padding:2px 4px;
 }
-.gv-global-brand::before,.wordmark::before,.gv-brand::before{
- content:"";display:block;width:100%;height:100%;flex:0 0 100%;
- background-color:#F3F0E8;background-image:url("/assets/images/greyveil-official-wordmark.svg?v=20261119");border-radius:2px;
- background-repeat:no-repeat;background-position:left center;background-size:contain;
-}
+.gv-global-brand::before,.wordmark::before,.gv-brand::before{content:none!important;display:none!important}
 .gv-global-brand>* ,.wordmark>* ,.gv-brand>*{display:none!important}
-.gv-global-brand .gv-global-logo,.wordmark .gv-global-logo,.gv-brand .gv-global-logo{display:none!important}
+.gv-global-brand .gv-global-logo,.wordmark .gv-global-logo,.gv-brand .gv-global-logo{
+ display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:left center!important;
+}
 @media(max-width:1120px){
  .gv-global-brand,.wordmark,.gv-brand{width:132px!important;height:36px!important;flex-basis:132px!important}
 }
@@ -22,7 +21,7 @@
 .gv-cover-publisher-mark{
  position:absolute;z-index:3;right:8px;bottom:8px;display:block;
  width:clamp(68px,22%,104px);height:24px;padding:4px 7px;
- background:#F3F0E8 url("/assets/images/greyveil-official-wordmark.svg?v=20261119") center/contain no-repeat;
+ background:#F3F0E8 url("/assets/images/greyveil-official-wordmark.svg?v=20261119b") center/contain no-repeat;
  border:1px solid rgba(255,255,255,.18);border-radius:2px;
  pointer-events:none;box-sizing:border-box;
 }
