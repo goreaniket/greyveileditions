@@ -6,11 +6,8 @@
 }
 .gv-global-brand::before,.wordmark::before,.gv-brand::before{
  content:"";display:block;width:100%;height:100%;flex:0 0 100%;
- background-color:#F3F0E8;background-image:url("/assets/images/greyveil-official-wordmark.svg?v=20261115");border-radius:2px;
+ background-color:#F3F0E8;background-image:url("/assets/images/greyveil-official-wordmark.svg?v=20261119");border-radius:2px;
  background-repeat:no-repeat;background-position:left center;background-size:contain;
-}
-.site-header .wordmark::before{
- background-image:url("/assets/images/greyveil-logo.png?v=20261116");
 }
 .gv-global-brand>* ,.wordmark>* ,.gv-brand>*{display:none!important}
 .gv-global-brand .gv-global-logo,.wordmark .gv-global-logo,.gv-brand .gv-global-logo{display:none!important}
@@ -25,7 +22,7 @@
 .gv-cover-publisher-mark{
  position:absolute;z-index:3;right:8px;bottom:8px;display:block;
  width:clamp(68px,22%,104px);height:24px;padding:4px 7px;
- background:#F3F0E8 url("/assets/images/greyveil-official-wordmark.svg?v=20261115") center/contain no-repeat;
+ background:#F3F0E8 url("/assets/images/greyveil-official-wordmark.svg?v=20261119") center/contain no-repeat;
  border:1px solid rgba(255,255,255,.18);border-radius:2px;
  pointer-events:none;box-sizing:border-box;
 }
