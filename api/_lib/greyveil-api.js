@@ -1,4 +1,4 @@
-const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
+const DEFAULT_SUPABASE_URL = 'https://fanixwnyglkvkgsxxrtn.supabase.co'
 
 class ApiError extends Error {
   constructor(statusCode, message, code = 'request_failed', details = null) {
