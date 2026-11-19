@@ -97,7 +97,7 @@ test('catalog cover fallback uses a centered dark brand treatment without changi
     source('../assets/js/main.js'),
     source('../assets/css/style.css'),
   ])
-  assert.match(catalog, /COVER_FALLBACK_PATH = '\/assets\/images\/greyveil-logo\.png'/)
+  assert.match(catalog, /COVER_FALLBACK_PATH = '\/assets\/images\/greyveil-official-wordmark\.svg\?v=20261119'/)
   assert.match(catalog, /image\.classList\.add\('catalog-cover-fallback'\)/)
   assert.match(main, /image\.className = "book-cover-image series-book-cover"/)
   assert.doesNotMatch(main, /series-book-cover catalog-cover-fallback/)
