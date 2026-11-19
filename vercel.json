@@ -33,5 +33,16 @@
       "source": "/projects/:series/books/:book/reader/:path*",
       "destination": "/reader/index.html"
     }
+  ],
+  "headers": [
+    {
+      "source": "/assets/images/greyveil-logo.png",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
   ]
 }
