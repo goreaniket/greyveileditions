@@ -1,19 +1,16 @@
 (() => {
-  const isHomepage = window.location.pathname === "/" || window.location.pathname === "/index.html";
-  const logoPath = isHomepage
-    ? "/assets/images/greyveil-logo.png?v=20261116"
-    : "/assets/images/greyveil-official-wordmark.svg?v=20261115";
+  const logoPath = "/assets/images/greyveil-official-wordmark.svg?v=20261119";
 
   const ensureStyles = () => {
     const existing = [...document.querySelectorAll('link[rel="stylesheet"]')]
       .find((link) => link.href.includes("/assets/css/global-navigation.css"));
     if (existing) {
-      if (!existing.href.includes("v=20261116")) existing.href = "/assets/css/global-navigation.css?v=20261116";
+      if (!existing.href.includes("v=20261119")) existing.href = "/assets/css/global-navigation.css?v=20261119";
       return;
     }
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "/assets/css/global-navigation.css?v=20261116";
+    link.href = "/assets/css/global-navigation.css?v=20261119";
     document.head.append(link);
   };
 
