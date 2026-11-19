@@ -3,7 +3,7 @@ const {
   handleReaderContentRequest,
 } = require('./_lib/reader-delivery')
 
-const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
+const DEFAULT_SUPABASE_URL = 'https://fanixwnyglkvkgsxxrtn.supabase.co'
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8' }
 
 const getText = (value) => String(value || '').trim()
