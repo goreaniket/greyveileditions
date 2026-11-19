@@ -38,7 +38,7 @@ export const seriesCoverPath = (series) => {
     || (slug ? `/assets/images/${slug.replaceAll('-', ' ')}.jpeg` : '')
 }
 
-export const COVER_FALLBACK_PATH = '/assets/images/greyveil-official-wordmark.svg?v=20261119'
+export const COVER_FALLBACK_PATH = '/assets/images/greyveil-official-wordmark.svg?v=20261119b'
 
 export const bindCoverFallback = (image) => {
   if (!image) return
