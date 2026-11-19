@@ -18,7 +18,7 @@ const serviceKey = () => {
       throw new ReaderDeliveryError(500, 'Reader delivery is not configured.', 'server_config_missing')
     }
   }
-  const key = getText(process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY)
+  const key = getText(process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY)
   if (!key) throw new ReaderDeliveryError(500, 'Reader delivery is not configured.', 'server_config_missing')
   return key
 }
