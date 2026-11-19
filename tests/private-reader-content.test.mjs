@@ -133,6 +133,7 @@ test('Reader delivery authenticates before private storage reads and never retur
   assert.doesNotMatch(edge, /service_role.*resources|SUPABASE_SERVICE_ROLE_KEY.*return/i)
   assert.match(api, /greyveil_reader_content_authorization/)
   assert.match(api, /handleReaderContentRequest/)
+  assert.match(api, /SUPABASE_SECRET_KEY/)
   assert.match(api, /downloadObject\('reader-content'/)
   assert.match(config, /\[functions\.reader-content\][\s\S]+verify_jwt = false/)
 })
