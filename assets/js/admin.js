@@ -5,7 +5,7 @@ import { createFeedbackEmailLink } from './admin-feedback-email.js'
 
 if (!document.querySelector('script[data-greyveil-sanctuary]')) {
   const sanctuaryScript = document.createElement('script')
-  sanctuaryScript.src = '/assets/js/theme-sanctuary.js?v=20261121.2'
+  sanctuaryScript.src = '/assets/js/theme-sanctuary.js?v=20261121.3'
   sanctuaryScript.dataset.greyveilSanctuary = 'true'
   sanctuaryScript.defer = true
   document.head.append(sanctuaryScript)
