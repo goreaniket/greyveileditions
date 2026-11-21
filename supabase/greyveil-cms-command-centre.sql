@@ -112,6 +112,19 @@ create index if not exists cms_revisions_section_id_idx on public.cms_revisions 
 create index if not exists cms_revisions_created_by_idx on public.cms_revisions (created_by);
 create index if not exists cms_audit_logs_actor_id_idx on public.cms_audit_logs (actor_id);
 
+drop policy if exists cms_media_admin_all on public.cms_media;
+create policy cms_media_admin_all on public.cms_media for all to authenticated
+  using ((select public.greyveil_is_admin()))
+  with check ((select public.greyveil_is_admin()));
+drop policy if exists cms_revisions_admin_all on public.cms_revisions;
+create policy cms_revisions_admin_all on public.cms_revisions for all to authenticated
+  using ((select public.greyveil_is_admin()))
+  with check ((select public.greyveil_is_admin()));
+drop policy if exists cms_audit_admin_all on public.cms_audit_logs;
+create policy cms_audit_admin_all on public.cms_audit_logs for all to authenticated
+  using ((select public.greyveil_is_admin()))
+  with check ((select public.greyveil_is_admin()));
+
 grant select on public.cms_pages, public.cms_sections to anon, authenticated;
 grant insert, update, delete on public.cms_pages, public.cms_sections to authenticated;
 grant select, insert, update, delete on public.cms_media, public.cms_revisions, public.cms_audit_logs to authenticated;
