@@ -2519,3 +2519,21 @@
   background: rgba(140, 106, 74, .1);
   color: var(--slate);
 }
+
+.cms-admin-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}
+.cms-admin-wide{grid-column:1/-1}
+.cms-admin-list{display:grid;gap:10px;margin-top:14px}
+.cms-admin-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.cms-admin-item__info{display:grid;gap:5px;min-width:0}
+.cms-admin-item__info strong{overflow-wrap:anywhere}
+.cms-admin-item__info span,.cms-admin-item p{color:var(--admin-muted);font-size:.78rem}
+.cms-admin-actions{display:flex;flex-wrap:wrap;gap:7px;flex-shrink:0}
+.cms-admin-actions .admin-action{min-height:34px;padding:7px 10px;font-size:.75rem}
+.cms-media-item{display:grid;grid-template-columns:92px minmax(0,1fr) auto;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.cms-media-item img{width:92px;height:66px;object-fit:cover;border-radius:5px}
+.cms-upload-controls{margin:14px 0}
+.cms-admin-grid [data-cms-page-form] input,.cms-admin-grid [data-cms-page-form] textarea,.cms-admin-grid [data-cms-section-form] input,.cms-admin-grid [data-cms-section-form] textarea,.cms-admin-grid [data-cms-section-form] select{width:100%}
+.cms-admin-grid .admin-platform-wide{display:grid;gap:7px;margin:12px 0}
+.admin-action--danger{border-color:rgba(190,90,75,.45)!important;color:#c98278!important}
+@media(max-width:900px){.cms-admin-grid{grid-template-columns:1fr}.cms-admin-wide{grid-column:auto}}
+@media(max-width:600px){.cms-admin-item{align-items:flex-start;flex-direction:column}.cms-media-item{grid-template-columns:70px minmax(0,1fr)}.cms-media-item img{width:70px;height:58px}.cms-media-item .cms-admin-actions{grid-column:1/-1}}
