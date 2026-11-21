@@ -43,3 +43,31 @@ Read-only inspection of the connected GitHub repository and the Supabase project
 - No commit has yet been deployed.
 - No production database migration or production deployment was run.
 - Continue implementation on this feature branch; do not push changes directly to `master`.
+
+## CMS implementation update — 21 November 2026
+Implemented on the feature branch:
+- Added `cms_pages`, `cms_sections`, `cms_media`, `cms_revisions`, and `cms_audit_logs`.
+- Enabled RLS on all five CMS tables. Public reads are limited to published pages and published sections on published pages. Admin write access uses the existing `public.greyveil_is_admin()` helper.
+- Added the public `cms-media` image bucket with a 25 MB limit and image-only MIME allowlist; storage writes/deletes are admin-only. PDFs/EPUBs are not accepted into this public bucket and remain in the existing protected Books / Files workflow.
+- Added the Admin Dashboard Website & Media tab: page drafts/publishing/archive, homepage section creation/edit/publish/delete, media upload/list/copy URL/delete, revision snapshots, and audit entries.
+- Added a public CMS page renderer at `/cms-page.html?slug=<slug>`.
+- Added a homepage section mount that renders published CMS homepage sections above the existing static homepage. Existing homepage sections remain intact.
+- Added the SQL source file at `supabase/greyveil-cms-command-centre.sql`.
+
+Database execution:
+- The additive CMS SQL was applied to the connected Supabase project.
+- Verified all five `cms_*` tables exist.
+- Verified the `cms-media` bucket exists and its allowed MIME types are image-only.
+- No existing catalogue, Reader Match, orders, payments, book access, profiles or community/story data was modified.
+
+Deployment:
+- Preview deployment created from the feature branch and reached Vercel `READY`.
+- Preview URL: https://greyveileditions-kgqh68lts-goreanikets-projects.vercel.app
+- Production branch `master` was not changed and production was not deployed.
+
+Known remaining scope:
+- AI command execution is not wired to an LLM provider; it needs a chosen model provider and server-side secret/API configuration. No fake AI controls were added.
+- Navigation/footer builder, general non-book private file vault, advanced customer CRM, role expansion, and full AI operations remain later modules.
+- Existing admin modules for users, books, publishing, book access, payments, coupons, feedback, announcements and book files were left intact.
+- Existing repository catalogue still exposes 96 Reader Match records on the inspected branch; the user's 439-record source remains to be located and reconciled before discovery changes.
+- Preview URL is deployment-ready, but authenticated UI workflows still require an admin sign-in test in a browser. No claim is made that the complete platform is finished.
