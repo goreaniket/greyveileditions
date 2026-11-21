@@ -18,7 +18,7 @@
       const link = document.createElement('link');
       link.rel = 'stylesheet';
       link.dataset.greyveilWarmEditorial = 'true';
-      link.href = '/assets/css/warm-editorial.css?v=20261121.2';
+      link.href = '/assets/css/warm-editorial.css?v=20261121.3';
       document.head.append(link);
     }
   };

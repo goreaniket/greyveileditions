@@ -372,3 +372,41 @@ body.gv-page.project-theme .contact-card {
   border-color: var(--gv-warm-sage) !important;
 }
 
+:root[data-theme="night"] body :is(p, li, label, summary, .eyebrow, .hero-index, .hero-intro, .hero-question, .art-caption, .scroll-cue) {
+  color: var(--gv-warm-muted) !important;
+}
+
+:root[data-theme="night"] body.gv-page :is(p, li, label, summary, .eyebrow, .hero-index, .hero-intro, .hero-question, .art-caption, .scroll-cue) {
+  color: var(--gv-warm-muted) !important;
+}
+
+:root[data-theme="night"] body :is(h1, h2, h3, h4) {
+  color: var(--gv-warm-ink) !important;
+}
+
+:root[data-theme="night"] body.gv-page :is(h1, h2, h3, h4) {
+  color: var(--gv-warm-ink) !important;
+}
+
+:root[data-theme="night"] body a:not(.button):not(.gv-button):not(.admin-action):not(.reader-control):not(.reader-theme-select):not(.gv-sanctuary-toggle),
+:root[data-theme="night"] body .button-quiet,
+:root[data-theme="night"] body .quiet-button {
+  color: var(--gv-warm-sage) !important;
+}
+
+:root[data-theme="night"] body .gv-button,
+:root[data-theme="night"] body .button.primary,
+:root[data-theme="night"] body .admin-action--primary,
+:root[data-theme="night"] body .mfa-form button,
+:root[data-theme="night"] body .invite-form button {
+  color: #1E1E1C !important;
+}
+
+:root[data-theme="night"] body button:focus-visible,
+:root[data-theme="night"] body a:focus-visible,
+:root[data-theme="night"] body input:focus-visible,
+:root[data-theme="night"] body select:focus-visible,
+:root[data-theme="night"] body textarea:focus-visible {
+  outline-color: var(--gv-warm-sage) !important;
+}
+
