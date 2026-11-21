@@ -1,4 +1,4 @@
-import { supabase } from './assets/js/supabase-client.js'
+import { supabase } from './supabase-client.js'
 const root = document.querySelector('#cms-homepage-sections')
 if (root) {
   const safeUrl = (value) => { const raw = String(value || '').trim(); if (raw.startsWith('/') || raw.startsWith('#')) return raw; try { const u = new URL(raw); return ['http:','https:'].includes(u.protocol) ? u.href : '' } catch { return '' } }
