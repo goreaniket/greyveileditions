@@ -18,7 +18,7 @@
       const link = document.createElement('link');
       link.rel = 'stylesheet';
       link.dataset.greyveilWarmEditorial = 'true';
-      link.href = '/assets/css/warm-editorial.css?v=20261121';
+      link.href = '/assets/css/warm-editorial.css?v=20261121.2';
       document.head.append(link);
     }
   };
@@ -60,7 +60,7 @@
       header.insertBefore(button, menuToggle?.nextSibling || nav);
     });
 
-    if (!document.querySelector('[data-sanctuary-theme]:not(.gv-sanctuary-toggle)')) {
+    if (!document.querySelector('.gv-global-header [data-sanctuary-theme], .site-header [data-sanctuary-theme]')) {
       const existingShell = document.querySelector('.admin-topbar, .topbar, .reader-toolbar');
       if (existingShell && !existingShell.querySelector('[data-sanctuary-theme]')) {
         const button = document.createElement('button');

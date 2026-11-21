@@ -337,3 +337,38 @@ body.reader-distraction-mode .reader-toolbar:hover {
   color: var(--gv-warm-muted) !important;
 }
 
+body.gv-page.project-theme {
+  background: var(--gv-warm-bg) !important;
+  color: var(--gv-warm-ink) !important;
+}
+
+body.gv-page.project-theme .contact-card {
+  background: var(--gv-warm-card) !important;
+  color: var(--gv-warm-ink) !important;
+  border-color: var(--gv-warm-rule) !important;
+  border-radius: var(--gv-warm-radius) !important;
+}
+
+:root[data-theme="night"] body.gv-page.project-theme .book-detail :is(
+  p, li, summary, span, strong, h1, h2, h3, blockquote
+) {
+  color: var(--gv-warm-ink) !important;
+}
+
+:root[data-theme="night"] body.gv-page.project-theme .book-detail a:not(.button) {
+  color: var(--gv-warm-sage) !important;
+}
+
+:root[data-theme="night"] body.gv-page.project-theme .book-detail .contact-card,
+:root[data-theme="night"] body.gv-page.project-theme .book-detail .button:not(.primary) {
+  background: var(--gv-warm-card) !important;
+  color: var(--gv-warm-ink) !important;
+  border-color: var(--gv-warm-rule) !important;
+}
+
+:root[data-theme="night"] body.gv-page.project-theme .book-detail .button.primary {
+  background: var(--gv-warm-sage) !important;
+  color: #1E1E1C !important;
+  border-color: var(--gv-warm-sage) !important;
+}
+
