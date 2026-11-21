@@ -215,3 +215,42 @@ body.gv-page.project-theme{background:var(--porcelain)!important;color:var(--ink
     box-sizing: border-box !important;
   }
 }
+
+/* The Human Collection — dynamic catalogue pages */
+.gv-series-grid,.gv-stage-grid,.gv-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid rgba(52,59,56,.2);border-bottom:1px solid rgba(52,59,56,.2)}
+.gv-series-card,.gv-stage-card,.gv-topic-card{padding:26px 28px 30px 0;border-bottom:1px solid rgba(52,59,56,.16);text-decoration:none}
+.gv-series-card:nth-child(even),.gv-stage-card:nth-child(even),.gv-topic-card:nth-child(even){padding-left:28px;border-left:1px solid rgba(52,59,56,.16)}
+.gv-series-card h3,.gv-stage-card h3,.gv-topic-card h3{margin:12px 0 8px;font:500 clamp(26px,3vw,36px)/1.08 var(--serif);color:var(--ink)}
+.gv-series-card p:not(.gv-book-meta),.gv-stage-card p:not(.gv-book-meta),.gv-topic-card p:not(.gv-book-meta){color:var(--quiet);font-size:13px;line-height:1.8}
+.gv-journey-intro{margin:90px 0 30px;max-width:720px}
+.gv-journey-intro h2{margin:16px 0;font:500 clamp(38px,5vw,64px)/.98 var(--serif)}
+.gv-collection-toolbar{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin:30px 0 18px}
+.gv-collection-toolbar label{display:grid;gap:7px;color:#7e8877;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.gv-collection-toolbar input,.gv-collection-toolbar select{width:100%;min-height:46px;padding:11px 13px;border:1px solid rgba(52,59,56,.24);border-radius:0;background:var(--paper-light);color:var(--ink);font:13px var(--sans);letter-spacing:0;text-transform:none}
+.gv-collection-count{margin:10px 0 20px;color:var(--quiet);font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.gv-book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
+.gv-book-card{display:grid;grid-template-columns:minmax(100px,150px) minmax(0,1fr);gap:20px;align-items:start;padding:0 0 24px;border-bottom:1px solid rgba(52,59,56,.18)}
+.gv-book-cover{display:block;aspect-ratio:2/3;background:#e3e0d7;overflow:hidden}
+.gv-book-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.gv-book-cover.is-missing-cover:after{content:"GREYVEIL EDITIONS";display:grid;place-items:center;width:100%;height:100%;color:#66705f;font:8px var(--mono);letter-spacing:.12em;text-align:center}
+.gv-book-card-body{min-width:0}
+.gv-book-meta,.gv-topic-label{margin:0 0 9px;color:#7e8877;font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.gv-book-card h3{margin:0 0 9px;font:500 clamp(24px,2.7vw,32px)/1.05 var(--serif);color:var(--ink)}
+.gv-book-question{margin:0 0 8px;color:#465047!important;font:17px/1.45 var(--serif)!important}
+.gv-book-series,.gv-book-topics{margin:5px 0;color:var(--quiet);font-size:11px!important;line-height:1.6!important}
+.gv-book-link{display:inline-block;margin-top:10px;color:var(--ink);font:9px var(--mono);letter-spacing:.08em;text-decoration:none;border-bottom:1px solid #aab39f;padding-bottom:4px}
+.gv-book-link:hover{color:#65745c;border-color:#65745c}
+.gv-stage-card{display:block}
+.gv-stage-card .gv-book-link{border:0}
+.gv-journey-stage{padding:40px 0 55px;border-bottom:1px solid rgba(52,59,56,.2);scroll-margin-top:90px}
+.gv-journey-stage-head{max-width:740px}
+.gv-journey-stage-head h2{margin:8px 0 12px;font:500 clamp(36px,5vw,58px)/1 var(--serif)}
+.gv-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;border:0}
+.gv-topic-card{padding:22px;border:1px solid rgba(52,59,56,.18)}
+.gv-topic-card:nth-child(even){padding:22px;border:1px solid rgba(52,59,56,.18)}
+.gv-topic-card h3{font-size:29px}
+.gv-topic-links{margin:0;padding-left:18px}
+.gv-topic-links li{margin:7px 0}
+.gv-collection-empty{grid-column:1/-1;padding:22px;border:1px solid rgba(52,59,56,.18);color:var(--quiet)}
+.gv-path-band{margin:40px -7vw -110px}
+@media(max-width:760px){.gv-series-grid,.gv-stage-grid,.gv-topic-grid,.gv-book-grid{grid-template-columns:1fr}.gv-series-card:nth-child(even),.gv-stage-card:nth-child(even),.gv-topic-card:nth-child(even){padding-left:0;border-left:0}.gv-book-card{grid-template-columns:100px minmax(0,1fr);gap:14px}.gv-collection-toolbar{grid-template-columns:1fr}.gv-path-band{margin-left:-7vw;margin-right:-7vw}}
