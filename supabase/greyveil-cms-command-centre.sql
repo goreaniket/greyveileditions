@@ -91,7 +91,7 @@ grant select on public.cms_pages, public.cms_sections to anon, authenticated;
 grant insert, update, delete on public.cms_pages, public.cms_sections to authenticated;
 grant select, insert, update, delete on public.cms_media, public.cms_revisions, public.cms_audit_logs to authenticated;
 insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
-values ('cms-media', 'cms-media', true, 26214400, array['image/jpeg','image/png','image/webp','image/gif','application/pdf'])
+values ('cms-media', 'cms-media', true, 26214400, array['image/jpeg','image/png','image/webp','image/gif'])
 on conflict (id) do update set public = excluded.public, file_size_limit = excluded.file_size_limit, allowed_mime_types = excluded.allowed_mime_types;
 drop policy if exists cms_media_storage_admin_select on storage.objects;
 create policy cms_media_storage_admin_select on storage.objects for select to authenticated using (bucket_id = 'cms-media' and (select public.greyveil_is_admin()));
