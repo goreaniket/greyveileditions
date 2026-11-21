@@ -8,7 +8,7 @@ test('on-demand workflow accepts one required UUID job and uses the existing one
   const workflow = await text('../.github/workflows/greyveil-generation-worker.yml')
 
   assert.match(workflow, /^\s{2}workflow_dispatch:\s*$/m)
-  assert.match(workflow, /^\s{6}job_id:\s*\n\s{8}description:.*\n\s{8}required: true\s*\n\s{8}type: string\s*$/m)
+  assert.match(workflow, /^[ ]{6}job_id:[ ]*\r?\n[ ]{8}description:.*\r?\n[ ]{8}required: true[ ]*\r?\n[ ]{8}type: string[ ]*$/m)
   assert.match(workflow, /^\s{4}runs-on: ubuntu-latest\s*$/m)
   assert.match(workflow, /python-version: ["']3\.12["']/)
   assert.match(workflow, /python -m pip install --requirement requirements\.txt/)
