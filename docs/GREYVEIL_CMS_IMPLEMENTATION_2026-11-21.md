@@ -39,3 +39,24 @@
 
 ## Deployment
 A Vercel preview was requested from this feature branch. Use the deployment card/status and test authenticated admin flows before merging to `master`.
+
+## Public collection implementation update — 21 November 2026
+- Reworked `/projects/` as The Human Collection landing page.
+- Added `/projects/journey/` with four reading stages, distinct from the four original series.
+- Added `/projects/topics/` using the canonical topic index.
+- Reworked `/projects/human-experience/` to present The Human Experience as original Series IV with all ten titles.
+- Added shared `assets/js/collection-pages.js` to render the catalogue from the existing `catalogue.json`.
+- Preserved the existing catalogue source exactly: 24 books, 96 Reader Match entries and 19 topics. No Reader Match rows or recommendation logic were changed.
+- Corrected the homepage CMS script's relative Supabase client import.
+
+## Critical release blockers discovered during validation
+1. The current connected Supabase project is wired in `assets/js/supabase-client.js`, but its live schema does not contain the core commerce/catalogue tables expected by the current app: `books`, `series`, `collections`, `volumes`, `orders`, `payments`, `book_access`, `feedbacks`, `book_files`, and `book_covers`. Its Edge Functions list is empty. Do not run the historical broad SQL files against this project; the old project/data source must be reconciled first.
+2. Previous Greyveil handoff records reference a different Supabase project. That project is not accessible through the currently connected Supabase accounts. Existing payment and entitlement history must not be recreated as empty tables.
+3. Ten Human Experience PDFs are committed under `projects/human-experience/books/` and are directly accessible as `application/pdf` from the production domain. Their book pages explicitly link to them as “Read Book (PDF)”. This is a confirmed public-content exposure. Do not call the publishing platform release-safe until these PDFs are migrated to private `book-files` storage and the public links are replaced by the protected reader flow. Do not delete them before a verified private migration.
+4. Owner Command Centre SQL is intentionally guarded: it requires the story RPC set plus `books`, `orders`, and `feedbacks`, and a separately verified owner Auth UUID. Those prerequisites are not met in the currently connected project.
+5. AI Command Centre runtime is not yet implemented. Vercel AI Gateway currently has no configured spend budgets. Do not enable model calls until the owner approves a budget and the server-side command permissions are implemented.
+
+## Current preview
+- Latest preview deployment: https://greyveileditions-cvigt9ulb-goreanikets-projects.vercel.app
+- Vercel deployment state: READY.
+- Preview is not production. No merge or production deployment has been performed.
