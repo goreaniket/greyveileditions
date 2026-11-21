@@ -36,6 +36,7 @@
   let fontIncrease = null;
   let themeSelect = null;
   let themeButtons = [];
+  let distractionButton = null;
 
   const createNode = (tagName, attributes = {}, text = "") => {
     const node = document.createElement(tagName);
@@ -110,6 +111,16 @@
     const progressTrack = createNode("span", { class: "reader-progress__track", "aria-hidden": "true" });
     progressTrack.append(createNode("span", { "data-progress-bar": "" }));
     progress.append(progressText, progressTrack);
+    const distractionButton = createNode(
+      "button",
+      {
+        class: "reader-distraction-button",
+        type: "button",
+        "aria-pressed": "false",
+        "data-reader-distraction": "",
+      },
+      "Distraction-free"
+    );
 
     const fontControls = createNode("div", { class: "reader-control-group", "aria-label": "Font size" });
     fontControls.append(
@@ -154,7 +165,7 @@
     );
     typography.querySelector(".reader-toolbar__more-panel").append(fontControls);
 
-    controls.append(contentsButton, progress, themeLabel, typography, exitLink);
+    controls.append(contentsButton, progress, distractionButton, themeLabel, typography, exitLink);
     toolbar.append(identity, controls);
 
     const main = createNode("main", { id: "reader-content", class: "reader-stage", "aria-live": "polite" });
@@ -225,6 +236,7 @@
     fontIncrease = document.querySelector("[data-font-increase]");
     themeSelect = document.querySelector("[data-theme-select]");
     themeButtons = Array.from(document.querySelectorAll("[data-theme-choice]"));
+    distractionButton = document.querySelector("[data-reader-distraction]");
   };
 
   setGenericDocumentMeta();
@@ -1655,6 +1667,14 @@
   themeButtons.forEach((button) => {
     button.addEventListener("click", () => applyTheme(button.dataset.themeChoice));
   });
+  if (distractionButton) {
+    distractionButton.addEventListener("click", () => {
+      const active = document.body.classList.toggle("reader-distraction-mode");
+      distractionButton.setAttribute("aria-pressed", String(active));
+      distractionButton.textContent = active ? "Exit distraction-free" : "Distraction-free";
+      if (active) contentsDrawer?.setAttribute("aria-hidden", "true");
+    });
+  }
   window.addEventListener("scroll", saveProgressDebounced, { passive: true });
   window.addEventListener("resize", () => {
     window.clearTimeout(resizeTimer);
