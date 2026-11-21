@@ -178,6 +178,26 @@ test('HTML, CSS, and module references point to deployable local assets', async 
   assert.deepEqual(failures, [])
 })
 
+test('Warm Editorial sanctuary tokens and theme persistence are reusable', async () => {
+  const [css, theme, reader, globalNavigation] = await Promise.all([
+    readFile(path.join(repositoryRoot, 'assets/css/warm-editorial.css'), 'utf8'),
+    readFile(path.join(repositoryRoot, 'assets/js/theme-sanctuary.js'), 'utf8'),
+    readFile(path.join(repositoryRoot, 'assets/js/reader.js'), 'utf8'),
+    readFile(path.join(repositoryRoot, 'assets/js/global-navigation.js'), 'utf8'),
+  ])
+  assert.match(css, /--gv-warm-bg:\s*#FAF8F5/)
+  assert.match(css, /--gv-warm-card:\s*#F0ECE1/)
+  assert.match(css, /--gv-warm-ink:\s*#2C2C2C/)
+  assert.match(css, /--gv-warm-sage:\s*#5F7A61/)
+  assert.match(css, /--gv-warm-terracotta:\s*#C87D55/)
+  assert.match(css, /\[data-theme="night"\][\s\S]*--gv-warm-bg:\s*#1E1E1C/)
+  assert.match(theme, /greyveil-theme/)
+  assert.match(theme, /Night Sanctuary/)
+  assert.match(reader, /data-reader-distraction/)
+  assert.match(reader, /reader-distraction-mode/)
+  assert.match(globalNavigation, /theme-sanctuary\.js/)
+})
+
 test('native hidden state cannot be overridden by component display rules', async () => {
   const css = await readFile(path.join(repositoryRoot, 'assets/css/style.css'), 'utf8')
   assert.match(css, /(?:^|\n)\[hidden\]\s*{\s*display:\s*none\s*!important;/)

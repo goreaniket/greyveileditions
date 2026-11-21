@@ -1,5 +1,13 @@
 import { supabase } from './supabase-client.js'
 
+if (!document.querySelector('script[data-greyveil-sanctuary]')) {
+  const sanctuaryScript = document.createElement('script')
+  sanctuaryScript.src = '/assets/js/theme-sanctuary.js?v=20261121'
+  sanctuaryScript.dataset.greyveilSanctuary = 'true'
+  sanctuaryScript.defer = true
+  document.head.append(sanctuaryScript)
+}
+
 const $ = (selector, root = document) => root.querySelector(selector)
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector))
 const state = {

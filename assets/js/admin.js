@@ -3,6 +3,14 @@ import { getCurrentUser, signOut } from './auth.js'
 import { effectiveVisibility, hierarchyForBook, hierarchyIsActive, hierarchyIsComplete, normalizeVisibility, VISIBILITY_STATES } from './content-access.js'
 import { createFeedbackEmailLink } from './admin-feedback-email.js'
 
+if (!document.querySelector('script[data-greyveil-sanctuary]')) {
+  const sanctuaryScript = document.createElement('script')
+  sanctuaryScript.src = '/assets/js/theme-sanctuary.js?v=20261121'
+  sanctuaryScript.dataset.greyveilSanctuary = 'true'
+  sanctuaryScript.defer = true
+  document.head.append(sanctuaryScript)
+}
+
 const ADMIN_ROLES = new Set(['admin', 'super_admin'])
 const STATUS_OPTIONS = ['new', 'reviewed', 'archived']
 const ACCESS_TYPES = ['manual', 'promotion', 'complimentary', 'purchase']

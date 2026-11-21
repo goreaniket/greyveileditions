@@ -1,0 +1,339 @@
+:root {
+  color-scheme: light;
+  --gv-warm-bg: #FAF8F5;
+  --gv-warm-card: #F0ECE1;
+  --gv-warm-ink: #2C2C2C;
+  --gv-warm-sage: #5F7A61;
+  --gv-warm-terracotta: #C87D55;
+  --gv-warm-muted: #73766F;
+  --gv-warm-rule: rgba(44, 44, 44, .12);
+  --gv-warm-shadow: 0 18px 50px rgba(44, 44, 44, .08);
+  --gv-warm-radius: 14px;
+  --gv-serif: "Lora", Georgia, serif;
+  --gv-sans: "Plus Jakarta Sans", Inter, Arial, sans-serif;
+}
+
+:root[data-theme="night"] {
+  color-scheme: dark;
+  --gv-warm-bg: #1E1E1C;
+  --gv-warm-card: #292925;
+  --gv-warm-ink: #EAE6DF;
+  --gv-warm-sage: #91A78F;
+  --gv-warm-terracotta: #D99A78;
+  --gv-warm-muted: #BCB7AE;
+  --gv-warm-rule: rgba(234, 230, 223, .14);
+  --gv-warm-shadow: 0 18px 50px rgba(0, 0, 0, .22);
+}
+
+html {
+  background: var(--gv-warm-bg);
+  scroll-behavior: smooth;
+}
+
+body,
+.gv-page,
+.admin-page,
+.gate,
+.reader-book {
+  background: var(--gv-warm-bg) !important;
+  color: var(--gv-warm-ink) !important;
+  font-family: var(--gv-sans) !important;
+}
+
+body:not(.reader-book) {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(95, 122, 97, .055), transparent 25rem),
+    radial-gradient(circle at 88% 18%, rgba(200, 125, 85, .045), transparent 22rem);
+}
+
+h1, h2, h3, h4,
+.gv-hero h1, .gv-intro h2, .gv-card h3,
+.reader-content, .reader-pages, .private-story,
+.gate h1, .topbar h1, .view-heading h2,
+.feature-card h3, .conversation h3,
+.admin-page h1, .admin-page h2, .admin-page h3 {
+  font-family: var(--gv-serif) !important;
+}
+
+body, button, input, select, textarea, nav, .gv-global-nav,
+.admin-page, .owner-command-center {
+  font-family: var(--gv-sans);
+}
+
+a, button, input, select, textarea {
+  border-radius: var(--gv-warm-radius);
+}
+
+button, input, select, textarea {
+  transition: border-color .18s ease, background-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(95, 122, 97, .42) !important;
+  outline-offset: 3px;
+}
+
+.gv-global-header,
+.site-header,
+.gv-header,
+.admin-topbar,
+.reader-toolbar {
+  background: color-mix(in srgb, var(--gv-warm-bg) 94%, transparent) !important;
+  color: var(--gv-warm-ink) !important;
+  border-bottom-color: var(--gv-warm-rule) !important;
+  backdrop-filter: blur(18px);
+}
+
+.gv-global-nav a,
+.site-header .primary-nav a,
+.gv-global-toggle,
+.gv-global-account,
+.admin-nav button,
+.admin-nav a,
+.quiet-button,
+.reader-control,
+.reader-theme-select {
+  color: var(--gv-warm-ink) !important;
+  border-color: var(--gv-warm-rule) !important;
+  font-family: var(--gv-sans) !important;
+}
+
+.gv-global-header .gv-global-account {
+  border: 1px solid color-mix(in srgb, var(--gv-warm-sage) 55%, transparent) !important;
+  border-radius: 999px !important;
+  background: transparent;
+}
+
+.gv-card, .gv-series-card, .gv-topic-card, .gv-stage-card, .gv-book-card,
+.library-card, .book-card, .admin-card, .metric, .systems-card,
+.feature-card, .inbox-layout, .conversation, .thread-entry,
+.contact-card, .feedback-form, .auth-card,
+.community-post, .offering-card,
+.owner-command-center .metric,
+.admin-platform-item {
+  border: 1px solid var(--gv-warm-rule) !important;
+  border-radius: var(--gv-warm-radius) !important;
+  background: var(--gv-warm-card) !important;
+  box-shadow: none;
+}
+
+.gv-card, .gv-series-card, .gv-topic-card, .gv-stage-card, .gv-book-card,
+.library-card, .book-card {
+  overflow: hidden;
+}
+
+.gv-button, .button, .admin-action, .quiet-button,
+.gv-book-link, .text-action, .text-link, .underlined-link,
+.reader-control, .mfa-form button, .invite-form button,
+.mfa-form .setup-mfa {
+  border-radius: 999px !important;
+  text-decoration: none;
+}
+
+.gv-button, .button.primary, .admin-action--primary,
+.mfa-form button, .invite-form button {
+  border: 1px solid var(--gv-warm-sage) !important;
+  background: var(--gv-warm-sage) !important;
+  color: #FFFFFF !important;
+}
+
+.gv-button.alt, .button.secondary, .button.ghost,
+.admin-action, .quiet-button {
+  background: transparent !important;
+  color: var(--gv-warm-ink) !important;
+  border: 1px solid var(--gv-warm-rule) !important;
+}
+
+.gv-hero, .project-hero, .featured, .match,
+.world-mind, .human, .library, .about-feature,
+.community-hero, .discover-hero {
+  background: var(--gv-warm-bg) !important;
+  color: var(--gv-warm-ink) !important;
+}
+
+.gv-footer, .site-footer, footer {
+  background: var(--gv-warm-card) !important;
+  color: var(--gv-warm-ink) !important;
+  border-top: 1px solid var(--gv-warm-rule);
+}
+
+input, select, textarea,
+.library-tools input, .library-tools select,
+.match-form select, .auth-card input,
+.admin-page input, .admin-page select, .admin-page textarea,
+.owner-command-center input, .owner-command-center select, .owner-command-center textarea {
+  border: 1px solid var(--gv-warm-rule) !important;
+  border-radius: 12px !important;
+  background: var(--gv-warm-bg) !important;
+  color: var(--gv-warm-ink) !important;
+}
+
+.reader-toolbar {
+  background: var(--gv-warm-bg) !important;
+  border-bottom: 1px solid var(--gv-warm-rule);
+}
+
+.reader-stage,
+[data-reader-theme="light"] .reader-stage,
+[data-reader-theme="sepia"] .reader-stage {
+  --reader-bg: var(--gv-warm-bg);
+  --reader-paper: var(--gv-warm-card);
+  --reader-text: var(--gv-warm-ink);
+  --reader-heading: var(--gv-warm-ink);
+  --reader-accent: var(--gv-warm-sage);
+  --reader-accent-strong: var(--gv-warm-sage);
+  --reader-warm: var(--gv-warm-terracotta);
+  --reader-serif: "Lora", Georgia, serif;
+  --reader-display: "Lora", Georgia, serif;
+  --reader-sans: "Plus Jakarta Sans", Inter, Arial, sans-serif;
+  background: var(--gv-warm-bg) !important;
+}
+
+[data-reader-theme="dark"] .reader-stage {
+  --reader-bg: #1E1E1C;
+  --reader-paper: #292925;
+  --reader-paper-soft: #34342F;
+  --reader-text: #EAE6DF;
+  --reader-heading: #EAE6DF;
+  --reader-accent: #91A78F;
+  --reader-accent-strong: #B3C1AF;
+  --reader-warm: #D99A78;
+  --reader-control-bg: rgba(41, 41, 37, .96);
+  --reader-control-border: rgba(234, 230, 223, .18);
+  --reader-sans: "Plus Jakarta Sans", Inter, Arial, sans-serif;
+  --reader-serif: "Lora", Georgia, serif;
+  background: #1E1E1C !important;
+}
+
+.reader-pages, .reader-page, .reader-content {
+  font-family: "Lora", Georgia, serif !important;
+  line-height: 1.78;
+  max-width: 68ch;
+}
+
+.gv-sanctuary-toggle {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: inline-grid;
+  place-items: center;
+  margin-left: 8px;
+  border: 1px solid var(--gv-warm-rule);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--gv-warm-ink);
+  cursor: pointer;
+  font: 18px/1 var(--gv-serif);
+}
+
+.gv-sanctuary-toggle:hover {
+  background: var(--gv-warm-card);
+  border-color: var(--gv-warm-sage);
+}
+
+.reader-distraction-button {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--gv-warm-rule);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--gv-warm-ink);
+  font: 600 11px var(--gv-sans);
+  cursor: pointer;
+}
+
+body.reader-distraction-mode .reader-toolbar,
+body.reader-distraction-mode .contents-drawer,
+body.reader-distraction-mode .reader-toolbar__identity {
+  transition: opacity .18s ease;
+}
+
+body.reader-distraction-mode .reader-toolbar {
+  opacity: .16;
+}
+
+body.reader-distraction-mode .reader-toolbar:focus-within,
+body.reader-distraction-mode .reader-toolbar:hover {
+  opacity: 1;
+}
+
+@media (max-width: 820px) {
+  .gv-global-header {
+    background: var(--gv-warm-bg) !important;
+  }
+
+  .gv-card, .gv-series-card, .gv-topic-card, .gv-stage-card, .gv-book-card,
+  .library-card, .book-card, .metric, .systems-card, .feature-card {
+    border-radius: 12px !important;
+  }
+}
+
+:root[data-theme="night"] .gv-content,
+:root[data-theme="night"] .gv-intro,
+:root[data-theme="night"] .hero,
+:root[data-theme="night"] .ticker,
+:root[data-theme="night"] .pause,
+:root[data-theme="night"] .worlds,
+:root[data-theme="night"] .featured,
+:root[data-theme="night"] .match,
+:root[data-theme="night"] .human,
+:root[data-theme="night"] .library,
+:root[data-theme="night"] .gv-band,
+:root[data-theme="night"] .gv-band-inner,
+:root[data-theme="night"] .gv-collection-toolbar,
+:root[data-theme="night"] .gv-book-grid,
+:root[data-theme="night"] .gv-series-grid,
+:root[data-theme="night"] .gv-stage-grid,
+:root[data-theme="night"] .gv-topic-grid,
+:root[data-theme="night"] .gv-journey-stage,
+:root[data-theme="night"] .world-grid,
+:root[data-theme="night"] .pause,
+:root[data-theme="night"] .worlds,
+:root[data-theme="night"] .library,
+:root[data-theme="night"] .human,
+:root[data-theme="night"] .project-hero,
+:root[data-theme="night"] .section,
+:root[data-theme="night"] .feedback-layout,
+:root[data-theme="night"] .account-shell,
+:root[data-theme="night"] .community-layout,
+:root[data-theme="night"] .discover-main {
+  background: var(--gv-warm-bg) !important;
+  color: var(--gv-warm-ink) !important;
+}
+
+:root[data-theme="night"] .gv-card,
+:root[data-theme="night"] .gv-series-card,
+:root[data-theme="night"] .gv-topic-card,
+:root[data-theme="night"] .gv-stage-card,
+:root[data-theme="night"] .gv-book-card,
+:root[data-theme="night"] .library-card,
+:root[data-theme="night"] .book-card,
+:root[data-theme="night"] .world-tile,
+:root[data-theme="night"] .admin-card,
+:root[data-theme="night"] .metric,
+:root[data-theme="night"] .systems-card,
+:root[data-theme="night"] .feature-card,
+:root[data-theme="night"] .inbox-layout,
+:root[data-theme="night"] .conversation,
+:root[data-theme="night"] .contact-card,
+:root[data-theme="night"] .auth-card,
+:root[data-theme="night"] .community-post,
+:root[data-theme="night"] .offering-card {
+  background: var(--gv-warm-card) !important;
+  color: var(--gv-warm-ink) !important;
+  border-color: var(--gv-warm-rule) !important;
+}
+
+:root[data-theme="night"] .gv-card p,
+:root[data-theme="night"] .gv-series-card p,
+:root[data-theme="night"] .gv-topic-card p,
+:root[data-theme="night"] .gv-stage-card p,
+:root[data-theme="night"] .gv-book-card p,
+:root[data-theme="night"] .world-tile p,
+:root[data-theme="night"] .human p,
+:root[data-theme="night"] .pause p,
+:root[data-theme="night"] .library p,
+:root[data-theme="night"] .gv-footer p {
+  color: var(--gv-warm-muted) !important;
+}
+
