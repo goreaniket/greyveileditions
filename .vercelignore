@@ -1,6 +1,7 @@
 projects/**/chapters/word/
 projects/**/chapters/WORD/
 projects/**/chapters/PDF/
+projects/**/books/*.pdf
 generated/
 output/
 tmp/

@@ -115,6 +115,9 @@ test('create-order reconciles and safely reuses an exact pending provider order'
 })
 
 test('legacy webhook compatibility preserves the signed raw body at the Edge boundary', async () => {
+  const previousUrl = process.env.SUPABASE_URL
+  const previousKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  process.env.SUPABASE_URL = 'https://fanixwnyglkvkgsxxrtn.supabase.co'
   process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
   const api = await import('../api/_lib/greyveil-api.js')
   const originalFetch = globalThis.fetch
@@ -140,12 +143,54 @@ test('legacy webhook compatibility preserves the signed raw body at the Edge bou
     }, response, 'razorpay-webhook')
   } finally {
     globalThis.fetch = originalFetch
+    if (previousUrl === undefined) delete process.env.SUPABASE_URL
+    else process.env.SUPABASE_URL = previousUrl
+    if (previousKey === undefined) delete process.env.SUPABASE_SERVICE_ROLE_KEY
+    else process.env.SUPABASE_SERVICE_ROLE_KEY = previousKey
   }
 
-  assert.match(forwarded.url, /\/functions\/v1\/razorpay-webhook$/)
+  assert.equal(forwarded.url, 'https://fanixwnyglkvkgsxxrtn.supabase.co/functions/v1/razorpay-webhook')
   assert.equal(forwarded.options.headers['x-razorpay-signature'], 'signed-value')
   assert.equal(Buffer.from(forwarded.options.body).toString('utf8'), '{"event":"payment.captured"}')
   assert.equal(Buffer.concat(chunks).toString('utf8'), '{"success":true}')
+})
+
+test('server payment proxy requires an explicit Supabase project URL', async () => {
+  const [api, readerApi] = await Promise.all([
+    import('../api/_lib/greyveil-api.js'),
+    source('../api/reader-content.js'),
+  ])
+  const previous = {
+    url: process.env.SUPABASE_URL,
+    publicUrl: process.env.NEXT_PUBLIC_SUPABASE_URL,
+    key: process.env.SUPABASE_SERVICE_ROLE_KEY,
+  }
+  delete process.env.SUPABASE_URL
+  delete process.env.NEXT_PUBLIC_SUPABASE_URL
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
+
+  try {
+    await assert.rejects(
+      api.proxyEdgeFunction({
+        method: 'POST',
+        headers: {},
+        body: Buffer.from('{}'),
+      }, { setHeader() {}, end() {} }, 'create-order'),
+      (error) => error.statusCode === 500
+        && error.code === 'server_config_missing'
+        && error.message === 'SUPABASE_URL is not configured.',
+    )
+  } finally {
+    if (previous.url === undefined) delete process.env.SUPABASE_URL
+    else process.env.SUPABASE_URL = previous.url
+    if (previous.publicUrl === undefined) delete process.env.NEXT_PUBLIC_SUPABASE_URL
+    else process.env.NEXT_PUBLIC_SUPABASE_URL = previous.publicUrl
+    if (previous.key === undefined) delete process.env.SUPABASE_SERVICE_ROLE_KEY
+    else process.env.SUPABASE_SERVICE_ROLE_KEY = previous.key
+  }
+
+  assert.doesNotMatch(readerApi, /rwwwewiphcvukcpokpmu/)
+  assert.match(readerApi, /server_config_missing/)
 })
 
 test('Vercel payment URLs are compatibility proxies without duplicate payment decisions', async () => {
