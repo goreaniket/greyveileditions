@@ -1,4 +1,5 @@
 -- Greyveil Owner Command Centre RBAC and audited Human Response operations.
+-- Audited invitation events use action 'staff.invitation.sent'; revocations use 'staff.access.revoked'.
 -- Apply only after greyveil-2-experience.sql and the existing profile/admin schema.
 -- Owner provisioning is intentionally separate: set greyveil.owner_user_id to
 -- Lalit's verified auth.users UUID before applying, or insert the owner row

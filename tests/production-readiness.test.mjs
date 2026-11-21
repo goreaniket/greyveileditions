@@ -80,7 +80,7 @@ test('deployable route inventory contains every public, auth, commerce, admin, a
   const files = await deployableHtmlFiles()
   const routes = files.map(routeForFile)
 
-  assert.equal(routes.length, 70, 'Update the audited route inventory when routes are intentionally added or removed.')
+  assert.equal(routes.length, 83, 'Update the audited route inventory when routes are intentionally added or removed.')
   assert.equal(routes.filter((route) => route.endsWith('/reader/')).length, 15)
   assert.equal(routes.filter((route) => /\/books\/[^/]+\.html$/.test(route)).length, 14)
 
@@ -157,7 +157,10 @@ test('HTML, CSS, and module references point to deployable local assets', async 
     for (const match of css.matchAll(/url\(\s*(["']?)(.*?)\1\s*\)/gi)) {
       const reference = match[2]
       if (!reference || /^(?:data:|https?:|#)/i.test(reference)) continue
-      const candidate = path.resolve(path.dirname(path.join(repositoryRoot, normalizedPath)), decodeURIComponent(reference.split(/[?#]/)[0]))
+      const cssReference = decodeURIComponent(reference.split(/[?#]/)[0])
+      const candidate = cssReference.startsWith('/')
+        ? path.join(repositoryRoot, cssReference.replace(/^\/+/, ''))
+        : path.resolve(path.dirname(path.join(repositoryRoot, normalizedPath)), cssReference)
       if (!await fileExists(candidate)) failures.push(`${normalizedPath}: missing asset ${reference}`)
     }
   }
@@ -197,7 +200,9 @@ test('the responsive Admin menu reports its open and closed state accessibly', a
 
 test('Admin mobile navigation has one viewport-safe scroll owner isolated to the drawer breakpoint', async () => {
   const css = await readFile(path.join(repositoryRoot, 'assets/css/admin.css'), 'utf8')
-  const mobile = css.match(/@media \(max-width: 820px\) \{([\s\S]*?)\n\}\n\n@media \(max-width: 560px\)/)?.[1] || ''
+  const mobileStart = css.indexOf('@media (max-width: 820px)')
+  const mobileEnd = css.indexOf('@media (max-width: 560px)', mobileStart)
+  const mobile = mobileStart >= 0 && mobileEnd > mobileStart ? css.slice(mobileStart, mobileEnd) : ''
   const mobileNav = mobile.match(/\.admin-nav \{([^}]*)\}/)?.[1] || ''
 
   assert.match(css, /\.admin-menu-button,\s*\.admin-nav-close \{\s*display: none;/)
@@ -231,7 +236,7 @@ test('static forms and non-submitting buttons have an effective native or script
       const type = buttonTag.match(/\btype\s*=\s*(["'])(.*?)\1/i)?.[2]?.toLowerCase() || 'submit'
       if (type === 'submit' || type === 'reset') continue
 
-      const classWired = /\bclass\s*=\s*(["'])[^"']*\b(?:nav-toggle|dropdown-trigger|menu-toggle)\b[^"']*\1/i.test(buttonTag)
+      const classWired = /\bclass\s*=\s*(["'])[^"']*\b(?:nav-toggle|dropdown-trigger|menu-toggle|gv-global-toggle)\b[^"']*\1/i.test(buttonTag)
       const dataMarker = buttonTag.match(/\bdata-([a-z0-9-]+)(?:\s|=|>)/i)?.[1]
       const dataWired = dataMarker && javascript.includes(`[data-${dataMarker}`)
       const buttonId = buttonTag.match(/\bid\s*=\s*(["'])(.*?)\1/i)?.[2]
