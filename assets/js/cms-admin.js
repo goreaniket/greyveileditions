@@ -120,6 +120,7 @@ const renderPages = () => {
       archive.addEventListener('click', async () => {
         if (!window.confirm('Archive "' + page.title + '"? It will no longer be publicly visible.')) return
         archive.disabled = true
+        try { await saveRevision('page', page) } catch (revisionError) { status(revisionError.message || 'Page revision could not be saved.', 'error'); archive.disabled = false; return }
         const { error } = await supabase.from('cms_pages').update({ status: 'archived', updated_by: state.user.id, updated_at: new Date().toISOString() }).eq('id', page.id)
         if (error) { status(error.message, 'error'); archive.disabled = false; return }
         await audit('archive', 'page', page.id, { title: page.title, slug: page.slug })
@@ -134,6 +135,7 @@ const renderPages = () => {
   if (!state.pages.length) list.append(create('p', 'admin-empty', 'No pages yet.'))
 }
 const renderSections = () => {
+  resetSectionForm()
   const list = $('[data-cms-sections]')
   list.replaceChildren()
   const page = state.selectedPage
