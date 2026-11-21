@@ -46,8 +46,8 @@
   applyTheme(saved || preferred, false);
 
   const mountToggle = () => {
-    document.querySelectorAll('.gv-global-header').forEach((header) => {
-      const nav = header.querySelector('.gv-global-nav');
+    document.querySelectorAll('.gv-global-header, .site-header').forEach((header) => {
+      const nav = header.querySelector('.gv-global-nav, .primary-nav');
       if (!nav || header.querySelector(':scope > [data-sanctuary-theme]')) return;
       const button = document.createElement('button');
       button.type = 'button';

@@ -268,3 +268,72 @@ body.reader-distraction-mode .reader-toolbar:hover {
   }
 }
 
+:root[data-theme="night"] .gv-content,
+:root[data-theme="night"] .gv-intro,
+:root[data-theme="night"] .hero,
+:root[data-theme="night"] .ticker,
+:root[data-theme="night"] .pause,
+:root[data-theme="night"] .worlds,
+:root[data-theme="night"] .featured,
+:root[data-theme="night"] .match,
+:root[data-theme="night"] .human,
+:root[data-theme="night"] .library,
+:root[data-theme="night"] .gv-band,
+:root[data-theme="night"] .gv-band-inner,
+:root[data-theme="night"] .gv-collection-toolbar,
+:root[data-theme="night"] .gv-book-grid,
+:root[data-theme="night"] .gv-series-grid,
+:root[data-theme="night"] .gv-stage-grid,
+:root[data-theme="night"] .gv-topic-grid,
+:root[data-theme="night"] .gv-journey-stage,
+:root[data-theme="night"] .world-grid,
+:root[data-theme="night"] .pause,
+:root[data-theme="night"] .worlds,
+:root[data-theme="night"] .library,
+:root[data-theme="night"] .human,
+:root[data-theme="night"] .project-hero,
+:root[data-theme="night"] .section,
+:root[data-theme="night"] .feedback-layout,
+:root[data-theme="night"] .account-shell,
+:root[data-theme="night"] .community-layout,
+:root[data-theme="night"] .discover-main {
+  background: var(--gv-warm-bg) !important;
+  color: var(--gv-warm-ink) !important;
+}
+
+:root[data-theme="night"] .gv-card,
+:root[data-theme="night"] .gv-series-card,
+:root[data-theme="night"] .gv-topic-card,
+:root[data-theme="night"] .gv-stage-card,
+:root[data-theme="night"] .gv-book-card,
+:root[data-theme="night"] .library-card,
+:root[data-theme="night"] .book-card,
+:root[data-theme="night"] .world-tile,
+:root[data-theme="night"] .admin-card,
+:root[data-theme="night"] .metric,
+:root[data-theme="night"] .systems-card,
+:root[data-theme="night"] .feature-card,
+:root[data-theme="night"] .inbox-layout,
+:root[data-theme="night"] .conversation,
+:root[data-theme="night"] .contact-card,
+:root[data-theme="night"] .auth-card,
+:root[data-theme="night"] .community-post,
+:root[data-theme="night"] .offering-card {
+  background: var(--gv-warm-card) !important;
+  color: var(--gv-warm-ink) !important;
+  border-color: var(--gv-warm-rule) !important;
+}
+
+:root[data-theme="night"] .gv-card p,
+:root[data-theme="night"] .gv-series-card p,
+:root[data-theme="night"] .gv-topic-card p,
+:root[data-theme="night"] .gv-stage-card p,
+:root[data-theme="night"] .gv-book-card p,
+:root[data-theme="night"] .world-tile p,
+:root[data-theme="night"] .human p,
+:root[data-theme="night"] .pause p,
+:root[data-theme="night"] .library p,
+:root[data-theme="night"] .gv-footer p {
+  color: var(--gv-warm-muted) !important;
+}
+
