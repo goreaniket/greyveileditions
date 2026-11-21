@@ -57,6 +57,7 @@ const resetPageForm = () => {
   pageForm()?.reset()
   pageForm().elements.id.value = ''
   pageForm().elements.slug.readOnly = false
+  pageForm().elements.status.disabled = false
   state.editingPage = null
   $('[data-cms-page-submit]').textContent = 'Create Page'
 }
