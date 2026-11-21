@@ -3,11 +3,14 @@ const {
   handleReaderContentRequest,
 } = require('./_lib/reader-delivery')
 
-const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8' }
 
 const getText = (value) => String(value || '').trim()
-const supabaseUrl = () => getText(process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || DEFAULT_SUPABASE_URL).replace(/\/+$/, '')
+const supabaseUrl = () => {
+  const url = getText(process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL)
+  if (!url) throw new ReaderDeliveryError(500, 'Reader delivery is not configured.', 'server_config_missing')
+  return url.replace(/\/+$/, '')
+}
 const serviceKey = () => {
   const keySet = getText(process.env.SUPABASE_SECRET_KEYS)
   if (keySet) {

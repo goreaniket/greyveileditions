@@ -1,5 +1,3 @@
-const DEFAULT_SUPABASE_URL = 'https://rwwwewiphcvukcpokpmu.supabase.co'
-
 class ApiError extends Error {
   constructor(statusCode, message, code = 'request_failed', details = null) {
     super(message)
@@ -21,10 +19,7 @@ const env = (name, aliases = [], { required = true } = {}) => {
   return value || ''
 }
 
-const supabaseUrl = () => getText(
-  process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL,
-  DEFAULT_SUPABASE_URL,
-).replace(/\/+$/, '')
+const supabaseUrl = () => env('SUPABASE_URL', ['NEXT_PUBLIC_SUPABASE_URL']).replace(/\/+$/, '')
 
 const supabaseServiceKey = () => env('SUPABASE_SERVICE_ROLE_KEY', ['SUPABASE_SERVICE_KEY'])
 
