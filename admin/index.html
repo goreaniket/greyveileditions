@@ -64,6 +64,7 @@
           <button type="button" data-admin-tab="announcements" aria-selected="false">Announcements</button>
           <button type="button" data-admin-tab="feedback" aria-selected="false">Feedback</button>
           <button type="button" data-admin-tab="files" aria-selected="false">Files</button>
+          <button type="button" data-admin-tab="cms" aria-selected="false">Website &amp; Media</button>
         </nav>
       </aside>
 
@@ -715,6 +716,59 @@
             <div class="admin-files-detail" data-files-detail></div>
           </div>
         </section>
+        <section class="admin-panel" data-admin-panel="cms" aria-labelledby="cms-title">
+          <div class="admin-panel-heading">
+            <div><p class="admin-eyebrow">Website Operations</p><h2 id="cms-title">Website &amp; Media Manager</h2><p class="admin-panel-note">Create pages, manage homepage sections, publish content and maintain the media library. Access is checked again against your Supabase profile.</p></div>
+            <span class="admin-badge" data-cms-role>Admin</span>
+          </div>
+          <p class="admin-form-status" data-cms-status role="status" aria-live="polite"></p>
+          <div class="cms-admin-grid">
+            <article class="admin-card">
+              <div class="admin-card-heading"><h3>Pages</h3><button class="admin-action" type="button" data-cms-page-select-home>Manage Homepage</button></div>
+              <div class="cms-admin-list" data-cms-pages></div>
+            </article>
+            <article class="admin-card">
+              <div class="admin-card-heading"><h3>Page Editor</h3><button class="admin-action" type="button" data-cms-page-reset>New Page</button></div>
+              <form class="admin-platform-form" data-cms-page-form>
+                <input type="hidden" name="id">
+                <label class="admin-platform-wide"><span>Page Title</span><input data-cms-page-title name="title" required maxlength="140"></label>
+                <label class="admin-platform-wide"><span>URL Slug</span><input name="slug" required maxlength="80" pattern="[a-z0-9-]+"></label>
+                <label class="admin-platform-wide"><span>Short Description</span><textarea name="excerpt" rows="2" maxlength="400"></textarea></label>
+                <label class="admin-platform-wide"><span>Page Text</span><textarea name="body" rows="8" placeholder="Separate paragraphs with a blank line."></textarea></label>
+                <div class="admin-access-grid">
+                  <label><span>Publication</span><select name="status"><option value="draft">Draft</option><option value="published">Published</option><option value="archived">Archived</option></select></label>
+                  <label><span>SEO Title</span><input name="seo_title" maxlength="160"></label>
+                </div>
+                <label class="admin-platform-wide"><span>SEO Description</span><textarea name="seo_description" rows="2" maxlength="320"></textarea></label>
+                <div class="admin-form-actions"><button class="admin-action admin-action--primary" type="submit" data-cms-page-submit>Create Page</button><button class="admin-action" type="button" data-cms-page-reset>Reset</button><span class="admin-form-status" data-cms-page-status></span></div>
+              </form>
+            </article>
+            <article class="admin-card cms-admin-wide">
+              <div class="admin-card-heading"><div><h3>Page Sections</h3><p data-cms-selected-page>Select a page to manage its sections.</p></div></div>
+              <p class="admin-empty" data-cms-section-page-empty>Select a page above to add or edit sections.</p>
+              <div class="cms-admin-list" data-cms-sections></div>
+              <form class="admin-platform-form" data-cms-section-form hidden>
+                <input type="hidden" name="id">
+                <div class="admin-access-grid">
+                  <label><span>Section Title</span><input name="title" required maxlength="160"></label>
+                  <label><span>Eyebrow</span><input name="eyebrow" maxlength="100"></label>
+                  <label><span>Button Label</span><input name="button_label" maxlength="60"></label>
+                  <label><span>Button URL</span><input name="button_url" maxlength="500" placeholder="/library/ or https://..."></label>
+                  <label><span>Image</span><select name="image_path"><option value="">No image</option></select></label>
+                  <label><span>Display Order</span><input name="sort_order" type="number" value="0"></label>
+                  <label><span>Publication</span><select name="is_published"><option value="false">Draft</option><option value="true">Published</option></select></label>
+                </div>
+                <label class="admin-platform-wide"><span>Section Text</span><textarea name="body" rows="4"></textarea></label>
+                <div class="admin-form-actions"><button class="admin-action admin-action--primary" type="submit" data-cms-section-submit>Add Section</button><button class="admin-action" type="button" data-cms-section-reset>Reset</button><span class="admin-form-status" data-cms-section-status></span></div>
+              </form>
+            </article>
+            <article class="admin-card cms-admin-wide">
+              <div class="admin-card-heading"><h3>Media Library</h3><p>Images and PDFs, up to 25 MB each.</p></div>
+              <div class="admin-access-grid cms-upload-controls"><label><span>Upload File</span><input type="file" data-cms-upload accept="image/jpeg,image/png,image/webp,image/gif"></label><label><span>Image Alt Text</span><input data-cms-upload-alt maxlength="180"></label></div>
+              <div class="cms-admin-list" data-cms-media></div>
+            </article>
+          </div>
+        </section>
       </div>
     </div>
   </main>
@@ -722,5 +776,6 @@
   <script type="module" src="/assets/js/admin.js"></script>
   <script type="module" src="/assets/js/founder-publishing.js"></script>
   <script type="module" src="/assets/js/admin-platform.js"></script>
+  <script type="module" src="/assets/js/cms-admin.js"></script>
 </body>
 </html>
