@@ -73,6 +73,7 @@ const fillPageForm = (page) => {
   form.elements.title.value = page.title || ''
   form.elements.slug.value = page.slug || ''
   form.elements.slug.readOnly = page.is_homepage
+  form.elements.status.disabled = page.is_homepage
   form.elements.excerpt.value = page.excerpt || ''
   form.elements.body.value = page.body || ''
   form.elements.status.value = page.status
@@ -268,8 +269,8 @@ const handleSectionSubmit = async (event) => {
 const handleUpload = async (event) => {
   const file = event.currentTarget.files?.[0]
   if (!file) return
-  const allowed = ['image/jpeg','image/png','image/webp','image/gif','application/pdf']
-  if (!allowed.includes(file.type) || file.size > 25 * 1024 * 1024) { status('Choose a JPG, PNG, WebP, GIF or PDF file under 25 MB.', 'error'); event.currentTarget.value = ''; return }
+  const allowed = ['image/jpeg','image/png','image/webp','image/gif']
+  if (!allowed.includes(file.type) || file.size > 25 * 1024 * 1024) { status('Choose a JPG, PNG, WebP or GIF image under 25 MB. Private PDFs and EPUBs stay in the existing protected Books / Files system.', 'error'); event.currentTarget.value = ''; return }
   const path = state.user.id + '/' + crypto.randomUUID() + '-' + file.name.replace(/[^a-zA-Z0-9._-]/g, '-')
   const upload = await supabase.storage.from('cms-media').upload(path, file, { contentType: file.type, upsert: false })
   if (upload.error) { status(upload.error.message, 'error'); return }
@@ -292,7 +293,7 @@ const init = async () => {
     await loadAll()
     pageForm().addEventListener('submit', handlePageSubmit)
     sectionForm().addEventListener('submit', handleSectionSubmit)
-    $('[data-cms-page-reset]').addEventListener('click', resetPageForm)
+    document.querySelectorAll('[data-cms-page-reset]').forEach((button) => button.addEventListener('click', resetPageForm))
     $('[data-cms-section-reset]').addEventListener('click', resetSectionForm)
     $('[data-cms-upload]').addEventListener('change', handleUpload)
     $('[data-cms-page-title]').addEventListener('input', (event) => {
