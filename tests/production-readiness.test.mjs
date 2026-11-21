@@ -193,9 +193,12 @@ test('Warm Editorial sanctuary tokens and theme persistence are reusable', async
   assert.match(css, /\[data-theme="night"\][\s\S]*--gv-warm-bg:\s*#1E1E1C/)
   assert.match(theme, /greyveil-theme/)
   assert.match(theme, /Night Sanctuary/)
+  assert.match(theme, /\.gv-global-header \[data-sanctuary-theme\]/)
   assert.match(reader, /data-reader-distraction/)
   assert.match(reader, /reader-distraction-mode/)
   assert.match(globalNavigation, /theme-sanctuary\.js/)
+  assert.match(css, /body\.gv-page\.project-theme\s*\{\s*background:\s*var\(--gv-warm-bg\)\s*!important/)
+  assert.match(css, /:root\[data-theme="night"\] body\.gv-page\.project-theme \.book-detail/)
 })
 
 test('native hidden state cannot be overridden by component display rules', async () => {

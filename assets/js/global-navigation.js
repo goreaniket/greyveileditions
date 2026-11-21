@@ -62,7 +62,7 @@
   const ensureSanctuary = () => {
     if (!document.querySelector('script[data-greyveil-sanctuary]')) {
       const script = document.createElement('script');
-      script.src = '/assets/js/theme-sanctuary.js?v=20261121';
+      script.src = '/assets/js/theme-sanctuary.js?v=20261121.2';
       script.dataset.greyveilSanctuary = 'true';
       script.defer = true;
       document.head.append(script);
